@@ -1,6 +1,7 @@
 import type { Scheme } from './domain';
+import {officialContent} from './official-content.ts';
 const base={department:'संबंधित सरकारी विभाग',documents:['दस्तावेजों की सूची official portal पर जाँचें।'],steps:['पहले official source पर वर्तमान शर्तें पढ़ें।','दस्तावेजों और आवेदन के तरीके की पुष्टि करें।','आवेदन केवल संबंधित सरकारी पोर्टल या अधिकृत केंद्र पर करें।'],sourceNotes:'डेमो रिकॉर्ड। संक्षिप्त विवरण और पात्रता नियम केवल उत्पाद का अनुभव दिखाने के लिए हैं। पूरी सरकारी शर्तों का सत्यापन बाकी है।',applicationUrl:'',status:'REQUIRES_OFFICIAL_VERIFICATION' as const,isSample:true,verifiedAt:null,nextReviewAt:null};
-export const seeds:Scheme[]=[
+const originalSeeds:Scheme[]=[
  {...base,slug:'pm-kisan',title:'प्रधानमंत्री किसान सम्मान निधि',english:'PM Kisan Samman Nidhi',category:'kisan',state:'central',summary:'किसान परिवारों के लिए आय सहायता की योजना। लाभ और पूरी पात्रता की पुष्टि सरकारी पोर्टल पर करें।',benefit:'किसान परिवारों के लिए आर्थिक सहायता',department:'कृषि एवं किसान कल्याण विभाग',sourceUrl:'https://pmkisan.gov.in/',priority:true,rules:[{field:'occupation',op:'eq',value:'farmer',label:'कृषि से जुड़े नागरिक (उदाहरण नियम)'}]},
  {...base,slug:'ladli-behna',title:'मुख्यमंत्री लाड़ली बहना योजना',english:'Mukhyamantri Ladli Behna Yojana',category:'mahila',state:'madhya-pradesh',summary:'मध्य प्रदेश की महिलाओं के लिए सहायता। वर्तमान लाभ, आयु सीमा और आवेदन की उपलब्धता की पुष्टि आवश्यक है।',benefit:'महिलाओं की आर्थिक भागीदारी के लिए सहायता',sourceUrl:'',priority:true,rules:[{field:'gender',op:'eq',value:'female',label:'महिलाओं के लिए (उदाहरण नियम)'}]},
  {...base,slug:'ayushman-bharat',title:'आयुष्मान भारत – प्रधानमंत्री जन आरोग्य योजना',english:'Ayushman Bharat PM JAY',category:'swasthya',state:'central',summary:'पात्र परिवारों के लिए अस्पताल में उपचार से जुड़ी सहायता। अपनी पात्रता official source से जाँचें।',benefit:'अस्पताल में इलाज के लिए स्वास्थ्य सुरक्षा',sourceUrl:'',priority:true,rules:[]},
@@ -10,3 +11,5 @@ export const seeds:Scheme[]=[
  {...base,slug:'employment-support',title:'स्वरोज़गार सहायता',english:'Self Employment Business Support',category:'rojgar',state:'madhya-pradesh',summary:'अपना काम शुरू करने से जुड़ी सहायता खोजने का उदाहरण रिकॉर्ड। यह किसी चालू योजना का सत्यापित विवरण नहीं है।',benefit:'अपना काम शुरू करने के अवसर खोजें',sourceUrl:'',priority:false,rules:[{field:'occupation',op:'eq',value:'self-employed',label:'स्वरोज़गार से जुड़े नागरिक (उदाहरण नियम)'}]},
  {...base,slug:'ration-support',title:'खाद्य सुरक्षा और राशन सहायता',english:'Food Security Ration Support',category:'khadya',state:'central',summary:'राशन और खाद्य सहायता की जानकारी का उदाहरण। स्थानीय पात्रता और आवेदन प्रक्रिया की पुष्टि करें।',benefit:'परिवार के लिए खाद्य सुरक्षा की जानकारी',sourceUrl:'',priority:false,rules:[]},
 ];
+
+export const seeds:Scheme[]=originalSeeds.map(s=>({...s,...officialContent[s.slug]}));

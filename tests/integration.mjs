@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+const base=process.env.TEST_BASE_URL||'http://localhost:5173';
+let cookie='';
+async function req(path,method='GET',data,options={}){const r=await fetch(base+path,{method,redirect:'manual',headers:{'Content-Type':'application/json',Origin:base,...(cookie?{Cookie:cookie}:{}),...options.headers},...(data===undefined?{}:{body:JSON.stringify(data)})});const c=r.headers.get('set-cookie');if(c)cookie=[cookie,c.split(';')[0]].filter(Boolean).join('; ');return r;}
+let r=await req('/api/admin');assert.equal(r.status,403);
+r=await req('/api/admin','POST',{});assert.equal(r.status,403);
+r=await req('/api/eligibility','POST',{}, {headers:{Origin:'https://evil.example'}});assert.equal(r.status,403);
+r=await req('/api/eligibility','POST',{age:-1});assert.equal(r.status,400);
+r=await req('/api/schemes');assert.equal(r.status,200);const schemes=await r.json();assert(schemes.length>=8);
+r=await req('/api/schemes?q=zzzznoresult');assert.deepEqual(await r.json(),[]);
+r=await req('/api/eligibility','POST',{occupation:'farmer',state:'madhya-pradesh'});assert.equal(r.status,200);assert((await r.json()).some(x=>x.scheme.slug==='pm-kisan'));
+r=await req('/out/ladli-behna?kind=application');assert.equal(r.status,302);assert.equal(r.headers.get('location'),'https://cmladlibahna.mp.gov.in/');
+r=await req('/out/pm-kisan?kind=source');assert.equal(r.status,302);assert.equal(r.headers.get('location'),'https://pmkisan.gov.in/');
+r=await req('/api/reports','POST',{slug:'missing',reason:'outdated',detail:''});assert.equal(r.status,404);
+r=await req('/api/reports','POST',{slug:'pm-kisan',reason:'outdated',detail:'Local integration test report'});assert.equal(r.status,201);
+r=await req('/api/signals','POST',{slug:'pm-kisan'});assert.equal(r.status,200);const count=(await r.json()).count;
+r=await req('/api/signals','POST',{slug:'pm-kisan'});assert.equal((await r.json()).count,count);
+r=await req('/api/reminders','POST',{slug:'pm-kisan',date:'2026-02-31'});assert.equal(r.status,400);
+r=await req('/api/reminders','POST',{slug:'pm-kisan',date:new Date(Date.now()+86400000).toISOString().slice(0,10)});assert.equal(r.status,201);
+r=await req('/api/reminders');assert.equal((await r.json()).length,1);
+r=await req('/api/privacy','DELETE',{});assert.equal(r.status,200);cookie='';
+r=await req('/api/reminders');assert.deepEqual(await r.json(),[]);
+// The platform's loopback-only development sign-in supplies an authenticated test user.
+r=await req('/signin-with-chatgpt?return_to=/admin');assert([302,303,307].includes(r.status));
+r=await req('/api/admin');assert.equal(r.status,200,'Set ADMIN_USER_IDS=local_seedy in .dev.vars for this local test');
+const dashboard=await r.json();const seed=dashboard.schemes.find(s=>s.slug==='pm-kisan');const slug='qa-scheme-'+Date.now();
+r=await req('/api/admin','POST',{scheme:{...seed,slug,title:'QA sample scheme'},changes:'Local integration creation'});assert.equal(r.status,201);
+r=await req('/api/admin','POST',{scheme:{...seed,slug:'qa-invalid',sourceUrl:'https://evil.example'},changes:'invalid URL'});assert.equal(r.status,400);
+r=await req('/api/admin','POST',{scheme:{...seed,slug,status:'ARCHIVED'},oldSlug:slug,changes:'Archive integration test record'});assert.equal(r.status,201);
+r=await req('/api/schemes?q='+slug);assert.deepEqual(await r.json(),[]);
+console.log('PASS: search, retrieval, eligibility, CSRF, authorization, reports, signals, reminders, deletion, admin create/update/archive and URL validation');
