@@ -1,9 +1,9 @@
 'use client';
 import {useMemo,useState} from 'react';
 import Link from 'next/link';
-import {Search,ArrowRight,SlidersHorizontal,ShieldCheck,LockKeyhole,Sparkles,MapPin,RotateCcw,BookOpen} from 'lucide-react';
+import {SlidersHorizontal,LockKeyhole,Sparkles,RotateCcw,BookOpen} from 'lucide-react';
 import {categories,searchSchemes,type Scheme} from '@/lib/domain';
-import {Sidebar,Card,Empty,Choice,icons,SampleNotice,track} from './site';
+import {Sidebar,Card,Empty,Choice,icons,SampleNotice,track,Search,ArrowRight,ShieldCheck,MapPin} from './site';
 export function Directory({schemes,initialCategory='all',initialState='all'}:{schemes:Scheme[];initialCategory?:string;initialState?:string}){
 const [q,setQ]=useState(''),[query,setQuery]=useState(''),[state,setState]=useState(initialState),[category,setCategory]=useState(initialCategory),[verified,setVerified]=useState(false);
 const found=useMemo(()=>searchSchemes(schemes,query,category,state).filter(s=>!verified||s.status==='ACTIVE'),[schemes,query,category,state,verified]);

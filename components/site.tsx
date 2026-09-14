@@ -7,6 +7,8 @@ import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,A
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
 export const icons={Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat};
+// Re-export shared icons so other 'use client' components avoid a separate lucide chunk
+export {Search,ArrowRight,ShieldCheck,MapPin};
 export async function api<T>(path:string,data?:unknown,method='POST'):Promise<T>{const r=await fetch(path,{method,headers:{'Content-Type':'application/json'},...(data===undefined?{}:{body:JSON.stringify(data)})});const b=await r.json() as T & {error?:string};if(!r.ok)throw Error(b.error??'कुछ गलत हुआ। फिर कोशिश करें।');return b;}
 export function track(name:string){void api('/api/events',{name}).catch(()=>{});}
 export function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(v:string)=>void;options:{value:string;label:string}[]}){return <Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label} className="choice"><SelectValue placeholder={label}/></SelectTrigger><SelectContent position="popper">{options.map(o=><SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>)}</SelectContent></Select>;}

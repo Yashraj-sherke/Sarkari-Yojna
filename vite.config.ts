@@ -52,6 +52,14 @@ export default defineConfig(async () => {
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
+    // Pre-bundle lucide-react as one chunk to avoid "Duplicated JavaScript" warnings
+    optimizeDeps: {
+      include: ['lucide-react'],
+    },
+    // Target modern browsers → eliminates "Legacy JavaScript" transforms
+    build: {
+      target: 'es2020',
+    },
     plugins: [
       vinext(),
       sites(),
