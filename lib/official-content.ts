@@ -236,11 +236,11 @@ export const officialContent: Record<string, Partial<Scheme>> = {
   },
 };
 
-export const officialImages: Record<string, {src:string; alt:string; source:string; credit:string}> = {
-  'pm-kisan': {src:'/pm-kisan-official.jpeg',alt:'PM-KISAN की 23वीं किस्त संबंधी आधिकारिक हिन्दी सूचना',source:'https://pmkisan.gov.in/new_images/23rd-Installment_H.jpeg',credit:'कृषि एवं किसान कल्याण विभाग · किस्त संबंधी आधिकारिक बैनर'},
-  'ladli-behna': {src:'/ladli-behna-official.jpg',alt:'मुख्यमंत्री लाड़ली बहना योजना का आधिकारिक बैनर',source:'https://cmladlibahna.mp.gov.in/assets_static/images/slider.jpg',credit:'महिला एवं बाल विकास विभाग, मध्य प्रदेश'},
-  'seekho-kamao': {src:'/seekho-kamao-banner.jpg',alt:'मुख्यमंत्री सीखो कमाओ योजना — युवाओं के लिए कौशल प्रशिक्षण बैनर',source:'https://mmsky.mp.gov.in/',credit:'कौशल विकास एवं रोज़गार विभाग, मध्य प्रदेश'},
-  'kisan-kalyan': {src:'/kisan-kalyan-banner.jpg',alt:'मुख्यमंत्री किसान कल्याण योजना — किसानों के लिए आर्थिक सहायता बैनर',source:'https://mpwcdmis.gov.in/',credit:'कृषि विकास विभाग, मध्य प्रदेश'},
-  'gaon-ki-beti': {src:'/gaon-ki-beti-banner.jpg',alt:'गांव की बेटी योजना — ग्रामीण छात्राओं के लिए छात्रवृत्ति बैनर',source:'https://scholarshipportal.mp.nic.in/',credit:'उच्च शिक्षा विभाग, मध्य प्रदेश'},
-  'sambal-yojana': {src:'/sambal-yojna-banner.jpg',alt:'मुख्यमंत्री जन कल्याण संबल योजना — असंगठित श्रमिकों के लिए बैनर',source:'https://sambal.mp.gov.in/',credit:'श्रम विभाग, मध्य प्रदेश'},
+export const officialImages: Record<string, {src:string; alt:string; source:string; credit:string; width:number; height:number}> = {
+  'pm-kisan': {src:'/pm-kisan-official.webp',alt:'PM-KISAN की 23वीं किस्त संबंधी आधिकारिक हिन्दी सूचना',source:'https://pmkisan.gov.in/new_images/23rd-Installment_H.jpeg',credit:'कृषि एवं किसान कल्याण विभाग · किस्त संबंधी आधिकारिक बैनर',width:800,height:226},
+  'ladli-behna': {src:'/ladli-behna-official.webp',alt:'मुख्यमंत्री लाड़ली बहना योजना का आधिकारिक बैनर',source:'https://cmladlibahna.mp.gov.in/assets_static/images/slider.jpg',credit:'महिला एवं बाल विकास विभाग, मध्य प्रदेश',width:1200,height:281},
+  'seekho-kamao': {src:'/seekho-kamao-banner.webp',alt:'मुख्यमंत्री सीखो कमाओ योजना — युवाओं के लिए कौशल प्रशिक्षण बैनर',source:'https://mmsky.mp.gov.in/',credit:'कौशल विकास एवं रोज़गार विभाग, मध्य प्रदेश',width:1200,height:400},
+  'kisan-kalyan': {src:'/kisan-kalyan-banner.webp',alt:'मुख्यमंत्री किसान कल्याण योजना — किसानों के लिए आर्थिक सहायता बैनर',source:'https://mpwcdmis.gov.in/',credit:'कृषि विकास विभाग, मध्य प्रदेश',width:1200,height:400},
+  'gaon-ki-beti': {src:'/gaon-ki-beti-banner.webp',alt:'गांव की बेटी योजना — ग्रामीण छात्राओं के लिए छात्रवृत्ति बैनर',source:'https://scholarshipportal.mp.nic.in/',credit:'उच्च शिक्षा विभाग, मध्य प्रदेश',width:1200,height:400},
+  'sambal-yojana': {src:'/sambal-yojna-banner.webp',alt:'मुख्यमंत्री जन कल्याण संबल योजना — असंगठित श्रमिकों के लिए बैनर',source:'https://sambal.mp.gov.in/',credit:'श्रम विभाग, मध्य प्रदेश',width:1200,height:400},
 };
