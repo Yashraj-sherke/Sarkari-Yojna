@@ -296,7 +296,7 @@ const translations = {
   },
 } as const;
 
-export type Translations = typeof translations.hi;
+export type Translations = typeof translations.hi | typeof translations.en;
 
 interface LanguageContextType {
   lang: Lang;

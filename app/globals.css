@@ -164,21 +164,78 @@ body {
   white-space: nowrap;
   letter-spacing: .3px;
 }
-.lang-toggle:hover {
-  background: #e0f0e5;
-  border-color: #9dc4a8;
-  transform: translateY(-1px);
-}
-.lang-toggle:active {
-  transform: translateY(0);
-}
-.lang-toggle svg {
-  color: #3a8a5a;
-}
-@media(max-width:880px) {
-  .lang-toggle { font-size:.72rem; padding:5px 10px; gap:4px; }
-}
+.lang-toggle:hover { background: #e0f0e5; border-color: #9dc4a8; transform: translateY(-1px); }
+.lang-toggle:active { transform: translateY(0); }
+.lang-toggle svg { color: #3a8a5a; }
+@media(max-width:880px) { .lang-toggle { font-size:.72rem; padding:5px 10px; gap:4px; } }
 @media(max-width:680px) {
   .lang-toggle span { display:none; }
   .lang-toggle { padding:6px 8px; border-radius:50%; width:34px; height:34px; justify-content:center; }
+}
+
+/* ── Praman Patr Page ── */
+.pp-quicknav { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
+.pp-chip { display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:20px; background:#f0f7f1; border:1px solid #c8ddc8; color:#2a6644; font-size:.82rem; font-weight:600; transition:background .15s; }
+.pp-chip:hover { background:#ddf0e4; border-color:#96c4a0; }
+.pp-card { scroll-margin-top:20px; }
+.pp-header { display:flex; align-items:center; gap:16px; margin-bottom:14px; }
+.pp-emoji { font-size:2rem; line-height:1; flex-shrink:0; }
+.pp-header h2 { margin-bottom:0; }
+.pp-use { background:#f7fbf7; border-left:3px solid #4a9e6f; padding:10px 14px; border-radius:0 6px 6px 0; font-size:.85rem; color:#3a5e43; margin-bottom:20px; }
+.pp-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:16px; }
+.pp-grid h3 { font-size:.95rem; margin-bottom:10px; color:#2d5038; }
+.pp-list { padding-left:20px; margin:0; color:#4e6454; font-size:.85rem; line-height:2; }
+.pp-note { background:#fffbee; border:1px solid #e8ddb0; border-radius:6px; padding:10px 14px; font-size:.82rem; color:#7a6020; margin-bottom:16px; }
+.pp-tip { background:#f0f7f1; }
+.pp-tip ul { padding-left:22px; color:#3d5c43; font-size:.88rem; line-height:2.1; margin:12px 0 0; }
+.pp-related { margin-top:12px; padding-top:12px; }
+.pp-related h2 { margin-bottom:8px; }
+.pp-related p { font-size:.85rem; color:#687b6c; margin-bottom:16px; }
+.pp-links { display:flex; flex-wrap:wrap; gap:10px; }
+@media(max-width:680px) {
+  .pp-grid { grid-template-columns:1fr; }
+  .pp-quicknav { gap:8px; }
+  .pp-chip { font-size:.75rem; padding:7px 12px; }
+  .pp-links .btn { font-size:.8rem; }
+}
+
+/* ── Extra responsive: 360px (small Android phones) ── */
+@media(max-width:400px) {
+  .site-header { padding:0 12px; gap:8px; }
+  .brand { font-size:1.05rem; gap:8px; }
+  .brand-mark { width:30px; height:34px; border-radius:8px 8px 8px 2px; }
+  .brand-mark svg { width:18px; }
+  .brand small { display:none; }
+  .directory { padding:14px 12px 28px; }
+  .discovery h1 { font-size:1.55rem; }
+  .page-wrap { padding:18px 12px 40px; }
+  .page-heading h1 { font-size:1.45rem; }
+  .panel { padding:16px 14px; }
+  .scheme-grid { gap:12px; }
+  .category-grid { grid-template-columns:repeat(4,1fr); gap:6px; }
+  .category-tile { font-size:.65rem; padding:9px 2px; }
+  .category-tile .category-icon { width:32px; height:32px; }
+  .search-box button { padding:9px 10px; font-size:.75rem; }
+  .btn { font-size:.84rem; padding:11px 14px; }
+  .filter-bar { gap:5px; }
+  .filter-chip { padding:4px 8px; font-size:.67rem; }
+}
+
+/* ── Tablet: 768px ── */
+@media(max-width:768px) and (min-width:681px) {
+  .discovery { grid-template-columns:1fr; }
+  .match-box { display:grid; grid-template-columns:1fr auto; gap:10px 20px; }
+  .scheme-grid { grid-template-columns:repeat(2,1fr); }
+  .detail-grid { grid-template-columns:1fr; }
+  .detail-aside { grid-row:1; }
+}
+
+/* ── Touch target minimum 44px ── */
+@media(hover:none) {
+  .filter-chip { min-height:44px; display:inline-flex; align-items:center; }
+  .side-item { min-height:44px; }
+  .btn { min-height:44px; }
+  .icon-link { width:44px; height:44px; }
+  .lang-toggle { min-height:44px; }
+  .pp-chip { min-height:44px; }
 }
