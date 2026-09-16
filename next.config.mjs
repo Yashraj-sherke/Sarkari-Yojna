@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {},
   serverExternalPackages: ["cloudflare:workers"],
   typescript: {
     ignoreBuildErrors: true,

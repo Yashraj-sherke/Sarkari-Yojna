@@ -10,7 +10,7 @@
     "postinstall": "node scripts/patch-vinext.mjs",
     "dev": "vinext dev --port 5173",
     "dev:next": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "build:cf": "node scripts/patch-vinext.mjs && vinext build",
     "deploy:cf": "npm run build:cf && wrangler deploy",
     "start": "next start",
