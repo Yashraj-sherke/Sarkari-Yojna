@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config) {
-    config.externals = [...(config.externals || []), "cloudflare:workers"];
-    return config;
-  },
+  turbopack: {},
+  serverExternalPackages: ["cloudflare:workers"],
   typescript: {
     ignoreBuildErrors: true,
   },
