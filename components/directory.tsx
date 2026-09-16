@@ -6,10 +6,17 @@ import {categories,searchSchemes,type Scheme} from '@/lib/domain';
 import {Sidebar,Card,Empty,Choice,icons,SampleNotice,track,Search,ArrowRight,ShieldCheck,MapPin} from './site';
 import {useLanguage} from '@/lib/i18n';
 
-export function Directory({schemes,initialCategory='all',initialState='all'}:{schemes:Scheme[];initialCategory?:string;initialState?:string}){
-const {t}=useLanguage();
+export function Directory({schemes,initialCategory='all',initialState='all',isHomePage=false}:{schemes:Scheme[];initialCategory?:string;initialState?:string;isHomePage?:boolean}){
+const {t,lang}=useLanguage();
 const [q,setQ]=useState(''),[query,setQuery]=useState(''),[state,setState]=useState(initialState),[category,setCategory]=useState(initialCategory),[verified,setVerified]=useState(false);
-const found=useMemo(()=>searchSchemes(schemes,query,category,state).filter(s=>!verified||s.status==='ACTIVE'),[schemes,query,category,state,verified]);
+const isCentralFeatured = isHomePage && state === 'central' && !query && category === 'all';
+const found=useMemo(()=>{
+  const list = searchSchemes(schemes,query,category,state).filter(s=>!verified||s.status==='ACTIVE');
+  if (isCentralFeatured) {
+    return list.slice(0, 9);
+  }
+  return list;
+},[schemes,query,category,state,verified,isCentralFeatured]);
 return <div className="workspace"><Sidebar category={initialCategory}/><main id="main" className="directory">
   <div className="breadcrumb">{t.breadcrumbHome} <span>/</span> {t.breadcrumbSearch} <span className="edition">{t.breadcrumbEdition}</span></div>
   <section className="discovery">
@@ -53,16 +60,16 @@ return <div className="workspace"><Sidebar category={initialCategory}/><main id=
   <section className="results-section">
     <div className="section-heading">
       <div>
-        <h2>{query?`"${query}" ${t.resultsFor}`:category==='all'?t.resultsDefault:categories.find(c=>c.id===category)?.name}</h2>
-        <p>{found.length} {t.resultsSuffix}</p>
+        <h2>{query?`"${query}" ${t.resultsFor}`:isCentralFeatured?(lang==='hi'?'केंद्र सरकार की प्रमुख 9 योजनाएं':'Top 9 Central Government Schemes'):category==='all'?t.resultsDefault:categories.find(c=>c.id===category)?.name}</h2>
+        <p>{isCentralFeatured?(lang==='hi'?'9 प्रमुख योजनाएं उपलब्ध · पूरे भारत में मान्य':'9 Flagship Central Schemes · Valid Across India'):`${found.length} ${t.resultsSuffix}`}</p>
       </div>
       <div className="filter-select">
         <MapPin size={17}/>
         <Choice label={t.stateFilter} value={state} onChange={setState} options={[
+          {value:'central',label:lang==='hi'?'केंद्र सरकार (9)':'Central Schemes (9)'},
+          {value:'madhya-pradesh',label:lang==='hi'?'मध्य प्रदेश (129+)':'Madhya Pradesh (129+)'},
           {value:'all',label:t.stateAll},
-          {value:'madhya-pradesh',label:t.stateMP},
           {value:'other',label:t.stateOther},
-          {value:'central',label:t.stateCentral},
         ]}/>
       </div>
     </div>
@@ -70,12 +77,24 @@ return <div className="workspace"><Sidebar category={initialCategory}/><main id=
       <SlidersHorizontal size={16}/>
       <button className={!verified?'filter-chip active':'filter-chip'} onClick={()=>setVerified(false)}>{t.filterAll}</button>
       <button className={verified?'filter-chip active':'filter-chip'} onClick={()=>setVerified(true)}>{t.filterVerified}</button>
-      {(query||category!=='all'||state!=='all')&&<button className="reset" onClick={()=>{setCategory('all');setState('all');setQ('');setQuery('');}}><RotateCcw size={13}/> {t.filterReset}</button>}
+      {(query||category!=='all'||state!==(isHomePage ? 'central' : 'all'))&&<button className="reset" onClick={()=>{setCategory('all');setState(isHomePage ? 'central' : 'all');setQ('');setQuery('');}}><RotateCcw size={13}/> {t.filterReset}</button>}
       <span className="sample-label">{schemes.filter(s=>s.status==='ACTIVE').length} {t.verifiedCount}</span>
     </div>
     {schemes.some(s=>s.isSample)&&<SampleNotice/>}
     <p className="source-review-note">{t.sourceNote}</p>
     {found.length?<div className="scheme-grid">{found.map(s=><Card key={s.slug} s={s}/>)}</div>:<Empty description={verified?t.emptyVerifiedDesc:undefined}/>}
+    {isCentralFeatured && (
+      <section className="guide-banner" style={{marginTop:'28px',background:'#edf5ee',borderColor:'#cbe0ce'}}>
+        <MapPin size={30} style={{color:'#206d44'}}/>
+        <div>
+          <h2 style={{color:'#164f32'}}>{lang==='hi'?'मध्य प्रदेश की योजनाएं खोज रहे हैं?':'Looking for Madhya Pradesh Schemes?'}</h2>
+          <p style={{color:'#3f6b4f'}}>{lang==='hi'?'लाड़ली बहना, सीखो कमाओ, संबल और किसान कल्याण सहित MP की सभी 129+ योजनाएं देखें।':'Explore 129+ MP state government schemes with full checklists & steps.'}</p>
+        </div>
+        <Link href="/state/madhya-pradesh" style={{background:'#176247',color:'white',padding:'10px 18px',borderRadius:'6px',fontWeight:600}}>
+          {lang==='hi'?'MP की सभी 129+ योजनाएं देखें':'View 129+ MP Schemes'} <ArrowRight size={17}/>
+        </Link>
+      </section>
+    )}
   </section>
   <section className="guide-banner">
     <BookOpen size={30}/>

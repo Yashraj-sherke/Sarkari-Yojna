@@ -77,6 +77,7 @@ export function Sidebar({category='all'}:{category?:string}){
   return <aside className="sidebar">
     <p className="eyebrow">{t.sidebarForYou}</p>
     <Link className={category==='all'?'side-item selected':'side-item'} href="/"><Compass size={19}/>{t.navSearch}<ChevronRight size={15}/></Link>
+    <Link className="side-item" href="/state/madhya-pradesh"><MapPin size={19}/>{t.stateMP}<span style={{marginLeft:'auto',fontSize:'0.7rem',background:'#eaf3eb',padding:'2px 7px',borderRadius:'10px',color:'#1d694c',fontWeight:700}}>129+</span></Link>
     <Link className="side-item" href="/mere-liye"><Users size={19}/>{t.navForMe}</Link>
     <Link className="side-item" href="/saved"><Bookmark size={19}/>{t.navSaved}</Link>
     <Link className="side-item" href="/reminders"><Bell size={19}/>{t.navReminders}</Link>
