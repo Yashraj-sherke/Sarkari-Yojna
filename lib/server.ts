@@ -48,7 +48,7 @@ export async function getScheme(slug:string):Promise<Scheme|null>{
   }
 }
 export async function adminIdentity(){const u=await getChatGPTUser();const allowed=((env as {ADMIN_USER_IDS?:string})?.ADMIN_USER_IDS??'').split(',').map(x=>x.trim()).filter(Boolean);return u&&allowed.includes(u.userId)?u:null;}
-export class HttpError extends Error{constructor(public status:number,message:string){super(message);}}
+export class HttpError extends Error{status:number;constructor(status:number,message:string){super(message);this.status=status;}}
 export function checkOrigin(req:Request){if(req.headers.get('origin')!==new URL(req.url).origin)throw new HttpError(403,'अनुरोध का स्रोत मान्य नहीं है।');if(!req.headers.get('content-type')?.startsWith('application/json'))throw new HttpError(415,'JSON आवश्यक है।');}
 export async function readBody(req:Request){if(Number(req.headers.get('content-length'))>30000)throw new HttpError(413,'जानकारी बहुत बड़ी है।');const body=await req.text();if(body.length>30000)throw new HttpError(413,'जानकारी बहुत बड़ी है।');try{return JSON.parse(body);}catch{throw new HttpError(400,'जानकारी का प्रारूप सही नहीं है।');}}
 export async function rateLimit(req:Request,kind:string,limit=30){

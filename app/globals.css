@@ -239,3 +239,457 @@ body {
   .lang-toggle { min-height:44px; }
   .pp-chip { min-height:44px; }
 }
+
+/* ── Scheme Sequence & Detail Styling ── */
+.yojna-header {
+  margin: 14px 0 20px;
+}
+.yojna-title {
+  font-size: clamp(1.6rem, 2.2vw, 2.3rem);
+  font-weight: 800;
+  color: #17422b;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.yojna-english-sub {
+  font-size: 0.85rem;
+  color: #718274;
+  margin-bottom: 14px;
+}
+.yojna-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.yojna-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 13px;
+  background: #edf5ee;
+  color: #245c38;
+  border: 1px solid #c8ddce;
+  border-radius: 20px;
+  font-size: 0.79rem;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+.yojna-check-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 18px 0 24px;
+  padding: 14px 18px;
+  background: #f4faf5;
+  border: 1.5px solid #b8dec4;
+  border-radius: 10px;
+}
+.yojna-check-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #176247;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 11px 22px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(23, 98, 71, 0.2);
+  transition: transform 0.15s, background 0.15s;
+}
+.yojna-check-btn:hover {
+  background: #0e4c34;
+  transform: translateY(-1px);
+}
+.yojna-check-hint {
+  font-size: 0.82rem;
+  color: #4a6c56;
+  font-weight: 500;
+}
+
+/* Sections */
+.yojna-seq-section {
+  border: 1px solid #dbe6dc;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 24px 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+.yojna-section-heading {
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: #17422b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eef4ef;
+}
+.yojna-section-heading::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background: #257d54;
+  border-radius: 2px;
+}
+.yojna-desc-text {
+  font-size: 0.95rem;
+  color: #3b5344;
+  line-height: 1.9;
+}
+.yojna-lead-note {
+  font-size: 0.88rem;
+  color: #5c7062;
+  margin-bottom: 14px;
+}
+
+/* Benefit Card */
+.yojna-benefit-card {
+  background: linear-gradient(135deg, #f2f9f4 0%, #e5f3e9 100%);
+  border: 1.5px solid #aed6ba;
+  border-radius: 10px;
+  padding: 20px 22px;
+}
+.benefit-badge-pill {
+  display: inline-block;
+  background: #257d54;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+.benefit-main-amount {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #134f31;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.benefit-subtext {
+  font-size: 0.82rem;
+  color: #4b6a56;
+  margin: 0;
+}
+
+/* Eligibility List */
+.yojna-eligibility-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.yojna-eligibility-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #fafdfa;
+  border: 1px solid #e3ede4;
+  border-radius: 8px;
+  line-height: 1.65;
+}
+.eligibility-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+.eligibility-bullet {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  background: #dbeef0;
+  color: #1a6f44;
+  border-radius: 50%;
+  font-size: 0.76rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.eligibility-text {
+  font-size: 0.92rem;
+  color: #2f4937;
+}
+.or-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: #fdf3e2;
+  border: 1px solid #ecc98f;
+  color: #92580c;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.patrata-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #dbe6dc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.small-note {
+  font-size: 0.78rem;
+  color: #788c7c;
+  margin: 0;
+}
+
+/* Process & Steps */
+.process-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #edf5ee;
+  border: 1px solid #c2dec8;
+  color: #24633b;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+}
+.yojna-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.yojna-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  background: #fafbfa;
+  border: 1px solid #e4eae4;
+  border-radius: 8px;
+}
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: #176247;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.step-content p {
+  margin: 0;
+  font-size: 0.91rem;
+  color: #384e40;
+  line-height: 1.7;
+}
+.form-download-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  background: #f7faf8;
+  border: 1.5px dashed #a5cdae;
+  border-radius: 9px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.form-strip-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.file-icon {
+  font-size: 1.6rem;
+}
+.block-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: #657b6b;
+  margin-top: 2px;
+}
+.form-download-btn {
+  font-size: 0.85rem;
+  padding: 9px 16px;
+  background: #ffffff;
+  border-color: #257d54;
+  color: #176247;
+  font-weight: 650;
+}
+.form-download-btn:hover {
+  background: #edf5ee;
+}
+.online-apply-strip {
+  margin-top: 14px;
+}
+
+/* Documents */
+.yojna-docs-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.yojna-doc-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fbfdfb;
+  border: 1px solid #dfebdf;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 0.89rem;
+  color: #314d3a;
+  line-height: 1.6;
+}
+.doc-check-icon {
+  color: #217d4a;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 1px;
+}
+
+/* FAQs Accordion */
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.yojna-faq-details {
+  border: 1px solid #dbe6dc;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.yojna-faq-details[open] {
+  border-color: #9eccaa;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+.yojna-faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a492e;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  background: #fdfefe;
+}
+.yojna-faq-summary::-webkit-details-marker {
+  display: none;
+}
+.yojna-faq-summary:hover {
+  background: #f4faf5;
+}
+.faq-arrow-icon {
+  font-size: 1.1rem;
+  color: #53755e;
+  transition: transform 0.2s ease;
+}
+.yojna-faq-details[open] .faq-arrow-icon {
+  transform: rotate(180deg);
+}
+.yojna-faq-body {
+  padding: 12px 18px 16px;
+  font-size: 0.9rem;
+  color: #3d5545;
+  line-height: 1.85;
+  border-top: 1px solid #edf4ee;
+  background: #fafdfa;
+}
+.yojna-faq-body p {
+  margin: 0;
+}
+
+/* Source & Reference */
+.source-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #425848;
+}
+.source-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.source-label {
+  font-weight: 650;
+  color: #21432f;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+.source-notes-callout {
+  background: #fdfaee;
+  border: 1px solid #ebdcb7;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 0.83rem;
+  color: #72571c;
+  margin-top: 6px;
+}
+.source-notes-callout p {
+  margin: 0;
+  line-height: 1.7;
+}
+.transparency-disclaimer {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #e8f0e9;
+  font-size: 0.76rem;
+  color: #768a7c;
+  line-height: 1.7;
+}
+
+@media(max-width: 680px) {
+  .yojna-docs-grid {
+    grid-template-columns: 1fr;
+  }
+  .yojna-check-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .yojna-check-btn {
+    justify-content: center;
+  }
+  .patrata-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .source-row {
+    flex-direction: column;
+    gap: 3px;
+  }
+  .source-label {
+    min-width: auto;
+  }
+}
