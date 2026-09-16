@@ -29,7 +29,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
   if(!s)notFound();
-  const c=await db().prepare('SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=? AND u.expires_at>?').bind(slug,new Date().toISOString()).first<{n:number}>();
+  const d=db();
+  const c=d?await d.prepare('SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=? AND u.expires_at>?').bind(slug,new Date().toISOString()).first<{n:number}>():{n:0};
 
   // Build rich structured data
   const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl;

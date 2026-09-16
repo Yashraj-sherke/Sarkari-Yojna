@@ -1,5 +1,6 @@
 import type { Scheme } from './domain';
 import {officialContent} from './official-content.ts';
+import {mpSchemes} from './mp-schemes-data.ts';
 const base={department:'संबंधित सरकारी विभाग',documents:['दस्तावेजों की सूची official portal पर जाँचें।'],steps:['पहले official source पर वर्तमान शर्तें पढ़ें।','दस्तावेजों और आवेदन के तरीके की पुष्टि करें।','आवेदन केवल संबंधित सरकारी पोर्टल या अधिकृत केंद्र पर करें।'],sourceNotes:'डेमो रिकॉर्ड। संक्षिप्त विवरण और पात्रता नियम केवल उत्पाद का अनुभव दिखाने के लिए हैं। पूरी सरकारी शर्तों का सत्यापन बाकी है।',applicationUrl:'',status:'REQUIRES_OFFICIAL_VERIFICATION' as const,isSample:true,verifiedAt:null,nextReviewAt:null};
 const originalSeeds:Scheme[]=[
  {...base,slug:'pm-kisan',title:'प्रधानमंत्री किसान सम्मान निधि',english:'PM Kisan Samman Nidhi',category:'kisan',state:'central',summary:'किसान परिवारों के लिए आय सहायता की योजना। लाभ और पूरी पात्रता की पुष्टि सरकारी पोर्टल पर करें।',benefit:'किसान परिवारों के लिए आर्थिक सहायता',department:'कृषि एवं किसान कल्याण विभाग',sourceUrl:'https://pmkisan.gov.in/',priority:true,rules:[{field:'occupation',op:'eq',value:'farmer',label:'कृषि से जुड़े नागरिक (उदाहरण नियम)'}]},
@@ -17,4 +18,15 @@ const originalSeeds:Scheme[]=[
  {...base,slug:'ladli-laxmi',title:'लाड़ली लक्ष्मी योजना',english:'Ladli Laxmi Yojana Girl Child Certificate Education',category:'mahila',state:'madhya-pradesh',summary:'मध्य प्रदेश में जन्मी बालिकाओं के नाम ₹1,43,000 का लाड़ली लक्ष्मी प्रमाण पत्र। पढ़ाई में किस्तें और 21 वर्ष पर ₹1 लाख।',benefit:'₹1,43,000 का प्रमाण पत्र · 6वीं से 12वीं किस्तें · 21 वर्ष पर ₹1 लाख',department:'महिला एवं बाल विकास विभाग, मध्य प्रदेश',sourceUrl:'https://ladlilaxmi.mp.gov.in/',priority:true,rules:[{field:'gender',op:'eq',value:'female',label:'केवल बालिकाओं के लिए'}]},
 ];
 
-export const seeds:Scheme[]=originalSeeds.map(s=>({...s,...officialContent[s.slug]}));
+const baseSeeds: Scheme[] = originalSeeds.map(s => ({ ...s, ...officialContent[s.slug] }));
+const seedMap = new Map<string, Scheme>();
+for (const s of baseSeeds) {
+  seedMap.set(s.slug, s);
+}
+for (const s of mpSchemes) {
+  if (!seedMap.has(s.slug)) {
+    seedMap.set(s.slug, s);
+  }
+}
+
+export const seeds: Scheme[] = Array.from(seedMap.values());
