@@ -1,4 +1,16 @@
-import {env} from 'cloudflare:workers';
+let env: any = {};
+if (typeof process !== 'undefined' && process.env) {
+  env = { ...process.env };
+}
+try {
+  // @ts-ignore
+  const cf = await import(/* webpackIgnore: true */ 'cloudflare:workers');
+  if (cf && cf.env) {
+    env = { ...env, ...cf.env };
+  }
+} catch {
+  // Cloudflare Workers environment not available (e.g. running on Vercel / Node)
+}
 import {getChatGPTUser} from '@/app/chatgpt-auth';
 import {schemeSchema,effectiveStatus,type Scheme} from './domain';
 import {seeds} from './seed';
