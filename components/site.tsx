@@ -103,7 +103,7 @@ export function Card({s}:{s:Scheme}){
   const cat=categories.find(c=>c.id===s.category)!;
   const Icon=icons[cat.icon];
   return <article className="scheme-card">
-    <OfficialImage slug={s.slug}/>
+    <OfficialImage slug={s.slug} scheme={s}/>
     <div className="card-top">
       <span className={'category-icon '+cat.color}><Icon size={23}/></span>
       <span className="scope"><MapPin size={13}/>{s.state==='central'?t.centralGov:t.mpGov}</span>

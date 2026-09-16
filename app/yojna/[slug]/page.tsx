@@ -98,7 +98,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     {['NEEDS_REVIEW','CLOSED','ARCHIVED'].includes(s.status)&&<div className="sample-note">इस योजना की स्थिति बदल चुकी है या दोबारा समीक्षा जरूरी है। आवेदन से पहले सरकारी स्रोत पर पुष्टि करें।</div>}
     <div className="detail-grid">
       <div className="detail-body">
-        <OfficialImage slug={s.slug}/>
+        <OfficialImage slug={s.slug} scheme={s}/>
         <section className="panel" id="labh">
           <h2>एक नज़र में</h2>
           <p><b>क्या लाभ मिल सकता है?</b><br/>{s.benefit}</p>
