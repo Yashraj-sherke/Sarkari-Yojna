@@ -33,6 +33,36 @@ const localBindingConfig = {
     : [],
 };
 
+function patchVinextLinkPlugin(): import("vite").Plugin {
+  return {
+    name: "patch-vinext-link",
+    enforce: "pre",
+    transform(code, id) {
+      if (id.includes("vinext") && id.includes("link.js")) {
+        let changed = false;
+        if (!code.includes('import * as navigationModule from "./navigation.js";')) {
+          code = code.replace(
+            'let loadedNavigationModule = null;\nlet navigationModulePromise = null;',
+            'import * as navigationModule from "./navigation.js";\nlet loadedNavigationModule = navigationModule;\nlet navigationModulePromise = Promise.resolve(navigationModule);'
+          );
+          code = code.replace(
+            'function loadNavigationModule() {\n\treturn navigationModulePromise ??= import("./navigation.js").then((module) => {\n\t\tloadedNavigationModule = module;\n\t\treturn module;\n\t});\n}',
+            'function loadNavigationModule() {\n\treturn navigationModulePromise;\n}'
+          );
+          changed = true;
+        }
+        const targetCode = 'if (hasAppNavigationRuntime) {\n\t\t\tconst { navigateClientSide } = loadedNavigationModule ?? await loadNavigationModule();\n\t\t\tconst setter = setPendingRef.current;';
+        const safeCode = 'if (hasAppNavigationRuntime) {\n\t\t\tconst { navigateClientSide } = loadedNavigationModule ?? await loadNavigationModule();\n\t\t\tif (typeof navigateClientSide !== "function") {\n\t\t\t\tif (replace) window.location.replace(absoluteFullHref);\n\t\t\t\telse window.location.assign(absoluteFullHref);\n\t\t\t\treturn;\n\t\t\t}\n\t\t\tconst setter = setPendingRef.current;';
+        if (code.includes(targetCode)) {
+          code = code.replace(targetCode, safeCode);
+          changed = true;
+        }
+        if (changed) return { code };
+      }
+    },
+  };
+}
+
 export default defineConfig(async () => {
   // Use Miniflare's local Request.cf placeholder unless fetching is requested.
   process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
@@ -61,6 +91,7 @@ export default defineConfig(async () => {
       target: 'es2020',
     },
     plugins: [
+      patchVinextLinkPlugin(),
       vinext(),
       sites(),
       cloudflare({

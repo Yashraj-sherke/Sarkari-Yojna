@@ -40,3 +40,6 @@ try {
   console.error("npm ci exited successfully but the local vinext executable is unavailable.");
   process.exitCode = 69;
 }
+
+await import("./patch-vinext.mjs");
+
