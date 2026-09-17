@@ -31,8 +31,8 @@ export function Header(){
           src="/navbar-logo.webp"
           alt="Sarkari Yojna Logo"
           className="navbar-brand-logo"
-          width={180}
-          height={60}
+          width={220}
+          height={72}
         />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
