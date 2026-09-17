@@ -695,6 +695,45 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   OFFICIAL NAVBAR BRAND LOGO
+   ══════════════════════════════════════════════════════════════════════ */
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.navbar-brand-logo {
+  height: 56px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.brand:hover .navbar-brand-logo {
+  transform: scale(1.02);
+  filter: drop-shadow(0 2px 8px rgba(33, 115, 82, 0.15));
+}
+
+@media (max-width: 880px) {
+  .navbar-brand-logo {
+    height: 48px;
+    max-width: 170px;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar-brand-logo {
+    height: 42px;
+    max-width: 150px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    OFFICIAL DARK GOVERNMENT PORTAL FOOTER (Mockup Matching)
    ══════════════════════════════════════════════════════════════════════ */
 

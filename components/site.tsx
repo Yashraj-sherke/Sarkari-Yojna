@@ -25,12 +25,15 @@ export function Header(){
       <span>{t.yourInfo}</span>
     </div>
     <header className="site-header">
-      <Link href="/" className="brand">
-        <span className="brand-mark">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-icon.webp" alt="Sarkari Yojna Logo" width={38} height={38} style={{objectFit:'contain',display:'block'}} />
-        </span>
-        <span>{t.brandName}<small>{t.brandTagline}</small></span>
+      <Link href="/" className="brand" aria-label={t.brandName}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/navbar-logo.webp"
+          alt="Sarkari Yojna Logo"
+          className="navbar-brand-logo"
+          width={180}
+          height={60}
+        />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
         {[
