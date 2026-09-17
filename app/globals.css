@@ -1135,6 +1135,186 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   FOOTER RESPONSIVE ADAPTATIONS
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* Tablet (769px - 1040px) */
+@media (max-width: 1040px) {
+  .portal-footer-inner {
+    padding: 0 24px;
+  }
+
+  .portal-footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 32px 24px;
+  }
+
+  .portal-footer-col.portals-col {
+    grid-column: 1 / -1;
+  }
+
+  .portal-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  .portal-gov-footer {
+    padding: 38px 0 26px;
+    margin-top: 36px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  /* Slightly denser gradient veil on mobile to ensure crisp readability */
+  .portal-gov-footer::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.78) 32%,
+      rgba(242, 248, 244, 0.58) 55%,
+      rgba(14, 46, 33, 0.78) 78%,
+      rgba(7, 28, 19, 0.94) 100%
+    );
+  }
+
+  .portal-footer-inner {
+    padding: 0 18px;
+  }
+
+  .portal-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+    padding-bottom: 28px;
+  }
+
+  /* Brand Column takes full width at top */
+  .portal-footer-col.brand-col {
+    grid-column: 1 / -1;
+    gap: 12px;
+  }
+
+  .portal-footer-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .portal-brand-name {
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+  }
+
+  .portal-brand-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  /* Link Columns */
+  .portal-col-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .portal-link-list {
+    gap: 10px;
+  }
+
+  .portal-link-list li a {
+    font-size: 0.84rem;
+    gap: 7px;
+  }
+
+  /* Portals Column takes full width below the link columns */
+  .portal-footer-col.portals-col {
+    grid-column: 1 / -1;
+  }
+
+  .portal-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gov-portal-card {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .portal-card-icon {
+    font-size: 0.9rem;
+    margin-right: 4px;
+  }
+
+  /* Bottom Strip Stacked & Centered */
+  .portal-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    padding-top: 22px;
+  }
+
+  .footer-disclaimer-text {
+    text-align: center;
+    max-width: 100%;
+    min-width: unset;
+    font-size: 0.74rem;
+    line-height: 1.6;
+    color: #e2f3e9;
+  }
+
+  .footer-social-cluster {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-pill {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footer-copyright-block {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .copy-title {
+    font-size: 0.82rem;
+  }
+
+  .copy-sub {
+    font-size: 0.74rem;
+  }
+}
+
+/* Extra Small Phones (<= 380px) */
+@media (max-width: 380px) {
+  .portal-footer-inner {
+    padding: 0 14px;
+  }
+
+  .portal-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .portal-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .portal-brand-name {
+    font-size: 1.3rem;
+  }
+
+  .portal-brand-wrap {
+    gap: 11px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    HERO BANNER (With Illustrated Background Graphic)
    ══════════════════════════════════════════════════════════════════════ */
 
