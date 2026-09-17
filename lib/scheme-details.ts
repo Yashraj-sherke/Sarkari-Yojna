@@ -3,7 +3,7 @@ import type { Scheme } from './domain';
 interface SchemeDetailMeta {
   tags?: string[];
   eligibility?: string[];
-  mode?: 'ऑफलाइन' | 'ऑनलाइन' | 'ऑनलाइन / ऑफलाइन';
+  mode?: 'ऑफलाइन' | 'ऑनलाइन' | 'ऑनलाइन / ऑफलाइन' | 'ऑफलाइन / शिविर';
   formUrl?: string;
   formName?: string;
   faqs?: { q: string; a: string }[];
@@ -152,7 +152,7 @@ export function getSchemeEligibilityList(s: Scheme): string[] {
 }
 
 export function getSchemeProcess(s: Scheme): {
-  mode: 'ऑफलाइन' | 'ऑनलाइन' | 'ऑनलाइन / ऑफलाइन';
+  mode: 'ऑफलाइन' | 'ऑनलाइन' | 'ऑनलाइन / ऑफलाइन' | 'ऑफलाइन / शिविर';
   formUrl?: string;
   formName?: string;
 } {

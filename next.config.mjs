@@ -4,6 +4,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  turbopack: {},
   images: {
     unoptimized: true,
   },

@@ -693,3 +693,318 @@ body {
     min-width: auto;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   OFFICIAL DARK GOVERNMENT PORTAL FOOTER (Mockup Matching)
+   ══════════════════════════════════════════════════════════════════════ */
+
+.portal-gov-footer {
+  background: #0d1613;
+  color: #b8cec2;
+  border-top: 1px solid #182c23;
+  margin-top: 50px;
+  font-family: inherit;
+  padding: 48px 0 24px;
+}
+
+.portal-footer-inner {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* 4-Column Grid */
+.portal-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #192a21;
+}
+
+/* Column 1: Brand & Logo */
+.portal-footer-col.brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.portal-brand-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.portal-footer-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+.portal-brand-name {
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  letter-spacing: -0.3px;
+}
+.portal-brand-name .name-white {
+  color: #ffffff;
+}
+.portal-brand-name .name-green {
+  color: #38c172;
+}
+.portal-brand-desc {
+  font-size: 0.84rem;
+  color: #92a79b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Tricolor Line */
+.portal-tricolor-line {
+  display: flex;
+  height: 4px;
+  width: 140px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.portal-tricolor-line .tri-saffron {
+  flex: 1;
+  background: #ff9933;
+}
+.portal-tricolor-line .tri-white {
+  flex: 1;
+  background: #ffffff;
+}
+.portal-tricolor-line .tri-green {
+  flex: 1;
+  background: #138808;
+}
+
+.portal-sub-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #122119;
+  border: 1px solid #1b3527;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.74rem;
+  color: #84a994;
+  width: fit-content;
+}
+
+/* Columns 2 & 3: Links */
+.portal-col-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 7px;
+}
+.portal-col-title .title-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 2.5px;
+  background: #38c172;
+  border-radius: 2px;
+}
+.portal-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.portal-link-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #b0c6ba;
+  font-size: 0.86rem;
+  transition: color 0.16s ease, transform 0.16s ease;
+}
+.portal-link-list li a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+.portal-link-list .link-icon {
+  color: #58a07c;
+  flex-shrink: 0;
+}
+
+/* Column 4: Official Portals Cards Grid (2x2) */
+.portal-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.gov-portal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #14221c;
+  border: 1px solid #1f352b;
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.83rem;
+  font-weight: 600;
+  transition: background 0.16s, border-color 0.16s, transform 0.16s;
+}
+.gov-portal-card:hover {
+  background: #1b2f26;
+  border-color: #38c172;
+  transform: translateY(-1px);
+}
+.portal-card-icon {
+  font-size: 1rem;
+  margin-right: 6px;
+}
+.portal-card-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gov-portal-card .ext-icon {
+  color: #68967f;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+/* Security Note Box */
+.portal-security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #091710;
+  border: 1px solid #183a27;
+  border-left: 3px solid #38c172;
+  border-radius: 7px;
+  padding: 10px 12px;
+}
+.portal-security-note .lock-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.portal-security-note p {
+  font-size: 0.74rem;
+  color: #8da496;
+  line-height: 1.5;
+  margin: 0;
+}
+.portal-security-note strong {
+  color: #38c172;
+}
+
+/* Bottom Strip */
+.portal-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  flex-wrap: wrap;
+}
+.footer-disclaimer-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  font-size: 0.74rem;
+  color: #798e82;
+  line-height: 1.65;
+}
+.footer-disclaimer-text strong {
+  color: #b8cec2;
+}
+
+/* Social Buttons */
+.footer-social-cluster {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.social-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  transition: transform 0.16s ease, filter 0.16s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.social-pill:hover {
+  transform: translateY(-2px) scale(1.08);
+  filter: brightness(1.15);
+}
+.social-pill.youtube {
+  background: #ff0000;
+}
+.social-pill.x-twitter {
+  background: #000000;
+  border: 1px solid #333333;
+}
+.social-pill.facebook {
+  background: #1877f2;
+}
+.social-pill.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Copyright Block */
+.footer-copyright-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  min-width: 140px;
+}
+.copy-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #9eb5a8;
+}
+.copy-sub {
+  font-size: 0.72rem;
+  color: #6b8274;
+}
+
+/* Responsive Breakpoints */
+@media(max-width: 1080px) {
+  .portal-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+@media(max-width: 680px) {
+  .portal-gov-footer {
+    padding: 36px 0 20px;
+  }
+  .portal-footer-inner {
+    padding: 0 20px;
+  }
+  .portal-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .portal-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-copyright-block {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+

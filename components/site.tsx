@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {OfficialImage} from './official-image';
 import {usePathname} from 'next/navigation';
 import {useState} from 'react';
-import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages} from 'lucide-react';
+import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages,FileText,BookOpen,AlertCircle,Mail} from 'lucide-react';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
 import {useLanguage} from '@/lib/i18n';
@@ -26,7 +26,10 @@ export function Header(){
     </div>
     <header className="site-header">
       <Link href="/" className="brand">
-        <span className="brand-mark"><Sprout size={27}/></span>
+        <span className="brand-mark">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-icon.webp" alt="Sarkari Yojna Logo" width={38} height={38} style={{objectFit:'contain',display:'block'}} />
+        </span>
         <span>{t.brandName}<small>{t.brandTagline}</small></span>
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
@@ -56,20 +59,193 @@ export function Header(){
 }
 
 export function Footer(){
-  const {t}=useLanguage();
-  return <footer className="footer">
-    <div className="footer-brand"><Sprout size={22}/><b>{t.footerTagline}</b></div>
-    <p>{t.footerDisclaimer}</p>
-    <div className="footer-bottom">
-      <span>{t.footerFree}</span>
-      <nav>
-        <Link href="/privacy">{t.footerPrivacy}</Link>
-        <Link href="/terms">{t.footerTerms}</Link>
-        <Link href="/disclaimer">{t.footerDisclaimer2}</Link>
-        <Link href="/admin">{t.footerAdmin}</Link>
-      </nav>
-    </div>
-  </footer>;
+  return (
+    <footer className="portal-gov-footer" role="contentinfo">
+      <div className="portal-footer-inner">
+        {/* Top 4-Column Grid matching user mockup */}
+        <div className="portal-footer-grid">
+          
+          {/* Column 1: Brand, Logo & Tagline */}
+          <div className="portal-footer-col brand-col">
+            <div className="portal-brand-wrap">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-icon.webp"
+                alt="Sarkari Yojna Logo"
+                className="portal-footer-logo"
+                width={54}
+                height={54}
+              />
+              <div className="portal-brand-text">
+                <h2 className="portal-brand-name">
+                  <span className="name-white">Sarkari</span> <span className="name-green">Yojna</span>
+                </h2>
+                <p className="portal-brand-desc">
+                  सरकारी योजनाओं की सरल जानकारी, पात्रता और आवेदन मार्गदर्शन।
+                </p>
+              </div>
+            </div>
+
+            {/* Indian Flag Tricolor Strip */}
+            <div className="portal-tricolor-line" aria-hidden="true">
+              <span className="tri-saffron" />
+              <span className="tri-white" />
+              <span className="tri-green" />
+            </div>
+
+            <div className="portal-sub-badge">
+              <span>जनहित में, सही जानकारी के साथ।</span>
+            </div>
+          </div>
+
+          {/* Column 2: त्वरित लिंक */}
+          <div className="portal-footer-col">
+            <h3 className="portal-col-title">
+              त्वरित लिंक
+              <span className="title-bar" />
+            </h3>
+            <ul className="portal-link-list">
+              <li>
+                <Link href="/">
+                  <Search size={15} className="link-icon" />
+                  <span>योजना खोज</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/mere-liye">
+                  <Users size={15} className="link-icon" />
+                  <span>मेरे लिए योजनाएं</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/praman-patr">
+                  <FileText size={15} className="link-icon" />
+                  <span>दस्तावेज़ मार्गदर्शिका</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/guide">
+                  <BookOpen size={15} className="link-icon" />
+                  <span>आवेदन कैसे करें</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/state/madhya-pradesh">
+                  <MapPin size={15} className="link-icon" />
+                  <span>मध्य प्रदेश की योजनाएं</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: महत्वपूर्ण */}
+          <div className="portal-footer-col">
+            <h3 className="portal-col-title">
+              महत्वपूर्ण
+              <span className="title-bar" />
+            </h3>
+            <ul className="portal-link-list">
+              <li>
+                <Link href="/about">
+                  <Info size={15} className="link-icon" />
+                  <span>हमारे बारे में</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy">
+                  <ShieldCheck size={15} className="link-icon" />
+                  <span>गोपनीयता नीति</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms">
+                  <FileText size={15} className="link-icon" />
+                  <span>उपयोग के नियम</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer">
+                  <AlertCircle size={15} className="link-icon" />
+                  <span>अस्वीकरण</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <Mail size={15} className="link-icon" />
+                  <span>संपर्क करें</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: अधिकृत सरकारी पोर्टल्स */}
+          <div className="portal-footer-col portals-col">
+            <h3 className="portal-col-title">
+              अधिकृत सरकारी पोर्टल्स
+              <span className="title-bar" />
+            </h3>
+            <div className="portal-cards-grid">
+              <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+                <span className="portal-card-icon">🏛️</span>
+                <span className="portal-card-text">India.gov.in</span>
+                <ArrowUpRight size={13} className="ext-icon" />
+              </a>
+              <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+                <span className="portal-card-icon">🌐</span>
+                <span className="portal-card-text">myScheme</span>
+                <ArrowUpRight size={13} className="ext-icon" />
+              </a>
+              <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+                <span className="portal-card-icon">🌿</span>
+                <span className="portal-card-text">PM-KISAN</span>
+                <ArrowUpRight size={13} className="ext-icon" />
+              </a>
+              <a href="https://mp.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+                <span className="portal-card-icon">🗺️</span>
+                <span className="portal-card-text">MP.gov.in</span>
+                <ArrowUpRight size={13} className="ext-icon" />
+              </a>
+            </div>
+
+            <div className="portal-security-note">
+              <span className="lock-icon">🔒</span>
+              <p>
+                <strong>सुरक्षा:</strong> कभी भी किसी अज्ञात व्यक्ति के साथ बैंक OTP, UPI पिन या गोपनीय पासवर्ड साझा न करें!
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom Strip: Disclaimer on left, Social Media in center, Copyright on right */}
+        <div className="portal-footer-bottom">
+          <div className="footer-disclaimer-text">
+            <strong>Sarkari Yojna</strong> एक स्वतंत्र सूचना प्लेटफ़ॉर्म है। यह भारत सरकार या किसी राज्य सरकार की आधिकारिक वेबसाइट नहीं है। योजनाओं की अंतिम पात्रता, लाभ और आवेदन प्रक्रिया संबंधित सरकारी विभाग/पोर्टल द्वारा निर्धारित की जाती है।
+          </div>
+
+          <div className="footer-social-cluster" aria-label="सोशल मीडिया लिंक्स">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-pill youtube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social-pill x-twitter" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-pill facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-pill instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+
+          <div className="footer-copyright-block">
+            <span className="copy-title">© 2026 Sarkari Yojna</span>
+            <span className="copy-sub">सभी अधिकार सुरक्षित</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export function Sidebar({category='all'}:{category?:string}){
