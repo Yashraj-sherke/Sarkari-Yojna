@@ -5,6 +5,7 @@ import {SlidersHorizontal,LockKeyhole,Sparkles,RotateCcw,BookOpen} from 'lucide-
 import {categories,searchSchemes,type Scheme} from '@/lib/domain';
 import {Sidebar,Card,Empty,Choice,icons,SampleNotice,track,Search,ArrowRight,ShieldCheck,MapPin} from './site';
 import {useLanguage} from '@/lib/i18n';
+import {ProcessFlow} from './process-flow';
 
 export function Directory({schemes,initialCategory='all',initialState='all',isHomePage=false}:{schemes:Scheme[];initialCategory?:string;initialState?:string;isHomePage?:boolean}){
 const {t,lang}=useLanguage();
@@ -17,7 +18,8 @@ const found=useMemo(()=>{
   }
   return list;
 },[schemes,query,category,state,verified,isCentralFeatured]);
-return <div className="workspace"><Sidebar category={initialCategory}/><main id="main" className="directory">
+return <>
+  <div className="workspace"><Sidebar category={initialCategory}/><main id="main" className="directory">
   <div className="breadcrumb">{t.breadcrumbHome} <span>/</span> {t.breadcrumbSearch} <span className="edition">{t.breadcrumbEdition}</span></div>
   <section className="discovery">
     <div className="discovery-copy">
@@ -97,23 +99,9 @@ return <div className="workspace"><Sidebar category={initialCategory}/><main id=
     {schemes.some(s=>s.isSample)&&<SampleNotice/>}
     <p className="source-review-note">{t.sourceNote}</p>
     {found.length?<div className="scheme-grid">{found.map(s=><Card key={s.slug} s={s}/>)}</div>:<Empty description={verified?t.emptyVerifiedDesc:undefined}/>}
-    {isCentralFeatured && (
-      <section className="guide-banner" style={{marginTop:'28px',background:'#edf5ee',borderColor:'#cbe0ce'}}>
-        <MapPin size={30} style={{color:'#206d44'}}/>
-        <div>
-          <h2 style={{color:'#164f32'}}>{lang==='hi'?'मध्य प्रदेश की योजनाएं खोज रहे हैं?':'Looking for Madhya Pradesh Schemes?'}</h2>
-          <p style={{color:'#3f6b4f'}}>{lang==='hi'?'लाड़ली बहना, सीखो कमाओ, संबल और किसान कल्याण सहित MP की सभी 129+ योजनाएं देखें।':'Explore 129+ MP state government schemes with full checklists & steps.'}</p>
-        </div>
-        <Link href="/state/madhya-pradesh" style={{background:'#176247',color:'white',padding:'10px 18px',borderRadius:'6px',fontWeight:600}}>
-          {lang==='hi'?'MP की सभी 129+ योजनाएं देखें':'View 129+ MP Schemes'} <ArrowRight size={17}/>
-        </Link>
-      </section>
-    )}
   </section>
-  <section className="guide-banner">
-    <BookOpen size={30}/>
-    <div><h2>{t.guideBannerTitle}</h2><p>{t.guideBannerDesc}</p></div>
-    <Link href="/guide">{t.guideBannerLink} <ArrowRight size={18}/></Link>
-  </section>
-</main></div>;
+  </main>
+</div>
+<ProcessFlow lang={lang} />
+</>;
 }
