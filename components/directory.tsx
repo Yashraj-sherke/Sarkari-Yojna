@@ -44,15 +44,19 @@ return <div className="workspace"><Sidebar category={initialCategory}/><main id=
         {t.searchTags.map(tag=><button key={tag} onClick={()=>{setQ(tag);setQuery(tag);track('search_performed');}}>{tag}</button>)}
       </div>
     </div>
-    <div className="match-box">
-      <span className="match-icon"><Sparkles size={27}/></span>
+  </section>
+  <div className="match-box">
+    <span className="match-icon"><Sparkles size={26}/></span>
+    <div className="match-content">
       <span className="small-label">{t.matchStart}</span>
-      <h2>{t.matchTitle.split('\n').map((line,i)=><span key={i}>{line}{i===0&&<br/>}</span>)}</h2>
-      <p>{t.matchDesc.split('\n').map((line,i)=><span key={i}>{line}{i===0&&<br/>}</span>)}</p>
+      <h2>{t.matchTitle.split('\n').join(' ')}</h2>
+      <p>{t.matchDesc.split('\n').join(' ')}</p>
+    </div>
+    <div className="match-action">
       <Link className="btn" href="/mere-liye">{t.matchBtn} <ArrowRight size={17}/></Link>
       <span className="match-privacy"><LockKeyhole size={13}/> {t.matchPrivacy}</span>
     </div>
-  </section>
+  </div>
   <div className="trust-strip">
     <span><ShieldCheck/>{t.trustSource}</span>
     <span><BookOpen/>{t.trustSimple}</span>
