@@ -1301,31 +1301,33 @@ body {
   width: 100%;
   overflow: hidden;
   background: #ffffff;
-  padding: 44px 24px 50px;
+  padding: 46px 24px 50px;
   margin-top: 48px;
   margin-bottom: 40px;
 }
 
+/* Organic Flora Curves - anchored to the very left edge of the section */
 .flow-bg-decor-left {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 320px;
+  width: clamp(140px, 15vw, 220px);
   pointer-events: none;
   z-index: 0;
+  transition: opacity 0.3s, width 0.3s;
 }
 
 .flow-bg-decor-left svg {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  display: block;
 }
 
 .flow-bg-decor-dots {
   position: absolute;
-  right: 52px;
-  top: 32px;
+  right: 28px;
+  top: 24px;
   width: 86px;
   height: 54px;
   background-image: radial-gradient(#277d53 1.5px, transparent 1.5px);
@@ -1346,6 +1348,8 @@ body {
 .flow-heading-cluster {
   text-align: center;
   margin-bottom: 44px;
+  position: relative;
+  z-index: 2;
 }
 
 .flow-main-title {
@@ -1371,12 +1375,14 @@ body {
   justify-content: space-between;
   width: 100%;
   gap: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .flow-step-wrapper {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -1384,6 +1390,7 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
+  width: 100%;
   flex: 1;
   min-width: 0;
   transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -1397,14 +1404,14 @@ body {
   position: relative;
   background: #f0faf4;
   border: 1.5px solid #a9dfc2;
-  border-radius: 52px;
-  padding: 8px 18px 8px 8px;
+  border-radius: 9999px;
+  padding: 8px 16px 8px 8px;
   display: flex;
   align-items: center;
   gap: 12px;
   box-shadow: 0 3px 14px rgba(22, 101, 52, 0.05);
   transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-  min-height: 80px;
+  min-height: 78px;
   cursor: pointer;
 }
 
@@ -1414,36 +1421,28 @@ body {
   box-shadow: 0 8px 24px rgba(22, 101, 52, 0.12);
 }
 
-/* Concentric Circle Cluster */
-.flow-circle-cluster {
+/* Concentric Halo Ring & Disc */
+.flow-card-icon-halo {
   position: relative;
-  width: 66px;
-  height: 66px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flow-outer-ring {
-  width: 66px;
-  height: 66px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   border: 1.5px solid #a3dcbd;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: border-color 0.22s;
 }
 
-.flow-step-link:hover .flow-outer-ring {
+.flow-step-link:hover .flow-card-icon-halo {
   border-color: #176247;
 }
 
-.flow-inner-icon-disc {
-  width: 50px;
-  height: 50px;
+.flow-card-disc {
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: #ffffff;
   border: 1.5px solid #bcead1;
@@ -1455,7 +1454,7 @@ body {
   transition: transform 0.22s, border-color 0.22s;
 }
 
-.flow-step-link:hover .flow-inner-icon-disc {
+.flow-step-link:hover .flow-card-disc {
   transform: scale(1.05);
   border-color: #176247;
 }
@@ -1486,8 +1485,8 @@ body {
   left: -8px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #176247;
   color: #ffffff;
@@ -1502,7 +1501,7 @@ body {
 .flow-flag-badge {
   position: absolute;
   top: 10px;
-  right: 16px;
+  right: 14px;
   line-height: 1;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
 }
@@ -1540,6 +1539,10 @@ body {
   justify-content: center;
 }
 
+.flow-step-card.is-goal-step .flow-card-content {
+  padding-right: 28px;
+}
+
 .flow-card-title {
   font-size: 14.5px;
   font-weight: 700;
@@ -1564,8 +1567,8 @@ body {
 
 /* Connector Line */
 .flow-connector {
-  flex: 0 0 34px;
-  height: 28px;
+  flex: 0 0 32px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1583,11 +1586,54 @@ body {
    RESPONSIVENESS BREAKPOINTS
    ══════════════════════════════════════════════════════════════════════ */
 
-@media (max-width: 1180px) {
+/* Laptop & Medium Screens (1041px - 1240px) */
+@media (max-width: 1240px) {
+  .flow-workflow-section {
+    padding: 40px 18px 44px;
+  }
+
+  .flow-connector {
+    flex: 0 0 22px;
+    margin: 0 -1px;
+  }
+
+  .flow-step-card {
+    padding: 7px 12px 7px 7px;
+    gap: 10px;
+    min-height: 74px;
+  }
+
+  .flow-card-icon-halo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .flow-card-disc {
+    width: 40px;
+    height: 40px;
+  }
+
+  .flow-card-title {
+    font-size: 13.5px;
+  }
+
+  .flow-card-desc {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .flow-bg-decor-left {
+    width: 130px;
+    opacity: 0.6;
+  }
+}
+
+/* Tablet Devices (681px - 1040px) - 2x2 Grid */
+@media (max-width: 1040px) {
   .flow-steps-chain {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px 20px;
+    gap: 22px 18px;
   }
 
   .flow-connector {
@@ -1597,58 +1643,146 @@ body {
   .flow-step-wrapper {
     width: 100%;
   }
+
+  .flow-step-card {
+    padding: 10px 18px 10px 10px;
+    gap: 14px;
+    min-height: 80px;
+  }
+
+  .flow-card-icon-halo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .flow-card-disc {
+    width: 46px;
+    height: 46px;
+  }
+
+  .flow-card-title {
+    font-size: 14.5px;
+  }
+
+  .flow-card-desc {
+    font-size: 12px;
+  }
+
+  .flow-bg-decor-left {
+    width: 120px;
+    opacity: 0.4;
+  }
 }
 
-@media (max-width: 660px) {
+/* Mobile Devices (381px - 680px) - Single Column */
+@media (max-width: 680px) {
   .flow-workflow-section {
-    padding: 36px 16px 40px;
+    padding: 34px 14px 38px;
     margin-top: 32px;
     margin-bottom: 28px;
   }
 
   .flow-heading-cluster {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
+    padding: 0 8px;
   }
 
   .flow-main-title {
-    font-size: 24px;
+    font-size: clamp(21px, 6vw, 26px);
+    margin-bottom: 6px;
   }
 
   .flow-subtitle {
-    font-size: 13px;
+    font-size: clamp(12.5px, 3.6vw, 14px);
+    line-height: 1.45;
   }
 
   .flow-steps-chain {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 14px;
   }
 
   .flow-step-card {
-    border-radius: 44px;
+    border-radius: 9999px;
     padding: 8px 14px 8px 8px;
-    min-height: 74px;
+    min-height: 72px;
+    gap: 12px;
   }
 
-  .flow-circle-cluster {
-    width: 58px;
-    height: 58px;
+  .flow-card-icon-halo {
+    width: 52px;
+    height: 52px;
   }
 
-  .flow-outer-ring {
-    width: 58px;
-    height: 58px;
-  }
-
-  .flow-inner-icon-disc {
-    width: 44px;
-    height: 44px;
+  .flow-card-disc {
+    width: 40px;
+    height: 40px;
   }
 
   .flow-step-num {
     width: 20px;
     height: 20px;
     font-size: 11px;
-    top: -8px;
+    top: -7px;
+  }
+
+  .flow-card-chevron {
+    width: 16px;
+    height: 16px;
+    left: -5px;
+  }
+
+  .flow-card-title {
+    font-size: 13.8px;
+  }
+
+  .flow-card-desc {
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+
+  .flow-bg-decor-left {
+    width: 80px;
+    opacity: 0.25;
+  }
+
+  .flow-bg-decor-dots {
+    display: none;
+  }
+}
+
+/* Extra Small Phones (<= 380px) */
+@media (max-width: 380px) {
+  .flow-workflow-section {
+    padding: 28px 10px 32px;
+  }
+
+  .flow-step-card {
+    padding: 6px 10px 6px 6px;
+    gap: 9px;
+    min-height: 68px;
+  }
+
+  .flow-card-icon-halo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .flow-card-disc {
+    width: 34px;
+    height: 34px;
+  }
+
+  .flow-card-title {
+    font-size: 12.8px;
+  }
+
+  .flow-card-desc {
+    font-size: 10.8px;
+  }
+
+  .flow-bg-decor-left {
+    display: none;
   }
 }
 

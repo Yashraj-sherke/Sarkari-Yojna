@@ -49,32 +49,17 @@ export function ProcessFlow({ lang = 'hi' }: { lang?: string }) {
       className="flow-workflow-section"
       aria-label={lang === 'hi' ? 'योजना से लाभ तक की प्रक्रिया' : 'Scheme to Benefit Workflow'}
     >
-      {/* 3 Complete Flowing Flora Waves on Left (Self-contained, curves back into 0,300) */}
+      {/* 3 Pure Smooth Organic Flora Curves on far left */}
       <div className="flow-bg-decor-left" aria-hidden="true">
-        <svg viewBox="0 0 320 300" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Outer soft mint wave */}
-          <path
-            d="M 0,0 C 230,30 270,160 180,255 C 130,300 40,300 0,300 Z"
-            fill="#8fcfae"
-            fillOpacity="0.85"
-          />
-          {/* Middle emerald/sage wave */}
-          <path
-            d="M 0,0 C 180,20 205,145 130,235 C 90,285 30,300 0,300 Z"
-            fill="#4ea878"
-            fillOpacity="0.95"
-          />
-          {/* Inner dark forest green wave */}
-          <path
-            d="M 0,0 C 130,15 140,135 80,215 C 50,260 20,300 0,300 Z"
-            fill="#22784d"
-          />
-          {/* Soft inner highlight curve */}
-          <path
-            d="M 0,150 C 55,175 70,240 0,300 Z"
-            fill="#bde7ce"
-            fillOpacity="0.6"
-          />
+        <svg viewBox="0 0 200 300" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Layer 1: Outer soft mint curve */}
+          <path d="M 0,0 Q 190,130 0,300 Z" fill="#8fcfab" fillOpacity="0.75" />
+          {/* Layer 2: Middle emerald curve */}
+          <path d="M 0,0 Q 140,115 0,300 Z" fill="#4ea878" fillOpacity="0.9" />
+          {/* Layer 3: Inner deep forest green curve */}
+          <path d="M 0,0 Q 95,100 0,300 Z" fill="#23784e" />
+          {/* Layer 4: Soft inner highlight */}
+          <path d="M 0,170 Q 55,235 0,300 Z" fill="#bfe9d2" fillOpacity="0.5" />
         </svg>
       </div>
 
@@ -99,8 +84,8 @@ export function ProcessFlow({ lang = 'hi' }: { lang?: string }) {
           {steps.map((step, idx) => {
             const CardBody = (
               <div className={`flow-step-card ${step.num === 4 ? 'is-goal-step' : ''}`}>
-                {/* Concentric Circle Cluster on Left */}
-                <div className="flow-circle-cluster">
+                {/* Concentric Circle Halo on Left */}
+                <div className="flow-card-icon-halo">
                   {/* Floating Number Badge at top center */}
                   <span className="flow-step-num">{step.num}</span>
 
@@ -109,11 +94,8 @@ export function ProcessFlow({ lang = 'hi' }: { lang?: string }) {
                     <ChevronRight size={10} strokeWidth={3.5} />
                   </span>
 
-                  {/* Outer Ring */}
-                  <div className="flow-outer-ring">
-                    {/* Inner White Disc with Icon */}
-                    <div className="flow-inner-icon-disc">{step.icon}</div>
-                  </div>
+                  {/* Inner White Disc with Icon */}
+                  <div className="flow-card-disc">{step.icon}</div>
                 </div>
 
                 {/* Card Text Information */}
@@ -163,9 +145,9 @@ export function ProcessFlow({ lang = 'hi' }: { lang?: string }) {
                 {/* Inter-step S-Swoop Connector Line */}
                 {idx < steps.length - 1 && (
                   <div className="flow-connector" aria-hidden="true">
-                    <svg className="flow-connector-svg" viewBox="0 0 44 28" fill="none" preserveAspectRatio="none">
+                    <svg className="flow-connector-svg" viewBox="0 0 36 24" fill="none" preserveAspectRatio="none">
                       <path
-                        d="M 0,14 C 12,28 32,28 44,14"
+                        d="M 0,12 C 10,24 26,24 36,12"
                         stroke="#1b7348"
                         strokeWidth="2"
                         strokeLinecap="round"
