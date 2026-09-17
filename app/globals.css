@@ -734,6 +734,73 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   SEARCH BAR LOGO EMBLEM
+   ══════════════════════════════════════════════════════════════════════ */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #cbd9ce;
+  box-shadow: 0 4px 16px rgba(20, 59, 33, 0.08);
+  border-radius: 10px;
+  background: white;
+  padding: 6px 6px 6px 12px;
+  gap: 10px;
+  max-width: 680px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-box:focus-within {
+  border-color: #2b7a54;
+  box-shadow: 0 6px 20px rgba(33, 115, 82, 0.16);
+}
+
+.search-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-right: 9px;
+  border-right: 1.5px solid #dbe5dc;
+}
+
+.search-logo-img {
+  height: 38px;
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.2s ease;
+}
+
+.search-box:focus-within .search-logo-img {
+  transform: scale(1.08);
+}
+
+.search-glass-icon {
+  color: #628271;
+  flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+  .search-box {
+    padding: 5px 5px 5px 8px;
+    gap: 8px;
+  }
+  .search-brand-mark {
+    padding-right: 7px;
+  }
+  .search-logo-img {
+    height: 32px;
+    max-width: 24px;
+  }
+  .search-glass-icon {
+    display: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    OFFICIAL DARK GOVERNMENT PORTAL FOOTER (Mockup Matching)
    ══════════════════════════════════════════════════════════════════════ */
 

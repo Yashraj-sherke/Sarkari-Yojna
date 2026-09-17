@@ -25,7 +25,17 @@ return <div className="workspace"><Sidebar category={initialCategory}/><main id=
       <h1>{t.heroTitle}<br/><span>{t.heroSubtitle}</span></h1>
       <p>{t.heroDesc.split('\n').map((line,i)=><span key={i}>{line}{i===0&&<br/>}</span>)}</p>
       <form className="search-box" onSubmit={e=>{e.preventDefault();setQuery(q);track('search_performed');}}>
-        <Search size={22}/>
+        <div className="search-brand-mark" title="Sarkari Yojna">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/search-logo.webp"
+            alt="Sarkari Yojna Emblem"
+            className="search-logo-img"
+            width={30}
+            height={44}
+          />
+        </div>
+        <Search size={18} className="search-glass-icon"/>
         <input aria-label={t.searchPlaceholder} placeholder={t.searchPlaceholder} value={q} onChange={e=>{setQ(e.target.value);if(!e.target.value)setQuery('');}}/>
         <button type="submit">{t.searchBtn} <ArrowRight size={17}/></button>
       </form>
