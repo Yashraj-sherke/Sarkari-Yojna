@@ -39,7 +39,6 @@ export function Header(){
         {[
           {href:'/',label:t.navSearch},
           {href:'/mere-liye',label:t.navForMe},
-          {href:'/family',label:t.navFamily},
           {href:'/guide',label:t.navGuide},
         ].map(n=><Link onClick={()=>setOpen(false)} className={path===n.href?'active':''} key={n.href} href={n.href}>{n.label}</Link>)}
       </nav>
