@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.png", sizes: "64x64", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png?v=6", sizes: "64x64", type: "image/png" },
+      { url: "/favicon-32x32.png?v=6", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.svg?v=6", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico?v=6",
+    apple: "/apple-touch-icon.png?v=6",
   },
 };
 

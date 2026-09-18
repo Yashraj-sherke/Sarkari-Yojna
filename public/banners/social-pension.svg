@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4F46E5" />
+            <stop offset="100%" stop-color="#312E81" />
+        </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <text x="600" y="300" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle">समग्र सामाजिक सुरक्षा पेंशन योजना</text>
+    <text x="600" y="400" font-family="Arial, sans-serif" font-size="48" fill="#f0f0f0" text-anchor="middle">सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण</text>
+</svg>

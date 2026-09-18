@@ -77,6 +77,7 @@ export function Footer(){
                 className="portal-footer-logo"
                 width={54}
                 height={54}
+                style={{ backgroundColor: 'white', borderRadius: '50%', padding: '4px' }}
               />
               <div className="portal-brand-text">
                 <h2 className="portal-brand-name">

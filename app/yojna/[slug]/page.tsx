@@ -13,9 +13,9 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   if(!s) return {title:'योजना नहीं मिली'};
   const isPublic=!!s&&!s.isSample&&s.status==='ACTIVE';
   // Rich keyword-packed title for Google
-  const title=`${s.title} — पात्रता, दस्तावेज़ और आवेदन प्रक्रिया`;
+  const title=`${s.title} 2026 – आवेदन, पात्रता, लाभ, स्टेटस`;
   // Rich description mentioning benefit + key docs
-  const desc=`${s.title}: ${s.summary} | लाभ: ${s.benefit} | विभाग: ${s.department} | दस्तावेज़, पात्रता और आवेदन की पूरी जानकारी हिन्दी में।`;
+  const desc=`${s.title} के तहत सभी पात्र लाभार्थियों को लाभ मिलता है। इस पृष्ठ पर जानें पात्रता, लाभ, दस्तावेज़, आवेदन प्रक्रिया और स्टेटस कैसे चेक करें।`;
   return {
     title,
     description:desc,
@@ -78,8 +78,21 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     })),
   }:null;
 
+  // BreadcrumbList schema
+  const breadcrumbSchema={
+    '@context':'https://schema.org',
+    '@type':'BreadcrumbList',
+    itemListElement:[
+      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/'},
+      {'@type':'ListItem',position:2,name:'योजनाएं',item:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/'},
+      {'@type':'ListItem',position:3,name:s.title,item:`https://sarkari-yojna-navigator.ombhayde.chatgpt.site/yojna/${s.slug}`},
+    ]
+  };
+
   return <main id="main" className="page-wrap">
-    <Link className="small inline-link" href="/">← योजनाएं खोजें</Link>
+    <nav aria-label="breadcrumb" className="breadcrumb-nav" style={{marginBottom:'20px', fontSize:'0.9rem', color:'#718096'}}>
+      <Link href="/" className="inline-link">होम</Link> &gt; <Link href="/" className="inline-link">योजनाएं</Link> &gt; <span style={{color:'#2d3748', fontWeight:500}}>{s.title}</span>
+    </nav>
 
     {/* Header: Title, English Subtitle, Tags, and 'पात्रता की जाँच करें' CTA */}
     <div className="yojna-header">
@@ -277,6 +290,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     </div>
 
     {/* Structured data for Google rich results */}
+    {breadcrumbSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>}
     {govServiceSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(govServiceSchema).replace(/</g,'\\u003c')}}/>}
     {howToSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(howToSchema).replace(/</g,'\\u003c')}}/>}
     {faqSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>}

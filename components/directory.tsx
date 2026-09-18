@@ -1,7 +1,7 @@
 'use client';
-import {useMemo,useState} from 'react';
+import {useMemo,useState,useEffect} from 'react';
 import Link from 'next/link';
-import {SlidersHorizontal,LockKeyhole,Sparkles,RotateCcw,BookOpen,FileText,ArrowUpRight,HelpCircle} from 'lucide-react';
+import {SlidersHorizontal,LockKeyhole,Sparkles,RotateCcw,BookOpen,FileText,ArrowUpRight,HelpCircle,ArrowLeft} from 'lucide-react';
 import {categories,searchSchemes,type Scheme} from '@/lib/domain';
 import {Sidebar,Card,Empty,Choice,icons,SampleNotice,track,Search,ArrowRight,ShieldCheck,MapPin} from './site';
 import {useLanguage} from '@/lib/i18n';
@@ -10,6 +10,10 @@ import {ProcessFlow} from './process-flow';
 export function Directory({schemes,initialCategory='all',initialState='all',isHomePage=false}:{schemes:Scheme[];initialCategory?:string;initialState?:string;isHomePage?:boolean}){
 const {t,lang}=useLanguage();
 const [q,setQ]=useState(''),[query,setQuery]=useState(''),[state,setState]=useState(initialState),[category,setCategory]=useState(initialCategory),[verified,setVerified]=useState(false);
+const [page, setPage] = useState(1);
+useEffect(() => {
+  setPage(1);
+}, [query, category, state, verified]);
 const isCentralFeatured = isHomePage && state === 'central' && !query && category === 'all';
 const found=useMemo(()=>{
   const list = searchSchemes(schemes,query,category,state).filter(s=>!verified||s.status==='ACTIVE');
@@ -18,6 +22,9 @@ const found=useMemo(()=>{
   }
   return list;
 },[schemes,query,category,state,verified,isCentralFeatured]);
+const CARDS_PER_PAGE = 9;
+const totalPages = Math.ceil(found.length / CARDS_PER_PAGE);
+const displayedSchemes = found.slice((page - 1) * CARDS_PER_PAGE, page * CARDS_PER_PAGE);
 return <>
   <div className="workspace"><Sidebar category={initialCategory}/><main id="main" className="directory">
   <div className="breadcrumb">{t.breadcrumbHome} <span>/</span> {t.breadcrumbSearch} <span className="edition">{t.breadcrumbEdition}</span></div>
@@ -100,7 +107,16 @@ return <>
     </div>
     {schemes.some(s=>s.isSample)&&<SampleNotice/>}
     <p className="source-review-note">{t.sourceNote}</p>
-    {found.length?<div className="scheme-grid">{found.map(s=><Card key={s.slug} s={s}/>)}</div>:<Empty description={verified?t.emptyVerifiedDesc:undefined}/>}
+    {found.length?<>
+      <div className="scheme-grid">{displayedSchemes.map(s=><Card key={s.slug} s={s}/>)}</div>
+      {totalPages > 1 && (
+        <div className="pagination" style={{display:'flex',justifyContent:'center',gap:'1rem',marginTop:'2rem',alignItems:'center'}}>
+          <button className="btn" disabled={page === 1} onClick={() => {setPage(p => p - 1); window.scrollTo({top: 400, behavior: 'smooth'});}} style={page===1?{opacity:0.5,cursor:'not-allowed'}:{}} aria-label="Previous Page"><ArrowLeft size={17}/></button>
+          <span style={{fontWeight:600}}>{lang==='hi'?`पृष्ठ ${page} / ${totalPages}`:`Page ${page} of ${totalPages}`}</span>
+          <button className="btn" disabled={page === totalPages} onClick={() => {setPage(p => p + 1); window.scrollTo({top: 400, behavior: 'smooth'});}} style={page===totalPages?{opacity:0.5,cursor:'not-allowed'}:{}} aria-label="Next Page"><ArrowRight size={17}/></button>
+        </div>
+      )}
+    </>:<Empty description={verified?t.emptyVerifiedDesc:undefined}/>}
   </section>
 
   <section className="faq-section">
