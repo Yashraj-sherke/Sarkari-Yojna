@@ -31,7 +31,8 @@ export function OfficialImage({slug, scheme}:{slug:string; scheme?: Scheme}) {
 
   const isLocal = asset.src.startsWith('/');
   const isDev = process.env.NODE_ENV === 'development';
-  const optimizedSrc = isLocal && !isDev && !asset.src.endsWith('.svg') ? `/cdn-cgi/image/width=${asset.width},format=auto${asset.src}` : asset.src;
+  const isCloudflare = !!process.env.CF_PAGES;
+  const optimizedSrc = isLocal && !isDev && isCloudflare && !asset.src.endsWith('.svg') ? `/cdn-cgi/image/width=${asset.width},format=auto${asset.src}` : asset.src;
 
   if (failed) return null;
 
