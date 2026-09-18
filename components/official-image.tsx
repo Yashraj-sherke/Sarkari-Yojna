@@ -29,13 +29,17 @@ export function OfficialImage({slug, scheme}:{slug:string; scheme?: Scheme}) {
     height: 400
   };
 
+  const isLocal = asset.src.startsWith('/');
+  const isDev = process.env.NODE_ENV === 'development';
+  const optimizedSrc = isLocal && !isDev && !asset.src.endsWith('.svg') ? `/cdn-cgi/image/width=${asset.width},format=auto${asset.src}` : asset.src;
+
   if (failed) return null;
 
   return <figure className="official-image">
     {/* Original government banners are kept uncropped so their text remains intact. */}
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img
-      src={asset.src}
+      src={optimizedSrc}
       alt={asset.alt}
       width={asset.width}
       height={asset.height}

@@ -2102,3 +2102,59 @@ body {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) { .faq-section { flex-direction: column; } }
+
+/* Improved visibility and contrast */
+.scheme-card .english {
+  color: #4a5c51 !important;
+}
+.scheme-card .card-summary {
+  color: #33443a !important;
+}
+.scheme-card .detail-heading {
+  color: #1a2921 !important;
+  font-weight: 700 !important;
+}
+.scheme-card .card-benefit-text {
+  color: #1a2921 !important;
+  font-weight: 600 !important;
+}
+.scheme-card .card-doc-list {
+  color: #33443a !important;
+}
+.scheme-card .more-docs {
+  color: #1d694c !important;
+  font-weight: 600 !important;
+}
+.trust-strip, .trust-strip span, .source-review-note {
+  color: #4a5c51 !important;
+}
+.filter-bar .sample-label {
+  color: #1a2921 !important;
+  font-weight: 600 !important;
+}
+.filter-select {
+  color: #1a2921 !important;
+}
+.scope {
+  color: #4a5c51 !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 880px) {
+  .detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .detail-left-sidebar {
+    display: none !important;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .detail-aside {
+    display: contents !important;
+  }
+  .detail-body { grid-column: 1; grid-row: auto; order: 3; }
+  #feedback { grid-column: 1; grid-row: auto; order: 1; }
+  .apply-panel { grid-column: 1; grid-row: auto; order: 2; }
+  .feedback-panel { grid-column: 1; grid-row: auto; order: 4; margin-top: 0; }
+}

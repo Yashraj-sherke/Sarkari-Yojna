@@ -189,22 +189,22 @@ export function Footer(){
             </h3>
             <div className="portal-cards-grid">
               <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
-                <span className="portal-card-icon">🏛️</span>
+                <img src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">India.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
-                <span className="portal-card-icon">🌐</span>
+                <img src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">myScheme</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
-                <span className="portal-card-icon">🌿</span>
+                <img src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://mp.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
-                <span className="portal-card-icon">🗺️</span>
+                <img src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">MP.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
