@@ -49,7 +49,6 @@ export function OfficialImage({slug, scheme}:{slug:string; scheme?: Scheme}) {
       style={{aspectRatio:`${asset.width}/${asset.height}`}}
       onError={()=>setFailed(true)}
     />
-    <figcaption>चित्र स्रोत: <a href={asset.source} target="_blank" rel="noopener noreferrer">{asset.credit} ↗</a></figcaption>
   </figure>;
 }
 
