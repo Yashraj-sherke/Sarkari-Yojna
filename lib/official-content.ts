@@ -1148,7 +1148,7 @@ export const officialContent: Record<string, Partial<Scheme>> = {
 };
 
 export const officialImages: Record<string, {src:string; alt:string; source:string; credit:string; width:number; height:number}> = {
-  'pm-kisan': {src:'/pm-kisan-official.webp',alt:'PM-KISAN की 23वीं किस्त संबंधी आधिकारिक हिन्दी सूचना',source:'https://pmkisan.gov.in/new_images/23rd-Installment_H.jpeg',credit:'कृषि एवं किसान कल्याण विभाग · किस्त संबंधी आधिकारिक बैनर',width:800,height:226},
+  'pm-kisan': {src:'/pm-kisan-banner.jpg',alt:'PM-KISAN की 23वीं किस्त संबंधी आधिकारिक हिन्दी सूचना',source:'https://pmkisan.gov.in/',credit:'कृषि एवं किसान कल्याण विभाग · आधिकारिक बैनर',width:1200,height:675},
   'ladli-behna': {src:'/ladli-behna-official.webp',alt:'मुख्यमंत्री लाड़ली बहना योजना का आधिकारिक बैनर',source:'https://cmladlibahna.mp.gov.in/assets_static/images/slider.jpg',credit:'महिला एवं बाल विकास विभाग, मध्य प्रदेश',width:1200,height:281},
   'seekho-kamao': {src:'/seekho-kamao-banner.webp',alt:'मुख्यमंत्री सीखो कमाओ योजना — युवाओं के लिए कौशल प्रशिक्षण बैनर',source:'https://mmsky.mp.gov.in/',credit:'कौशल विकास एवं रोज़गार विभाग, मध्य प्रदेश',width:1200,height:400},
   'kisan-kalyan': {src:'/kisan-kalyan-banner.webp',alt:'मुख्यमंत्री किसान कल्याण योजना — किसानों के लिए आर्थिक सहायता बैनर',source:'https://mpwcdmis.gov.in/',credit:'कृषि विकास विभाग, मध्य प्रदेश',width:1200,height:400},
@@ -1156,7 +1156,7 @@ export const officialImages: Record<string, {src:string; alt:string; source:stri
   'sambal-yojana': {src:'/sambal-yojna-banner.webp',alt:'मुख्यमंत्री जन कल्याण संबल योजना — असंगठित श्रमिकों के लिए बैनर',source:'https://sambal.mp.gov.in/',credit:'श श्रम विभाग, मध्य प्रदेश',width:1200,height:400},
   'ayushman-bharat': {src:'/ayushman-bharat-banner.webp',alt:'आयुष्मान भारत PM-JAY आधिकारिक स्वास्थ्य योजना बैनर',source:'https://beneficiary.nha.gov.in/',credit:'राष्ट्रीय स्वास्थ्य प्राधिकरण / स्वास्थ्य मंत्रालय',width:1200,height:675},
   'pm-awas-gramin': {src:'/pm-awas-banner.webp',alt:'प्रधानमंत्री आवास योजना ग्रामीण आधिकारिक बैनर',source:'https://pmayg.nic.in/',credit:'ग्रामीण विकास मंत्रालय, भारत सरकार',width:1200,height:675},
-  'ration-support': {src:'/banners/ration-support.svg',alt:'राष्ट्रीय खाद्य सुरक्षा अधिनियम राशन योजना बैनर',source:'https://nfsa.gov.in/',credit:'खाद्य एवं सार्वजनिक वितरण विभाग',width:1200,height:400},
+  'ration-support': {src:'/ration-support-banner.jpg',alt:'राष्ट्रीय खाद्य सुरक्षा अधिनियम राशन योजना बैनर',source:'https://nfsa.gov.in/',credit:'खाद्य एवं सार्वजनिक वितरण विभाग',width:1200,height:675},
   'pm-vishwakarma': {src:'/pm-vishwakarma-banner.webp',alt:'प्रधानमंत्री विश्वकर्मा योजना आधिकारिक बैनर',source:'https://pmvishwakarma.gov.in/',credit:'सूक्ष्म, लघु एवं मध्यम उद्यम मंत्रालय',width:1200,height:675},
   'pm-surya-ghar': {src:'/pm-surya-ghar-banner.webp',alt:'पीएम सूर्य घर मुफ्त बिजली योजना आधिकारिक बैनर',source:'https://pmsuryaghar.gov.in/',credit:'नवीन एवं नवीकरणीय ऊर्जा मंत्रालय',width:1200,height:675},
   'pm-mudra': {src:'/pm-mudra-banner.webp',alt:'प्रधानमंत्री मुद्रा योजना आधिकारिक ऋण बैनर',source:'https://financialservices.gov.in/',credit:'वित्तीय सेवाएं विभाग, वित्त मंत्रालय',width:1200,height:675},
@@ -1166,7 +1166,8 @@ export const officialImages: Record<string, {src:string; alt:string; source:stri
   'madhya-pradesh-ladli-laxmi-yojana': {src:'/ladli-laxmi-banner.webp',alt:'मध्य प्रदेश लाड़ली लक्ष्मी योजना आधिकारिक बैनर',source:'https://ladlilaxmi.mp.gov.in/',credit:'महिला एवं बाल विकास विभाग, मध्य प्रदेश',width:1200,height:675},
   'mukhyamantri-seekho-kamao': {src:'/seekho-kamao-banner.webp',alt:'मुख्यमंत्री सीखो कमाओ योजना — युवाओं के लिए कौशल प्रशिक्षण बैनर',source:'https://mmsky.mp.gov.in/',credit:'कौशल विकास एवं रोज़गार विभाग, मध्य प्रदेश',width:1200,height:400},
   'mp-gaon-ki-beti': {src:'/gaon-ki-beti-banner.webp',alt:'गांव की बेटी योजना — ग्रामीण छात्राओं के लिए छात्रवृत्ति बैनर',source:'https://scholarshipportal.mp.nic.in/',credit:'उच्च शिक्षा विभाग, मध्य प्रदेश',width:1200,height:400},
-  'social-pension': {src:'/banners/social-pension.svg',alt:'समग्र सामाजिक सुरक्षा पेंशन योजना बैनर',source:'https://socialjustice.mp.gov.in/',credit:'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण',width:1200,height:675},
-  'employment-support': {src:'/banners/employment-support.svg',alt:'मुख्यमंत्री उद्यम क्रांति योजना बैनर',source:'https://msme.mp.gov.in/',credit:'सूक्ष्म, लघु एवं मध्यम उद्यम विभाग',width:1200,height:675},
-  'mp-board-laptop': {src:'/banners/mp-board-laptop.svg',alt:'प्रतिभाशाली छात्र प्रोत्साहन योजना बैनर',source:'https://educationportal.mp.gov.in/',credit:'स्कूल शिक्षा विभाग, मध्य प्रदेश',width:1200,height:675},
+  'social-pension': {src:'/social-pension-banner.jpg',alt:'समग्र सामाजिक सुरक्षा पेंशन योजना बैनर',source:'https://socialjustice.mp.gov.in/',credit:'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण',width:1200,height:675},
+  'employment-support': {src:'/employment-support-banner.jpg',alt:'मुख्यमंत्री उद्यम क्रांति योजना बैनर',source:'https://msme.mp.gov.in/',credit:'सूक्ष्म, लघु एवं मध्यम उद्यम विभाग',width:1200,height:675},
+  'mp-board-laptop': {src:'/mp-laptop-banner.jpg',alt:'प्रतिभाशाली छात्र प्रोत्साहन योजना बैनर',source:'https://educationportal.mp.gov.in/',credit:'स्कूल शिक्षा विभाग, मध्य प्रदेश',width:1200,height:675},
+  'mp-scholarship': {src:'/mp-scholarship-banner.jpg',alt:'मध्य प्रदेश छात्रवृत्ति योजना बैनर',source:'https://scholarshipportal.mp.nic.in/',credit:'उच्च शिक्षा विभाग, मध्य प्रदेश',width:1200,height:675},
 };
