@@ -57,6 +57,27 @@ const translations = {
     trustPrivacy: 'व्यक्तिगत पहचान की ज़रूरत नहीं',
     categoryHeading: 'आप किसके लिए खोज रहे हैं?',
     categorySubtext: 'अपनी ज़रूरत के अनुसार एक श्रेणी चुनें',
+    
+    // How it works
+    howItWorksTitle: 'यह काम कैसे करता है?',
+    howItWorksStep1Title: 'अपनी जानकारी दें',
+    howItWorksStep1Desc: 'अपनी बुनियादी जानकारी जैसे उम्र, राज्य और श्रेणी चुनें।',
+    howItWorksStep2Title: 'योजना खोजें',
+    howItWorksStep2Desc: 'हमारी तकनीक आपको सिर्फ वही योजनाएं दिखाएगी जिनके लिए आप पात्र हैं।',
+    howItWorksStep3Title: 'आवेदन करें',
+    howItWorksStep3Desc: 'दस्तावेज़ तैयार करें और सीधे आधिकारिक वेबसाइट पर जाकर आवेदन करें।',
+
+    // FAQ
+    faqTitle: 'सामान्य प्रश्न',
+    faq1Q: 'क्या यह सरकारी वेबसाइट है?',
+    faq1A: 'नहीं, यह एक स्वतंत्र नागरिक मंच है। हमारा उद्देश्य सरकारी योजनाओं को आसान हिन्दी में आप तक पहुँचाना है।',
+    faq2Q: 'क्या इस वेबसाइट का उपयोग करने के लिए पैसे देने होंगे?',
+    faq2A: 'नहीं, योजना खोजना और जानकारी पढ़ना हमेशा 100% मुफ़्त है।',
+    faq3Q: 'आवेदन कहाँ करना होगा?',
+    faq3A: 'हम आपको सीधे संबंधित सरकारी विभाग की आधिकारिक वेबसाइट का लिंक देते हैं। आपको आवेदन वहीं करना होगा।',
+    faq4Q: 'क्या मेरा डेटा सुरक्षित है?',
+    faq4A: 'हाँ, हम आपसे कोई भी संवेदनशील जानकारी (जैसे आधार कार्ड) नहीं मांगते। आप बिना लॉगिन किए वेबसाइट का उपयोग कर सकते हैं।',
+
     allCategories: 'सभी श्रेणियां',
     filterAll: 'सभी योजनाएं',
     filterVerified: 'केवल सत्यापित',
@@ -200,8 +221,29 @@ const translations = {
     trustSource: 'Linked to official sources',
     trustSimple: 'Explained in simple language',
     trustPrivacy: 'No personal identity required',
-    categoryHeading: 'What are you looking for?',
-    categorySubtext: 'Choose a category as per your need',
+    categoryHeading: 'Who are you looking for?',
+    categorySubtext: 'Choose a category based on your needs',
+    
+    // How it works
+    howItWorksTitle: 'How it works?',
+    howItWorksStep1Title: 'Enter your details',
+    howItWorksStep1Desc: 'Provide basic info like age, state, and category.',
+    howItWorksStep2Title: 'Discover schemes',
+    howItWorksStep2Desc: 'Our technology matches you with schemes you are eligible for.',
+    howItWorksStep3Title: 'Apply',
+    howItWorksStep3Desc: 'Prepare your documents and apply directly on the official website.',
+
+    // FAQ
+    faqTitle: 'Frequently Asked Questions',
+    faq1Q: 'Is this a government website?',
+    faq1A: 'No, this is an independent citizen platform. Our goal is to provide scheme information in simple language.',
+    faq2Q: 'Do I have to pay to use this website?',
+    faq2A: 'No, searching for schemes and reading information is always 100% free.',
+    faq3Q: 'Where do I apply?',
+    faq3A: 'We provide links directly to the official government portals. You must apply there.',
+    faq4Q: 'Is my data secure?',
+    faq4A: 'Yes, we do not ask for any sensitive information (like Aadhaar). You can use the site without logging in.',
+
     allCategories: 'All Categories',
     filterAll: 'All Schemes',
     filterVerified: 'Verified Only',

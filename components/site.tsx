@@ -277,7 +277,7 @@ export function Status({s}:{s:Scheme}){
 }
 
 export function Card({s}:{s:Scheme}){
-  const {t}=useLanguage();
+  const {t, lang}=useLanguage();
   const cat=categories.find(c=>c.id===s.category)!;
   const Icon=icons[cat.icon];
   return <article className="scheme-card">
@@ -288,8 +288,33 @@ export function Card({s}:{s:Scheme}){
     </div>
     <Link href={'/yojna/'+s.slug} className="card-title"><h3>{s.title}</h3></Link>
     <p className="english">{s.english}</p>
-    <p className="card-summary">{s.summary}</p>
-    <div className="benefit"><Check size={16}/><span>{s.benefit}</span></div>
+    
+    <div className="card-extended-details">
+      <div className="card-detail-section">
+        <h4 className="detail-heading"><FileText size={15}/> {t.glanceTitle}</h4>
+        <p className="card-summary">{s.summary}</p>
+      </div>
+      
+      <div className="card-detail-section">
+        <h4 className="detail-heading"><Check size={15}/> {t.benefitLabel}</h4>
+        <p className="card-benefit-text">{s.benefit}</p>
+      </div>
+      
+      {s.documents && s.documents.length > 0 && (
+        <div className="card-detail-section">
+          <h4 className="detail-heading"><BookOpen size={15}/> {t.docsTitle}</h4>
+          <ul className="card-doc-list">
+            {s.documents.slice(0, 3).map((doc, i) => (
+              <li key={i}>{doc}</li>
+            ))}
+            {s.documents.length > 3 && (
+              <li className="more-docs">+ {s.documents.length - 3} {lang === 'hi' ? 'और' : 'more'}</li>
+            )}
+          </ul>
+        </div>
+      )}
+    </div>
+
     <div className="card-bottom"><Status s={s}/><Link href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
   </article>;
 }

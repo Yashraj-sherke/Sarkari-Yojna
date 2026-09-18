@@ -1,7 +1,7 @@
 'use client';
 import {useMemo,useState} from 'react';
 import Link from 'next/link';
-import {SlidersHorizontal,LockKeyhole,Sparkles,RotateCcw,BookOpen} from 'lucide-react';
+import {SlidersHorizontal,LockKeyhole,Sparkles,RotateCcw,BookOpen,FileText,ArrowUpRight,HelpCircle} from 'lucide-react';
 import {categories,searchSchemes,type Scheme} from '@/lib/domain';
 import {Sidebar,Card,Empty,Choice,icons,SampleNotice,track,Search,ArrowRight,ShieldCheck,MapPin} from './site';
 import {useLanguage} from '@/lib/i18n';
@@ -64,6 +64,8 @@ return <>
     <span><BookOpen/>{t.trustSimple}</span>
     <span><LockKeyhole/>{t.trustPrivacy}</span>
   </div>
+
+
   <section className="categories-section">
     <div className="section-heading">
       <div><h2>{t.categoryHeading}</h2><p>{t.categorySubtext}</p></div>
@@ -100,6 +102,35 @@ return <>
     <p className="source-review-note">{t.sourceNote}</p>
     {found.length?<div className="scheme-grid">{found.map(s=><Card key={s.slug} s={s}/>)}</div>:<Empty description={verified?t.emptyVerifiedDesc:undefined}/>}
   </section>
+
+  <section className="faq-section">
+    <div className="faq-image">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/faq-illustration.png" alt="FAQ Illustration" />
+    </div>
+    <div className="faq-content">
+      <h2><HelpCircle size={22}/> {t.faqTitle}</h2>
+      <div className="faq-list">
+         <details className="faq-item">
+           <summary>{t.faq1Q}</summary>
+           <p>{t.faq1A}</p>
+         </details>
+         <details className="faq-item">
+           <summary>{t.faq2Q}</summary>
+           <p>{t.faq2A}</p>
+         </details>
+         <details className="faq-item">
+           <summary>{t.faq3Q}</summary>
+           <p>{t.faq3A}</p>
+         </details>
+         <details className="faq-item">
+           <summary>{t.faq4Q}</summary>
+           <p>{t.faq4A}</p>
+         </details>
+      </div>
+    </div>
+  </section>
+
   </main>
 </div>
 <ProcessFlow lang={lang} />

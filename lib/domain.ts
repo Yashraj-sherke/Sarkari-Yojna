@@ -38,6 +38,12 @@ export const schemeSchema = z.object({
   sourceUrl:official, applicationUrl:official, sourceNotes:z.string().max(2000),
   status:z.enum(['REQUIRES_OFFICIAL_VERIFICATION','ACTIVE','NEEDS_REVIEW','ARCHIVED','CLOSED']),
   priority:z.boolean(), isSample:z.boolean(), verifiedAt:z.string().nullable(), nextReviewAt:z.string().nullable(),
+  detailedDescription: z.array(z.string()).optional(),
+  benefitsList: z.array(z.object({ heading: z.string(), points: z.array(z.string()) })).optional(),
+  eligibilityDescription: z.array(z.string()).optional(),
+  exclusions: z.array(z.string()).optional(),
+  applicationProcess: z.array(z.object({ mode: z.string(), steps: z.array(z.string()) })).optional(),
+  faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
 }).superRefine((s,c)=>{
   if(s.status==='ACTIVE' && (!s.sourceUrl||s.isSample)) c.addIssue({code:'custom',message:'Active schemes need an official source and must not be sample records'});
   const mins=new Map<string,number>(),maxs=new Map<string,number>(),equals=new Map<string,unknown>();

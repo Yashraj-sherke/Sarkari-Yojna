@@ -83,25 +83,18 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
     {/* Header: Title, English Subtitle, Tags, and 'पात्रता की जाँच करें' CTA */}
     <div className="yojna-header">
-      <h1 className="yojna-title">{s.title}</h1>
-      <p className="yojna-english-sub">
-        {s.english} · {s.state==='madhya-pradesh'?'मध्य प्रदेश शासन':'केंद्र सरकार'}
-      </p>
-
-      {/* Tags: वित्तीय सहायता, समाज कल्याण, सशक्तिकरण */}
-      <div className="yojna-tags-row">
+      <h1 className="yojna-title" style={{fontSize:'2.2rem', color:'#111', fontWeight:'700'}}>{s.title}</h1>
+      
+      <div className="yojna-tags-row" style={{marginTop:'15px', marginBottom:'15px'}}>
         {tags.map((tag,idx)=>(
-          <span key={idx} className="yojna-tag-pill">{tag}</span>
+          <span key={idx} className="yojna-tag-pill-outline">{tag}</span>
         ))}
       </div>
 
-      {/* पात्रता की जाँच करें Button */}
       <div className="yojna-check-wrap">
-        <Link href={'/mere-liye?slug='+s.slug} className="yojna-check-btn">
-          <span>पात्रता की जाँच करें</span>
-          <span aria-hidden="true">→</span>
+        <Link href={'/mere-liye?slug='+s.slug} className="yojna-check-btn-outline">
+          पात्रता की जाँच करें
         </Link>
-        <span className="yojna-check-hint">1 मिनट में जानें कि क्या आप इस योजना के लिए पात्र हैं</span>
       </div>
     </div>
 
@@ -112,87 +105,127 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     )}
 
     <div className="detail-grid">
+      {/* 1. Left Navigation */}
+      <aside className="detail-left-sidebar">
+        <nav className="detail-left-nav">
+          <a href="#vivaran" className="nav-link active">विवरण</a>
+          <a href="#labh" className="nav-link">लाभ</a>
+          <a href="#patrata" className="nav-link">पात्रता</a>
+          <a href="#apvad" className="nav-link">अपवाद</a>
+          <a href="#aavedan" className="nav-link">आवेदन प्रक्रिया</a>
+          <a href="#dastavej" className="nav-link">आवश्यक दस्तावेज़</a>
+          <a href="#faqs" className="nav-link">अधिकतर पूछे जाने वाले सवाल</a>
+          <a href="#sandarbh" className="nav-link">स्रोत और संदर्भ</a>
+          <a href="#feedback" className="nav-link">प्रतिपुष्टि</a>
+        </nav>
+      </aside>
+
+      {/* 2. Main Content Body */}
       <div className="detail-body">
         <OfficialImage slug={s.slug} scheme={s}/>
 
         {/* 1. विवरण */}
-        <section className="panel yojna-seq-section" id="vivaran">
-          <h2 className="yojna-section-heading">विवरण</h2>
-          <p className="yojna-desc-text">{s.summary}</p>
+        <section className="flat-section" id="vivaran">
+          <h2 className="flat-section-heading">विवरण</h2>
+          {s.detailedDescription ? (
+            s.detailedDescription.map((p, idx) => <p key={idx} style={{marginBottom:'1em'}}>{p}</p>)
+          ) : (
+            <p>{s.summary}</p>
+          )}
         </section>
 
         {/* 2. लाभ */}
-        <section className="panel yojna-seq-section" id="labh">
-          <h2 className="yojna-section-heading">लाभ</h2>
-          <div className="yojna-benefit-card">
-            <span className="benefit-badge-pill">वित्तीय सहायता / मुख्य लाभ</span>
-            <p className="benefit-main-amount">{s.benefit}</p>
-            <p className="benefit-subtext">लाभ सीधे लाभार्थी के आधार-लिंक DBT बैंक खाते में अंतरित किया जाता है।</p>
-          </div>
+        <section className="flat-section" id="labh">
+          <h2 className="flat-section-heading">लाभ</h2>
+          {s.benefitsList && s.benefitsList.length > 0 ? (
+            s.benefitsList.map((b, i) => (
+              <div key={i} style={{marginBottom:15}}>
+                <h3 style={{fontSize:'1.1rem', fontWeight:600, marginBottom:8, color:'#2d3748'}}>{b.heading}</h3>
+                <ul className="flat-list">
+                  {b.points.map((p, j) => <li key={j}>{p}</li>)}
+                </ul>
+              </div>
+            ))
+          ) : (
+            <ul className="flat-list">
+              <li>{s.benefit}</li>
+              <li>लाभ सीधे लाभार्थी के आधार-लिंक DBT बैंक खाते में अंतरित किया जाता है।</li>
+            </ul>
+          )}
         </section>
 
         {/* 3. पात्रता */}
-        <section className="panel yojna-seq-section" id="patrata">
-          <h2 className="yojna-section-heading">पात्रता</h2>
-          <p className="yojna-lead-note">इस योजना का लाभ लेने के लिए मुख्य पात्रता शर्तें:</p>
-          <ul className="yojna-eligibility-list">
-            {eligibilityList.map((item,idx)=>{
-              const hasYa=item.includes('(या)');
-              const cleanText=item.replace('(या)','').trim();
-              return (
-                <li key={idx} className="yojna-eligibility-item">
-                  <div className="eligibility-content">
-                    <span className="eligibility-bullet" aria-hidden="true">✓</span>
-                    <span className="eligibility-text">{cleanText}</span>
-                  </div>
-                  {hasYa&&<span className="or-badge">(या)</span>}
-                </li>
-              );
-            })}
-          </ul>
-          <div className="patrata-footer">
-            <p className="small-note">ये नियम सामान्य पात्रता दर्शाते हैं। अपवादों सहित अंतिम पात्रता संबंधित विभाग तय करता है।</p>
-            <Link className="btn secondary" href={'/mere-liye?slug='+s.slug}>मेरी स्थिति से मिलान करें →</Link>
-          </div>
+        <section className="flat-section" id="patrata">
+          <h2 className="flat-section-heading">पात्रता</h2>
+          {s.eligibilityDescription ? (
+            <ul className="flat-list">
+              {s.eligibilityDescription.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <ol className="flat-list">
+              {eligibilityList.map((item,idx)=>{
+                const cleanText=item.replace('(या)','').trim();
+                return <li key={idx}>{cleanText} {item.includes('(या)')&&<span style={{color:'#718096'}}>(या)</span>}</li>;
+              })}
+            </ol>
+          )}
         </section>
 
-        {/* 4. आवेदन प्रक्रिया */}
-        <section className="panel yojna-seq-section" id="aavedan">
-          <h2 className="yojna-section-heading">आवेदन प्रक्रिया</h2>
-          <div className="process-header-bar">
-            <span className="mode-pill">मोड: <b>{processInfo.mode}</b></span>
-          </div>
-          <ol className="yojna-steps-list">
-            {s.steps.map((step,idx)=>(
-              <li key={idx} className="yojna-step-item">
-                <span className="step-num">{idx+1}</span>
-                <div className="step-content">
-                  <p>{step}</p>
+        {/* 4. अपवाद */}
+        <section className="flat-section" id="apvad">
+          <h2 className="flat-section-heading">अपवाद</h2>
+          {s.exclusions && s.exclusions.length > 0 ? (
+            <ul className="flat-list">
+              {s.exclusions.map((exc, idx) => <li key={idx}>{exc}</li>)}
+            </ul>
+          ) : (
+            <ol className="flat-list">
+              <li>कोई विशिष्ट अपवाद उपलब्ध नहीं है। कृपया विस्तृत जानकारी के लिए आधिकारिक स्रोत देखें।</li>
+            </ol>
+          )}
+        </section>
+
+        {/* 5. आवेदन प्रक्रिया */}
+        <section className="flat-section" id="aavedan">
+          <h2 className="flat-section-heading">आवेदन प्रक्रिया</h2>
+          
+          {s.applicationProcess && s.applicationProcess.length > 0 ? (
+            <div>
+              {s.applicationProcess.map((proc, i) => (
+                <div key={i} style={{marginBottom:20}}>
+                  <div className="tabs-header" style={{borderBottom:'2px solid #e2e8f0', marginBottom:15}}>
+                    <button className="tab-btn active" style={{borderBottom:'2px solid #3182ce', color:'#3182ce', background:'none', border:'none', padding:'8px 16px', fontWeight:600}}>{proc.mode}</button>
+                  </div>
+                  <ol className="flat-list">
+                    {proc.steps.map((step, j) => <li key={j}>{step}</li>)}
+                  </ol>
                 </div>
-              </li>
-            ))}
-          </ol>
-          {processInfo.formUrl&&(
-            <div className="form-download-strip">
-              <div className="form-strip-left">
-                <span className="file-icon" aria-hidden="true">📄</span>
-                <div>
-                  <strong>{processInfo.formName||'आधिकारिक आवेदन पत्र (PDF)'}</strong>
-                  <small className="block-sub">संबंधित कार्यालय में जमा करने हेतु प्रपत्र</small>
-                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              <div className="tabs-header">
+                <button className="tab-btn active">{processInfo.mode === 'ऑनलाइन' ? 'ऑनलाइन' : 'ऑफ़लाइन'}</button>
               </div>
-              <a
-                href={processInfo.formUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn secondary form-download-btn"
-              >
+              <ol className="flat-list">
+                {s.steps.map((step,idx)=>(
+                  <li key={idx}>{step}</li>
+                ))}
+              </ol>
+            </>
+          )}
+          
+          {processInfo.formUrl&&(
+            <div style={{marginTop:20}}>
+              <a href={processInfo.formUrl} target="_blank" rel="noopener noreferrer" className="btn secondary form-download-btn">
                 आवेदन पत्र डाउनलोड करें (PDF) ↗
               </a>
             </div>
           )}
           {s.applicationUrl&&!processInfo.formUrl?.endsWith('.pdf')&&(
-            <div className="online-apply-strip">
+            <div style={{marginTop:20}}>
               <a className="btn" href={'/out/'+s.slug+'?kind=application'} target="_blank" rel="noopener noreferrer">
                 आधिकारिक पोर्टल पर आवेदन करें ↗
               </a>
@@ -200,31 +233,26 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
           )}
         </section>
 
-        {/* 5. आवश्यक दस्तावेज़ */}
-        <section className="panel yojna-seq-section" id="dastavej">
-          <h2 className="yojna-section-heading">आवश्यक दस्तावेज़</h2>
-          <p className="yojna-lead-note">आवेदन करने से पहले निम्नलिखित सभी आवश्यक दस्तावेज़ तैयार रखें:</p>
-          <ul className="yojna-docs-grid">
+        {/* 6. आवश्यक दस्तावेज़ */}
+        <section className="flat-section" id="dastavej">
+          <h2 className="flat-section-heading">आवश्यक दस्तावेज़</h2>
+          <ul className="flat-list">
             {s.documents.map((doc,idx)=>(
-              <li key={idx} className="yojna-doc-chip">
-                <span className="doc-check-icon" aria-hidden="true">✔</span>
-                <span className="doc-name">{doc}</span>
-              </li>
+              <li key={idx}>{doc}</li>
             ))}
           </ul>
         </section>
 
-        {/* 6. अधिकतर पूछे जाने वाले सवाल */}
-        <section className="panel yojna-seq-section" id="faqs">
-          <h2 className="yojna-section-heading">अधिकतर पूछे जाने वाले सवाल</h2>
+        {/* 7. अधिकतर पूछे जाने वाले सवाल */}
+        <section className="flat-section" id="faqs">
+          <h2 className="flat-section-heading">अधिकतर पूछे जाने वाले सवाल</h2>
           <div className="faq-accordion-list">
-            {faqs.map((f,idx)=>(
-              <details key={idx} className="yojna-faq-details" open={idx===0}>
-                <summary className="yojna-faq-summary">
-                  <span className="faq-q-text">{f.q}</span>
-                  <span className="faq-arrow-icon" aria-hidden="true">▾</span>
+            {(s.faqs && s.faqs.length > 0 ? s.faqs.map(f => ({q: f.question, a: f.answer})) : faqs).map((f,idx)=>(
+              <details key={idx} className="yojna-faq-details" open={idx===0} style={{border:'1px solid #e2e8f0', borderRadius:6, marginBottom:10, padding:15, background:'#f7fafc'}}>
+                <summary className="yojna-faq-summary" style={{fontWeight:600, cursor:'pointer', color:'#2d3748', display:'flex', justifyContent:'space-between'}}>
+                  {f.q} <span>▾</span>
                 </summary>
-                <div className="yojna-faq-body">
+                <div style={{marginTop:10, color:'#4a5568'}}>
                   <p>{f.a}</p>
                 </div>
               </details>
@@ -232,50 +260,17 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
           </div>
         </section>
 
-        {/* 7. स्रोत और संदर्भ */}
-        <section className="panel yojna-seq-section" id="sandarbh">
-          <h2 className="yojna-section-heading">स्रोत और संदर्भ</h2>
-          <div className="source-info-box">
-            <div className="source-row">
-              <span className="source-label">नोडल विभाग:</span>
-              <span className="source-value"><b>{s.department}</b></span>
-            </div>
-            <div className="source-row">
-              <span className="source-label">आधिकारिक स्रोत:</span>
-              <span className="source-value">
-                {s.sourceUrl?(
-                  <a className="inline-link" href={'/out/'+s.slug+'?kind=source'} target="_blank" rel="noopener noreferrer">
-                    {new URL(s.sourceUrl).hostname} ↗
-                  </a>
-                ):(
-                  'सरकारी स्रोत का लिंक अभी नहीं मिला है।'
-                )}
-              </span>
-            </div>
-            <div className="source-row">
-              <span className="source-label">सत्यापन स्थिति:</span>
-              <span className="source-value">
-                {s.verifiedAt?`आधिकारिक स्रोत से सत्यापित (${new Date(s.verifiedAt).toLocaleDateString('hi-IN')})`:'सत्यापन प्रक्रियाधीन'}
-              </span>
-            </div>
-            <div className="source-row">
-              <span className="source-label">अगली समीक्षा:</span>
-              <span className="source-value">
-                {s.nextReviewAt?new Date(s.nextReviewAt).toLocaleDateString('hi-IN'):'प्रथम सत्यापन बाकी'}
-              </span>
-            </div>
-            {s.sourceNotes&&(
-              <div className="source-notes-callout">
-                <p><b>समीक्षा टिप्पणी:</b> {s.sourceNotes}</p>
-              </div>
-            )}
-            <div className="transparency-disclaimer">
-              <small>यह एक स्वतंत्र नागरिक सूचना पोर्टल है। सरकारी नियमों, तिथियों और पात्रता में बदलाव संभव है। कृपया अंतिम आवेदन से पूर्व आधिकारिक सरकारी स्रोत से पुष्टि अवश्य करें।</small>
-            </div>
-          </div>
+        {/* 8. स्रोत और संदर्भ */}
+        <section className="flat-section" id="sandarbh">
+          <h2 className="flat-section-heading">स्रोत और संदर्भ</h2>
+          <ul className="flat-list" style={{listStyle:'none', paddingLeft:0}}>
+            <li><b>नोडल विभाग:</b> {s.department}</li>
+            <li><b>आधिकारिक स्रोत:</b> {s.sourceUrl ? <a href={'/out/'+s.slug+'?kind=source'} target="_blank" rel="noopener noreferrer" style={{color:'#3182ce', textDecoration:'underline'}}>{new URL(s.sourceUrl).hostname}</a> : 'उपलब्ध नहीं'}</li>
+          </ul>
         </section>
       </div>
 
+      {/* 3. Right Sidebar Actions */}
       <aside className="detail-aside">
         <SchemeActions s={s} initialCount={c?.n??0}/>
       </aside>
