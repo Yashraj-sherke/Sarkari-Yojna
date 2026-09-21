@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SlidersHorizontal, LockKeyhole, Sparkles, RotateCcw, BookOpen, FileText, ArrowUpRight, HelpCircle, ArrowLeft } from 'lucide-react';
 import { categories, searchSchemes, type Scheme } from '@/lib/domain';
 import { Sidebar, Card, Empty, Choice, icons, SampleNotice, track, Search, ArrowRight, ShieldCheck, MapPin } from './site';
@@ -37,12 +38,13 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
           <form className="search-box" onSubmit={e => { e.preventDefault(); setQuery(q); if (q && isHomePage && state === 'central') { setState('all'); } track('search_performed'); }}>
             <div className="search-brand-mark" title="Sarkari Yojna">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/search-logo.webp"
                 alt="Sarkari Yojna Emblem"
                 className="search-logo-img"
-                width={30}
-                height={44}
+                width={28}
+                height={40}
+                priority={true}
               />
             </div>
             <Search size={18} className="search-glass-icon" />
@@ -126,7 +128,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
       <section className="faq-section">
         <div className="faq-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/faq-illustration.png" alt="FAQ Illustration" />
+          <Image src="/faq-illustration.png" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
         </div>
         <div className="faq-content">
           <h2><HelpCircle size={22} /> {t.faqTitle}</h2>

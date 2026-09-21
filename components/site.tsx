@@ -2,7 +2,8 @@
 import Link from 'next/link';
 import {OfficialImage} from './official-image';
 import {usePathname} from 'next/navigation';
-import {useState} from 'react';
+import {Suspense, useState, useEffect} from 'react';
+import Image from 'next/image';
 import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages,FileText,BookOpen,AlertCircle,Mail} from 'lucide-react';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
@@ -28,12 +29,14 @@ export function Header(){
     <header className="site-header">
       <Link href="/" className="brand" aria-label={t.brandName}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/navbar-logo.webp"
           alt="Sarkari Yojna Logo"
           className="navbar-brand-logo"
-          width={180}
-          height={60}
+          width={860}
+          height={524}
+          priority={true}
+          style={{ width: 'auto', height: '100%' }}
         />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
@@ -72,12 +75,13 @@ export function Footer(){
           <div className="portal-footer-col brand-col">
             <div className="portal-brand-wrap">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/logo-icon.webp"
                 alt="Sarkari Yojna Logo"
                 className="portal-footer-logo"
-                width={54}
-                height={54}
+                width={256}
+                height={256}
+                priority={true}
                 style={{ backgroundColor: 'white', borderRadius: '50%', padding: '4px' }}
               />
               <div className="portal-brand-text">
