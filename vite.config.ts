@@ -37,7 +37,7 @@ function patchVinextLinkPlugin(): import("vite").Plugin {
   return {
     name: "patch-vinext-link",
     enforce: "pre",
-    transform(code, id) {
+    transform(code: any, id: any) {
       if (id.includes("vinext") && id.includes("link.js")) {
         let changed = false;
         if (!code.includes('import * as navigationModule from "./navigation.js";')) {

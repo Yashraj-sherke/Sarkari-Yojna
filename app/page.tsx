@@ -8,17 +8,17 @@ export default async function Home() {
     '@context':'https://schema.org',
     '@type':'BreadcrumbList',
     itemListElement:[
-      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/'},
+      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkariyojnasetu.com/'},
     ]
   };
 
   const websiteSchema={
     '@context':'https://schema.org',
     '@type':'WebSite',
-    url:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/',
+    url:'https://sarkariyojnasetu.com/',
     potentialAction:{
       '@type':'SearchAction',
-      target:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/?q={search_term_string}',
+      target:'https://sarkariyojnasetu.com/?q={search_term_string}',
       'query-input':'required name=search_term_string'
     }
   };

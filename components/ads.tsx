@@ -11,6 +11,15 @@ export function AdSensePlaceholder({ client, slot, format = 'auto', responsive =
     }
   }, []);
 
+  const isDev = process.env.NODE_ENV === 'development';
+  if (isDev) {
+    return (
+      <div className="adsense-container-dev" style={{ minHeight: '90px', width: '100%', background: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '14px', borderRadius: '8px', border: '1px dashed #cbd5e1' }}>
+        AdSense Advertisement Slot
+      </div>
+    );
+  }
+
   return (
     <div className="adsense-container" style={{ minHeight: '250px', width: '100%', overflow: 'hidden' }}>
       <ins className="adsbygoogle"

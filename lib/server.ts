@@ -32,8 +32,12 @@ export async function allSchemes():Promise<Scheme[]>{
   if(!d) return seeds;
   try {
     await maintenance();
-    const r=await d.prepare('SELECT data FROM schemes ORDER BY rowid').all<{data:string}>();
-    return r.results.map(x=>schemeSchema.parse(JSON.parse(x.data)));
+    const r=await d.prepare('SELECT data, updated_at FROM schemes ORDER BY rowid').all<{data:string, updated_at:string}>();
+    return r.results.map((x: any)=>{
+      const s = schemeSchema.parse(JSON.parse(x.data));
+      s.lastUpdated = x.updated_at;
+      return s;
+    });
   } catch {
     return seeds;
   }
@@ -47,10 +51,11 @@ export async function getScheme(slug:string):Promise<Scheme|null>{
     return s;
   }
   try {
-    const r=await d.prepare('SELECT data FROM schemes WHERE slug=?').bind(slug).first<{data:string}>();
+    const r=await d.prepare('SELECT data, updated_at FROM schemes WHERE slug=?').bind(slug).first<{data:string, updated_at:string}>();
     if(!r) return null;
     const s=schemeSchema.parse(JSON.parse(r.data));
     s.status=effectiveStatus(s);
+    s.lastUpdated = r.updated_at;
     return s;
   } catch {
     const s=seeds.find(x=>x.slug===slug);

@@ -7,6 +7,7 @@ import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,A
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
 import {useLanguage} from '@/lib/i18n';
+import {SITE_NAME_EN, SITE_NAME_HI, SITE_TAGLINE} from '@/lib/config';
 export const icons={Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat};
 // Re-export shared icons so other 'use client' components avoid a separate lucide chunk
 export {Search,ArrowRight,ShieldCheck,MapPin};
@@ -31,8 +32,8 @@ export function Header(){
           src="/navbar-logo.webp"
           alt="Sarkari Yojna Logo"
           className="navbar-brand-logo"
-          width={220}
-          height={72}
+          width={180}
+          height={60}
         />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
@@ -80,11 +81,11 @@ export function Footer(){
                 style={{ backgroundColor: 'white', borderRadius: '50%', padding: '4px' }}
               />
               <div className="portal-brand-text">
-                <h2 className="portal-brand-name">
-                  <span className="name-white">Sarkari</span> <span className="name-green">Yojna</span>
+                <h2 className="portal-brand-name" style={{lineHeight: 1.2}}>
+                  <span className="name-white">Sarkari</span> <span className="name-green">Yojana</span>
                 </h2>
                 <p className="portal-brand-desc">
-                  सरकारी योजनाओं की सरल जानकारी, पात्रता और आवेदन मार्गदर्शन।
+                  {SITE_TAGLINE}
                 </p>
               </div>
             </div>
@@ -223,7 +224,7 @@ export function Footer(){
         {/* Bottom Strip: Disclaimer on left, Social Media in center, Copyright on right */}
         <div className="portal-footer-bottom">
           <div className="footer-disclaimer-text">
-            <strong>Sarkari Yojna</strong> एक स्वतंत्र सूचना प्लेटफ़ॉर्म है। यह भारत सरकार या किसी राज्य सरकार की आधिकारिक वेबसाइट नहीं है। योजनाओं की अंतिम पात्रता, लाभ और आवेदन प्रक्रिया संबंधित सरकारी विभाग/पोर्टल द्वारा निर्धारित की जाती है।
+            <strong>{SITE_NAME_EN}</strong> एक स्वतंत्र सूचना प्लेटफ़ॉर्म है। यह भारत सरकार या किसी राज्य सरकार की आधिकारिक वेबसाइट नहीं है। योजनाओं की अंतिम पात्रता, लाभ और आवेदन प्रक्रिया संबंधित सरकारी विभाग/पोर्टल द्वारा निर्धारित की जाती है।
           </div>
 
           <div className="footer-social-cluster" aria-label="सोशल मीडिया लिंक्स">
@@ -242,7 +243,7 @@ export function Footer(){
           </div>
 
           <div className="footer-copyright-block">
-            <span className="copy-title">© 2026 Sarkari Yojna</span>
+            <span className="copy-title">© 2026 {SITE_NAME_EN}</span>
             <span className="copy-sub">सभी अधिकार सुरक्षित</span>
           </div>
         </div>
@@ -291,6 +292,7 @@ export function Card({s}:{s:Scheme}){
     <p className="english">{s.english}</p>
     
     <div className="card-extended-details">
+      {s.lastUpdated && <div style={{fontSize: '0.75rem', color: '#b7791f', marginBottom: 8}}>अंतिम अपडेट: {new Date(s.lastUpdated).toLocaleDateString('hi-IN')}</div>}
       <div className="card-detail-section">
         <h4 className="detail-heading"><FileText size={15}/> {t.glanceTitle}</h4>
         <p className="card-summary">{s.summary}</p>

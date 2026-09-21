@@ -2,7 +2,7 @@ import {allSchemes} from '@/lib/server';
 import {categories} from '@/lib/domain';
 import {guides} from '@/lib/guides';
 export const dynamic='force-dynamic';
-const B='https://sarkari-yojna-navigator.ombhayde.chatgpt.site';
+const B='https://sarkariyojnasetu.com';
 export default async function sitemap(){
   const schemes=await allSchemes();const now=new Date().toISOString();
   const statics=[
@@ -17,6 +17,6 @@ export default async function sitemap(){
   ];
   const cats=categories.map(c=>({url:`${B}/category/${c.id}`,lastModified:now,changeFrequency:'daily' as const,priority:0.8}));
   const gs=guides.map(g=>({url:`${B}/guide/${g.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:0.7}));
-  const ys=schemes.map(s=>{const freq:import('next').MetadataRoute.Sitemap[number]['changeFrequency']=s.status==='ACTIVE'?'weekly':'monthly';return {url:`${B}/yojna/${s.slug}`,lastModified:now,changeFrequency:freq,priority:s.status==='ACTIVE'&&!s.isSample?0.9:0.5};});
+  const ys=schemes.map(s=>{const freq: 'weekly' | 'monthly' = s.status==='ACTIVE'?'weekly':'monthly';return {url:`${B}/yojna/${s.slug}`,lastModified:now,changeFrequency:freq,priority:s.status==='ACTIVE'&&!s.isSample?0.9:0.5};});
   return [...statics,...cats,...gs,...ys];
 }

@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import Fuse from 'fuse.js';
 
 export const categories = [
   { id: 'kisan', name: 'किसान और कृषि', short: 'किसान', icon: 'Sprout', color: 'green' },
@@ -19,7 +20,7 @@ export const profileSchema = z.object({
   rural: z.boolean().optional(),
 }).strict();
 export type Profile = z.infer<typeof profileSchema>;
-export const ruleSchema = z.object({ field: z.enum(['state','age','gender','occupation','income','rural']), op: z.enum(['eq','lte','gte']), value: z.union([z.string().max(80),z.number(),z.boolean()]), label: z.string().min(1).max(250) }).superRefine((r,c)=>{
+export const ruleSchema = z.object({ field: z.enum(['state','age','gender','occupation','income','rural']), op: z.enum(['eq','lte','gte']), value: z.union([z.string().max(80),z.number(),z.boolean()]), label: z.string().min(1).max(250) }).superRefine((r: any,c: any)=>{
   const numeric=r.field==='age'||r.field==='income';
   if(numeric && (typeof r.value!=='number'||r.value<0)) c.addIssue({code:'custom',message:'Numeric rule requires a nonnegative number'});
   if(!numeric && r.op!=='eq') c.addIssue({code:'custom',message:'Only numeric fields support comparisons'});
@@ -29,7 +30,7 @@ export const ruleSchema = z.object({ field: z.enum(['state','age','gender','occu
 });
 export type Rule = z.infer<typeof ruleSchema>;
 export function officialUrl(value:string) { try { const u=new URL(value); return u.protocol==='https:'&&!u.username&&!u.password&&(/\.(gov|nic)\.in$/.test(u.hostname)||u.hostname==='myscheme.gov.in'); } catch { return false; } }
-const official = z.string().max(1500).refine(v=>v===''||officialUrl(v),'Use an HTTPS government .gov.in or .nic.in URL');
+const official = z.string().max(1500).refine((v: any)=>v===''||officialUrl(v),'Use an HTTPS government .gov.in or .nic.in URL');
 export const schemeSchema = z.object({
   slug:z.string().regex(/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/).max(100), title:z.string().min(5).max(180), english:z.string().max(180),
   category:z.string().refine(v=>categories.some(c=>c.id===v)), state:z.enum(['central','madhya-pradesh']),
@@ -44,7 +45,8 @@ export const schemeSchema = z.object({
   exclusions: z.array(z.string()).optional(),
   applicationProcess: z.array(z.object({ mode: z.string(), steps: z.array(z.string()) })).optional(),
   faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
-}).superRefine((s,c)=>{
+  lastUpdated: z.string().optional(),
+}).superRefine((s: any,c: any)=>{
   if(s.status==='ACTIVE' && (!s.sourceUrl||s.isSample)) c.addIssue({code:'custom',message:'Active schemes need an official source and must not be sample records'});
   const mins=new Map<string,number>(),maxs=new Map<string,number>(),equals=new Map<string,unknown>();
   for(const r of s.rules){if(r.op==='gte')mins.set(r.field,Math.max(mins.get(r.field)??-Infinity,Number(r.value)));if(r.op==='lte')maxs.set(r.field,Math.min(maxs.get(r.field)??Infinity,Number(r.value)));if(r.op==='eq'){if(equals.has(r.field)&&equals.get(r.field)!==r.value)c.addIssue({code:'custom',message:'Conflicting equality rules'});equals.set(r.field,r.value);}}
@@ -53,7 +55,65 @@ export const schemeSchema = z.object({
 });
 export type Scheme = z.infer<typeof schemeSchema>;
 export function effectiveStatus(s:Scheme,now=new Date()){return s.status==='ACTIVE'&&(!s.nextReviewAt||new Date(s.nextReviewAt)<=now)?'NEEDS_REVIEW':s.status;}
-export function searchSchemes(items:Scheme[],q='',category='all',state='all') {const terms=q.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);return items.filter(s=>!['ARCHIVED','CLOSED'].includes(s.status)&&(category==='all'||s.category===category)&&(state==='all'||s.state==='central'||s.state===state)&&terms.every(t=>`${s.title} ${s.english} ${s.summary} ${s.category}`.toLocaleLowerCase().includes(t))).sort((a,b)=>Number(effectiveStatus(b)==='ACTIVE')-Number(effectiveStatus(a)==='ACTIVE'));}
+
+const searchSynonyms: Record<string, string[]> = {
+  awas: ['house', 'housing', 'ghar', 'makan', 'aawas', 'shahri', 'urban', 'gramin', 'rural', 'pmay'],
+  kisan: ['krishi', 'farmer', 'kheti', 'agriculture', 'farming', 'fasal', 'crop', 'bima'],
+  mahila: ['women', 'woman', 'aurat', 'girl', 'nari', 'beti', 'kanya', 'ladli', 'behna', 'laxmi', 'sukanya', 'samriddhi'],
+  shiksha: ['education', 'padhai', 'student', 'school', 'college', 'scholarship', 'chatrvati', 'chatravriti', 'chhatravriti', 'chhatravrity', 'छात्रवृत्ति'],
+  swasthya: ['health', 'medical', 'hospital', 'ilaj', 'bima', 'insurance', 'ayushman'],
+  rojgar: ['employment', 'job', 'naukri', 'kaushal', 'skill', 'business', 'vyapar', 'loan', 'mudra', 'vishwakarma', 'svanidhi'],
+  pension: ['old', 'age', 'vridha', 'vridhavastha', 'atal', 'retirement', 'social', 'security'],
+  bima: ['insurance', 'suraksha', 'jeevan', 'jyoti', 'policy', 'premium'],
+  khadya: ['ration', 'food', 'anaj', 'bhojan']
+};
+
+function getSearchSynonyms(term: string): string[] {
+  const termLower = term.toLowerCase();
+  for (const [key, related] of Object.entries(searchSynonyms)) {
+    if (key === termLower || related.includes(termLower)) {
+      return [key, ...related];
+    }
+  }
+  return [termLower];
+}
+
+export function searchSchemes(items: Scheme[], q = '', category = 'all', state = 'all') {
+  const filtered = items.filter(s => 
+    !['ARCHIVED', 'CLOSED'].includes(s.status) &&
+    (category === 'all' || s.category === category) &&
+    (state === 'all' || s.state === 'central' || s.state === state)
+  );
+
+  const originalTerms = q.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  if (!originalTerms.length) {
+    return filtered.sort((a, b) => Number(effectiveStatus(b) === 'ACTIVE') - Number(effectiveStatus(a) === 'ACTIVE'));
+  }
+
+  const fuse = new Fuse(filtered, {
+    keys: ['title', 'english', 'summary', 'category'],
+    threshold: 0.3,
+    ignoreLocation: true,
+  });
+
+  const termGroups = originalTerms.map(term => getSearchSynonyms(term));
+
+  let validItems = new Set(filtered);
+
+  for (const group of termGroups) {
+    const groupMatches = new Set<Scheme>();
+    for (const syn of group) {
+      const results = fuse.search(syn);
+      for (const r of results) {
+        groupMatches.add(r.item);
+      }
+    }
+    // Intersect validItems with groupMatches
+    validItems = new Set([...validItems].filter(x => groupMatches.has(x)));
+  }
+
+  return Array.from(validItems).sort((a, b) => Number(effectiveStatus(b) === 'ACTIVE') - Number(effectiveStatus(a) === 'ACTIVE'));
+}
 export function evaluate(s:Scheme,p:Profile) {
   const rules:Rule[]=[...(s.state==='madhya-pradesh'?[{field:'state' as const,op:'eq' as const,value:'madhya-pradesh',label:'मध्य प्रदेश के निवासी'}]:[]),...s.rules];
   const reasons=rules.map(r=>{const v=p[r.field];const result=v===undefined?'unknown':(r.op==='eq'?v===r.value:r.op==='gte'?Number(v)>=Number(r.value):Number(v)<=Number(r.value))?'match':'no';return{label:r.label,result};});

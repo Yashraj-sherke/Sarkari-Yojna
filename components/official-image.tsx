@@ -22,7 +22,7 @@ export function OfficialImage({slug, scheme}:{slug:string; scheme?: Scheme}) {
   
   const asset = specific || {
     src: catBanner.src,
-    alt: scheme ? `${scheme.title} — आधिकारिक योजना बैनर` : catBanner.alt,
+    alt: scheme ? `${scheme.title} | ${scheme.english} — आधिकारिक योजना बैनर / Official Scheme Banner` : catBanner.alt,
     source: scheme?.sourceUrl || 'https://myscheme.gov.in/',
     credit: scheme?.department || catBanner.credit,
     width: 1200,
@@ -46,7 +46,7 @@ export function OfficialImage({slug, scheme}:{slug:string; scheme?: Scheme}) {
       height={asset.height}
       loading="lazy"
       decoding="async"
-      style={{aspectRatio:`${asset.width}/${asset.height}`}}
+      style={{ aspectRatio: `${asset.width}/${asset.height}`, objectFit: 'cover', objectPosition: 'bottom' }}
       onError={()=>setFailed(true)}
     />
   </figure>;

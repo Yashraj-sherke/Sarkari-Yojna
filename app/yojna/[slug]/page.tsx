@@ -1,8 +1,10 @@
 import {notFound} from 'next/navigation';
+import {BackButton} from '@/components/back-button';
 import {OfficialImage} from '@/components/official-image';
 import Link from 'next/link';
-import {getScheme,db} from '@/lib/server';
-import {Status,SampleNotice} from '@/components/site';
+import {getScheme,db,allSchemes} from '@/lib/server';
+import {Status,SampleNotice,Card} from '@/components/site';
+
 import {SchemeActions} from '@/components/scheme-actions';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
 export const dynamic='force-dynamic';
@@ -20,7 +22,13 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
     title,
     description:desc,
     keywords:[s.title,s.english,s.department,'सरकारी योजना',s.state==='madhya-pradesh'?'मध्य प्रदेश योजना':'केंद्र सरकार योजना','पात्रता','दस्तावेज़','आवेदन','praman patr','sarkari yojana',s.benefit],
-    alternates:{canonical:'/yojna/'+slug},
+    alternates:{
+      canonical:'/yojna/'+slug,
+      languages: {
+        'hi': '/yojna/'+slug,
+        'en': '/yojna/'+slug,
+      }
+    },
     robots:{index:isPublic,follow:true},
     openGraph:{title,description:s.summary,locale:'hi_IN',type:'article'},
   };
@@ -29,7 +37,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 export default async function Page({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s)notFound();
+  if(!s) return notFound();
   const d=db();
   const c=d?await d.prepare('SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=? AND u.expires_at>?').bind(slug,new Date().toISOString()).first<{n:number}>():{n:0};
 
@@ -40,6 +48,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
   // Build rich structured data
   const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl;
+  const schemesList = await allSchemes();
+  const relatedSchemes = schemesList.filter(x => x.category === s.category && x.slug !== s.slug).slice(0, 3);
 
   // GovernmentService schema
   const govServiceSchema=isActive?{
@@ -83,22 +93,26 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     '@context':'https://schema.org',
     '@type':'BreadcrumbList',
     itemListElement:[
-      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/'},
-      {'@type':'ListItem',position:2,name:'योजनाएं',item:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/'},
-      {'@type':'ListItem',position:3,name:s.title,item:`https://sarkari-yojna-navigator.ombhayde.chatgpt.site/yojna/${s.slug}`},
+      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkariyojnasetu.com/'},
+      {'@type':'ListItem',position:2,name: s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं',item: s.state === 'madhya-pradesh' ? 'https://sarkariyojnasetu.com/state/madhya-pradesh' : 'https://sarkariyojnasetu.com/'},
+      {'@type':'ListItem',position:3,name:s.title,item:`https://sarkariyojnasetu.com/yojna/${s.slug}`},
     ]
   };
 
   return <main id="main" className="page-wrap">
-    <nav aria-label="breadcrumb" className="breadcrumb-nav" style={{marginBottom:'20px', fontSize:'0.9rem', color:'#718096'}}>
-      <Link href="/" className="inline-link">होम</Link> &gt; <Link href="/" className="inline-link">योजनाएं</Link> &gt; <span style={{color:'#2d3748', fontWeight:500}}>{s.title}</span>
-    </nav>
+    <div style={{display:'flex', alignItems:'center', gap:'15px', marginBottom:'20px'}}>
+      <BackButton fallbackUrl={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} />
+      <nav aria-label="breadcrumb" className="breadcrumb-nav" style={{fontSize:'0.9rem', color:'#718096'}}>
+        <Link href="/" className="inline-link">होम</Link> &gt; <Link href={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} className="inline-link">{s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं'}</Link> &gt; <span style={{color:'#2d3748', fontWeight:500}}>{s.title}</span>
+      </nav>
+    </div>
 
     {/* Header: Title, English Subtitle, Tags, and 'पात्रता की जाँच करें' CTA */}
     <div className="yojna-header">
       <h1 className="yojna-title" style={{fontSize:'2.2rem', color:'#111', fontWeight:'700'}}>{s.title}</h1>
       
       <div className="yojna-tags-row" style={{marginTop:'15px', marginBottom:'15px'}}>
+        {s.lastUpdated && <span className="yojna-tag-pill-outline" style={{borderColor: '#ecc94b', color: '#b7791f'}}>अंतिम अपडेट: {new Date(s.lastUpdated).toLocaleDateString('hi-IN')}</span>}
         {tags.map((tag,idx)=>(
           <span key={idx} className="yojna-tag-pill-outline">{tag}</span>
         ))}
@@ -281,6 +295,17 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
             <li><b>आधिकारिक स्रोत:</b> {s.sourceUrl ? <a href={'/out/'+s.slug+'?kind=source'} target="_blank" rel="noopener noreferrer" style={{color:'#3182ce', textDecoration:'underline'}}>{new URL(s.sourceUrl).hostname}</a> : 'उपलब्ध नहीं'}</li>
           </ul>
         </section>
+
+        {relatedSchemes.length > 0 && (
+          <section className="flat-section" id="related" style={{marginTop: 40}}>
+            <h2 className="flat-section-heading">संबंधित योजनाएं</h2>
+            <div className="related-schemes-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px'}}>
+              {relatedSchemes.map(rs => <Card key={rs.slug} s={rs} />)}
+            </div>
+          </section>
+        )}
+        
+
       </div>
 
       {/* 3. Right Sidebar Actions */}

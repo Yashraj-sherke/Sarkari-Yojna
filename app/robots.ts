@@ -1,1 +1,1 @@
-export default function robots(){return {rules:{userAgent:'*',allow:'/',disallow:['/admin','/api/','/family','/saved','/reminders','/mere-liye','/out/']},sitemap:'https://sarkari-yojna-navigator.ombhayde.chatgpt.site/sitemap.xml'};}
+export default function robots(){return {rules:{userAgent:'*',allow:'/',disallow:['/admin','/api/','/family','/saved','/reminders','/mere-liye','/out/']},sitemap:'https://sarkariyojnasetu.com/sitemap.xml'};}
