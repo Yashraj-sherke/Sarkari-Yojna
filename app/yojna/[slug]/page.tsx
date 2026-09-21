@@ -7,7 +7,7 @@ import {Status,SampleNotice,Card} from '@/components/site';
 
 import {SchemeActions} from '@/components/scheme-actions';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
-export const dynamic='force-dynamic';
+export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
@@ -93,9 +93,9 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     '@context':'https://schema.org',
     '@type':'BreadcrumbList',
     itemListElement:[
-      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkariyojnasetu.com/'},
-      {'@type':'ListItem',position:2,name: s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं',item: s.state === 'madhya-pradesh' ? 'https://sarkariyojnasetu.com/state/madhya-pradesh' : 'https://sarkariyojnasetu.com/'},
-      {'@type':'ListItem',position:3,name:s.title,item:`https://sarkariyojnasetu.com/yojna/${s.slug}`},
+      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkariyojanasetu.com/'},
+      {'@type':'ListItem',position:2,name: s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं',item: s.state === 'madhya-pradesh' ? 'https://sarkariyojanasetu.com/state/madhya-pradesh' : 'https://sarkariyojanasetu.com/'},
+      {'@type':'ListItem',position:3,name:s.title,item:`https://sarkariyojanasetu.com/yojna/${s.slug}`},
     ]
   };
 

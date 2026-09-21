@@ -1,8 +1,8 @@
 import {allSchemes} from '@/lib/server';
 import {categories} from '@/lib/domain';
 import {guides} from '@/lib/guides';
-export const dynamic='force-dynamic';
-const B='https://sarkariyojnasetu.com';
+export const revalidate = 86400; // Cache sitemap for 24 hours
+const B='https://sarkariyojanasetu.com';
 export default async function sitemap(){
   const schemes=await allSchemes();const now=new Date().toISOString();
   const statics=[
