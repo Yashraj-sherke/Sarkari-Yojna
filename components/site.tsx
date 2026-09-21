@@ -36,7 +36,6 @@ export function Header(){
           width={860}
           height={524}
           priority={true}
-          style={{ width: 'auto', height: '100%' }}
         />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
