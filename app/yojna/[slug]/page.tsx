@@ -39,7 +39,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const s=await getScheme(slug);
   if(!s) return notFound();
   const d=db();
-  const c=d?await d.prepare('SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=? AND u.expires_at>?').bind(slug,new Date().toISOString()).first<{n:number}>():{n:0};
+  const cRes=d?await d`SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=${slug} AND u.expires_at>${new Date().toISOString()}`:[{n:0}];
+  const c={n:Number(cRes[0]?.n||0)};
 
   const tags=getSchemeTags(s);
   const eligibilityList=getSchemeEligibilityList(s);
