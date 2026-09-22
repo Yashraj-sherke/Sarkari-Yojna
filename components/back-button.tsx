@@ -10,7 +10,7 @@ export function BackButton({ fallbackUrl = '/' }: { fallbackUrl?: string }) {
     // If history length is > 2, there is likely a genuine previous page in this tab.
     // We also check if we are in a browser context.
     if (typeof window !== 'undefined') {
-      setCanGoBack(window.history.length > 2);
+      setCanGoBack(window.history.length > 1);
     }
   }, []);
 

@@ -263,9 +263,15 @@ export function YojnaDetailClient({
           {relatedSchemes.length > 0 && (
             <section className="flat-section" id="related" style={{marginTop: 40}}>
               <h2 className="flat-section-heading">{t.detailRelated}</h2>
-              <div className="related-schemes-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px'}}>
-                {relatedSchemes.map(rs => <Card key={rs.slug} s={rs} />)}
-              </div>
+              <ul className="flat-list" style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                {relatedSchemes.map(rs => (
+                  <li key={rs.slug} style={{ marginBottom: '10px' }}>
+                    <Link href={'/yojna/' + rs.slug} style={{ color: '#3182ce', textDecoration: 'underline', fontWeight: 500 }}>
+                      {lang === 'en' ? rs.english : rs.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
           
