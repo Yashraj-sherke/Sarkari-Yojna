@@ -167,17 +167,17 @@ export async function saveScheme(input: unknown, actor: string, changes: string,
   if (!oldSlug && prior) throw new HttpError(409, 'यह URL पहले से मौजूद है।');
   if (oldSlug && !prior) throw new HttpError(404, 'योजना नहीं मिली।');
   
-  await sql.transaction(async (tx) => {
-    await tx`
+  await sql.transaction((tx) => [
+    tx`
       INSERT INTO schemes(slug, data, status, next_review_at, updated_at) 
       VALUES (${s.slug}, ${JSON.stringify(s)}, ${s.status}, ${s.nextReviewAt}, ${now.toISOString()}) 
       ON CONFLICT(slug) DO UPDATE SET data=EXCLUDED.data, status=EXCLUDED.status, next_review_at=EXCLUDED.next_review_at, updated_at=EXCLUDED.updated_at
-    `;
-    await tx`
+    `,
+    tx`
       INSERT INTO verification_logs (id, slug, actor, source, changes, created_at) 
       VALUES (${crypto.randomUUID()}, ${s.slug}, ${actor}, ${s.sourceUrl}, ${JSON.stringify({ note: changes, before: prior, after: s })}, ${now.toISOString()})
-    `;
-  });
+    `
+  ]);
   
   return s;
 }

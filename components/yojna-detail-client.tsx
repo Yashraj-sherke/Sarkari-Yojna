@@ -20,7 +20,7 @@ export function YojnaDetailClient({
   s: Scheme;
   tags: string[];
   eligibilityList: string[];
-  processInfo: { mode: string; formUrl: string | null };
+  processInfo: { mode: string; formUrl?: string | null; formName?: string | null };
   faqs: { q: string; a: string }[];
   relatedSchemes: Scheme[];
   initialCount: number;
