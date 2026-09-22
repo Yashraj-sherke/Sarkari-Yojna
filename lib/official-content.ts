@@ -10,12 +10,18 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: '₹6,000 प्रति वर्ष · ₹2,000 की 3 किस्तें',
     sourceUrl: 'https://pmkisan.gov.in/', applicationUrl: 'https://pmkisan.gov.in/',
     documents: ['आधार कार्ड', 'बैंक खाता विवरण', 'भूमि स्वामित्व के दस्तावेज़ (खसरा/खतौनी)', 'समग्र आईडी (यदि लागू हो)'],
+    documentsEn: ['Aadhaar Card', 'Bank Account Details', 'Land Ownership Documents', 'Samagra ID (if applicable)'],
     steps: ['सरकारी पोर्टल पर अपात्रता की श्रेणियां पढ़ें।', 'New Farmer Registration से पंजीकरण करें या अधिकृत केंद्र की सहायता लें।', 'Know Your Status से भुगतान और सत्यापन की स्थिति देखें।'],
+    stepsEn: ['Read categories of ineligibility on the official portal.', 'Register via New Farmer Registration or seek help from authorized center.', 'Check payment and verification status via Know Your Status.'],
     rules: [{ field: 'occupation', op: 'eq', value: 'farmer', label: 'भूमिधारक किसान परिवार; भूमि और अन्य शर्तों की अलग जाँच होगी' }],
     sourceNotes: 'PM-KISAN के योजना विवरण और अपात्रता सूची की 14 सितंबर 2026 को समीक्षा। आयकरदाता, संस्थागत भूमिधारक और निर्दिष्ट सरकारी कर्मचारी/पेशेवर सहित अपात्रता श्रेणियां लागू हैं। परिवार में पति, पत्नी और नाबालिग बच्चे शामिल हैं।',
     detailedDescription: [
       'प्रधानमंत्री किसान सम्मान निधि (PM-KISAN) भारत सरकार की एक केंद्रीय क्षेत्र की योजना है जो सभी भूमिधारक किसानों के परिवारों को आय सहायता प्रदान करती है।',
       'योजना के तहत ₹6,000 प्रति वर्ष की राशि ₹2,000 की तीन समान किस्तों में सीधे लाभार्थियों के बैंक खातों में हस्तांतरित की जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a Central Sector scheme by the Government of India that provides income support to all landholding farmer families.',
+      'Under the scheme, an amount of ₹6,000 per year is transferred directly into the bank accounts of beneficiaries in three equal installments of ₹2,000.'
     ],
     benefitsList: [
       {
@@ -26,9 +32,22 @@ export const officialContent: Record<string, Partial<Scheme>> = {
         ]
       }
     ],
+    benefitsListEn: [
+      {
+        heading: 'Direct Cash Assistance', points: [
+          'Financial assistance of ₹6,000 annually.',
+          'This assistance is given in three equal installments of ₹2,000 every four months.',
+          'The money is deposited directly into the farmer\'s Aadhaar-linked bank account.'
+        ]
+      }
+    ],
     eligibilityDescription: [
       'सभी भूमिधारक किसान परिवार जिनके नाम खेती योग्य भूमि है, वे इस योजना के पात्र हैं।',
       'योजना के अनुसार "परिवार" का अर्थ पति, पत्नी और नाबालिग बच्चे हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'All landholding farmer families who own cultivable land are eligible for this scheme.',
+      'According to the scheme, "family" means husband, wife, and minor children.'
     ],
     exclusions: [
       'संस्थागत भूमिधारक (Institutional landholders)।',
@@ -38,6 +57,15 @@ export const officialContent: Record<string, Partial<Scheme>> = {
       'सभी सेवानिवृत्त पेंशनभोगी जिनकी मासिक पेंशन ₹10,000 या उससे अधिक है (मल्टी-टास्किंग कर्मचारियों को छोड़कर)।',
       'सभी व्यक्ति जिन्होंने पिछले निर्धारण वर्ष में आयकर का भुगतान किया है।',
       'पेशेवर जैसे डॉक्टर, इंजीनियर, वकील, चार्टर्ड अकाउंटेंट आदि।'
+    ],
+    exclusionsEn: [
+      'Institutional landholders.',
+      'Farmer families in which one or more members hold or have held constitutional posts.',
+      'Former and present Ministers/State Ministers and former/present MPs/MLAs.',
+      'All serving or retired officers and employees of Central/State Government Ministries/Offices/Departments.',
+      'All superannuated/retired pensioners whose monthly pension is ₹10,000 or more (excluding Multi-Tasking Staff).',
+      'All persons who paid Income Tax in the last assessment year.',
+      'Professionals like Doctors, Engineers, Lawyers, Chartered Accountants, etc.'
     ],
     applicationProcess: [
       {
@@ -54,9 +82,28 @@ export const officialContent: Record<string, Partial<Scheme>> = {
         ]
       }
     ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Self)', steps: [
+          'Visit the official PM-KISAN portal (pmkisan.gov.in).',
+          'Go to "Farmers Corner" and click on "New Farmer Registration".',
+          'Enter your Aadhaar number and required details, and submit the form.'
+        ]
+      },
+      {
+        mode: 'CSC / Nodal Officer', steps: [
+          'You can also register by visiting your nearest Common Service Center (CSC).',
+          'Contact the Patwari or Nodal Officer appointed by the State Government and submit your documents.'
+        ]
+      }
+    ],
     faqs: [
       { question: 'किस्त न आने पर क्या करें?', answer: 'PM-KISAN पोर्टल पर "Know Your Status" विकल्प में अपना आधार नंबर दर्ज करके स्टेटस चेक करें या अपने पटवारी से संपर्क करें।' },
       { question: 'क्या e-KYC अनिवार्य है?', answer: 'हाँ, सभी पंजीकृत किसानों के लिए PM-KISAN पोर्टल या CSC के माध्यम से e-KYC करना अनिवार्य है।' }
+    ],
+    faqsEn: [
+      { question: 'What to do if installment is not received?', answer: 'Check your status by entering your Aadhaar number in the "Know Your Status" option on the PM-KISAN portal, or contact your Patwari.' },
+      { question: 'Is e-KYC mandatory?', answer: 'Yes, it is mandatory for all registered farmers to complete e-KYC via the PM-KISAN portal or CSC.' }
     ]
   },
   'ladli-behna': {
@@ -65,12 +112,18 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: 'पात्र महिलाओं के लिए ₹1,500 प्रति माह', department: 'महिला एवं बाल विकास विभाग, मध्य प्रदेश',
     sourceUrl: 'https://cmladlibahna.mp.gov.in/', applicationUrl: 'https://cmladlibahna.mp.gov.in/',
     documents: ['समग्र परिवार / सदस्य आईडी', 'आधार कार्ड और समग्र में दर्ज मोबाइल नंबर', 'स्वयं का आधार-लिंक, DBT सक्रिय बैंक खाता; संयुक्त खाता मान्य नहीं', 'निवास प्रमाण (मध्य प्रदेश)'],
+    documentsEn: ['Samagra Family/Member ID', 'Mobile number linked to Aadhaar and Samagra', 'Own Aadhaar-linked, DBT active bank account; joint accounts not valid', 'Proof of residence (Madhya Pradesh)'],
     steps: ['समग्र e-KYC और बैंक खाते की DBT स्थिति पूरी करें।', 'ग्राम पंचायत / वार्ड कार्यालय से नए आवेदन की उपलब्धता पूछें।', 'अधिकृत कार्यालय में आवेदन दर्ज होने पर पावती लें।'],
+    stepsEn: ['Complete Samagra e-KYC and check bank account DBT status.', 'Inquire about availability of new applications at Gram Panchayat / Ward office.', 'Take acknowledgement receipt after application is submitted at authorized office.'],
     rules: [{ field: 'gender', op: 'eq', value: 'female', label: 'विवाहित महिला; विधवा, तलाकशुदा और परित्यक्ता भी शामिल' }],
     sourceNotes: 'आधिकारिक पोर्टल पर मासिक लाभ ₹1,500 दर्ज है। आवेदन वर्ष की 1 जनवरी को आयु 21 वर्ष पूरी और 60 से कम होना आवश्यक है। इस तारीख-आधारित शर्त का स्वचालित मिलान नहीं किया गया है। आय, संपत्ति और अन्य अपात्रता शर्तें भी लागू हैं। नए आवेदन खुले होने की पुष्टि स्थानीय कार्यालय से करें।',
     detailedDescription: [
       'मध्य प्रदेश सरकार के महिला एवं बाल विकास विभाग द्वारा "मुख्यमंत्री लाड़ली बहना योजना" संचालित की जा रही है। इसका मुख्य उद्देश्य महिलाओं को आर्थिक रूप से स्वतंत्र बनाना और परिवार के निर्णय लेने में उनकी भूमिका को मजबूत करना है।',
       'वर्तमान में इस योजना के तहत पात्र महिलाओं को ₹1,500 प्रति माह उनके आधार-लिंक बैंक खाते में सीधे भेजे जाते हैं।'
+    ],
+    detailedDescriptionEn: [
+      '"Mukhyamantri Ladli Behna Yojana" is operated by the Women and Child Development Department of the Madhya Pradesh Government. Its main objective is to make women economically independent and strengthen their role in family decision-making.',
+      'Currently, under this scheme, eligible women receive ₹1,500 per month directly into their Aadhaar-linked bank accounts.'
     ],
     benefitsList: [
       {
@@ -80,16 +133,35 @@ export const officialContent: Record<string, Partial<Scheme>> = {
         ]
       }
     ],
+    benefitsListEn: [
+      {
+        heading: 'Cash / Financial Assistance', points: [
+          'Financial assistance of ₹1,500 per month.',
+          'The amount is transferred directly to the woman\'s Aadhaar-linked and DBT-active bank account.'
+        ]
+      }
+    ],
     eligibilityDescription: [
       'मध्य प्रदेश की स्थानीय निवासी हो।',
       'विवाहित महिला हो (विधवा, तलाकशुदा और परित्यक्ता महिलाएं भी शामिल हैं)।',
       'आवेदन के कैलेंडर वर्ष में 1 जनवरी को आयु 21 वर्ष पूरी कर ली हो और 60 वर्ष से कम हो।',
       'परिवार की वार्षिक आय ₹2,50,000 से कम हो।'
     ],
+    eligibilityDescriptionEn: [
+      'Must be a local resident of Madhya Pradesh.',
+      'Must be a married woman (widows, divorced, and abandoned women are also included).',
+      'Must have completed 21 years of age and be less than 60 years of age on January 1st of the calendar year of application.',
+      'Annual family income must be less than ₹2,50,000.'
+    ],
     exclusions: [
       'जिनके परिवार का कोई सदस्य आयकरदाता हो।',
       'जिनके परिवार का कोई सदस्य सरकारी नौकरी में हो (नियमित/स्थायी कर्मी)।',
       'जिनके परिवार के पास चार पहिया वाहन (ट्रैक्टर को छोड़कर) हो।'
+    ],
+    exclusionsEn: [
+      'Families with any member who is an income taxpayer.',
+      'Families with any member in a government job (regular/permanent employee).',
+      'Families possessing a four-wheeler vehicle (excluding tractors).'
     ],
     applicationProcess: [
       { mode: 'ऑनलाइन', steps: ['आमतौर पर आवेदन ग्राम पंचायत या वार्ड कार्यालय के शिविरों के माध्यम से ऑनलाइन पोर्टल पर फीड किए जाते हैं। स्वयं से सीधा ऑनलाइन आवेदन करने की सुविधा नहीं है।'] },
@@ -101,12 +173,29 @@ export const officialContent: Record<string, Partial<Scheme>> = {
         ]
       }
     ],
+    applicationProcessEn: [
+      { mode: 'Online', steps: ['Applications are generally fed into the online portal through camps at the Gram Panchayat or Ward office. There is no facility for direct online self-application.'] },
+      {
+        mode: 'Offline', steps: [
+          'Obtain the application form from your Gram Panchayat, Ward office, or camp site.',
+          'Fill the form and submit it there along with necessary documents.',
+          'Must take an Acknowledgement receipt from the officer after submission.'
+        ]
+      }
+    ],
     faqs: [
       { question: 'योजना के तहत कितनी राशि मिलती है?', answer: 'पात्र महिलाओं को प्रतिमाह ₹1,500 की राशि उनके बैंक खाते में दी जाती है।' },
       { question: 'आयु सीमा क्या है?', answer: 'आवेदन वर्ष की 1 जनवरी को महिला की उम्र 21 वर्ष से 60 वर्ष के बीच होनी चाहिए।' },
       { question: 'क्या अविवाहित लड़कियां भी पात्र हैं?', answer: 'नहीं, यह योजना केवल विवाहित महिलाओं (जिसमें विधवा, तलाकशुदा और परित्यक्ता शामिल हैं) के लिए है।' },
       { question: 'समग्र e-KYC क्यों आवश्यक है?', answer: 'आधार e-KYC के बिना आवेदन प्रक्रिया आगे नहीं बढ़ सकती। यह पहचान सुनिश्चित करने के लिए अनिवार्य है।' },
       { question: 'पैसा किस खाते में आएगा?', answer: 'पैसा केवल महिला के स्वयं के आधार-लिंक और DBT-सक्रिय खाते में आएगा।' }
+    ],
+    faqsEn: [
+      { question: 'How much amount is given under the scheme?', answer: 'Eligible women receive an amount of ₹1,500 per month in their bank accounts.' },
+      { question: 'What is the age limit?', answer: 'The age of the woman must be between 21 and 60 years on January 1st of the application year.' },
+      { question: 'Are unmarried girls also eligible?', answer: 'No, this scheme is only for married women (including widows, divorced, and abandoned women).' },
+      { question: 'Why is Samagra e-KYC necessary?', answer: 'The application process cannot proceed without Aadhaar e-KYC. It is mandatory for identity verification.' },
+      { question: 'Which account will the money be credited to?', answer: 'The money will only come into the woman\'s own Aadhaar-linked and DBT-active account.' }
     ]
   },
   'ayushman-bharat': {

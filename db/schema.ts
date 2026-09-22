@@ -1,9 +1,9 @@
-import { sqliteTable, text, integer, primaryKey } from 'drizzle-orm/sqlite-core';
-export const schemes=sqliteTable('schemes',{slug:text('slug').primaryKey(),data:text('data').notNull(),status:text('status').notNull(),nextReviewAt:text('next_review_at'),updatedAt:text('updated_at').notNull()});
-export const sessions=sqliteTable('sessions',{id:text('id').primaryKey(),expiresAt:text('expires_at').notNull()});
-export const reports=sqliteTable('reports',{id:text('id').primaryKey(),slug:text('slug').notNull().references(()=>schemes.slug),reason:text('reason').notNull(),detail:text('detail').notNull(),status:text('status').notNull().default('open'),createdAt:text('created_at').notNull()});
-export const reminders=sqliteTable('reminders',{id:text('id').primaryKey(),sessionId:text('session_id').notNull().references(()=>sessions.id,{onDelete:'cascade'}),slug:text('slug').notNull().references(()=>schemes.slug),date:text('date').notNull(),createdAt:text('created_at').notNull()});
-export const signals=sqliteTable('signals',{sessionId:text('session_id').notNull().references(()=>sessions.id,{onDelete:'cascade'}),slug:text('slug').notNull().references(()=>schemes.slug)},(t: any)=>[primaryKey({columns:[t.sessionId,t.slug]})]);
-export const verificationLogs=sqliteTable('verification_logs',{id:text('id').primaryKey(),slug:text('slug').notNull(),actor:text('actor').notNull(),source:text('source').notNull(),changes:text('changes').notNull(),createdAt:text('created_at').notNull()});
-export const rateLimits=sqliteTable('rate_limits',{key:text('key').primaryKey(),count:integer('count').notNull(),expires:integer('expires').notNull()});
-export const events=sqliteTable('events',{day:text('day').notNull(),name:text('name').notNull(),count:integer('count').notNull()},(t: any)=>[primaryKey({columns:[t.day,t.name]})]);
+import { pgTable, text, integer, primaryKey } from 'drizzle-orm/pg-core';
+export const posts=pgTable('schemes',{slug:text('slug').primaryKey(),type:text('type').notNull().default('scheme'),data:text('data').notNull(),status:text('status').notNull(),nextReviewAt:text('next_review_at'),updatedAt:text('updated_at').notNull()});
+export const sessions=pgTable('sessions',{id:text('id').primaryKey(),expiresAt:text('expires_at').notNull()});
+export const reports=pgTable('reports',{id:text('id').primaryKey(),slug:text('slug').notNull().references(()=>posts.slug),reason:text('reason').notNull(),detail:text('detail').notNull(),status:text('status').notNull().default('open'),createdAt:text('created_at').notNull()});
+export const reminders=pgTable('reminders',{id:text('id').primaryKey(),sessionId:text('session_id').notNull().references(()=>sessions.id,{onDelete:'cascade'}),slug:text('slug').notNull().references(()=>posts.slug),date:text('date').notNull(),createdAt:text('created_at').notNull()});
+export const signals=pgTable('signals',{sessionId:text('session_id').notNull().references(()=>sessions.id,{onDelete:'cascade'}),slug:text('slug').notNull().references(()=>posts.slug)},(t: any)=>[primaryKey({columns:[t.sessionId,t.slug]})]);
+export const verificationLogs=pgTable('verification_logs',{id:text('id').primaryKey(),slug:text('slug').notNull(),actor:text('actor').notNull(),source:text('source').notNull(),changes:text('changes').notNull(),createdAt:text('created_at').notNull()});
+export const rateLimits=pgTable('rate_limits',{key:text('key').primaryKey(),count:integer('count').notNull(),expires:integer('expires').notNull()});
+export const events=pgTable('events',{day:text('day').notNull(),name:text('name').notNull(),count:integer('count').notNull()},(t: any)=>[primaryKey({columns:[t.day,t.name]})]);

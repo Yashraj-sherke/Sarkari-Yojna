@@ -9,6 +9,7 @@ import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/compo
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
 import {useLanguage} from '@/lib/i18n';
 import {SITE_NAME_EN, SITE_NAME_HI, SITE_TAGLINE} from '@/lib/config';
+import {CardWhatsAppShare} from './whatsapp-share';
 export const icons={Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat};
 // Re-export shared icons so other 'use client' components avoid a separate lucide chunk
 export {Search,ArrowRight,ShieldCheck,MapPin};
@@ -72,36 +73,21 @@ export function Footer(){
           
           {/* Column 1: Brand, Logo & Tagline */}
           <div className="portal-footer-col brand-col">
-            <div className="portal-brand-wrap">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+            <div className="portal-brand-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px', marginBottom: '20px' }}>
               <Image
-                src="/logo-icon.webp"
+                src="/sarkari-yojana-map-logo.png"
                 alt="Sarkari Yojna Logo"
-                className="portal-footer-logo"
-                width={256}
-                height={256}
+                className="portal-map-logo"
+                width={200}
+                height={100}
                 priority={true}
-                style={{ backgroundColor: 'white', borderRadius: '50%', padding: '4px' }}
+                style={{ objectFit: 'contain', width: '100%', maxWidth: '220px', height: 'auto', marginBottom: '-55px' }}
               />
-              <div className="portal-brand-text">
-                <h2 className="portal-brand-name" style={{lineHeight: 1.2}}>
-                  <span className="name-white">Sarkari</span> <span className="name-green">Yojana</span>
-                </h2>
-                <p className="portal-brand-desc">
+              <div className="portal-brand-text" style={{ marginTop: '0px', textAlign: 'center', maxWidth: '260px' }}>
+                <p className="portal-brand-desc" style={{ fontSize: '0.92rem', color: '#2d3748', opacity: 0.95, lineHeight: '1.5', fontWeight: 600 }}>
                   {SITE_TAGLINE}
                 </p>
               </div>
-            </div>
-
-            {/* Indian Flag Tricolor Strip */}
-            <div className="portal-tricolor-line" aria-hidden="true">
-              <span className="tri-saffron" />
-              <span className="tri-white" />
-              <span className="tri-green" />
-            </div>
-
-            <div className="portal-sub-badge">
-              <span>जनहित में, सही जानकारी के साथ।</span>
             </div>
           </div>
 
@@ -177,10 +163,10 @@ export function Footer(){
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <Mail size={15} className="link-icon" />
+                <a href="mailto:sarkariyojanasetu@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Mail size={15} className="link-icon" style={{ flexShrink: 0 }} />
                   <span>संपर्क करें</span>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -192,31 +178,31 @@ export function Footer(){
               <span className="title-bar" />
             </h3>
             <div className="portal-cards-grid">
-              <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+              <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
                 <img src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">India.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+              <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
                 <img src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">myScheme</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+              <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
                 <img src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://mp.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card">
+              <a href="https://mp.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
                 <img src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">MP.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
             </div>
 
-            <div className="portal-security-note">
+            <div className="portal-security-note" style={{ background: 'transparent', boxShadow: 'none', border: 'none', padding: '10px 0', borderTop: '1px solid rgba(22, 79, 57, 0.1)', marginTop: '20px' }}>
               <span className="lock-icon">🔒</span>
-              <p>
+              <p style={{ opacity: 0.85, fontSize: '0.85rem' }}>
                 <strong>सुरक्षा:</strong> कभी भी किसी अज्ञात व्यक्ति के साथ बैंक OTP, UPI पिन या गोपनीय पासवर्ड साझा न करें!
               </p>
             </div>
@@ -291,19 +277,19 @@ export function Card({s}:{s:Scheme}){
       <span className={'category-icon '+cat.color}><Icon size={23}/></span>
       <span className="scope"><MapPin size={13}/>{s.state==='central'?t.centralGov:t.mpGov}</span>
     </div>
-    <Link href={'/yojna/'+s.slug} className="card-title"><h3>{s.title}</h3></Link>
+    <Link href={'/yojna/'+s.slug} className="card-title"><h3>{lang === 'en' ? s.english : s.title}</h3></Link>
     <p className="english">{s.english}</p>
     
     <div className="card-extended-details">
-      {s.lastUpdated && <div style={{fontSize: '0.75rem', color: '#b7791f', marginBottom: 8}}>अंतिम अपडेट: {new Date(s.lastUpdated).toLocaleDateString('hi-IN')}</div>}
+      {s.lastUpdated && <div style={{fontSize: '0.75rem', color: '#b7791f', marginBottom: 8}}>{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(lang === 'en' ? 'en-IN' : 'hi-IN')}</div>}
       <div className="card-detail-section">
         <h4 className="detail-heading"><FileText size={15}/> {t.glanceTitle}</h4>
-        <p className="card-summary">{s.summary}</p>
+        <p className="card-summary">{lang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>
       </div>
       
       <div className="card-detail-section">
         <h4 className="detail-heading"><Check size={15}/> {t.benefitLabel}</h4>
-        <p className="card-benefit-text">{s.benefit}</p>
+        <p className="card-benefit-text">{lang === 'en' ? (s.benefitEn ?? s.benefit) : s.benefit}</p>
       </div>
       
       {s.documents && s.documents.length > 0 && (

@@ -46,6 +46,17 @@ export const schemeSchema = z.object({
   applicationProcess: z.array(z.object({ mode: z.string(), steps: z.array(z.string()) })).optional(),
   faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
   lastUpdated: z.string().optional(),
+  // English Translation Fields
+  summaryEn: z.string().optional(),
+  benefitEn: z.string().optional(),
+  documentsEn: z.array(z.string()).optional(),
+  stepsEn: z.array(z.string()).optional(),
+  detailedDescriptionEn: z.array(z.string()).optional(),
+  benefitsListEn: z.array(z.object({ heading: z.string(), points: z.array(z.string()) })).optional(),
+  eligibilityDescriptionEn: z.array(z.string()).optional(),
+  exclusionsEn: z.array(z.string()).optional(),
+  applicationProcessEn: z.array(z.object({ mode: z.string(), steps: z.array(z.string()) })).optional(),
+  faqsEn: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
 }).superRefine((s: any,c: any)=>{
   if(s.status==='ACTIVE' && (!s.sourceUrl||s.isSample)) c.addIssue({code:'custom',message:'Active schemes need an official source and must not be sample records'});
   const mins=new Map<string,number>(),maxs=new Map<string,number>(),equals=new Map<string,unknown>();

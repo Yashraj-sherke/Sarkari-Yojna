@@ -123,9 +123,10 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
         </> : <Empty description={verified ? t.emptyVerifiedDesc : undefined} />}
       </section>
 
-
-
-      <section className="faq-section">
+    </main>
+    </div>
+    <ProcessFlow lang={lang} />
+    <section className="faq-section">
         <div className="faq-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image src="/faq-illustration.png" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
@@ -152,9 +153,5 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
           </div>
         </div>
       </section>
-
-    </main>
-    </div>
-    <ProcessFlow lang={lang} />
   </>;
 }
