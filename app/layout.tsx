@@ -3,6 +3,7 @@ import {Header,Footer} from '@/components/site';
 import {Toaster} from '@/components/ui/sonner';
 import {Offline} from '@/components/offline';
 import {LanguageProvider} from '@/lib/i18n';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 import { DEFAULT_OG_IMAGE, SITE_NAME_HI, SITE_TAGLINE, SITE_URL } from "@/lib/config";
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Toaster position="bottom-right"/>
           <Offline/>
         </LanguageProvider>
+        <GoogleAnalytics gaId="G-X5LKN3EQP3" />
       </body>
     </html>
   );
