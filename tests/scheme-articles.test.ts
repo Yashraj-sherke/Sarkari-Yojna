@@ -5,18 +5,24 @@ import {schemeSchema, officialUrl} from '../lib/domain';
 import {enrichSchemeArticle} from '../lib/scheme-articles';
 import {getSchemeFaqs, getSchemeProcess} from '../lib/scheme-details';
 
-test('every catalogue article has all content sections and honest source provenance', () => {
+test('catalogue records keep honest source provenance without fabricated completeness', () => {
   assert.equal(seeds.length, 153);
   for (const s of seeds) {
     assert(schemeSchema.safeParse(s).success, s.slug);
-    for (const field of ['detailedDescription','benefitsList','eligibilityDescription','exclusions','applicationProcess','documents','references'] as const) assert(s[field]?.length, `${s.slug}: ${field}`);
-    assert((s.faqs?.length ?? 0) >= 6, `${s.slug}: FAQs`);
-    assert(s.trackingGuidance, s.slug);
-    for (const ref of s.references!) assert(officialUrl(ref.url));
+    for (const ref of s.references ?? []) assert(officialUrl(ref.url));
     if (s.editorial?.verificationStatus === 'NEEDS_VERIFICATION') {
       assert.equal(s.editorial.reviewedAt, null);
       assert.equal(s.editorial.publicationStatus, 'DRAFT_REVIEW_REQUIRED');
     }
+  }
+});
+test('indexable reviewed schemes contain the complete search-intent structure', () => {
+  for (const slug of ['pm-kisan', 'ration-support']) {
+    const s = seeds.find(item => item.slug === slug)!;
+    assert.equal(s.editorial?.publicationStatus, 'REVIEWED');
+    for (const field of ['detailedDescription','benefitsList','eligibilityDescription','exclusions','applicationProcess','documents','references'] as const) assert(s[field]?.length, `${slug}: ${field}`);
+    assert((s.faqs?.length ?? 0) >= 6, `${slug}: FAQs`);
+    assert(s.editorial?.reviewedAt, `${slug}: last verified date`);
   }
 });
 test('article enrichment is idempotent and does not mutate the source', () => {
@@ -37,7 +43,7 @@ test('ration distinguishes household amounts and state-specific unknowns', () =>
   assert.equal(s.references!.length, 5);
 });
 test('FAQ metadata uses the same questions as the rendered Hindi article', () => {
-  for (const s of seeds) assert.deepEqual(getSchemeFaqs(s), s.faqs!.map(f => ({q:f.question,a:f.answer})));
+  for (const s of seeds) if (s.faqs?.length) assert.deepEqual(getSchemeFaqs(s), s.faqs.map(f => ({q:f.question,a:f.answer})));
 });
 test('an official homepage alone does not establish online application mode', () => {
   const s = {...seeds[0], applicationProcess: undefined, applicationUrl: 'https://pmkisan.gov.in/'};

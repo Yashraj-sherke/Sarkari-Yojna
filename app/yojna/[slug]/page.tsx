@@ -13,8 +13,8 @@ export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s) return {title:'योजना नहीं मिली'};
-  const isPublic=!!s&&!s.isSample&&s.status==='ACTIVE'&&s.editorial?.publicationStatus!=='DRAFT_REVIEW_REQUIRED';
+  if(!s) return {title:'योजना नहीं मिली',robots:{index:false,follow:false}};
+  const isPublic=!!s&&!s.isSample&&s.status==='ACTIVE'&&s.editorial?.publicationStatus==='REVIEWED';
   const title=`${s.title} — लाभ, पात्रता और आवेदन प्रक्रिया`;
   const descriptionText=`${s.benefit} पात्रता, आवश्यक दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत देखें।`;
   const desc=descriptionText.length>160?`${descriptionText.slice(0,157).trimEnd()}…`:descriptionText;
@@ -42,13 +42,14 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const faqs=getSchemeFaqs(s);
 
   // Build rich structured data
-  const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl&&s.editorial?.publicationStatus!=='DRAFT_REVIEW_REQUIRED';
+  const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl&&s.editorial?.publicationStatus==='REVIEWED';
   const schemesList = await allSchemes();
   const relatedSchemes = schemesList.filter(x =>
     x.category === s.category &&
     x.slug !== s.slug &&
     x.status === 'ACTIVE' &&
-    !x.isSample
+    !x.isSample &&
+    x.editorial?.publicationStatus === 'REVIEWED'
   ).slice(0, 3);
 
   // GovernmentService schema
@@ -64,39 +65,19 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     audience:{'@type':'Audience',audienceType:s.rules.map(r=>r.label).join(', ')||'सभी पात्र नागरिक'},
   }:null;
 
-  // HowTo schema for application steps
-  const howToSchema=isActive&&s.steps.length?{
-    '@context':'https://schema.org',
-    '@type':'HowTo',
-    name:`${s.title} में आवेदन कैसे करें`,
-    description:`${s.title} के लिए आवेदन की तैयारी कैसे करें — दस्तावेज़ और प्रक्रिया।`,
-    step:s.steps.map((step,i)=>({'@type':'HowToStep',position:i+1,name:`चरण ${i+1}`,text:step})),
-    tool:s.documents.map(d=>({'@type':'HowToTool',name:d.replace(/^[\p{Emoji}\s]+/u,'')})),
-  }:null;
-
-  // FAQPage schema
-  const faqSchema=isActive&&faqs.length?{
-    '@context':'https://schema.org',
-    '@type':'FAQPage',
-    mainEntity:faqs.map(f=>({
-      '@type':'Question',
-      name:f.q,
-      acceptedAnswer:{
-        '@type':'Answer',
-        text:f.a,
-      },
-    })),
-  }:null;
-
   // BreadcrumbList schema
+  const breadcrumbItems=s.state==='madhya-pradesh' ? [
+    {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
+    {'@type':'ListItem',position:2,name:'मध्य प्रदेश की योजनाएं',item:`${SITE_URL}/state/madhya-pradesh`},
+    {'@type':'ListItem',position:3,name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
+  ] : [
+    {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
+    {'@type':'ListItem',position:2,name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
+  ];
   const breadcrumbSchema={
     '@context':'https://schema.org',
     '@type':'BreadcrumbList',
-    itemListElement:[
-      {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
-      {'@type':'ListItem',position:2,name: s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं',item: s.state === 'madhya-pradesh' ? `${SITE_URL}/state/madhya-pradesh` : `${SITE_URL}/`},
-      {'@type':'ListItem',position:3,name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
-    ]
+    itemListElement:breadcrumbItems
   };
 
   return <main id="main" className="page-wrap">
@@ -113,7 +94,5 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     {/* Structured data for Google rich results */}
     {breadcrumbSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>}
     {govServiceSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(govServiceSchema).replace(/</g,'\\u003c')}}/>}
-    {howToSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(howToSchema).replace(/</g,'\\u003c')}}/>}
-    {faqSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>}
   </main>;
 }

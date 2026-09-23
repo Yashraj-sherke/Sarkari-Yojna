@@ -13,17 +13,34 @@ function reviewedDate(value?: string | null) {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
-  const schemes=(await allSchemes()).filter(s=>s.status==='ACTIVE'&&!s.isSample&&s.editorial?.publicationStatus!=='DRAFT_REVIEW_REQUIRED');
-  const latest=schemes.map(s=>reviewedDate(s.lastUpdated??s.verifiedAt)).sort().at(-1)??INFORMATION_UPDATED;
-  const statics=[
+  const schemes=(await allSchemes()).filter(s=>s.status==='ACTIVE'&&!s.isSample&&s.editorial?.publicationStatus==='REVIEWED');
+  const latest=schemes.map(s=>reviewedDate(s.editorial?.reviewedAt??s.lastUpdated??s.verifiedAt)).sort().at(-1)??INFORMATION_UPDATED;
+  const hasReviewedMpScheme=schemes.some(s=>s.state==='madhya-pradesh');
+
+  const statics: MetadataRoute.Sitemap = [
     {url:SITE_URL,lastModified:latest},
-    {url:`${SITE_URL}/praman-patr`,lastModified:INFORMATION_UPDATED},
+    ...(hasReviewedMpScheme ? [{url:`${SITE_URL}/state/madhya-pradesh`,lastModified:latest}] : []),
     {url:`${SITE_URL}/guide`,lastModified:INFORMATION_UPDATED},
-    {url:`${SITE_URL}/state/madhya-pradesh`,lastModified:latest},
-    ...Object.keys(informationPages).map(key=>({url:`${SITE_URL}/${key}`,lastModified:INFORMATION_UPDATED})),
+    ...Object.keys(informationPages).map(key=>({
+      url:`${SITE_URL}/${key}`,
+      lastModified:INFORMATION_UPDATED
+    })),
   ];
-  const cats=categories.map(c=>{const categoryLatest=schemes.filter(s=>s.category===c.id).map(s=>reviewedDate(s.lastUpdated??s.verifiedAt)).sort().at(-1)??INFORMATION_UPDATED;return {url:`${SITE_URL}/category/${c.id}`,lastModified:categoryLatest};});
-  const gs=guides.map(g=>({url:`${SITE_URL}/guide/${g.slug}`,lastModified:INFORMATION_UPDATED}));
-  const ys=schemes.map(s=>({url:`${SITE_URL}/yojna/${s.slug}`,lastModified:reviewedDate(s.lastUpdated??s.verifiedAt)}));
+
+  const cats: MetadataRoute.Sitemap = categories.filter(c=>schemes.some(s=>s.category===c.id)).map(c=>{
+    const categoryLatest=schemes.filter(s=>s.category===c.id).map(s=>reviewedDate(s.editorial?.reviewedAt??s.lastUpdated??s.verifiedAt)).sort().at(-1)??INFORMATION_UPDATED;
+    return {url:`${SITE_URL}/category/${c.id}`,lastModified:categoryLatest};
+  });
+
+  const gs: MetadataRoute.Sitemap = guides.map(g=>({
+    url:`${SITE_URL}/guide/${g.slug}`,
+    lastModified:INFORMATION_UPDATED
+  }));
+
+  const ys: MetadataRoute.Sitemap = schemes.map(s=>({
+    url:`${SITE_URL}/yojna/${s.slug}`,
+    lastModified:reviewedDate(s.editorial?.reviewedAt??s.lastUpdated??s.verifiedAt)
+  }));
+
   return [...statics,...cats,...gs,...ys];
 }

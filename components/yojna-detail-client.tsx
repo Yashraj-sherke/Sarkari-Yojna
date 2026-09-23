@@ -36,13 +36,29 @@ export function YojnaDetailClient({
   const t = translations[pageLang];
   const isReviewed = s.editorial?.publicationStatus === 'REVIEWED';
   const verifiedDate = s.editorial?.reviewedAt;
+  const hasDatedSources = Boolean(s.references?.some((reference) => reference.accessedAt));
+  const displayDocuments = pageLang === 'en' ? (s.documentsEn ?? []) : s.documents;
+  const displayFaqs = pageLang === 'en'
+    ? (s.faqsEn ?? []).map((faq) => ({q: faq.question, a: faq.answer}))
+    : s.faqs?.length
+      ? s.faqs.map((faq) => ({q: faq.question, a: faq.answer}))
+      : faqs;
+  const officialApplicationUrl = isReviewed ? (s.applicationUrl || processInfo.formUrl) : null;
+  const applicationIsPdf = officialApplicationUrl?.toLowerCase().endsWith('.pdf');
+  const hasDocuments = hasDatedSources && displayDocuments.length > 0;
+  const hasProcess = Boolean(
+    (pageLang === 'en' && s.applicationProcessEn && s.applicationProcessEn.length > 0) ||
+    (hasDatedSources && s.applicationProcess && s.applicationProcess.length > 0) ||
+    (isReviewed && s.steps.length > 0) ||
+    officialApplicationUrl
+  );
 
   return (
     <>
       <div style={{display:'flex', alignItems:'center', gap:'15px', marginBottom:'20px'}}>
         <BackButton fallbackUrl={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} />
         <nav aria-label="breadcrumb" className="breadcrumb-nav" style={{fontSize:'0.9rem', color:'#718096'}}>
-          <Link href="/" className="inline-link">{t.breadcrumbHome}</Link> &gt; <Link href={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} className="inline-link">{s.state === 'madhya-pradesh' ? t.mpGov + ' ' + (pageLang === 'hi' ? 'की योजनाएं' : 'Schemes') : t.breadcrumbHome}</Link> &gt; <span style={{color:'#2d3748', fontWeight:500}}>{pageLang === 'en' ? s.english : s.title}</span>
+          <Link href="/" className="inline-link">{t.breadcrumbHome}</Link> &gt; <Link href={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} className="inline-link">{s.state === 'madhya-pradesh' ? t.mpGov + ' ' + (pageLang === 'hi' ? 'की योजनाएं' : 'Schemes') : (pageLang === 'en' ? 'Central government schemes' : 'केंद्र सरकार की योजनाएं')}</Link> &gt; <span style={{color:'#2d3748', fontWeight:500}}>{pageLang === 'en' ? s.english : s.title}</span>
         </nav>
       </div>
 
@@ -70,6 +86,8 @@ export function YojnaDetailClient({
       )}
       {lang === 'en' && !hasEnglishArticle && <p className="source-review-note" lang="en">A complete verified English version is not available yet. The reviewed Hindi content is shown below.</p>}
 
+
+
       <div className="detail-grid">
         {/* 1. Left Navigation */}
         <aside className="detail-left-sidebar">
@@ -78,8 +96,8 @@ export function YojnaDetailClient({
             <a href="#labh" className="nav-link">{t.detailBenefits}</a>
             <a href="#patrata" className="nav-link">{t.detailEligibility}</a>
             <a href="#apvad" className="nav-link">{t.detailExclusions}</a>
-            <a href="#dastavej" className="nav-link">{t.detailDocuments}</a>
-            <a href="#aavedan" className="nav-link">{t.detailProcess}</a>
+            {hasDocuments && <a href="#dastavej" className="nav-link">{t.detailDocuments}</a>}
+            {hasProcess && <a href="#aavedan" className="nav-link">{t.detailProcess}</a>}
             {s.trackingGuidance && <a href="#stithi" className="nav-link">{pageLang === 'en' ? 'Status / e-KYC' : 'स्थिति / e-KYC'}</a>}
             <a href="#faqs" className="nav-link">{t.detailFaqs}</a>
             <a href="#sandarbh" className="nav-link">{t.detailSources}</a>
@@ -89,7 +107,7 @@ export function YojnaDetailClient({
 
         {/* 2. Main Content Body */}
         <div className="detail-body" lang={pageLang}>
-          <OfficialImage slug={s.slug} scheme={s}/>
+          <OfficialImage slug={s.slug} scheme={s} priority={true} />
 
 
           {/* 1. विवरण */}
@@ -178,7 +196,7 @@ export function YojnaDetailClient({
           </section>
 
           {/* 5. आवेदन प्रक्रिया */}
-          <section className="flat-section" id="aavedan">
+          {hasProcess && <section className="flat-section" id="aavedan">
             <h2 className="flat-section-heading">{t.detailProcess}</h2>
             
             {pageLang === 'en' && s.applicationProcessEn && s.applicationProcessEn.length > 0 ? (
@@ -194,7 +212,7 @@ export function YojnaDetailClient({
                   </div>
                 ))}
               </div>
-            ) : s.applicationProcess && s.applicationProcess.length > 0 ? (
+            ) : hasDatedSources && s.applicationProcess && s.applicationProcess.length > 0 ? (
               <div>
                 {s.applicationProcess.map((proc, i) => (
                   <div key={i} style={{marginBottom:20}}>
@@ -218,23 +236,16 @@ export function YojnaDetailClient({
                   ))}
                 </ol>
               </>
-            ) : <p className="verification-needed">सत्यापन आवश्यक: वर्तमान आधिकारिक आवेदन प्रक्रिया उपलब्ध नहीं है।</p>}
+            ) : null}
             
-            {isReviewed&&processInfo.formUrl&&(
+            {officialApplicationUrl&&(
               <div style={{marginTop:20}}>
-                <a href={processInfo.formUrl} target="_blank" rel="noopener noreferrer" className="btn secondary form-download-btn">
-                  {processInfo.formUrl.toLowerCase().endsWith('.pdf') ? t.downloadForm : (pageLang === 'en' ? 'Open the linked official portal' : 'संबंधित सरकारी पोर्टल देखें')} ↗
+                <a href={officialApplicationUrl} target="_blank" rel="noopener noreferrer" className="btn secondary form-download-btn" onClick={() => { import('@/components/site').then(m => m.track('official_link_clicked')); }}>
+                  {applicationIsPdf ? t.downloadForm : t.applyOnPortal} ↗
                 </a>
               </div>
             )}
-            {s.applicationUrl&&isReviewed&&!processInfo.formUrl?.endsWith('.pdf')&&(
-              <div style={{marginTop:20}}>
-                <a className="btn" href={s.applicationUrl} target="_blank" rel="noopener noreferrer" onClick={() => { import('@/components/site').then(m => m.track('official_link_clicked')); }}>
-                  {t.applyOnPortal} ↗
-                </a>
-              </div>
-            )}
-          </section>
+          </section>}
 
           {s.trackingGuidance && <section className="flat-section" id="stithi">
             <h2 className="flat-section-heading">{/e-?kyc/i.test(s.trackingGuidance) ? (pageLang === 'en' ? 'Application status and e-KYC' : 'आवेदन की स्थिति और e-KYC') : (pageLang === 'en' ? 'Application status' : 'आवेदन की स्थिति कैसे देखें?')}</h2>
@@ -242,21 +253,21 @@ export function YojnaDetailClient({
           </section>}
 
           {/* 6. आवश्यक दस्तावेज़ */}
-          <section className="flat-section" id="dastavej">
+          {hasDocuments && <section className="flat-section" id="dastavej">
             <h2 className="flat-section-heading">{t.detailDocuments}</h2>
             <p>{pageLang === 'en' ? 'Check which documents apply to your application in the current official form. Conditional documents are not required from everyone.' : 'वर्तमान सरकारी प्रपत्र से मिलाएँ कि आपके मामले में कौन-सा दस्तावेज़ लागू है। किसी खास श्रेणी के लिए माँगा गया प्रमाण हर आवेदक के लिए जरूरी नहीं होता।'}</p>
-            {(pageLang === 'en' && s.documentsEn?.length) || s.documents.length ? <ul className="flat-list">
-              {(pageLang === 'en' && s.documentsEn ? s.documentsEn : s.documents).map((doc,idx)=>(
+            {hasDocuments && <ul className="flat-list">
+              {displayDocuments.map((doc,idx)=>(
                 <li key={idx}>{doc}</li>
               ))}
-            </ul> : <p className="verification-needed">सत्यापन आवश्यक: दस्तावेज़ों की योजना-विशिष्ट आधिकारिक सूची अभी उपलब्ध नहीं है।</p>}
-          </section>
+            </ul>}
+          </section>}
 
           {/* 7. अधिकतर पूछे जाने वाले सवाल */}
           <section className="flat-section" id="faqs">
             <h2 className="flat-section-heading">{t.detailFaqs}</h2>
             <div className="faq-accordion-list">
-              {(pageLang === 'en' && s.faqsEn && s.faqsEn.length > 0 ? s.faqsEn.map(f => ({q: f.question, a: f.answer})) : s.faqs && s.faqs.length > 0 ? s.faqs.map(f => ({q: f.question, a: f.answer})) : faqs).map((f,idx)=>(
+              {displayFaqs.map((f,idx)=>(
                 <details key={idx} className="yojna-faq-details" open={idx===0} style={{border:'1px solid #e2e8f0', borderRadius:6, marginBottom:10, padding:15, background:'#f7fafc'}}>
                   <summary className="yojna-faq-summary" style={{fontWeight:600, cursor:'pointer', color:'#2d3748', display:'flex', justifyContent:'space-between'}}>
                     {f.q} <span>▾</span>
@@ -266,7 +277,7 @@ export function YojnaDetailClient({
                   </div>
                 </details>
               ))}
-              {!faqs.length && !s.faqs?.length && <p className="verification-needed">इस योजना के लिए स्रोत-समर्थित सवाल-जवाब की समीक्षा अभी बाकी है।</p>}
+              {!displayFaqs.length && <p className="verification-needed">इस योजना के लिए स्रोत-समर्थित सवाल-जवाब की समीक्षा अभी बाकी है।</p>}
             </div>
           </section>
 

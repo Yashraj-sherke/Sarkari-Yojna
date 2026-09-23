@@ -14,7 +14,9 @@ const categoryBanners: Record<string, { src: string; alt: string; credit: string
   khadya: { src: '/banners/cat-khadya.svg', alt: 'खाद्य एवं नागरिक आपूर्ति योजनाएं', credit: 'खाद्य, नागरिक आपूर्ति विभाग' },
 };
 
-export function OfficialImage({ slug, scheme }: { slug: string; scheme?: Pick<Scheme, 'category' | 'title' | 'english' | 'sourceUrl' | 'department'> }) {
+import Image from 'next/image';
+
+export function OfficialImage({ slug, scheme, priority = false }: { slug: string; scheme?: Pick<Scheme, 'category' | 'title' | 'english' | 'sourceUrl' | 'department'>, priority?: boolean }) {
   const [failed, setFailed] = useState(false);
   const specific = officialImages[slug];
   const cat = scheme?.category || 'kisan';
@@ -29,24 +31,17 @@ export function OfficialImage({ slug, scheme }: { slug: string; scheme?: Pick<Sc
     height: 400
   };
 
-  const isLocal = asset.src.startsWith('/');
-  const isDev = process.env.NODE_ENV === 'development';
-  const isCloudflare = !!process.env.CF_PAGES;
-  const optimizedSrc = isLocal && !isDev && isCloudflare && !asset.src.endsWith('.svg') ? `/cdn-cgi/image/width=${asset.width},format=auto${asset.src}` : asset.src;
+  const finalSrc = failed ? catBanner.src : asset.src;
 
-
-
-  return <figure className="official-image">
-    {/* Original government banners are kept uncropped so their text remains intact. */}
-    {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img
-      src={failed ? catBanner.src : optimizedSrc}
+  return <figure className="official-image" style={{ position: 'relative', width: '100%', aspectRatio: `${asset.width}/${asset.height}`, backgroundColor: '#f1f5f9' }}>
+    <Image
+      src={finalSrc}
       alt={asset.alt}
       width={asset.width}
       height={asset.height}
-      loading="lazy"
-      decoding="async"
-      style={{ aspectRatio: `${asset.width}/${asset.height}`, objectFit: 'contain', objectPosition: 'bottom' }}
+      priority={priority}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
       onError={() => setFailed(true)}
     />
   </figure>;

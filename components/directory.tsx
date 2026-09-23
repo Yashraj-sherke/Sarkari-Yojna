@@ -54,10 +54,9 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
                 src="/search-logo.webp"
                 alt="Sarkari Yojna Emblem"
                 className="search-logo-img"
-                width={28}
-                height={40}
+                width={33}
+                height={47}
                 priority={true}
-                unoptimized={true}
               />
             </div>
             <Search size={18} className="search-glass-icon" />
@@ -130,7 +129,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
         {schemes.some(s => s.isSample) && <SampleNotice />}
         <p className="source-review-note">{t.sourceNote}</p>
         {found.length ? <>
-          <div className="scheme-grid">{displayedSchemes.map(s => <Card key={s.slug} s={s} />)}</div>
+          <div className="scheme-grid">{displayedSchemes.map((s, idx) => <Card key={s.slug} s={s} priority={idx < 4} />)}</div>
           {totalPages > 1 && (
             <div className="pagination" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', alignItems: 'center' }}>
               <button className="btn" disabled={page === 1} onClick={() => { setPage(p => p - 1); window.scrollTo({ top: 400, behavior: 'smooth' }); }} style={page === 1 ? { opacity: 0.5, cursor: 'not-allowed' } : {}} aria-label="Previous Page"><ArrowLeft size={17} /></button>
@@ -147,7 +146,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
     <section className="faq-section">
         <div className="faq-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <Image src="/faq-illustration.webp" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} unoptimized={true} />
+          <Image src="/faq-illustration.webp" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 400px" />
         </div>
         <div className="faq-content">
           <h2><HelpCircle size={22} /> {t.faqTitle}</h2>

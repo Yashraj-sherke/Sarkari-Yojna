@@ -6,6 +6,7 @@ export const metadata:Metadata={
   title:'प्रमाण पत्र कैसे बनाएं — आय, जाति, निवास, जन्म प्रमाण पत्र MP',
   description:'मध्य प्रदेश में आय प्रमाण पत्र, जाति प्रमाण पत्र, निवास प्रमाण पत्र, जन्म प्रमाण पत्र और समग्र ID कैसे बनाएं — ज़रूरी दस्तावेज़, ऑनलाइन आवेदन और पूरी प्रक्रिया हिन्दी में।',
   alternates:{canonical:'/praman-patr'},
+  robots:{index:false,follow:true},
   openGraph:{title:'प्रमाण पत्र कैसे बनाएं — MP',description:'आय, जाति, निवास, जन्म — सभी प्रमाण पत्र की जानकारी एक जगह।',url:'/praman-patr',type:'article',locale:'hi_IN'},
 };
 
@@ -72,16 +73,6 @@ const pramanPatr=[
   },
 ];
 
-// Structured data for Google
-const faqSchema={
-  '@context':'https://schema.org',
-  '@type':'FAQPage',
-  mainEntity:pramanPatr.flatMap(p=>[
-    {'@type':'Question',name:`${p.title} के लिए कौन-से दस्तावेज़ चाहिए?`,acceptedAnswer:{'@type':'Answer',text:p.docs.map(d=>d.replace(/^[\p{Emoji}\s]+/u,'')).join(', ')}},
-    {'@type':'Question',name:`${p.title} कैसे बनवाएं?`,acceptedAnswer:{'@type':'Answer',text:p.steps.join(' → ')}},
-  ]),
-};
-
 export default function PramanPatrPage(){
   return <main id="main" className="page-wrap">
     <PageTitle
@@ -147,6 +138,5 @@ export default function PramanPatrPage(){
       </div>
     </div>
 
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>
   </main>;
 }

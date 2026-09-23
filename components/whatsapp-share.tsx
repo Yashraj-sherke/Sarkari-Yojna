@@ -1,6 +1,7 @@
 'use client';
 import { track } from './site';
 import {useLanguage} from '@/lib/i18n';
+import {SITE_URL} from '@/lib/config';
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -23,7 +24,7 @@ function getWhatsAppUrl(title: string, url: string) {
 /** Floating sticky WhatsApp CTA for mobile scheme detail pages */
 export function WhatsAppFloatingCTA({ title, slug }: { title: string; slug: string }) {
   const {t} = useLanguage();
-  const url = `https://sarkari-yojna.vercel.app/yojna/${slug}`;
+  const url = `${SITE_URL}/yojna/${slug}`;
   return (
     <a
       href={getWhatsAppUrl(title, url)}
@@ -43,7 +44,7 @@ export function WhatsAppFloatingCTA({ title, slug }: { title: string; slug: stri
 /** Inline WhatsApp share banner for scheme detail pages */
 export function WhatsAppShareBanner({ title, slug }: { title: string; slug: string }) {
   const {t} = useLanguage();
-  const url = `https://sarkari-yojna.vercel.app/yojna/${slug}`;
+  const url = `${SITE_URL}/yojna/${slug}`;
   return (
     <div className="wa-share-banner">
       <div className="wa-share-banner-icon">{WA_ICON}</div>
@@ -67,7 +68,7 @@ export function WhatsAppShareBanner({ title, slug }: { title: string; slug: stri
 
 /** Small WhatsApp share button for scheme cards */
 export function CardWhatsAppShare({ title, slug }: { title: string; slug: string }) {
-  const url = `https://sarkari-yojna.vercel.app/yojna/${slug}`;
+  const url = `${SITE_URL}/yojna/${slug}`;
 
   function handleShare(e: React.MouseEvent) {
     e.preventDefault();

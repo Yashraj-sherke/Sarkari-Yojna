@@ -6,27 +6,26 @@ import { SITE_NAME_HI, SITE_URL } from '@/lib/config';
 export const revalidate = 3600;
 
 export default async function Home() {
-  const breadcrumbSchema={
-    '@context':'https://schema.org',
-    '@type':'BreadcrumbList',
-    itemListElement:[
-      {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
-    ]
-  };
-
   const websiteSchema={
     '@context':'https://schema.org',
     '@type':'WebSite',
     name:SITE_NAME_HI,
-    url:`${SITE_URL}/`
+    url:`${SITE_URL}/`,
   };
 
+  const organizationSchema={
+    '@context':'https://schema.org',
+    '@type':'Organization',
+    name:SITE_NAME_HI,
+    url:`${SITE_URL}/`,
+    logo:`${SITE_URL}/favicon.png?v=6`
+  };
 
   return (
     <>
       <Directory schemes={(await allSchemes()).map(summarizeScheme)} initialState="central" isHomePage={true} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationSchema).replace(/</g,'\\u003c')}}/>
     </>
   );
 }
