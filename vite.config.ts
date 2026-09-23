@@ -63,6 +63,20 @@ function patchVinextLinkPlugin(): import("vite").Plugin {
   };
 }
 
+function weakRefPolyfillPlugin(): import("vite").Plugin {
+  return {
+    name: "weakref-polyfill",
+    enforce: "pre",
+    transform(code: string, id: string) {
+      if (id.includes("react-server-dom-webpack") || id.includes("vinext")) {
+        if (!code.includes("class WeakRef")) {
+          return `if (typeof globalThis.WeakRef === 'undefined') { globalThis.WeakRef = class WeakRef { constructor(t) { this.t = t; } deref() { return this.t; } }; }\n` + code;
+        }
+      }
+    }
+  };
+}
+
 export default defineConfig(async () => {
   // Use Miniflare's local Request.cf placeholder unless fetching is requested.
   process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
@@ -91,13 +105,17 @@ export default defineConfig(async () => {
       target: 'es2020',
     },
     plugins: [
+      weakRefPolyfillPlugin(),
       patchVinextLinkPlugin(),
       vinext(),
       sites(),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
-        config: localBindingConfig,
+        config: {
+          ...localBindingConfig,
+          compatibility_date: "2024-09-23"
+        },
       }),
     ],
   };

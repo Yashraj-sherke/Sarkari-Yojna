@@ -4,6 +4,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   title: 'मेरे लिए योजनाएं',
   alternates: { canonical: '/mere-liye' },
+  robots: { index: false, follow: true },
 };
 
 export default function MereLiyePage() {

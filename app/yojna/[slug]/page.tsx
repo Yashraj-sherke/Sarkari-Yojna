@@ -7,30 +7,24 @@ import {Status,SampleNotice,Card} from '@/components/site';
 
 import {YojnaDetailClient} from '@/components/yojna-detail-client';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
+import {DEFAULT_OG_IMAGE, SITE_URL} from '@/lib/config';
 export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
   if(!s) return {title:'योजना नहीं मिली'};
-  const isPublic=!!s&&!s.isSample&&s.status==='ACTIVE';
-  // Rich keyword-packed title for Google
-  const title=`${s.title} 2026 – आवेदन, पात्रता, लाभ, स्टेटस`;
-  // Rich description mentioning benefit + key docs
-  const desc=`${s.title} के तहत सभी पात्र लाभार्थियों को लाभ मिलता है। इस पृष्ठ पर जानें पात्रता, लाभ, दस्तावेज़, आवेदन प्रक्रिया और स्टेटस कैसे चेक करें।`;
+  const isPublic=!!s&&!s.isSample&&s.status==='ACTIVE'&&s.editorial?.publicationStatus!=='DRAFT_REVIEW_REQUIRED';
+  const title=`${s.title} — लाभ, पात्रता और आवेदन प्रक्रिया`;
+  const descriptionText=`${s.benefit} पात्रता, आवश्यक दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत देखें।`;
+  const desc=descriptionText.length>160?`${descriptionText.slice(0,157).trimEnd()}…`:descriptionText;
   return {
     title,
     description:desc,
-    keywords:[s.title,s.english,s.department,'सरकारी योजना',s.state==='madhya-pradesh'?'मध्य प्रदेश योजना':'केंद्र सरकार योजना','पात्रता','दस्तावेज़','आवेदन','praman patr','sarkari yojana',s.benefit],
-    alternates:{
-      canonical:'/yojna/'+slug,
-      languages: {
-        'hi': '/yojna/'+slug,
-        'en': '/yojna/'+slug,
-      }
-    },
+    alternates:{canonical:'/yojna/'+slug},
     robots:{index:isPublic,follow:true},
-    openGraph:{title,description:s.summary,locale:'hi_IN',type:'article'},
+    openGraph:{title,description:desc,url:`${SITE_URL}/yojna/${slug}`,locale:'hi_IN',type:'article',images:[{url:DEFAULT_OG_IMAGE,alt:s.title}]},
+    twitter:{card:'summary',title,description:desc,images:[DEFAULT_OG_IMAGE]},
   };
 }
 
@@ -48,9 +42,15 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const faqs=getSchemeFaqs(s);
 
   // Build rich structured data
-  const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl;
+  const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl&&s.editorial?.publicationStatus!=='DRAFT_REVIEW_REQUIRED';
   const schemesList = await allSchemes();
-  const relatedSchemes = schemesList.filter(x => x.category === s.category && x.slug !== s.slug).slice(0, 3);
+  const relatedSchemes = schemesList.filter(x =>
+    x.category === s.category &&
+    x.slug !== s.slug &&
+    x.status === 'ACTIVE' &&
+    !x.isSample &&
+    x.editorial?.publicationStatus === 'REVIEWED'
+  ).slice(0, 3);
 
   // GovernmentService schema
   const govServiceSchema=isActive?{
@@ -94,9 +94,9 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     '@context':'https://schema.org',
     '@type':'BreadcrumbList',
     itemListElement:[
-      {'@type':'ListItem',position:1,name:'होम',item:'https://sarkariyojanasetu.com/'},
-      {'@type':'ListItem',position:2,name: s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं',item: s.state === 'madhya-pradesh' ? 'https://sarkariyojanasetu.com/state/madhya-pradesh' : 'https://sarkariyojanasetu.com/'},
-      {'@type':'ListItem',position:3,name:s.title,item:`https://sarkariyojanasetu.com/yojna/${s.slug}`},
+      {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
+      {'@type':'ListItem',position:2,name: s.state === 'madhya-pradesh' ? 'मध्य प्रदेश की योजनाएं' : 'योजनाएं',item: s.state === 'madhya-pradesh' ? `${SITE_URL}/state/madhya-pradesh` : `${SITE_URL}/`},
+      {'@type':'ListItem',position:3,name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
     ]
   };
 

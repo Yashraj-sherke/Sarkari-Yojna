@@ -1,5 +1,6 @@
 'use client';
-import { useMemo, useState, useEffect } from 'react';
+import type { SchemeSummary } from '@/lib/scheme-summary';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SlidersHorizontal, LockKeyhole, Sparkles, RotateCcw, BookOpen, FileText, ArrowUpRight, HelpCircle, ArrowLeft } from 'lucide-react';
@@ -9,12 +10,23 @@ import { useLanguage } from '@/lib/i18n';
 import { ProcessFlow } from './process-flow';
 
 
-export function Directory({ schemes, initialCategory = 'all', initialState = 'all', isHomePage = false }: { schemes: Scheme[]; initialCategory?: string; initialState?: string; isHomePage?: boolean }) {
+export function Directory({ schemes, initialCategory = 'all', initialState = 'all', isHomePage = false }: { schemes: SchemeSummary[]; initialCategory?: string; initialState?: string; isHomePage?: boolean }) {
   const { t, lang } = useLanguage();
-  const [q, setQ] = useState(''), [query, setQuery] = useState(''), [state, setState] = useState(initialState), [category, setCategory] = useState(initialCategory), [verified, setVerified] = useState(false);
+
+  const [q, setQ] = useState('');
+  const [query, setQuery] = useState('');
+  const [state, setState] = useState(initialState);
+  const [category, setCategory] = useState(initialCategory);
+  const [verified, setVerified] = useState(false);
   const [page, setPage] = useState(1);
+
+  const isMounted = useRef(false);
   useEffect(() => {
-    setPage(1);
+    if (isMounted.current) {
+      setPage(1);
+    } else {
+      isMounted.current = true;
+    }
   }, [query, category, state, verified]);
   const isCentralFeatured = isHomePage && state === 'central' && !query && category === 'all';
   const found = useMemo(() => {
@@ -45,6 +57,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
                 width={28}
                 height={40}
                 priority={true}
+                unoptimized={true}
               />
             </div>
             <Search size={18} className="search-glass-icon" />
@@ -83,7 +96,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
           <button className="text-button" onClick={() => { setCategory('all'); setQuery(''); setQ(''); }}>{t.allCategories} <ArrowRight size={16} /></button>
         </div>
         <div className="category-grid">
-          {categories.map(c => { const Icon = icons[c.icon]; return <button key={c.id} className={'category-tile ' + (category === c.id ? 'chosen' : '')} onClick={() => { setCategory(category === c.id ? 'all' : c.id); track('category_opened'); }} aria-pressed={category === c.id}><span className={'category-icon ' + c.color}><Icon size={24} /></span><span>{c.short}</span></button>; })}
+          {categories.map(c => { const Icon = icons[c.icon]; return <Link href={category === c.id ? '/' : '/category/' + c.id} key={c.id} className={'category-tile ' + (category === c.id ? 'chosen' : '')} onClick={() => { track('category_opened'); }} aria-current={category === c.id ? 'page' : undefined}><span className={'category-icon ' + c.color}><Icon size={24} /></span><span>{c.short}</span></Link>; })}
         </div>
       </section>
       <section className="results-section">
@@ -94,7 +107,12 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
           </div>
           <div className="filter-select">
             <MapPin size={17} />
-            <Choice label={t.stateFilter} value={state} onChange={setState} options={[
+            <Choice label={t.stateFilter} value={state} onChange={(val) => {
+              if (val === 'madhya-pradesh') window.location.href = '/state/madhya-pradesh';
+              else if (val === 'central') window.location.href = '/state/central';
+              else if (val === 'all') window.location.href = '/';
+              else setState(val);
+            }} options={[
               { value: 'central', label: lang === 'hi' ? 'केंद्र सरकार (9)' : 'Central Schemes (9)' },
               { value: 'madhya-pradesh', label: lang === 'hi' ? 'मध्य प्रदेश (129+)' : 'Madhya Pradesh (129+)' },
               { value: 'all', label: t.stateAll },
@@ -129,7 +147,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
     <section className="faq-section">
         <div className="faq-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <Image src="/faq-illustration.png" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} />
+          <Image src="/faq-illustration.webp" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} unoptimized={true} />
         </div>
         <div className="faq-content">
           <h2><HelpCircle size={22} /> {t.faqTitle}</h2>

@@ -1,0 +1,13 @@
+# Sarkari Yojna
+
+Sarkari Yojna is an independent platform that helps Indian citizens discover, understand, and apply for government schemes.
+
+## Features
+- Scheme Discovery
+- Categorized schemes for central and state governments (Madhya Pradesh focus)
+- Feedback and verified updates
+
+## Important Links
+- [Home](https://sarkariyojna.in/)
+- [Privacy Policy](https://sarkariyojna.in/privacy)
+- [Terms](https://sarkariyojna.in/terms)

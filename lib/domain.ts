@@ -1,3 +1,4 @@
+import type { SchemeSummary } from './scheme-summary';
 import { z } from 'zod';
 import Fuse from 'fuse.js';
 
@@ -46,6 +47,15 @@ export const schemeSchema = z.object({
   applicationProcess: z.array(z.object({ mode: z.string(), steps: z.array(z.string()) })).optional(),
   faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
   lastUpdated: z.string().optional(),
+  editorial: z.object({
+    verificationStatus: z.enum(['VERIFIED_CORE', 'NEEDS_VERIFICATION']),
+    publicationStatus: z.enum(['REVIEWED', 'DRAFT_REVIEW_REQUIRED']),
+    reviewedAt: z.string().nullable(),
+    note: z.string(),
+  }).optional(),
+  references: z.array(z.object({ title: z.string(), organization: z.string(), url: official, sections: z.array(z.string()), accessedAt: z.string().nullable(), note: z.string().optional() })).optional(),
+  practicalGuidance: z.array(z.string()).optional(),
+  trackingGuidance: z.string().optional(),
   // English Translation Fields
   summaryEn: z.string().optional(),
   benefitEn: z.string().optional(),
@@ -65,7 +75,7 @@ export const schemeSchema = z.object({
   for(const [f,v]of equals)if(typeof v==='number'&&(v<(mins.get(f)??-Infinity)||v>(maxs.get(f)??Infinity)))c.addIssue({code:'custom',message:'Conflicting exact and range rules'});
 });
 export type Scheme = z.infer<typeof schemeSchema>;
-export function effectiveStatus(s:Scheme,now=new Date()){return s.status==='ACTIVE'&&(!s.nextReviewAt||new Date(s.nextReviewAt)<=now)?'NEEDS_REVIEW':s.status;}
+export function effectiveStatus(s:Pick<Scheme, 'status' | 'nextReviewAt'>,now=new Date()){return s.status==='ACTIVE'&&(!s.nextReviewAt||new Date(s.nextReviewAt)<=now)?'NEEDS_REVIEW':s.status;}
 
 const searchSynonyms: Record<string, string[]> = {
   awas: ['house', 'housing', 'ghar', 'makan', 'aawas', 'shahri', 'urban', 'gramin', 'rural', 'pmay'],
@@ -89,7 +99,7 @@ function getSearchSynonyms(term: string): string[] {
   return [termLower];
 }
 
-export function searchSchemes(items: Scheme[], q = '', category = 'all', state = 'all') {
+export function searchSchemes<T extends SchemeSummary>(items: T[], q = '', category = 'all', state = 'all') {
   const filtered = items.filter(s => 
     !['ARCHIVED', 'CLOSED'].includes(s.status) &&
     (category === 'all' || s.category === category) &&
@@ -102,7 +112,7 @@ export function searchSchemes(items: Scheme[], q = '', category = 'all', state =
   }
 
   const fuse = new Fuse(filtered, {
-    keys: ['title', 'english', 'summary', 'category'],
+    keys: ['title', 'english', 'summary', 'category', 'department', 'benefit', 'slug'],
     threshold: 0.3,
     ignoreLocation: true,
   });
@@ -112,7 +122,7 @@ export function searchSchemes(items: Scheme[], q = '', category = 'all', state =
   let validItems = new Set(filtered);
 
   for (const group of termGroups) {
-    const groupMatches = new Set<Scheme>();
+    const groupMatches = new Set<T>();
     for (const syn of group) {
       const results = fuse.search(syn);
       for (const r of results) {

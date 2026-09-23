@@ -3,7 +3,7 @@ import {createContext, useContext, useState, useEffect, type ReactNode} from 're
 
 export type Lang = 'hi' | 'en';
 
-const translations = {
+export const translations = {
   hi: {
     // Brand
     brandName: 'सरकारी योजना',
@@ -409,7 +409,10 @@ export function LanguageProvider({children}: {children: ReactNode}) {
 
   useEffect(() => {
     const saved = localStorage.getItem('sy_lang') as Lang | null;
-    if (saved === 'en' || saved === 'hi') setLang(saved);
+    if (saved === 'en' || saved === 'hi') {
+      setLang(saved);
+      document.documentElement.lang = saved;
+    }
   }, []);
 
   function toggleLang() {

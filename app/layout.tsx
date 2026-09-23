@@ -5,22 +5,19 @@ import {Offline} from '@/components/offline';
 import {LanguageProvider} from '@/lib/i18n';
 import "./globals.css";
 
-import { SITE_NAME_EN, SITE_NAME_HI, SITE_TAGLINE } from "@/lib/config";
+import { DEFAULT_OG_IMAGE, SITE_NAME_HI, SITE_TAGLINE, SITE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: {default:`${SITE_NAME_HI} — MP योजनाएं, प्रमाण पत्र, पात्रता जानकारी`,template:`%s | ${SITE_NAME_HI} MP`},
-  description: 'मध्य प्रदेश और केंद्र सरकार की सभी सरकारी योजनाएं एक जगह। लाड़ली बहना, PM किसान, आयुष्मान भारत, संबल योजना — पात्रता, दस्तावेज़ और आवेदन की पूरी जानकारी हिन्दी में।',
-  keywords: ['सरकारी योजना','MP सरकारी योजना','मध्य प्रदेश योजना','प्रमाण पत्र','लाड़ली बहना योजना','PM किसान','आयुष्मान भारत','संबल योजना','सीखो कमाओ योजना','लाड़ली लक्ष्मी','गांव की बेटी','किसान कल्याण योजना','sarkari yojana', 'yojna', 'sarkari yojna', 'MP government scheme','yojana documents','patra','aavedan'],
+  title: {default:`${SITE_NAME_HI} — MP योजनाएं, प्रमाण पत्र, पात्रता जानकारी`,template:`%s | ${SITE_NAME_HI}`},
+  description: 'मध्य प्रदेश और केंद्र सरकार की योजनाओं के लाभ, पात्रता, दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत सरल हिन्दी में देखें।',
   alternates:{canonical:'/'},
-  metadataBase:new URL('https://sarkariyojanasetu.com'),
-  openGraph:{locale:'hi_IN',type:'website',title:`${SITE_NAME_HI} — MP की सभी योजनाएं`,description:'मध्य प्रदेश सरकारी योजनाएं — पात्रता, दस्तावेज़ और आवेदन प्रक्रिया।'},
+  metadataBase:new URL(SITE_URL),
+  applicationName:SITE_NAME_HI,
+  robots:{index:true,follow:true},
+  openGraph:{locale:'hi_IN',type:'website',url:SITE_URL,siteName:SITE_NAME_HI,title:`${SITE_NAME_HI} — योजनाओं की सरल और स्रोत-सहित जानकारी`,description:SITE_TAGLINE,images:[{url:DEFAULT_OG_IMAGE,alt:`${SITE_NAME_HI} लोगो`}]},
+  twitter:{card:'summary',title:`${SITE_NAME_HI} — सरकारी योजनाओं की जानकारी`,description:SITE_TAGLINE,images:[DEFAULT_OG_IMAGE]},
   manifest:'/manifest.webmanifest',
-  other: {
-    "codex-preview": "development",
-  },
-  verification: {
-    google: "ADD_YOUR_GOOGLE_SEARCH_CONSOLE_TAG_HERE",
-  },
+  verification: process.env.GOOGLE_SITE_VERIFICATION ? {google: process.env.GOOGLE_SITE_VERIFICATION} : undefined,
   icons: {
     icon: [
       { url: "/favicon.png?v=6", sizes: "64x64", type: "image/png" },

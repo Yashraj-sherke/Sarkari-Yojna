@@ -1,7 +1,7 @@
 'use client';
+import type { SchemeSummary } from '@/lib/scheme-summary';
 import Link from 'next/link';
 import {OfficialImage} from './official-image';
-import {usePathname} from 'next/navigation';
 import {Suspense, useState, useEffect} from 'react';
 import Image from 'next/image';
 import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages,FileText,BookOpen,AlertCircle,Mail} from 'lucide-react';
@@ -18,7 +18,8 @@ export function track(name:string){void api('/api/events',{name}).catch(()=>{});
 export function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(v:string)=>void;options:{value:string;label:string}[]}){return <Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label} className="choice"><SelectValue placeholder={label}/></SelectTrigger><SelectContent position="popper">{options.map(o=><SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>)}</SelectContent></Select>;}
 
 export function Header(){
-  const path=usePathname();
+  const [path,setPath]=useState('');
+  useEffect(()=>setPath(window.location.pathname),[]);
   const [open,setOpen]=useState(false);
   const {t,lang,toggleLang}=useLanguage();
   return <>
@@ -37,6 +38,7 @@ export function Header(){
           width={860}
           height={524}
           priority={true}
+          unoptimized={true}
         />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
@@ -75,12 +77,13 @@ export function Footer(){
           <div className="portal-footer-col brand-col">
             <div className="portal-brand-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px', marginBottom: '20px' }}>
               <Image
-                src="/sarkari-yojana-map-logo.png"
+                src="/sarkari-yojana-map-logo.webp"
                 alt="Sarkari Yojna Logo"
                 className="portal-map-logo"
                 width={200}
                 height={100}
                 priority={true}
+                unoptimized={true}
                 style={{ objectFit: 'contain', width: '100%', maxWidth: '220px', height: 'auto', marginBottom: '-55px' }}
               />
               <div className="portal-brand-text" style={{ marginTop: '0px', textAlign: 'center', maxWidth: '260px' }}>
@@ -163,10 +166,10 @@ export function Footer(){
                 </Link>
               </li>
               <li>
-                <a href="mailto:sarkariyojanasetu@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Link href="/contact" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Mail size={15} className="link-icon" style={{ flexShrink: 0 }} />
                   <span>संपर्क करें</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -262,12 +265,12 @@ export function Sidebar({category='all'}:{category?:string}){
   </aside>;
 }
 
-export function Status({s}:{s:Scheme}){
+export function Status({s}:{s:Pick<Scheme, 'status'>}){
   const {t}=useLanguage();
   return <span className={'status '+(s.status==='ACTIVE'?'verified':'')}><span/>{t.statusLabels[s.status as keyof typeof t.statusLabels]??statusLabels[s.status]}</span>;
 }
 
-export function Card({s}:{s:Scheme}){
+export function Card({s}:{s:SchemeSummary}){
   const {t, lang}=useLanguage();
   const cat=categories.find(c=>c.id===s.category)!;
   const Icon=icons[cat.icon];
@@ -277,11 +280,11 @@ export function Card({s}:{s:Scheme}){
       <span className={'category-icon '+cat.color}><Icon size={23}/></span>
       <span className="scope"><MapPin size={13}/>{s.state==='central'?t.centralGov:t.mpGov}</span>
     </div>
-    <Link href={'/yojna/'+s.slug} className="card-title"><h3>{lang === 'en' ? s.english : s.title}</h3></Link>
+    <Link prefetch={false} href={'/yojna/'+s.slug} className="card-title"><h3>{lang === 'en' ? s.english : s.title}</h3></Link>
     <p className="english">{s.english}</p>
     
     <div className="card-extended-details">
-      {s.lastUpdated && <div style={{fontSize: '0.75rem', color: '#b7791f', marginBottom: 8}}>{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(lang === 'en' ? 'en-IN' : 'hi-IN')}</div>}
+      {s.lastUpdated && <div style={{fontSize: '0.75rem', color: '#805313', marginBottom: 8}}>{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(lang === 'en' ? 'en-IN' : 'hi-IN')}</div>}
       <div className="card-detail-section">
         <h4 className="detail-heading"><FileText size={15}/> {t.glanceTitle}</h4>
         <p className="card-summary">{lang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>
@@ -307,7 +310,7 @@ export function Card({s}:{s:Scheme}){
       )}
     </div>
 
-    <div className="card-bottom"><Status s={s}/><Link href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
+    <div className="card-bottom"><Status s={s}/><Link prefetch={false} href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
   </article>;
 }
 

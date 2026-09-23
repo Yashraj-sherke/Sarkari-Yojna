@@ -1,6 +1,7 @@
 import type { Scheme } from './domain';
 import {officialContent} from './official-content.ts';
 import {mpSchemes} from './mp-schemes-data.ts';
+import {enrichSchemeArticle} from './scheme-articles';
 const base={department:'संबंधित सरकारी विभाग',documents:['दस्तावेजों की सूची official portal पर जाँचें।'],steps:['पहले official source पर वर्तमान शर्तें पढ़ें।','दस्तावेजों और आवेदन के तरीके की पुष्टि करें।','आवेदन केवल संबंधित सरकारी पोर्टल या अधिकृत केंद्र पर करें।'],sourceNotes:'डेमो रिकॉर्ड। संक्षिप्त विवरण और पात्रता नियम केवल उत्पाद का अनुभव दिखाने के लिए हैं। पूरी सरकारी शर्तों का सत्यापन बाकी है।',applicationUrl:'',status:'REQUIRES_OFFICIAL_VERIFICATION' as const,isSample:true,verifiedAt:null,nextReviewAt:null};
 const originalSeeds:Scheme[]=[
  {...base,slug:'pm-kisan',title:'प्रधानमंत्री किसान सम्मान निधि',english:'PM Kisan Samman Nidhi',category:'kisan',state:'central',summary:'किसान परिवारों के लिए आय सहायता की योजना। लाभ और पूरी पात्रता की पुष्टि सरकारी पोर्टल पर करें।',summaryEn:'Income support scheme for farmer families. Confirm benefits and eligibility on the official portal.',benefit:'किसान परिवारों के लिए आर्थिक सहायता',benefitEn:'Financial support for farmer families',department:'कृषि एवं किसान कल्याण विभाग',sourceUrl:'https://pmkisan.gov.in/',priority:true,rules:[{field:'occupation',op:'eq',value:'farmer',label:'कृषि से जुड़े नागरिक (उदाहरण नियम)'}]},
@@ -40,4 +41,4 @@ for (const s of mpSchemes) {
   }
 }
 
-export const seeds: Scheme[] = Array.from(seedMap.values());
+export const seeds: Scheme[] = Array.from(seedMap.values()).map(enrichSchemeArticle);

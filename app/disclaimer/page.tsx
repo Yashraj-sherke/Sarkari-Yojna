@@ -1,3 +1,5 @@
-import {PageTitle} from '@/components/site';
-export const metadata={title:'अस्वीकरण और सुरक्षा',alternates:{canonical:'/disclaimer'}};
-export default function Page(){return <main id="main" className="page-wrap prose"><PageTitle eyebrow="भरोसे की शुरुआत, स्पष्ट जानकारी से" title="अस्वीकरण और सुरक्षा" description="Sarkari Yojna सरकारी वेबसाइट नहीं है। आवेदन केवल संबंधित official government portal पर करें।"/><h2>लाभ की गारंटी नहीं</h2><p>सरकारी विभाग पात्रता, दस्तावेज़ और उपलब्धता जाँचता है। यहाँ का मिलान सीमित संरचित नियमों पर आधारित है। किसी भी जानकारी की official source से पुष्टि आवश्यक है।</p><h2>अपनी जानकारी सुरक्षित रखें</h2><p>OTP, ATM PIN, UPI PIN या bank password किसी अनजान व्यक्ति के साथ साझा न करें। इस मंच पर कोई भुगतान या सरकारी पहचान पत्र नहीं लिया जाता।</p><h2>सत्यापन का मतलब</h2><p>उच्च प्राथमिकता वाली योजनाओं की समीक्षा 90 दिन में और अन्य सक्रिय योजनाओं की 180 दिन में तय होती है। तारीख पार होने पर उन्हें समीक्षा-आवश्यक दिखाया जाता है। नागरिकों की मददगार प्रतिक्रिया आधिकारिक सत्यापन की जगह नहीं लेती।</p><h2>डेमो संग्रह</h2><p>वर्तमान seed संग्रह उत्पाद को आजमाने के लिए है। अधूरी या नमूना योजना को हरे सत्यापन चिह्न के साथ नहीं दिखाया जाता। गलत या पुरानी जानकारी योजना के पेज से रिपोर्ट करें।</p></main>;}
+import {InformationPage} from '@/components/information-page';
+import {informationMetadata} from '@/lib/information-pages';
+
+export const metadata = informationMetadata('disclaimer');
+export default function Page() { return <InformationPage page="disclaimer"/>; }

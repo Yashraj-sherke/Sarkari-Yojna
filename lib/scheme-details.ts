@@ -131,106 +131,28 @@ export function getSchemeTags(s: Scheme): string[] {
 }
 
 export function getSchemeEligibilityList(s: Scheme): string[] {
+  if (s.eligibilityDescription?.length) return s.eligibilityDescription;
   const meta = customSchemeMeta[s.slug];
-  if (meta?.eligibility && meta.eligibility.length) return meta.eligibility;
-
-  const list: string[] = [];
-  if (s.state === 'madhya-pradesh') {
-    list.push('मध्य प्रदेश राज्य का मूल / स्थायी निवासी होना आवश्यक है।');
-  }
-
-  if (s.rules && s.rules.length > 0) {
-    for (const r of s.rules) {
-      list.push(r.label);
-    }
-  } else {
-    list.push(`संबंधित योजना दिशा-निर्देशों के अनुसार ${s.department} द्वारा निर्धारित पात्रता मानदंड।`);
-    list.push('आवेदक के पास आवश्यक पहचान व निवास प्रमाण पत्र उपलब्ध होने चाहिए।');
-  }
-
-  return list;
+  if (s.editorial?.publicationStatus === 'REVIEWED' && meta?.eligibility?.length) return meta.eligibility;
+  if (s.editorial?.publicationStatus === 'REVIEWED') return s.rules.map(r=>r.label);
+  return [];
 }
 
 export function getSchemeProcess(s: Scheme): {
-  mode: 'ऑफलाइन' | 'ऑनलाइन' | 'ऑनलाइन / ऑफलाइन' | 'ऑफलाइन / शिविर';
+  mode: string;
   formUrl?: string;
   formName?: string;
 } {
-  const meta = customSchemeMeta[s.slug];
-  if (meta?.mode) {
-    return {
-      mode: meta.mode,
-      formUrl: meta.formUrl || s.applicationUrl || undefined,
-      formName: meta.formName || (s.applicationUrl ? 'आवेदन पत्र / आधिकारिक पोर्टल' : undefined),
-    };
-  }
-
-  if (s.applicationUrl) {
-    return {
-      mode: 'ऑनलाइन',
-      formUrl: s.applicationUrl,
-      formName: 'आधिकारिक आवेदन पोर्टल ↗',
-    };
-  }
-
   return {
-    mode: 'ऑफलाइन',
-    formUrl: undefined,
-    formName: undefined,
+    mode: s.applicationProcess?.map(p => p.mode).join(' / ') || 'आवेदन का माध्यम: सत्यापन आवश्यक',
+    formUrl: s.applicationUrl || undefined,
+    formName: s.applicationUrl ? 'संबंधित सरकारी पोर्टल' : undefined,
   };
 }
 
 export function getSchemeFaqs(s: Scheme): { q: string; a: string }[] {
+  if (s.faqs?.length) return s.faqs.map(f => ({q: f.question, a: f.answer}));
   const meta = customSchemeMeta[s.slug];
-  if (meta?.faqs && meta.faqs.length) return meta.faqs;
-
-  const faqs: { q: string; a: string }[] = [
-    {
-      q: 'यह क्या योजना है?',
-      a: s.summary,
-    },
-    {
-      q: 'लाभ क्या हैं और वित्तीय लाभ राशि क्या है?',
-      a: s.benefit,
-    },
-    {
-      q: 'किसे मिल सकता है लाभ?',
-      a: s.rules.length
-        ? `पात्रता की मुख्य शर्तें: ${s.rules.map((r: any) => r.label).join('; ')}। विस्तृत शर्तों का निर्धारण संबंधित विभाग द्वारा किया जाता है।`
-        : `योजना का लाभ संबंधित विभाग (${s.department}) द्वारा निर्धारित पात्रता श्रेणियों के अंतर्गत आने वाले नागरिकों को मिलता है।`,
-    },
-    {
-      q: 'कैसे करें आवेदन?',
-      a: s.steps.length
-        ? s.steps.join(' ')
-        : s.applicationUrl
-        ? `आधिकारिक पोर्टल (${s.applicationUrl}) पर जाकर ऑनलाइन आवेदन की प्रक्रिया पूरी करें।`
-        : `अपने नजदीकी संबंधित सरकारी कार्यालय, ग्राम पंचायत या नगर निकाय में जाकर आवेदन जमा करें।`,
-    },
-    {
-      q: 'आवेदन पत्र जमा करते समय किन दस्तावेजों की आवश्यकता होती है?',
-      a: s.documents.length
-        ? `मुख्य दस्तावेज़: ${s.documents.join(', ')}।`
-        : 'पहचान प्रमाण (आधार कार्ड), निवास प्रमाण, आय प्रमाण और बैंक खाता पासबुक की आवश्यकता होती है।',
-    },
-    {
-      q: `क्या यह योजना केवल ${s.state === 'madhya-pradesh' ? 'मध्य प्रदेश' : 'पूरे भारत'} के लिए लाभप्रद है?`,
-      a:
-        s.state === 'madhya-pradesh'
-          ? 'हाँ, यह योजना विशेष रूप से मध्य प्रदेश राज्य के मूल निवासियों के लिए संचालित है।'
-          : 'यह केंद्र सरकार की राष्ट्रीय योजना है जो पूरे देश के पात्र नागरिकों के लिए लागू है।',
-    },
-    {
-      q: 'आवेदन पत्र कैसे प्राप्त या डाउनलोड करें?',
-      a: s.applicationUrl
-        ? `आप ऊपर दिए गए आधिकारिक पोर्टल लिंक (${new URL(s.applicationUrl).hostname}) से सीधे आवेदन पत्र डाउनलोड कर सकते हैं।`
-        : `आवेदन पत्र संबंधित विभाग (${s.department}), नजदीकी ग्राम पंचायत या नगर निकाय कार्यालय से निःशुल्क प्राप्त किया जा सकता है।`,
-    },
-    {
-      q: 'क्या इस योजना के लिए कोई शुल्क या फीस देनी होती है?',
-      a: 'सरकारी योजनाओं में आवेदन सामान्यतः पूर्णतः निःशुल्क होता है। किसी भी अनधिकृत व्यक्ति या बिचौलिये को शुल्क न दें।',
-    },
-  ];
-
-  return faqs;
+  if (s.editorial?.publicationStatus === 'REVIEWED' && meta?.faqs?.length) return meta.faqs;
+  return [];
 }

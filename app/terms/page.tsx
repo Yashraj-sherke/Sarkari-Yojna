@@ -1,3 +1,5 @@
-import {PageTitle} from '@/components/site';
-export const metadata={title:'उपयोग की शर्तें',alternates:{canonical:'/terms'}};
-export default function Page(){return <main id="main" className="page-wrap prose"><PageTitle eyebrow="स्पष्ट शर्तें" title="उपयोग की शर्तें" description="इस मंच का उपयोग जानकारी समझने और सही सरकारी स्रोत तक पहुँचने के लिए करें।"/><h2>स्वतंत्र जानकारी मंच</h2><p>यह सरकारी वेबसाइट, आवेदन एजेंसी या लाभ दिलाने की सेवा नहीं है। मूल खोज निःशुल्क है। पात्रता के परिणाम संकेत हैं; अंतिम निर्णय संबंधित विभाग का है।</p><h2>उदाहरण और सत्यापन</h2><p>डेमो रिकॉर्ड तथा अपूर्ण जानकारी स्पष्ट चिह्नित है। इनमें बताए नियम वास्तविक पात्रता की पूरी सूची नहीं हैं। किसी आवेदन, भुगतान या दस्तावेज़ जमा करने से पहले वर्तमान सरकारी स्रोत की जाँच करें।</p><h2>जिम्मेदार उपयोग</h2><p>रिपोर्ट में निजी पहचान या दूसरे व्यक्ति की जानकारी न डालें। सेवा का दुरुपयोग, स्वचालित स्पैम और अनधिकृत admin पहुँच की कोशिश न करें। दुरुपयोग रोकने के लिए अनुरोध सीमा लागू है।</p><h2>बाहरी वेबसाइट</h2><p>सरकारी स्रोत का लिंक खोलने पर उस साइट की गोपनीयता और शर्तें लागू होती हैं। उनकी उपलब्धता या निर्णय इस मंच के नियंत्रण में नहीं हैं।</p></main>;}
+import {InformationPage} from '@/components/information-page';
+import {informationMetadata} from '@/lib/information-pages';
+
+export const metadata = informationMetadata('terms');
+export default function Page() { return <InformationPage page="terms"/>; }

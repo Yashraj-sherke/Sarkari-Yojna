@@ -1,29 +1,23 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export function BackButton({ fallbackUrl = '/' }: { fallbackUrl?: string }) {
-  const router = useRouter();
-  const [canGoBack, setCanGoBack] = useState(false);
-
-  useEffect(() => {
-    // If history length is > 2, there is likely a genuine previous page in this tab.
-    // We also check if we are in a browser context.
-    if (typeof window !== 'undefined') {
-      setCanGoBack(window.history.length > 1);
-    }
-  }, []);
+  // We remove the history.length check because it is unreliable in iframes/preview environments.
 
   return (
     <button 
       type="button"
       onClick={(e) => { 
         e.preventDefault(); 
-        if (canGoBack) {
-          router.back(); 
-        } else {
-          router.push(fallbackUrl);
-        }
+        const currentPath = window.location.pathname + window.location.search;
+        window.history.back(); 
+        
+        // Fallback if back() didn't do anything (e.g., opened in new tab)
+        setTimeout(() => {
+          if (window.location.pathname + window.location.search === currentPath) {
+            window.location.href = fallbackUrl;
+          }
+        }, 100);
       }} 
       className="btn secondary" 
       style={{ padding: '4px 10px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '5px' }}

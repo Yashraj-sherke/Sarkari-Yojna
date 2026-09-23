@@ -5,6 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      { source: "/state/central", destination: "/", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

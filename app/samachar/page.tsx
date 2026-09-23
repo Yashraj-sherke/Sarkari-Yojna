@@ -6,6 +6,8 @@ import { AdSensePlaceholder } from '@/components/ads';
 export const metadata = {
   title: 'समाचार (News)',
   description: 'सरकारी योजनाओं से जुड़ी ताज़ा ख़बरें और अपडेट्स।',
+  alternates: { canonical: '/samachar' },
+  robots: { index: false, follow: true },
 };
 
 export default async function SamacharIndex() {

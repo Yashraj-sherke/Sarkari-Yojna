@@ -1,6 +1,7 @@
 import { getChatGPTUser } from '@/app/chatgpt-auth';
 import { schemeSchema, effectiveStatus, type Scheme } from './domain';
 import { seeds } from './seed';
+import { enrichSchemeArticle } from './scheme-articles';
 import { neon } from '@neondatabase/serverless';
 
 let dbUrl = '';
@@ -25,7 +26,7 @@ export async function maintenance() {
     `;
     await sql`DELETE FROM sessions WHERE expires_at<=${now}`;
     await sql`DELETE FROM reports WHERE created_at<${new Date(Date.now() - 90 * 86400000).toISOString()}`;
-    await sql`DELETE FROM rate_limits WHERE expires<${Date.now()}`;
+    await sql`DELETE FROM rate_limits WHERE expires<${Math.floor(Date.now() / 1000)}`;
   } catch (e) {
     console.error('Maintenance error:', e);
   }
@@ -40,7 +41,7 @@ export async function allSchemes(): Promise<Scheme[]> {
     return results.map((x: any) => {
       const s = schemeSchema.parse(JSON.parse(x.data));
       s.lastUpdated = x.updated_at;
-      return s;
+      return enrichSchemeArticle(s);
     });
   } catch (e) {
     console.error('allSchemes error', e);
@@ -54,7 +55,7 @@ export async function getScheme(slug: string): Promise<Scheme | null> {
     const s = seeds.find(x => x.slug === slug);
     if (!s) return null;
     s.status = effectiveStatus(s);
-    return s;
+    return enrichSchemeArticle(s);
   }
   try {
     const results = await sql`SELECT data, updated_at FROM schemes WHERE slug=${slug}`;
@@ -63,7 +64,7 @@ export async function getScheme(slug: string): Promise<Scheme | null> {
     const s = schemeSchema.parse(JSON.parse(r.data));
     s.status = effectiveStatus(s);
     s.lastUpdated = r.updated_at;
-    return s;
+    return enrichSchemeArticle(s);
   } catch {
     const s = seeds.find(x => x.slug === slug);
     if (!s) return null;
@@ -109,7 +110,7 @@ export async function rateLimit(req: Request, kind: string, limit = 30) {
   
   const results = await sql`
     INSERT INTO rate_limits(key, count, expires) 
-    VALUES (${key}, 1, ${Date.now() + 3600000}) 
+    VALUES (${key}, 1, ${Math.floor(Date.now() / 1000) + 3600}) 
     ON CONFLICT (key) DO UPDATE SET count = rate_limits.count + 1 
     RETURNING count
   `;
