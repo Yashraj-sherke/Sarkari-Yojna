@@ -70,19 +70,6 @@ export function YojnaDetailClient({
       )}
       {lang === 'en' && !hasEnglishArticle && <p className="source-review-note" lang="en">A complete verified English version is not available yet. The reviewed Hindi content is shown below.</p>}
 
-      <section className="scheme-facts" aria-label={pageLang === 'en' ? 'Scheme facts' : 'योजना की मुख्य जानकारी'} lang={pageLang}>
-        <dl>
-          <div><dt>{pageLang === 'en' ? 'Government level' : 'सरकार का स्तर'}</dt><dd>{s.state === 'madhya-pradesh' ? 'मध्य प्रदेश सरकार' : 'केंद्र सरकार'}</dd></div>
-          <div><dt>{pageLang === 'en' ? 'Department' : 'संबंधित विभाग'}</dt><dd>{s.department}</dd></div>
-          <div><dt>{pageLang === 'en' ? 'Verification' : 'सत्यापन स्थिति'}</dt><dd>{isReviewed ? (pageLang === 'en' ? 'Reviewed from official sources' : 'सरकारी स्रोतों से समीक्षा की गई') : (pageLang === 'en' ? 'Verification required' : 'सत्यापन आवश्यक')}</dd></div>
-          <div><dt>{pageLang === 'en' ? 'Last verified' : 'अंतिम सत्यापन'}</dt><dd>{verifiedDate ? new Date(verifiedDate).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN') : (pageLang === 'en' ? 'Not verified yet' : 'अभी सत्यापित नहीं')}</dd></div>
-        </dl>
-        <div className="scheme-fact-links">
-          {s.sourceUrl && <a className="btn secondary" href={s.sourceUrl} target="_blank" rel="noopener noreferrer">{pageLang === 'en' ? 'Official scheme source' : 'आधिकारिक योजना स्रोत'} ↗</a>}
-          {s.applicationUrl && isReviewed && !['CLOSED','ARCHIVED'].includes(s.status) && <a className="btn" href={s.applicationUrl} target="_blank" rel="noopener noreferrer">{pageLang === 'en' ? 'Official application portal' : 'आधिकारिक आवेदन पोर्टल'} ↗</a>}
-        </div>
-      </section>
-
       <div className="detail-grid">
         {/* 1. Left Navigation */}
         <aside className="detail-left-sidebar">
@@ -103,6 +90,7 @@ export function YojnaDetailClient({
         {/* 2. Main Content Body */}
         <div className="detail-body" lang={pageLang}>
           <OfficialImage slug={s.slug} scheme={s}/>
+
 
           {/* 1. विवरण */}
           <section className="flat-section" id="vivaran">

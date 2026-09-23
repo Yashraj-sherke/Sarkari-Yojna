@@ -48,8 +48,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     x.category === s.category &&
     x.slug !== s.slug &&
     x.status === 'ACTIVE' &&
-    !x.isSample &&
-    x.editorial?.publicationStatus === 'REVIEWED'
+    !x.isSample
   ).slice(0, 3);
 
   // GovernmentService schema
