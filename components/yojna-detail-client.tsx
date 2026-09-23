@@ -32,7 +32,7 @@ export function YojnaDetailClient({
     s.eligibilityDescriptionEn?.length && s.exclusionsEn?.length &&
     s.applicationProcessEn?.length && s.documentsEn?.length && s.faqsEn?.length
   );
-  const pageLang = pageLang === 'en' && hasEnglishArticle ? 'en' : 'hi';
+  const pageLang = lang === 'en' && hasEnglishArticle ? 'en' : 'hi';
   const t = translations[pageLang];
   const isReviewed = s.editorial?.publicationStatus === 'REVIEWED';
   const verifiedDate = s.editorial?.reviewedAt;

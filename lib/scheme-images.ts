@@ -1,5 +1,15 @@
 export const officialImages: Record<string, {
   src: string; alt: string; source: string; credit: string; width: number; height: number }> = {
+  'mukhyamantri-arthik-kalyan-tribal-yojana': { src: '/mukhyamantri-arthik-kalyan-tribal-yojana.jpg', alt: 'मध्य प्रदेश मुख्यमंत्री आर्थिक कल्याण योजना (जनजातीय) बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'mukhyamantri-swarojgar-yojana-general': { src: '/mukhyamantri-swarojgar-yojana-general.jpg', alt: 'मध्य प्रदेश मुख्यमंत्री स्वरोजगार योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'mukhyamantri-krishak-udyami-yojana': { src: '/mukhyamantri-krishak-udyami-yojana.png', alt: 'मध्य प्रदेश मुख्यमंत्री कृषक उद्यमी योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'mp-mukhyamantri-udyam-kranti-yojana': { src: '/mp-mukhyamantri-udyam-kranti-yojana.png', alt: 'मध्य प्रदेश मुख्यमंत्री उद्यम क्रांति योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'yuva-annadoot-yojana': { src: '/yuva-annadoot-yojana.png', alt: 'मध्य प्रदेश मुख्यमंत्री युवा अन्नदूत योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'ration-aapke-dwar-yojana': { src: '/ration-aapke-dwar-yojana.png', alt: 'मध्य प्रदेश मुख्यमंत्री राशन आपके द्वार योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'padho-aur-padhao-yojana': { src: '/padho-aur-padhao-yojana.jpg', alt: 'मध्य प्रदेश पढ़ो और पढ़ाओ योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'covid-19-bal-kalyan-yojana': { src: '/covid-19-bal-kalyan-yojana.jpg', alt: 'मध्य प्रदेश मुख्यमंत्री कोविड-19 बाल कल्याण योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'bal-aashirwad-yojana': { src: '/bal-aashirwad-yojana.jpg', alt: 'मध्य प्रदेश मुख्यमंत्री बाल आशीर्वाद योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
+  'mukhyamantri-gas-cylinder-subsidy-yojana': { src: '/mukhyamantri-gas-cylinder-subsidy-yojana.jpg', alt: 'मध्य प्रदेश मुख्यमंत्री गैस सिलिंडर सब्सिडी योजना बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
   'pm-kisan': { src: '/08_pm_kisan_samman_nidhi.webp', alt: 'pm-kisan का आधिकारिक बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
   'ladli-behna': { src: '/ladli-behna-official.webp', alt: 'ladli-behna का आधिकारिक बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
   'seekho-kamao': { src: '/04_mukhyamantri_seekho_kamao_yojana.webp', alt: 'seekho-kamao का आधिकारिक बैनर', source: '#', credit: 'मध्य प्रदेश शासन', width: 1200, height: 675 },
