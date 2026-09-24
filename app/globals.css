@@ -5190,3 +5190,58 @@ h3 {
     padding: 14px;
   }
 }
+
+/* --- Scheme Index Styles --- */
+.scheme-index-wrapper {
+  background-color: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 40px 0;
+  margin-top: 20px;
+}
+
+.scheme-index-nav .index-heading {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.index-grid li {
+  margin: 0;
+}
+
+.index-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #1d694c;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.index-link:hover {
+  background-color: #eaf3eb;
+  border-color: #1d694c;
+  color: #164f39;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+

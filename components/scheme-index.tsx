@@ -6,10 +6,20 @@ import { isIndexableScheme } from '@/lib/seo';
 export function SchemeIndex({ schemes }: { schemes: Scheme[] }) {
   const reviewed = schemes.filter(isIndexableScheme);
   if (!reviewed.length) return null;
-  return <nav className="page-wrap" aria-label="समीक्षित योजनाओं की सूची">
-    <h2>समीक्षित योजनाएं — पूरी सूची</h2>
-    <ul className="flat-list">{reviewed.map(s => <li key={s.slug}>
-      <Link className="inline-link" href={`/yojna/${s.slug}`}>{s.title}</Link>
-    </li>)}</ul>
-  </nav>;
+  return (
+    <div className="scheme-index-wrapper">
+      <nav className="page-wrap scheme-index-nav" aria-label="समीक्षित योजनाओं की सूची">
+        <h2 className="index-heading">समीक्षित योजनाएं — पूरी सूची</h2>
+        <ul className="index-grid">
+          {reviewed.map(s => (
+            <li key={s.slug}>
+              <Link className="index-link" href={`/yojna/${s.slug}`}>
+                {s.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
 }
