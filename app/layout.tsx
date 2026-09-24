@@ -6,17 +6,16 @@ import {LanguageProvider} from '@/lib/i18n';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
-import { DEFAULT_OG_IMAGE, SITE_NAME_HI, SITE_TAGLINE, SITE_URL } from "@/lib/config";
+import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_TAGLINE, SITE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: {default:`${SITE_NAME_HI} — MP योजनाएं, प्रमाण पत्र, पात्रता जानकारी`,template:`%s | ${SITE_NAME_HI}`},
+  title: {default:`${SITE_NAME_EN} — MP योजनाएं, प्रमाण पत्र, पात्रता जानकारी`,template:`%s | ${SITE_NAME_EN}`},
   description: 'मध्य प्रदेश और केंद्र सरकार की योजनाओं के लाभ, पात्रता, दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत सरल हिन्दी में देखें।',
-  alternates:{canonical:'/'},
   metadataBase:new URL(SITE_URL),
-  applicationName:SITE_NAME_HI,
+  applicationName:SITE_NAME_EN,
   robots:{index:true,follow:true},
-  openGraph:{locale:'hi_IN',type:'website',url:SITE_URL,siteName:SITE_NAME_HI,title:`${SITE_NAME_HI} — योजनाओं की सरल और स्रोत-सहित जानकारी`,description:SITE_TAGLINE,images:[{url:DEFAULT_OG_IMAGE,alt:`${SITE_NAME_HI} लोगो`}]},
-  twitter:{card:'summary',title:`${SITE_NAME_HI} — सरकारी योजनाओं की जानकारी`,description:SITE_TAGLINE,images:[DEFAULT_OG_IMAGE]},
+  openGraph:{locale:'hi_IN',type:'website',url:SITE_URL,siteName:SITE_NAME_EN,title:`${SITE_NAME_EN} — योजनाओं की सरल और स्रोत-सहित जानकारी`,description:SITE_TAGLINE,images:[{url:DEFAULT_OG_IMAGE,alt:`${SITE_NAME_EN} लोगो`}]},
+  twitter:{card:'summary',images:[DEFAULT_OG_IMAGE]},
   manifest:'/manifest.webmanifest',
   verification: process.env.GOOGLE_SITE_VERIFICATION ? {google: process.env.GOOGLE_SITE_VERIFICATION} : undefined,
   icons: {

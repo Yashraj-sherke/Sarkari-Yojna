@@ -1,29 +1,48 @@
 import { summarizeScheme } from '@/lib/scheme-summary';
 import { allSchemes } from '@/lib/server';
 import { Directory } from '@/components/directory';
-import { SITE_NAME_HI, SITE_URL } from '@/lib/config';
+import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_ALTERNATE_NAMES, SITE_URL } from '@/lib/config';
+import { SchemeIndex } from '@/components/scheme-index';
+
+const title = 'Sarkari Yojana — सरकारी योजनाओं के लाभ, पात्रता और आवेदन';
+const description = 'Sarkari Yojana पर केंद्र और मध्य प्रदेश की योजनाएं खोजें। लाभ, पात्रता, दस्तावेज़ और आवेदन प्रक्रिया सरल हिन्दी में समझें और आधिकारिक स्रोत देखें। स्वतंत्र सूचना मंच।';
+export const metadata = {
+  title: {absolute: title}, description,
+  alternates: {canonical: '/'},
+  openGraph: {title, description, url: SITE_URL, siteName: SITE_NAME_EN, type: 'website', locale: 'hi_IN', images: [{url: DEFAULT_OG_IMAGE, alt: 'Sarkari Yojana लोगो'}]},
+  twitter: {card: 'summary', title, description, images: [DEFAULT_OG_IMAGE]},
+};
 
 export const revalidate = 3600;
 
 export default async function Home() {
+  const schemes = await allSchemes();
   const websiteSchema={
     '@context':'https://schema.org',
     '@type':'WebSite',
-    name:SITE_NAME_HI,
+    '@id':`${SITE_URL}/#website`,
+    inLanguage:'hi-IN',
+    publisher:{'@id':`${SITE_URL}/#organization`},
+    name:SITE_NAME_EN,
+    alternateName:SITE_ALTERNATE_NAMES,
     url:`${SITE_URL}/`,
   };
 
   const organizationSchema={
     '@context':'https://schema.org',
     '@type':'Organization',
-    name:SITE_NAME_HI,
+    '@id':`${SITE_URL}/#organization`,
+    description:'Sarkari Yojana is an independent citizen-information platform for discovering and understanding Indian Central and State Government schemes.',
+    name:SITE_NAME_EN,
+    alternateName:SITE_ALTERNATE_NAMES,
     url:`${SITE_URL}/`,
     logo:`${SITE_URL}/favicon.png?v=6`
   };
 
   return (
     <>
-      <Directory schemes={(await allSchemes()).map(summarizeScheme)} initialState="central" isHomePage={true} />
+      <Directory schemes={schemes.map(summarizeScheme)} initialState="central" isHomePage={true} />
+      <SchemeIndex schemes={schemes} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationSchema).replace(/</g,'\\u003c')}}/>
     </>

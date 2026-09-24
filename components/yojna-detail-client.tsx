@@ -1,10 +1,11 @@
 'use client';
 import {translations, useLanguage} from '@/lib/i18n';
-import type {Scheme} from '@/lib/domain';
+import {categories, type Scheme} from '@/lib/domain';
+import {guides} from '@/lib/guides';
 import {BackButton} from '@/components/back-button';
 import {OfficialImage} from '@/components/official-image';
 import Link from 'next/link';
-import {Status,SampleNotice,Card} from '@/components/site';
+import {Status,SampleNotice} from '@/components/site';
 import {SchemeActions} from '@/components/scheme-actions';
 import {SchemeFeedback} from '@/components/scheme-feedback';
 import {WhatsAppFloatingCTA, WhatsAppShareBanner} from '@/components/whatsapp-share';
@@ -35,7 +36,8 @@ export function YojnaDetailClient({
   const pageLang = lang === 'en' && hasEnglishArticle ? 'en' : 'hi';
   const t = translations[pageLang];
   const isReviewed = s.editorial?.publicationStatus === 'REVIEWED';
-  const verifiedDate = s.editorial?.reviewedAt;
+  const category = categories.find(c => c.id === s.category);
+  const relatedGuides = guides.filter(g => g.slug === "safe-application" || (g.slug === "income-certificate" && s.documents.some(d => /आय प्रमाण|income certificate/i.test(d))) || (g.slug === "ration-card" && s.documents.some(d => /राशन|ration/i.test(d))));
   const hasDatedSources = Boolean(s.references?.some((reference) => reference.accessedAt));
   const displayDocuments = pageLang === 'en' ? (s.documentsEn ?? []) : s.documents;
   const displayFaqs = pageLang === 'en'
@@ -58,7 +60,10 @@ export function YojnaDetailClient({
       <div style={{display:'flex', alignItems:'center', gap:'15px', marginBottom:'20px'}}>
         <BackButton fallbackUrl={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} />
         <nav aria-label="breadcrumb" className="breadcrumb-nav" style={{fontSize:'0.9rem', color:'#718096'}}>
-          <Link href="/" className="inline-link">{t.breadcrumbHome}</Link> &gt; <Link href={s.state === 'madhya-pradesh' ? '/state/madhya-pradesh' : '/'} className="inline-link">{s.state === 'madhya-pradesh' ? t.mpGov + ' ' + (pageLang === 'hi' ? 'की योजनाएं' : 'Schemes') : (pageLang === 'en' ? 'Central government schemes' : 'केंद्र सरकार की योजनाएं')}</Link> &gt; <span style={{color:'#2d3748', fontWeight:500}}>{pageLang === 'en' ? s.english : s.title}</span>
+          <Link href="/" className="inline-link">{t.breadcrumbHome}</Link>
+          {s.state === 'madhya-pradesh' && <> &gt; <Link href="/state/madhya-pradesh" className="inline-link">मध्य प्रदेश की योजनाएं</Link></>}
+          {category && <> &gt; <Link href={`/category/${category.id}`} className="inline-link">{category.name}</Link></>}
+          {' > '}<span aria-current="page" style={{color:'#2d3748', fontWeight:500}}>{pageLang === 'en' ? s.english : s.title}</span>
         </nav>
       </div>
 
@@ -107,7 +112,7 @@ export function YojnaDetailClient({
 
         {/* 2. Main Content Body */}
         <div className="detail-body" lang={pageLang}>
-          <OfficialImage slug={s.slug} scheme={s} priority={true} />
+          <OfficialImage slug={s.slug} scheme={s} priority={true} sizes="(max-width: 880px) 100vw, (max-width: 1200px) 65vw, 760px" />
 
 
           {/* 1. विवरण */}
@@ -204,7 +209,7 @@ export function YojnaDetailClient({
                 {s.applicationProcessEn.map((proc, i) => (
                   <div key={i} style={{marginBottom:20}}>
                     <div className="tabs-header" style={{borderBottom:'2px solid #e2e8f0', marginBottom:15}}>
-                      <button className="tab-btn active" style={{borderBottom:'2px solid #3182ce', color:'#3182ce', background:'none', border:'none', padding:'8px 16px', fontWeight:600}}>{proc.mode}</button>
+                      <h3 className="tab-btn active" style={{borderBottom:'2px solid #3182ce', color:'#3182ce', background:'none', border:'none', padding:'8px 16px', fontWeight:600}}>{proc.mode}</h3>
                     </div>
                     <ol className="flat-list">
                       {proc.steps.map((step, j) => <li key={j}>{step}</li>)}
@@ -217,7 +222,7 @@ export function YojnaDetailClient({
                 {s.applicationProcess.map((proc, i) => (
                   <div key={i} style={{marginBottom:20}}>
                     <div className="tabs-header" style={{borderBottom:'2px solid #e2e8f0', marginBottom:15}}>
-                      <button className="tab-btn active" style={{borderBottom:'2px solid #3182ce', color:'#3182ce', background:'none', border:'none', padding:'8px 16px', fontWeight:600}}>{proc.mode}</button>
+                      <h3 className="tab-btn active" style={{borderBottom:'2px solid #3182ce', color:'#3182ce', background:'none', border:'none', padding:'8px 16px', fontWeight:600}}>{proc.mode}</h3>
                     </div>
                     <ol className="flat-list">
                       {proc.steps.map((step, j) => <li key={j}>{step}</li>)}
@@ -300,9 +305,14 @@ export function YojnaDetailClient({
                 {ref.note && <p>{ref.note}</p>}
               </li>)}
             </ol>
-            <p>सरकारी योजना सेतु एक स्वतंत्र सूचना वेबसाइट है। अंतिम पात्रता संबंधित विभाग द्वारा निर्धारित की जाती है।</p>
+            <p>Sarkari Yojana एक स्वतंत्र सूचना वेबसाइट है। अंतिम पात्रता संबंधित विभाग द्वारा निर्धारित की जाती है।</p>
           </section>
 
+          {relatedGuides.length > 0 && <section className="flat-section">
+            <h2 className="flat-section-heading">दस्तावेज़ और आवेदन की तैयारी</h2>
+            <p>ये सामान्य जानकारी के गाइड हैं। आवश्यक दस्तावेज़ योजना के वर्तमान आधिकारिक नियमों से मिलाएँ।</p>
+            <ul className="flat-list">{relatedGuides.map(g => <li key={g.slug}><Link className="inline-link" href={`/guide/${g.slug}`}>{g.title}</Link></li>)}</ul>
+          </section>}
           <SchemeFeedback slug={s.slug} title={pageLang === 'en' ? s.english : s.title} english={pageLang === 'en'}/>
 
           {relatedSchemes.length > 0 && (

@@ -16,7 +16,7 @@ const categoryBanners: Record<string, { src: string; alt: string; credit: string
 
 import Image from 'next/image';
 
-export function OfficialImage({ slug, scheme, priority = false }: { slug: string; scheme?: Pick<Scheme, 'category' | 'title' | 'english' | 'sourceUrl' | 'department'>, priority?: boolean }) {
+export function OfficialImage({ slug, scheme, priority = false, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }: { slug: string; scheme?: Pick<Scheme, 'category' | 'title' | 'english' | 'sourceUrl' | 'department'>, priority?: boolean; sizes?: string }) {
   const [failed, setFailed] = useState(false);
   const specific = officialImages[slug];
   const cat = scheme?.category || 'kisan';
@@ -24,7 +24,7 @@ export function OfficialImage({ slug, scheme, priority = false }: { slug: string
 
   const asset = specific || {
     src: catBanner.src,
-    alt: scheme ? `${scheme.title} | ${scheme.english} — आधिकारिक योजना बैनर / Official Scheme Banner` : catBanner.alt,
+    alt: scheme ? `${scheme.title} — योजना संबंधी चित्र` : catBanner.alt,
     source: scheme?.sourceUrl || 'https://myscheme.gov.in/',
     credit: scheme?.department || catBanner.credit,
     width: 1200,
@@ -36,11 +36,11 @@ export function OfficialImage({ slug, scheme, priority = false }: { slug: string
   return <figure className="official-image" style={{ position: 'relative', width: '100%', aspectRatio: `${asset.width}/${asset.height}`, backgroundColor: '#f1f5f9' }}>
     <Image
       src={finalSrc}
-      alt={asset.alt}
+      alt={scheme ? `${scheme.title} — योजना संबंधी चित्र` : (failed || !specific ? catBanner.alt : asset.alt.replace(/आधिकारिक /g, ''))}
       width={asset.width}
       height={asset.height}
       priority={priority}
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      sizes={sizes}
       style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
       onError={() => setFailed(true)}
     />

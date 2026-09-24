@@ -6,7 +6,7 @@ export type Lang = 'hi' | 'en';
 export const translations = {
   hi: {
     // Brand
-    brandName: 'सरकारी योजना',
+    brandName: 'Sarkari Yojana',
     brandTagline: 'SARKARI YOJNA',
 
     // Independent notice
@@ -24,7 +24,7 @@ export const translations = {
 
     // Footer
     footerTagline: 'सही जानकारी। बेहतर अवसर।',
-    footerDisclaimer: 'Sarkari Yojna सरकारी वेबसाइट नहीं है। आवेदन केवल संबंधित official government portal पर करें।',
+    footerDisclaimer: 'Sarkari Yojana सरकारी वेबसाइट नहीं है। आवेदन केवल संबंधित official government portal पर करें।',
     footerFree: 'बुनियादी योजना खोज हमेशा निःशुल्क।',
     footerPrivacy: 'गोपनीयता',
     footerTerms: 'शर्तें',
@@ -198,7 +198,7 @@ export const translations = {
   },
   en: {
     // Brand
-    brandName: 'Sarkari Yojna',
+    brandName: 'Sarkari Yojana',
     brandTagline: 'GOVT. SCHEMES',
 
     // Independent notice
@@ -216,7 +216,7 @@ export const translations = {
 
     // Footer
     footerTagline: 'Right information. Better opportunities.',
-    footerDisclaimer: 'Sarkari Yojna is not a government website. Apply only on the official government portal.',
+    footerDisclaimer: 'Sarkari Yojana is not a government website. Apply only on the official government portal.',
     footerFree: 'Basic scheme search is always free.',
     footerPrivacy: 'Privacy',
     footerTerms: 'Terms',
@@ -410,6 +410,7 @@ export function LanguageProvider({children}: {children: ReactNode}) {
   useEffect(() => {
     const saved = localStorage.getItem('sy_lang') as Lang | null;
     if (saved === 'en' || saved === 'hi') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLang(saved);
       document.documentElement.lang = saved;
     }

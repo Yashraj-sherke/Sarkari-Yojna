@@ -3,8 +3,8 @@ import type { SchemeSummary } from '@/lib/scheme-summary';
 import { useMemo, useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SlidersHorizontal, LockKeyhole, Sparkles, RotateCcw, BookOpen, FileText, ArrowUpRight, HelpCircle, ArrowLeft } from 'lucide-react';
-import { categories, searchSchemes, type Scheme } from '@/lib/domain';
+import { SlidersHorizontal, LockKeyhole, Sparkles, RotateCcw, BookOpen, HelpCircle, ArrowLeft } from 'lucide-react';
+import { categories, searchSchemes } from '@/lib/domain';
 import { Sidebar, Card, Empty, Choice, icons, SampleNotice, track, Search, ArrowRight, ShieldCheck, MapPin } from './site';
 import { useLanguage } from '@/lib/i18n';
 import { ProcessFlow } from './process-flow';
@@ -28,9 +28,12 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
       isMounted.current = true;
     }
   }, [query, category, state, verified]);
+  const reviewed = (s: SchemeSummary) => s.status === 'ACTIVE' && !s.isSample && s.editorial?.publicationStatus === 'REVIEWED';
+  const routeCategory = categories.find(c => c.id === initialCategory);
+  const routeTitle = routeCategory ? `${routeCategory.name} की सरकारी योजनाएं` : initialState === 'madhya-pradesh' ? 'मध्य प्रदेश की सरकारी योजनाएं' : null;
   const isCentralFeatured = isHomePage && state === 'central' && !query && category === 'all';
   const found = useMemo(() => {
-    const list = searchSchemes(schemes, query, category, state).filter(s => !verified || s.status === 'ACTIVE');
+    const list = searchSchemes(schemes, query, category, state).filter(s => !verified || reviewed(s));
     if (isCentralFeatured) {
       return list.slice(0, 9);
     }
@@ -41,18 +44,26 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
   const displayedSchemes = found.slice((page - 1) * CARDS_PER_PAGE, page * CARDS_PER_PAGE);
   return <>
     <div className="workspace"><Sidebar category={initialCategory} /><main id="main" className="directory">
-      <div className="breadcrumb">{t.breadcrumbHome} <span>/</span> {t.breadcrumbSearch} <span className="edition">{t.breadcrumbEdition}</span></div>
+      <nav className="breadcrumb" aria-label="breadcrumb"><Link href="/">{t.breadcrumbHome}</Link>{routeTitle && <> <span>/</span> <span aria-current="page">{routeTitle}</span></>}</nav>
       <section className="discovery">
         <div className="discovery-copy">
           <div className="hero-kicker"><span /> {t.heroBadge}</div>
-          <h1>{t.heroTitle}<br /><span>{t.heroSubtitle}</span></h1>
+          <h1>{routeTitle ?? <>Sarkari Yojana<br /><span>{lang === 'hi' ? 'सरकारी योजनाओं की सरल जानकारी' : 'Understand government schemes'}</span></>}</h1>
           <p>{t.heroDesc.split('\n').map((line, i) => <span key={i}>{line}{i === 0 && <br />}</span>)}</p>
+          {isHomePage && <>
+            <p>{lang === 'hi' ? 'Sarkari Yojana (सरकारी योजना), sarkariyojanasetu.com पर एक स्वतंत्र नागरिक सूचना मंच है। इसे Sarkari Yojana Setu नाम से भी पहचान सकते हैं। यह सरकारी वेबसाइट नहीं है। अभी केंद्र और मध्य प्रदेश की योजनाओं पर जानकारी उपलब्ध है।' : 'Sarkari Yojana, also known as Sarkari Yojana Setu, is an independent citizen-information platform at sarkariyojanasetu.com. It currently covers Central and Madhya Pradesh schemes and is not a government website.'}</p>
+            <nav aria-label="योजनाएं खोजने के तरीके" style={{display:'flex',flexWrap:'wrap',gap:'12px 24px',marginBottom:16}}>
+              <a href="#scheme-search" className="inline-link">योजना खोजें</a>
+              <Link href="/mere-liye" className="inline-link">मेरे लिए योजनाएं</Link>
+              <Link href="/state/madhya-pradesh" className="inline-link">मध्य प्रदेश की योजनाएं</Link>
+              <a href="#scheme-categories" className="inline-link">श्रेणी के अनुसार खोजें</a>
+            </nav>
+          </>}
           <form className="search-box" onSubmit={e => { e.preventDefault(); setQuery(q); if (q && isHomePage && state === 'central') { setState('all'); } track('search_performed'); }}>
-            <div className="search-brand-mark" title="Sarkari Yojna">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+            <div className="search-brand-mark" title="Sarkari Yojana">
               <Image
                 src="/search-logo.webp"
-                alt="Sarkari Yojna Emblem"
+                alt="Sarkari Yojana Emblem"
                 className="search-logo-img"
                 width={33}
                 height={47}
@@ -60,7 +71,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
               />
             </div>
             <Search size={18} className="search-glass-icon" />
-            <input aria-label={t.searchPlaceholder} placeholder={t.searchPlaceholder} value={q} onChange={e => { setQ(e.target.value); if (!e.target.value) setQuery(''); }} />
+            <input id="scheme-search" aria-label={t.searchPlaceholder} placeholder={t.searchPlaceholder} value={q} onChange={e => { setQ(e.target.value); if (!e.target.value) setQuery(''); }} />
             <button type="submit">{t.searchBtn} <ArrowRight size={17} /></button>
           </form>
           <div className="suggestions">
@@ -89,7 +100,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
       </div>
 
 
-      <section className="categories-section">
+      <section id="scheme-categories" className="categories-section">
         <div className="section-heading">
           <div><h2>{t.categoryHeading}</h2><p>{t.categorySubtext}</p></div>
           <button className="text-button" onClick={() => { setCategory('all'); setQuery(''); setQ(''); }}>{t.allCategories} <ArrowRight size={16} /></button>
@@ -102,7 +113,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
         <div className="section-heading">
           <div>
             <h2>{query ? `"${query}" ${t.resultsFor}` : isCentralFeatured ? (lang === 'hi' ? 'केंद्र सरकार की प्रमुख 9 योजनाएं' : 'Top 9 Central Government Schemes') : category === 'all' ? t.resultsDefault : categories.find(c => c.id === category)?.name}</h2>
-            <p>{isCentralFeatured ? (lang === 'hi' ? '9 प्रमुख योजनाएं उपलब्ध · पूरे भारत में मान्य' : '9 Flagship Central Schemes · Valid Across India') : `${found.length} ${t.resultsSuffix}`}</p>
+            <p>{isCentralFeatured ? (lang === 'hi' ? 'केंद्रीय योजनाएं · लागू क्षेत्र और पात्रता हर योजना के नियमों के अनुसार' : 'Central schemes · Coverage and eligibility depend on scheme rules') : `${found.length} ${t.resultsSuffix}`}</p>
           </div>
           <div className="filter-select">
             <MapPin size={17} />
@@ -113,7 +124,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
               else setState(val);
             }} options={[
               { value: 'central', label: lang === 'hi' ? 'केंद्र सरकार (9)' : 'Central Schemes (9)' },
-              { value: 'madhya-pradesh', label: lang === 'hi' ? 'मध्य प्रदेश (129+)' : 'Madhya Pradesh (129+)' },
+              { value: 'madhya-pradesh', label: lang === 'hi' ? 'मध्य प्रदेश' : 'Madhya Pradesh' },
               { value: 'all', label: t.stateAll },
               { value: 'other', label: t.stateOther },
             ]} />
@@ -124,12 +135,12 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
           <button className={!verified ? 'filter-chip active' : 'filter-chip'} onClick={() => setVerified(false)}>{t.filterAll}</button>
           <button className={verified ? 'filter-chip active' : 'filter-chip'} onClick={() => setVerified(true)}>{t.filterVerified}</button>
           {(query || category !== 'all' || state !== (isHomePage ? 'central' : 'all')) && <button className="reset" onClick={() => { setCategory('all'); setState(isHomePage ? 'central' : 'all'); setQ(''); setQuery(''); }}><RotateCcw size={13} /> {t.filterReset}</button>}
-          <span className="sample-label">{schemes.filter(s => s.status === 'ACTIVE').length} {t.verifiedCount}</span>
+          <span className="sample-label">{schemes.filter(reviewed).length} {t.verifiedCount}</span>
         </div>
         {schemes.some(s => s.isSample) && <SampleNotice />}
         <p className="source-review-note">{t.sourceNote}</p>
         {found.length ? <>
-          <div className="scheme-grid">{displayedSchemes.map((s, idx) => <Card key={s.slug} s={s} priority={idx < 4} />)}</div>
+          <div className="scheme-grid">{displayedSchemes.map(s => <Card key={s.slug} s={s} />)}</div>
           {totalPages > 1 && (
             <div className="pagination" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', alignItems: 'center' }}>
               <button className="btn" disabled={page === 1} onClick={() => { setPage(p => p - 1); window.scrollTo({ top: 400, behavior: 'smooth' }); }} style={page === 1 ? { opacity: 0.5, cursor: 'not-allowed' } : {}} aria-label="Previous Page"><ArrowLeft size={17} /></button>
@@ -145,7 +156,6 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
     <ProcessFlow lang={lang} />
     <section className="faq-section">
         <div className="faq-image">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image src="/faq-illustration.webp" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 400px" />
         </div>
         <div className="faq-content">

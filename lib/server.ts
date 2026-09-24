@@ -34,19 +34,23 @@ export async function maintenance() {
 
 export async function allSchemes(): Promise<Scheme[]> {
   const sql = db();
-  if (!sql) return seeds;
+  if (!sql) return seeds.map(normalizeScheme);
   try {
-    await maintenance();
     const results = await sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
-    return results.map((x: any) => {
+    return results.map((x) => {
       const s = schemeSchema.parse(JSON.parse(x.data));
       s.lastUpdated = x.updated_at;
-      return enrichSchemeArticle(s);
+      return normalizeScheme(s);
     });
   } catch (e) {
     console.error('allSchemes error', e);
-    return seeds;
+    return seeds.map(normalizeScheme);
   }
+}
+
+function normalizeScheme(input: Scheme): Scheme {
+  const s = enrichSchemeArticle(input);
+  return { ...s, status: effectiveStatus(s) };
 }
 
 export async function getScheme(slug: string): Promise<Scheme | null> {
@@ -54,22 +58,19 @@ export async function getScheme(slug: string): Promise<Scheme | null> {
   if (!sql) {
     const s = seeds.find(x => x.slug === slug);
     if (!s) return null;
-    s.status = effectiveStatus(s);
-    return enrichSchemeArticle(s);
+    return normalizeScheme(s);
   }
   try {
     const results = await sql`SELECT data, updated_at FROM schemes WHERE slug=${slug}`;
     if (results.length === 0) return null;
     const r = results[0];
     const s = schemeSchema.parse(JSON.parse(r.data));
-    s.status = effectiveStatus(s);
     s.lastUpdated = r.updated_at;
-    return enrichSchemeArticle(s);
+    return normalizeScheme(s);
   } catch {
     const s = seeds.find(x => x.slug === slug);
     if (!s) return null;
-    s.status = effectiveStatus(s);
-    return s;
+    return normalizeScheme(s);
   }
 }
 

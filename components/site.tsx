@@ -2,14 +2,14 @@
 import type { SchemeSummary } from '@/lib/scheme-summary';
 import Link from 'next/link';
 import {OfficialImage} from './official-image';
-import {Suspense, useState, useEffect} from 'react';
+import {useState} from 'react';
+import {usePathname} from 'next/navigation';
 import Image from 'next/image';
 import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages,FileText,BookOpen,AlertCircle,Mail} from 'lucide-react';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
 import {useLanguage} from '@/lib/i18n';
-import {SITE_NAME_EN, SITE_NAME_HI, SITE_TAGLINE} from '@/lib/config';
-import {CardWhatsAppShare} from './whatsapp-share';
+import {SITE_NAME_EN, SITE_TAGLINE} from '@/lib/config';
 export const icons={Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat};
 // Re-export shared icons so other 'use client' components avoid a separate lucide chunk
 export {Search,ArrowRight,ShieldCheck,MapPin};
@@ -18,8 +18,7 @@ export function track(name:string){void api('/api/events',{name}).catch(()=>{});
 export function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(v:string)=>void;options:{value:string;label:string}[]}){return <Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label} className="choice"><SelectValue placeholder={label}/></SelectTrigger><SelectContent position="popper">{options.map(o=><SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>)}</SelectContent></Select>;}
 
 export function Header(){
-  const [path,setPath]=useState('');
-  useEffect(()=>setPath(window.location.pathname),[]);
+  const path = usePathname();
   const [open,setOpen]=useState(false);
   const {t,lang,toggleLang}=useLanguage();
   return <>
@@ -30,10 +29,9 @@ export function Header(){
     </div>
     <header className="site-header">
       <Link href="/" className="brand" aria-label={t.brandName}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <Image
           src="/navbar-logo.webp"
-          alt="Sarkari Yojna Logo"
+          alt="Sarkari Yojana लोगो"
           className="navbar-brand-logo"
           width={123}
           height={75}
@@ -77,7 +75,7 @@ export function Footer(){
             <div className="portal-brand-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px', marginBottom: '20px' }}>
               <Image
                 src="/sarkari-yojana-map-logo.webp"
-                alt="Sarkari Yojna Logo"
+                alt="Sarkari Yojana लोगो"
                 className="portal-map-logo"
                 width={200}
                 height={100}
@@ -180,22 +178,22 @@ export function Footer(){
             </h3>
             <div className="portal-cards-grid">
               <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <img src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">India.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <img src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">myScheme</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <img src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://mp.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <img src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="" className="portal-card-icon" width="18" height="18" style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">MP.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
@@ -272,7 +270,7 @@ export function Card({s, priority = false}:{s:SchemeSummary; priority?: boolean}
   const {t, lang}=useLanguage();
   const cat=categories.find(c=>c.id===s.category)!;
   const Icon=icons[cat.icon];
-  const isCurrent = s.status === 'ACTIVE';
+  const isCurrent = s.status === 'ACTIVE' && !s.isSample && s.editorial?.publicationStatus === 'REVIEWED';
   return <article className="scheme-card">
     <OfficialImage slug={s.slug} scheme={s} priority={priority}/>
     <div className="card-top">
@@ -310,7 +308,7 @@ export function Card({s, priority = false}:{s:SchemeSummary; priority?: boolean}
       {!isCurrent && <p className="source-review-note">{lang === 'en' ? 'Detailed benefits and documents are hidden until this information is reviewed again.' : 'लाभ और दस्तावेज़ों का विस्तृत विवरण दोबारा समीक्षा पूरी होने तक नहीं दिखाया जा रहा है।'}</p>}
     </div>
 
-    <div className="card-bottom"><Status s={s}/><Link prefetch={false} href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
+    <div className="card-bottom">{s.editorial?.publicationStatus !== 'REVIEWED' ? <span className="status">{lang === 'hi' ? 'सत्यापन आवश्यक' : 'Review needed'}</span> : <Status s={s}/>}<Link prefetch={false} href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
   </article>;
 }
 

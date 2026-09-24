@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {SITE_NAME_HI, SITE_URL} from './config';
+import {SITE_NAME_EN, SITE_URL} from './config';
 
 export const CONTACT_EMAIL = 'sarkariyojanasetu@gmail.com';
 export const INFORMATION_UPDATED = '2026-09-23';
@@ -7,7 +7,7 @@ export const informationPages = {
   about: {
     title: 'हमारे बारे में',
     description: 'सरकारी योजना के उद्देश्य, संपादकीय प्रक्रिया, आधिकारिक स्रोतों और जानकारी में सुधार की व्यवस्था के बारे में जानें।',
-    intro: 'सरकारी योजनाओं की जानकारी ऐसी भाषा में मिले जिसे पढ़कर आप अपना अगला कदम समझ सकें—इसी उद्देश्य से यह स्वतंत्र सूचना मंच बनाया गया है।',
+    intro: 'Sarkari Yojana (सरकारी योजना) एक स्वतंत्र नागरिक सूचना मंच है। हमारी वेबसाइट sarkariyojanasetu.com है; Sarkari Yojana Setu इसका वैकल्पिक नाम है। हम केंद्र और राज्य सरकार की योजनाओं को समझने में मदद करते हैं। अभी हमारी जानकारी केंद्र और मध्य प्रदेश की योजनाओं पर केंद्रित है।',
     sections: [
       {title:'हमारा काम', paragraphs:['हम मध्य प्रदेश और केंद्र सरकार की योजनाओं के बारे में सरल हिंदी में जानकारी व्यवस्थित करते हैं। किसान, विद्यार्थी, महिलाएँ, कामगार, वरिष्ठ नागरिक और परिवार अपनी जरूरत के अनुसार योजनाएँ खोज सकते हैं।', 'योजना के पेज पर लाभ, पात्रता, अपवाद, आवेदन की प्रक्रिया, दस्तावेज़ और सरकारी स्रोत साथ देने का उद्देश्य है कि जरूरी जानकारी अलग-अलग जगह ढूँढ़ने में कम समय लगे।']},
       {title:'वेबसाइट पर क्या कर सकते हैं', items:['विषय या राज्य के अनुसार योजनाएँ खोजें और संबंधित सरकारी पोर्टल तक पहुँचें।','कुछ सामान्य जानकारी देकर संभावित योजनाओं का मिलान देखें। यह विभागीय पात्रता प्रमाणपत्र नहीं है।','पसंद की योजनाएँ अपने ब्राउज़र में सहेजें और व्यक्तिगत रिमाइंडर बनाएँ। रिमाइंडर की तारीख आवेदन की सरकारी अंतिम तारीख नहीं है।','अधूरी, पुरानी या गलत जानकारी की रिपोर्ट योजना पेज से भेजें।']},
@@ -70,5 +70,5 @@ export const informationPages = {
 export type InformationPageKey = keyof typeof informationPages;
 export function informationMetadata(key: InformationPageKey): Metadata {
   const {title, description} = informationPages[key];
-  return {title,description,alternates:{canonical:`/${key}`},robots:{index:true,follow:true},openGraph:{title:`${title} | ${SITE_NAME_HI}`,description,url:`${SITE_URL}/${key}`,type:'website',locale:'hi_IN'}};
+  return {title,description,alternates:{canonical:`/${key}`},robots:{index:true,follow:true},openGraph:{title:`${title} | ${SITE_NAME_EN}`,description,url:`${SITE_URL}/${key}`,type:'website',locale:'hi_IN'}};
 }

@@ -2,13 +2,16 @@ import { summarizeScheme } from '@/lib/scheme-summary';
 import {notFound} from 'next/navigation';
 import {allSchemes} from '@/lib/server';
 import {Directory} from '@/components/directory';
-import { SITE_URL } from '@/lib/config';
+import { SchemeIndex } from '@/components/scheme-index';
+import { isIndexableScheme } from '@/lib/seo';
+import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/config';
 
 export const revalidate = 3600;
 
-export async function generateMetadata(){
+export async function generateMetadata({params}:{params:Promise<{id:string}>}){
+  if ((await params).id !== 'madhya-pradesh') return { title: 'Not Found' };
   const schemes=await allSchemes();
-  const indexable=schemes.some(s=>s.state==='madhya-pradesh'&&s.status==='ACTIVE'&&!s.isSample&&s.editorial?.publicationStatus==='REVIEWED');
+  const indexable=schemes.some(s=>s.state==='madhya-pradesh'&&isIndexableScheme(s));
   return {
   title:'मध्य प्रदेश की सरकारी योजनाएं',
   description:'मध्य प्रदेश सरकार की योजनाओं के लाभ, पात्रता, दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत देखें।',
@@ -19,7 +22,8 @@ export async function generateMetadata(){
     description:'मध्य प्रदेश सरकार की योजनाओं की सरल हिन्दी जानकारी।',
     url:'/state/madhya-pradesh',
     type:'website' as const,
-    locale:'hi_IN'
+    locale:'hi_IN',
+    images:[DEFAULT_OG_IMAGE]
   }
   };
 }
@@ -37,9 +41,11 @@ export default async function Page({params}:{params:Promise<{id:string}>}){
     ]
   };
 
+  const schemes = await allSchemes();
   return (
     <>
-      <Directory schemes={(await allSchemes()).map(summarizeScheme)} initialState={id}/>
+      <Directory schemes={schemes.map(summarizeScheme)} initialState={id}/>
+      <SchemeIndex schemes={schemes.filter(s => s.state === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>
     </>
   );

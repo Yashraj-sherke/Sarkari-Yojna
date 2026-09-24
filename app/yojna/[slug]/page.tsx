@@ -1,20 +1,18 @@
 import {notFound} from 'next/navigation';
-import {BackButton} from '@/components/back-button';
-import {OfficialImage} from '@/components/official-image';
-import Link from 'next/link';
 import {getScheme,db,allSchemes} from '@/lib/server';
-import {Status,SampleNotice,Card} from '@/components/site';
+import { categories } from '@/lib/domain';
+import { isIndexableScheme, contentDate } from '@/lib/seo';
 
 import {YojnaDetailClient} from '@/components/yojna-detail-client';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
-import {DEFAULT_OG_IMAGE, SITE_URL} from '@/lib/config';
+import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL} from '@/lib/config';
 export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s) return {title:'योजना नहीं मिली',robots:{index:false,follow:false}};
-  const isPublic=!!s&&!s.isSample&&s.status==='ACTIVE'&&s.editorial?.publicationStatus==='REVIEWED';
+  if(!s) return { title: 'Not Found' };
+  const isPublic=isIndexableScheme(s);
   const title=`${s.title} — लाभ, पात्रता और आवेदन प्रक्रिया`;
   const descriptionText=`${s.benefit} पात्रता, आवश्यक दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत देखें।`;
   const desc=descriptionText.length>160?`${descriptionText.slice(0,157).trimEnd()}…`:descriptionText;
@@ -42,38 +40,32 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const faqs=getSchemeFaqs(s);
 
   // Build rich structured data
-  const isActive=s.status==='ACTIVE'&&!s.isSample&&s.sourceUrl&&s.editorial?.publicationStatus==='REVIEWED';
+  const isActive=isIndexableScheme(s);
   const schemesList = await allSchemes();
   const relatedSchemes = schemesList.filter(x =>
     x.category === s.category &&
     x.slug !== s.slug &&
-    x.status === 'ACTIVE' &&
-    !x.isSample &&
-    x.editorial?.publicationStatus === 'REVIEWED'
+    isIndexableScheme(x)
   ).slice(0, 3);
 
-  // GovernmentService schema
-  const govServiceSchema=isActive?{
+  const articleSchema=isActive?{
     '@context':'https://schema.org',
-    '@type':'GovernmentService',
-    name:s.title,
-    alternateName:s.english,
+    '@type':'Article',
+    headline:s.title,
     description:s.summary,
-    serviceUrl:s.applicationUrl||s.sourceUrl,
-    provider:{'@type':'GovernmentOrganization',name:s.department},
-    areaServed:s.state==='madhya-pradesh'?'Madhya Pradesh, India':'India',
-    audience:{'@type':'Audience',audienceType:s.rules.map(r=>r.label).join(', ')||'सभी पात्र नागरिक'},
+    inLanguage:'hi-IN',
+    mainEntityOfPage:`${SITE_URL}/yojna/${s.slug}`,
+    dateModified:contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
+    publisher:{'@type':'Organization','@id':`${SITE_URL}/#organization`,name:SITE_NAME_EN,url:SITE_URL},
+    citation:s.references?.map(ref=>ref.url),
   }:null;
-
-  // BreadcrumbList schema
-  const breadcrumbItems=s.state==='madhya-pradesh' ? [
-    {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
-    {'@type':'ListItem',position:2,name:'मध्य प्रदेश की योजनाएं',item:`${SITE_URL}/state/madhya-pradesh`},
-    {'@type':'ListItem',position:3,name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
-  ] : [
-    {'@type':'ListItem',position:1,name:'होम',item:`${SITE_URL}/`},
-    {'@type':'ListItem',position:2,name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
-  ];
+  const category = categories.find(c=>c.id===s.category);
+  const breadcrumbItems=[
+    {name:'होम',item:`${SITE_URL}/`},
+    ...(s.state==='madhya-pradesh' ? [{name:'मध्य प्रदेश की योजनाएं',item:`${SITE_URL}/state/madhya-pradesh`}] : []),
+    ...(category ? [{name:category.name,item:`${SITE_URL}/category/${category.id}`}] : []),
+    {name:s.title,item:`${SITE_URL}/yojna/${s.slug}`},
+  ].map((item,i)=>({'@type':'ListItem',position:i+1,...item}));
   const breadcrumbSchema={
     '@context':'https://schema.org',
     '@type':'BreadcrumbList',
@@ -93,6 +85,6 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
     {/* Structured data for Google rich results */}
     {breadcrumbSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>}
-    {govServiceSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(govServiceSchema).replace(/</g,'\\u003c')}}/>}
+    {articleSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema).replace(/</g,'\\u003c')}}/>}
   </main>;
 }
