@@ -52,11 +52,11 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
           <p>{t.heroDesc.split('\n').map((line, i) => <span key={i}>{line}{i === 0 && <br />}</span>)}</p>
           {isHomePage && <>
             <p>{lang === 'hi' ? 'Sarkari Yojana (सरकारी योजना), sarkariyojanasetu.com पर एक स्वतंत्र नागरिक सूचना मंच है। इसे Sarkari Yojana Setu नाम से भी पहचान सकते हैं। यह सरकारी वेबसाइट नहीं है। अभी केंद्र और मध्य प्रदेश की योजनाओं पर जानकारी उपलब्ध है।' : 'Sarkari Yojana, also known as Sarkari Yojana Setu, is an independent citizen-information platform at sarkariyojanasetu.com. It currently covers Central and Madhya Pradesh schemes and is not a government website.'}</p>
-            <nav aria-label="योजनाएं खोजने के तरीके" style={{display:'flex',flexWrap:'wrap',gap:'12px 24px',marginBottom:16}}>
-              <a href="#scheme-search" className="inline-link">योजना खोजें</a>
-              <Link href="/mere-liye" className="inline-link">मेरे लिए योजनाएं</Link>
-              <Link href="/state/madhya-pradesh" className="inline-link">मध्य प्रदेश की योजनाएं</Link>
-              <a href="#scheme-categories" className="inline-link">श्रेणी के अनुसार खोजें</a>
+            <nav aria-label="योजनाएं खोजने के तरीके" style={{display:'flex',flexWrap:'wrap',gap:'10px',marginBottom:16,marginTop:12}}>
+              <a href="#scheme-search" className="btn secondary" style={{padding:'6px 14px', fontSize:'0.85rem'}}>योजना खोजें</a>
+              <Link href="/mere-liye" className="btn secondary" style={{padding:'6px 14px', fontSize:'0.85rem'}}>मेरे लिए योजनाएं</Link>
+              <Link href="/state/madhya-pradesh" className="btn secondary" style={{padding:'6px 14px', fontSize:'0.85rem'}}>मध्य प्रदेश की योजनाएं</Link>
+              <a href="#scheme-categories" className="btn secondary" style={{padding:'6px 14px', fontSize:'0.85rem'}}>श्रेणी के अनुसार खोजें</a>
             </nav>
           </>}
           <form className="search-box" onSubmit={e => { e.preventDefault(); setQuery(q); if (q && isHomePage && state === 'central') { setState('all'); } track('search_performed'); }}>
