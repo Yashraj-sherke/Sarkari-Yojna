@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export async function generateMetadata({params}:{params:Promise<{id:string}>}){
   const {id}=await params;
   const category=categories.find(c=>c.id===id);
-  if(!category) return { title: 'Not Found' };
+  if(!category) notFound();
   const schemes=await allSchemes();
   const indexable=schemes.some(s=>s.category===id&&isIndexableScheme(s));
   const title=`${category.name} की सरकारी योजनाएं`;

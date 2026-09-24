@@ -9,7 +9,7 @@ import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/config';
 export const revalidate = 3600;
 
 export async function generateMetadata({params}:{params:Promise<{id:string}>}){
-  if ((await params).id !== 'madhya-pradesh') return { title: 'Not Found' };
+  if ((await params).id !== 'madhya-pradesh') notFound();
   const schemes=await allSchemes();
   const indexable=schemes.some(s=>s.state==='madhya-pradesh'&&isIndexableScheme(s));
   return {

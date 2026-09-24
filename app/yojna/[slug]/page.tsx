@@ -11,7 +11,7 @@ export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s) return { title: 'Not Found' };
+  if(!s) notFound();
   const isPublic=isIndexableScheme(s);
   const title=`${s.title} — लाभ, पात्रता और आवेदन प्रक्रिया`;
   const descriptionText=`${s.benefit} पात्रता, आवश्यक दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत देखें।`;
