@@ -20,12 +20,11 @@ export const metadata: Metadata = {
   verification: process.env.GOOGLE_SITE_VERIFICATION ? {google: process.env.GOOGLE_SITE_VERIFICATION} : undefined,
   icons: {
     icon: [
-      { url: "/favicon.png?v=6", sizes: "64x64", type: "image/png" },
-      { url: "/favicon-32x32.png?v=6", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.svg?v=6", type: "image/svg+xml" },
+      { url: "/favicon.png", sizes: "64x64", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=6",
-    apple: "/apple-touch-icon.png?v=6",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -38,7 +37,7 @@ export default function RootLayout({
     <html lang="hi">
       <body className="antialiased">
         <LanguageProvider>
-          <Header/>{children}<Footer/>
+          <Header/>{children}<div data-nosnippet=""><Footer/></div>
           <Toaster position="bottom-right"/>
           <Offline/>
         </LanguageProvider>

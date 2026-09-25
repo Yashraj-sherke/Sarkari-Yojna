@@ -69,6 +69,8 @@ export function YojnaDetailClient({
 
       <div className="yojna-header">
         <h1 lang={pageLang} className="yojna-title" style={{fontSize:'2.2rem', color:'#111', fontWeight:'700'}}>{pageLang === 'en' ? s.english : s.title}</h1>
+        {pageLang === 'hi' && s.english && <p lang="en" className="english">{s.english}</p>}
+        {isReviewed && <p className="scheme-lead">{pageLang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>}
         
         <div className="yojna-tags-row" style={{marginTop:'15px', marginBottom:'15px'}}>
           {s.lastUpdated && <span className="yojna-tag-pill-outline" style={{borderColor: '#ecc94b', color: '#b7791f'}}>{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN')}</span>}
@@ -286,7 +288,7 @@ export function YojnaDetailClient({
             </div>
           </section>
 
-          <WhatsAppShareBanner title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/>
+          <div data-nosnippet=""><WhatsAppShareBanner title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/></div>
 
           {/* 8. स्रोत और संदर्भ */}
           <section className="flat-section" id="sandarbh">

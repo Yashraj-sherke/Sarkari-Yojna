@@ -3,6 +3,7 @@ import { allSchemes } from '@/lib/server';
 import { Directory } from '@/components/directory';
 import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_ALTERNATE_NAMES, SITE_URL } from '@/lib/config';
 import { SchemeIndex } from '@/components/scheme-index';
+import { isIndexableScheme } from '@/lib/seo';
 
 const title = 'Sarkari Yojana — सरकारी योजनाओं के लाभ, पात्रता और आवेदन';
 const description = 'Sarkari Yojana पर केंद्र और मध्य प्रदेश की योजनाएं खोजें। लाभ, पात्रता, दस्तावेज़ और आवेदन प्रक्रिया सरल हिन्दी में समझें और आधिकारिक स्रोत देखें। स्वतंत्र सूचना मंच।';
@@ -17,6 +18,7 @@ export const revalidate = 3600;
 
 export default async function Home() {
   const schemes = await allSchemes();
+  const reviewedSchemes = schemes.filter(isIndexableScheme);
   const websiteSchema={
     '@context':'https://schema.org',
     '@type':'WebSite',
@@ -36,7 +38,27 @@ export default async function Home() {
     name:SITE_NAME_EN,
     alternateName:SITE_ALTERNATE_NAMES,
     url:`${SITE_URL}/`,
-    logo:`${SITE_URL}/favicon.png?v=6`
+    logo:`${SITE_URL}/icon-192.png`
+  };
+
+  const collectionSchema={
+    '@context':'https://schema.org',
+    '@type':'CollectionPage',
+    '@id':`${SITE_URL}/#schemes`,
+    name:title,
+    description,
+    inLanguage:'hi-IN',
+    isPartOf:{'@id':`${SITE_URL}/#website`},
+    mainEntity:{
+      '@type':'ItemList',
+      numberOfItems:reviewedSchemes.length,
+      itemListElement:reviewedSchemes.map((scheme,index)=>({
+        '@type':'ListItem',
+        position:index+1,
+        name:scheme.title,
+        url:`${SITE_URL}/yojna/${scheme.slug}`,
+      })),
+    },
   };
 
   return (
@@ -45,6 +67,7 @@ export default async function Home() {
       <SchemeIndex schemes={schemes} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationSchema).replace(/</g,'\\u003c')}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(collectionSchema).replace(/</g,'\\u003c')}}/>
     </>
   );
 }

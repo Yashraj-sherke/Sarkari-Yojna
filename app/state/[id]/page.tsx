@@ -42,11 +42,25 @@ export default async function Page({params}:{params:Promise<{id:string}>}){
   };
 
   const schemes = await allSchemes();
+  const reviewedSchemes=schemes.filter(s=>s.state===id&&isIndexableScheme(s));
+  const collectionSchema={
+    '@context':'https://schema.org',
+    '@type':'CollectionPage',
+    '@id':`${SITE_URL}/state/madhya-pradesh#collection`,
+    name:'मध्य प्रदेश की सरकारी योजनाएं',
+    inLanguage:'hi-IN',
+    mainEntity:{
+      '@type':'ItemList',
+      numberOfItems:reviewedSchemes.length,
+      itemListElement:reviewedSchemes.map((scheme,index)=>({'@type':'ListItem',position:index+1,name:scheme.title,url:`${SITE_URL}/yojna/${scheme.slug}`})),
+    },
+  };
   return (
     <>
       <Directory schemes={schemes.map(summarizeScheme)} initialState={id}/>
       <SchemeIndex schemes={schemes.filter(s => s.state === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(collectionSchema).replace(/</g,'\\u003c')}}/>
     </>
   );
 }

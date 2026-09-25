@@ -79,7 +79,7 @@ export function Footer(){
                 className="portal-map-logo"
                 width={200}
                 height={100}
-                priority={true}
+                loading="lazy"
                 style={{ objectFit: 'contain', width: '100%', maxWidth: '220px', height: 'auto', marginBottom: '-55px' }}
               />
               <div className="portal-brand-text" style={{ marginTop: '0px', textAlign: 'center', maxWidth: '260px' }}>
@@ -97,6 +97,7 @@ export function Footer(){
               <span className="title-bar" />
             </h3>
             <ul className="portal-link-list">
+              <li><Link href="/yojna"><BookOpen size={15} className="link-icon" /><span>सत्यापित योजनाओं की सूची</span></Link></li>
               <li>
                 <Link href="/">
                   <Search size={15} className="link-icon" />
