@@ -457,6 +457,120 @@ export const officialContent: Record<string, Partial<Scheme>> = {
       { question: 'AAY और PHH राशन कार्ड में क्या अंतर है?', answer: 'AAY कार्ड सबसे गरीब परिवारों के लिए है, जिसमें परिवार के आकार के बावजूद 35 किलो राशन मिलता है। PHH में राशन की मात्रा सदस्यों की संख्या (5 किलो प्रति सदस्य) पर निर्भर करती है।' }
     ]
   },
+  'ladli-behna-awas-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री लाड़ली बहना आवास योजना',
+    english: 'Mukhyamantri Ladli Behna Awas Yojana',
+    summary: 'मध्य प्रदेश में वे बहनें जिनके पास पक्का घर नहीं है और जिन्हें PM आवास योजना का लाभ नहीं मिला, उन्हें पक्का घर बनाने के लिए आर्थिक सहायता।',
+    benefit: 'पक्का घर बनाने के लिए ₹1.20 लाख से ₹1.30 लाख तक की वित्तीय सहायता (किस्तों में)',
+    department: 'पंचायत एवं ग्रामीण विकास विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://cmladlibahna.mp.gov.in/',
+    applicationUrl: 'https://cmladlibahna.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'बैंक खाता (आधार लिंक और DBT सक्रिय)',
+      'मनरेगा जॉब कार्ड (यदि हो)',
+      'लाड़ली बहना योजना का पंजीकरण क्रमांक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Bank Account (Aadhaar linked and DBT active)',
+      'MGNREGA Job Card (if available)',
+      'Ladli Behna Yojana Registration Number'
+    ],
+    steps: [
+      'ग्राम पंचायत से आवेदन पत्र (फॉर्म) प्राप्त करें।',
+      'फॉर्म भरकर आवश्यक दस्तावेज़ों के साथ पंचायत सचिव या रोजगार सहायक को जमा करें।',
+      'पावती (Acknowledgement) लेना न भूलें।',
+      'आवेदन का सत्यापन जनपद पंचायत स्तर पर होगा।'
+    ],
+    stepsEn: [
+      'Get the application form from Gram Panchayat.',
+      'Fill it and submit to Panchayat Secretary with required documents.',
+      'Take the acknowledgement receipt.',
+      'Verification will be done at the Janpad Panchayat level.'
+    ],
+    rules: [{ field: 'gender', op: 'eq', value: 'female', label: 'महिला आवेदक (लाड़ली बहना योजना में पंजीकृत)' }],
+    sourceNotes: 'आधिकारिक स्रोतों और मध्य प्रदेश सरकार की विज्ञप्तियों से सत्यापित। योजना का उद्देश्य उन महिलाओं को घर देना है जो प्रधानमंत्री आवास योजना (PMAY-G) या आवास प्लस से छूट गई थीं।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार द्वारा शुरू की गई "मुख्यमंत्री लाड़ली बहना आवास योजना" का मुख्य उद्देश्य उन गरीब महिलाओं को पक्का घर बनाने के लिए आर्थिक सहायता प्रदान करना है, जिनके पास खुद का पक्का मकान नहीं है और जो प्रधानमंत्री आवास योजना-ग्रामीण (PMAY-G) से वंचित रह गई थीं।',
+      'इस योजना के तहत घर बनाने के लिए पूरी सहायता सीधे महिला के आधार-लिंक बैंक खाते में भेजी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'The "Mukhyamantri Ladli Behna Awas Yojana" launched by the Madhya Pradesh Government aims to provide financial assistance to poor women to build a concrete house, who do not own one and were left out of the Pradhan Mantri Awas Yojana-Gramin (PMAY-G).',
+      'Under this scheme, the complete assistance for building a house is sent directly to the woman\'s Aadhaar-linked bank account.'
+    ],
+    benefitsList: [
+      {
+        heading: 'वित्तीय सहायता (किस्तों में)', points: [
+          'योजना के तहत मैदानी क्षेत्रों में ₹1,20,000 और पहाड़ी/दुर्गम क्षेत्रों में ₹1,30,000 दिए जाएंगे।',
+          'यह राशि घर के निर्माण की प्रगति (नींव, दीवार, छत) के अनुसार अलग-अलग किस्तों में बैंक खाते (DBT) में भेजी जाएगी।',
+          'इसके साथ मनरेगा के तहत मजदूरी का लाभ भी जोड़ा जा सकता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Financial Assistance (in Installments)', points: [
+          'Under the scheme, ₹1,20,000 in plain areas and ₹1,30,000 in hilly/difficult areas will be provided.',
+          'This amount will be sent to the bank account (DBT) in various installments according to the progress of the house construction (foundation, wall, roof).',
+          'Wages under MGNREGA can also be added with this.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'वे परिवार जो प्रधानमंत्री आवास योजना (PMAY-G) या आवास प्लस ऐप के डेटा में शामिल होने से छूट गए थे।',
+      'आवेदक महिला के परिवार के पास कोई पक्का मकान नहीं होना चाहिए (वह कच्चे घर, या अधिकतम 2 कमरों वाले कच्चे घर में रहती हो)।',
+      'परिवार की मासिक आय ₹12,000 से कम होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Families that were left out of the Pradhan Mantri Awas Yojana (PMAY-G) or Awas Plus App data.',
+      'The applicant woman\'s family must not own a concrete house (living in a kutcha house or a kutcha house with a maximum of 2 rooms).',
+      'The monthly income of the family should be less than ₹12,000.'
+    ],
+    exclusions: [
+      'जिस परिवार का कोई सदस्य आयकरदाता हो।',
+      'जिस परिवार का कोई सदस्य सरकारी सेवा में हो।',
+      'जिनके पास चार पहिया वाहन (मोटरयुक्त) या 2.5 एकड़ से अधिक सिंचित कृषि भूमि हो।'
+    ],
+    exclusionsEn: [
+      'Any family member is an income taxpayer.',
+      'Any family member is in government service.',
+      'Those possessing a four-wheeler (motorized) or more than 2.5 acres of irrigated agricultural land.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ग्राम पंचायत स्तर पर)', steps: [
+          'योजना के लिए आवेदन सीधे ग्राम पंचायत स्तर पर लिए जाते हैं।',
+          'पंचायत सचिव / ग्राम रोजगार सहायक से आवेदन फॉर्म लें।',
+          'फॉर्म में सभी जानकारी (समग्र आईडी, आधार, बैंक डिटेल) भरें।',
+          'ग्राम पंचायत में फॉर्म जमा करने के बाद, जनपद पंचायत स्तर पर आवेदनों का पोर्टल पर रजिस्ट्रेशन (MIS) किया जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (at Gram Panchayat level)', steps: [
+          'Applications for the scheme are taken directly at the Gram Panchayat level.',
+          'Take the application form from the Panchayat Secretary / Gram Rojgar Sahayak.',
+          'Fill all the details (Samagra ID, Aadhaar, Bank Details) in the form.',
+          'After submitting the form in the Gram Panchayat, the applications are registered (MIS) on the portal at the Janpad Panchayat level.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे लाड़ली बहना योजना का पैसा मिलना जरूरी है?', answer: 'हाँ, यह योजना विशेष रूप से उन महिलाओं के लिए लाई गई थी जो पहले से मुख्यमंत्री लाड़ली बहना योजना का लाभ ले रही हैं।' },
+      { question: 'पैसे एक साथ मिलेंगे या किस्तों में?', answer: 'पैसे आपके मकान बनने के स्तर के अनुसार 3-4 किस्तों में आपके खाते में सीधे भेजे जाएंगे।' },
+      { question: 'क्या शहर की महिलाएं भी आवेदन कर सकती हैं?', answer: 'यह योजना मुख्य रूप से ग्रामीण क्षेत्रों के लिए है जहाँ लोगों को PMAY-G का लाभ नहीं मिल पाया था।' }
+    ],
+    faqsEn: [
+      { question: 'Is it necessary for me to get the Ladli Behna Yojana money?', answer: 'Yes, this scheme was brought specifically for those women who are already availing the benefits of the Mukhyamantri Ladli Behna Yojana.' },
+      { question: 'Will I get the money all at once or in installments?', answer: 'The money will be sent directly to your account in 3-4 installments according to the level of construction of your house.' },
+      { question: 'Can city women also apply?', answer: 'This scheme is mainly for rural areas where people could not get the benefit of PMAY-G.' }
+    ]
+  },
   'mp-scholarship': {
     isSample: false, sourceUrl: 'https://datia.nic.in/en/service/scholarship-portal/',
     summary: 'मध्य प्रदेश छात्रवृत्ति पोर्टल का आधिकारिक जिला-प्रशासन संदर्भ। राशि, श्रेणी और आवेदन की तारीखें संबंधित छात्रवृत्ति के अनुसार अलग हैं।',
