@@ -2782,7 +2782,7 @@ export const mpSchemes: Scheme[] = [
       }
     ],
     "sourceUrl": "https://cmladlibahna.mp.gov.in/",
-    "applicationUrl": "https://food.mp.gov.in/",
+    "applicationUrl": "https://epos.mp.gov.in/",
     "sourceNotes": "खाद्य विभाग एवं WCD MP द्वारा ₹450 में गैस प्रदाय योजना।",
     "status": "ACTIVE",
     "priority": true,
@@ -2923,8 +2923,8 @@ export const mpSchemes: Scheme[] = [
         "label": "89 जनजातीय विकासखंडों के ग्रामीण परिवार"
       }
     ],
-    "sourceUrl": "https://food.mp.gov.in/",
-    "applicationUrl": "https://food.mp.gov.in/",
+    "sourceUrl": "https://epos.mp.gov.in/",
+    "applicationUrl": "https://epos.mp.gov.in/",
     "sourceNotes": "खाद्य एवं नागरिक आपूर्ति विभाग MP द्वारा संचालित डोरस्टेप डिलीवरी।",
     "status": "ACTIVE",
     "priority": false,
@@ -2966,7 +2966,7 @@ export const mpSchemes: Scheme[] = [
         "label": "अधिकतम 45 वर्ष"
       }
     ],
-    "sourceUrl": "https://food.mp.gov.in/",
+    "sourceUrl": "https://epos.mp.gov.in/",
     "applicationUrl": "https://samast.mponline.gov.in/",
     "sourceNotes": "खाद्य विभाग MP द्वारा युवाओं के लिए आजीविका मॉडल।",
     "status": "ACTIVE",

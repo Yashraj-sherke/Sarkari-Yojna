@@ -45,7 +45,7 @@ export function YojnaDetailClient({
     : s.faqs?.length
       ? s.faqs.map((faq) => ({q: faq.question, a: faq.answer}))
       : faqs;
-  const officialApplicationUrl = isReviewed ? (s.applicationUrl || processInfo.formUrl) : null;
+  const officialApplicationUrl = s.applicationUrl || s.sourceUrl || processInfo.formUrl || null;
   const applicationIsPdf = officialApplicationUrl?.toLowerCase().endsWith('.pdf');
   const hasDocuments = hasDatedSources && displayDocuments.length > 0;
   const hasProcess = Boolean(

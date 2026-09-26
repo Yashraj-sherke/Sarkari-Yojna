@@ -995,6 +995,15 @@ h3 {
   background: #48916b
 }
 
+.status.closed {
+  color: #c93b3b;
+}
+
+.status.closed>span {
+  background: #d84545;
+}
+
+
 .guide-banner {
   display: flex;
   align-items: center;

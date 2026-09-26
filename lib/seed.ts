@@ -38,7 +38,7 @@ for (const s of baseSeeds) {
 }
 for (const s of mpSchemes) {
   if (!seedMap.has(s.slug)) {
-    seedMap.set(s.slug, s);
+    seedMap.set(s.slug, officialContent[s.slug] ? { ...s, ...officialContent[s.slug] } : s);
   }
 }
 

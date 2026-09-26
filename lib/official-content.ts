@@ -1858,5 +1858,14184 @@ export const officialContent: Record<string, Partial<Scheme>> = {
       { question: 'मुझे अनुशंसा पत्र (Letter of Recommendation - LoR) कैसे मिल सकता है?', answer: 'आप पीएम स्वनिधि पोर्टल के माध्यम से ऑनलाइन LoR के लिए अनुरोध कर सकते हैं, जिसे आपके शहरी स्थानीय निकाय (ULB) द्वारा स्वीकृत किया जाएगा।' },
       { question: 'क्या 7% ब्याज सब्सिडी सीधे खाते में आती है?', answer: 'हाँ, समय पर ईएमआई (EMI) चुकाने पर 7% की ब्याज सब्सिडी तिमाही आधार पर सीधे आपके बैंक खाते में ट्रांसफर की जाती है।' }
     ]
+  },
+  'surajdhara-yojana': {
+    ...reviewed,
+    title: 'सूरजधारा योजना',
+    english: 'Surajdhara Yojana SC/ST Seed Subsidy',
+    summary: 'मध्य प्रदेश के अनुसूचित जाति (SC) और अनुसूचित जनजाति (ST) के लघु व सीमांत किसानों को उन्नत बीज के लिए 75% सब्सिडी।',
+    benefit: 'दलहन व तिलहन के प्रमाणित बीज (High-Yielding Varieties) पर 75% तक अनुदान',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'जाति प्रमाण पत्र (SC/ST)',
+      'भू-स्वामित्व प्रमाण (खसरा/खतौनी)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Caste Certificate (SC/ST)',
+      'Land Ownership Proof (Khasra/Khatauni)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'ग्राम के कृषि विस्तार अधिकारी (RAEO) या विकासखंड कृषि कार्यालय से संपर्क करें।',
+      'निर्धारित प्रपत्र में अपने दस्तावेज़ों के साथ आवेदन प्रस्तुत करें।',
+      'सत्यापन के बाद आपको 75% अनुदान पर उन्नत बीज प्राप्त होंगे।'
+    ],
+    stepsEn: [
+      'Contact the village Rural Agriculture Extension Officer (RAEO) or block agriculture office.',
+      'Submit the application in the prescribed format along with your documents.',
+      'After verification, you will receive advanced seeds at 75% subsidy.'
+    ],
+    rules: [{ field: 'occupation', op: 'eq', value: 'farmer', label: 'SC/ST वर्ग के लघु एवं सीमांत किसान' }],
+    sourceNotes: 'किसान कल्याण तथा कृषि विकास विभाग MP की गाइडलाइन से सत्यापित। केवल अनुसूचित जाति/जनजाति के लघु/सीमांत किसानों के लिए (अधिकतम 1 हेक्टेयर)।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार द्वारा संचालित "सूरजधारा योजना" का मुख्य उद्देश्य राज्य के अनुसूचित जाति (SC) और अनुसूचित जनजाति (ST) के छोटे किसानों की आर्थिक स्थिति सुधारना है।',
+      'इस योजना के तहत किसानों को पुरानी किस्म के बीजों की जगह नई और अधिक उपज देने वाली (High-Yielding Variety) दलहनी और तिलहनी फसलों के प्रमाणित बीज उपलब्ध कराए जाते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'The "Surajdhara Yojana" run by the Madhya Pradesh government aims to improve the economic condition of small farmers belonging to Scheduled Caste (SC) and Scheduled Tribe (ST) categories in the state.',
+      'Under this scheme, farmers are provided with certified seeds of new and High-Yielding Variety (HYV) pulses and oilseeds in place of old seed varieties.'
+    ],
+    benefitsList: [
+      {
+        heading: 'बीज अनुदान (Seed Subsidy)', points: [
+          'योजना के तहत पात्र किसानों को दलहन (जैसे चना, मूंग, उड़द) और तिलहन (जैसे सोयाबीन, सरसों) के प्रमाणित बीज दिए जाते हैं।',
+          'बीज की कीमत पर सरकार द्वारा 75% तक की भारी सब्सिडी (अनुदान) दी जाती है, जिससे किसानों पर आर्थिक बोझ कम होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Seed Subsidy', points: [
+          'Under the scheme, eligible farmers are given certified seeds of pulses (like gram, moong, urad) and oilseeds (like soybean, mustard).',
+          'The government provides a huge subsidy of up to 75% on the cost of the seeds, reducing the financial burden on farmers.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक किसान मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'किसान अनिवार्य रूप से अनुसूचित जाति (SC) या अनुसूचित जनजाति (ST) वर्ग का होना चाहिए।',
+      'यह योजना केवल "लघु एवं सीमांत किसानों" (जिनके पास अधिकतम 1 हेक्टेयर तक कृषि भूमि हो) के लिए है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant farmer must be a native of Madhya Pradesh.',
+      'The farmer must mandatorily belong to the Scheduled Caste (SC) or Scheduled Tribe (ST) category.',
+      'This scheme is only for "Small and Marginal Farmers" (who own up to 1 hectare of agricultural land).'
+    ],
+    exclusions: [
+      'सामान्य (General) और अन्य पिछड़ा वर्ग (OBC) के किसान इस योजना के पात्र नहीं हैं।',
+      'बड़े किसान जिनके पास 1 हेक्टेयर से अधिक भूमि है।'
+    ],
+    exclusionsEn: [
+      'Farmers belonging to General and Other Backward Classes (OBC) are not eligible.',
+      'Large farmers owning more than 1 hectare of land.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (कृषि विभाग)', steps: [
+          'अपने ग्राम के ग्रामीण कृषि विस्तार अधिकारी (RAEO) से मिलें।',
+          'योजना का आवेदन फॉर्म लें और उसमें अपना खसरा, समग्र आईडी और जाति की जानकारी भरें।',
+          'फॉर्म जमा करने के बाद विभाग द्वारा बीज वितरण शिविर या समिति के माध्यम से बीज दिए जाएंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Agriculture Dept.)', steps: [
+          'Meet the Rural Agriculture Extension Officer (RAEO) of your village.',
+          'Take the application form and fill in your land records, Samagra ID, and caste details.',
+          'After submitting the form, seeds will be distributed through department camps or societies.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं गेहूँ के बीज के लिए आवेदन कर सकता हूँ?', answer: 'सूरजधारा योजना मुख्य रूप से दलहनी (दालें) और तिलहनी (तेल वाले बीज) फसलों के लिए है। अनाज (जैसे गेहूँ, धान) के लिए सरकार की "अन्नपूर्णा योजना" है।' },
+      { question: 'सब्सिडी कैसे मिलेगी?', answer: 'सब्सिडी सीधे नहीं मिलती, बल्कि आपको बीज खरीदते समय ही 75% कम कीमत (सब्सिडी काटकर) चुकानी होती है।' }
+    ],
+    faqsEn: [
+      { question: 'Can I apply for wheat seeds?', answer: 'Surajdhara Yojana is mainly for pulses and oilseed crops. For food grains (like wheat, paddy), the government has the "Annapurna Yojana".' },
+      { question: 'How will I get the subsidy?', answer: 'You do not get the subsidy directly in your account; instead, you pay 75% less (after deducting the subsidy) at the time of purchasing the seeds.' }
+    ]
+  },
+  'madhya-pradesh-ladli-laxmi-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री लाड़ली लक्ष्मी योजना',
+    english: 'Mukhyamantri Ladli Laxmi Yojana',
+    summary: 'मध्य प्रदेश में बालिकाओं के सुरक्षित भविष्य और शिक्षा के लिए जन्म से लेकर 21 वर्ष तक कुल ₹1.43 लाख की सहायता।',
+    benefit: 'कक्षा 6 से 12 तक छात्रवृत्ति और 21 वर्ष की आयु पर ₹1 लाख का भुगतान (कुल आश्वासन ₹1,43,000)',
+    department: 'महिला एवं बाल विकास विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://ladlilaxmi.mp.gov.in/',
+    applicationUrl: 'https://ladlilaxmi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (परिवार एवं बालिका)',
+      'बालिका का जन्म प्रमाण पत्र',
+      'माता-पिता का आधार कार्ड',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'माता-पिता का बालिका के साथ फोटो',
+      'परिवार नियोजन प्रमाण पत्र (यदि बालिका दूसरी संतान है)'
+    ],
+    documentsEn: [
+      'Samagra ID (Family and Child)',
+      'Birth Certificate of the girl child',
+      'Aadhaar Card of parents',
+      'Madhya Pradesh Domicile Certificate',
+      'Photo of parents with the girl child',
+      'Family Planning Certificate (if the girl is the second child)'
+    ],
+    steps: [
+      'बालिका के जन्म के 1 वर्ष के भीतर आवेदन करना आवश्यक है।',
+      'आंगनवाड़ी कार्यकर्ता के माध्यम से या सीधे ladlilaxmi.mp.gov.in पोर्टल पर ऑनलाइन फॉर्म भरें।',
+      'परियोजना अधिकारी (Project Officer) द्वारा दस्तावेज़ों के सत्यापन के बाद प्रमाण पत्र जारी किया जाएगा।'
+    ],
+    stepsEn: [
+      'Application must be made within 1 year of the girl child\'s birth.',
+      'Fill the online form through the Anganwadi worker or directly on ladlilaxmi.mp.gov.in.',
+      'A certificate will be issued after document verification by the Project Officer.'
+    ],
+    rules: [{ field: 'gender', op: 'eq', value: 'female', label: '1 जनवरी 2006 या उसके बाद जन्मी बालिकाएं' }],
+    sourceNotes: 'आधिकारिक पोर्टल (ladlilaxmi.mp.gov.in) से सत्यापित। 1 जनवरी 2006 के बाद जन्मी बालिकाओं के लिए। परिवार नियोजन की शर्त आवश्यक है।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार द्वारा बालिकाओं के प्रति समाज की नकारात्मक सोच को बदलने और उनके शैक्षणिक स्तर व स्वास्थ्य में सुधार के लिए "लाड़ली लक्ष्मी योजना" शुरू की गई थी।',
+      'यह योजना सुनिश्चित करती है कि गरीब परिवारों की बेटियों को उच्च शिक्षा प्राप्त करने में कोई आर्थिक परेशानी न हो और बाल विवाह जैसी प्रथाओं पर रोक लगे।'
+    ],
+    detailedDescriptionEn: [
+      'The "Ladli Laxmi Yojana" was launched by the Madhya Pradesh government to change the negative societal attitude towards girl children and improve their educational and health status.',
+      'This scheme ensures that daughters of poor families face no financial hurdles in getting higher education and helps curb practices like child marriage.'
+    ],
+    benefitsList: [
+      {
+        heading: 'वित्तीय सहायता और छात्रवृत्ति', points: [
+          'योजना में पंजीकरण होने पर सरकार द्वारा 5 वर्षों तक प्रतिवर्ष ₹6,000 (कुल ₹30,000) लाड़ली लक्ष्मी निधि में जमा किए जाते हैं।',
+          'कक्षा 6 में प्रवेश पर ₹2,000, कक्षा 9 में ₹4,000, तथा कक्षा 11 और 12 में ₹6,000 की छात्रवृत्ति दी जाती है।',
+          'बालिका के 21 वर्ष की आयु पूरी करने और कक्षा 12वीं की परीक्षा में शामिल होने पर ₹1,00,000 का अंतिम भुगतान किया जाता है (शर्त: 18 वर्ष से पहले विवाह न हुआ हो)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Financial Assistance and Scholarships', points: [
+          'Upon registration, the government deposits ₹6,000 annually for 5 years (total ₹30,000) into the Ladli Laxmi Fund.',
+          'Scholarships of ₹2,000 on entering Class 6, ₹4,000 in Class 9, and ₹6,000 each in Class 11 and 12 are provided.',
+          'A final payment of ₹1,00,000 is made when the girl reaches 21 years of age and has appeared for the Class 12 exam (Condition: Must not be married before 18 years of age).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'बालिका के माता-पिता मध्य प्रदेश के मूल निवासी होने चाहिए।',
+      'बालिका का जन्म 1 जनवरी 2006 या उसके बाद हुआ हो।',
+      'परिवार में अधिकतम दो बच्चे होने चाहिए और आवेदन से पहले माता-पिता ने परिवार नियोजन (Family Planning) अपना लिया हो।',
+      'बालिका का आंगनवाड़ी केंद्र में पंजीकरण होना अनिवार्य है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The parents of the girl child must be native residents of Madhya Pradesh.',
+      'The girl child must be born on or after January 1, 2006.',
+      'The family must have a maximum of two children and the parents must have adopted family planning before applying.',
+      'Registration of the girl child in an Anganwadi center is mandatory.'
+    ],
+    exclusions: [
+      'जिन माता-पिता के 2 से अधिक बच्चे हैं, वे इस योजना का लाभ नहीं ले सकते।',
+      'आयकरदाता (Income Tax Payers) परिवार इस योजना के लिए पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'Parents having more than 2 children cannot avail this scheme.',
+      'Income Tax Payer families are not eligible.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'लाड़ली लक्ष्मी योजना के आधिकारिक पोर्टल (ladlilaxmi.mp.gov.in) पर जाएं।',
+          'आवेदन फॉर्म पर क्लिक करके आवश्यक जानकारी (समग्र आईडी, आधार आदि) दर्ज करें।',
+          'दस्तावेज़ों की स्कैन कॉपी अपलोड करें और फॉर्म सबमिट करें। आप आंगनवाड़ी कार्यकर्ता की मदद से भी फॉर्म भरवा सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Visit the official Ladli Laxmi Yojana portal (ladlilaxmi.mp.gov.in).',
+          'Click on the application form and enter the required details (Samagra ID, Aadhaar, etc.).',
+          'Upload scanned copies of documents and submit the form. You can also take help from an Anganwadi worker.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या पहली बच्ची के जन्म पर भी परिवार नियोजन प्रमाण पत्र ज़रूरी है?', answer: 'नहीं, अगर यह आपकी पहली संतान है, तो परिवार नियोजन प्रमाण पत्र की ज़रूरत नहीं होती। लेकिन दूसरी संतान (बालिका) पर यह अनिवार्य है।' },
+      { question: 'अगर मैं आवेदन करने में लेट हो जाऊं तो क्या होगा?', answer: 'नियमों के अनुसार बालिका के जन्म के 1 वर्ष के भीतर आवेदन करना आवश्यक है। कुछ विशेष परिस्थितियों में जिले के कलेक्टर (Collector) इसमें 1 साल की और छूट दे सकते हैं।' },
+      { question: 'क्या 21 वर्ष की आयु पर पैसे सीधे बैंक खाते में आएंगे?', answer: 'हाँ, अंतिम 1 लाख रुपये सीधे उस बालिका के बैंक खाते में ट्रांसफर किए जाएंगे (बशर्ते उसने 12वीं की परीक्षा दी हो और 18 से पहले विवाह न किया हो)।' }
+    ],
+    faqsEn: [
+      { question: 'Is a family planning certificate required even for the first girl child?', answer: 'No, if this is your first child, a family planning certificate is not required. However, it is mandatory for the second child (if a girl).' },
+      { question: 'What if I am late in applying?', answer: 'As per rules, application must be made within 1 year of birth. In special cases, the District Collector can grant a relaxation of up to 1 more year.' },
+      { question: 'Will the money come directly to the bank account at age 21?', answer: 'Yes, the final ₹1 lakh will be transferred directly to the girl\'s bank account (provided she has appeared for the 12th exam and did not marry before 18).' }
+    ]
+  },
+  'mukhyamantri-arthik-kalyan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री आर्थिक कल्याण योजना',
+    english: 'Mukhyamantri Arthik Kalyan Yojana',
+    summary: 'मध्य प्रदेश के अनुसूचित जाति (SC) वर्ग के BPL परिवारों को स्वयं का छोटा व्यवसाय शुरू करने के लिए ऋण और 50% सब्सिडी।',
+    benefit: '₹50,000 तक ऋण एवं 50% (अधिकतम ₹15,000) मार्जिन मनी अनुदान',
+    department: 'सूक्ष्म, लघु एवं मध्यम उद्यम विभाग / अनुसूचित जाति कल्याण विभाग',
+    sourceUrl: 'https://msme.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'जाति प्रमाण पत्र (SC)',
+      'BPL राशन कार्ड / आय प्रमाण पत्र',
+      'व्यवसाय/उपकरण का कोटेशन (Quotation)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'MP Domicile Certificate',
+      'Caste Certificate (SC)',
+      'BPL Ration Card / Income Certificate',
+      'Business/Equipment Quotation',
+      'Bank Passbook'
+    ],
+    steps: [
+      'MP Online SAMAST पोर्टल (samast.mponline.gov.in) पर ऑनलाइन पंजीयन करें।',
+      'योजना का चयन कर आधार और समग्र e-KYC पूरा करें।',
+      'परियोजना का विवरण और दस्तावेज़ अपलोड कर आवेदन जिला उद्योग केंद्र को प्रेषित करें।',
+      'बैंक से स्वीकृति मिलने के बाद मार्जिन मनी (सब्सिडी) सहित ऋण प्राप्त करें।'
+    ],
+    stepsEn: [
+      'Register online on the MP Online SAMAST portal (samast.mponline.gov.in).',
+      'Select the scheme and complete Aadhaar and Samagra e-KYC.',
+      'Upload project details and documents and submit the application to the District Industries Center.',
+      'After bank approval, receive the loan along with the margin money (subsidy).'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'न्यूनतम 18 वर्ष आयु' },
+      { field: 'age', op: 'lte', value: 55, label: 'अधिकतम 55 वर्ष आयु' }
+    ],
+    sourceNotes: 'विभागीय पोर्टल (msme.mponline.gov.in) से सत्यापित। अनुसूचित जाति (SC) के BPL वर्ग के लिए लागू।',
+    detailedDescription: [
+      'मुख्यमंत्री आर्थिक कल्याण योजना मध्य प्रदेश सरकार द्वारा अनुसूचित जाति (SC) के अत्यंत गरीब और बीपीएल (BPL) परिवारों के लिए शुरू की गई है।',
+      'इस योजना का उद्देश्य गरीब व्यक्तियों को छोटे व्यवसाय, ठेला, गुमटी, दुकान या सेवा कार्य (जैसे सिलाई, मरम्मत) शुरू करने के लिए कम ब्याज पर ऋण और सरकारी सब्सिडी प्रदान करके उन्हें आर्थिक रूप से आत्मनिर्भर बनाना है।'
+    ],
+    detailedDescriptionEn: [
+      'Mukhyamantri Arthik Kalyan Yojana has been launched by the MP government for extremely poor and BPL families belonging to the Scheduled Caste (SC) category.',
+      'The objective is to make poor individuals financially self-reliant by providing low-interest loans and government subsidies to start small businesses, carts, kiosks, shops, or service-related work.'
+    ],
+    benefitsList: [
+      {
+        heading: 'वित्तीय सहायता और ऋण (Financial Assistance)', points: [
+          'योजना के तहत नया व्यवसाय शुरू करने या उपकरण खरीदने के लिए अधिकतम ₹50,000 तक का ऋण दिया जाता है।',
+          'परियोजना लागत (Project Cost) का 50% या अधिकतम ₹15,000 (जो भी कम हो) सरकार द्वारा मार्जिन मनी सहायता (सब्सिडी) के रूप में दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Financial Assistance and Loan', points: [
+          'A maximum loan of up to ₹50,000 is provided under the scheme to start a new business or purchase equipment.',
+          '50% of the project cost or a maximum of ₹15,000 (whichever is lower) is provided by the government as margin money assistance (subsidy).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक अनुसूचित जाति (SC) वर्ग से संबंधित होना चाहिए।',
+      'आवेदक बीपीएल (BPL - गरीबी रेखा से नीचे) श्रेणी में होना चाहिए।',
+      'आवेदक की आयु 18 से 55 वर्ष के बीच होनी चाहिए।',
+      'आवेदक किसी भी राष्ट्रीयकृत बैंक, वित्तीय संस्थान या सहकारी बैंक का डिफाल्टर (Defaulter) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native of Madhya Pradesh.',
+      'The applicant must belong to the Scheduled Caste (SC) category.',
+      'The applicant must be in the BPL (Below Poverty Line) category.',
+      'The age of the applicant must be between 18 and 55 years.',
+      'The applicant must not be a defaulter of any nationalized bank, financial institution, or cooperative bank.'
+    ],
+    exclusions: [
+      'जो व्यक्ति पहले से सरकार की किसी अन्य स्वरोज़गार या उद्यम योजना का लाभ ले रहे हैं, वे इस योजना के पात्र नहीं हैं।',
+      'इस योजना का लाभ जीवन में केवल एक बार लिया जा सकता है।'
+    ],
+    exclusionsEn: [
+      'Individuals who are already availing benefits from any other government self-employment or entrepreneurship scheme are not eligible.',
+      'The benefit of this scheme can be availed only once in a lifetime.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'MP Online के SAMAST पोर्टल (samast.mponline.gov.in) पर जाएं।',
+          'योजना का चयन करें और अपने मोबाइल नंबर व आधार से प्रोफाइल (Profile) बनाएं।',
+          'समग्र आईडी दर्ज करके अपना e-KYC पूरा करें।',
+          'फॉर्म में अपने व्यवसाय की जानकारी भरें, दस्तावेज़ (जैसे कोटेशन, BPL कार्ड) अपलोड करें और फॉर्म जमा करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Visit the SAMAST portal of MP Online (samast.mponline.gov.in).',
+          'Select the scheme and create a profile using your mobile number and Aadhaar.',
+          'Complete your e-KYC by entering your Samagra ID.',
+          'Fill in your business details, upload documents (like quotation, BPL card), and submit the form.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या सामान्य या ओबीसी वर्ग के लोग इसके लिए आवेदन कर सकते हैं?', answer: 'नहीं, यह विशेष योजना केवल मध्य प्रदेश के अनुसूचित जाति (SC) वर्ग के बीपीएल नागरिकों के लिए है।' },
+      { question: 'सब्सिडी (मार्जिन मनी) का लाभ कैसे मिलता है?', answer: 'जब बैंक आपका ₹50,000 तक का लोन पास कर देता है, तो उसमें से अधिकतम ₹15,000 सरकार द्वारा सीधे आपके लोन खाते में मार्जिन मनी के तौर पर जमा कर दिए जाते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can people from General or OBC categories apply?', answer: 'No, this specific scheme is only for BPL citizens belonging to the Scheduled Caste (SC) category of Madhya Pradesh.' },
+      { question: 'How is the subsidy (Margin Money) given?', answer: 'Once the bank approves your loan up to ₹50,000, a maximum of ₹15,000 is directly deposited into your loan account by the government as margin money.' }
+    ]
+  },
+  'mukhyamantri-kanya-vivah-yojana': {
+    ...reviewed,
+    title: 'मध्य प्रदेश मुख्यमंत्री कन्या विवाह योजना',
+    english: 'Mukhyamantri Kanya Vivah Yojana',
+    summary: 'गरीब और ज़रूरतमंद परिवारों की कन्याओं के सामूहिक विवाह के लिए ₹55,000 की कुल आर्थिक सहायता।',
+    benefit: '₹55,000 कुल सहायता (₹49,000 कन्या के खाते में + ₹6,000 आयोजन हेतु)',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'समग्र आईडी (वर और वधू दोनों की)',
+      'वर और वधू का आधार कार्ड',
+      'आयु प्रमाण पत्र (10वीं की मार्कशीट या जन्म प्रमाण पत्र)',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'आय प्रमाण पत्र या BPL कार्ड',
+      'वधू का अपना बैंक खाता (आधार से लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID (of both Bride and Groom)',
+      'Aadhaar Card of Bride and Groom',
+      'Age Proof (10th Marksheet or Birth Certificate)',
+      'MP Domicile Certificate',
+      'Income Certificate or BPL Card',
+      'Bride\'s own Bank Account (Aadhaar linked)'
+    ],
+    steps: [
+      'सामूहिक विवाह सम्मेलन की निर्धारित तिथि से कम से कम 15 दिन पहले आवेदन करना अनिवार्य है।',
+      'ग्रामीण क्षेत्र में ग्राम पंचायत या जनपद पंचायत और शहरी क्षेत्र में नगर निगम/परिषद में आवेदन जमा करें।',
+      'सरकार द्वारा आयोजित सामूहिक विवाह कार्यक्रम में शामिल होकर विवाह संपन्न कराएं।',
+      'सत्यापन के बाद सहायता राशि वधू के खाते में ट्रांसफर (DBT) की जाएगी।'
+    ],
+    stepsEn: [
+      'Application must be submitted at least 15 days before the scheduled date of the mass marriage.',
+      'Submit the application at Gram Panchayat/Janpad in rural areas and Municipal Corporation/Council in urban areas.',
+      'Participate in the government-organized mass marriage program to complete the marriage.',
+      'After verification, the assistance amount is transferred (DBT) to the bride\'s account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'कन्या विवाह सहायता' }
+    ],
+    sourceNotes: 'सामाजिक न्याय विभाग MP से सत्यापित। केवल सामूहिक विवाह सम्मेलनों में लागू। एकल विवाह पर यह लाभ नहीं मिलता।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार की "मुख्यमंत्री कन्या विवाह/निकाह योजना" का मुख्य उद्देश्य गरीब, निराश्रित, निर्धन परिवारों की बेटियों और विधवाओं/परित्यक्ताओं के विवाह के लिए आर्थिक सहायता प्रदान करना है।',
+      'इस योजना से उन परिवारों को बड़ी राहत मिलती है जो अपनी बेटियों की शादी का खर्च उठाने में असमर्थ होते हैं। इस योजना के तहत केवल सरकार द्वारा आयोजित "सामूहिक विवाह" (Mass Marriage) में शादी करने पर ही लाभ मिलता है।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of the "Mukhyamantri Kanya Vivah/Nikah Yojana" of the MP government is to provide financial assistance for the marriage of daughters, widows, and abandoned women from poor, destitute, and needy families.',
+      'This scheme brings great relief to families who are unable to bear the expenses of their daughters\' marriages. Benefits under this scheme are given ONLY if the marriage is performed in a government-organized "Mass Marriage" program.'
+    ],
+    benefitsList: [
+      {
+        heading: 'विवाह सहायता राशि (Marriage Assistance Amount)', points: [
+          'योजना के तहत प्रति जोड़े को कुल ₹55,000 की सहायता का प्रावधान है।',
+          'इसमें से ₹49,000 की राशि नवविवाहित कन्या (वधू) के बैंक खाते में सीधे (Direct Benefit Transfer - DBT) भेजी जाती है, ताकि वह अपने गृहस्थी का ज़रूरी सामान खरीद सके।',
+          'शेष ₹6,000 की राशि सामूहिक विवाह कार्यक्रम का आयोजन करने वाली संस्था (जैसे ग्राम पंचायत या नगर निकाय) को खर्च के लिए दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Marriage Assistance Amount', points: [
+          'A total assistance of ₹55,000 per couple is provided under the scheme.',
+          'Out of this, an amount of ₹49,000 is directly transferred (DBT) to the newlywed bride\'s bank account so she can purchase essential household items.',
+          'The remaining ₹6,000 is given to the organizing body (like Gram Panchayat or Municipal body) for the expenses of organizing the mass marriage event.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'कन्या के माता-पिता या अभिभावक मध्य प्रदेश के मूल निवासी होने चाहिए।',
+      'विवाह के समय वधू (कन्या) की आयु न्यूनतम 18 वर्ष और वर (लड़के) की आयु न्यूनतम 21 वर्ष पूरी होनी चाहिए।',
+      'आवेदक कन्या का समग्र पोर्टल (Samagra Portal) पर पंजीकृत होना अनिवार्य है।',
+      'कन्या का परिवार आर्थिक रूप से कमज़ोर होना चाहिए (जैसे गरीबी रेखा के नीचे - BPL)।',
+      'विधवा (Widow) या परित्यक्ता (Abandoned) महिलाएं भी इस योजना के तहत पुनर्विवाह के लिए पात्र हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'The parents or guardians of the bride must be native residents of Madhya Pradesh.',
+      'At the time of marriage, the bride must have completed 18 years of age and the groom must be at least 21 years old.',
+      'The applicant bride must be registered on the Samagra Portal.',
+      'The bride\'s family must be economically weak (e.g., Below Poverty Line - BPL).',
+      'Widows and abandoned women are also eligible for remarriage under this scheme.'
+    ],
+    exclusions: [
+      'यह सहायता राशि किसी भी स्थिति में एकल (Individual) रूप से किए गए विवाह पर नहीं दी जाती है; सामूहिक विवाह कार्यक्रम में हिस्सा लेना अनिवार्य है।',
+      'जिन कन्याओं का विवाह पहले ही हो चुका है, वे आवेदन नहीं कर सकतीं।'
+    ],
+    exclusionsEn: [
+      'This assistance is not given for marriages performed individually under any circumstances; participating in the mass marriage program is mandatory.',
+      'Girls who are already married cannot apply.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन / स्थानीय निकाय (Offline)', steps: [
+          'स्थानीय समाचार पत्रों या पंचायत के माध्यम से सामूहिक विवाह सम्मेलन की तारीखों की जानकारी लें।',
+          'निर्धारित तिथि से कम से कम 15 दिन पहले अपने स्थानीय कार्यालय (ग्रामीण क्षेत्र में ग्राम पंचायत/जनपद पंचायत और शहरी क्षेत्र में नगर निगम/पालिका) से फॉर्म प्राप्त करें।',
+          'फॉर्म के साथ वर-वधू की आयु प्रमाण, समग्र आईडी और बैंक खाते की जानकारी लगाकर जमा करें।',
+          'आयोजक समिति द्वारा दस्तावेज़ों के सत्यापन के बाद, आपको सम्मेलन में विवाह के लिए आमंत्रित किया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Local Body', steps: [
+          'Get information about the mass marriage dates through local newspapers or the Panchayat.',
+          'Obtain the form from your local office (Gram/Janpad Panchayat in rural areas, Municipal Corporation/Council in urban areas) at least 15 days before the scheduled date.',
+          'Submit the form along with the age proofs of the bride and groom, Samagra ID, and bank account details.',
+          'After document verification by the organizing committee, you will be invited for marriage in the mass event.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं अपने घर से शादी करके इस योजना के पैसे ले सकता हूँ?', answer: 'नहीं। योजना की शर्त है कि शादी सरकार द्वारा अधिकृत "सामूहिक विवाह सम्मेलन" में ही होनी चाहिए।' },
+      { question: 'पैसे कब और किसे मिलते हैं?', answer: 'विवाह संपन्न होने और सभी दस्तावेज़ों के सत्यापन के बाद ₹49,000 की राशि सीधे कन्या (वधू) के बैंक खाते में आती है।' },
+      { question: 'क्या दूसरा विवाह (पुनर्विवाह) करने वाली महिला भी पात्र है?', answer: 'हाँ, कानूनी रूप से तलाकशुदा (परित्यक्ता) या विधवा महिलाएं जो पुनर्विवाह कर रही हैं, वे भी इस सामूहिक विवाह योजना का लाभ उठा सकती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can I get the money by arranging the marriage at my home?', answer: 'No. A strict condition of the scheme is that the marriage must take place in a government-authorized "Mass Marriage Program" only.' },
+      { question: 'When and who gets the money?', answer: 'After the marriage is solemnized and documents are verified, the amount of ₹49,000 is directly deposited into the bride\'s bank account.' },
+      { question: 'Are women getting remarried eligible?', answer: 'Yes, legally divorced (abandoned) or widowed women who are remarrying are also eligible to avail the benefits of this mass marriage scheme.' }
+    ]
+  },
+  'mukhyamantri-teerth-darshan-yojana': {
+    ...reviewed,
+    title: 'मध्यप्रदेश मुख्यमंत्री तीर्थ दर्शन योजना',
+    english: 'Mukhyamantri Teerth Darshan Yojana',
+    summary: 'मध्य प्रदेश के 60 वर्ष से अधिक उम्र के वरिष्ठ नागरिकों (गैर-आयकरदाता) को देश के प्रमुख तीर्थ स्थानों की निःशुल्क यात्रा।',
+    benefit: 'विशेष ट्रेन/हवाई जहाज़ से निःशुल्क यात्रा, भोजन और आवास',
+    department: 'धार्मिक न्यास एवं धर्मस्व विभाग',
+    sourceUrl: 'https://tirthdarshan.mp.gov.in/',
+    applicationUrl: 'https://tirthdarshan.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'डॉक्टर द्वारा जारी स्वास्थ्य/फिटनेस प्रमाण पत्र',
+      'पासपोर्ट साइज 2 फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'MP Domicile Certificate',
+      'Health/Fitness Certificate by a Doctor',
+      '2 Passport Size Photos'
+    ],
+    steps: [
+      'तीर्थ दर्शन पोर्टल या अपनी तहसील/जनपद पंचायत से आवेदन पत्र प्राप्त करें।',
+      'यात्रा का स्थान चुनें और सरकारी/पंजीकृत डॉक्टर से स्वास्थ्य प्रमाण पत्र बनवाएं।',
+      'अपना भरा हुआ फॉर्म, दस्तावेज़ों के साथ स्थानीय निकाय कार्यालय (तहसील, नगर निगम) में जमा करें।',
+      'यात्रियों का चयन कलेक्टर की अध्यक्षता वाली समिति द्वारा किया जाता है। चुने जाने पर आपको यात्रा की जानकारी दी जाएगी।'
+    ],
+    stepsEn: [
+      'Get the application form from the Tirth Darshan portal or your Tehsil/Janpad Panchayat.',
+      'Select the pilgrimage destination and get a health certificate from a registered doctor.',
+      'Submit the filled form with documents to the local body office (Tehsil, Municipal Corporation).',
+      'Passengers are selected by a committee headed by the Collector. You will be informed about the journey upon selection.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 60, label: 'न्यूनतम 60 वर्ष आयु' }
+    ],
+    sourceNotes: 'धार्मिक न्यास विभाग MP से सत्यापित। केवल वरिष्ठ नागरिकों (गैर-आयकरदाता) के लिए लागू।',
+    detailedDescription: [
+      'मुख्यमंत्री तीर्थ दर्शन योजना मध्य प्रदेश सरकार की एक अनूठी पहल है, जिसके अंतर्गत राज्य के वरिष्ठ नागरिकों को उनके जीवनकाल में देश के चिन्हित तीर्थ स्थानों की निःशुल्क यात्रा कराई जाती है।',
+      'इस योजना के तहत यात्रा का पूरा खर्च (जैसे ट्रेन/विमान का टिकट, भोजन, नाश्ता, और ठहरने की व्यवस्था) राज्य सरकार (धार्मिक न्यास एवं धर्मस्व विभाग) और IRCTC द्वारा उठाया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'Mukhyamantri Teerth Darshan Yojana is a unique initiative of the MP Government under which senior citizens of the state are taken on a free pilgrimage to identified holy places in the country.',
+      'Under this scheme, the entire expense of the journey (like train/flight tickets, meals, snacks, and accommodation) is borne by the State Government (Religious Trusts and Endowments Department) and IRCTC.'
+    ],
+    benefitsList: [
+      {
+        heading: 'निःशुल्क यात्रा और सुविधाएं (Free Travel and Facilities)', points: [
+          'चुने गए तीर्थ स्थल तक जाने और वापस आने के लिए विशेष ट्रेन या हवाई यात्रा पूरी तरह निःशुल्क होती है।',
+          'यात्रा के दौरान सुबह की चाय, नाश्ता, दोपहर और रात का भोजन, और शुद्ध पीने का पानी मुफ़्त दिया जाता है।',
+          'तीर्थ स्थल पर ठहरने की व्यवस्था और बस से स्थानीय दर्शन भी निःशुल्क कराए जाते हैं।'
+        ]
+      },
+      {
+        heading: 'सहायक (Attendant) ले जाने की सुविधा', points: [
+          'यदि आवेदक की आयु 65 वर्ष से अधिक है, तो वे अपने साथ एक देखभाल करने वाले (सहायक) को ले जा सकते हैं।',
+          '60% से अधिक दिव्यांगता वाले नागरिक भी अपने साथ एक सहायक ले जा सकते हैं (उनकी उम्र कुछ भी हो)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Free Travel and Facilities', points: [
+          'Special train or air travel to and from the selected pilgrimage destination is completely free.',
+          'Morning tea, breakfast, lunch, dinner, and pure drinking water are provided free of cost during the journey.',
+          'Accommodation at the pilgrimage site and local sightseeing by bus are also arranged for free.'
+        ]
+      },
+      {
+        heading: 'Facility to take an Attendant', points: [
+          'If the applicant is above 65 years of age, they can take a caregiver (attendant) with them.',
+          'Citizens with more than 60% disability can also take an attendant with them (regardless of the attendant\'s age).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का स्थायी निवासी होना चाहिए।',
+      'आवेदक की आयु 60 वर्ष या उससे अधिक होनी चाहिए (महिलाओं के मामले में 2 वर्ष की छूट है, यानी वे 58 वर्ष में भी आवेदन कर सकती हैं)।',
+      'आवेदक आयकरदाता (Income Taxpayer) नहीं होना चाहिए।',
+      'आवेदक शारीरिक और मानसिक रूप से यात्रा करने के लिए फिट (स्वस्थ) होना चाहिए। टीबी, कुष्ठ रोग, या गंभीर हृदय रोग जैसी संक्रामक/गंभीर बीमारियों से पीड़ित नहीं होना चाहिए।',
+      'आवेदक ने पहले इस योजना के तहत उसी तीर्थ स्थल की यात्रा न की हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a permanent resident of Madhya Pradesh.',
+      'The applicant must be 60 years of age or above (there is a 2-year relaxation for women, meaning they can apply at 58).',
+      'The applicant must not be an income taxpayer.',
+      'The applicant must be physically and mentally fit to travel. Should not suffer from communicable/serious diseases like TB, leprosy, or severe heart disease.',
+      'The applicant should not have already traveled to the same pilgrimage site under this scheme.'
+    ],
+    exclusions: [
+      'आयकरदाता इस योजना का लाभ नहीं ले सकते।',
+      'गंभीर या संक्रामक बीमारी से ग्रसित व्यक्ति यात्रा के लिए पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'Income taxpayers cannot avail the benefits of this scheme.',
+      'Individuals suffering from serious or communicable diseases are not eligible for the journey.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Offline)', steps: [
+          'अपने नजदीकी तहसील, जनपद पंचायत या नगर निगम/नगर पालिका कार्यालय से तीर्थ दर्शन योजना का फॉर्म लें।',
+          'फॉर्म में अपनी जानकारी और चुनिंदा तीर्थ स्थल का नाम भरें। दो पासपोर्ट साइज़ फोटो लगाएं।',
+          'किसी भी सरकारी अस्पताल या पंजीकृत डॉक्टर से अपना मेडिकल फिटनेस सर्टिफिकेट (Medical Fitness Certificate) बनवाएं।',
+          'सभी कागजात (आधार, समग्र, निवास प्रमाण) लगाकर फॉर्म उसी कार्यालय में जमा करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline', steps: [
+          'Get the Teerth Darshan Yojana form from your nearest Tehsil, Janpad Panchayat, or Municipal Corporation/Council office.',
+          'Fill in your details and the name of the chosen pilgrimage site in the form. Attach two passport-size photos.',
+          'Get your Medical Fitness Certificate made by any government hospital or registered doctor.',
+          'Submit the form along with all documents (Aadhaar, Samagra, domicile proof) in the same office.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या पति-पत्नी दोनों एक साथ जा सकते हैं?', answer: 'हाँ, यदि पति या पत्नी में से किसी एक का भी चयन हो जाता है, तो उनका जीवनसाथी (Spouse) भी उनके साथ यात्रा कर सकता है (भले ही जीवनसाथी की उम्र 60 से कम हो)।' },
+      { question: 'यात्रा का चयन कैसे होता है?', answer: 'यदि उपलब्ध सीटों से अधिक आवेदन आते हैं, तो यात्रियों का चयन कलेक्टर कार्यालय में लॉटरी (Lottery) सिस्टम के माध्यम से किया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can husband and wife travel together?', answer: 'Yes, if either the husband or the wife is selected, their spouse can also travel with them (even if the spouse is below 60 years of age).' },
+      { question: 'How is the selection for the journey made?', answer: 'If applications exceed the available seats, the selection of passengers is done through a lottery system at the Collector\'s office.' }
+    ]
+  },
+  'mausam-aadharit-fasal-bima-yojana': {
+    ...reviewed,
+    title: 'मौसम आधारित फसल बीमा योजना (WBCIS)',
+    english: 'Weather Based Crop Insurance Scheme (WBCIS)',
+    summary: 'प्रतिकूल मौसम (सूखा, अधिक बारिश, पाला आदि) के कारण फसलों (विशेषकर बागवानी) को होने वाले नुकसान पर किसानों को बीमा क्षतिपूर्ति।',
+    benefit: 'फसल नुकसान पर बीमा क्लेम (प्रीमियम 1.5% से 5% तक किसान द्वारा देय)',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग / कृषि विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://pmfby.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा/खतौनी (B1) / भूमि स्वामित्व के दस्तावेज़',
+      'बुवाई का प्रमाण पत्र (पटवारी या ग्राम पंचायत से)',
+      'बैंक पासबुक (या KCC खाता विवरण)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra/Khatauni (B1) / Land Ownership Documents',
+      'Sowing Certificate (from Patwari or Gram Panchayat)',
+      'Bank Passbook (or KCC account details)'
+    ],
+    steps: [
+      'अधिसूचित फसलों (जैसे संतरा, टमाटर, प्याज) के लिए बैंक शाखा, CSC सेंटर, या PMFBY पोर्टल के ज़रिए आवेदन करें।',
+      'योजना के तहत निर्धारित कट-ऑफ डेट (Cut-off date) से पहले अपनी फसल का बीमा कराएं।',
+      'किसान को कुल प्रीमियम का केवल 1.5% से 5% ही देना होता है, बाकी सरकार देती है।',
+      'अगर मौसम केंद्र प्रतिकूल मौसम दर्ज करता है, तो बीमा क्लेम बिना अलग से आवेदन किए सीधे बैंक खाते में आ जाता है।'
+    ],
+    stepsEn: [
+      'Apply through a bank branch, CSC center, or the PMFBY portal for notified crops (like orange, tomato, onion).',
+      'Ensure your crop is insured before the prescribed cut-off date under the scheme.',
+      'The farmer has to pay only 1.5% to 5% of the total premium, the rest is paid by the government.',
+      'If the weather station records adverse weather, the insurance claim is directly deposited into the bank account without a separate application.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'अधिसूचित क्षेत्र में अधिसूचित फसल उगाने वाले किसान' }
+    ],
+    sourceNotes: 'राष्ट्रीय फसल बीमा पोर्टल (PMFBY) से सत्यापित। बागवानी और विशेष फसलों के लिए लागू (जिलेवार अधिसूचित)।',
+    detailedDescription: [
+      'पुनर्गठित मौसम आधारित फसल बीमा योजना (RWBCIS) का मुख्य उद्देश्य प्रतिकूल मौसमी स्थितियों जैसे— बहुत अधिक बारिश, सूखा, बेमौसम बारिश, ओलावृष्टि, नमी, और पाला पड़ने के कारण होने वाले फसल नुकसान से किसानों को वित्तीय सुरक्षा प्रदान करना है।',
+      'यह योजना मुख्य रूप से बागवानी फसलों (जैसे फल, सब्जियां, और मसाले) पर लागू होती है, जहाँ मौसम का सीधा और बड़ा असर होता है। इसमें उपज (Yield) की बजाय मौसम के आंकड़ों (Weather Data) के आधार पर नुकसान का आकलन किया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of the Restructured Weather Based Crop Insurance Scheme (RWBCIS) is to provide financial protection to farmers against crop loss due to adverse weather conditions like excessive rainfall, drought, unseasonal rain, hail, humidity, and frost.',
+      'This scheme is primarily applicable to horticultural crops (like fruits, vegetables, and spices) where weather has a direct and major impact. Here, crop loss is assessed based on weather data rather than actual yield estimation.'
+    ],
+    benefitsList: [
+      {
+        heading: 'बीमा क्षतिपूर्ति और आर्थिक सुरक्षा', points: [
+          'मौसम के कारण फसल बर्बाद होने पर बीमा कंपनी द्वारा आर्थिक क्षतिपूर्ति (Claim) दी जाती है।',
+          'किसानों को बहुत कम प्रीमियम देना होता है (रबी फसलों के लिए 1.5%, खरीफ के लिए 2%, और वाणिज्यिक/बागवानी फसलों के लिए अधिकतम 5%)। शेष प्रीमियम केंद्र और राज्य सरकार मिलकर भरती हैं।',
+          'बीमा क्लेम का निर्धारण स्थानीय मौसम स्टेशन (Weather Station) के आंकड़ों के आधार पर पारदर्शी तरीके से होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Insurance Compensation and Financial Security', points: [
+          'Financial compensation (claim) is given by the insurance company in case of crop failure due to weather.',
+          'Farmers have to pay a very low premium (1.5% for Rabi, 2% for Kharif, and a maximum of 5% for commercial/horticultural crops). The remaining premium is shared by the Central and State Governments.',
+          'The insurance claim is determined transparently based on the data from the local Weather Station.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'योजना अधिसूचित क्षेत्रों में अधिसूचित फसलों (Notified Crops) की खेती करने वाले सभी किसानों के लिए उपलब्ध है।',
+      'जिन किसानों ने बैंकों से कृषि ऋण (KCC Loan) लिया है (ऋणी किसान), उनके लिए यह योजना उनकी इच्छा पर निर्भर (स्वैच्छिक) कर दी गई है।',
+      'गैर-ऋणी किसान भी अपनी इच्छा से सीएससी (CSC) या बैंक के माध्यम से अपनी फसल का बीमा करा सकते हैं।',
+      'किसान का नाम राजस्व रिकॉर्ड (खसरा/खतौनी) में दर्ज होना चाहिए, या यदि वे बटाईदार (Tenant) हैं, तो उनके पास वैध प्रमाण होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The scheme is available to all farmers cultivating notified crops in notified areas.',
+      'For farmers who have taken agricultural loans (KCC Loan) from banks (loanee farmers), this scheme is now voluntary.',
+      'Non-loanee farmers can also voluntarily insure their crops through CSC or banks.',
+      'The farmer\'s name must be recorded in the revenue records (Khasra/Khatauni), or if they are tenant farmers, they must have valid proof.'
+    ],
+    exclusions: [
+      'यदि फसल का नुकसान किसी ऐसे कारण से हुआ है जो मौसम से संबंधित नहीं है (जैसे जानवर द्वारा चराई या चोरी), तो क्लेम नहीं मिलता।',
+      'जिन जिलों/क्षेत्रों में उस विशेष फसल को अधिसूचित (Notified) नहीं किया गया है, वहाँ इस योजना का लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If the crop damage is due to non-weather related reasons (like grazing by animals or theft), no claim is provided.',
+      'Benefits of this scheme are not available in districts/areas where that specific crop has not been notified.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'बैंक / CSC / ऑनलाइन (Online)', steps: [
+          'फसल की बुवाई के समय अपनी बैंक शाखा (जहाँ किसान क्रेडिट कार्ड खाता है) से संपर्क करें।',
+          'गैर-ऋणी किसान अपने नज़दीकी कॉमन सर्विस सेंटर (CSC) या जन सेवा केंद्र में जाकर आवेदन कर सकते हैं।',
+          'आवेदन के लिए खसरा/खतौनी, आधार कार्ड और बैंक पासबुक की कॉपी अनिवार्य है।',
+          'अधिसूचित कट-ऑफ डेट (अंतिम तिथि) से पहले प्रीमियम जमा करना सुनिश्चित करें। मौसम खराब होने पर क्लेम की राशि बैंक खाते में डीबीटी (DBT) के माध्यम से जमा हो जाती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Bank / CSC / Online', steps: [
+          'Contact your bank branch (where you have a Kisan Credit Card account) at the time of crop sowing.',
+          'Non-loanee farmers can apply by visiting their nearest Common Service Center (CSC).',
+          'Copies of Khasra/Khatauni, Aadhaar card, and bank passbook are mandatory for application.',
+          'Ensure the premium is paid before the notified cut-off date. In case of adverse weather, the claim amount is deposited into the bank account via DBT.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या प्रधानमंत्री फसल बीमा योजना (PMFBY) और यह योजना एक ही है?', answer: 'ये दोनों योजनाएँ अलग-अलग हैं, लेकिन एक ही राष्ट्रीय पोर्टल (PMFBY) के तहत संचालित होती हैं। PMFBY उपज (Yield) के नुकसान पर आधारित है, जबकि WBCIS मौसम के आंकड़ों (बारिश, तापमान) पर आधारित है। अक्सर बागवानी फसलों के लिए WBCIS लागू होती है।' },
+      { question: 'क्या मुझे नुकसान होने पर बीमा कंपनी को तुरंत सूचना देनी होती है?', answer: 'WBCIS में मौसम स्टेशनों के आंकड़ों के आधार पर क्लेम खुद-ब-खुद (स्वचालित) जनरेट हो जाता है। हालाँकि, यदि आपके खेत में जलभराव या ओलावृष्टि जैसी स्थानीय आपदा आती है, तो 72 घंटे के भीतर कृषि विभाग या बीमा कंपनी को सूचित करना बेहतर होता है।' }
+    ],
+    faqsEn: [
+      { question: 'Are PMFBY and this scheme the same?', answer: 'They are different but operate under the same national portal (PMFBY). PMFBY is based on yield loss, whereas WBCIS is based on weather data (rain, temp). WBCIS is often applied to horticultural crops.' },
+      { question: 'Do I have to inform the insurance company immediately upon loss?', answer: 'In WBCIS, claims are automatically generated based on weather station data. However, for localized calamities like waterlogging or hailstorm on your farm, it is better to inform the agriculture dept or insurance company within 72 hours.' }
+    ]
+  },
+  'aushadhiya-fasal-vistar-yojana': {
+    ...reviewed,
+    title: 'औषधीय एवं सुगन्धित फसल क्षेत्र विस्तार योजना',
+    english: 'Aushadhiya Evam Sugandhit Fasal Vistar Yojana',
+    summary: 'औषधीय व सगंध पौधों की खेती को बढ़ावा देने के लिए किसानों को लागत पर 20% से 50% तक सरकारी अनुदान।',
+    benefit: 'खेती की लागत पर 20% से 50% तक वित्तीय अनुदान',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा/खतौनी की नकल',
+      'बैंक खाता पासबुक',
+      'जाति प्रमाण पत्र (SC/ST के लिए)',
+      'किसान का फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra/Khatauni Copy',
+      'Bank Account Passbook',
+      'Caste Certificate (for SC/ST)',
+      'Farmer\'s Photo'
+    ],
+    steps: [
+      'MPFSTS पोर्टल (फार्मर्स सब्सिडी ट्रैकिंग सिस्टम) पर ऑनलाइन पंजीयन करें।',
+      'औषधीय फसल का चयन कर पौधरोपण का प्रस्ताव दर्ज करें।',
+      'स्वीकृति मिलने पर अधिकृत नर्सरी से पौधे/बीज खरीदें और रोपण करें।',
+      'अधिकारी द्वारा स्थल सत्यापन (Geo-tagging) के बाद अनुदान राशि सीधे बैंक खाते में जमा होती है।'
+    ],
+    stepsEn: [
+      'Register online on the MPFSTS (Farmers Subsidy Tracking System) portal.',
+      'Select the medicinal crop and submit the plantation proposal.',
+      'Upon approval, buy plants/seeds from authorized nurseries and plant them.',
+      'After site verification (Geo-tagging) by an official, the subsidy is deposited directly into the bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'न्यूनतम 0.25 से 2 हेक्टेयर तक भूमि धारक किसान' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग पोर्टल (MPFSTS) से सत्यापित।',
+    detailedDescription: [
+      'औषधीय एवं सुगन्धित फसल क्षेत्र विस्तार योजना मध्य प्रदेश के उद्यानिकी विभाग द्वारा राज्य में पारंपरिक खेती के स्थान पर नकदी और औषधीय फसलों को बढ़ावा देने के लिए लागू की गई है।',
+      'अश्वगंधा, कालमेघ, ईसबगोल, लेमनग्रास, और सफेद मूसली जैसी औषधीय व सुगंधित फसलों की बाजार में अच्छी मांग है। इस योजना से किसानों को फसल विविधीकरण करने और अपनी आय बढ़ाने में मदद मिलती है।'
+    ],
+    detailedDescriptionEn: [
+      'The Medicinal and Aromatic Crop Area Expansion Scheme has been implemented by the MP Horticulture Department to promote cash and medicinal crops instead of traditional farming.',
+      'Medicinal and aromatic crops like Ashwagandha, Kalmegh, Isabgol, Lemongrass, and Safed Musli have good market demand. This scheme helps farmers diversify their crops and increase their income.'
+    ],
+    benefitsList: [
+      {
+        heading: 'अनुदान (Subsidy) सहायता', points: [
+          'योजना के अंतर्गत औषधीय एवं सुगंधित फसलों की खेती करने वाले किसानों को फसल की कुल मानक लागत का 20% से 50% तक अनुदान दिया जाता है।',
+          'यह अनुदान राशि सीधे किसान के बैंक खाते में (DBT के माध्यम से) भेजी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Assistance', points: [
+          'Under the scheme, farmers cultivating medicinal and aromatic crops are given a subsidy of 20% to 50% of the standard cost of the crop.',
+          'This subsidy amount is sent directly to the farmer\'s bank account via DBT.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और कृषक होना चाहिए।',
+      'आवेदक के पास खेती के लिए कम से کم 0.25 हेक्टेयर (लगभग 1 बीघा) और अधिकतम 2.00 हेक्टेयर कृषि योग्य भूमि होनी चाहिए।',
+      'वनाधिकार पट्टाधारी (Forest Rights Leaseholders) आदिवासी किसान भी इस योजना के तहत पात्र माने जाते हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native and a farmer of Madhya Pradesh.',
+      'The applicant must own at least 0.25 hectares (approx. 1 bigha) and a maximum of 2.00 hectares of cultivable land.',
+      'Tribal farmers holding Forest Rights Certificates (Vanadhikar Patta) are also considered eligible under this scheme.'
+    ],
+    exclusions: [
+      'जो किसान किसी अन्य सरकारी योजना के तहत उसी ज़मीन पर और उसी फसल के लिए अनुदान ले रहे हैं, वे पात्र नहीं होंगे।'
+    ],
+    exclusionsEn: [
+      'Farmers who are taking subsidies for the same crop on the same land under any other government scheme will not be eligible.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'MPFSTS (mpfsts.mp.gov.in) पोर्टल पर किसान अपना पंजीयन (Registration) करें।',
+          'पंजीयन के बाद योजना का चयन करें और अपनी ज़मीन (खसरा) की जानकारी दर्ज करें।',
+          'आवेदन स्वीकृत होने पर उद्यानिकी विभाग से परमिट मिलेगा, जिसके आधार पर रोपण सामग्री खरीदें।',
+          'खेत में फसल लगाने के बाद विभागीय अधिकारी आकर जियो-टैगिंग (Geo-tagging) करेंगे, उसके बाद अनुदान मिलेगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Farmers should register on the MPFSTS (mpfsts.mp.gov.in) portal.',
+          'After registration, select the scheme and enter land (Khasra) details.',
+          'On approval, a permit will be issued by the horticulture department to purchase planting material.',
+          'After planting the crop in the field, departmental officials will do geo-tagging, after which the subsidy will be released.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'कौन सी फसलों पर अनुदान मिलता है?', answer: 'इसमें अश्वगंधा, कालमेघ, ईसबगोल, लेमनग्रास, सफेद मूसली, पामारोजा आदि जैसी कई औषधीय व सुगंधित फसलें शामिल हैं (जिलेवार लक्ष्य अलग हो सकते हैं)।' },
+      { question: 'अनुदान का पैसा कैसे मिलेगा?', answer: 'खेत में फसल लगाने के बाद विभाग अधिकारी द्वारा भौतिक सत्यापन किया जाता है। सत्यापन सही पाए जाने पर अनुदान राशि सीधे बैंक खाते में आती है।' }
+    ],
+    faqsEn: [
+      { question: 'Which crops are subsidized?', answer: 'It includes many medicinal and aromatic crops like Ashwagandha, Kalmegh, Isabgol, Lemongrass, Safed Musli, Palmarosa, etc. (district-wise targets may vary).' },
+      { question: 'How will I receive the subsidy money?', answer: 'After planting the crop, physical verification is done by department officials. If verification is successful, the subsidy amount directly comes to the bank account.' }
+    ]
+  },
+  'phal-paudh-ropan-yojana': {
+    ...reviewed,
+    title: 'फल पौध रोपण योजना',
+    english: 'Phal Paudh Ropan Yojana',
+    summary: 'फलदार बगीचों (आम, अमरूद, संतरा आदि) की स्थापना के लिए 3 वर्षों में 40% से 50% तक सरकारी अनुदान।',
+    benefit: 'पौध रोपण लागत पर 40% - 50% अनुदान (3 किस्तों में)',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'सिंचित भूमि का खसरा (B1) / खतौनी',
+      'जाति प्रमाण पत्र (SC/ST/OBC किसानों के लिए)',
+      'बैंक पासबुक',
+      'पासपोर्ट साइज फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra (B1) / Khatauni of irrigated land',
+      'Caste Certificate (for SC/ST/OBC farmers)',
+      'Bank Passbook',
+      'Passport Size Photo'
+    ],
+    steps: [
+      'MPFSTS पोर्टल (mpfsts.mp.gov.in) पर किसान पंजीयन कर फल पौध रोपण योजना के लिए आवेदन करें।',
+      'वरिष्ठ उद्यान विकास अधिकारी द्वारा आवेदन की जांच और स्वीकृति दी जाती है।',
+      'स्वीकृति मिलने पर पंजीकृत/सरकारी नर्सरी से उन्नत किस्म के पौधे खरीदें और रोपण करें।',
+      'विभाग द्वारा जियो-टैगिंग (Geo-tagging) होने पर पहली किस्त का अनुदान मिलता है। पौधों के जीवित रहने पर दूसरे और तीसरे वर्ष बाकी अनुदान मिलता है।'
+    ],
+    stepsEn: [
+      'Register on the MPFSTS portal and apply for the Phal Paudh Ropan Yojana.',
+      'The application is verified and approved by the Senior Horticulture Development Officer.',
+      'Upon approval, buy high-quality plants from a registered/government nursery and plant them.',
+      'The first installment of the subsidy is released after Geo-tagging by the department. Remaining subsidy is released in the 2nd and 3rd year based on plant survival.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'न्यूनतम 0.25 हेक्टेयर से 4 हेक्टेयर सिंचित भूमि' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग पोर्टल (MPFSTS) से सत्यापित।',
+    detailedDescription: [
+      'फल पौध रोपण योजना (Phal Paudh Ropan Yojana) का उद्देश्य राज्य में फलदार फसलों के रकबे को बढ़ाना और किसानों को पारंपरिक खेती के बजाय बागवानी की ओर मोड़कर उनकी आय दोगुनी करना है।',
+      'इस योजना के तहत आम, अमरूद, नीम्बू, अनार, संतरा, पपीता, मुनगा (सहजन) आदि के बगीचे लगाने के लिए गुणवत्तापूर्ण पौधों और अन्य इनपुट्स (जैसे खाद) पर सरकार द्वारा अनुदान सहायता दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'The Phal Paudh Ropan Yojana aims to increase the area under fruit crops in the state and double farmers\' income by shifting them from traditional farming to horticulture.',
+      'Under this scheme, government subsidy assistance is provided for quality plants and other inputs (like fertilizers) for establishing orchards of Mango, Guava, Lemon, Pomegranate, Orange, Papaya, Drumstick, etc.'
+    ],
+    benefitsList: [
+      {
+        heading: 'अनुदान (Subsidy) का विवरण', points: [
+          'योजना के तहत फलदार पौधे लगाने पर निर्धारित इकाई लागत (Unit Cost) का 40% से 50% तक अनुदान मिलता है।',
+          'यह अनुदान राशि एक साथ नहीं दी जाती। पौधों के जीवित रहने के आधार पर इसे 60:20:20 के अनुपात में 3 वर्षों में (3 किस्तों में) सीधे किसान के बैंक खाते में डाला जाता है।',
+          'पहले वर्ष 60% अनुदान मिलता है, दूसरे वर्ष 20% (यदि कम से कम 75% पौधे जीवित हों), और तीसरे वर्ष 20% (यदि कम से कम 90% पौधे जीवित हों)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Details', points: [
+          'Under the scheme, a subsidy of 40% to 50% of the prescribed unit cost is given for planting fruit trees.',
+          'This subsidy is not given all at once. Based on plant survival, it is deposited directly into the farmer\'s bank account in 3 installments over 3 years in a 60:20:20 ratio.',
+          '60% subsidy is given in the first year, 20% in the second year (if at least 75% plants survive), and 20% in the third year (if at least 90% plants survive).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और किसान होना चाहिए।',
+      'योजना का लाभ लेने के लिए किसान के पास न्यूनतम 0.25 हेक्टेयर और अधिकतम 4.0 हेक्टेयर कृषि योग्य भूमि होनी चाहिए।',
+      'बगीचे को पानी देने के लिए सिंचाई के पर्याप्त साधन (जैसे कुआँ, ट्यूबवेल, या ड्रिप सिंचाई प्रणाली) होना अनिवार्य है।',
+      'योजना का लाभ सभी वर्ग (सामान्य, SC, ST, BPL, महिला किसान) ले सकते हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident and farmer of Madhya Pradesh.',
+      'To avail of the scheme, the farmer must have a minimum of 0.25 hectares and a maximum of 4.0 hectares of cultivable land.',
+      'It is mandatory to have adequate irrigation facilities (like a well, tubewell, or drip irrigation system) to water the orchard.',
+      'Farmers of all categories (General, SC, ST, BPL, women farmers) can avail the benefits of the scheme.'
+    ],
+    exclusions: [
+      'बिना सिंचाई सुविधा वाले किसान इस योजना का लाभ नहीं ले सकते क्योंकि फलदार पौधों के लिए सिंचाई आवश्यक है।'
+    ],
+    exclusionsEn: [
+      'Farmers without irrigation facilities cannot avail of this scheme because irrigation is essential for fruit plants.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'MPFSTS पोर्टल (mpfsts.mp.gov.in) पर जाकर किसान अपना पंजीयन (आधार और समग्र के माध्यम से) पूरा करें।',
+          'पंजीयन के बाद डैशबोर्ड से "फल पौध रोपण योजना" का चयन करें और अपनी खसरा/खतौनी की जानकारी अपलोड करें।',
+          'अधिकारियों द्वारा ऑनलाइन स्वीकृति मिलने पर आपको एक परमिट (Permit) मिलेगा।',
+          'इस परमिट को ले जाकर पंजीकृत नर्सरी से उन्नत किस्म के पौधे खरीदें और खेत में लगाएं। रोपण के बाद जियो-टैगिंग (Geo-tagging) होने पर पहली किस्त खाते में आ जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Farmers must complete their registration (via Aadhaar and Samagra) on the MPFSTS portal (mpfsts.mp.gov.in).',
+          'After registration, select "Phal Paudh Ropan Yojana" from the dashboard and upload Khasra/Khatauni details.',
+          'Upon online approval by officials, you will receive a Permit.',
+          'Take this permit to purchase high-quality plants from a registered nursery and plant them in the field. The first installment will arrive in your account after Geo-tagging post-plantation.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं अपने मन से कहीं से भी पौधे खरीद सकता हूँ?', answer: 'नहीं। अनुदान का लाभ पाने के लिए आपको उद्यानिकी विभाग द्वारा मान्यता प्राप्त/पंजीकृत सरकारी या निजी नर्सरी से ही पौधे खरीदने होते हैं।' },
+      { question: 'यदि मेरे पौधे सूख गए तो क्या मुझे दूसरी और तीसरी किस्त मिलेगी?', answer: 'नहीं। दूसरी किस्त के लिए 75% और तीसरी किस्त के लिए 90% पौधों का जीवित रहना अनिवार्य है। अगर पौधे सूख जाते हैं, तो आपको अपने खर्चे पर नए पौधे (Gap filling) लगाकर यह प्रतिशत बनाए रखना होगा, तभी अगली किस्त मिलेगी।' }
+    ],
+    faqsEn: [
+      { question: 'Can I buy plants from anywhere on my own?', answer: 'No. To get the subsidy benefit, you must buy plants only from a government or private nursery recognized/registered by the Horticulture Department.' },
+      { question: 'If my plants dry up, will I get the 2nd and 3rd installments?', answer: 'No. Survival of 75% plants for the 2nd installment and 90% for the 3rd installment is mandatory. If plants dry up, you must plant new ones at your own expense (Gap filling) to maintain this percentage, only then will you get the next installment.' }
+    ]
+  },
+  'masala-kshetra-vistar-yojana': {
+    ...reviewed,
+    title: 'मसाला क्षेत्र विस्तार योजना',
+    english: 'Masala Kshetra Vistar Yojana',
+    summary: 'मसाला फसलों (लहसुन, हल्दी, अदरक, धनिया आदि) की खेती को बढ़ावा देने के लिए किसानों को बीज/सामग्री पर 50% तक सरकारी अनुदान।',
+    benefit: 'बीज/रोपण सामग्री की लागत पर 50% (₹10,000 से ₹50,000 प्रति हेक्टेयर) तक अनुदान',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि का खसरा (B1) / वन पट्टा (Forest Patta)',
+      'बैंक पासबुक (DBT लिंक)',
+      'जाति प्रमाण पत्र (यदि लागू हो)',
+      'पासपोर्ट साइज फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra (B1) of Land / Forest Patta',
+      'Bank Passbook (DBT linked)',
+      'Caste Certificate (if applicable)',
+      'Passport Size Photo'
+    ],
+    steps: [
+      'MPFSTS पोर्टल (mpfsts.mp.gov.in) पर अपना ऑनलाइन पंजीकरण करें।',
+      'पंजीकरण के बाद "मसाला क्षेत्र विस्तार योजना" चुनें और आवेदन दर्ज करें।',
+      'आवेदन मंजूर होने पर उद्यानिकी विभाग से बीज/सामग्री खरीदने का परमिट (Permit) मिलेगा।',
+      'बीज खरीदकर फसल बोएं। भौतिक सत्यापन (जियो-टैगिंग) के बाद अनुदान सीधे बैंक खाते में आ जाएगा।'
+    ],
+    stepsEn: [
+      'Register online on the MPFSTS portal (mpfsts.mp.gov.in).',
+      'After registration, select "Masala Kshetra Vistar Yojana" and submit the application.',
+      'Upon approval, a permit will be issued by the Horticulture Dept to buy seeds/material.',
+      'Buy seeds and sow the crop. After physical verification (geo-tagging), the subsidy will come directly to the bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: '0.25 से 2 हेक्टेयर तक भूमि धारक किसान' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग (MPFSTS) पोर्टल से सत्यापित।',
+    detailedDescription: [
+      'मसाला क्षेत्र विस्तार योजना मध्य प्रदेश के उद्यानिकी विभाग द्वारा शुरू की गई है, जिसका उद्देश्य राज्य में मसाला फसलों (जैसे- धनिया, जीरा, मेथी, लहसुन, हल्दी, अदरक आदि) के उत्पादन और रकबे को बढ़ाना है।',
+      'यह योजना उन किसानों के लिए विशेष रूप से फायदेमंद है जो नई मसाला फसलों की खेती शुरू करना चाहते हैं। इससे किसानों को उन्नत किस्म के बीज और कंद (Rhizomes) खरीदने में आर्थिक मदद मिलती है, जिससे उपज अच्छी होती है और आय बढ़ती है।'
+    ],
+    detailedDescriptionEn: [
+      'The Masala Kshetra Vistar Yojana has been launched by the MP Horticulture Department to increase the production and area of spice crops (like coriander, cumin, fenugreek, garlic, turmeric, ginger, etc.) in the state.',
+      'This scheme is especially beneficial for farmers who want to start cultivating new spice crops. It provides financial help to farmers in purchasing high-quality seeds and rhizomes, leading to better yields and increased income.'
+    ],
+    benefitsList: [
+      {
+        heading: 'अनुदान (Subsidy) सहायता', points: [
+          'बीजीय मसाले (Seed Spices) जैसे धनिया, जीरा, मेथी के लिए: बीज की लागत का 50% या अधिकतम ₹10,000 प्रति हेक्टेयर तक अनुदान मिलता है।',
+          'कंद/जड़ वाले मसाले (Rhizome Spices) जैसे लहसुन, हल्दी, अदरक के लिए: रोपण सामग्री (Planting material) की लागत का 50% या अधिकतम ₹50,000 प्रति हेक्टेयर तक अनुदान दिया जाता है।',
+          'अनुदान राशि सीधे किसान के बैंक खाते में (DBT के माध्यम से) भेजी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Assistance', points: [
+          'For Seed Spices like coriander, cumin, fenugreek: 50% of the seed cost or a maximum of ₹10,000 per hectare is given.',
+          'For Rhizome Spices like garlic, turmeric, ginger: 50% of the cost of planting material or a maximum of ₹50,000 per hectare is given.',
+          'The subsidy amount is sent directly to the farmer\'s bank account via DBT.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और किसान होना चाहिए।',
+      'इस योजना का लाभ लेने के लिए किसान के पास न्यूनतम 0.25 हेक्टेयर और अधिकतम 2.00 हेक्टेयर कृषि योग्य भूमि होनी चाहिए।',
+      'वनाधिकार पट्टा (Forest Patta) प्राप्त करने वाले आदिवासी किसान भी इस योजना के तहत आवेदन कर सकते हैं।',
+      'योजना का लाभ सभी वर्ग (सामान्य, SC, ST, महिला किसान) के किसानों को मिलता है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native and farmer of Madhya Pradesh.',
+      'To avail this scheme, the farmer must have a minimum of 0.25 hectares and a maximum of 2.00 hectares of cultivable land.',
+      'Tribal farmers holding a Forest Rights Certificate (Forest Patta) can also apply under this scheme.',
+      'The benefits of the scheme are available to farmers of all categories (General, SC, ST, women farmers).'
+    ],
+    exclusions: [
+      'यह अनुदान एक किसान को आमतौर पर केवल एक ही बार मिलता है।',
+      'जो किसान पहले से ही किसी अन्य योजना में इसी फसल/खेत के लिए अनुदान ले चुके हैं, वे पात्र नहीं होंगे।'
+    ],
+    exclusionsEn: [
+      'This grant is generally given to a farmer only once.',
+      'Farmers who have already taken a subsidy for the same crop/field under another scheme will not be eligible.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'MPFSTS (mpfsts.mp.gov.in) पोर्टल पर किसान अपना ऑनलाइन पंजीयन करें।',
+          'अपने डैशबोर्ड से "मसाला क्षेत्र विस्तार योजना" चुनें और खसरा/खतौनी की जानकारी अपलोड करें।',
+          'उद्यानिकी विभाग (Horticulture Department) के अधिकारी द्वारा आवेदन का सत्यापन कर परमिट जारी किया जाएगा।',
+          'परमिट मिलने के बाद अधिकृत विक्रेता से बीज/कंद खरीदें और खेत में बोएं। इसके बाद विभागीय अधिकारी जियो-टैगिंग करेंगे और अनुदान खाते में आ जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Farmers should register online on the MPFSTS (mpfsts.mp.gov.in) portal.',
+          'From the dashboard, select "Masala Kshetra Vistar Yojana" and upload Khasra/Khatauni details.',
+          'The Horticulture Department official will verify the application and issue a Permit.',
+          'After getting the permit, buy seeds/rhizomes from an authorized seller and sow them. After this, dept officials will do geo-tagging, and the subsidy will arrive in the account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'लहसुन और अदरक की खेती के लिए कितना अनुदान मिलता है?', answer: 'लहसुन, अदरक और हल्दी (कंद वाले मसाले) के लिए अधिकतम 50,000 रुपये प्रति हेक्टेयर तक का अनुदान मिल सकता है।' },
+      { question: 'क्या बिना ऑनलाइन आवेदन किए अनुदान मिल सकता है?', answer: 'नहीं, अनुदान का लाभ लेने के लिए MPFSTS पोर्टल पर ऑनलाइन पंजीयन और आवेदन करना अनिवार्य है।' }
+    ],
+    faqsEn: [
+      { question: 'How much subsidy is available for garlic and ginger cultivation?', answer: 'For garlic, ginger, and turmeric (rhizome spices), a maximum subsidy of up to ₹50,000 per hectare can be availed.' },
+      { question: 'Can I get the subsidy without applying online?', answer: 'No, online registration and application on the MPFSTS portal is mandatory to avail the subsidy benefit.' }
+    ]
+  },
+  'sabzi-kshetra-vistar-yojana': {
+    ...reviewed,
+    title: 'सब्ज़ी क्षेत्र विस्तार योजना',
+    english: 'Sabzi Kshetra Vistar Yojana',
+    summary: 'सब्जियों (टमाटर, कद्दू, भिंडी, लौकी आदि) की खेती को बढ़ावा देने के लिए किसानों को बीज लागत पर 50% तक सरकारी अनुदान।',
+    benefit: 'सब्जी के बीज/सामग्री पर 50% (₹10,000 से ₹30,000 प्रति हेक्टेयर) तक अनुदान',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि का खसरा (B1) / वन पट्टा (Forest Patta)',
+      'बैंक पासबुक (DBT लिंक)',
+      'जाति प्रमाण पत्र (SC/ST के लिए)',
+      'पासपोर्ट साइज फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra (B1) of Land / Forest Patta',
+      'Bank Passbook (DBT linked)',
+      'Caste Certificate (for SC/ST)',
+      'Passport Size Photo'
+    ],
+    steps: [
+      'MPFSTS (फार्मर्स सब्सिडी ट्रैकिंग सिस्टम) पोर्टल पर ऑनलाइन पंजीयन करें।',
+      'पंजीयन के बाद डैशबोर्ड में "सब्ज़ी क्षेत्र विस्तार योजना" के लिए आवेदन करें।',
+      'विभागीय स्वीकृति मिलने पर उद्यानिकी विभाग द्वारा मान्यता प्राप्त जगह से हाइब्रिड/उन्नत बीज खरीदें।',
+      'खेत में बुवाई के बाद अधिकारी द्वारा जियो-टैगिंग (Geo-tagging) की जाएगी, जिसके बाद अनुदान बैंक खाते में भेजा जाएगा।'
+    ],
+    stepsEn: [
+      'Register online on the MPFSTS (Farmers Subsidy Tracking System) portal.',
+      'Apply for the "Sabzi Kshetra Vistar Yojana" from the dashboard after registration.',
+      'Upon departmental approval, buy hybrid/improved seeds from a horticulture dept recognized source.',
+      'After sowing in the field, geo-tagging will be done by an official, after which the subsidy will be sent to the bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: '0.25 से 2 हेक्टेयर तक भूमि धारक किसान' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग (MPFSTS) पोर्टल से सत्यापित।',
+    detailedDescription: [
+      'सब्ज़ी क्षेत्र विस्तार योजना मध्य प्रदेश शासन के उद्यानिकी विभाग द्वारा राज्य में सब्ज़ियों के उत्पादन क्षेत्र को बढ़ाने और किसानों की आय में वृद्धि करने के उद्देश्य से चलाई जा रही है।',
+      'इस योजना के तहत किसानों को टमाटर, भिंडी, कद्दू, लौकी, खीरा जैसी सामान्य सब्ज़ियों और जड़/कंद वाली सब्ज़ियों की खेती के लिए अच्छी गुणवत्ता वाले (हाइब्रिड) बीजों की खरीद पर वित्तीय अनुदान (Subsidy) दिया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The Sabzi Kshetra Vistar Yojana is being run by the Horticulture Dept of MP Govt with the objective of expanding the vegetable production area in the state and increasing farmers\' income.',
+      'Under this scheme, farmers are given a financial subsidy on the purchase of good quality (hybrid) seeds for the cultivation of general vegetables like tomato, okra, pumpkin, bottle gourd, cucumber, and root/tuber vegetables.'
+    ],
+    benefitsList: [
+      {
+        heading: 'अनुदान (Subsidy) सहायता', points: [
+          'सामान्य सब्ज़ियों के हाइब्रिड/उन्नत बीजों पर: बीज की लागत का 50% या अधिकतम ₹10,000 प्रति हेक्टेयर तक का अनुदान दिया जाता है।',
+          'जड़ या कंद (Root/Tuber) वाली सब्ज़ियों के लिए: लागत का 50% या अधिकतम ₹30,000 प्रति हेक्टेयर तक अनुदान मिल सकता है।',
+          'यह राशि डायरेक्ट बेनिफिट ट्रांसफर (DBT) के माध्यम से सीधे किसान के खाते में जमा की जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Assistance', points: [
+          'For hybrid/improved seeds of general vegetables: 50% of the seed cost or a maximum of ₹10,000 per hectare is given.',
+          'For Root/Tuber vegetables: 50% of the cost or a maximum of ₹30,000 per hectare can be availed.',
+          'This amount is deposited directly into the farmer\'s account via Direct Benefit Transfer (DBT).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और किसान होना चाहिए।',
+      'किसान के पास सब्ज़ी की खेती के लिए कम से कम 0.25 हेक्टेयर (लगभग 1 बीघा) और अधिकतम 2.00 हेक्टेयर कृषि योग्य भूमि होनी चाहिए।',
+      'वनाधिकार पट्टा (Forest Patta) धारी आदिवासी किसान भी इस योजना का लाभ लेने के पात्र हैं।',
+      'योजना का लाभ सभी श्रेणी (सामान्य, अनुसूचित जाति, अनुसूचित जनजाति) के कृषकों के लिए खुला है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native and farmer of Madhya Pradesh.',
+      'The farmer must have at least 0.25 hectares (approx. 1 bigha) and a maximum of 2.00 hectares of cultivable land for vegetable farming.',
+      'Tribal farmers holding Forest Rights Certificates (Forest Patta) are also eligible to avail of this scheme.',
+      'The scheme benefits are open to farmers of all categories (General, SC, ST).'
+    ],
+    exclusions: [
+      'यह अनुदान किसान को केवल एक ही बार मिलता है (One-time benefit)।',
+      'बिना विभागीय परमिट/स्वीकृति के सीधे बीज खरीद लेने पर अनुदान देय नहीं होगा।'
+    ],
+    exclusionsEn: [
+      'This grant is given to the farmer only once (One-time benefit).',
+      'Subsidy will not be payable if seeds are purchased directly without departmental permit/approval.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'किसानों को योजना का लाभ लेने के लिए उद्यानिकी विभाग के MPFSTS पोर्टल (mpfsts.mp.gov.in) पर ऑनलाइन आवेदन करना होगा।',
+          'पंजीकरण के समय आधार कार्ड और ज़मीन के दस्तावेज़ (खसरा) की स्कैन कॉपी अपलोड करें।',
+          'ऑनलाइन आवेदन स्वीकृत होने के बाद विभाग द्वारा एक परमिट (Permit) जारी किया जाएगा।',
+          'इस परमिट के आधार पर मान्यता प्राप्त जगह से हाइब्रिड बीज खरीदें। खेत में फसल लगाने के बाद अधिकारी आकर जियो-टैगिंग (Geo-tagging) करेंगे, और फिर अनुदान राशि आपके खाते में आएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'To avail the benefits of the scheme, farmers have to apply online on the MPFSTS portal (mpfsts.mp.gov.in) of the Horticulture Dept.',
+          'During registration, upload a scanned copy of the Aadhaar card and land records (Khasra).',
+          'After the online application is approved, a permit will be issued by the department.',
+          'Based on this permit, buy hybrid seeds from a recognized source. After planting the crop in the field, an official will come for Geo-tagging, and then the subsidy amount will arrive in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'सब्जी के बीजों पर अधिकतम कितना अनुदान मिल सकता है?', answer: 'सामान्य सब्जियों (जैसे टमाटर, लौकी) के बीजों पर अधिकतम 10,000 रुपये प्रति हेक्टेयर और जड़/कंद वाली सब्जियों पर अधिकतम 30,000 रुपये प्रति हेक्टेयर तक अनुदान मिल सकता है।' },
+      { question: 'क्या मेरे पास 5 हेक्टेयर जमीन है, तो क्या मुझे योजना का लाभ मिलेगा?', answer: 'हाँ, लेकिन अनुदान अधिकतम 2 हेक्टेयर (2.00 Ha) क्षेत्र के लिए ही दिया जाएगा। न्यूनतम 0.25 हेक्टेयर होना जरूरी है।' }
+    ],
+    faqsEn: [
+      { question: 'What is the maximum subsidy available on vegetable seeds?', answer: 'A maximum subsidy of ₹10,000 per hectare for general vegetable seeds (like tomato, bottle gourd) and up to ₹30,000 per hectare for root/tuber vegetables can be availed.' },
+      { question: 'If I have 5 hectares of land, will I get the scheme benefit?', answer: 'Yes, but the subsidy will be provided for a maximum area of 2 hectares (2.00 Ha) only. A minimum of 0.25 hectares is required.' }
+    ]
+  },
+  'sanrakshit-kheti-protsahan-yojana': {
+    ...reviewed,
+    title: 'संरक्षित खेती प्रोत्साहन योजना',
+    english: 'Sanrakshit Kheti Protsahan Yojana',
+    summary: 'बेमौसम उच्च मूल्य वाली फसलों की सुरक्षित खेती के लिए पॉलीहाउस, शेडनेट और मल्चिंग पर 50% तक सरकारी अनुदान।',
+    benefit: 'पॉलीहाउस, शेडनेट हाउस निर्माण और प्लास्टिक मल्चिंग पर 50% तक की सब्सिडी',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि का खसरा (कम से कम 1000 वर्ग मीटर)',
+      'सिंचाई जल स्रोत की उपलब्धता का प्रमाण',
+      'बैंक पासबुक और बैंक की सहमति/स्व-वित्तीय प्रमाण',
+      'जाति प्रमाण पत्र (यदि लागू हो)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra of Land (at least 1000 sqm)',
+      'Proof of Irrigation Water Source',
+      'Bank Passbook & Bank Consent / Self-Finance Proof',
+      'Caste Certificate (if applicable)'
+    ],
+    steps: [
+      'उद्यानिकी विभाग के MPFSTS पोर्टल पर अपना ऑनलाइन पंजीयन करें।',
+      'पंजीयन के बाद, पॉलीहाउस या शेडनेट घटक का चयन कर आवेदन जमा करें।',
+      'पंजीकृत विक्रेता (Vendor) से कोटेशन प्राप्त कर विभाग में जमा करें।',
+      'आवेदन मंजूर होने के बाद निर्माण कराएं। भौतिक सत्यापन (Geo-tagging) के बाद सब्सिडी राशि खाते में आएगी।'
+    ],
+    stepsEn: [
+      'Register online on the MPFSTS portal of the Horticulture Dept.',
+      'After registration, select the Polyhouse or Shadenet component and submit the application.',
+      'Get a quotation from a registered vendor and submit it to the department.',
+      'Construct after approval. Subsidy will arrive in the account after physical verification (Geo-tagging).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'निजी सिंचित भूमि धारक कृषक' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग (MPFSTS) पोर्टल से सत्यापित।',
+    detailedDescription: [
+      'संरक्षित खेती (Protected Cultivation) योजना मध्य प्रदेश उद्यानिकी विभाग द्वारा शुरू की गई है। इसका मुख्य उद्देश्य उच्च मूल्य वाली फसलों (जैसे विदेशी सब्जियां, गुलाब, जरबेरा आदि) को खुले मौसम की अनिश्चितताओं से बचाना है।',
+      'पॉलीहाउस (Polyhouse) और शेडनेट हाउस (Shadenet House) के अंदर तापमान और नमी को नियंत्रित किया जा सकता है, जिससे बेमौसम में भी अच्छी गुणवत्ता की फसल ली जा सकती है और कीटों का प्रकोप कम होता है।'
+    ],
+    detailedDescriptionEn: [
+      'The Protected Cultivation Scheme has been launched by the MP Horticulture Dept. Its main objective is to protect high-value crops (like exotic vegetables, roses, gerbera) from the uncertainties of open weather.',
+      'Inside a Polyhouse and Shadenet House, temperature and humidity can be controlled, enabling good quality crop production even off-season and reducing pest infestations.'
+    ],
+    benefitsList: [
+      {
+        heading: 'सब्सिडी (Subsidy) का विवरण', points: [
+          'योजना के तहत पॉलीहाउस, शेडनेट हाउस और प्लास्टिक मल्चिंग (Plastic Mulching) लगाने पर निर्धारित इकाई लागत (Unit Cost) का लगभग 50% अनुदान सरकार द्वारा दिया जाता है।',
+          'अनुसूचित जाति (SC), अनुसूचित जनजाति (ST) या महिला किसानों के लिए कुछ विशेष परिस्थितियों में अतिरिक्त टॉप-अप (Top-up) अनुदान भी मिल सकता है।',
+          'निर्माण कार्य पूरा होने और विभागीय भौतिक सत्यापन (Physical Verification) के बाद सब्सिडी राशि सीधे किसान के बैंक खाते में (DBT) भेज दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Details', points: [
+          'Under the scheme, the government provides a subsidy of approx 50% of the unit cost for setting up Polyhouses, Shadenet houses, and Plastic Mulching.',
+          'For SC, ST, or women farmers, an additional top-up grant may also be available under certain special conditions.',
+          'After the construction is complete and physical verification is done by the dept, the subsidy amount is sent directly to the farmer\'s bank account (DBT).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और किसान होना चाहिए।',
+      'संरचना के निर्माण के लिए किसान के पास कम से कम 1000 वर्ग मीटर (0.1 हेक्टेयर) निजी भूमि होना अनिवार्य है।',
+      'खेत पर सिंचाई के पर्याप्त साधन (पानी का स्रोत) उपलब्ध होने चाहिए।',
+      'यदि किसान बैंक लोन के माध्यम से संरचना बना रहा है, तो बैंक का स्वीकृति पत्र (Consent Letter) होना चाहिए। स्व-वित्तीय (Self-finance) होने पर उसका प्रमाण देना होगा।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native and a farmer of Madhya Pradesh.',
+      'The farmer must have at least 1000 sq meters (0.1 hectares) of private land for the construction of the structure.',
+      'Adequate irrigation facilities (water source) must be available on the farm.',
+      'If the farmer is building the structure through a bank loan, a bank consent letter is required. For self-finance, proof must be provided.'
+    ],
+    exclusions: [
+      'जिन किसानों के पास सिंचाई की सुविधा नहीं है, वे इस योजना के पात्र नहीं हैं।',
+      'बिना विभागीय अनुमति (Permit) के पहले ही निर्माण करा लेने वाले किसानों को सब्सिडी नहीं दी जाएगी।'
+    ],
+    exclusionsEn: [
+      'Farmers without irrigation facilities are not eligible for this scheme.',
+      'Subsidy will not be given to farmers who have already started/completed construction without prior departmental permission (Permit).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'उद्यानिकी विभाग के आधिकारिक पोर्टल (mpfsts.mp.gov.in) पर जाकर किसान अपना ऑनलाइन रजिस्ट्रेशन करें।',
+          'पॉलीहाउस/शेडनेट का विकल्प चुनें, अपनी जमीन के कागजात अपलोड करें और मान्यता प्राप्त वेंडर (Vendor) का कोटेशन (Quotation) लगाएं।',
+          'विभागीय अधिकारी आवेदन की जांच कर स्वीकृति (Work Order) जारी करेंगे।',
+          'स्वीकृति के बाद मान्यता प्राप्त एजेंसी से निर्माण कराएं। काम पूरा होने पर अधिकारी साइट का निरीक्षण (Geo-tagging) करेंगे, जिसके बाद सब्सिडी मिलेगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Farmers should register online on the official portal of the Horticulture Dept (mpfsts.mp.gov.in).',
+          'Select the Polyhouse/Shadenet option, upload land records, and attach the quotation from an approved vendor.',
+          'The departmental official will check the application and issue an approval (Work Order).',
+          'Get the construction done by the approved agency after approval. Upon completion, officials will inspect the site (Geo-tagging), after which the subsidy will be released.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या पॉलीहाउस बनाने के लिए बैंक से लोन लेना जरूरी है?', answer: 'नहीं, यह जरूरी नहीं है। यदि आपके पास खुद का पैसा (स्व-वित्तीय) है, तो आप अपने पैसे से भी बना सकते हैं, लेकिन उसका प्रमाण आवेदन के समय देना होगा।' },
+      { question: 'सब्सिडी का पैसा कब मिलता है?', answer: 'सब्सिडी का पैसा पॉलीहाउस या शेडनेट का निर्माण पूरी तरह खत्म होने और उद्यानिकी विभाग के अधिकारियों द्वारा खेत पर आकर जांच (भौतिक सत्यापन) करने के बाद ही मिलता है।' }
+    ],
+    faqsEn: [
+      { question: 'Is it mandatory to take a bank loan to build a polyhouse?', answer: 'No, it is not mandatory. If you have your own funds (self-finance), you can build it with your own money, but proof of funds must be provided during application.' },
+      { question: 'When is the subsidy money released?', answer: 'The subsidy is released only after the construction of the polyhouse/shadenet is fully complete and physical verification is done by Horticulture Dept officials at the farm.' }
+    ]
+  },
+  'udyaniki-yantrikaran-yojana': {
+    ...reviewed,
+    title: 'उद्यानिकी विकास हेतु यंत्रीकरण योजना',
+    english: 'Udyaniki Yantrikaran Yojana',
+    summary: 'उद्यानिकी (बागवानी) फसलों में श्रम बचाने के लिए किसानों को पावर टिलर, स्प्रेयर व अन्य उपकरणों पर 40% से 50% अनुदान।',
+    benefit: 'उद्यानिकी कृषि उपकरणों की खरीद पर 40% से 50% (अधिकतम तय सीमा तक) की सब्सिडी',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'जमीन का खसरा (B1) / खतौनी',
+      'बैंक पासबुक (DBT लिंक)',
+      'जाति प्रमाण पत्र (SC/ST के लिए)',
+      'यंत्र का कोटेशन (पंजीकृत डीलर से)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Land Khasra (B1) / Khatauni',
+      'Bank Passbook (DBT linked)',
+      'Caste Certificate (for SC/ST)',
+      'Equipment Quotation (from registered dealer)'
+    ],
+    steps: [
+      'MPFSTS पोर्टल पर ऑनलाइन लॉटरी/लक्ष्य (Target) खुलने पर यंत्र के लिए आवेदन करें।',
+      'पोर्टल से ही अधिकृत डीलर का चयन करें और यंत्र का कोटेशन संलग्न करें।',
+      'लॉटरी में नाम आने या स्वीकृति मिलने पर अधिकृत डीलर से यंत्र खरीदें।',
+      'विभाग द्वारा मशीन का भौतिक सत्यापन (Physical Verification) होने के बाद सब्सिडी मिलेगी।'
+    ],
+    stepsEn: [
+      'Apply for the equipment on the MPFSTS portal when the online lottery/target opens.',
+      'Select an authorized dealer from the portal itself and attach the equipment quotation.',
+      'If selected in the lottery or approved, buy the equipment from the authorized dealer.',
+      'Subsidy will be released after physical verification of the machine by the department.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'उद्यानिकी/बागवानी खेती करने वाले कृषक' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग (MPFSTS) पोर्टल से सत्यापित।',
+    detailedDescription: [
+      'उद्यानिकी यंत्रीकरण योजना (Horticulture Mechanization Scheme) का उद्देश्य बागवानी फसलों (फल, फूल, सब्जी, मसाले) में आधुनिक मशीनों के इस्तेमाल को बढ़ावा देना है।',
+      'इससे खेती में लगने वाले समय और मज़दूरी (श्रम) की बचत होती है, साथ ही कीटनाशक छिड़काव (Spraying) और जुताई जैसे काम ज्यादा बेहतर तरीके से हो पाते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'The Horticulture Mechanization Scheme aims to promote the use of modern machinery in horticultural crops (fruits, flowers, vegetables, spices).',
+      'This saves time and labor costs in farming, and tasks like pesticide spraying and tilling are done much more efficiently.'
+    ],
+    benefitsList: [
+      {
+        heading: 'सब्सिडी (Subsidy) का लाभ', points: [
+          'योजना के तहत पावर टिलर (8 BHP से अधिक), ट्रैक्टर माउंटेड स्प्रेयर (Tractor mounted sprayer), और अन्य छोटे-बड़े उद्यानिकी उपकरणों पर सब्सिडी मिलती है।',
+          'सामान्य वर्ग के किसानों को यंत्र की लागत का 40% तक अनुदान मिलता है।',
+          'अनुसूचित जाति (SC), अनुसूचित जनजाति (ST), और महिला किसानों को लागत का 50% तक (निर्धारित अधिकतम सीमा तक) अनुदान दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Benefit', points: [
+          'Under the scheme, subsidy is available on Power Tillers (above 8 BHP), Tractor mounted sprayers, and other large/small horticulture equipment.',
+          'General category farmers receive a subsidy of up to 40% of the equipment cost.',
+          'SC, ST, and women farmers are given a subsidy of up to 50% of the cost (up to a prescribed maximum limit).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और उद्यानिकी (बागवानी) की खेती करने वाला किसान होना चाहिए।',
+      'आवेदक के नाम पर कृषि भूमि (खसरा/खतौनी) होना अनिवार्य है।',
+      'आवेदक ने पिछले 7 वर्षों में विभाग की किसी भी योजना से उसी यंत्र (जिसके लिए आवेदन कर रहा है) पर अनुदान न लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of MP and a farmer engaged in horticulture farming.',
+      'It is mandatory to have agricultural land (Khasra/Khatauni) in the applicant\'s name.',
+      'The applicant should not have taken a subsidy on the same equipment from any departmental scheme in the last 7 years.'
+    ],
+    exclusions: [
+      'यदि किसान ने मान्यता प्राप्त/पंजीकृत डीलर की बजाय किसी बाहरी दुकान से मशीन खरीद ली, तो उसे अनुदान नहीं मिलेगा।',
+      'बिना विभागीय स्वीकृति (लॉटरी/परमिट) के मशीन खरीदने पर योजना का लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If the farmer buys the machine from an outside shop instead of a recognized/registered dealer, they will not get the subsidy.',
+      'Buying the machine without departmental approval (lottery/permit) will void the scheme benefits.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'जब उद्यानिकी विभाग MPFSTS पोर्टल (mpfsts.mp.gov.in) पर "लक्ष्य (Targets)" जारी करता है, तब किसान ऑनलाइन आवेदन कर सकते हैं।',
+          'आवेदन में आधार कार्ड और खसरा की कॉपी अपलोड करें, और पोर्टल पर दर्ज़ डीलरों की सूची में से अपना डीलर चुनें।',
+          'लॉटरी सिस्टम (Lottery System) के माध्यम से किसानों का चयन किया जाता है।',
+          'चयनित होने पर परमिट जारी होगा। परमिट लेकर डीलर से यंत्र खरीदें। उसके बाद विभागीय अधिकारी मशीन का बिल और भौतिक सत्यापन करेंगे, तब अनुदान राशि खाते में (DBT) आएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'Farmers can apply online when the Horticulture Dept releases "Targets" on the MPFSTS portal (mpfsts.mp.gov.in).',
+          'Upload Aadhaar and Khasra copies in the application, and select a dealer from the list of registered dealers on the portal.',
+          'Farmers are selected through a Lottery System.',
+          'Upon selection, a permit will be issued. Buy the equipment from the dealer using the permit. After this, officials will verify the bill and machine physically, and then the subsidy will come into the account (DBT).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं ट्रैक्टर खरीदने के लिए इस योजना में आवेदन कर सकता हूँ?', answer: 'नहीं, उद्यानिकी विभाग की इस योजना में मुख्य रूप से पावर टिलर (Power Tiller) और स्प्रेयर (Sprayer) जैसे उपकरणों पर सब्सिडी दी जाती है। बड़े ट्रैक्टर के लिए कृषि विभाग की "कृषि यंत्रीकरण योजना (e-Krishi Yantra Anudan)" के तहत आवेदन करना होता है।' },
+      { question: 'मुझे कैसे पता चलेगा कि पोर्टल पर आवेदन कब शुरू होंगे?', answer: 'उद्यानिकी विभाग की वेबसाइट (mpfsts.mp.gov.in) पर समय-समय पर सूचना (Notification) जारी की जाती है। आप स्थानीय उद्यानिकी कार्यालय से भी संपर्क में रह सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can I apply in this scheme to buy a large tractor?', answer: 'No, this scheme by the Horticulture Dept mainly gives subsidies on equipment like Power Tillers and Sprayers. For large tractors, you have to apply under the Agriculture Dept\'s "e-Krishi Yantra Anudan" scheme.' },
+      { question: 'How will I know when applications open on the portal?', answer: 'Notifications are issued from time to time on the Horticulture Dept website (mpfsts.mp.gov.in). You can also stay in touch with the local horticulture office.' }
+    ]
+  },
+  'golden-kitchen-garden-yojana': {
+    ...reviewed,
+    title: 'घरेलू बागवानी की आदर्श योजना (गोल्डन किचन / बाड़ी योजना)',
+    english: 'Golden Kitchen Garden Scheme',
+    summary: 'ग्रामीण व शहरी परिवारों में पोषण सुधार हेतु घर के आंगन/छत पर किचन गार्डन (पोषण वाटिका) स्थापित करने के लिए सब्जी बीजों का मिनीकिट वितरण।',
+    benefit: 'नाममात्र शुल्क पर मौसम अनुसार सब्जियों का बीज किट (Mini-kit) और उपकरण',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण विभाग',
+    sourceUrl: 'https://horticulture.mponline.gov.in/',
+    applicationUrl: 'https://mpfsts.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'निवास प्रमाण पत्र / BPL कार्ड (यदि लागू हो)',
+      'पासपोर्ट साइज फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Proof of Residence / BPL Card (if applicable)',
+      'Passport Size Photo'
+    ],
+    steps: [
+      'अपने स्थानीय आंगनवाड़ी केंद्र या ग्राम पंचायत के उद्यानिकी अधिकारी से संपर्क करें।',
+      'MPFSTS पोर्टल या विभाग में योजना के लिए आवेदन/पंजीयन करें।',
+      'पंजीयन के बाद विभाग द्वारा सब्जी बीजों का किट (Mini-kit) उपलब्ध कराया जाता है।',
+      'अपने घर के आसपास (बाड़ी) या छत पर पोषण वाटिका (Kitchen Garden) तैयार करें।'
+    ],
+    stepsEn: [
+      'Contact your local Anganwadi center or the Horticulture Officer of the Gram Panchayat.',
+      'Apply/register for the scheme on the MPFSTS portal or at the department.',
+      'After registration, a vegetable seed kit (Mini-kit) is provided by the department.',
+      'Prepare a kitchen garden (nutrition garden) around your house (Bari) or on the roof.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'ग्रामीण या शहरी परिवार (विशेषकर BPL/आदिवासी)' }
+    ],
+    sourceNotes: 'MP उद्यानिकी विभाग (MPFSTS) पोर्टल से सत्यापित।',
+    detailedDescription: [
+      'घरेलू बागवानी (किचन गार्डन / बाड़ी) योजना का मुख्य उद्देश्य ग्रामीण, आदिवासी और शहरी परिवारों में कुपोषण (Malnutrition) को दूर करना और उन्हें ताजी व रसायन-मुक्त (जैविक) सब्जियां उपलब्ध कराना है।',
+      'इस योजना के तहत विभाग परिवारों को मौसम के अनुकूल सब्जियों (जैसे- टमाटर, पालक, मेथी, भिंडी आदि) के बीजों का मिनी-किट देता है। इसे लोग अपने घर के आंगन (बाड़ी) या खाली जगह में उगा सकते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of the Domestic Gardening (Kitchen Garden/Bari) Scheme is to eradicate malnutrition in rural, tribal, and urban families and provide them with fresh and chemical-free (organic) vegetables.',
+      'Under this scheme, the department provides a mini-kit of season-appropriate vegetable seeds (like tomato, spinach, fenugreek, okra, etc.) to families. People can grow these in their home courtyard (Bari) or empty spaces.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के लाभ', points: [
+          'हितग्राहियों को सब्जी बीजों का किट (Mini-kit) बहुत ही कम (नाममात्र) शुल्क या निःशुल्क प्रदान किया जाता है।',
+          'घर पर ही जैविक तरीके से उगाई गई ताजी और पौष्टिक सब्जियां खाने को मिलती हैं, जिससे परिवार का स्वास्थ्य और पोषण स्तर सुधरता है।',
+          'बाजार से सब्जी खरीदने का खर्च बचता है, जिससे आर्थिक बचत होती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Scheme Benefits', points: [
+          'A kit of vegetable seeds (Mini-kit) is provided to the beneficiaries at a very low (nominal) cost or free of charge.',
+          'Families get to eat fresh and nutritious vegetables grown organically at home, improving health and nutritional levels.',
+          'It saves money spent on buying vegetables from the market, leading to economic savings.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'मध्य प्रदेश का कोई भी निवासी परिवार (ग्रामीण या शहरी) इस योजना का लाभ ले सकता है।',
+      'विशेष प्राथमिकता बीपीएल (BPL), अनुसूचित जाति (SC), अनुसूचित जनजाति (ST), और आंगनवाड़ी केंद्रों से जुड़े परिवारों को दी जाती है।',
+      'हितग्राही के पास घर के आसपास या छत पर थोड़ी जगह (बाड़ी) होनी चाहिए जहाँ सब्जियां उगाई जा सकें।'
+    ],
+    eligibilityDescriptionEn: [
+      'Any resident family (rural or urban) of Madhya Pradesh can avail the benefits of this scheme.',
+      'Special priority is given to BPL, SC, ST, and families associated with Anganwadi centers.',
+      'The beneficiary must have some space around the house (Bari) or on the roof where vegetables can be grown.'
+    ],
+    exclusions: [
+      'यह योजना व्यावसायिक खेती (Commercial farming) के लिए नहीं है, यह केवल घरेलू उपयोग के लिए है।',
+      'व्यावसायिक स्तर पर खेती करने वाले किसानों को इसके बजाय "सब्जी क्षेत्र विस्तार योजना" में आवेदन करना चाहिए।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for commercial farming; it is for domestic use only.',
+      'Farmers doing commercial farming should apply for the "Sabzi Kshetra Vistar Yojana" instead.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Offline) / ऑनलाइन', steps: [
+          'किचन गार्डन के लिए अक्सर ग्राम पंचायत स्तर पर ग्रामीण कृषि विस्तार अधिकारी (RAEO) या आंगनवाड़ी कार्यकर्ता द्वारा सर्वे किया जाता है।',
+          'आप सीधे अपने ब्लॉक (Block) के वरिष्ठ उद्यान विकास अधिकारी (SHDO) कार्यालय में जाकर भी आवेदन कर सकते हैं।',
+          'बीज वितरण अभियान (खरीफ/रबी मौसम से पहले) के दौरान अपना आधार और समग्र आईडी दिखाकर किट प्राप्त करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Online', steps: [
+          'For Kitchen Gardens, surveys are often conducted at the Gram Panchayat level by the Rural Agriculture Extension Officer (RAEO) or Anganwadi workers.',
+          'You can also apply directly by visiting the office of the Senior Horticulture Development Officer (SHDO) in your block.',
+          'During the seed distribution campaign (before Kharif/Rabi seasons), show your Aadhaar and Samagra ID to receive the kit.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'किचन गार्डन योजना के तहत कौन-कौन से बीज मिलते हैं?', answer: 'मौसम के अनुसार पालक, मेथी, धनिया, टमाटर, बैंगन, भिंडी, लौकी, कद्दू आदि के बीज दिए जाते हैं।' },
+      { question: 'क्या शहर में रहने वाले लोग भी बीज ले सकते हैं?', answer: 'हाँ, शहरी क्षेत्रों में भी लोग अपनी छत या बालकनी (Terrace garden) में गमलों में सब्जियां उगाने के लिए इस योजना का लाभ ले सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Which seeds are provided under the Kitchen Garden scheme?', answer: 'Depending on the season, seeds of spinach, fenugreek, coriander, tomato, brinjal, okra, bottle gourd, pumpkin, etc. are provided.' },
+      { question: 'Can people living in cities also get seeds?', answer: 'Yes, people in urban areas can also avail of this scheme to grow vegetables in pots on their roofs or balconies (Terrace garden).' }
+    ]
+  },
+  'bhavantar-bhugtan-yojana': {
+    ...reviewed,
+    title: 'भावान्तर भुगतान योजना',
+    english: 'Bhavantar Bhugtan Yojana',
+    summary: 'किसानों को बाजार भाव गिरने पर सुरक्षा देने वाली योजना, जिसमें समर्थन मूल्य (MSP) और मंडी भाव के अंतर की राशि किसान के खाते में दी जाती है।',
+    benefit: 'MSP और बाजार मूल्य (मॉडल रेट) के बीच के अंतर की राशि (DBT)',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://saara.mp.gov.in/',
+    applicationUrl: 'https://saara.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / गिरदावरी पंजीयन की पावती',
+      'बैंक पासबुक (DBT लिंक)',
+      'कृषि उपज मंडी की विक्रय पर्ची (Sale slip)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / Girdawari Registration Receipt',
+      'Bank Passbook (DBT linked)',
+      'Krishi Upaj Mandi Sale Slip'
+    ],
+    steps: [
+      'MP ई-उपार्जन (e-Uparjan) या SAARA पोर्टल पर फसल बुवाई के समय अपना पंजीयन कराएं।',
+      'पंजीयन के बाद, फसल की कटाई होने पर अपनी उपज को राज्य की अधिसूचित कृषि उपज मंडी में बेचें।',
+      'मंडी में बेचने पर मिलने वाली भुगतान पर्ची (तौल पर्ची) सुरक्षित रखें।',
+      'यदि आपका बिक्री मूल्य, सरकार के MSP से कम है, तो दोनों के बीच का अंतर (भावान्तर) सरकार सीधे आपके खाते में भेजेगी।'
+    ],
+    stepsEn: [
+      'Register on the MP e-Uparjan or SAARA portal at the time of crop sowing.',
+      'After registration and harvesting, sell your produce in the state\'s notified Krishi Upaj Mandi.',
+      'Keep the sale slip (weighing slip) received from the mandi safe.',
+      'If your selling price is less than the govt\'s MSP, the government will send the difference (Bhavantar) directly to your account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'पंजीकृत कृषक जिन्होंने अधिसूचित मंडी में उपज बेची' }
+    ],
+    sourceNotes: 'MP कृषि विभाग एवं SAARA पोर्टल से सत्यापित।',
+    detailedDescription: [
+      'भावान्तर भुगतान योजना (Price Deficit Payment Scheme) मध्य प्रदेश सरकार की एक अनूठी पहल है। इसका उद्देश्य किसानों को मंडी में फसल की कीमतों में होने वाली गिरावट (Price crash) से बचाना है।',
+      'कई बार बंपर पैदावार के कारण बाजार में फसल के दाम न्यूनतम समर्थन मूल्य (MSP) से भी नीचे गिर जाते हैं। ऐसे में किसान को नुकसान न हो, इसके लिए सरकार MSP और औसत बाजार मूल्य (Model Price) के बीच के अंतर की राशि का भुगतान करती है।'
+    ],
+    detailedDescriptionEn: [
+      'Bhavantar Bhugtan Yojana (Price Deficit Payment Scheme) is a unique initiative of the MP Govt. Its objective is to protect farmers from price crashes of crops in the market.',
+      'Sometimes due to bumper yields, market crop prices fall even below the Minimum Support Price (MSP). To ensure farmers don\'t suffer losses, the govt pays the difference between the MSP and the average market price (Model Price).'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के लाभ (Benefits)', points: [
+          'मूल्य सुरक्षा (Price Protection): किसानों को अपनी उपज औने-पौने दामों (Distress sale) पर नहीं बेचनी पड़ती।',
+          'सीधा भुगतान (Direct Benefit): भावान्तर (भाव का अंतर) की राशि सीधे किसान के आधार-लिंक बैंक खाते में जमा (DBT) की जाती है।',
+          'बाजार की आज़ादी: किसान सरकारी खरीद केंद्र की बजाय अपनी सुविधानुसार मंडी में फसल बेच सकते हैं, और फिर भी सुरक्षा पा सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Scheme Benefits', points: [
+          'Price Protection: Farmers do not have to sell their produce at throwaway prices (Distress sale).',
+          'Direct Payment: The difference amount (Bhavantar) is deposited directly into the farmer\'s Aadhaar-linked bank account (DBT).',
+          'Market Freedom: Farmers can sell their crops in the mandi at their convenience instead of govt procurement centers, and still get protection.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का स्थायी निवासी और किसान होना चाहिए।',
+      'किसान का नाम और उसकी फसल का विवरण ई-उपार्जन / गिरदावरी पोर्टल पर निर्धारित समय-सीमा के भीतर पंजीकृत होना अनिवार्य है।',
+      'किसान ने अपनी उपज मध्य प्रदेश की किसी अधिसूचित (Notified) कृषि उपज मंडी प्रांगण में बेची हो।',
+      'योजना के तहत हर सीज़न (खरीफ/रबी) में चुनिंदा फसलों (जैसे- सोयाबीन, मक्का, उड़द, मूंग, प्याज, लहसुन आदि) को ही शामिल किया जाता है (यह सरकार के आदेश पर निर्भर करता है)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a permanent resident and farmer of Madhya Pradesh.',
+      'The farmer\'s name and crop details must be registered on the e-Uparjan / Girdawari portal within the prescribed time limit.',
+      'The farmer must have sold their produce in a notified Krishi Upaj Mandi yard in MP.',
+      'Under the scheme, only selected crops (like soybean, maize, urad, moong, onion, garlic, etc.) are included in each season (depends on govt orders).'
+    ],
+    exclusions: [
+      'बिना पोर्टल पर पंजीयन कराए सीधे मंडी या बाहर व्यापारियों को फसल बेचने पर भावान्तर का लाभ नहीं मिलेगा।',
+      'मंडी के बाहर (गाँव में ही) फसल बेचने पर यह योजना लागू প্রযোজ्य नहीं होती, मंडी का प्रमाण (तौल पर्ची) होना अनिवार्य है।'
+    ],
+    exclusionsEn: [
+      'If the crop is sold directly to traders outside or in the mandi without registering on the portal, Bhavantar benefit will not be given.',
+      'This scheme is not applicable for selling crops outside the mandi (in the village); mandi proof (weighing slip) is mandatory.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online)', steps: [
+          'बुवाई के समय: जब सरकार पंजीयन (Registration) खोलती है, तब MP ई-उपार्जन पोर्टल (mpeuparjan.nic.in) या कॉमन सर्विस सेंटर (CSC) पर जाकर अपनी फसल और ज़मीन का पंजीयन कराएं।',
+          'कटाई के बाद: अपनी फसल को अधिसूचित मंडी में ले जाकर बेचें।',
+          'भुगतान: मंडी समिति द्वारा आपकी बिक्री की जानकारी पोर्टल पर दर्ज़ की जाएगी। इसके बाद सरकार द्वारा निर्धारित मॉडल रेट और MSP के अंतर की गणना कर राशि सीधे आपके बैंक खाते में जमा कर दी जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online', steps: [
+          'During Sowing: When the govt opens registration, register your crop and land on the MP e-Uparjan portal or CSC.',
+          'After Harvesting: Take your crop to the notified mandi and sell it.',
+          'Payment: The mandi committee will enter your sale details on the portal. After this, govt will calculate the difference between the model rate and MSP and deposit the amount directly into your bank account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'भावान्तर राशि की गणना कैसे होती है?', answer: 'मान लीजिए किसी फसल का MSP 3000 रुपये है और मंडी का औसत मॉडल रेट 2500 रुपये है। तो 500 रुपये प्रति क्विंटल भावान्तर राशि किसान को दी जाएगी, भले ही उसने मंडी में 2600 में बेचा हो।' },
+      { question: 'क्या भावान्तर योजना सभी फसलों पर लागू है?', answer: 'नहीं, सरकार हर साल सीज़न के हिसाब से घोषणा करती है कि कौन-सी फसलें भावान्तर में शामिल होंगी (जैसे कभी सिर्फ सोयाबीन या मक्का, या कभी प्याज/लहसुन)।' }
+    ],
+    faqsEn: [
+      { question: 'How is the Bhavantar amount calculated?', answer: 'Suppose the MSP of a crop is ₹3000 and the mandi avg model rate is ₹2500. Then ₹500 per quintal Bhavantar amount will be given to the farmer, even if he sold at ₹2600 in the mandi.' },
+      { question: 'Is Bhavantar Yojana applicable to all crops?', answer: 'No, the govt announces every year according to the season which crops will be included in Bhavantar (like sometimes only soybean or maize, or sometimes onion/garlic).' }
+    ]
+  },
+  'krishak-prashikshan-bhraman-yojana': {
+    ...reviewed,
+    title: 'कृषक प्रशिक्षण तथा भ्रमण कार्यक्रम (ATMA योजना)',
+    english: 'Krishak Prashikshan Tatha Bhraman Yojana',
+    summary: 'किसानों को आधुनिक कृषि पद्धतियों, नई तकनीकों और जैविक खेती से अवगत कराने हेतु निःशुल्क प्रशिक्षण व अध्ययन भ्रमण।',
+    benefit: 'निःशुल्क कृषि प्रशिक्षण, राज्य/अंतर्राज्यीय भ्रमण, यात्रा व्यय, भोजन व आवास',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि अभिलेख (खसरा/B1) या किसान क्रेडिट कार्ड',
+      'पासपोर्ट साइज फोटो',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Land Records (Khasra/B1) or Kisan Credit Card',
+      'Passport Size Photo',
+      'Bank Passbook'
+    ],
+    steps: [
+      'अपने ब्लॉक (विकासखंड) स्तर पर वरिष्ठ कृषि विकास अधिकारी (SADO) या आत्मा (ATMA) परियोजना के ब्लॉक तकनीकी प्रबंधक (BTM) से संपर्क करें।',
+      'आगामी प्रशिक्षण या भ्रमण कार्यक्रम के लिए अपना नाम और दस्तावेज जमा करें।',
+      'चयन समिति द्वारा प्रगतिशील या इच्छुक किसानों का चयन किया जाएगा।',
+      'चयनित होने पर, विभाग द्वारा तय तिथि पर निःशुल्क प्रशिक्षण/भ्रमण पर ले जाया जाएगा।'
+    ],
+    stepsEn: [
+      'Contact the Senior Agriculture Dev Officer (SADO) or ATMA Block Tech Manager (BTM) at your block level.',
+      'Submit your name and documents for upcoming training or tour programs.',
+      'The selection committee will select progressive or interested farmers.',
+      'Upon selection, you will be taken for free training/tour on the date fixed by the dept.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'सक्रिय कृषक (लघु/सीमांत/महिला कृषकों को प्राथमिकता)' }
+    ],
+    sourceNotes: 'आत्मा (ATMA) योजना, कृषि विभाग MP के दिशा-निर्देशों से सत्यापित।',
+    detailedDescription: [
+      'कृषक प्रशिक्षण एवं भ्रमण कार्यक्रम मुख्य रूप से "आत्मा (ATMA - Agricultural Technology Management Agency)" योजना के तहत चलाया जाता है। इसका उद्देश्य किसानों को खेती के नए तरीकों, उन्नत बीजों, जैविक खेती और आधुनिक कृषि यंत्रों से रूबरू कराना है।',
+      'इस कार्यक्रम के तहत किसानों को न सिर्फ कक्षा (Classroom) में विशेषज्ञों द्वारा प्रशिक्षित किया जाता है, बल्कि उन्हें राज्य के भीतर या अन्य राज्यों के कृषि विश्वविद्यालयों, अनुसंधान केंद्रों और सफल प्रगतिशील किसानों के खेतों (Exposure Visit) का भी भ्रमण कराया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The Farmers Training and Exposure Visit program is primarily run under the "ATMA (Agricultural Technology Management Agency)" scheme. Its objective is to familiarize farmers with new farming methods, improved seeds, organic farming, and modern agricultural machinery.',
+      'Under this program, farmers are not only trained by experts in a classroom setup but are also taken on exposure visits to agricultural universities, research centers, and fields of successful progressive farmers within or outside the state.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'संपूर्ण खर्च सरकार द्वारा: किसानों की यात्रा (Travel), भोजन (Food) और आवास (Accommodation) का पूरा खर्च कृषि विभाग (ATMA) द्वारा उठाया जाता है।',
+          'तकनीकी ज्ञान: किसानों को कृषि वैज्ञानिकों (KVK) और विशेषज्ञों से सीधा संवाद कर खेती की समस्याओं का समाधान पूछने का मौका मिलता है।',
+          'व्यवहारिक अनुभव: दूसरे सफल किसानों के खेतों को देखकर किसान नई फसलों (जैसे- उद्यानिकी, मसाले, औषधीय फसलें) को अपने खेत में अपनाने के लिए प्रेरित होते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of the Scheme', points: [
+          'All Expenses by Govt: The entire cost of travel, food, and accommodation for the farmers is borne by the Agriculture Department (ATMA).',
+          'Technical Knowledge: Farmers get an opportunity to interact directly with agricultural scientists (KVK) and experts to resolve farming issues.',
+          'Practical Experience: By observing the fields of other successful farmers, farmers get inspired to adopt new crops (like horticulture, spices, medicinal crops) in their own fields.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और खेती-किसानी से जुड़ा होना चाहिए।',
+      'इस योजना में सभी वर्ग के किसान भाग ले सकते हैं, लेकिन लघु (Small), सीमांत (Marginal), और महिला किसानों (Women farmers) को विशेष प्राथमिकता दी जाती है।',
+      'ऐसे किसान जो खेती में कुछ नया (Innovation) करना चाहते हैं या नई तकनीक सीखने के इच्छुक हैं, वे पात्र हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of MP and involved in farming.',
+      'Farmers of all categories can participate in this scheme, but special priority is given to Small, Marginal, and Women farmers.',
+      'Farmers who want to do something new (Innovation) in farming or are eager to learn new technologies are eligible.'
+    ],
+    exclusions: [
+      'जो किसान पहले किसी विशिष्ट विषय पर प्रशिक्षण/भ्रमण का लाभ ले चुके हैं, उन्हें उसी विषय के लिए दोबारा प्राथमिकता नहीं दी जाती, ताकि नए किसानों को मौका मिले।',
+      'बिना कृषि भूमि/खेती से जुड़ाव वाले व्यक्ति इसके पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'Farmers who have already availed the benefit of training/tour on a specific subject are not given priority for the same subject again, to give new farmers a chance.',
+      'Individuals without agricultural land/connection to farming are not eligible.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Offline)', steps: [
+          'इस कार्यक्रम के लिए ऑनलाइन आवेदन की कोई केंद्रीकृत व्यवस्था नहीं है। यह जिले/ब्लॉक स्तर पर कृषि विभाग द्वारा आयोजित होता है।',
+          'किसान अपने गांव के ग्रामीण कृषि विस्तार अधिकारी (RAEO) या ब्लॉक स्तर पर BTM (Block Technology Manager) से संपर्क कर अपना नाम लिखवा सकते हैं।',
+          'जब भी विभाग किसी टूर (भ्रमण) या ट्रेनिंग की रूपरेखा (Target) तय करता है, तो पंजीकृत किसानों में से चयन किया जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline', steps: [
+          'There is no centralized online application for this program. It is organized at the district/block level by the Agriculture Dept.',
+          'Farmers can contact their village\'s Rural Agriculture Extension Officer (RAEO) or the BTM at the block level to register their names.',
+          'Whenever the department plans a tour or training target, selections are made from the registered farmers.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या भ्रमण (Tour) के लिए कोई शुल्क देना होता है?', answer: 'नहीं, यह पूरी तरह से निःशुल्क है। आने-जाने का किराया, खाने-पीने और रहने की व्यवस्था कृषि विभाग द्वारा की जाती है।' },
+      { question: 'भ्रमण कितने दिनों का होता है?', answer: 'यह भ्रमण के प्रकार पर निर्भर करता है। जिले के भीतर का भ्रमण आमतौर पर 1 दिन का, राज्य के भीतर 2-3 दिन का, और अंतर्राज्यीय (दूसरे राज्य) भ्रमण 5-7 दिनों का हो सकता है।' }
+    ],
+    faqsEn: [
+      { question: 'Do I have to pay any fee for the Tour?', answer: 'No, it is completely free. The fare, food, and accommodation are arranged by the Agriculture Department.' },
+      { question: 'How many days does the tour last?', answer: 'It depends on the type of tour. Within-district tours are usually 1 day, state-level tours are 2-3 days, and inter-state tours can be 5-7 days long.' }
+    ]
+  },
+  'krishi-mela-pradarshani-yojana': {
+    ...reviewed,
+    title: 'कृषि मेला एवं प्रदर्शनी योजना (विस्तार कार्यक्रम)',
+    english: 'Krishi Mela Pradarshani Yojana',
+    summary: 'किसानों को आधुनिक कृषि यंत्रों, बीजों, सरकारी योजनाओं और नई तकनीकों की जानकारी देने हेतु विकासखंड, जिला और राज्य स्तर पर कृषि मेलों का आयोजन।',
+    benefit: 'कृषि उपकरणों का लाइव डेमो, विशेषज्ञों से सीधी सलाह, सरकारी योजनाओं की त्वरित जानकारी',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://dbt.mpdage.org/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'किसान क्रेडिट कार्ड (KCC) या खसरा',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Kisan Credit Card (KCC) or Khasra',
+      'Bank Passbook'
+    ],
+    steps: [
+      'कृषि विभाग द्वारा कृषि महोत्सव (जैसे 2026 में कृषि वर्ष) या मेलों की तिथियों की घोषणा स्थानीय अखबारों या ग्राम पंचायत के माध्यम से की जाती है।',
+      'घोषित तिथि पर आयोजन स्थल (Mela Ground/KVK) पर पहुंचें।',
+      'वहां लगे विभिन्न सरकारी और निजी कंपनियों के स्टॉल (Stalls) पर जाकर नई तकनीक और योजनाओं की जानकारी लें।',
+      'यदि कृषि यंत्र (ट्रैक्टर आदि) पर अनुदान चाहिए, तो मेले में दी गई जानकारी के अनुसार dbt.mpdage.org पोर्टल पर ऑनलाइन आवेदन करें।'
+    ],
+    stepsEn: [
+      'Dates of Krishi Mahotsav (like Krishi Varsh 2026) or Melas are announced by the Agri Dept via local newspapers or Gram Panchayats.',
+      'Reach the venue (Mela Ground/KVK) on the announced date.',
+      'Visit stalls of various govt and private companies there to get info on new tech and schemes.',
+      'If subsidy is needed on agri machinery (tractor, etc.), apply online on dbt.mpdage.org as per the guidance provided in the mela.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'सभी कृषक एवं आम नागरिक' }
+    ],
+    sourceNotes: 'MP कृषि विभाग के विस्तार (Extension) कार्यक्रमों से सत्यापित।',
+    detailedDescription: [
+      'कृषि मेला और प्रदर्शनी कोई सब्सिडी बांटने वाली सीधी योजना नहीं है, बल्कि यह सरकार द्वारा चलाया जाने वाला एक व्यापक कृषक-जागरूकता (Extension/Awareness) अभियान है।',
+      'इन मेलों में ट्रैक्टर, ड्रोन, ड्रिप सिंचाई जैसी आधुनिक मशीनों का जीवंत प्रदर्शन (Live Demo) किया जाता है। साथ ही बीज, खाद, कीटनाशक कंपनियां और बैंक भी अपने स्टॉल लगाते हैं ताकि किसानों को एक ही छत के नीचे सारी जानकारी मिल सके।'
+    ],
+    detailedDescriptionEn: [
+      'The Krishi Mela and Exhibition is not a direct subsidy-distributing scheme, but rather a comprehensive farmer-awareness (Extension) campaign run by the govt.',
+      'Live demos of modern machines like tractors, drones, drip irrigation are conducted in these fairs. Seed, fertilizer, pesticide companies, and banks also set up stalls so that farmers can get all info under one roof.'
+    ],
+    benefitsList: [
+      {
+        heading: 'मेलों में भाग लेने के लाभ', points: [
+          'विशेषज्ञों की सलाह: कृषि विज्ञान केंद्र (KVK) के वैज्ञानिक और कृषि अधिकारी मौजूद रहते हैं, जिनसे किसान फसल की बीमारियों और मिट्टी परीक्षण पर चर्चा कर सकते हैं।',
+          'योजनाओं की जानकारी: 0% ब्याज पर कर्ज, फसल बीमा (Fasal Bima), सोलर पंप (कुसुम योजना) जैसी सभी योजनाओं की जानकारी और आवेदन का तरीका समझाया जाता है।',
+          'कृषि यंत्र अनुदान: मेलों में कृषि यंत्रों के नए मॉडल दिखाए जाते हैं और बताया जाता है कि उन पर कितनी सब्सिडी (E-Krishi Yantra Anudan) उपलब्ध है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefits of Attending Melas', points: [
+          'Expert Advice: Scientists from Krishi Vigyan Kendra (KVK) and agri officers are present to discuss crop diseases and soil testing with farmers.',
+          'Scheme Info: Info and application methods for schemes like 0% interest loans, crop insurance (Fasal Bima), solar pumps (Kusum Yojana) are explained.',
+          'Agri Machinery Subsidy: New models of agri machinery are displayed, and info on available subsidies (E-Krishi Yantra Anudan) is provided.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'इन मेलों में प्रवेश और भाग लेने के लिए कोई पाबंदी नहीं है; मध्य प्रदेश का कोई भी किसान, महिला किसान, युवा या आम नागरिक इसमें जा सकता है।',
+      'मेले के दौरान यदि किसान किसी विशेष योजना (जैसे कृषि यंत्र अनुदान) के लिए पंजीयन करवाना चाहता है, বিন্দু, तो उसे उस योजना विशेष के पात्रता नियम पूरे करने होंगे (जैसे जमीन का खसरा होना)।'
+    ],
+    eligibilityDescriptionEn: [
+      'There is no restriction on entry and participation in these fairs; any farmer, women farmer, youth, or common citizen of MP can visit.',
+      'If a farmer wants to register for a specific scheme (like Agri Machinery Subsidy) during the fair, they must fulfill the eligibility rules for that specific scheme (like having land records).'
+    ],
+    exclusions: [
+      'मेला स्थल पर सीधे तौर पर नकद अनुदान (Cash subsidy) नहीं बांटा जाता है। अनुदान के लिए हमेशा विभागीय ऑनलाइन पोर्टल (DBT) के माध्यम से ही प्रक्रिया पूरी करनी होती है।'
+    ],
+    exclusionsEn: [
+      'Cash subsidies are not distributed directly at the mela venue. For subsidies, the process must always be completed through the departmental online portal (DBT).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Offline) भागीदारी', steps: [
+          'कृषि मेलों में भाग लेने के लिए किसी पूर्व ऑनलाइन आवेदन की आवश्यकता नहीं होती है।',
+          'किसान सीधे आयोजन स्थल पर जा सकते हैं।',
+          'मेले में लगे कृषक सहायता केंद्र (Help Desk) पर अपना नाम दर्ज कराकर विभागीय साहित्य (Brochures/Booklets) निःशुल्क प्राप्त कर सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline Participation', steps: [
+          'No prior online application is required to attend Krishi Melas.',
+          'Farmers can visit the venue directly.',
+          'By registering their names at the Farmer Help Desk in the mela, they can get departmental literature (Brochures/Booklets) for free.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे कृषि मेले में जाने के लिए कोई टिकट या फीस देनी होगी?', answer: 'नहीं, सरकार द्वारा आयोजित कृषि मेलों में प्रवेश बिल्कुल मुफ़्त (Free) होता है।' },
+      { question: 'कृषि मेला कब और कहाँ लगता है?', answer: 'यह समय-समय पर अलग-अलग ब्लॉक, जिला मुख्यालयों और राज्य स्तर पर (जैसे भोपाल/ग्वालियर में) लगता है। इसकी जानकारी ग्राम पंचायत सचिव, स्थानीय अखबार या कृषि विस्तार अधिकारी से ली जा सकती है।' }
+    ],
+    faqsEn: [
+      { question: 'Do I have to pay any ticket or fee to visit the Krishi Mela?', answer: 'No, entry to government-organized agricultural fairs is absolutely free.' },
+      { question: 'When and where are Krishi Melas held?', answer: 'They are held from time to time at diff blocks, district hqs, and state level (e.g., Bhopal/Gwalior). Info can be obtained from the Gram Panchayat Secy, local newspapers, or Agri Extension Officer.' }
+    ]
+  },
+  'mahila-krishi-bhagidari-yojana': {
+    ...reviewed,
+    title: 'कृषि में महिलाओं की भागीदारी योजना (MAPWA)',
+    english: 'Mahila Krishi Bhagidari Yojana (MAPWA)',
+    summary: 'कृषि क्षेत्र में महिला किसानों की कार्यकुशलता बढ़ाने और उन्हें आधुनिक तकनीकों से जोड़कर सशक्त बनाने हेतु विशेष प्रशिक्षण व तकनीकी सहायता।',
+    benefit: 'महिला कृषकों को कृषि यंत्रों, तकनीकों का व्यावहारिक प्रशिक्षण एवं उपकरण किट',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'परिवार या स्वयं की कृषि भूमि का प्रमाण',
+      'पासपोर्ट साइज फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Proof of Family/Self Agricultural Land',
+      'Passport Size Photo'
+    ],
+    steps: [
+      'अपने गांव के महिला स्व-सहायता समूह (SHG), आंगनवाड़ी या ग्रामीण कृषि विस्तार अधिकारी (RAEO) से संपर्क करें।',
+      'MAPWA परियोजना के तहत आयोजित होने वाले महिला कृषक प्रशिक्षण के लिए अपना नाम दर्ज कराएं।',
+      'प्रशिक्षण सत्र में भाग लेकर खेती की नई तकनीकें और छोटे कृषि यंत्रों का उपयोग सीखें।',
+      'प्रशिक्षण पूर्ण होने पर विभाग द्वारा महिला-अनुकूल कृषि उपकरण किट या प्रोत्साहन दिया जा सकता है।'
+    ],
+    stepsEn: [
+      'Contact the women SHG, Anganwadi, or Rural Agri Extension Officer (RAEO) of your village.',
+      'Register your name for women farmer training organized under the MAPWA project.',
+      'Participate in the training session to learn new farming techniques and use of small agri tools.',
+      'On completion of training, women-friendly agri tool kits or incentives may be given by the dept.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'केवल महिला कृषक (Women Farmers)' }
+    ],
+    sourceNotes: 'MAPWA (Participation of Women in Agriculture) प्रोजेक्ट से सत्यापित।',
+    detailedDescription: [
+      'MAPWA (Participation of Women in Madhya Pradesh Agriculture) योजना की शुरुआत मुख्य रूप से महिलाओं को कृषि में आत्मनिर्भर और सशक्त बनाने के लिए की गई है। अक्सर खेती का अधिकांश शारीरिक काम (Drudgery) महिलाएं करती हैं, लेकिन उन्हें तकनीकी ज्ञान और निर्णय लेने का अधिकार कम मिलता है।',
+      'इस योजना के माध्यम से महिला किसानों को ऐसी नई तकनीकें और छोटे हस्तचलित यंत्र (Hand-tools) सिखाए जाते हैं जिससे उनका शारीरिक श्रम कम हो और फसल उत्पादन व आय में वृद्धि हो।'
+    ],
+    detailedDescriptionEn: [
+      'The MAPWA scheme was started primarily to make women self-reliant and empowered in agriculture. Often women do most of the physical work (Drudgery) in farming, but they lack technical knowledge and decision-making power.',
+      'Through this scheme, women farmers are taught new techniques and small hand-tools that reduce their physical labor and increase crop production and income.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'कौशल विकास (Skill Development): महिलाओं को उन्नत बीज चयन, जैविक खाद बनाना, और फसल संरक्षण जैसी महत्वपूर्ण तकनीकी जानकारी मिलती है।',
+          'श्रम की बचत (Drudgery Reduction): महिलाओं के अनुकूल बनाए गए कृषि उपकरणों (जैसे- नवीन हँसिया, वीडर) का उपयोग सिखाया जाता है।',
+          'आत्मनिर्भरता: महिलाओं का आत्मविश्वास बढ़ता है जिससे वे कृषि संबंधी वित्तीय और तकनीकी निर्णय खुद ले पाती हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Skill Development: Women get important technical info like improved seed selection, making organic manure, and crop protection.',
+          'Drudgery Reduction: Use of women-friendly agricultural tools (like improved sickles, weeders) is taught.',
+          'Self-Reliance: Women\'s confidence increases so they can take financial and technical decisions related to agriculture themselves.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश की निवासी एक महिला किसान या कृषि मजदूर (Agricultural Laborer) होनी चाहिए।',
+      'महिला का स्वयं के नाम पर या उसके परिवार के नाम पर खेती की जमीन होना आवश्यक है।',
+      'स्व-सहायता समूहों (SHGs) से जुड़ी महिलाओं को इस प्रशिक्षण में विशेष प्राथमिकता दी जाती है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident woman farmer or agricultural laborer of Madhya Pradesh.',
+      'It is necessary for the woman to have farming land in her own name or her family\'s name.',
+      'Women associated with Self-Help Groups (SHGs) are given special priority in this training.'
+    ],
+    exclusions: [
+      'यह योजना केवल महिलाओं के लिए है; पुरुष किसान इसके तहत प्रशिक्षण या उपकरण के पात्र नहीं हैं।',
+      'यह योजना सीधे तौर पर कोई नकद आर्थिक सहायता (Cash transfer) नहीं देती, बल्कि प्रशिक्षण और तकनीकी कौशल पर केंद्रित है।'
+    ],
+    exclusionsEn: [
+      'This scheme is only for women; male farmers are not eligible for training or tools under it.',
+      'This scheme does not directly provide cash transfers, but focuses on training and technical skills.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Offline)', steps: [
+          'इस योजना का लाभ लेने के लिए कोई ऑनलाइन फॉर्म नहीं भरा जाता।',
+          'यह ग्राम स्तर पर कृषि विभाग, आत्मा (ATMA) परियोजना और महिला एवं बाल विकास विभाग के समन्वय से शिविर (Camps) लगाकर किया जाता है।',
+          'इच्छुक महिलाएं अपने क्षेत्र के कृषि विस्तार अधिकारी से मिलकर आगामी प्रशिक्षण शिविर की जानकारी ले सकती हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline', steps: [
+          'No online form is filled to avail this scheme.',
+          'It is implemented at the village level by organizing camps in coordination with the Agri Dept, ATMA project, and Women & Child Dev Dept.',
+          'Interested women can meet the Agri Extension Officer of their area to get info about the upcoming training camps.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या कृषि मजदूर महिलाएं (जिनके नाम जमीन नहीं है) इस योजना में भाग ले सकती हैं?', answer: 'हाँ, कृषि कार्यों (जैसे बुवाई, कटाई, निराई) में लगी महिला मजदूर भी कौशल विकास के लिए इन प्रशिक्षण कार्यक्रमों का हिस्सा बन सकती हैं।' },
+      { question: 'क्या MAPWA के तहत कोई लोन या पैसा मिलता है?', answer: 'नहीं, यह एक विस्तार और प्रशिक्षण (Training & Extension) योजना है। इसमें नकद राशि नहीं, बल्कि ज्ञान और उपयोगी कृषि उपकरण दिए जाते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can women agricultural laborers (who don\'t own land) participate in this scheme?', answer: 'Yes, women laborers engaged in agricultural activities (like sowing, harvesting, weeding) can also be part of these training programs for skill dev.' },
+      { question: 'Do we get any loan or money under MAPWA?', answer: 'No, it is a Training & Extension scheme. Cash is not given, rather knowledge and useful agricultural tools are provided.' }
+    ]
+  },
+  'kisan-mitra-prashikshan-yojana': {
+    ...reviewed,
+    title: 'कृषक मित्र (किसान मित्र) योजना',
+    english: 'Krishak Mitra Yojana',
+    summary: 'गांव के ही एक प्रगतिशील किसान को "कृषक मित्र" के रूप में प्रशिक्षित कर, अन्य किसानों तक सरकारी योजनाओं और नई तकनीकों की जानकारी पहुँचाना।',
+    benefit: 'कृषक मित्र को निःशुल्क विशेष प्रशिक्षण एवं विस्तार कार्यों के लिए विभागीय प्रोत्साहन',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'शैक्षणिक योग्यता (न्यूनतम 8वीं या 10वीं पास) का प्रमाण',
+      'कृषि भूमि के दस्तावेज़ (खसरा/B1)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Educational Qualification Proof (min 8th or 10th pass)',
+      'Agricultural Land Documents (Khasra/B1)',
+      'Bank Passbook'
+    ],
+    steps: [
+      'जब भी विभाग द्वारा कृषक मित्रों के चयन की अधिसूचना जारी हो, तब ग्राम पंचायत की ग्राम सभा में भाग लें।',
+      'ग्राम सभा द्वारा गांव के एक प्रगतिशील और पढ़े-लिखे किसान का चयन कृषक मित्र के रूप में किया जाता है।',
+      'चयनित कृषक मित्र को ब्लॉक/जिला स्तर पर कृषि विभाग द्वारा आवासीय प्रशिक्षण दिया जाता है।',
+      'प्रशिक्षण के बाद, कृषक मित्र अपने गांव के किसानों को मिट्टी परीक्षण, बीज उपचार, और योजनाओं की जानकारी देने का काम शुरू करता है।'
+    ],
+    stepsEn: [
+      'Whenever the dept issues notification for selection of Krishak Mitras, participate in the Gram Sabha.',
+      'The Gram Sabha selects a progressive and educated farmer of the village as a Krishak Mitra.',
+      'The selected Krishak Mitra is given residential training by the Agri Dept at the block/district level.',
+      'After training, the Krishak Mitra starts advising village farmers on soil testing, seed treatment, and schemes.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'पढ़े-लिखे प्रगतिशील किसान (ग्राम सभा द्वारा चयनित)' }
+    ],
+    sourceNotes: 'MP कृषि विभाग (विस्तार सेवा) एवं आत्मा (ATMA) से सत्यापित। (यह मुख्यमंत्री कृषक मित्र योजना (बिजली/पंप) से अलग है)।',
+    detailedDescription: [
+      'कृषक मित्र (Kisan Mitra) योजना राज्य सरकार की कृषि विस्तार (Agricultural Extension) रणनीति का एक महत्वपूर्ण हिस्सा है। इसका उद्देश्य सरकारी विभाग और आम किसानों के बीच की दूरी को खत्म करना है।',
+      'प्रत्येक गांव (या दो गांवों के समूह) से एक ऐसे किसान को चुना जाता है जो खेती में नई चीजें आजमाता हो और दूसरों की मदद करने को इच्छुक हो। सरकार उसे आधुनिक तकनीकों, योजनाओं और आपदा प्रबंधन (Disaster Management) में प्रशिक्षित करती है ताकि वह गांव वालों का सही मार्गदर्शन कर सके।'
+    ],
+    detailedDescriptionEn: [
+      'The Krishak Mitra scheme is an important part of the state govt\'s Agricultural Extension strategy. Its objective is to bridge the gap between the govt department and common farmers.',
+      'One farmer from each village (or a group of two villages) is selected who tries new things in farming and is willing to help others. The govt trains him in modern tech, schemes, and disaster management so he can guide the villagers correctly.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के लाभ (कृषक मित्र के लिए)', points: [
+          'विशेषज्ञ ज्ञान: कृषक मित्र को कृषि वैज्ञानिकों से सीधा प्रशिक्षण मिलता है, जिससे उनकी खुद की खेती और आय में भी सुधार होता है।',
+          'समाज में सम्मान: गांव के अन्य किसानों को योजनाओं का लाभ दिलाने और मिट्टी/पानी परीक्षण में मदद करने से गांव में एक सलाहकार (Guide) का दर्जा मिलता है।',
+          'सरकारी प्रोत्साहन: समय-समय पर विभाग द्वारा आयोजित बैठकों और दौरों में भाग लेने पर मानदेय या प्रोत्साहन राशि दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefits (For Krishak Mitra)', points: [
+          'Expert Knowledge: Krishak Mitra gets direct training from agri scientists, improving their own farming and income.',
+          'Social Respect: By helping other farmers get scheme benefits and in soil/water testing, they gain the status of a Guide in the village.',
+          'Govt Incentives: Honorarium or incentives are provided for participating in meetings and tours organized by the dept.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'कृषक मित्र बनने के लिए आवेदक को उसी गांव का स्थायी निवासी होना चाहिए।',
+      'वह स्वयं खेती करता हो (यानी सक्रिय किसान हो) और खेती में नई तकनीकों को अपनाने में आगे रहता हो (Progressive Farmer)।',
+      'आवेदक को कम से कम 8वीं या 10वीं पास होना चाहिए ताकि वह विभागीय कागजात, पोर्टल और योजनाओं की जानकारी पढ़-समझ सके।',
+      'उसका चयन ग्राम सभा के प्रस्ताव के माध्यम से किया गया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'To become a Krishak Mitra, the applicant must be a permanent resident of that village.',
+      'He/she must be actively farming and progressive in adopting new farming tech.',
+      'The applicant must have passed at least 8th or 10th class so they can read and understand departmental papers, portals, and schemes.',
+      'Their selection must have been passed through a Gram Sabha resolution.'
+    ],
+    exclusions: [
+      'कोई भी व्यक्ति अपनी मर्जी से या सिर्फ ऑनलाइन फॉर्म भरकर "कृषक मित्र" नहीं बन सकता, जब तक कि ग्राम सभा उसे न चुने।',
+      'ध्यान दें: यह योजना "मुख्यमंत्री कृषक मित्र योजना (बिजली/पंप कनेक्शन)" से अलग है। यह सिर्फ विस्तार (Extension) कार्य के लिए है।'
+    ],
+    exclusionsEn: [
+      'No person can become a Krishak Mitra by choice or by just filling an online form, unless chosen by the Gram Sabha.',
+      'Note: This scheme is diff from "Mukhyamantri Krishak Mitra Yojana (Electricity/Pump connection)". This is strictly for Extension work.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ग्राम सभा के माध्यम से (Offline)', steps: [
+          'विभाग द्वारा कृषक मित्र के खाली पदों की जानकारी जिला स्तर पर जारी की जाती है।',
+          'ग्रामीण कृषि विस्तार अधिकारी (RAEO) ग्राम सभा की बैठक में इस प्रस्ताव को रखते हैं।',
+          'इच्छुक किसान अपना नाम ग्राम सभा में प्रस्तावित करते हैं।',
+          'ग्राम सभा द्वारा सर्वसम्मति से किसी एक योग्य किसान का प्रस्ताव पारित कर ब्लॉक कार्यालय भेजा जाता है, जहां से अंतिम चयन होता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Through Gram Sabha (Offline)', steps: [
+          'Info about vacant posts of Krishak Mitra is released at the district level by the dept.',
+          'The RAEO places this proposal in the Gram Sabha meeting.',
+          'Interested farmers propose their names in the Gram Sabha.',
+          'The Gram Sabha unanimously passes a resolution for one eligible farmer and sends it to the block office for final selection.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या कृषक मित्र को कोई सरकारी वेतन (Salary) मिलता है?', answer: 'नहीं, कृषक मित्र कोई सरकारी नौकरी या वेतनभोगी पद नहीं है। यह एक स्वैच्छिक सेवा है, हालांकि प्रशिक्षण और बैठकों में भाग लेने पर विभाग द्वारा कुछ मानदेय (Honorarium) जरूर दिया जाता है।' },
+      { question: 'कृषक मित्र का मुख्य काम क्या होता है?', answer: 'किसानों को नई बीजों, खाद के सही उपयोग, मिट्टी परीक्षण के लिए सैंपल इकट्ठा कराने और सरकार की विभिन्न योजनाओं (जैसे भावान्तर, फसल बीमा) में फॉर्म भरने में मदद करना।' }
+    ],
+    faqsEn: [
+      { question: 'Does Krishak Mitra get any govt salary?', answer: 'No, Krishak Mitra is not a govt job or salaried post. It is a voluntary service, though some honorarium is given by the dept for attending training and meetings.' },
+      { question: 'What is the main work of a Krishak Mitra?', answer: 'Helping farmers with new seeds, correct use of fertilizers, collecting soil test samples, and helping them fill forms for various govt schemes (like Bhavantar, Fasal Bima).' }
+    ]
+  },
+  'jaivik-kheti-protsahan-yojana': {
+    ...reviewed,
+    title: 'परम्परागत कृषि विकास योजना (जैविक खेती प्रोत्साहन)',
+    english: 'Paramparagat Krishi Vikas Yojana (PKVY) - Organic Farming',
+    summary: 'किसानों को क्लस्टर बनाकर रसायन मुक्त जैविक खेती अपनाने के लिए प्रशिक्षण, प्रमाणीकरण और 3 वर्षों तक प्रति हेक्टेयर ₹31,500 तक का अनुदान।',
+    benefit: 'जैविक खाद, कीटनाशक, पैकेजिंग और प्रमाणीकरण हेतु 3 वर्ष में ₹31,500 प्रति हेक्टेयर (DBT)',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://dbt.mpdage.org/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / बी-1 (कृषि भूमि के दस्तावेज़)',
+      'बैंक पासबुक (DBT लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / B-1 (Agricultural Land Documents)',
+      'Bank Passbook (DBT linked)'
+    ],
+    steps: [
+      'योजना क्लस्टर आधारित है। अपने क्षेत्र के कृषि विज्ञान केंद्र (KVK) या कृषि विभाग से संपर्क कर जैविक क्लस्टर (20 हेक्टेयर) से जुड़ें।',
+      'PKVY या MP Krishi DBT पोर्टल पर अपना पंजीयन कराएं।',
+      'विभाग द्वारा बताई गई जैविक/प्राकृतिक विधि से खेती करें और वर्मी कम्पोस्ट यूनिट बनाएं।',
+      'जैविक प्रमाणीकरण (PGS) और इनपुट खरीदी के बिल प्रस्तुत करने पर अनुदान राशि किश्तों में DBT के माध्यम से खाते में आएगी।'
+    ],
+    stepsEn: [
+      'The scheme is cluster-based. Contact the local KVK or Agri Dept to join an organic cluster (20 hectares).',
+      'Register on the PKVY or MP Krishi DBT portal.',
+      'Farm using organic/natural methods as guided by the dept and set up a vermicompost unit.',
+      'Upon submitting organic certification (PGS) and input purchase bills, the subsidy amount will be credited to the account via DBT in installments.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान (20 हेक्टेयर का क्लस्टर)' }
+    ],
+    sourceNotes: 'PKVY (Paramparagat Krishi Vikas Yojana) और MP कृषि विभाग दिशा-निर्देशों से सत्यापित।',
+    detailedDescription: [
+      'परम्परागत कृषि विकास योजना (PKVY) के तहत जैविक खेती (Organic Farming) को बढ़ावा दिया जाता है। इसका मुख्य उद्देश्य मिट्टी की उर्वरता (Soil health) बढ़ाना और रासायनिक खादों/दवाओं का उपयोग बंद कर पर्यावरण अनुकूल प्राकृतिक खेती करना है।',
+      'इस योजना में किसानों को 20 हेक्टेयर के समूह (Cluster) में काम करना होता है। सरकार जैविक बीज, वर्मी कम्पोस्ट, बायो-पेस्टीसाइड (जैविक कीटनाशक) से लेकर पैकेजिंग और सर्टिफिकेशन (PGS) तक के लिए वित्तीय मदद देती है।'
+    ],
+    detailedDescriptionEn: [
+      'Under the Paramparagat Krishi Vikas Yojana (PKVY), organic farming is promoted. Its main objective is to increase soil fertility and practice environment-friendly natural farming by stopping the use of chemical fertilizers/pesticides.',
+      'In this scheme, farmers have to work in a group (Cluster) of 20 hectares. The govt provides financial help for organic seeds, vermicompost, bio-pesticides, to packaging and certification (PGS).'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'वित्तीय सहायता: कुल 3 वर्षों में 31,500 रुपये प्रति हेक्टेयर का अनुदान मिलता है। (इसमें इनपुट खरीदी, पैकेजिंग, ब्रांडिंग, और प्रशिक्षण शामिल है)।',
+          'जैविक प्रमाणीकरण (Certification): किसानों को PGS-India के तहत मुफ़्त/रियायती दरों पर सर्टिफिकेशन मिलता है, जिससे बाजार में उत्पाद आसानी से बिकता है।',
+          'बाजार लिंक (Market Linkage): jaivikkheti.in पोर्टल के माध्यम से किसान अपनी जैविक उपज (Organic produce) को प्रीमियम दामों पर देश-विदेश में बेच सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Financial Assistance: A subsidy of ₹31,500 per hectare is given over a period of 3 years. (This includes input purchase, packaging, branding, and training).',
+          'Organic Certification: Farmers get certification under PGS-India at free/concessional rates, making it easier to sell products in the market.',
+          'Market Linkage: Through the jaivikkheti.in portal, farmers can sell their organic produce at premium prices across the country and abroad.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'मध्य प्रदेश का कोई भी किसान जिसके पास कृषि योग्य भूमि है, आवेदन कर सकता है।',
+      'किसान को कम से कम 3 साल तक अपने खेत में रासायनिक खाद/दवा का उपयोग न करने का संकल्प (Pledge) लेना होता है।',
+      'यह योजना अकेले (Individual) किसान के बजाय 20 हेक्टेयर या उससे अधिक के क्लस्टर (समूह) में लागू की जाती है, इसलिए 15-20 किसानों का समूह होना आवश्यक है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Any farmer of Madhya Pradesh who has cultivable land can apply.',
+      'The farmer has to take a pledge not to use chemical fertilizers/pesticides in his field for at least 3 years.',
+      'This scheme is implemented in a cluster (group) of 20 hectares or more instead of an individual farmer, so a group of 15-20 farmers is required.'
+    ],
+    exclusions: [
+      'जो किसान रासायनिक खेती जारी रखना चाहते हैं, वे इस योजना का लाभ नहीं ले सकते।',
+      'यदि खेत में अचानक रासायनिक उर्वरक का उपयोग पकड़ा जाता है, तो जैविक प्रमाणीकरण रद्द कर दिया जाता है और अनुदान रोक दिया जाता है।'
+    ],
+    exclusionsEn: [
+      'Farmers who want to continue chemical farming cannot avail the benefits of this scheme.',
+      'If the use of chemical fertilizers is suddenly caught in the field, the organic certification is cancelled and the subsidy is stopped.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'क्लस्टर/विभागीय आवेदन', steps: [
+          'अपने क्षेत्र के कृषि विस्तार अधिकारी (RAEO) से मिलकर 20-50 हेक्टेयर का जैविक क्लस्टर (समूह) बनाएं।',
+          'कृषि विभाग द्वारा इस क्लस्टर को राज्य की कार्ययोजना (Action Plan) में शामिल कर केंद्र सरकार को भेजा जाता है।',
+          'स्वीकृति मिलने के बाद, किसानों का पंजीयन MP Krishi DBT (dbt.mpdage.org) पोर्टल पर किया जाता है।',
+          'तय मानकों के अनुसार खेती करने पर अनुदान सीधा किसानों के बैंक खाते में आता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Cluster/Departmental Application', steps: [
+          'Meet the Agri Extension Officer (RAEO) of your area and form an organic cluster of 20-50 hectares.',
+          'The Agri Dept includes this cluster in the State Action Plan and sends it to the Central Govt.',
+          'After approval, farmers are registered on the MP Krishi DBT (dbt.mpdage.org) portal.',
+          'On farming according to the set standards, the subsidy comes directly into the farmers\' bank accounts.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या एक अकेला किसान इस योजना का लाभ ले सकता है?', answer: 'नहीं, यह एक क्लस्टर (समूह) आधारित योजना है। एक गांव या आसपास के कुछ किसानों को मिलकर कम से कम 20 हेक्टेयर (लगभग 50 एकड़) का क्षेत्र बनाना पड़ता है।' },
+      { question: 'अनुदान कितने समय तक मिलता है?', answer: 'PGS जैविक प्रमाणीकरण की प्रक्रिया के तहत यह अनुदान लगातार 3 वर्षों तक अलग-अलग किश्तों (Inputs, Branding, Certification) में दिया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can a single farmer avail this scheme?', answer: 'No, this is a cluster-based scheme. A group of farmers in a village or nearby areas has to form an area of at least 20 hectares (approx 50 acres).' },
+      { question: 'For how long is the subsidy given?', answer: 'Under the PGS organic certification process, this subsidy is given in diff installments (Inputs, Branding, Certification) continuously for 3 years.' }
+    ]
+  },
+  'balram-tal-yojana': {
+    ...reviewed,
+    title: 'बलराम ताल योजना (खेत तालाब)',
+    english: 'Balram Tal Yojana (Farm Pond Scheme)',
+    summary: 'खेतों में बारिश का पानी सहेजने और सिंचाई क्षमता बढ़ाने के लिए पक्का या कच्चा तालाब (बलराम ताल) बनाने पर 1 लाख रुपये तक की भारी सब्सिडी।',
+    benefit: 'तालाब निर्माण पर सामान्य वर्ग को 40% (₹80K), छोटे किसानों को 50% (₹80K) व SC/ST को 75% (₹1 लाख) तक अनुदान',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://dbt.mpdage.org/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि का खसरा/बी-1',
+      'जाति प्रमाण पत्र (SC/ST के लिए)',
+      'ड्रिप/स्प्रिंकलर (सूक्ष्म सिंचाई) का प्रमाण/बिल'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Land Records (Khasra/B-1)',
+      'Caste Certificate (for SC/ST)',
+      'Proof/Bill of Drip/Sprinkler (Micro Irrigation)'
+    ],
+    steps: [
+      'कृषि अभियांत्रिकी पोर्टल (dbt.mpdage.org) पर बलराम ताल योजना का लक्ष्य (Target) जारी होने पर ऑनलाइन आवेदन करें।',
+      'आवेदन लॉटरी (Lottery) द्वारा चुना जाता है। चयन होने पर विभाग का उप-यंत्री (Sub-engineer) खेत का मुआयना कर लेआउट (Layout) बनाता है।',
+      'तय मापदंडों के अनुसार अपने खर्चे पर जेसीबी/मशीन से खेत में तालाब खुदवाएं।',
+      'तालाब पूरा होने पर विभाग सत्यापन (Physical verification) करता है, जिसके बाद सब्सिडी की राशि (DBT) खाते में आती है।'
+    ],
+    stepsEn: [
+      'Apply online on the Agri Engineering portal (dbt.mpdage.org) when the target for Balram Tal Yojana is released.',
+      'Applications are selected via Lottery. If selected, the dept\'s sub-engineer inspects the field and prepares a layout.',
+      'Dig the pond in the field using JCB/machine at your own expense as per the set parameters.',
+      'On completion, the dept does a physical verification, after which the subsidy amount (DBT) comes into the account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान (ड्रिप/स्प्रिंकलर अनिवार्य)' }
+    ],
+    sourceNotes: 'कृषि अभियांत्रिकी (dbt.mpdage.org) पोर्टल और MP कृषि विभाग के दिशा-निर्देशों से सत्यापित।',
+    detailedDescription: [
+      'बलराम ताल योजना का मुख्य उद्देश्य वर्षा जल संचयन (Rainwater harvesting) करना और भू-जल स्तर (Groundwater level) को सुधारना है। इससे किसान बरसात के पानी को खेत के ही एक हिस्से (तालाब) में रोक सकते हैं, और बाद में रबी/खरीफ की फसल की सिंचाई के लिए उसका उपयोग कर सकते हैं।',
+      'इस योजना के तहत किसान कच्चा या पक्का (प्लास्टिक लाइनिंग वाला) तालाब बना सकते हैं। तालाब के आकार (Volume) और मिट्टी की खुदाई के काम के आधार पर विभाग सब्सिडी की गणना करता है।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of Balram Tal Yojana is rainwater harvesting and improving the groundwater level. With this, farmers can hold rainwater in a part of the field (pond) and later use it to irrigate Rabi/Kharif crops.',
+      'Under this scheme, farmers can build a raw (kaccha) or paved (with plastic lining) pond. The dept calculates the subsidy based on the size (Volume) of the pond and the soil excavation work.'
+    ],
+    benefitsList: [
+      {
+        heading: 'अनुदान (Subsidy) का विवरण', points: [
+          'सामान्य वर्ग (General): लागत का 40% (अधिकतम 80,000 रुपये तक)।',
+          'लघु एवं सीमांत कृषक (Small/Marginal): लागत का 50% (अधिकतम 80,000 रुपये तक)।',
+          'अनुसूचित जाति/जनजाति (SC/ST): लागत का 75% (अधिकतम 1,00,000 रुपये तक)।',
+          'जल संचयन: तालाब बनने से खेत की सिंचाई क्षमता बढ़ती है और आसपास के कुओं/ट्यूबवेल का वाटर लेवल भी रिचार्ज होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Details', points: [
+          'General Category: 40% of the cost (up to max ₹80,000).',
+          'Small/Marginal Farmers: 50% of the cost (up to max ₹80,000).',
+          'SC/ST: 75% of the cost (up to max ₹1,00,000).',
+          'Water Harvesting: Building a pond increases the irrigation capacity of the field and recharges the water level of nearby wells/tubewells.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और किसान होना चाहिए।',
+      'खेत में कम से कम ड्रिप (Drip) या स्प्रिंकलर (Sprinkler - फव्वारा) सिंचाई प्रणाली स्थापित होना अनिवार्य शर्त (Mandatory) है।',
+      'जिन किसानों के पास पहले से नहरी या ट्यूबवेल की पक्की व्यवस्था है, उन्हें प्राथमिकता नहीं दी जाती, बल्कि असिंचित क्षेत्रों को तरजीह दी जाती है।',
+      'तालाब का न्यूनतम आकार शासन द्वारा तय मानकों (जैसे 1200 घन मीटर) के अनुसार होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident and farmer of Madhya Pradesh.',
+      'It is a mandatory condition to have a Drip or Sprinkler irrigation system installed in the field.',
+      'Farmers who already have confirmed canal or tubewell arrangements are not given priority; instead, unirrigated areas are preferred.',
+      'The minimum size of the pond should be as per the standards set by the govt (e.g., 1200 cubic meters).'
+    ],
+    exclusions: [
+      'यदि किसान के पास ड्रिप या स्प्रिंकलर सिस्टम नहीं है, तो वह बलराम ताल के लिए आवेदन नहीं कर सकता।',
+      'अनुदान की राशि सीधे ठेकेदार को नहीं बल्कि किसान के बैंक खाते में दी जाती है (किसान को पहले खुद के पैसे से निर्माण करना होता है)।'
+    ],
+    exclusionsEn: [
+      'If the farmer does not have a drip or sprinkler system, he cannot apply for Balram Tal.',
+      'The subsidy amount is not given directly to the contractor but to the farmer\'s bank account (the farmer has to construct with his own money first).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Online Lottery)', steps: [
+          'जब कृषि विभाग (dbt.mpdage.org) द्वारा बलराम ताल के लक्ष्य (Targets) जारी किए जाते हैं, तब ऑनलाइन फॉर्म भरें।',
+          'पोर्टल पर धरोहर राशि (Security Deposit - यदि लागू हो) का बैंक ड्राफ्ट अपलोड करें।',
+          'कम्प्यूटरीकृत लॉटरी निकाली जाती है। यदि आपका नाम आता है, तो आपको 7-15 दिन के भीतर अपने खसरा/ड्रिप के बिल आदि पोर्टल पर अपलोड करने होते हैं।',
+          'विभाग से लेआउट (Approval) मिलने के बाद ही काम शुरू करें। बिना अप्रूवल काम शुरू करने पर सब्सिडी नहीं मिलेगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online Lottery', steps: [
+          'Fill the online form when the targets for Balram Tal are released by the Agri Dept (dbt.mpdage.org).',
+          'Upload the bank draft of the Security Deposit (if applicable) on the portal.',
+          'A computerized lottery is drawn. If selected, upload your Khasra/Drip bills etc. on the portal within 7-15 days.',
+          'Start work only after getting the layout (Approval) from the dept. No subsidy if work starts without approval.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे बलराम ताल बनवाने के लिए पहले पूरे पैसे खुद लगाने होंगे?', answer: 'हाँ, किसान को पहले अपने संसाधनों से तालाब खुदवाना होता है। काम पूरा होने और सरकारी इंजीनियर द्वारा नाप (Measurement) करने के बाद सब्सिडी का पैसा खाते में आता है।' },
+      { question: 'क्या ड्रिप या स्प्रिंकलर लगाना सच में ज़रूरी है?', answer: 'हाँ, मध्य प्रदेश सरकार के नए नियमों के अनुसार बलराम ताल पर सब्सिडी तभी मिलेगी जब आपके पास सूक्ष्म सिंचाई (Micro-irrigation) का सिस्टम मौजूद हो।' }
+    ],
+    faqsEn: [
+      { question: 'Do I have to invest full money myself first to build Balram Tal?', answer: 'Yes, the farmer has to dig the pond first with their own resources. The subsidy money comes into the account after completion and measurement by the govt engineer.' },
+      { question: 'Is it really necessary to install drip or sprinkler?', answer: 'Yes, as per new MP Govt rules, Balram Tal subsidy will only be given if you have a micro-irrigation system present.' }
+    ]
+  },
+  'annapurna-beej-yojana': {
+    ...reviewed,
+    title: 'अन्नपूर्णा योजना (बीज अदला-बदली)',
+    english: 'Annapurna Yojana (Seed Exchange Scheme)',
+    summary: 'अनुसूचित जाति (SC) और अनुसूचित जनजाति (ST) के छोटे किसानों को पुराने बीजों के बदले प्रमाणित और उन्नत किस्म के बीज उपलब्ध कराना।',
+    benefit: 'खाद्यान्न फसलों (जैसे गेहूं, धान, चना) के उन्नत बीजों की अदला-बदली पर 75% तक अनुदान',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / बी-1 (कृषि भूमि प्रमाण)',
+      'SC/ST जाति प्रमाण पत्र',
+      'पुराना बीज (विनिमय हेतु)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / B-1 (Agricultural Land Proof)',
+      'SC/ST Caste Certificate',
+      'Old Seeds (for exchange)'
+    ],
+    steps: [
+      'बुवाई (रबी/खरीफ) के मौसम से पहले अपने ब्लॉक के ग्रामीण कृषि विस्तार अधिकारी (RAEO) या सेवा सहकारी समिति से संपर्क करें।',
+      'अपना जाति प्रमाण पत्र और भूमि रिकॉर्ड (खसरा) प्रस्तुत करें।',
+      'अपने पुराने/परंपरागत बीजों को जमा कर निर्धारित मात्रा में नए, प्रमाणित (Certified/HYV) बीज प्राप्त करें।',
+      'बीज की लागत पर अनुदान (Subsidy) काटकर बची हुई राशि ही आपको चुकानी होगी (या अदला-बदली में समायोजित होगी)।'
+    ],
+    stepsEn: [
+      'Contact the Rural Agri Extension Officer (RAEO) of your block or Service Coop Society before the sowing season (Rabi/Kharif).',
+      'Submit your caste certificate and land records (Khasra).',
+      'Deposit your old/traditional seeds and get the prescribed quantity of new, certified (HYV) seeds.',
+      'You only have to pay the remaining amount after deducting the subsidy on the cost of the seed (or it will be adjusted in exchange).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'लघु एवं सीमांत किसान (अधिकतम 1-2 हेक्टेयर)' }
+    ],
+    sourceNotes: 'MP कृषि विभाग एवं myScheme पोर्टल से सत्यापित (यह राशन/खाद्यान्न वाली अन्नपूर्णा योजना से अलग है, यह कृषि बीज विनिमय योजना है)।',
+    detailedDescription: [
+      'अन्नपूर्णा योजना मध्य प्रदेश कृषि विभाग की एक विशेष बीज विनिमय (Seed Exchange) योजना है। (नोट: कृपया इसे राशन वाली अन्नपूर्णा योजना न समझें)। इसका मुख्य उद्देश्य अनुसूचित जाति और जनजाति के किसानों की फसल पैदावार बढ़ाना है।',
+      'प्रायः छोटे किसान हर साल एक ही पुराना बीज बोते हैं जिससे उपज कम हो जाती है। इस योजना के तहत सरकार किसानों के पुराने बीज (Local seeds) लेकर उन्हें उच्च उपज देने वाले प्रमाणित बीज (High Yielding Varieties - HYV) देती है।'
+    ],
+    detailedDescriptionEn: [
+      'Annapurna Yojana is a special Seed Exchange scheme of the MP Agri Dept. (Note: Please do not confuse it with the ration Annapurna Yojana). Its main objective is to increase the crop yield of SC and ST farmers.',
+      'Often small farmers sow the same old seed every year which reduces the yield. Under this scheme, the govt takes the old seeds of the farmers and gives them certified High Yielding Varieties (HYV) seeds.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'बीज प्रतिस्थापन (Seed Replacement): किसानों को उत्तम गुणवत्ता के रोग-मुक्त और अधिक पैदावार वाले बीज मिलते हैं।',
+          'वित्तीय अनुदान: प्रमाणित बीज की कीमत पर सरकार द्वारा भारी सब्सिडी (प्रायः 75% तक) दी जाती है, जिससे किसानों पर आर्थिक बोझ नहीं पड़ता।',
+          'फसल कवरेज: यह योजना मुख्य रूप से धान, गेहूं, मक्का, ज्वार, बाजरा, और चना जैसी प्रमुख खाद्यान्न फसलों के लिए लागू है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Seed Replacement: Farmers get good quality, disease-free, and high-yielding seeds.',
+          'Financial Subsidy: Heavy subsidy (often up to 75%) is given by the govt on the price of certified seeds, relieving the financial burden on farmers.',
+          'Crop Coverage: This scheme is mainly applicable for major food grain crops like paddy, wheat, maize, jowar, bajra, and gram.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'किसान का अनुसूचित जाति (SC) या अनुसूचित जनजाति (ST) वर्ग से होना अनिवार्य है।',
+      'किसान लघु या सीमांत (Small or Marginal) श्रेणी का होना चाहिए (यानी 1 से 2 हेक्टेयर तक कृषि भूमि)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native of Madhya Pradesh.',
+      'It is mandatory for the farmer to belong to the Scheduled Caste (SC) or Scheduled Tribe (ST) category.',
+      'The farmer must belong to the Small or Marginal category (i.e., having 1 to 2 hectares of agricultural land).'
+    ],
+    exclusions: [
+      'सामान्य (General) या अन्य पिछड़ा वर्ग (OBC) के किसान इस योजना (अन्नपूर्णा) के पात्र नहीं हैं (उनके लिए सूरजधारा या अन्य योजनाएं हो सकती हैं)।',
+      'बड़े किसान (जिनके पास अधिक जमीन है) इस योजना का लाभ नहीं ले सकते।'
+    ],
+    exclusionsEn: [
+      'Farmers of General or Other Backward Classes (OBC) are not eligible for this scheme (Annapurna) (there might be Surajdhara or other schemes for them).',
+      'Large farmers (who have more land) cannot avail the benefits of this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Offline)', steps: [
+          'यह योजना ऑनलाइन पोर्टल से ज़्यादा ज़मीनी स्तर पर काम करती है।',
+          'बुवाई के सीज़न (खरीफ या रबी) से ठीक पहले ग्राम पंचायत या कृषि विस्तार अधिकारी से बीज वितरण की तारीख पूछें।',
+          'निर्धारित शिविर या सहकारी समिति (Cooperative Society) में जाकर अपने दस्तावेज़ दिखाएं और पुराने बीज के बदले नए बीज प्राप्त करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline', steps: [
+          'This scheme works more at the ground level than through online portals.',
+          'Ask the Gram Panchayat or Agri Extension Officer about the date of seed distribution just before the sowing season (Kharif or Rabi).',
+          'Go to the designated camp or Cooperative Society, show your documents and get new seeds in exchange for old ones.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या इस योजना में केवल अनाज के बीज मिलते हैं या सब्जियों के भी?', answer: 'अन्नपूर्णा योजना मुख्य रूप से खाद्यान्न फसलों (अनाज - गेहूं, धान, मक्का आदि) के बीजों के लिए है।' },
+      { question: 'सूरजधारा और अन्नपूर्णा योजना में क्या अंतर है?', answer: 'दोनों योजनाएं SC/ST किसानों के लिए हैं। लेकिन सूरजधारा योजना दलहन/तिलहन (Pulses/Oilseeds) के बीजों के लिए है, जबकि अन्नपूर्णा योजना खाद्यान्न (Foodgrains) फसलों के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'Are only grain seeds available in this scheme or vegetable seeds too?', answer: 'Annapurna Yojana is primarily for seeds of food grain crops (cereals - wheat, paddy, maize etc.).' },
+      { question: 'What is the diff between Surajdhara and Annapurna Yojana?', answer: 'Both schemes are for SC/ST farmers. But Surajdhara Yojana is for Pulses/Oilseeds seeds, while Annapurna Yojana is for Foodgrain crops.' }
+    ]
+  },
+  'bailgadi-anudan-yojana': {
+    ...reviewed,
+    title: 'बैलगाड़ी / बैल जोड़ी अनुदान योजना',
+    english: 'Bailgadi (Bullock Cart) Subsidy Scheme',
+    summary: 'छोटे और सीमांत किसानों को खेती के काम और फसल परिवहन के लिए बैलगाड़ी या बैल जोड़ी खरीदने पर 50% तक सरकारी अनुदान।',
+    benefit: 'बैलगाड़ी एवं बैलों की खरीद पर 50% सरकारी अनुदान (विभिन्न जिलों में लक्ष्य के अनुसार)',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://dbt.mpdage.org/',
+    applicationUrl: 'https://dbt.mpdage.org/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / बी-1 (लघु/सीमांत किसान का प्रमाण)',
+      'जाति प्रमाण पत्र (यदि लागू हो)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / B-1 (Proof of Small/Marginal Farmer)',
+      'Caste Certificate (if applicable)',
+      'Bank Passbook'
+    ],
+    steps: [
+      'अपने जिले के कृषि विभाग (उप संचालक कृषि) या कृषि अभियांत्रिकी पोर्टल (dbt.mpdage.org) पर योजना के लक्ष्य (Targets) की जानकारी लें।',
+      'लक्ष्य जारी होने पर ऑनलाइन या ब्लॉक कार्यालय के माध्यम से निर्धारित फॉर्म भरें।',
+      'स्वीकृति (Approval) मिलने के बाद बैल या बैलगाड़ी (निर्धारित मापदंडों की) खरीदें और विभाग को बिल प्रस्तुत करें।',
+      'सत्यापन (Physical Verification) के बाद अनुदान की राशि सीधे आपके बैंक खाते (DBT) में ट्रांसफर कर दी जाएगी।'
+    ],
+    stepsEn: [
+      'Get info about the targets of the scheme from the Agri Dept of your district or the Agri Engineering portal (dbt.mpdage.org).',
+      'When targets are released, fill the prescribed form online or through the block office.',
+      'After getting approval, buy the bullocks or bullock cart (of set parameters) and submit the bill to the dept.',
+      'After physical verification, the subsidy amount will be transferred directly to your bank account (DBT).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'लघु एवं सीमांत किसान' }
+    ],
+    sourceNotes: 'कृषि विभाग की यह योजना समय-समय पर जिला स्तर या विशिष्ट अभियानों के तहत चलाई जाती है।',
+    detailedDescription: [
+      'मध्य प्रदेश में कृषि यंत्रीकरण (Mechanization) के साथ-साथ पारंपरिक खेती को भी सहारा दिया जाता है। छोटे और सीमांत किसानों (Small & Marginal Farmers) के लिए ट्रैक्टर खरीदना संभव नहीं होता।',
+      'ऐसे किसानों को अपने खेत की जुताई, खाद-बीज लाने और फसल को मंडी तक ले जाने के लिए परिवहन (Transport) के साधन की जरूरत होती है। इसी समस्या को सुलझाने के लिए सरकार बैल जोड़ी या बैलगाड़ी खरीदने पर अनुदान (Subsidy) प्रदान करती है।'
+    ],
+    detailedDescriptionEn: [
+      'Along with agricultural mechanization, traditional farming is also supported in Madhya Pradesh. It is not possible for small and marginal farmers to buy tractors.',
+      'Such farmers need means of transport for ploughing their fields, bringing fertilizers/seeds, and taking crops to the mandi. To solve this problem, the govt provides subsidy on buying a pair of bullocks or a bullock cart.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'वित्तीय सहायता: बैलगाड़ी या बैल जोड़ी की खरीद पर सरकार द्वारा 50% तक (अधिकतम निर्धारित सीमा तक) अनुदान दिया जाता है।',
+          'परिवहन में आसानी: किसानों को किराए के वाहनों पर निर्भर नहीं रहना पड़ता, जिससे उनकी परिवहन लागत (Transport cost) बचती है।',
+          'पारंपरिक खेती को बढ़ावा: छोटे खेतों के लिए बैल चालित उपकरण पर्यावरण के अनुकूल और सस्ते होते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Financial Assistance: Subsidy of up to 50% (up to a max set limit) is given by the govt on the purchase of bullock cart or pair of bullocks.',
+          'Ease of Transport: Farmers do not have to depend on hired vehicles, saving their transport cost.',
+          'Promoting Traditional Farming: For small farms, bullock-driven tools are eco-friendly and cheaper.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और पेशे से किसान होना चाहिए।',
+      'किसान के पास 2 हेक्टेयर या उससे कम कृषि भूमि (यानी वह लघु/सीमांत कृषक) होनी चाहिए।',
+      'किसान ने पिछले कुछ वर्षों में इस प्रकार की किसी अन्य पशु/वाहन अनुदान योजना का लाभ न लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native of Madhya Pradesh and a farmer by profession.',
+      'The farmer should have 2 hectares or less agricultural land (i.e., a small/marginal farmer).',
+      'The farmer should not have availed the benefit of any such other animal/vehicle subsidy scheme in the last few years.'
+    ],
+    exclusions: [
+      'बड़े किसान जिनके पास अधिक जमीन है या जिनके नाम पर ट्रैक्टर पंजीकृत है, वे इस योजना के पात्र नहीं हैं।',
+      'यह योजना हर समय खुली नहीं रहती; इसके लिए जिलेवार लक्ष्य (Targets) और बजट आने पर ही आवेदन स्वीकार किए जाते हैं।'
+    ],
+    exclusionsEn: [
+      'Large farmers who have more land or have a tractor registered in their name are not eligible for this scheme.',
+      'This scheme is not open all the time; applications are accepted only when district-wise targets and budgets arrive.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन / ऑनलाइन (योजना सक्रिय होने पर)', steps: [
+          'यह जांचने के लिए कि योजना वर्तमान में आपके जिले में सक्रिय है या नहीं, अपने पंचायत सचिव या कृषि विस्तार अधिकारी से मिलें।',
+          'जब आवेदन खुलें, तो अपने खसरा दस्तावेज़ और आधार कार्ड के साथ आवेदन फॉर्म जमा करें।',
+          'चयन होने पर विभाग की अनुमति पत्र मिलने के बाद ही बैल/बैलगाड़ी की खरीदी करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Online (when scheme is active)', steps: [
+          'To check if the scheme is currently active in your district, meet your Panchayat Secretary or Agri Extension Officer.',
+          'When applications open, submit the application form along with your Khasra docs and Aadhaar Card.',
+          'Upon selection, purchase the bull/cart only after receiving the dept\'s permission letter.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं किसी भी बाज़ार से बैलगाड़ी खरीद सकता हूँ?', answer: 'हां, लेकिन खरीद का पक्का बिल (GST/TIN वाला यदि लागू हो) और विभाग द्वारा निर्धारित मापदंडों (जैसे टायर वाली बैलगाड़ी) का पालन करना ज़रूरी होता है। अधिकारियों से पूछकर ही खरीदी करें।' },
+      { question: 'क्या यह योजना अभी चालू है?', answer: 'इस योजना के लक्ष्य जिलेवार आते हैं। वर्तमान स्थिति के लिए आपको dbt.mpdage.org पोर्टल या अपने कृषि कार्यालय में संपर्क करना होगा।' }
+    ],
+    faqsEn: [
+      { question: 'Can I buy a bullock cart from any market?', answer: 'Yes, but a valid purchase bill and adherence to dept parameters (like tyre bullock cart) are necessary. Buy only after asking the officials.' },
+      { question: 'Is this scheme currently active?', answer: 'The targets of this scheme come district-wise. For the current status, you have to contact the dbt.mpdage.org portal or your agri office.' }
+    ]
+  },
+  'ambedkar-medhavi-vidyarthi-puraskar': {
+    ...reviewed,
+    title: 'डॉ. बी.आर. अम्बेडकर मेधावी विद्यार्थी पुरस्कार योजना',
+    english: 'Dr. B.R. Ambedkar Medhavi Vidyarthi Puraskar Yojana',
+    summary: 'अनुसूचित जाति (SC) के मेधावी छात्र-छात्राओं को 10वीं और 12वीं की बोर्ड परीक्षाओं में उत्कृष्ट प्रदर्शन (मेरिट) करने पर नकद पुरस्कार।',
+    benefit: 'बोर्ड परीक्षा में टॉप करने वाले SC छात्रों को ₹10,000 से ₹30,000 तक नकद पुरस्कार व प्रमाण पत्र',
+    department: 'अनुसूचित जाति कल्याण विभाग',
+    sourceUrl: 'https://scdevelopmentmp.nic.in/',
+    applicationUrl: 'https://scdevelopmentmp.nic.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'डिजिटल जाति प्रमाण पत्र (SC)',
+      '10वीं / 12वीं की अंकसूची (Marksheet)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Digital Caste Certificate (SC)',
+      '10th / 12th Marksheet',
+      'Bank Passbook'
+    ],
+    steps: [
+      'बोर्ड परीक्षा परिणाम घोषित होने के बाद, मेरिट सूची में आने वाले पात्र छात्रों का चयन विभाग द्वारा किया जाता है।',
+      'विद्यालय के प्राचार्य (Principal) के माध्यम से पात्र छात्रों के दस्तावेज़ और बैंक खाते की जानकारी अग्रेषित (Forward) की जाती है।',
+      'जिला स्तर पर सहायक आयुक्त (आदिवासी विकास / अनुसूचित जाति कल्याण) कार्यालय द्वारा आवेदन स्वीकृत किया जाता है।',
+      'पुरस्कार राशि सीधे छात्र के बैंक खाते में DBT के माध्यम से अंतरित की जाती है।'
+    ],
+    stepsEn: [
+      'After board exam results are declared, eligible students on the merit list are selected by the dept.',
+      'Docs and bank details of eligible students are forwarded through the school Principal.',
+      'The application is approved at the district level by the Assistant Commissioner (Tribal Dev / SC Welfare) office.',
+      'The award amount is transferred directly to the student\'s bank account via DBT.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: '10वीं या 12वीं बोर्ड में मेरिट' }
+    ],
+    sourceNotes: 'MP SC कल्याण विभाग से सत्यापित। (यह मुख्यमंत्री मेधावी विद्यार्थी योजना - MMVY से अलग है, जो कॉलेज की फीस माफ़ करती है)।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार द्वारा अनुसूचित जाति (SC) वर्ग के छात्र-छात्राओं का शैक्षणिक स्तर सुधारने और उनमें प्रतिस्पर्धी भावना (Competitive spirit) जगाने के लिए डॉ. बी.आर. अम्बेडकर मेधावी विद्यार्थी पुरस्कार योजना चलाई जा रही है।',
+      'इस योजना के तहत मध्य प्रदेश माध्यमिक शिक्षा मंडल (MP Board) या अन्य मान्यता प्राप्त बोर्ड (CBSE/ICSE) से 10वीं और 12वीं कक्षा में राज्य या जिला स्तर पर सर्वोच्च अंक (Top ranks) प्राप्त करने वाले SC विद्यार्थियों को नकद पुरस्कार से सम्मानित किया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The Dr. B.R. Ambedkar Medhavi Vidyarthi Puraskar Yojana is run by the MP Govt to improve the educational level of SC students and instill a competitive spirit in them.',
+      'Under this scheme, SC students who secure top ranks at the state or district level in 10th and 12th classes from MP Board or other recognized boards (CBSE/ICSE) are honored with cash awards.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पुरस्कार (नकद प्रोत्साहन) का विवरण', points: [
+          'यह एक एकमुश्त नकद पुरस्कार (One-time cash award) योजना है।',
+          'राज्य स्तर पर मेरिट सूची में आने पर बड़ी राशि (लगभग ₹30,000) तथा जिला स्तर पर प्रथम, द्वितीय या तृतीय स्थान प्राप्त करने पर (₹10,000 से ₹20,000) तक की राशि दी जाती है। (राशि का निर्धारण विभागीय बजट और श्रेणी के अनुसार होता है)।',
+          'छात्र को एक प्रशस्ति पत्र (Certificate of Merit) भी दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Award Details', points: [
+          'It is a one-time cash award scheme.',
+          'Large amount (approx ₹30,000) is given for coming in the state-level merit list, and ₹10,000 to ₹20,000 for securing 1st, 2nd, or 3rd position at the district level. (Amount depends on dept budget and category).',
+          'The student is also given a Certificate of Merit.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'वह अनिवार्य रूप से अनुसूचित जाति (SC) वर्ग से होना चाहिए।',
+      'छात्र ने 10वीं या 12वीं की बोर्ड परीक्षा अच्छे अंकों से पास की हो और उसका नाम राज्य या जिला स्तर की टॉप मेरिट सूची (Merit List) में शामिल हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The student must be a native of Madhya Pradesh.',
+      'Must compulsorily belong to the Scheduled Caste (SC) category.',
+      'The student must have passed the 10th or 12th board exam with good marks and their name must be included in the state or district level top Merit List.'
+    ],
+    exclusions: [
+      'यह कोई सामान्य छात्रवृत्ति (Scholarship) नहीं है जो सभी पास होने वाले छात्रों को मिले; यह केवल "टॉपर्स" के लिए है।',
+      'अन्य वर्गों (General, OBC, ST) के छात्र इस विशेष अम्बेडकर पुरस्कार के पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'This is not a general scholarship given to all passing students; it is strictly for "Toppers".',
+      'Students of other categories (General, OBC, ST) are not eligible for this specific Ambedkar Puraskar.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'विद्यालय के माध्यम से (Offline/Departmental)', steps: [
+          'इसके लिए छात्रों को अलग से किसी पोर्टल पर लंबा फॉर्म नहीं भरना होता।',
+          'रिजल्ट आने के बाद, जिला शिक्षा अधिकारी (DEO) और सहायक आयुक्त मेरिट सूची तैयार करते हैं।',
+          'प्राचार्य (Principal) पात्र छात्र के बैंक खाते और जाति प्रमाण पत्र की जानकारी संकलित कर विभाग को भेजते हैं।',
+          'गणतंत्र दिवस, स्वतंत्रता दिवस या अम्बेडकर जयंती जैसे विशेष अवसरों पर सम्मान समारोह आयोजित कर राशि दी जाती है (या सीधे खाते में)।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Through School (Offline/Departmental)', steps: [
+          'Students do not have to fill a long form on any portal separately for this.',
+          'After results, the DEO and Assistant Commissioner prepare the merit list.',
+          'The Principal collects the eligible student\'s bank account and caste cert info and sends it to the dept.',
+          'The amount is given by organizing an award ceremony on special occasions like Republic Day, Independence Day, or Ambedkar Jayanti (or directly into account).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह योजना मुख्यमंत्री मेधावी विद्यार्थी योजना (MMVY) जैसी है?', answer: 'नहीं, MMVY में कॉलेज (इंजीनियरिंग/मेडिकल) की पूरी फीस माफ़ होती है। जबकि अम्बेडकर मेधावी पुरस्कार 10वीं/12वीं बोर्ड में टॉप करने पर मिलने वाला एक नकद इनाम है।' },
+      { question: 'मेरे 85% आए हैं, क्या मुझे यह पुरस्कार मिलेगा?', answer: 'सिर्फ 85% आना काफी नहीं है। आपका नाम जिले या राज्य के SC वर्ग के टॉप 3 या टॉप 10 छात्रों की मेरिट लिस्ट में होना चाहिए। अपने स्कूल के प्रिंसिपल से जानकारी लें।' }
+    ],
+    faqsEn: [
+      { question: 'Is this scheme like Mukhyamantri Medhavi Vidyarthi Yojana (MMVY)?', answer: 'No, MMVY waives off full college (Engineering/Medical) fees. Whereas Ambedkar Medhavi Puraskar is a cash prize for topping the 10th/12th board.' },
+      { question: 'I got 85%, will I get this award?', answer: 'Just getting 85% is not enough. Your name must be in the merit list of the top 3 or top 10 SC students of the district or state. Get info from your school principal.' }
+    ]
+  },
+  'krishi-jalvayu-pilot-project': {
+    ...reviewed,
+    title: 'कृषि जलवायु क्षेत्र हेतु पायलेट प्रोजेक्ट',
+    english: 'Krishi Jalvayu Pilot Project (Agro-Climatic Zone)',
+    summary: 'जलवायु परिवर्तन (Climate Change) से निपटने के लिए किसानों को मौसम अनुकूल फसलें उगाने की नई तकनीक और बीज का प्रदर्शन (Demonstration) करने की योजना।',
+    benefit: 'जलवायु-अनुकूल खेती (Climate Resilient Agriculture) का 100% तकनीकी मार्गदर्शन व प्रदर्शन बीज किट',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'कृषि भूमि के दस्तावेज़ (खसरा/B1)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Agricultural Land Documents (Khasra/B1)'
+    ],
+    steps: [
+      'यह योजना पूरे प्रदेश में लागू न होकर कृषि विभाग द्वारा चयनित विशेष गांवों (पायलट प्रोजेक्ट) में लागू होती है।',
+      'यदि आपका गांव चयनित है, तो ब्लॉक कृषि विस्तार अधिकारी (RAEO) किसानों से संपर्क करते हैं।',
+      'किसान को अपने खेत का एक हिस्सा विभाग के निर्देशानुसार नई किस्म के बीज और तकनीक (Demonstration plot) के लिए देना होता है।',
+      'विभाग द्वारा बीज किट, खाद और नई तकनीक (जैसे मेड़ पर बुवाई, ड्रिप) निशुल्क या अनुदान पर दी जाती है।'
+    ],
+    stepsEn: [
+      'This scheme is not implemented across the state but in specific villages selected by the Agri Dept (Pilot Projects).',
+      'If your village is selected, the Block Agri Extension Officer (RAEO) contacts the farmers.',
+      'The farmer has to give a part of his field for new variety seeds and tech (Demonstration plot) as directed by the dept.',
+      'Seed kits, fertilizers, and new tech (like ridge sowing, drip) are provided by the dept free or on subsidy.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'विभाग द्वारा चयनित ग्राम के किसान' }
+    ],
+    sourceNotes: 'MP कृषि विभाग की जलवायु परिवर्तन अनुकूलन (Climate Resilience) नीति से सत्यापित।',
+    detailedDescription: [
+      'मध्य प्रदेश को 11 अलग-अलग कृषि जलवायु क्षेत्रों (Agro-Climatic Zones) में बांटा गया है। हाल के वर्षों में बेमौसम बारिश, सूखा और तापमान में वृद्धि (Climate Change) के कारण फसलों को भारी नुकसान हो रहा है।',
+      'इसे रोकने के लिए सरकार "कृषि जलवायु क्षेत्र हेतु पायलेट प्रोजेक्ट" (Climate Resilient Agriculture Pilots) चलाती है। इसके तहत वैज्ञानिकों द्वारा तैयार की गई मौसम-अनुकूल किस्मों (जैसे कम पानी में पकने वाला गेहूं या जल्दी पकने वाली सोयाबीन) का किसानों के खेतों पर परीक्षण और प्रदर्शन (Demonstration) किया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'Madhya Pradesh is divided into 11 diff Agro-Climatic Zones. In recent years, unseasonal rains, droughts, and rising temperatures (Climate Change) are causing huge crop losses.',
+      'To prevent this, the govt runs "Krishi Jalvayu Pilot Projects" (Climate Resilient Agriculture Pilots). Under this, weather-friendly varieties developed by scientists (like wheat requiring less water or early maturing soybean) are tested and demonstrated on farmers\' fields.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'जोखिम से बचाव (Risk Mitigation): नई तकनीक से सूखा या भारी बारिश में भी फसल पूरी तरह बर्बाद नहीं होती।',
+          'तकनीकी सहायता: कृषि वैज्ञानिकों का सीधा मार्गदर्शन मिलता है।',
+          'निःशुल्क इनपुट: प्रदर्शन (Demonstration) प्रक्षेत्र के लिए उन्नत बीज और दवाइयों की किट सरकार की ओर से दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Risk Mitigation: With new tech, the crop is not completely destroyed even in drought or heavy rain.',
+          'Tech Support: Direct guidance from agricultural scientists is available.',
+          'Free Inputs: Advanced seed and medicine kits for the demonstration plot are provided by the govt.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'किसान मध्य प्रदेश का निवासी होना चाहिए।',
+      'किसान का खेत उन 11 जलवायु क्षेत्रों के उन खास गांवों में होना चाहिए, जिन्हें विभाग ने इस साल "पायलट प्रोजेक्ट" के लिए चुना है।',
+      'किसान नई चीजें सीखने और वैज्ञानिकों के अनुसार प्रयोग (Experiment) करने का इच्छुक होना चाहिए (Progressive Farmer)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The farmer must be a resident of Madhya Pradesh.',
+      'The farmer\'s field must be in those specific villages of the 11 climatic zones which the dept has selected for the "Pilot Project" this year.',
+      'The farmer must be willing to learn new things and experiment according to scientists (Progressive Farmer).'
+    ],
+    exclusions: [
+      'यह योजना हर गांव के हर किसान के लिए नहीं है। आप सीधे ऑनलाइन फॉर्म भरकर यह लाभ नहीं मांग सकते; यह विभाग के चयन (Selection) पर निर्भर है।',
+      'इसमें नकद पैसा नहीं मिलता, बल्कि तकनीकी ज्ञान और इनपुट (बीज/दवा) दिए जाते हैं।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for every farmer in every village. You cannot claim this benefit by directly filling an online form; it depends on dept selection.',
+      'No cash money is given in this, rather tech knowledge and inputs (seeds/medicines) are provided.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'विभागीय चयन (Departmental Selection)', steps: [
+          'कोई ऑनलाइन पोर्टल या फॉर्म उपलब्ध नहीं है।',
+          'कृषि विभाग और KVK (कृषि विज्ञान केंद्र) मिलकर कुछ गांवों को गोद (Adopt) लेते हैं।',
+          'वहां के किसान ग्राम सभा या किसान चौपाल के माध्यम से इस प्रोजेक्ट का हिस्सा बन सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Departmental Selection', steps: [
+          'No online portal or form is available.',
+          'The Agri Dept and KVK (Krishi Vigyan Kendra) together adopt some villages.',
+          'Farmers there can become part of this project through Gram Sabha or Kisan Chaupal.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मुझे कैसे पता चलेगा कि मेरा गांव पायलट प्रोजेक्ट में है या नहीं?', answer: 'आपको अपने ब्लॉक के वरिष्ठ कृषि विकास अधिकारी (SADO) या नज़दीकी कृषि विज्ञान केंद्र (KVK) में जाकर पूछना होगा कि इस सीज़न में जलवायु अनुकूल खेती का प्रदर्शन किस गांव में हो रहा है।' },
+      { question: 'क्या प्रदर्शन (Demonstration) का पूरा खर्चा सरकार उठाती है?', answer: 'हाँ, जिस थोड़े हिस्से (जैसे 1 एकड़) पर वैज्ञानिक प्रयोग कराते हैं, उसके लिए बीज और ज़रूरी इनपुट सरकार देती है।' }
+    ],
+    faqsEn: [
+      { question: 'How will I know if my village is in the pilot project?', answer: 'You have to go to your block\'s SADO or nearby KVK and ask in which village the demonstration of climate-resilient farming is happening this season.' },
+      { question: 'Does the govt bear the entire cost of the demonstration?', answer: 'Yes, the govt provides seeds and necessary inputs for the small portion (like 1 acre) on which scientists conduct experiments.' }
+    ]
+  },
+  'sinchai-kshamta-vikas-yojana': {
+    ...reviewed,
+    title: 'सिंचाई क्षमता विकास योजना (ड्रिप/स्प्रिंकलर अनुदान)',
+    english: 'Sinchai Kshamta Vikas (Micro-Irrigation/PMKSY Subsidy)',
+    summary: 'कम पानी में अधिक पैदावार के लिए खेतों में ड्रिप (टपक) या स्प्रिंकलर (फव्वारा) सिंचाई संयंत्र लगाने पर 55% तक की भारी सब्सिडी।',
+    benefit: 'सूक्ष्म सिंचाई (ड्रिप/स्प्रिंकलर) उपकरणों की स्थापना पर 45% से 55% तक वित्तीय अनुदान',
+    department: 'उद्यानिकी एवं खाद्य प्रसंस्करण / कृषि विकास विभाग',
+    sourceUrl: 'https://mpfsts.mp.gov.in/',
+    applicationUrl: 'https://dbt.mpdage.org/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / बी-1 (कृषि भूमि प्रमाण)',
+      'सिंचाई स्रोत का प्रमाण (बिजली बिल/कुआं/ट्यूबवेल)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / B-1 (Agricultural Land Proof)',
+      'Proof of Irrigation Source (Electricity bill/Well/Tubewell)',
+      'Bank Passbook'
+    ],
+    steps: [
+      'कृषि यंत्र अनुदान पोर्टल (dbt.mpdage.org) या उद्यानिकी पोर्टल (mpfsts.mp.gov.in) पर जाकर ऑनलाइन आवेदन करें।',
+      'लॉटरी में चयन होने पर विभाग द्वारा पंजीकृत कंपनियों (Dealers) की सूची में से किसी एक का चयन करें।',
+      'कंपनी द्वारा आपके खेत में सिस्टम लगाया जाएगा और आपको केवल अपना हिस्सा (किसान अंश - 45% या 55%) चुकाना होगा।',
+      'सब्सिडी की राशि विभाग द्वारा सीधे कंपनी को या किसान के खाते में (DBT) दी जाएगी।'
+    ],
+    stepsEn: [
+      'Apply online by visiting the Agri Machinery Subsidy portal (dbt.mpdage.org) or Horticulture portal (mpfsts.mp.gov.in).',
+      'If selected in the lottery, choose one of the registered companies (Dealers) from the dept\'s list.',
+      'The company will install the system in your field and you only have to pay your share (Farmer\'s share - 45% or 55%).',
+      'The subsidy amount will be given directly to the company or the farmer\'s account (DBT) by the dept.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान (सिंचाई स्रोत उपलब्ध हो)' }
+    ],
+    sourceNotes: 'PMKSY (Per Drop More Crop) एवं MP कृषि यंत्र अनुदान (dbt.mpdage.org) से सत्यापित।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार प्रधानमंत्री कृषि सिंचाई योजना (PMKSY) के "पर ड्रॉप मोर क्रॉप" (Per Drop More Crop - PDMC) घटक के तहत सूक्ष्म सिंचाई (Micro-Irrigation) को बढ़ावा दे रही है।',
+      'खेतों में खुली सिंचाई करने से बहुत सारा पानी बर्बाद होता है। ड्रिप (Drip) या स्प्रिंकलर (Sprinkler) लगाने से पानी सीधे पौधों की जड़ों तक पहुंचता है, जिससे पानी की 50% तक बचत होती है और फसल उत्पादन भी 30-40% तक बढ़ता है।'
+    ],
+    detailedDescriptionEn: [
+      'The MP govt is promoting Micro-Irrigation under the "Per Drop More Crop" (PDMC) component of the Pradhan Mantri Krishi Sinchayee Yojana (PMKSY).',
+      'Open irrigation in fields wastes a lot of water. By installing Drip or Sprinkler, water reaches directly to the roots of the plants, saving up to 50% of water and increasing crop production by up to 30-40%.'
+    ],
+    benefitsList: [
+      {
+        heading: 'अनुदान (Subsidy) का विवरण', points: [
+          'लघु एवं सीमांत किसान (Small/Marginal Farmers): इकाई लागत का 55% अनुदान।',
+          'अन्य किसान (General/Large Farmers): इकाई लागत का 45% अनुदान।',
+          'पानी और बिजली की भारी बचत होती है। इसके अलावा निराई-गुड़ाई का खर्च भी कम होता है क्योंकि खरपतवार कम उगते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Details', points: [
+          'Small & Marginal Farmers: 55% subsidy of unit cost.',
+          'Other Farmers (General/Large): 45% subsidy of unit cost.',
+          'There is huge saving of water and electricity. Also, weeding cost is reduced as fewer weeds grow.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और किसान होना चाहिए।',
+      'किसान के पास खेती योग्य अपनी ज़मीन होनी चाहिए (पट्टे की ज़मीन पर भी कुछ शर्तों के साथ लागू है)।',
+      'खेत पर सिंचाई का कोई पक्का स्रोत (जैसे- कुआं, नलकूप/बोरवेल, नदी/नाला, या नहर) होना अनिवार्य है, ताकि सिस्टम को पानी मिल सके।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident and farmer of Madhya Pradesh.',
+      'The farmer must have their own cultivable land (also applicable on leased land with some conditions).',
+      'There must be a confirmed source of irrigation (e.g., well, tubewell/borewell, river/stream, or canal) on the farm, so that the system gets water.'
+    ],
+    exclusions: [
+      'यदि खेत में सिंचाई का कोई साधन (पानी) नहीं है, तो आप ड्रिप/स्प्रिंकलर योजना के पात्र नहीं हैं।',
+      'एक बार अनुदान ले लेने के बाद, अगले 7 साल तक उसी ज़मीन पर दोबारा ड्रिप सिस्टम के लिए अनुदान नहीं लिया जा सकता।'
+    ],
+    exclusionsEn: [
+      'If there is no means of irrigation (water) in the field, you are not eligible for the drip/sprinkler scheme.',
+      'Once the subsidy is availed, subsidy for a drip system cannot be taken again on the same land for the next 7 years.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (ई-कृषि यंत्र अनुदान)', steps: [
+          'विभाग द्वारा जब भी लक्ष्य (Targets) जारी किए जाते हैं, तब dbt.mpdage.org पोर्टल पर आवेदन करना होता है।',
+          'पोर्टल पर अपने खसरा/B1 और आधार की जानकारी भरकर रजिस्ट्रेशन करें।',
+          'लॉटरी/सिस्टम द्वारा चयन होने पर, मान्यता प्राप्त डीलर से कोटेशन (Quotation) लेकर अपलोड करें।',
+          'डीलर द्वारा सिस्टम लगाया जाएगा और विभाग के अधिकारी खेत पर आकर उसका भौतिक सत्यापन (Physical Verification) करेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (e-Krishi Yantra Anudan)', steps: [
+          'Whenever targets are released by the dept, an application has to be made on the dbt.mpdage.org portal.',
+          'Register on the portal by filling your Khasra/B1 and Aadhaar info.',
+          'Upon selection by lottery/system, take a quotation from an authorized dealer and upload it.',
+          'The system will be installed by the dealer and dept officials will come to the field for physical verification.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे सिस्टम के पूरे पैसे पहले खुद देने होंगे?', answer: 'नहीं, अधिकतर मामलों में आपको डीलर को केवल अपना हिस्सा (45% या 55%) देना होता है। बाकी सब्सिडी का पैसा सरकार सीधे डीलर (कंपनी) को भुगतान करती है।' },
+      { question: 'क्या मैं किसी भी दुकान से ड्रिप खरीद सकता हूँ?', answer: 'नहीं, सब्सिडी का लाभ लेने के लिए आपको उद्यानिकी या कृषि विभाग द्वारा पंजीकृत/पैनल में शामिल (Empanelled) कंपनियों/डीलरों से ही सिस्टम लगवाना होगा।' }
+    ],
+    faqsEn: [
+      { question: 'Do I have to pay the full money of the system myself first?', answer: 'No, in most cases you only have to pay your share (45% or 55%) to the dealer. The rest of the subsidy money is paid by the govt directly to the dealer (company).' },
+      { question: 'Can I buy a drip system from any shop?', answer: 'No, to avail the subsidy, you have to get the system installed only from companies/dealers registered/empanelled by the Horticulture or Agri Dept.' }
+    ]
+  },
+  'satat-ganna-vikas-yojana': {
+    ...reviewed,
+    title: 'सतत गन्ना विकास योजना (गन्ना मशीनीकरण)',
+    english: 'Satat Ganna Vikas Yojana (Sugarcane Mechanization)',
+    summary: 'गन्ना किसानों की लागत कम करने और पैदावार बढ़ाने के लिए गन्ना कटाई, बुवाई और खरपतवार निकालने वाली मशीनों (कृषि यंत्रों) पर 50% तक सब्सिडी।',
+    benefit: 'गन्ना बोने (Planter), रटून मैनेजर व वीड़र आदि यंत्रों पर 40% से 50% (या ₹10,000-₹50,000) तक अनुदान',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://farmer.mpdage.mp.gov.in/',
+    applicationUrl: 'https://farmer.mpdage.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि का खसरा/B1',
+      'गन्ना उत्पादक होने का प्रमाण (चीनी मिल की पर्ची / घोषणापत्र)',
+      'जाति प्रमाण पत्र (SC/ST के लिए)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Land Khasra/B1',
+      'Proof of being a sugarcane grower (Sugar mill slip / declaration)',
+      'Caste Certificate (for SC/ST)'
+    ],
+    steps: [
+      'ई-कृषि यंत्र अनुदान पोर्टल (farmer.mpdage.mp.gov.in) पर गन्ना उपकरणों के लिए आवेदन (लॉटरी के समय) करें।',
+      'पोर्टल पर आवश्यक धरोहर राशि (Security Deposit - यदि लागू हो) का बैंक ड्राफ्ट जमा करें।',
+      'लॉटरी में नाम आने पर, पंजीकृत डीलर से यंत्र खरीदें और पोर्टल पर बिल अपलोड करें।',
+      'विभागीय अधिकारी द्वारा यंत्र का भौतिक सत्यापन (Verification) किया जाएगा, जिसके बाद सब्सिडी खाते में आ जाएगी।'
+    ],
+    stepsEn: [
+      'Apply for sugarcane equipment on the e-Krishi Yantra Anudan portal (farmer.mpdage.mp.gov.in) during the lottery period.',
+      'Submit the bank draft of the required Security Deposit (if applicable) on the portal.',
+      'If selected in the lottery, buy the machine from a registered dealer and upload the bill on the portal.',
+      'Physical verification of the machine will be done by the dept officer, after which the subsidy will come into the account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'गन्ना उत्पादक किसान' }
+    ],
+    sourceNotes: 'MP ई-कृषि यंत्र अनुदान पोर्टल (Sugarcane Mechanization component) से सत्यापित।',
+    detailedDescription: [
+      'मध्य प्रदेश के कुछ विशेष जिलों (जैसे नरसिंहपुर, छिंदवाड़ा, बुरहानपुर आदि) में गन्ने की खेती बड़े पैमाने কালী जाती है। गन्ने की खेती में बुवाई से लेकर कटाई तक बहुत अधिक मजदूरी (Labour) लगती है।',
+      'सतत गन्ना विकास / गन्ना यंत्रीकरण योजना के तहत सरकार किसानों को आधुनिक मशीनें खरीदने के लिए प्रोत्साहित करती है। इसमें शुगरकेन प्लांटर (Sugarcane Planter), रटून मैनेजर (Ratoon Manager), और पावर वीडर (Power Weeder) जैसे यंत्रों पर भारी सब्सिडी दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Sugarcane is cultivated on a large scale in some specific districts of Madhya Pradesh (like Narsinghpur, Chhindwara, Burhanpur etc.). Sugarcane farming requires a lot of labor from sowing to harvesting.',
+      'Under the Sustainable Sugarcane Development / Sugarcane Mechanization Scheme, the govt encourages farmers to buy modern machines. Heavy subsidies are given on machines like Sugarcane Planter, Ratoon Manager, and Power Weeder.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'लागत में कमी: मशीनों के उपयोग से मज़दूरों पर निर्भरता कम होती है और खेती की लागत (Cost of Cultivation) घटती है।',
+          'वित्तीय अनुदान: यंत्र की कुल कीमत का 40% से 50% तक अनुदान सरकार देती है। SC/ST और महिला किसानों को अक्सर अधिक (50%) सब्सिडी मिलती है।',
+          'पैदावार में वृद्धि: रटून मैनेजर (पेड़ी प्रबंधन) और उचित बुवाई से गन्ने की रिकवरी और कुल पैदावार में सुधार होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Cost Reduction: Use of machines reduces dependence on laborers and decreases the Cost of Cultivation.',
+          'Financial Subsidy: The govt gives 40% to 50% subsidy on the total price of the machine. SC/ST and women farmers often get more (50%) subsidy.',
+          'Yield Increase: Better recovery and total yield of sugarcane improves with Ratoon Manager and proper sowing.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'किसान मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक मुख्य रूप से गन्ना उत्पादक (Sugarcane Grower) होना चाहिए।',
+      'कुछ बड़े कृषि यंत्रों (जैसे रटून मैनेजर) के लिए किसान के नाम पर या परिवार के किसी सदस्य के नाम पर ट्रैक्टर पंजीकृत होना आवश्यक हो सकता है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The farmer must be a native of Madhya Pradesh.',
+      'The applicant must primarily be a Sugarcane Grower.',
+      'For some large agricultural machinery (like Ratoon Manager), it may be necessary to have a tractor registered in the name of the farmer or a family member.'
+    ],
+    exclusions: [
+      'जिन किसानों ने पिछले 3-5 वर्षों में कृषि विभाग से किसी यंत्र विशेष पर अनुदान लिया है, वे उसी यंत्र पर दोबारा अनुदान नहीं ले सकते।',
+      'बिना सरकारी लॉटरी / अप्रूवल के बाजार से यंत्र खरीद लेने पर कोई पिछली (Backdated) सब्सिडी नहीं मिलेगी।'
+    ],
+    exclusionsEn: [
+      'Farmers who have taken a subsidy on a specific machine from the Agri Dept in the last 3-5 years cannot take a subsidy on the same machine again.',
+      'No backdated subsidy will be given if the machine is purchased from the market without govt lottery/approval.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन लॉटरी (Online Lottery)', steps: [
+          'कृषि अभियांत्रिकी संचालनालय द्वारा गन्ना यंत्रीकरण के लिए समय-समय पर पोर्टल (farmer.mpdage.mp.gov.in) खोला जाता है।',
+          'किसानों को आधार ई-केवाईसी (e-KYC) के माध्यम से आवेदन करना होता है।',
+          'यदि आवेदनों की संख्या लक्ष्यों (Targets) से अधिक होती है, तो कम्प्यूटरीकृत लॉटरी निकाली जाती है।',
+          'लॉटरी में चयन होने पर 10-15 दिन के भीतर मान्यता प्राप्त डीलर से यंत्र क्रय कर बिल अपलोड करना होता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online Lottery', steps: [
+          'The portal (farmer.mpdage.mp.gov.in) is opened from time to time by the Directorate of Agri Engineering for sugarcane mechanization.',
+          'Farmers have to apply through Aadhaar e-KYC.',
+          'If the number of applications is more than the targets, a computerized lottery is drawn.',
+          'If selected in the lottery, the machine has to be purchased from a recognized dealer and the bill uploaded within 10-15 days.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'गन्ने की खेती के लिए कौन-कौन से कृषि यंत्रों पर सब्सिडी मिलती है?', answer: 'शुगरकेन प्लांटर (बुवाई के लिए), रटून मैनेजर (पेड़ी/ठूंठ प्रबंधन के लिए), पावर वीडर (निराई-गुड़ाई के लिए), और शुगरकेन थ्रेशर/कटर जैसी मशीनों पर अनुदान उपलब्ध होता है।' },
+      { question: 'क्या मुझे सीधे नकद पैसा मिलेगा?', answer: 'नहीं। आप डीलर को पूरी कीमत चुकाकर मशीन खरीदेंगे (या बैंक लोन लेंगे)। उसके बाद विभाग भौतिक सत्यापन करेगा और सब्सिडी का पैसा (40-50%) आपके बैंक खाते (DBT) में वापस जमा करेगा।' }
+    ],
+    faqsEn: [
+      { question: 'Which agricultural implements get subsidy for sugarcane farming?', answer: 'Subsidies are available on machines like Sugarcane Planter (for sowing), Ratoon Manager (for stubble management), Power Weeder, and Sugarcane Cutter.' },
+      { question: 'Will I get direct cash money?', answer: 'No. You will buy the machine by paying full price to the dealer (or take a bank loan). After that, the dept will do physical verification and deposit the subsidy money (40-50%) back into your bank account (DBT).' }
+    ]
+  },
+  'mukhyamantri-videsh-krishi-yatra': {
+    ...reviewed,
+    title: 'मुख्यमंत्री विदेश अध्ययन यात्रा',
+    english: 'Mukhyamantri Videsh Adhyayan Yatra (Agriculture)',
+    summary: 'मध्य प्रदेश के प्रगतिशील किसानों को उन्नत कृषि, उद्यानिकी और डेयरी तकनीकें सीखने के लिए विदेश (जैसे इजराइल, नीदरलैंड्स) भेजने की अनुदान योजना।',
+    benefit: 'विदेश यात्रा के व्यय पर सामान्य वर्ग को 50% और SC/ST किसानों को 75% तक अनुदान',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'पासपोर्ट (कम से कम 1 वर्ष की वैधता के साथ)',
+      'आधार कार्ड (Aadhaar Card)',
+      'भूमि का खसरा/B1',
+      'उत्कृष्टता प्रमाण पत्र (कृषि में कोई पुरस्कार या विशेष उपलब्धि)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Passport (with at least 1-year validity)',
+      'Aadhaar Card',
+      'Land Khasra/B1',
+      'Certificate of Excellence (any award or special achievement in agriculture)'
+    ],
+    steps: [
+      'कृषि विभाग द्वारा यात्रा के लिए जिलेवार विज्ञप्ति (Notice) जारी होने पर उप-संचालक कृषि (DDA) कार्यालय में आवेदन फॉर्म जमा करें।',
+      'कलेक्टर की अध्यक्षता में जिला स्तरीय समिति पात्र किसानों का चयन कर राज्य स्तरीय समिति को भेजती है।',
+      'राज्य समिति (डायरेक्टोरेट) अंतिम चयन करती है।',
+      'चयनित किसानों को अपना हिस्सा (50% या 25%) जमा करना होता है, बाकी खर्च सरकार वहन करती है और यात्रा आयोजित होती है।'
+    ],
+    stepsEn: [
+      'Submit the application form at the DDA office when the dept issues a district-wise notice for the tour.',
+      'The district committee headed by the Collector selects eligible farmers and sends it to the state committee.',
+      'The state committee (Directorate) makes the final selection.',
+      'Selected farmers have to deposit their share (50% or 25%), the govt bears the rest of the expenses and the tour is organized.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'प्रगतिशील / उन्नतशील किसान' }
+    ],
+    sourceNotes: 'MP कृषि विभाग की योजनाओं (मुख्यमंत्री कृषक विदेश अध्ययन यात्रा योजना) से सत्यापित।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार प्रगतिशील (Progressive) किसानों को दुनिया की आधुनिकतम कृषि तकनीकों से रूबरू कराने के लिए यह योजना चलाती है।',
+      'इसके तहत किसानों के दलों को इज़राइल (ड्रिप/माइक्रो इरिगेशन के लिए), नीदरलैंड्स (पॉलीहाउस/उद्यानिकी के लिए), ऑस्ट्रेलिया या अन्य देशों में 10 से 15 दिनों के लिए भेजा जाता है। वहां से लौटकर ये किसान "मास्टर ट्रेनर" के रूप में राज्य के अन्य किसानों को भी नई तकनीक सिखाते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'The MP govt runs this scheme to familiarize progressive farmers with the world\'s most modern agricultural technologies.',
+      'Under this, groups of farmers are sent to Israel (for drip/micro-irrigation), Netherlands (for polyhouse/horticulture), Australia or other countries for 10 to 15 days. After returning, these farmers act as "Master Trainers" and teach new techniques to other farmers in the state.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ एवं अनुदान', points: [
+          'तकनीकी ज्ञान (Tech Exposure): किसानों को अंतरराष्ट्रीय स्तर की उन्नत खेती (High-tech farming) देखने और सीखने का सीधा अवसर मिलता है।',
+          'वित्तीय सहायता: यात्रा, रहने और खाने के कुल खर्च पर सामान्य/OBC वर्ग के किसानों को 50% अनुदान सरकार देती है।',
+          'SC/ST वर्ग के किसानों को यात्रा खर्च पर 75% तक अनुदान (Subsidy) दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits & Subsidy', points: [
+          'Tech Exposure: Farmers get a direct opportunity to see and learn international high-tech farming.',
+          'Financial Assistance: The govt gives 50% subsidy to General/OBC farmers on total travel, lodging, and food expenses.',
+          'SC/ST farmers are given up to 75% subsidy on travel expenses.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और खेती को पेशे के रूप में करने वाला किसान होना चाहिए।',
+      'किसान के पास अपना खुद का वैध पासपोर्ट (Valid Passport) होना अनिवार्य है।',
+      'किसान प्रगतिशील (Progressive) होना चाहिए - यानी उसने कृषि, उद्यानिकी, पशुपालन या मछली पालन में कोई नवाचार (Innovation) किया हो या कोई पुरस्कार जीता हो।',
+      'आवेदक की आयु सामान्यतः 25 से 55 वर्ष के बीच होनी चाहिए (स्वास्थ्य कारणों से)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of MP and a farmer by profession.',
+      'It is mandatory for the farmer to have his own Valid Passport.',
+      'The farmer must be Progressive - i.e. he must have done some innovation or won an award in agriculture, horticulture, animal husbandry, or fisheries.',
+      'The age of the applicant should generally be between 25 to 55 years (for health reasons).'
+    ],
+    exclusions: [
+      'आम या पारंपरिक किसान (जिन्होंने कोई नवाचार नहीं किया) इस यात्रा के लिए नहीं चुने जाते।',
+      'जिन किसानों ने पहले कभी इस योजना का लाभ लिया है, वे दोबारा आवेदन नहीं कर सकते।'
+    ],
+    exclusionsEn: [
+      'Common or traditional farmers (who have not done any innovation) are not selected for this tour.',
+      'Farmers who have previously availed of this scheme cannot apply again.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (विभाग द्वारा विज्ञापन निकलने पर)', steps: [
+          'यह योजना पूरे साल खुली नहीं रहती। कृषि विभाग अखबारों में विदेश यात्रा के लिए विज्ञापन (Advertisement) जारी करता है।',
+          'विज्ञापन आने पर, अपना पासपोर्ट, आधार, खसरा और अपनी कृषि उपलब्धियों (Awards/Photos) की फाइल बनाकर जिला कृषि कार्यालय में जमा करें।',
+          'चयन के बाद विभाग आपको यात्रा कार्यक्रम (Itinerary) और आपको जमा की जाने वाली राशि की जानकारी देगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (When advertised by dept)', steps: [
+          'This scheme is not open all year. The Agri Dept issues an advertisement in newspapers for the foreign tour.',
+          'When the ad comes, make a file of your passport, Aadhaar, Khasra, and agri achievements (Awards/Photos) and submit it to the district agri office.',
+          'After selection, the dept will inform you about the itinerary and the amount to be deposited.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या पूरा खर्च सरकार उठाती है?', answer: 'नहीं। सरकार सामान्य वर्ग के लिए 50% और SC/ST के लिए 75% खर्च उठाती है। बाकी पैसा आपको खुद जमा करना पड़ता है (लगभग 1-2 लाख रुपये या यात्रा के अनुसार)।' },
+      { question: 'क्या पासपोर्ट होना जरूरी है?', answer: 'जी हाँ, बिना पासपोर्ट के आवेदन स्वीकार नहीं किया जाता है। यदि आप प्रगतिशील किसान हैं, तो पहले से अपना पासपोर्ट बनवा कर रखें।' }
+    ],
+    faqsEn: [
+      { question: 'Does the govt bear the entire cost?', answer: 'No. The govt bears 50% cost for Gen and 75% for SC/ST. You have to deposit the rest of the money yourself (approx ₹1-2 lakhs or depending on the tour).' },
+      { question: 'Is it necessary to have a passport?', answer: 'Yes, applications without a passport are not accepted. If you are a progressive farmer, get your passport made in advance.' }
+    ]
+  },
+  'mitti-parikshan-yojana': {
+    ...reviewed,
+    title: 'मृदा स्वास्थ्य कार्ड (मिट्टी परीक्षण) योजना',
+    english: 'Soil Health Card (Mitti Parikshan) Scheme',
+    summary: 'खेत की मिट्टी में पोषक तत्वों (N, P, K, pH आदि) की जांच करके निःशुल्क "सॉयल हेल्थ कार्ड" देना, ताकि किसान सही खाद का उपयोग कर सकें।',
+    benefit: 'मिट्टी की 12 मापदंडों पर निःशुल्क जांच और फसल के अनुसार उर्वरक (खाद) उपयोग की वैज्ञानिक सलाह',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग (भारत सरकार एवं MP शासन)',
+    sourceUrl: 'https://soilhealth.dac.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'खेत का खसरा नंबर / B1',
+      'आधार कार्ड (Aadhaar Card)',
+      'मोबाइल नंबर',
+      'खेत की मिट्टी का नमूना (Sample)'
+    ],
+    documentsEn: [
+      'Farm Khasra Number / B1',
+      'Aadhaar Card',
+      'Mobile Number',
+      'Soil Sample from the field'
+    ],
+    steps: [
+      'मिट्टी का नमूना लेने के लिए अपने ग्राम सेवक या कृषि विस्तार अधिकारी (RAEO) से संपर्क करें।',
+      'उनके निर्देशानुसार खेत के अलग-अलग हिस्सों (V-आकार का गड्ढा खोदकर) से मिट्टी इकट्ठा करें।',
+      'मिट्टी के नमूने को एक थैली में पैक करके उस पर अपना नाम, आधार और खसरा नंबर लिखकर विभाग या नज़दीकी मिट्टी परीक्षण प्रयोगशाला (Soil Testing Lab) में दें।',
+      'कुछ दिनों बाद आपको प्रिंटेड सॉयल हेल्थ कार्ड (SHC) मिलेगा या आप इसे soilhealth.dac.gov.in से डाउनलोड कर सकते हैं।'
+    ],
+    stepsEn: [
+      'Contact your Gram Sevak or Agri Extension Officer (RAEO) to take a soil sample.',
+      'As per their instructions, collect soil from diff parts of the field (by digging a V-shaped pit).',
+      'Pack the soil sample in a bag, write your name, Aadhaar, and Khasra number on it, and give it to the dept or nearest Soil Testing Lab.',
+      'After a few days, you will get a printed Soil Health Card (SHC) or you can download it from soilhealth.dac.gov.in.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'खेत का मालिक (किसान)' }
+    ],
+    sourceNotes: 'राष्ट्रीय मृदा स्वास्थ्य कार्ड योजना (Soil Health Card Scheme) - सभी राज्यों में लागू।',
+    detailedDescription: [
+      'किसान अक्सर बिना जाने खेतों में यूरिया (Urea) और डीएपी (DAP) डालते रहते हैं, जिससे मिट्टी खराब होती है और लागत भी बढ़ती है।',
+      'मृदा स्वास्थ्य कार्ड (Soil Health Card) योजना भारत सरकार का एक प्रमुख कार्यक्रम है। इसके तहत खेत की मिट्टी का लैब में 12 मापदंडों (जैसे नाइट्रोजन, फास्फोरस, पोटाश, सल्फर, जिंक, आयरन और pH मान) पर परीक्षण (Testing) किया जाता है।',
+      'टेस्ट के बाद किसान को एक रिपोर्ट कार्ड दिया जाता है जिसमें बताया जाता है कि उनकी मिट्टी में किस चीज़ की कमी है और कौन सी फसल के लिए कितनी खाद (उर्वरक) डालनी चाहिए।'
+    ],
+    detailedDescriptionEn: [
+      'Farmers often keep putting Urea and DAP in the fields without knowing, which ruins the soil and also increases the cost.',
+      'The Soil Health Card scheme is a flagship program of the Govt of India. Under this, the field soil is tested in the lab on 12 parameters (like N, P, K, Sulphur, Zinc, Iron, and pH value).',
+      'After the test, a report card is given to the farmer stating what is lacking in their soil and how much fertilizer should be applied for which crop.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'लागत में कमी: अनावश्यक रासायनिक खादों (खासकर यूरिया) के उपयोग पर रोक लगती है, जिससे किसान का पैसा बचता है।',
+          'उत्पादन में वृद्धि: सही मात्रा में खाद डालने से फसल की पैदावार 10% से 20% तक बढ़ जाती है।',
+          'मिट्टी का सुधार: मिट्टी का स्वास्थ्य (Soil Health) सुधरता है जिससे ज़मीन लंबे समय तक उपजाऊ बनी रहती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Cost Reduction: Halts the use of unnecessary chemical fertilizers (especially Urea), saving farmer\'s money.',
+          'Yield Increase: Applying the right amount of fertilizer increases crop yield by 10% to 20%.',
+          'Soil Improvement: Soil health improves, keeping the land fertile for a long time.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'देश या राज्य का कोई भी किसान जिसके पास अपनी कृषि भूमि (Agricultural land) है, वह इस योजना का लाभ ले सकता है।',
+      'यह पूरी तरह से निःशुल्क (Free of cost) या बहुत मामूली शुल्क पर उपलब्ध है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Any farmer in the country or state who has their own agricultural land can take advantage of this scheme.',
+      'It is available completely Free of Cost or at a very nominal fee.'
+    ],
+    exclusions: [
+      'इसमें कोई सीधी नकद सहायता या सब्सिडी (पैसा) किसान के खाते में नहीं आती है। यह केवल एक तकनीकी (Technical) सेवा है।'
+    ],
+    exclusionsEn: [
+      'No direct cash assistance or subsidy (money) comes into the farmer\'s account in this. This is purely a technical service.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन / ऑनलाइन', steps: [
+          'आमतौर पर कृषि विभाग का अमला (Team) गांव-गांव जाकर ग्रिड सिस्टम (Grid system) के अनुसार मिट्टी के नमूने इकट्ठा करता है।',
+          'यदि आपके खेत का नमूना नहीं लिया गया है, तो आप खुद भी सही विधि से नमूना लेकर नज़दीकी कृषि विज्ञान केंद्र (KVK) या मिट्टी परीक्षण प्रयोगशाला में जमा कर सकते हैं।',
+          'रिपोर्ट तैयार होने पर आप soilhealth.dac.gov.in पोर्टल पर "Print SHC" विकल्प से अपना कार्ड डाउनलोड कर सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Online', steps: [
+          'Usually, the Agri Dept team goes village to village and collects soil samples as per the Grid system.',
+          'If a sample of your field has not been taken, you can take a sample yourself using the correct method and submit it to the nearest KVK or Soil Testing Lab.',
+          'Once the report is ready, you can download your card from the soilhealth.dac.gov.in portal using the "Print SHC" option.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मिट्टी का नमूना कैसे लेना चाहिए?', answer: 'खेत से ऊपर की 1 ईंच मिट्टी हटाकर, V (वी) आकार का 15 सेमी गहरा गड्ढा खोदें। खेत के 5-6 अलग-अलग स्थानों से मिट्टी लेकर उसे अच्छे से मिला लें और आधा किलो मिट्टी लैब में भेजें।' },
+      { question: 'मृदा परीक्षण (Soil test) कितने साल में कराना चाहिए?', answer: 'सरकार की सलाह है कि हर 3 साल में कम से कम एक बार अपने खेत की मिट्टी की जांच ज़रूर करानी चाहिए (विशेषकर फसल चक्र पूरा होने के बाद)।' }
+    ],
+    faqsEn: [
+      { question: 'How to take a soil sample?', answer: 'Remove the top 1 inch of soil from the field, dig a V-shaped pit 15 cm deep. Take soil from 5-6 diff spots, mix it well and send half a kg of soil to the lab.' },
+      { question: 'In how many years should soil test be done?', answer: 'The govt advises that you must get your field soil tested at least once every 3 years (especially after the crop cycle is complete).' }
+    ]
+  },
+  'beej-gram-yojana': {
+    ...reviewed,
+    title: 'बीज ग्राम योजना (Seed Village Programme)',
+    english: 'Beej Gram Yojana (Seed Village Programme)',
+    summary: 'किसानों को उन्नत बीज का उत्पादन खुद करने के लिए प्रशिक्षित करने और प्रमाणित/फाउंडेशन बीज पर भारी अनुदान देने की योजना।',
+    benefit: 'बीज (अनाज/दलहन) पर 50-60% तक अनुदान और बीज भंडारण कोठी पर आर्थिक सहायता',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / बी-1 (कृषि भूमि प्रमाण)',
+      'मोबाइल नंबर',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / B-1 (Agricultural Land Proof)',
+      'Mobile Number',
+      'Bank Passbook'
+    ],
+    steps: [
+      'यह योजना समूहों (Cluster) में चलाई जाती है। गांव के 25 से 50 किसानों का एक समूह बनाएं।',
+      'ब्लॉक स्तर के कृषि अधिकारी (SADO) या ग्रामीण कृषि विस्तार अधिकारी (RAEO) के पास आवेदन करें।',
+      'विभाग द्वारा फाउंडेशन/प्रमाणित बीज अनुदान पर उपलब्ध कराया जाएगा।',
+      'किसानों को 3 चरणों (बुवाई, फूल आने और कटाई) में बीज उत्पादन की ट्रेनिंग (Training) दी जाएगी।'
+    ],
+    stepsEn: [
+      'This scheme is run in clusters. Form a group of 25 to 50 farmers in the village.',
+      'Apply to the block level Agri Officer (SADO) or Rural Agri Extension Officer (RAEO).',
+      'The dept will provide Foundation/Certified seeds on subsidy.',
+      'Farmers will be given training on seed production in 3 stages (sowing, flowering, and harvesting).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'गांव के किसानों का समूह' }
+    ],
+    sourceNotes: 'राष्ट्रीय बीज मिशन (National Seed Mission) के अंतर्गत भारत सरकार एवं MP सरकार द्वारा संचालित।',
+    detailedDescription: [
+      'कई बार किसानों को बाजार से अच्छे बीज नहीं मिल पाते या वे बहुत महंगे होते हैं। इस समस्या को सुलझाने के लिए सरकार "बीज ग्राम योजना" चलाती है।',
+      'इसका उद्देश्य किसानों को स्थानीय स्तर पर बीज उत्पादन के लिए आत्मनिर्भर बनाना ক্ষমতায়ना है। सरकार किसानों के समूह को उच्च गुणवत्ता वाला बीज (Foundation Seed) सस्ते में देती है, जिसे बोकर किसान अपने लिए और गांव वालों के लिए अगले सीज़न का प्रमाणित बीज (Certified Seed) खुद तैयार करते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'Many times farmers do not get good seeds from the market or they are very expensive. To solve this problem, the govt runs the "Beej Gram Yojana".',
+      'Its objective is to make farmers self-reliant for seed production at the local level. The govt gives high-quality seeds (Foundation Seed) to a group of farmers at a cheap rate, by sowing which farmers themselves prepare certified seeds for the next season for themselves and the villagers.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'बीज पर अनुदान (Subsidy on Seeds): अनाज (Cereals) की फसलों के बीज पर 50% और दलहन/तिलहन (Pulses/Oilseeds) के बीज पर 60% तक का अनुदान (अधिकतम 1 एकड़ के लिए)।',
+          'बीज भंडारण: बीज को सुरक्षित रखने के लिए "भंडारण कोठी" (Storage bin) खरीदने पर भी SC/ST और सामान्य किसानों को अलग-अलग दरों पर अनुदान दिया जाता है।',
+          'तकनीकी ज्ञान: कृषि वैज्ञानिकों द्वारा मुफ्त प्रशिक्षण (Training) दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Subsidy on Seeds: Subsidy up to 50% on seeds of Cereal crops and 60% on seeds of Pulses/Oilseeds (for max 1 acre).',
+          'Seed Storage: Subsidy is also given at diff rates to SC/ST and General farmers on buying "Bhandar Kothi" (Storage bin) to keep seeds safe.',
+          'Tech Knowledge: Free training is provided by agri scientists.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'योजना का लाभ लेने के लिए किसान के पास कृषि योग्य भूमि होनी चाहिए।',
+      'यह योजना किसी एक किसान को नहीं दी जाती, बल्कि पूरे गांव (Village) या 25-50 किसानों के समूह (Cluster) को दी जाती है।',
+      'किसान नई तकनीक सीखने और बीज उत्पादन के नियमों का पालन करने के लिए तैयार होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The farmer must have cultivable land to take advantage of the scheme.',
+      'This scheme is not given to a single farmer, but to a whole village or a cluster of 25-50 farmers.',
+      'The farmer must be ready to learn new tech and follow the rules of seed production.'
+    ],
+    exclusions: [
+      'किसान अकेले (Individual) इस योजना के तहत बीज उत्पादन अनुदान के लिए दावा नहीं कर सकता।',
+      'एक किसान को एक फसल के लिए केवल अधिकतम 1 एकड़ ज़मीन के लिए ही अनुदान पर बीज दिया जाता है।'
+    ],
+    exclusionsEn: [
+      'An individual farmer cannot claim seed production subsidy under this scheme alone.',
+      'A farmer is given subsidized seeds for a max of 1 acre of land for a crop.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (समूह में)', steps: [
+          'गांव के प्रगतिशील किसान (Progressive farmers) मिलकर एक समूह बनाएं।',
+          'कृषि विस्तार अधिकारी (RAEO) से मिलकर अपने गांव को "बीज ग्राम" बनाने का प्रस्ताव दें।',
+          'अनुमोदन मिलने पर विभाग द्वारा बीज और दवाइयां दी जाएंगी और ट्रेनिंग का समय तय किया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (in group)', steps: [
+          'Progressive farmers of the village should form a group together.',
+          'Meet the Agri Extension Officer (RAEO) and propose to make your village a "Beej Gram".',
+          'Upon approval, seeds and medicines will be given by the dept and training time will be fixed.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं अपने खेत पर उत्पादित बीज को बाजार में बेच सकता हूँ?', answer: 'हाँ, लेकिन इस योजना का मुख्य उद्देश्य खुद के लिए और अपने गांव के किसानों के लिए बीज सुरक्षित करना है। सर्टिफाइड बीज तैयार होने पर आप उसे अच्छे दाम पर अन्य किसानों को दे सकते हैं।' },
+      { question: 'भंडारण कोठी पर कितना अनुदान है?', answer: 'सामान्य वर्ग को 25% और SC/ST वर्ग के किसानों को 33% तक (निर्धारित सीमा में) बीज भंडारण कोठी पर अनुदान मिलता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can I sell the seed produced on my farm in the market?', answer: 'Yes, but the main objective of this scheme is to secure seeds for yourself and the farmers of your village. Once certified seed is ready, you can give it to other farmers at a good price.' },
+      { question: 'How much is the subsidy on Bhandar Kothi (Storage Bin)?', answer: 'General category gets 25% and SC/ST farmers get up to 33% (within a set limit) subsidy on seed storage bin.' }
+    ]
+  },
+  'macro-management-scheme-krishi': {
+    ...reviewed,
+    title: 'मैक्रो मैनेजमेंट स्कीम (कृषि)',
+    english: 'Macro Management of Agriculture (MMA)',
+    summary: 'राज्य की विशिष्ट स्थानीय आवश्यकताओं के अनुसार किसानों को कृषि विकास, भूमि सुधार और यंत्रीकरण में मदद करने वाली केंद्र प्रवर्तित योजना (Centrally Sponsored Scheme)।',
+    benefit: 'कृषि विकास के विभिन्न घटकों (उपकरण, जल संरक्षण, फसल विविधीकरण) पर वित्तीय सहायता',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkrishi.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खसरा / बी-1 (कृषि भूमि प्रमाण)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra / B-1 (Agricultural Land Proof)',
+      'Bank Passbook'
+    ],
+    steps: [
+      'चूंकि यह एक "अम्ब्रेला" (Umbrella) योजना है, इसके तहत कई छोटे कार्यक्रम (जैसे वाटरशेड, कृषि यंत्रीकरण) आते हैं।',
+      'अपनी स्थानीय आवश्यकता के अनुसार (जैसे ट्रैक्टर अनुदान या बीज अनुदान) संबंधित योजना के लिए कृषि विभाग में आवेदन करें।',
+      'सब्सिडी का निर्धारण राज्य की कार्ययोजना (Work Plan) और केंद्र सरकार की गाइडलाइन के अनुसार किया जाता है।'
+    ],
+    stepsEn: [
+      'Since it is an "Umbrella" scheme, many small programs (like Watershed, Agri Mechanization) come under it.',
+      'Apply to the Agri Dept for the relevant scheme as per your local need (like tractor subsidy or seed subsidy).',
+      'Subsidy is determined according to the state\'s Work Plan and the Central Govt\'s guidelines.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'मध्य प्रदेश के कृषक' }
+    ],
+    sourceNotes: 'यह एक ऐतिहासिक योजना है जिसे बाद में राष्ट्रीय कृषि विकास योजना (RKVY) आदि में समाहित (merge) कर दिया गया है।',
+    detailedDescription: [
+      'मैक्रो मैनेजमेंट ऑफ एग्रीकल्चर (MMA) भारत सरकार की एक व्यापक योजना है। पहले केंद्र सरकार हर चीज़ के लिए अलग-अलग योजनाएं (Scheme) बनाती थी।',
+      'सन् 2000-01 में सरकार ने 27 अलग-अलग योजनाओं (जैसे खाद, बीज, उद्यानिकी, कृषि यंत्र, वाटरशेड) को मिलाकर एक "मैक्रो मैनेजमेंट" योजना बना दी। इसका फायदा यह हुआ कि मध्य प्रदेश सरकार अपनी स्थानीय जरूरत के अनुसार बजट का उपयोग कर सकती है।'
+    ],
+    detailedDescriptionEn: [
+      'Macro Management of Agriculture (MMA) is a comprehensive scheme of the Govt of India. Earlier the Central govt used to make separate schemes for everything.',
+      'In 2000-01, the govt combined 27 diff schemes (like fertilizers, seeds, horticulture, agri machinery, watershed) to form one "Macro Management" scheme. The advantage of this was that the MP govt could use the budget according to its local needs.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य घटक (Components)', points: [
+          'कृषि यंत्रीकरण: ट्रैक्टर, रोटावेटर आदि कृषि उपकरणों पर अनुदान।',
+          'फसल विकास: अनाज और गन्ने की फसलों के लिए बीज और तकनीकी सहायता।',
+          'जल संरक्षण: वर्षा आधारित क्षेत्रों के लिए वाटरशेड विकास कार्यक्रम (NWDPRA) और भूमि सुधार।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Components', points: [
+          'Agri Mechanization: Subsidy on agri implements like tractors, rotavators etc.',
+          'Crop Development: Seeds and tech assistance for cereal and sugarcane crops.',
+          'Water Conservation: Watershed Dev Program (NWDPRA) and land reclamation for rainfed areas.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'राज्य का कोई भी किसान अपनी आवश्यकता अनुसार इस योजना के विभिन्न घटकों (Sub-schemes) का लाभ ले सकता है।',
+      'योजना में लघु, सीमांत और महिला किसानों (Small, Marginal, and Women Farmers) को प्राथमिकता (लगभग 33% बजट) दी जाती है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Any farmer of the state can take advantage of various components (Sub-schemes) of this scheme according to their need.',
+      'In the scheme, priority (approx 33% budget) is given to Small, Marginal, and Women Farmers.'
+    ],
+    exclusions: [
+      'वर्तमान में, इस योजना के अधिकांश घटकों को RKVY (राष्ट्रीय कृषि विकास योजना) या NFSM (राष्ट्रीय खाद्य सुरक्षा मिशन) में मिला दिया गया है।',
+      'इसलिए आप सीधे "मैक्रो मैनेजमेंट" के नाम से आवेदन नहीं कर सकते, बल्कि आपको उस विशिष्ट उपकरण या बीज के लिए आवेदन करना होगा।'
+    ],
+    exclusionsEn: [
+      'Currently, most components of this scheme have been merged into RKVY (Rashtriya Krishi Vikas Yojana) or NFSM (National Food Security Mission).',
+      'Therefore, you cannot apply directly in the name of "Macro Management", but you have to apply for that specific equipment or seed.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'योजना के घटक अनुसार (Component-wise)', steps: [
+          'किसानों को "ई-कृषि यंत्र अनुदान" (dbt.mpdage.org) या कृषि विभाग के अन्य पोर्टलों पर जाना होगा।',
+          'वहां उपलब्ध योजनाओं (जैसे यंत्रीकरण, बीज ग्राम आदि) के तहत ही आवेदन स्वीकार किए जाते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Component-wise', steps: [
+          'Farmers will have to visit "e-Krishi Yantra Anudan" (dbt.mpdage.org) or other portals of the Agri Dept.',
+          'Applications are accepted only under the schemes available there (like mechanization, seed village etc.).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह योजना अभी चालू है?', answer: 'हां, लेकिन इसका नाम और स्वरूप बदल गया है। अब इसकी सब-स्कीम (जैसे RKVY, कृषि यंत्रीकरण) के नाम से अनुदान दिया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this scheme still active?', answer: 'Yes, but its name and format have changed. Now subsidy is given under the name of its sub-schemes (like RKVY, Agri Mechanization).' }
+    ]
+  },
+  'gramin-engineer-yojana': {
+    ...reviewed,
+    title: 'ग्रामीण इंजीनियर योजना',
+    english: 'Gramin Engineer Yojana (Rural Engineer Scheme)',
+    summary: 'ग्रामीण युवाओं को स्थानीय स्तर पर तकनीकी कौशल (इलेक्ट्रीशियन, प्लंबिंग आदि) सिखाकर उन्हें स्वरोज़गार के योग्य बनाने और ग्राम पंचायतों में सेवाएं देने की योजना।',
+    benefit: 'ग्रामीण युवाओं को निःशुल्क तकनीकी प्रशिक्षण, टूलकिट और स्वयं का उद्यम स्थापित करने के लिए ₹50 लाख तक के ऋण पर सहायता।',
+    department: 'तकनीकी शिक्षा, कौशल विकास एवं रोजगार विभाग / पंचायत विकास',
+    sourceUrl: 'https://skill.mponline.gov.in/',
+    applicationUrl: 'https://skill.mponline.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      '10वीं / 12वीं / ITI की मार्कशीट',
+      'ग्रामीण क्षेत्र का निवास प्रमाण पत्र',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      '10th / 12th / ITI Marksheet',
+      'Rural Area Domicile Certificate',
+      'Bank Passbook'
+    ],
+    steps: [
+      'अपने निकटतम ITI (औद्योगिक प्रशिक्षण संस्थान) या जनपद पंचायत कार्यालय में जाकर योजना की जानकारी लें।',
+      'कौशल विकास पोर्टल या ITI के माध्यम से अपना ऑनलाइन/ऑफलाइन पंजीकरण कराएं।',
+      'निर्धारित ट्रेड (जैसे प्लंबिंग, इलेक्ट्रिशियन, कृषि यंत्र रिपेयरिंग) में 3 से 6 माह का प्रशिक्षण प्राप्त करें।',
+      'प्रशिक्षण पूरा होने पर टूलकिट, प्रमाण पत्र और ग्राम पंचायत स्तर पर काम करने का अवसर प्राप्त करें।'
+    ],
+    stepsEn: [
+      'Visit your nearest ITI (Industrial Training Institute) or Janpad Panchayat office to get details.',
+      'Register online/offline through the Skill Development portal or ITI.',
+      'Get 3 to 6 months of training in the designated trade (like plumbing, electrician, agri machinery repair).',
+      'Upon completion of training, get a toolkit, certificate, and an opportunity to work at the Gram Panchayat level.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 35 वर्ष' },
+      { field: 'age', op: 'lte', value: 35, label: 'अधिकतम 35 वर्ष' }
+    ],
+    sourceNotes: 'सितंबर 2022 में MP के मुख्यमंत्री द्वारा घोषित, संकल्प (SANKALP) योजना के तहत।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार द्वारा शुरू की गई "ग्रामीण इंजीनियर योजना" (Rural Engineer Scheme) का उद्देश्य हर ग्राम पंचायत में कम से कम 4 ऐसे "ग्रामीण इंजीनियर" तैयार करना है, जो गांव के रोज़मर्रा के तकनीकी काम कर सकें।',
+      'अक्सर गांवों में बिजली, नल-जल योजना (पाइपलाइन), और कृषि यंत्रों के खराब होने पर मैकेनिक के लिए शहर भागना पड़ता है। इस योजना से युवाओं को गांव में ही प्लंबर, इलेक्ट्रीशियन, मेसन (राजमिस्त्री), और कृषि यंत्र रिपेयरिंग का प्रशिक्षण (Training) दिया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The "Gramin Engineer Yojana" launched by the MP Govt aims to prepare at least 4 such "Rural Engineers" in every Gram Panchayat, who can do the daily technical work of the village.',
+      'Often in villages, when electricity, tap-water schemes (pipeline), or agri machinery break down, people have to run to the city for a mechanic. Through this scheme, youth are given training for plumbers, electricians, masons, and agri machinery repairing right in the village.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'निःशुल्क प्रशिक्षण: युवाओं को ITI या कौशल विकास केंद्रों पर फ्री में ट्रेनिंग दी जाती है।',
+          'टूलकिट (Toolkit): काम शुरू करने के लिए सरकार की ओर से औजारों की एक किट मुफ्त में दी जाती है।',
+          'लोन की सुविधा: यदि युवा अपना खुद का सर्विस सेंटर या उद्यम (Enterprise) शुरू करना चाहते हैं, तो सरकार उन्हें ₹50 लाख तक के ऋण (Loan) में सहायता और गारंटी प्रदान करती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Free Training: Youth are given free training at ITIs or skill development centers.',
+          'Toolkit: A kit of tools is given free of cost by the govt to start work.',
+          'Loan Facility: If youth want to start their own service center or enterprise, the govt provides assistance and guarantee in loans up to ₹50 lakh.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश के ग्रामीण क्षेत्र (Rural Area) का निवासी होना चाहिए।',
+      'युवक या युवती की आयु सामान्यतः 18 से 35 वर्ष के बीच होनी चाहिए।',
+      'शैक्षणिक योग्यता 10वीं या 12वीं पास (ट्रेड के अनुसार) होनी चाहिए। जिन युवाओं ने पहले से ITI किया है, उन्हें भी प्राथमिकता दी जा सकती है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of a Rural Area of Madhya Pradesh.',
+      'The age of the youth should generally be between 18 to 35 years.',
+      'Educational qualification should be 10th or 12th pass (as per the trade). Youth who have already done ITI may also be given priority.'
+    ],
+    exclusions: [
+      'शहरी क्षेत्रों (Urban areas) में रहने वाले युवा इस "ग्रामीण" इंजीनियर योजना के पात्र नहीं हैं।',
+      'सरकारी नौकरी कर रहे या नियमित आय वाले व्यक्ति इसका लाभ नहीं ले सकते।'
+    ],
+    exclusionsEn: [
+      'Youth living in Urban areas are not eligible for this "Gramin" (Rural) Engineer scheme.',
+      'Persons in govt jobs or with a regular income cannot avail of this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन / ITI के माध्यम से', steps: [
+          'हर साल ITI और कौशल विकास विभाग द्वारा इसके बैच बनाए जाते हैं।',
+          'अपने विकासखंड (Block) के ITI (Industrial Training Institute) में जाकर फॉर्म भरें।',
+          'ग्राम पंचायत के सरपंच या सचिव के माध्यम से भी नामांकन किया जा सकता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Through ITI', steps: [
+          'Every year batches are formed for this by the ITI and Skill Development Dept.',
+          'Go to the ITI of your Block and fill the form.',
+          'Enrollment can also be done through the Sarpanch or Secretary of the Gram Panchayat.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या ट्रेनिंग के बाद सरकारी नौकरी मिलेगी?', answer: 'नहीं, यह योजना सरकारी नौकरी के लिए नहीं, बल्कि गांव में "स्वरोज़गार" (Self-employment) स्थापित करने और ग्राम पंचायत के ठेकों (Contracts) में काम पाने के लिए है।' },
+      { question: 'कौन-कौन से काम सिखाए जाते हैं?', answer: 'मुख्य रूप से पंप रिपेयरिंग, नल-जल योजना का रखरखाव (Plumbing), बिजली फिटिंग, ट्रैक्टर/कृषि यंत्रों की मरम्मत आदि।' }
+    ],
+    faqsEn: [
+      { question: 'Will I get a govt job after training?', answer: 'No, this scheme is not for a govt job, but to establish "Self-employment" in the village and get work in Gram Panchayat contracts.' },
+      { question: 'What kind of work is taught?', answer: 'Mainly pump repairing, maintenance of tap-water schemes (Plumbing), electrical fitting, tractor/agri machinery repair etc.' }
+    ]
+  },
+  'apradh-pidit-pratikar-yojana': {
+    ...reviewed,
+    title: 'अपराध पीड़ित प्रतिकर (Victim Compensation) योजना',
+    english: 'Crime Victim Compensation Scheme (Madhya Pradesh)',
+    summary: 'गंभीर अपराध, यौन हिंसा, एसिड अटैक या हत्या के पीड़ितों और उनके परिवारों को चिकित्सा, पुनर्वास और आर्थिक राहत प्रदान करने की योजना।',
+    benefit: 'गंभीर अपराधों से पीड़ित/घायल या उनके आश्रितों को ₹2 लाख से ₹10 लाख तक का मुआवजा (मुआवज़ा)।',
+    department: 'राज्य विधिक सेवा प्राधिकरण (MPSLSA) / गृह विभाग',
+    sourceUrl: 'https://mpslsa.mp.gov.in/',
+    applicationUrl: 'https://mpslsa.mp.gov.in/',
+    documents: [
+      'FIR (प्रथम सूचना रिपोर्ट) की कॉपी',
+      'मेडिकल रिपोर्ट (घायल होने या एसिड अटैक के मामले में)',
+      'मृत्यु प्रमाण पत्र (हत्या के मामले में)',
+      'उत्तराधिकार (Succession) प्रमाण पत्र (आश्रितों के लिए)',
+      'आधार कार्ड और बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Copy of FIR (First Information Report)',
+      'Medical Report (in case of injury or acid attack)',
+      'Death Certificate (in case of murder)',
+      'Succession Certificate (for dependents)',
+      'Aadhaar Card and Bank Passbook'
+    ],
+    steps: [
+      'घटना के बाद पुलिस में FIR दर्ज कराएं और मेडिकल जांच करवाएं।',
+      'जिला विधिक सेवा प्राधिकरण (DLSA) कार्यालय (जो जिला न्यायालय में होता है) में सचिव के समक्ष आवेदन प्रस्तुत करें।',
+      'अदालत (Court) भी सुनवाई के दौरान पीड़ित को मुआवजा देने की सिफारिश (Recommendation) कर सकती है।',
+      'जांच समिति द्वारा मामले का सत्यापन करने के बाद प्रतिकर राशि (Compensation) पीड़ित के बैंक खाते में डाल दी जाती है।'
+    ],
+    stepsEn: [
+      'After the incident, file an FIR with the police and get a medical examination done.',
+      'Submit the application before the Secretary at the District Legal Services Authority (DLSA) office (located in the District Court).',
+      'The Court can also recommend compensation to the victim during the hearing.',
+      'After verification of the case by the inquiry committee, the compensation amount is deposited into the victim\'s bank account.'
+    ],
+    rules: [],
+    sourceNotes: 'CrPC की धारा 357A के तहत MP Crime Victim Compensation Scheme 2015 से संचालित।',
+    detailedDescription: [
+      'मध्य प्रदेश अपराध पीड़ित प्रतिकर योजना (M.P. Crime Victim Compensation Scheme, 2015) का मुख्य उद्देश्य उन लोगों को वित्तीय सहायता देना है, जिन्हें किसी गंभीर अपराध के कारण शारीरिक या मानसिक चोट पहुंची है, और जिन्हें पुनर्वास (Rehabilitation) की आवश्यकता है।',
+      'इस योजना के तहत एसिड अटैक (Acid Attack), बलात्कार (Rape), मानव तस्करी (Human Trafficking), और हत्या (Murder) जैसे जघन्य अपराधों के पीड़ितों या उनके आश्रितों को सरकार द्वारा न्याय के साथ-साथ आर्थिक मदद भी दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of the M.P. Crime Victim Compensation Scheme, 2015 is to provide financial assistance to those who have suffered physical or mental injury due to a serious crime, and who require rehabilitation.',
+      'Under this scheme, victims or dependents of heinous crimes like Acid Attack, Rape, Human Trafficking, and Murder are given financial help along with justice by the govt.'
+    ],
+    benefitsList: [
+      {
+        heading: 'मुआवजे (Compensation) की राशि', points: [
+          'मृत्यु (हत्या): पीड़ित के परिवार/आश्रितों को न्यूनतम ₹2 लाख से ₹10 लाख तक।',
+          'एसिड अटैक (चेहरा खराब होना): न्यूनतम ₹3 लाख से ₹7 लाख तक (साथ ही फ्री इलाज)।',
+          'बलात्कार (Rape): पीड़िता को न्यूनतम ₹3 लाख से ₹5 लाख तक (निर्भया फंड के तहत भी अलग से प्रावधान हैं)।',
+          'गंभीर चोट / अंग भंग (Loss of Limb): ₹50,000 से ₹2 लाख तक।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Compensation Amount', points: [
+          'Death (Murder): Min ₹2 lakh to ₹10 lakh to the family/dependents of the victim.',
+          'Acid Attack (Disfigurement of face): Min ₹3 lakh to ₹7 lakh (along with free treatment).',
+          'Rape: Min ₹3 lakh to ₹5 lakh to the victim (there are separate provisions under Nirbhaya Fund too).',
+          'Grievous Injury / Loss of Limb: ₹50,000 to ₹2 lakh.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक या पीड़ित को उस अपराध के कारण गंभीर नुकसान हुआ हो और उसे आर्थिक मदद की सख्त आवश्यकता हो।',
+      'घटना की रिपोर्ट (FIR) घटना के 48 घंटों के भीतर पुलिस को दी गई हो (विशेष परिस्थितियों में इसमें छूट मिल सकती है)।',
+      'पीड़ित या उसके आश्रितों ने पुलिस और न्यायालय की कार्यवाही में पूरा सहयोग किया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant or victim must have suffered serious loss due to the crime and strictly requires financial help.',
+      'The incident must be reported (FIR) to the police within 48 hours of the occurrence (can be relaxed in special circumstances).',
+      'The victim or their dependents must have fully cooperated in the police and court proceedings.'
+    ],
+    exclusions: [
+      'यदि पीड़ित खुद उस अपराध में शामिल था, तो उसे कोई मुआवजा नहीं मिलेगा।',
+      'यदि पीड़ित को किसी अन्य योजना (जैसे बीमा या कोई अन्य सरकारी मदद) के तहत पहले ही पर्याप्त पैसा मिल चुका है, तो इस मुआवजे की राशि कम की जा सकती है।'
+    ],
+    exclusionsEn: [
+      'If the victim was themselves involved in the crime, they will not get any compensation.',
+      'If the victim has already received sufficient money under any other scheme (like insurance or other govt help), this compensation amount may be reduced.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'जिला विधिक सेवा प्राधिकरण (DLSA)', steps: [
+          'यह प्रक्रिया पूरी तरह से विधिक (Legal) है। आवेदन आपके जिले के "जिला न्यायालय (District Court)" परिसर में स्थित DLSA कार्यालय में देना होता है।',
+          'आवेदन के साथ FIR और मेडिकल कागजात लगाना अनिवार्य है।',
+          'DLSA सचिव मामले की जांच करेंगे और 2 महीने के भीतर मुआवजे पर फैसला लेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'District Legal Services Authority (DLSA)', steps: [
+          'This process is completely Legal. The application has to be submitted at the DLSA office located in the "District Court" premises of your district.',
+          'It is mandatory to attach FIR and medical documents with the application.',
+          'The DLSA Secretary will investigate the matter and decide on the compensation within 2 months.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या कोर्ट में केस खत्म होने के बाद ही पैसा मिलता है?', answer: 'नहीं। अगर पीड़ित को तुरंत इलाज या मदद की जरूरत है, तो DLSA जांच के बाद "अंतरिम मुआवजा" (Interim Compensation) तुरंत दे सकती है, चाहे केस अदालत में चल ही रहा हो।' },
+      { question: 'इस योजना में फॉर्म कहाँ मिलेगा?', answer: 'फॉर्म और मुफ्त कानूनी सलाह (Free Legal Aid) के लिए आप सीधे जिला कोर्ट के विधिक सेवा प्राधिकरण (Legal Services Authority) कार्यालय में जा सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is the money received only after the case is over in court?', answer: 'No. If the victim needs immediate treatment or help, the DLSA can give "Interim Compensation" immediately after inquiry, even if the case is ongoing in court.' },
+      { question: 'Where to get the form for this scheme?', answer: 'For forms and Free Legal Aid, you can go directly to the Legal Services Authority office in the District Court.' }
+    ]
+  },
+  'swarna-jayanti-gram-swarojgar-yojana': {
+    ...reviewed,
+    title: 'स्वर्ण जयंती ग्राम स्वरोज़गार योजना (अब आजीविका / NRLM)',
+    english: 'Swarnajayanti Gram Swarozgar Yojana (Now NRLM/Aajeevika)',
+    summary: 'ग्रामीण गरीब महिलाओं को स्व-सहायता समूह (SHG) से जोड़कर, उन्हें स्वरोज़गार और बैंक ऋण दिलाकर गरीबी रेखा से ऊपर लाने की प्रमुख योजना।',
+    benefit: 'स्व-सहायता समूहों को रिवॉल्विंग फंड, प्रशिक्षण और स्वरोज़गार शुरू करने के लिए कम ब्याज पर बैंक लोन एवं सब्सिडी',
+    department: 'पंचायत एवं ग्रामीण विकास विभाग (राज्य ग्रामीण आजीविका मिशन)',
+    sourceUrl: 'https://prd.mp.gov.in/nrlm/',
+    applicationUrl: 'https://prd.mp.gov.in/nrlm/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'राशन कार्ड (गरीबी रेखा/BPL)',
+      'समूह का बैंक खाता पासबुक',
+      'समूह के सदस्यों का संकल्प पत्र'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Ration Card (BPL)',
+      'Bank passbook of the SHG',
+      'Resolution letter of group members'
+    ],
+    steps: [
+      'गांव की महिलाओं (10-12 सदस्य) को मिलाकर एक स्व-सहायता समूह (Self Help Group - SHG) बनाएं।',
+      'गांव की आजीविका सखी (CRP) या पंचायत सचिव के माध्यम से समूह का पंजीकरण कराएं।',
+      'समूह का एक साझा बैंक खाता खुलवाएं और नियमित साप्ताहिक बचत (Saving) शुरू करें।',
+      '3-6 महीने बाद समूह को सरकार की तरफ से रिवाल्विंग फंड (Revolving Fund) और बैंक से लोन (Credit Linkage) मिल जाएगा।'
+    ],
+    stepsEn: [
+      'Form a Self Help Group (SHG) comprising 10-12 village women.',
+      'Register the group through the village Aajeevika Sakhi (CRP) or Panchayat Secretary.',
+      'Open a joint bank account of the group and start regular weekly saving.',
+      'After 3-6 months, the group will get a Revolving Fund from the govt and a loan (Credit Linkage) from the bank.'
+    ],
+    rules: [
+      { field: 'rural', op: 'eq', value: true, label: 'ग्रामीण क्षेत्र के निवासी' }
+    ],
+    sourceNotes: 'SGSY का पुनर्गठन (Restructuring) होकर अब यह DAY-NRLM (राष्ट्रीय ग्रामीण आजीविका मिशन) के रूप में संचालित है।',
+    detailedDescription: [
+      'स्वर्ण जयंती ग्राम स्वरोज़गार योजना (SGSY) सरकार की एक बहुत पुरानी और सफल योजना थी, जिसे अब "दीनदयाल अंत्योदय योजना - राष्ट्रीय ग्रामीण आजीविका मिशन" (DAY-NRLM) में बदल दिया गया है। मध्य प्रदेश में इसे "आजीविका मिशन" (Aajeevika Mission) कहा जाता है।',
+      'इसका मुख्य उद्देश्य गांवों की गरीब महिलाओं को संगठित करके स्व-सहायता समूह (SHG) बनाना है। जब महिलाएं मिलकर बचत करती हैं, तो सरकार उन्हें आर्थिक मदद (Revolving fund) देती है। बाद में ये महिलाएं सिलाई, पशुपालन, दुकान, या अचार-पापड़ जैसे छोटे उद्योग शुरू करने के लिए बैंक से लाखों रुपये का लोन बहुत कम ब्याज पर ले सकती हैं।'
+    ],
+    detailedDescriptionEn: [
+      'Swarnajayanti Gram Swarozgar Yojana (SGSY) was a very old and successful govt scheme, which has now been restructured into "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission" (DAY-NRLM). In MP, it is called the "Aajeevika Mission".',
+      'Its main objective is to organize poor women of villages to form Self Help Groups (SHG). When women save together, the govt gives them financial help (Revolving fund). Later, these women can take loans of lakhs of rupees from the bank at very low interest to start small industries like tailoring, animal husbandry, shops, or pickle-papad making.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना (आजीविका मिशन) के मुख्य लाभ', points: [
+          'रिवाल्विंग फंड (Revolving Fund): अच्छे से चलने वाले समूहों को सरकार द्वारा ₹10,000 से ₹15,000 की शुरुआती आर्थिक मदद दी जाती है।',
+          'कम्युनिटी इन्वेस्टमेंट फंड (CIF): स्वरोज़गार के बड़े काम के लिए समूह को ₹50,000 से ₹1 लाख तक का फंड मिलता है।',
+          'बैंक लिंकेज (Bank Linkage): समूह बैंक से लाखों का लोन ले सकता है, जिस पर ब्याज दर बहुत कम (आमतौर पर 4-7%) होती है, और ब्याज पर सब्सिडी भी मिलती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of Scheme (Aajeevika Mission)', points: [
+          'Revolving Fund: Well-functioning groups are given initial financial help of ₹10,000 to ₹15,000 by the govt.',
+          'Community Investment Fund (CIF): The group gets a fund of ₹50,000 to ₹1 lakh for bigger self-employment works.',
+          'Bank Linkage: The group can take loans of lakhs from the bank, on which the interest rate is very low (usually 4-7%), and interest subsidy is also available.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'समूह के सदस्य मुख्य रूप से ग्रामीण क्षेत्र (Rural Area) के होने चाहिए।',
+      'प्राथमिकता BPL (गरीबी रेखा से नीचे) या अति-निर्धन परिवारों की महिलाओं को दी जाती है।',
+      'एक समूह में कम से कम 10 से 20 महिलाएं होनी चाहिए (कुछ विशेष समूहों जैसे दिव्यांगों के मामले में 5 सदस्य भी चल सकते हैं)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The members of the group should primarily be from Rural Areas.',
+      'Priority is given to women from BPL (Below Poverty Line) or very poor families.',
+      'There should be at least 10 to 20 women in a group (in case of special groups like Divyangs, 5 members can also work).'
+    ],
+    exclusions: [
+      'एक ही परिवार (Family) की एक से अधिक महिलाएं सामान्यतः एक ही समूह की सदस्य नहीं हो सकतीं।',
+      'जो महिलाएं नियमित सरकारी नौकरी में हैं या जिनकी आर्थिक स्थिति बहुत अच्छी है, वे इसका हिस्सा नहीं बन सकतीं।'
+    ],
+    exclusionsEn: [
+      'More than one woman from the same family generally cannot be a member of the same group.',
+      'Women who are in regular govt jobs or whose financial condition is very good cannot be part of it.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ग्राम स्तर पर)', steps: [
+          'यह प्रक्रिया पूरी तरह से गांव स्तर पर होती है। आपको किसी दफ्तर जाने की ज़रूरत नहीं है।',
+          'ग्राम पंचायत में काम करने वाली "कृषि सखी" या "आजीविका सखी" (CRP) से संपर्क करें।',
+          'वे आपके समूह का रजिस्टर और बैंक खाता खुलवाएंगी, जिसके बाद योजना का लाभ मिलना शुरू हो जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (at village level)', steps: [
+          'This process happens entirely at the village level. You don\'t need to go to any office.',
+          'Contact the "Krishi Sakhi" or "Aajeevika Sakhi" (CRP) working in the Gram Panchayat.',
+          'They will open your group\'s register and bank account, after which the scheme benefits will start.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या बैंक से लिए गए लोन पर सब्सिडी मिलती है?', answer: 'पहले SGSY में सीधे कैपिटल सब्सिडी मिलती थी। लेकिन अब (NRLM में) ब्याज सब्सिडी (Interest Subvention) मिलती है। यदि समूह समय पर किस्तें चुकाता है, तो उसे ब्याज में भारी छूट दी जाती है।' },
+      { question: 'क्या पुरुष भी स्व-सहायता समूह (SHG) बना सकते हैं?', answer: 'आजीविका मिशन (NRLM) मुख्य रूप से महिलाओं के लिए है (लगभग 90%+ समूह महिलाओं के होते हैं)। विशेष परिस्थितियों (जैसे विकलांगों) के मामले में पुरुषों के समूह बन सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is there a subsidy on the loan taken from the bank?', answer: 'Earlier in SGSY, direct capital subsidy was given. But now (in NRLM), Interest Subvention is given. If the group pays installments on time, a huge discount in interest is given.' },
+      { question: 'Can men also form Self Help Groups (SHG)?', answer: 'Aajeevika Mission (NRLM) is primarily for women (approx 90%+ groups are of women). In special circumstances (like disabled), men\'s groups can be formed.' }
+    ]
+  },
+  'mukhyamantri-kaushal-samvardhan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कौशल संवर्धन योजना (MMKSY)',
+    english: 'Mukhyamantri Kaushal Samvardhan Yojana (MMKSY)',
+    summary: 'मध्य प्रदेश के बेरोजगार युवाओं को रोज़गार दिलाने के लिए फ्री में विभिन्न क्षेत्रों (IT, इंजीनियरिंग, सर्विस) में स्किल ट्रेनिंग देने की योजना।',
+    benefit: 'युवाओं को निःशुल्क शॉर्ट-टर्म तकनीकी प्रशिक्षण और रोज़गार/प्लेसमेंट सहायता',
+    department: 'तकनीकी शिक्षा एवं कौशल विकास विभाग (MPSSDEGB)',
+    sourceUrl: 'https://ssdm.mp.gov.in/',
+    applicationUrl: 'https://ssdm.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'शैक्षणिक योग्यता प्रमाण पत्र (8वीं/10वीं/12वीं/ग्रेजुएशन की मार्कशीट)',
+      'मध्य प्रदेश का मूल निवासी प्रमाण पत्र',
+      'पासपोर्ट साइज फोटो और मोबाइल नंबर'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Educational Qualification Certificate (8th/10th/12th/Graduation Marksheet)',
+      'MP Domicile Certificate',
+      'Passport size photo and Mobile number'
+    ],
+    steps: [
+      'कौशल विकास विभाग के पोर्टल (ssdm.mp.gov.in) पर जाकर Candidate Registration (पंजीकरण) करें।',
+      'अपना आधार नंबर डालकर OTP से ई-केवाईसी (e-KYC) पूरा करें।',
+      'उपलब्ध कोर्सेस (Courses) की सूची में से अपनी पसंद का ट्रेड और पास का ट्रेनिंग सेंटर चुनें।',
+      'ट्रेनिंग पूरी होने पर असेसमेंट (Exam) पास करें और सर्टिफिकेट एवं नौकरी (Placement) पाएं।'
+    ],
+    stepsEn: [
+      'Go to the Skill Dev Dept portal (ssdm.mp.gov.in) and do Candidate Registration.',
+      'Enter your Aadhaar number and complete e-KYC via OTP.',
+      'Choose the trade of your choice and the nearest training center from the list of available courses.',
+      'Pass the assessment (Exam) after completing the training and get a certificate and a job (Placement).'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 15, label: 'आयु 15 वर्ष से अधिक' }
+    ],
+    sourceNotes: 'MPSSDEGB पोर्टल एवं मुख्यमंत्री कौशल्या योजना दिशा-निर्देशों से सत्यापित।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार की "मुख्यमंत्री कौशल संवर्धन योजना (MMKSY)" का मुख्य उद्देश्य उन युवाओं को हुनरमंद (Skilled) बनाना है जिन्होंने अपनी पढ़ाई बीच में छोड़ दी है या जो बेरोजगार हैं।',
+      'इस योजना के तहत NSQF (National Skill Qualification Framework) के मानकों पर आधारित शॉर्ट-टर्म (कम अवधि के) कोर्स कराए जाते हैं। इन कोर्सेस में IT, इलेक्ट्रॉनिक्स, एग्रीकल्चर, रिटेल, सिलाई, और ब्यूटी पार्लर जैसे दर्जनों ट्रेड शामिल हैं। ट्रेनिंग का पूरा खर्च सरकार उठाती है।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of the MP Govt\'s "Mukhyamantri Kaushal Samvardhan Yojana (MMKSY)" is to make those youths skilled who have dropped out of studies or who are unemployed.',
+      'Under this scheme, short-term courses based on NSQF standards are conducted. These courses include dozens of trades like IT, electronics, agriculture, retail, tailoring, and beauty parlours. The entire cost of training is borne by the govt.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'निःशुल्क प्रशिक्षण (Free Training): कोर्स की पूरी फीस सरकार द्वारा ट्रेनिंग सेंटर (VTP) को दी जाती है, छात्र को कुछ नहीं देना होता।',
+          'सर्टिफिकेट: सफलता पूर्वक ट्रेनिंग पूरी करने पर भारत सरकार / राज्य सरकार द्वारा मान्यता प्राप्त सर्टिफिकेट मिलता है।',
+          'रोज़गार सहायता (Placement): ट्रेनिंग देने वाली संस्था (Training Provider) की जिम्मेदारी होती है कि वह ट्रेनिंग के बाद जॉब फेयर लगाकर या कंपनियों से बात करके युवा को रोज़गार दिलाए।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Free Training: The entire course fee is paid by the govt to the training center (VTP), the student pays nothing.',
+          'Certificate: Upon successful completion of training, a certificate recognized by the Govt of India / State Govt is given.',
+          'Placement Assistance: It is the responsibility of the Training Provider to get the youth a job by organizing job fairs or talking to companies after the training.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'युवक/युवती की न्यूनतम आयु 15 वर्ष होनी चाहिए (अधिकतम आयु की कोई सख्त सीमा नहीं है, लेकिन युवाओं को प्राथमिकता है)।',
+      'शैक्षणिक योग्यता कोर्स के अनुसार अलग-अलग हो सकती है (कुछ कोर्स 8वीं पास के लिए हैं, तो कुछ 10वीं, 12वीं या ग्रेजुएशन वालों के लिए)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of Madhya Pradesh.',
+      'The minimum age of the youth should be 15 years (no strict upper age limit, but youth are preferred).',
+      'Educational qualification may vary according to the course (some courses are for 8th pass, while some are for 10th, 12th or graduates).'
+    ],
+    exclusions: [
+      'ट्रेनिंग के दौरान बीच में कोर्स छोड़ने वालों को सर्टिफिकेट नहीं मिलेगा।',
+      'यदि छात्र ने किसी अन्य सरकारी योजना के तहत पहले ही वही ट्रेनिंग फ्री में ले ली है, तो वह दोबारा आवेदन नहीं कर सकता।'
+    ],
+    exclusionsEn: [
+      'Those who drop out in the middle of training will not get a certificate.',
+      'If the student has already taken the same training for free under another govt scheme, they cannot apply again.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MP Skills Portal)', steps: [
+          'पंजीकरण प्रक्रिया पूरी तरह से ऑनलाइन है। पोर्टल (ssdm.mp.gov.in) पर साल भर में कभी भी कोर्स की उपलब्धता के आधार पर आवेदन किया जा सकता है।',
+          'आप अपने नज़दीकी ITI, सरकारी कौशल विकास केंद्र, या प्राइवेट रजिस्टर्ड ट्रेनिंग सेंटर (VTP) में जाकर भी अपना रजिस्ट्रेशन करवा सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MP Skills Portal)', steps: [
+          'The registration process is completely online. Application can be made anytime during the year on the portal (ssdm.mp.gov.in) based on course availability.',
+          'You can also get your registration done by visiting your nearest ITI, Govt Skill Dev Center, or Private Registered Training Center (VTP).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या इस ट्रेनिंग के दौरान कोई वज़ीफ़ा (Stipend) या पैसा मिलता है?', answer: 'आम तौर पर नहीं। यह योजना मुफ़्त ट्रेनिंग और रोज़गार दिलाने के लिए है, न कि सीधे नकद पैसा (Stipend) देने के लिए (हालाँकि कुछ विशेष बैचों में महिलाओं/SC/ST को भत्ते मिल सकते हैं)।' },
+      { question: 'महिलाओं के लिए क्या कोई विशेष योजना है?', answer: 'हाँ, महिलाओं को कौशल सिखाने के लिए सरकार इसी के समानांतर "मुख्यमंत्री कौशल्या योजना (MMKY)" भी चलाती है, जिसमें सिर्फ महिलाओं के लिए बैच और कोर्स होते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Do I get any stipend or money during this training?', answer: 'Generally no. This scheme is for providing free training and employment, not direct cash (Stipend) (however, in some special batches, women/SC/ST may get allowances).' },
+      { question: 'Is there any special scheme for women?', answer: 'Yes, parallel to this, the govt also runs "Mukhyamantri Kaushalya Yojana (MMKY)" to teach skills to women, which has batches and courses exclusively for women.' }
+    ]
+  },
+  'mukhyamantri-yuva-udyami-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री युवा उद्यमी योजना (अब उद्यम क्रान्ति योजना में विलय)',
+    english: 'Mukhyamantri Yuva Udyami Yojana (Now Udyam Kranti Yojana)',
+    summary: 'युवाओं को अपना खुद का उद्योग (विनिर्माण या सेवा) स्थापित करने के लिए बिना गारंटी के लोन और ब्याज में भारी सब्सिडी देने की योजना। (अब उद्यम क्रान्ति योजना में समाहित)।',
+    benefit: '₹1 लाख से लेकर ₹50 लाख तक का बिना गारंटी का बैंक लोन और 5 वर्षों तक ब्याज पर सब्सिडी',
+    department: 'सूक्ष्म, लघु एवं मध्यम उद्यम (MSME) विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://msme.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'शैक्षणिक योग्यता (न्यूनतम 8वीं/10वीं पास की अंकसूची)',
+      'विस्तृत प्रोजेक्ट रिपोर्ट (DPR - Project Report)',
+      'आय और मूल निवासी प्रमाण पत्र'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Educational Qualification (Min 8th/10th pass Marksheet)',
+      'Detailed Project Report (DPR)',
+      'Income and Domicile Certificate'
+    ],
+    steps: [
+      'योजना का लाभ लेने के लिए अब MSME विभाग के SAMAST पोर्टल (samast.mponline.gov.in) पर "उद्यम क्रान्ति योजना" के तहत ऑनलाइन आवेदन करें।',
+      'अपने प्रस्तावित व्यवसाय की एक अच्छी प्रोजेक्ट रिपोर्ट (DPR) बनाकर पोर्टल पर अपलोड करें।',
+      'विभाग की टास्क फोर्स समिति (Task Force Committee) आवेदन का मूल्यांकन करेगी और मंजूरी के बाद इसे बैंक को भेज देगी।',
+      'बैंक द्वारा लोन स्वीकृत होने पर सरकार मार्जिन मनी और ब्याज में सब्सिडी देती है।'
+    ],
+    stepsEn: [
+      'To avail the scheme, now apply online under "Udyam Kranti Yojana" on the SAMAST portal (samast.mponline.gov.in) of the MSME dept.',
+      'Prepare a good Project Report (DPR) of your proposed business and upload it on the portal.',
+      'The Task Force Committee of the dept will evaluate the application and send it to the bank after approval.',
+      'Upon loan approval by the bank, the govt gives a subsidy in margin money and interest.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 40 वर्ष के बीच' },
+      { field: 'age', op: 'lte', value: 40, label: 'अधिकतम 40 वर्ष' }
+    ],
+    sourceNotes: 'यह योजना अब एकल रूप में संचालित नहीं है। इसे MSME विभाग की "मुख्यमंत्री उद्यम क्रान्ति योजना" (Mukhyamantri Udyam Kranti Yojana) में मिला दिया गया है।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने युवाओं को नौकरी मांगने वाले की जगह "नौकरी देने वाला" (Job Creator) बनाने के लिए मुख्यमंत्री युवा उद्यमी योजना शुरू की थी।',
+      'वर्तमान में इसे "मुख्यमंत्री उद्यम क्रान्ति योजना" का रूप दे दिया गया है। इस योजना के तहत राज्य का कोई भी शिक्षित बेरोजगार युवा अपनी खुद की फैक्ट्री (Manufacturing) या सर्विस सेंटर (जैसे रिपेयरिंग शॉप, सैलून, रेस्टोरेंट) शुरू करने के लिए सरकार की मदद से बैंक से भारी भरकम लोन ले सकता है, वह भी बिना किसी ज़मीन या प्रॉपर्टी की गारंटी (Collateral-free) दिए।'
+    ],
+    detailedDescriptionEn: [
+      'The MP Govt started the Mukhyamantri Yuva Udyami Yojana to make youth "Job Creators" instead of job seekers.',
+      'Currently, it has been transformed into "Mukhyamantri Udyam Kranti Yojana". Under this scheme, any educated unemployed youth of the state can take a huge loan from the bank with the help of the govt to start their own factory (Manufacturing) or Service Center (like repairing shop, salon, restaurant), that too without giving any land or property guarantee (Collateral-free).'
+    ],
+    benefitsList: [
+      {
+        heading: 'उद्यम क्रान्ति योजना (नवीन स्वरूप) के मुख्य लाभ', points: [
+          'लोन की राशि (Loan Amount): विनिर्माण (Manufacturing) के लिए ₹1 लाख से ₹50 लाख तक, और सेवा/खुदरा व्यापार (Service/Retail) के लिए ₹1 लाख से ₹25 लाख तक का लोन।',
+          'ब्याज अनुदान (Interest Subsidy): बैंक द्वारा लिए जाने वाले ब्याज पर सरकार 5 वर्षों तक प्रतिवर्ष 3% (या नियमानुसार) का ब्याज अनुदान (Subsidy) देती है।',
+          'गारंटी फीस (Guarantee Fee): बैंक को दी जाने वाली गारंटी (CGTMSE) की फीस भी सरकार खुद भरती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of Udyam Kranti Yojana (New Format)', points: [
+          'Loan Amount: Loan up to ₹1 lakh to ₹50 lakh for Manufacturing, and ₹1 lakh to ₹25 lakh for Service/Retail trade.',
+          'Interest Subsidy: The govt gives an interest subsidy of 3% (or as per rules) per annum for 5 years on the interest charged by the bank.',
+          'Guarantee Fee: The fee for the guarantee (CGTMSE) given to the bank is also paid by the govt itself.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी (Domicile) होना चाहिए और उसकी आयु 18 से 40 वर्ष के बीच होनी चाहिए।',
+      'शैक्षणिक योग्यता कम से कम 8वीं या 10वीं कक्षा (योजना के नवीन दिशा-निर्देशों के अनुसार) पास होनी चाहिए।',
+      'आवेदक के परिवार की वार्षिक आय ₹12 लाख से अधिक नहीं होनी चाहिए, और वह बैंक का डिफॉल्टर (Defaulter) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of MP and their age should be between 18 to 40 years.',
+      'Educational qualification should be at least 8th or 10th class pass (as per new guidelines of the scheme).',
+      'The annual income of the applicant\'s family should not exceed ₹12 lakh, and they should not be a bank defaulter.'
+    ],
+    exclusions: [
+      'यदि व्यक्ति पहले से ही राज्य या केंद्र सरकार की किसी अन्य स्व-रोज़गार योजना (जैसे PMEGP) का लाभ ले रहा है, तो वह अपात्र होगा।',
+      'यह योजना केवल नए उद्यम (New Business) स्थापित करने के लिए है, पहले से चल रहे व्यापार के विस्तार के लिए नहीं।'
+    ],
+    exclusionsEn: [
+      'If a person is already taking advantage of any other self-employment scheme of the State or Central Govt (like PMEGP), they will be ineligible.',
+      'This scheme is only for setting up a new enterprise (New Business), not for the expansion of an already running business.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST पोर्टल)', steps: [
+          'आवेदन केवल ऑनलाइन "MP Online (SAMAST Portal)" के माध्यम से ही स्वीकार किए जाते हैं।',
+          'आवेदक को अपनी प्रोफाइल बनानी होती है और प्रोजेक्ट की जानकारी (DPR) अपलोड करनी होती है।',
+          'जिला व्यापार एवं उद्योग केंद्र (DIC) के महाप्रबंधक द्वारा ऑनलाइन ही प्रकरण बैंक को प्रेषित किया जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Applications are accepted only online through "MP Online (SAMAST Portal)".',
+          'The applicant has to create their profile and upload the project information (DPR).',
+          'The case is forwarded to the bank online by the General Manager of the District Trade and Industry Center (DIC).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या लोन के लिए मुझे अपनी ज़मीन या घर गिरवी रखना पड़ेगा?', answer: 'नहीं। इस योजना की सबसे बड़ी खूबी यही है कि यह बिना गारंटी (Collateral-free) का लोन है। बैंक की गारंटी भारत सरकार के CGTMSE ट्रस्ट द्वारा ली जाती है, जिसकी फीस MP सरकार भरती है।' },
+      { question: 'मैं प्रोजेक्ट रिपोर्ट (DPR) कैसे बनाऊं?', answer: 'DPR बनाने के लिए आप किसी चार्टर्ड अकाउंटेंट (CA), MSME विभाग के सलाहकारों या इंटरनेट पर उपलब्ध टेम्पलेट्स की मदद ले सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Will I have to mortgage my land or house for the loan?', answer: 'No. The biggest feature of this scheme is that it is a Collateral-free loan. The bank guarantee is taken by the CGTMSE trust of Govt of India, whose fee is paid by the MP Govt.' },
+      { question: 'How do I make a Project Report (DPR)?', answer: 'To make a DPR, you can take the help of a Chartered Accountant (CA), MSME dept consultants, or templates available on the internet.' }
+    ]
+  },
+  'mukhyamantri-mazdoor-suraksha-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री मज़दूर सुरक्षा योजना (अब संबल योजना)',
+    english: 'Mukhyamantri Mazdoor Suraksha Yojana (Now Sambal Yojana)',
+    summary: 'भूमिहीन कृषि मजदूरों को बीमारी, प्रसूति (Maternity), विवाह और मृत्यु जैसी स्थितियों में आर्थिक सुरक्षा प्रदान करने की योजना (अब मुख्य रूप से जन कल्याण संबल योजना में विलय)।',
+    benefit: 'श्रमिकों को प्रसूति सहायता (6 सप्ताह की मजदूरी), बच्चों के लिए छात्रवृत्ति, और मृत्यु पर ₹2 लाख से ₹4 लाख तक की आर्थिक मदद',
+    department: 'श्रम विभाग, मध्य प्रदेश (संबल पोर्टल)',
+    sourceUrl: 'https://sambal.mp.gov.in/',
+    applicationUrl: 'https://sambal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'असंगठित श्रमिक / संबल कार्ड',
+      'बैंक खाता पासबुक',
+      'डॉक्टर का प्रमाण पत्र (प्रसूति के समय) या FIR/डेथ सर्टिफिकेट (मृत्यु के समय)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Unorganized Worker / Sambal Card',
+      'Bank Account Passbook',
+      'Doctor\'s certificate (at the time of maternity) or FIR/Death Certificate (at the time of death)'
+    ],
+    steps: [
+      'योजना का लाभ लेने के लिए सबसे पहले श्रम विभाग के "संबल (Sambal) पोर्टल" या अपनी ग्राम पंचायत/वार्ड कार्यालय में श्रमिक के रूप में पंजीयन कराएं।',
+      'मज़दूर सुरक्षा / संबल कार्ड (Sambal Card) प्राप्त करें।',
+      'प्रसूति (Pregnancy) या दुर्घटना/मृत्यु की स्थिति में अपने पंचायत सचिव या श्रम कार्यालय में संबंधित फॉर्म (मेडिकल या मृत्यु प्रमाण पत्र के साथ) जमा करें।',
+      'सत्यापन के बाद सहायता राशि सीधे मज़दूर या उसके परिवार के बैंक खाते (DBT) में भेजी जाती है।'
+    ],
+    stepsEn: [
+      'To avail the scheme, first register as a worker on the Labor Dept\'s "Sambal Portal" or at your Gram Panchayat/Ward office.',
+      'Get the Mazdoor Suraksha / Sambal Card.',
+      'In case of maternity (Pregnancy) or accident/death, submit the relevant form (with medical or death certificate) to your Panchayat Secretary or Labor office.',
+      'After verification, the assistance amount is sent directly to the bank account (DBT) of the laborer or their family.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'worker', label: 'असंगठित क्षेत्र के कृषि/अन्य मजदूर' }
+    ],
+    sourceNotes: 'यह योजना अब मुख्य रूप से मध्य प्रदेश सरकार की महात्वाकांक्षी "मुख्यमंत्री जन कल्याण (संबल) योजना" के तहत संचालित की जाती है।',
+    detailedDescription: [
+      'मुख्यमंत्री मज़दूर सुरक्षा योजना विशेष रूप से उन भूमिहीन खेतिहर मज़दूरों के लिए शुरू की गई थी जो दूसरों के खेतों में काम करते हैं और जिनका भविष्य सुरक्षित नहीं है।',
+      'वर्तमान में, असंगठित मज़दूरों (कृषि मज़दूर, रेहड़ी वाले, घरेलू कामगार) की सामाजिक सुरक्षा से जुड़ी लगभग सभी योजनाओं को "संबल योजना (Sambal Yojana)" में समाहित कर दिया गया है। इसके तहत मज़दूर परिवार को जन्म से लेकर मृत्यु तक हर कदम पर सरकार द्वारा आर्थिक सहायता दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Mukhyamantri Mazdoor Suraksha Yojana was started specifically for those landless agricultural laborers who work in others\' fields and whose future is not secure.',
+      'Currently, almost all social security schemes for unorganized workers (agri laborers, street vendors, domestic workers) have been merged into the "Sambal Yojana". Under this, the govt provides financial assistance to the laborer\'s family at every step from birth to death.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना (संबल के अंतर्गत) के मुख्य लाभ', points: [
+          'प्रसूति सहायता (Maternity Benefit): मज़दूर परिवार की महिला को प्रसव (Delivery) के समय 6 सप्ताह की न्यूनतम मज़दूरी के बराबर राशि और पति को 15 दिन का पितृत्व अवकाश (Paternity Leave) भत्ता दिया जाता है।',
+          'शिक्षा और विवाह: मज़दूरों के बच्चों को स्कूल से लेकर कॉलेज तक मुफ्त शिक्षा और मेधावी छात्रों को नकद पुरस्कार दिए जाते हैं।',
+          'मृत्यु/अपंगता सहायता: सामान्य मृत्यु होने पर ₹2 लाख, दुर्घटना में मृत्यु पर ₹4 लाख, और स्थायी अपंगता पर ₹2 लाख की सहायता राशि परिवार को मिलती है (अंत्येष्टि के लिए ₹5000 अलग से)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of Scheme (under Sambal)', points: [
+          'Maternity Benefit: A woman from a laborer family is given an amount equal to 6 weeks minimum wage at the time of delivery, and the husband is given 15 days Paternity Leave allowance.',
+          'Education and Marriage: Free education from school to college is given to laborers\' children and cash prizes to meritorious students.',
+          'Death/Disability Assistance: In case of normal death ₹2 lakh, accidental death ₹4 lakh, and permanent disability ₹2 lakh assistance is given to the family (₹5000 separately for funeral).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और असंगठित क्षेत्र (Unorganized Sector) का मज़दूर होना चाहिए।',
+      'मज़दूर की आयु 18 से 60 वर्ष के बीच होनी चाहिए।',
+      'आवेदक के पास 1 हेक्टेयर (लगभग 2.5 एकड़) से अधिक कृषि भूमि नहीं होनी चाहिए और वह आयकर दाता (Income Tax Payer) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of MP and a laborer in the Unorganized Sector.',
+      'The age of the laborer should be between 18 to 60 years.',
+      'The applicant should not have more than 1 hectare (approx 2.5 acres) of agricultural land and should not be an Income Tax Payer.'
+    ],
+    exclusions: [
+      'सरकारी कर्मचारी, पेंशनभोगी, या जिनका PF/ESIC कटता है (संगठित क्षेत्र के कर्मचारी), वे इस योजना के पात्र नहीं हैं।',
+      'यदि मज़दूर के परिवार का कोई सदस्य सरकारी नौकरी में है, तो कार्ड निरस्त किया जा सकता है।'
+    ],
+    exclusionsEn: [
+      'Govt employees, pensioners, or those whose PF/ESIC is deducted (organized sector employees) are not eligible for this scheme.',
+      'If any member of the laborer\'s family is in a govt job, the card can be canceled.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (ग्राम पंचायत / संबल पोर्टल)', steps: [
+          'सर्वप्रथम संबल पोर्टल (sambal.mp.gov.in) पर जाकर अपना समग्र आईडी दर्ज करें और ई-केवाईसी (e-KYC) पूरा करें।',
+          'यह प्रक्रिया ग्राम पंचायत के सचिव या रोजगार सहायक की मदद से भी पूरी की जा सकती है।',
+          'रजिस्ट्रेशन के बाद जांच अधिकारी (Verification Officer) द्वारा सत्यापन किया जाएगा और फिर संबल कार्ड जारी हो जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Gram Panchayat / Sambal Portal)', steps: [
+          'First go to Sambal Portal (sambal.mp.gov.in), enter your Samagra ID and complete e-KYC.',
+          'This process can also be completed with the help of the Secretary or Rozgar Sahayak of the Gram Panchayat.',
+          'After registration, verification will be done by the Verification Officer and then the Sambal Card will be issued.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मेरा पुराना मज़दूर सुरक्षा कार्ड अब भी काम करेगा?', answer: 'सरकार ने पुराने सभी कार्डों का डेटा संबल पोर्टल (Sambal Portal) पर माइग्रेट कर दिया है। आपको ऑनलाइन अपना नया ई-संबल कार्ड जनरेट कर लेना चाहिए।' },
+      { question: 'प्रसूति सहायता का पैसा कैसे मिलता है?', answer: 'प्रसव सरकारी अस्पताल में होने पर, अस्पताल द्वारा या पंचायत सचिव के माध्यम से आवेदन करने पर पैसा सीधे महिला के बैंक खाते में आता है।' }
+    ],
+    faqsEn: [
+      { question: 'Will my old Mazdoor Suraksha Card still work?', answer: 'The govt has migrated the data of all old cards to the Sambal Portal. You should generate your new e-Sambal Card online.' },
+      { question: 'How is the maternity assistance money received?', answer: 'If the delivery happens in a govt hospital, the money comes directly into the woman\'s bank account upon applying through the hospital or Panchayat Secretary.' }
+    ]
+  },
+  'nishaktjan-vivah-protsahan-yojana': {
+    ...reviewed,
+    title: 'नि:शक्तजनों हेतु विवाह प्रोत्साहन योजना',
+    english: 'Nishaktjan Vivah Protsahan Yojana (Disabled Marriage Aid)',
+    summary: 'दिव्यांग (Disabled) व्यक्तियों को विवाह के बाद अपना घर बसाने और सुखद जीवन शुरू करने के लिए सरकार की ओर से ₹2 लाख की आर्थिक सहायता।',
+    benefit: 'दिव्यांग युवक या युवती (या दोनों) के विवाह पर ₹2,00,000 (दो लाख रुपये) की एकमुश्त प्रोत्साहन राशि',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'http://socialsecurity.mp.gov.in/',
+    applicationUrl: 'http://socialsecurity.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'वर और वधू दोनों का आधार कार्ड',
+      '40% या अधिक दिव्यांगता का प्रमाण पत्र (UDID Card)',
+      'विवाह प्रमाण पत्र (Marriage Certificate)',
+      'आयु और मूल निवासी प्रमाण पत्र'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of both Bride and Groom',
+      '40% or more Disability Certificate (UDID Card)',
+      'Marriage Certificate',
+      'Age and Domicile Certificate'
+    ],
+    steps: [
+      'विवाह होने के बाद (1 वर्ष के भीतर) अपने जनपद पंचायत, नगर निगम या जिला सामाजिक न्याय विभाग कार्यालय से संपर्क करें।',
+      'सभी आवश्यक दस्तावेजों (विवाह प्रमाण, दिव्यांगता प्रमाण) के साथ आवेदन फॉर्म भरें।',
+      'आवेदन का विभाग द्वारा भौतिक सत्यापन (Physical Verification) किया जाएगा।',
+      'मंजूरी मिलने पर ₹2 लाख की राशि सीधे दंपति के बैंक खाते में जमा कर दी जाती है।'
+    ],
+    stepsEn: [
+      'After marriage (within 1 year), contact your Janpad Panchayat, Municipal Corp or District Social Justice Dept office.',
+      'Fill the application form with all necessary docs (Marriage cert, Disability cert).',
+      'The application will be physically verified by the dept.',
+      'Upon approval, an amount of ₹2 lakh is deposited directly into the bank account of the couple.'
+    ],
+    rules: [
+    ],
+    sourceNotes: 'सामाजिक न्याय विभाग MP की "निःशक्त विवाह प्रोत्साहन योजना" (नियम 2008/संशोधित) के अनुसार।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने दिव्यांग जनों (Disabled Persons) को समाज की मुख्यधारा से जोड़ने और उन्हें गृहस्थ जीवन शुरू करने में मदद करने के लिए "नि:शक्त विवाह प्रोत्साहन योजना" चलाई है।',
+      'इस योजना के तहत यदि कोई सामान्य (Non-disabled) युवक किसी दिव्यांग युवती से, या कोई सामान्य युवती किसी दिव्यांग युवक से, अथवा दोनों दिव्यांग हों और आपस में विवाह करते हैं, तो राज्य सरकार उन्हें ₹2 लाख का नकद पुरस्कार देती है।'
+    ],
+    detailedDescriptionEn: [
+      'The MP Govt has launched the "Nishakt Vivah Protsahan Yojana" to connect disabled persons with the mainstream of society and help them start family life.',
+      'Under this scheme, if a normal (Non-disabled) young man marries a disabled young woman, or a normal young woman marries a disabled young man, or both are disabled and marry each other, the state govt gives them a cash prize of ₹2 lakh.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'प्रोत्साहन राशि (Incentive): दंपति को विवाह के उपरांत ₹2,00,000 (दो लाख रुपये) की एकमुश्त (Lumpsum) राशि मिलती है।',
+          'समानता: यह राशि विवाह के बाद नए जीवन की शुरुआत (जैसे घर का सामान खरीदना या छोटा व्यापार शुरू करना) में मदद करती है।',
+          'सामूहिक विवाह (Mass Marriage): यदि यह विवाह सरकार द्वारा आयोजित सामूहिक विवाह सम्मेलन (जैसे मुख्यमंत्री कन्या विवाह योजना) में होता है, तो उसके लाभ अलग से मिल सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Incentive: The couple gets a lumpsum amount of ₹2,00,000 (Two Lakh Rupees) after marriage.',
+          'Equality: This amount helps in starting a new life after marriage (like buying household goods or starting a small business).',
+          'Mass Marriage: If this marriage takes place in a mass marriage conference organized by the govt (like Mukhyamantri Kanya Vivah Yojana), its benefits can be availed separately.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'वर और वधू दोनों में से किसी एक का, या दोनों का न्यूनतम 40% दिव्यांग (Disabled) होना अनिवार्य है (सक्षम अधिकारी का मेडिकल बोर्ड प्रमाण पत्र आवश्यक है)।',
+      'विवाह के समय युवक की आयु कम से कम 21 वर्ष और युवती की आयु 18 वर्ष पूर्ण होनी चाहिए।',
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए, और यह व्यक्ति का प्रथम विवाह होना चाहिए (विधवा/विधुर के पुनर्विवाह के मामले में नियम अलग हो सकते हैं)।'
+    ],
+    eligibilityDescriptionEn: [
+      'It is mandatory for either the groom or the bride, or both, to be at least 40% disabled (Medical Board cert from competent authority is required).',
+      'At the time of marriage, the young man must have completed at least 21 years and the young woman 18 years of age.',
+      'The applicant must be a domicile of MP, and this should be the person\'s first marriage (rules may differ in case of widow/widower remarriage).'
+    ],
+    exclusions: [
+      'यदि विवाह कानूनी रूप से वैध (Legally valid) नहीं है, तो लाभ नहीं मिलेगा।',
+      'दंपति आयकर दाता (Income Tax Payer) नहीं होने चाहिए।'
+    ],
+    exclusionsEn: [
+      'If the marriage is not legally valid, the benefit will not be given.',
+      'The couple should not be Income Tax Payers.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन / सामाजिक न्याय विभाग', steps: [
+          'विवाह होने के 1 वर्ष के भीतर आवेदन करना आवश्यक है।',
+          'ग्रामीण क्षेत्र में ग्राम पंचायत/जनपद पंचायत और शहरी क्षेत्र में नगर पालिका/नगर निगम के माध्यम से आवेदन "संयुक्त संचालक, सामाजिक न्याय" को भेजा जाता है।',
+          'प्रमाण पत्रों की जांच के बाद स्वीकृति जारी होती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Social Justice Dept', steps: [
+          'It is necessary to apply within 1 year of marriage.',
+          'In rural areas, the application is sent to the "Joint Director, Social Justice" through Gram Panchayat/Janpad Panchayat and in urban areas through Municipality/Municipal Corp.',
+          'Approval is issued after checking the certificates.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या दोनों का दिव्यांग होना ज़रूरी है?', answer: 'नहीं। यदि एक व्यक्ति (पति या पत्नी) 100% स्वस्थ है और दूसरा 40% या उससे अधिक दिव्यांग है, तब भी ₹2 लाख की राशि मिलेगी।' },
+      { question: 'शादी के कितने समय बाद तक फॉर्म भर सकते हैं?', answer: 'नियमों के अनुसार विवाह संपन्न होने के एक साल (1 Year) के भीतर आपको आवेदन कर देना चाहिए।' }
+    ],
+    faqsEn: [
+      { question: 'Is it necessary for both to be disabled?', answer: 'No. If one person (husband or wife) is 100% healthy and the other is 40% or more disabled, even then the amount of ₹2 lakh will be received.' },
+      { question: 'Till what time after marriage can the form be filled?', answer: 'According to the rules, you should apply within one year of the marriage taking place.' }
+    ]
+  },
+  'mukhyamantri-bal-hriday-upchar-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री बाल हृदय उपचार योजना',
+    english: 'Mukhyamantri Bal Hriday Upchar Yojana (Child Heart Treatment)',
+    summary: '0 से 15 (कुछ नियमों में 18) वर्ष तक के गरीब बच्चों के दिल में छेद (CHD) जैसी गंभीर बीमारियों का देश के बड़े सुपर-स्पेशलिटी अस्पतालों में मुफ्त ऑपरेशन।',
+    benefit: 'हृदय रोग से पीड़ित बच्चों की ₹1 लाख से ₹2 लाख तक की सर्जरी/उपचार पूरी तरह निःशुल्क (Free Surgery)',
+    department: 'लोक स्वास्थ्य एवं परिवार कल्याण विभाग (MP Health)',
+    sourceUrl: 'https://health.mp.gov.in/',
+    applicationUrl: 'https://health.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'बच्चे और माता-पिता का आधार कार्ड',
+      'मेडिकल कॉलेज या जिला अस्पताल की 2D ECHO (इको) रिपोर्ट',
+      'बीपीएल कार्ड (BPL Card) या आय प्रमाण पत्र',
+      'जन्म प्रमाण पत्र (Birth Certificate)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of Child and Parents',
+      '2D ECHO report from Medical College or District Hospital',
+      'BPL Card or Income Certificate',
+      'Birth Certificate'
+    ],
+    steps: [
+      'बीमारी का पता चलने पर ज़िला अस्पताल (District Hospital) या मेडिकल कॉलेज में बच्चों के डॉक्टर से जांच कराएं।',
+      'ज़िले के CMHO (Chief Medical & Health Officer) या सिविल सर्जन कार्यालय में इको रिपोर्ट और दस्तावेज़ जमा करें।',
+      'ज़िला स्तर की समिति बच्चे के कागजात की जांच करके सरकार द्वारा सूचीबद्ध (Empanelled) अस्पताल के लिए मंज़ूरी देगी।',
+      'चयनित अस्पताल (जैसे दिल्ली, मुम्बई या इंदौर के बड़े अस्पताल) में ले जाकर निःशुल्क ऑपरेशन कराएं।'
+    ],
+    stepsEn: [
+      'Upon detection of the disease, get checked by a pediatrician at the District Hospital or Medical College.',
+      'Submit the ECHO report and docs at the district\'s CMHO (Chief Medical & Health Officer) or Civil Surgeon office.',
+      'The district-level committee will check the child\'s papers and give approval for a govt-empanelled hospital.',
+      'Take the child to the selected hospital (like big hospitals in Delhi, Mumbai, or Indore) and get free surgery done.'
+    ],
+    rules: [
+      { field: 'age', op: 'lte', value: 15, label: '0 से 15 वर्ष के बच्चे' }
+    ],
+    sourceNotes: 'स्वास्थ्य विभाग MP द्वारा राष्ट्रीय बाल स्वास्थ्य कार्यक्रम (RBSK) के समन्वय से संचालित।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने नवजात शिशुओं और बच्चों में दिल की गंभीर बीमारियों (जैसे दिल में छेद, वाल्व की समस्या) के कारण होने वाली मृत्यु दर को रोकने के लिए "मुख्यमंत्री बाल हृदय उपचार योजना" शुरू की है।',
+      'दिल की सर्जरी बहुत महंगी होती है (₹1 से 2 लाख या अधिक), जो गरीब परिवारों के लिए असंभव है। इस योजना के तहत सरकार सारा खर्च उठाती है और प्रदेश या देश के नामी प्राइवेट हॉस्पिटल्स (जैसे नारायण हृदयालय, मेदांता आदि) में बच्चे का फ्री ऑपरेशन कराया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The MP Govt has started the "Mukhyamantri Bal Hriday Upchar Yojana" to prevent the mortality rate caused by severe heart diseases (like hole in the heart, valve problems) in newborns and children.',
+      'Heart surgery is very expensive (₹1 to 2 lakh or more), which is impossible for poor families. Under this scheme, the govt bears all the expenses and free operation of the child is done in renowned private hospitals (like Narayana Hrudayalaya, Medanta etc) of the state or country.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'निःशुल्क सर्जरी: ₹1,00,000 या पैकेज के अनुसार जितना भी खर्च हो, वह सरकार सीधे अस्पताल को देती है।',
+          'सभी खर्च शामिल: इसमें बच्चे के अस्पताल में भर्ती होने, ऑपरेशन, दवाइयां, और भोजन का खर्च शामिल होता है।',
+          'विशेषज्ञ अस्पताल: सरकार ने देश भर के 15-20 से अधिक सुपर-स्पेशलिटी अस्पतालों को इसके लिए अधिकृत (Empanel) किया है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Free Surgery: ₹1,00,000 or whatever the cost as per the package, the govt pays it directly to the hospital.',
+          'All Expenses Included: This includes the cost of the child\'s hospitalization, operation, medicines, and food.',
+          'Specialist Hospitals: The govt has empanelled more than 15-20 super-specialty hospitals across the country for this.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'मरीज़ बच्चे की आयु 0 से 15 वर्ष के बीच होनी चाहिए (कुछ मामलों में 18 वर्ष तक RBSK के तहत)।',
+      'परिवार मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'परिवार गरीबी रेखा से नीचे (BPL) जीवन यापन करता हो। यदि परिवार BPL नहीं है, तो उनकी वार्षिक आय ₹1 लाख (कलेक्टर के प्रमाणन पर) से कम होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The age of the patient child must be between 0 to 15 years (in some cases up to 18 years under RBSK).',
+      'The family must be a domicile of Madhya Pradesh.',
+      'The family must be living Below Poverty Line (BPL). If the family is not BPL, their annual income should be less than ₹1 lakh (on certification by Collector).'
+    ],
+    exclusions: [
+      'यदि बच्चा किसी अन्य योजना (जैसे आयुष्मान भारत या CGHS) के तहत पहले ही इस बीमारी का फ्री इलाज लेने के योग्य है, तो उसका समायोजन किया जाएगा।',
+      'बिना CMHO की पूर्व स्वीकृति के सीधे प्राइवेट अस्पताल में इलाज कराने पर पैसा वापस (Reimbursement) नहीं मिलता।'
+    ],
+    exclusionsEn: [
+      'If the child is already eligible to get free treatment for this disease under any other scheme (like Ayushman Bharat or CGHS), it will be adjusted.',
+      'Money is not reimbursed for taking treatment directly in a private hospital without prior approval of CMHO.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (CMHO कार्यालय)', steps: [
+          'ज़िला मेडिकल बोर्ड से बीमारी (हृदय रोग) की पुष्टि करवाएं (2D ECHO Report)।',
+          'ज़िला अस्पताल (Civil Surgeon / CMHO) में आवेदन दें।',
+          'मंज़ूरी मिलने पर विभाग आपको एक "स्वीकृति पत्र" (Sanction Letter) देगा, जिसे लेकर आपको चुने हुए अस्पताल जाना होगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (CMHO Office)', steps: [
+          'Get the disease (heart disease) confirmed by the District Medical Board (2D ECHO Report).',
+          'Submit the application to the District Hospital (Civil Surgeon / CMHO).',
+          'Upon approval, the dept will give you a "Sanction Letter", taking which you will have to go to the chosen hospital.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या अस्पताल में हमें कोई पैसा जमा करना होगा?', answer: 'नहीं, स्वीकृति पत्र (Sanction letter) लेकर जाने पर अस्पताल को सीधे सरकार भुगतान करती है (Cashless Treatment)।' },
+      { question: 'हृदय की किन बीमारियों का इलाज होता है?', answer: 'मुख्य रूप से जन्मजात हृदय रोग जैसे VSD (दिल में छेद), ASD, TOF (Blue baby), और PDA जैसी बीमारियों का ऑपरेशन किया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Will we have to deposit any money in the hospital?', answer: 'No, on taking the Sanction letter, the govt pays the hospital directly (Cashless Treatment).' },
+      { question: 'Which heart diseases are treated?', answer: 'Mainly congenital heart diseases like VSD (hole in the heart), ASD, TOF (Blue baby), and PDA are operated upon.' }
+    ]
+  },
+  'iklauti-beti-scholarship-yojana': {
+    ...reviewed,
+    title: 'मध्य प्रदेश इकलौती बेटी छात्रवृत्ति योजना',
+    english: 'MP Iklauti Beti Scholarship Yojana (Single Girl Child)',
+    summary: 'जिन माता-पिता की केवल एक ही संतान (बेटी) है, उस बेटी की शिक्षा के लिए सरकार द्वारा ₹5,000 प्रति वर्ष की छात्रवृत्ति (Scholarship)।',
+    benefit: 'स्कूल/कॉलेज में पढ़ाई जारी रखने के लिए इकलौती बेटियों को ₹5,000 प्रति वर्ष की वित्तीय सहायता',
+    department: 'स्कूल शिक्षा / उच्च शिक्षा विभाग, मध्य प्रदेश',
+    sourceUrl: 'http://educationportal.mp.gov.in/',
+    applicationUrl: 'http://scholarshipportal.mp.nic.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'छात्रा का आधार कार्ड',
+      'माता-पिता का शपथ पत्र (यह प्रमाणित करने के लिए कि वह उनकी एकमात्र संतान है)',
+      'पिछली कक्षा की मार्कशीट',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of the Student',
+      'Affidavit from parents (to certify that she is their only child)',
+      'Marksheet of previous class',
+      'Bank Passbook'
+    ],
+    steps: [
+      'यह योजना मुख्य रूप से स्कूलों/कॉलेजों के माध्यम से संचालित होती है।',
+      'शिक्षा सत्र की शुरुआत में अपने स्कूल या कॉलेज के प्रिंसिपल/नोडल अधिकारी से संपर्क करें।',
+      'इकलौती संतान होने का शपथ पत्र (Affidavit) और अन्य दस्तावेज़ स्कूल में जमा करें।',
+      'स्कूल द्वारा आपका फॉर्म "MP Scholarship Portal" पर ऑनलाइन भरा और सत्यापित किया जाएगा।'
+    ],
+    stepsEn: [
+      'This scheme is mainly operated through schools/colleges.',
+      'Contact the Principal/Nodal Officer of your school or college at the beginning of the academic session.',
+      'Submit the affidavit of being a single child and other documents in the school.',
+      'Your form will be filled and verified online on the "MP Scholarship Portal" by the school.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'माता-पिता की इकलौती बेटी (छात्रा)' },
+      { field: 'occupation', op: 'eq', value: 'student', label: 'स्कूल/कॉलेज में अध्ययनरत' }
+    ],
+    sourceNotes: 'स्कूल शिक्षा विभाग (MP) के तहत बालिकाओं को शिक्षा के प्रति प्रोत्साहित करने की योजना। (नोट: यह CBSE या UGC की राष्ट्रीय "सिंगल गर्ल चाइल्ड" योजना से अलग राज्य स्तरीय योजना है)।',
+    detailedDescription: [
+      'कन्या भ्रूण हत्या रोकने और लड़कियों की शिक्षा को बढ़ावा देने के लिए मध्य प्रदेश सरकार ने "इकलौती बेटी छात्रवृत्ति योजना" (Education Development Scholarship for Single Girl Child) लागू की है।',
+      'यह योजना विशेष रूप से उन परिवारों को सम्मानित और आर्थिक सहायता प्रदान करती है, जिन्होंने बेटे की चाह न रखकर अपनी इकलौती बेटी को ही अपना सब कुछ माना है और उसे पढ़ा रहे हैं।'
+    ],
+    detailedDescriptionEn: [
+      'To prevent female foeticide and promote girls\' education, the MP Govt has implemented the "Iklauti Beti Scholarship Yojana" (Education Development Scholarship for Single Girl Child).',
+      'This scheme specifically honors and provides financial assistance to those families who, without wishing for a son, have considered their only daughter as their everything and are educating her.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'वित्तीय सहायता: पात्र छात्रा को प्रति वर्ष ₹5,000 की नकद छात्रवृत्ति (Scholarship) दी जाती है।',
+          'प्रत्यक्ष लाभ (DBT): यह राशि सीधे छात्रा के बैंक खाते में ट्रांसफर की जाती है।',
+          'निरंतर शिक्षा: इससे परिवार पर बेटी की पढ़ाई का आर्थिक बोझ कम होता है और वह बिना रुकावट अपनी पढ़ाई पूरी कर सकती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits', points: [
+          'Financial Assistance: An eligible girl student is given a cash scholarship of ₹5,000 per year.',
+          'Direct Benefit (DBT): This amount is transferred directly to the student\'s bank account.',
+          'Continuous Education: This reduces the financial burden of the daughter\'s education on the family and she can complete her studies without interruption.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्रा मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'वह अपने माता-पिता की एकमात्र (Single) संतान होनी चाहिए (यानी उसका कोई भाई या अन्य बहन नहीं होनी चाहिए)।',
+      'छात्रा मान्यता प्राप्त सरकारी या अनुदान प्राप्त स्कूल/कॉलेज में नियमित (Regular) रूप से पढ़ाई कर रही हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The girl student must be a domicile of Madhya Pradesh.',
+      'She must be the only (Single) child of her parents (i.e., she should not have any brother or another sister).',
+      'The student should be studying regularly in a recognized govt or aided school/college.'
+    ],
+    exclusions: [
+      'यदि छात्रा का कोई भाई या बहन है, तो वह इस योजना के लिए अपात्र होगी।',
+      'यदि छात्रा पढ़ाई बीच में छोड़ (Drop-out) देती है, तो छात्रवृत्ति बंद कर दी जाएगी।'
+    ],
+    exclusionsEn: [
+      'If the student has any brother or sister, she will be ineligible for this scheme.',
+      'If the student leaves her studies in the middle (Drop-out), the scholarship will be stopped.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'स्कूल/कॉलेज के माध्यम से', steps: [
+          'माता-पिता को नोटरी (Notary) से यह शपथ पत्र (Affidavit) बनवाना होता है कि "यह छात्रा हमारी एकमात्र संतान है"।',
+          'इस शपथ पत्र को समग्र आईडी, आधार कार्ड और बैंक पासबुक के साथ अपने स्कूल/कॉलेज में जमा करें।',
+          'स्कूल प्रबंधन इसे मध्य प्रदेश शिक्षा/स्कॉलरशिप पोर्टल पर ऑनलाइन अपलोड कर मंज़ूरी के लिए भेजता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Through School/College', steps: [
+          'Parents have to get an Affidavit made by a Notary stating that "This student is our only child".',
+          'Submit this affidavit along with Samagra ID, Aadhaar Card, and Bank Passbook to your school/college.',
+          'The school management uploads it online on the MP Education/Scholarship Portal and sends it for approval.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या जुड़वा बेटियों को इस योजना का लाभ मिलेगा?', answer: 'राष्ट्रीय स्तर (CBSE/UGC) की सिंगल गर्ल चाइल्ड योजना में जुड़वा बहनों को एक इकाई मानकर लाभ दिया जाता है, लेकिन राज्य योजना के विस्तृत नियम के लिए अपने स्कूल प्राचार्य से पुष्टि करें। मुख्य नियम "एकमात्र संतान" का है।' },
+      { question: 'यह योजना CBSE स्कॉलरशिप से कैसे अलग है?', answer: 'CBSE स्कॉलरशिप केंद्र सरकार/CBSE बोर्ड की है जो 10वीं के बाद मिलती है, जबकि यह योजना मध्य प्रदेश सरकार की है जो राज्य के स्कूलों में पढ़ रही बच्चियों के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'Will twin daughters get the benefit of this scheme?', answer: 'In the national level (CBSE/UGC) single girl child scheme, twin sisters are treated as a single unit and given benefits, but for the detailed rules of the state scheme, confirm with your school principal. The main rule is "only child".' },
+      { question: 'How is this scheme different from CBSE scholarship?', answer: 'CBSE scholarship is of Central Govt/CBSE board which is given after 10th, whereas this scheme is of MP Govt which is for girls studying in state schools.' }
+    ]
+  },
+  'gopal-protsahan-yojana': {
+    ...reviewed,
+    title: 'मध्य प्रदेश गोपाल पुरस्कार योजना',
+    english: 'MP Gopal Puraskar Yojana (Milk Production Competition)',
+    summary: 'देसी (भारतीय) नस्ल की गायों और भैंसों का पालन करने वाले पशुपालकों के लिए दुग्ध उत्पादन प्रतियोगिता, जिसमें जीतने पर नकद इनाम मिलता है।',
+    benefit: 'सबसे अधिक दूध देने वाली देसी गाय/भैंस के पालक को ब्लॉक, ज़िला और राज्य स्तर पर नकद पुरस्कार (Cash Prizes)',
+    department: 'पशुपालन एवं डेयरी विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://animalhusbandry.mp.gov.in/',
+    applicationUrl: 'https://animalhusbandry.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'पशुपालक का आधार कार्ड',
+      'देसी नस्ल के पशु (गाय/भैंस) का विवरण (पशु टैग नंबर)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of the cattle rearer',
+      'Details of indigenous breed cattle (Cow/Buffalo) (Animal Tag Number)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'प्रतियोगिता (अक्टूबर से दिसंबर के बीच) शुरू होने पर अपने नजदीकी पशु चिकित्सा अधिकारी (Veterinary Officer) या पशु औषधालय से संपर्क करें।',
+      'अपने अधिक दूध देने वाले देसी पशु (गाय या भैंस) का पंजीयन (Registration) कराएं।',
+      'प्रतियोगिता के दिन पशुपालन विभाग की टीम के सामने पशु का दूध निकाला जाता है (लगातार 3 समय का औसत लिया जाता है)।',
+      'सबसे अधिक दूध देने वाले पशुओं के मालिकों को विजेता घोषित कर पुरस्कार दिया जाता है।'
+    ],
+    stepsEn: [
+      'When the competition starts (between Oct to Dec), contact your nearest Veterinary Officer or Veterinary Dispensary.',
+      'Register your high milk-yielding indigenous animal (cow or buffalo).',
+      'On the day of the competition, the animal is milked in front of the Animal Husbandry dept team (average of 3 consecutive times is taken).',
+      'Owners of the highest milk-yielding animals are declared winners and given prizes.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'देसी दुधारू पशुपालक' }
+    ],
+    sourceNotes: 'पशुपालन विभाग MP द्वारा देसी नस्लों के संरक्षण हेतु "गोपाल पुरस्कार/प्रोत्साहन योजना"।',
+    detailedDescription: [
+      'मध्य प्रदेश में भारतीय (देसी) नस्ल के गोवंश और भैंसों के संरक्षण, संवर्धन और दूध उत्पादन को बढ़ावा देने के लिए "गोपाल पुरस्कार योजना" चलाई जाती है।',
+      'विदेशी नस्ल (जैसे जर्सी) के मुक़ाबले देसी गायों (जैसे गीर, साहीवाल, थारपारकर, निमाड़ी, मालवी) की उपयोगिता बढ़ाने के लिए सरकार हर साल ब्लॉक, ज़िला और राज्य स्तर पर प्रतियोगिताएं आयोजित करती है। इसमें सबसे ज़्यादा दूध देने वाली गाय/भैंस के मालिक को सम्मानित किया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'To promote the conservation, breeding, and milk production of Indian (indigenous) breeds of cattle and buffaloes in Madhya Pradesh, the "Gopal Puraskar Yojana" is run.',
+      'To increase the utility of indigenous cows (like Gir, Sahiwal, Tharparkar, Nimari, Malvi) compared to foreign breeds (like Jersey), the govt organizes competitions at block, district, and state levels every year. In this, the owner of the highest milk-yielding cow/buffalo is honored.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पुरस्कार (Prizes) का विवरण', points: [
+          'ब्लॉक (विकासखंड) स्तर: प्रतियोगिता जीतने पर प्रथम, द्वितीय और तृतीय पुरस्कार (आमतौर पर ₹10,000 से शुरू)।',
+          'ज़िला स्तर: ब्लॉक स्तर के विजेताओं के बीच प्रतियोगिता, जिसमें नकद पुरस्कार (जैसे ₹50,000) दिए जाते हैं।',
+          'राज्य स्तर: पूरे प्रदेश में सबसे अधिक दूध देने वाली देसी गाय/भैंस के पालक को सबसे बड़ा नकद पुरस्कार (लाखों में) और "गोपाल पुरस्कार" प्रमाण पत्र दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Details of Prizes', points: [
+          'Block Level: First, second, and third prizes on winning the competition (usually starting from ₹10,000).',
+          'District Level: Competition among block-level winners, in which cash prizes (e.g., ₹50,000) are given.',
+          'State Level: The owner of the highest milk-yielding indigenous cow/buffalo in the entire state is given the highest cash prize (in lakhs) and the "Gopal Puraskar" certificate.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और पशुपालक होना चाहिए।',
+      'प्रतियोगिता में केवल शुद्ध भारतीय/देसी नस्ल (Indigenous Breed) की गायें और भैंसें ही भाग ले सकती हैं (विदेशी या क्रॉस-ब्रीड पशु इसके लिए पात्र नहीं हैं)।',
+      'पशु स्वस्थ होना चाहिए और उसका पशुपालन विभाग में टैग (Ear Tagging) होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of MP and a cattle rearer.',
+      'Only pure Indian/indigenous breed cows and buffaloes can participate in the competition (foreign or cross-breed animals are not eligible for this).',
+      'The animal must be healthy and must be tagged (Ear Tagging) with the Animal Husbandry Dept.'
+    ],
+    exclusions: [
+      'यदि गाय/भैंस विदेशी नस्ल (जैसे जर्सी, होल्स्टीन फ्रीजियन - HF) की है या मिक्स (Cross-breed) है, तो उसे इस प्रतियोगिता में शामिल नहीं किया जाएगा।',
+      'जो पशु पहले राज्य स्तर का प्रथम पुरस्कार जीत चुका है, उसे अगली बार की प्रतियोगिता में शामिल नहीं किया जाता।'
+    ],
+    exclusionsEn: [
+      'If the cow/buffalo is of a foreign breed (like Jersey, Holstein Friesian - HF) or mixed (Cross-breed), it will not be included in this competition.',
+      'An animal that has previously won the state-level first prize is not included in the next competition.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (पशु चिकित्सालय)', steps: [
+          'योजना की जानकारी अखबारों या पंचायत में दी जाती है (अमूमन सर्दियों के समय)।',
+          'आपको अपने ब्लॉक के उप-संचालक पशुपालन या नज़दीकी पशु औषधालय में जाकर एक साधारण फॉर्म भरना होता है।',
+          'प्रतियोगिता स्थल पर पशु को लाना होता है, जहाँ समिति के सामने दूध मापा जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Veterinary Hospital)', steps: [
+          'Info about the scheme is given in newspapers or Panchayat (usually during winters).',
+          'You have to go to the Deputy Director Animal Husbandry of your block or the nearest veterinary dispensary and fill out a simple form.',
+          'The animal has to be brought to the competition venue, where the milk is measured in front of the committee.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या प्रतियोगिता में भैंस भी शामिल हो सकती है?', answer: 'हाँ, प्रतियोगिता आमतौर पर देसी गायों (Gir, Sahiwal आदि) और देसी भैंसों (Murrah, Bhadawari आदि) दोनों की अलग-अलग श्रेणियों में आयोजित होती है।' },
+      { question: 'दूध का मापन कैसे होता है?', answer: 'पशुपालन विभाग की कमेटी के सामने लगातार 3 बार (जैसे सुबह, शाम, और अगले दिन सुबह) दूध निकाला जाता है, और फिर उसका औसत (Average) निकाला जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can a buffalo also participate in the competition?', answer: 'Yes, the competition is usually organized in separate categories for both indigenous cows (Gir, Sahiwal, etc.) and indigenous buffaloes (Murrah, Bhadawari, etc.).' },
+      { question: 'How is the milk measured?', answer: 'Milk is extracted continuously 3 times (like morning, evening, and next morning) in front of the Animal Husbandry Dept committee, and then its average is calculated.' }
+    ]
+  },
+  'mukhyamantri-avivahit-pension-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री अविवाहित पेंशन योजना (कल्याणी)',
+    english: 'Mukhyamantri Avivahit Pension Yojana (Single Women)',
+    summary: '50 वर्ष या उससे अधिक आयु की अविवाहित महिलाओं को आत्मनिर्भर बनाने के लिए राज्य सरकार द्वारा ₹600 प्रतिमाह की आर्थिक सहायता।',
+    benefit: '50 वर्ष या उससे अधिक उम्र की अविवाहित महिलाओं को ₹600 प्रति माह नियमित पेंशन (DBT)',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'http://socialsecurity.mp.gov.in/',
+    applicationUrl: 'http://socialsecurity.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'आयु प्रमाण पत्र (50 वर्ष से अधिक)',
+      'अविवाहित होने का स्व-प्रमाणित घोषणा पत्र (Self-declaration)',
+      'बैंक खाता पासबुक (आधार से लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Age Proof (above 50 years)',
+      'Self-declaration of being unmarried',
+      'Bank Passbook (Aadhaar linked)'
+    ],
+    steps: [
+      'ग्रामीण क्षेत्र में अपनी ग्राम पंचायत या जनपद पंचायत कार्यालय में जाएं। शहरी क्षेत्र में नगर निगम/नगर पालिका कार्यालय जाएं।',
+      'अविवाहित पेंशन का फॉर्म भरें और उसके साथ अपनी 9 अंकों की समग्र आईडी और आधार कार्ड संलग्न करें।',
+      'फॉर्म के साथ "अविवाहित होने का घोषणा पत्र" (Affidavit/Declaration) जमा करें।',
+      'अधिकारी द्वारा जांच के बाद पेंशन स्वीकृत कर दी जाएगी और हर महीने सीधे खाते में आने लगेगी।'
+    ],
+    stepsEn: [
+      'In rural areas, go to your Gram Panchayat or Janpad Panchayat office. In urban areas, go to the Municipal Corp/Municipality office.',
+      'Fill the unmarried pension form and attach your 9-digit Samagra ID and Aadhaar card with it.',
+      'Submit the "Declaration of being unmarried" (Affidavit) along with the form.',
+      'After checking by the officer, the pension will be approved and will start coming directly to the account every month.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'महिला' },
+      { field: 'age', op: 'gte', value: 50, label: 'न्यूनतम आयु 50 वर्ष' }
+    ],
+    sourceNotes: 'सामाजिक न्याय विभाग MP की "मुख्यमंत्री अविवाहित (कल्याणी) पेंशन योजना"।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने उन महिलाओं की आर्थिक सुरक्षा और सम्मान के लिए यह योजना शुरू की है जिन्होंने विवाह नहीं किया है (अविवाहित हैं) और जिनकी आयु 50 वर्ष को पार कर चुकी है।',
+      'अक्सर बढ़ती उम्र में अविवाहित महिलाओं को दूसरों पर निर्भर रहना पड़ता है। इस पेंशन योजना का मुख्य उद्देश्य उन्हें हर महीने एक निश्चित राशि (₹600) देकर छोटी-मोटी जरूरतों के लिए आत्मनिर्भर बनाना है।'
+    ],
+    detailedDescriptionEn: [
+      'The Govt of MP has started this scheme for the financial security and respect of those women who have not married (are unmarried) and whose age has crossed 50 years.',
+      'Often in advancing age, unmarried women have to depend on others. The main objective of this pension scheme is to make them self-reliant for their small needs by giving them a fixed amount (₹600) every month.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पेंशन लाभ', points: [
+          'निश्चित मासिक राशि: ₹600 प्रति माह।',
+          'DBT भुगतान: यह राशि सीधे महिला के बैंक खाते में भेजी जाती है, इसलिए बैंक खाते का आधार (Aadhaar) और NPCI से लिंक होना अनिवार्य है।',
+          'आजीवन पेंशन: जब तक लाभार्थी महिला जीवित रहती है और शर्तें पूरी करती है, उसे पेंशन मिलती रहती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Pension Benefits', points: [
+          'Fixed Monthly Amount: ₹600 per month.',
+          'DBT Payment: This amount is sent directly to the woman\'s bank account, hence the bank account must be linked with Aadhaar and NPCI.',
+          'Lifelong Pension: As long as the beneficiary woman is alive and fulfills the conditions, she continues to get the pension.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक महिला मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'महिला की आयु न्यूनतम 50 वर्ष या उससे अधिक होनी चाहिए।',
+      'महिला अविवाहित (Unmarried) होनी चाहिए (यह योजना विधवाओं या तलाकशुदा महिलाओं के लिए नहीं है, उनके लिए अलग पेंशन योजनाएं हैं)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant woman must be a domicile of Madhya Pradesh.',
+      'The age of the woman must be a minimum of 50 years or above.',
+      'The woman must be unmarried (This scheme is not for widows or divorced women, there are separate pension schemes for them).'
+    ],
+    exclusions: [
+      'महिला आयकर दाता (Income Tax Payer) नहीं होनी चाहिए।',
+      'वह किसी सरकारी/अर्ध-सरकारी संस्था में काम नहीं कर रही हो।',
+      'यदि उसे पहले से ही कोई अन्य सामाजिक सुरक्षा पेंशन (जैसे वृद्धावस्था पेंशन) मिल रही है, तो वह एक साथ दो पेंशन नहीं ले सकती।'
+    ],
+    exclusionsEn: [
+      'The woman should not be an Income Tax Payer.',
+      'She should not be working in any govt/semi-govt organization.',
+      'If she is already receiving any other social security pension (like old age pension), she cannot take two pensions simultaneously.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन / ऑनलाइन', steps: [
+          'यह प्रक्रिया पूरी तरह से समग्र पोर्टल (Samagra Portal) के माध्यम से होती है।',
+          'आप अपने नज़दीकी लोक सेवा केंद्र (Lok Seva Kendra) जाकर भी ऑनलाइन फॉर्म भरवा सकते हैं।',
+          'पंचायत सचिव / वार्ड प्रभारी आवेदन को ऑनलाइन सत्यापित (Verify) करके स्वीकृति प्रदान करते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline / Online', steps: [
+          'This process is completely done through the Samagra Portal.',
+          'You can also go to your nearest Lok Seva Kendra and get the form filled online.',
+          'Panchayat Secretary / Ward Incharge verify the application online and grant approval.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अविवाहित होने का प्रमाण कैसे दें?', answer: 'इसके लिए आपको खुद से एक घोषणा पत्र (Self-declaration) लिखकर या टाइप करवाकर फॉर्म के साथ जमा करना होता है कि "मैं अविवाहित हूँ"। कई बार पंचायत या पार्षद का प्रमाण भी काम आता है।' },
+      { question: 'मेरी उम्र 55 वर्ष है और मैं विधवा हूँ, क्या मुझे यह पेंशन मिलेगी?', answer: 'नहीं। विधवा महिलाओं के लिए मध्य प्रदेश में "मुख्यमंत्री कल्याणी/विधवा पेंशन योजना" और राष्ट्रीय विधवा पेंशन योजना है। आप उसमें आवेदन कर सकती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'How to give proof of being unmarried?', answer: 'For this, you have to write or type a Self-declaration saying "I am unmarried" and submit it with the form. Sometimes a certificate from the Panchayat or Councilor also works.' },
+      { question: 'My age is 55 years and I am a widow, will I get this pension?', answer: 'No. For widow women, there is "Mukhyamantri Kalyani/Widow Pension Yojana" and National Widow Pension Scheme in MP. You can apply in that.' }
+    ]
+  },
+  'mukhyamantri-asangathit-mazdoor-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री असंगठित मजदूर कल्याण (संबल 2.0) योजना',
+    english: 'Mukhyamantri Asangathit Mazdoor Kalyan (Sambal 2.0) Yojana',
+    summary: 'मध्य प्रदेश के असंगठित क्षेत्र के लाखों श्रमिकों को जन्म से लेकर मृत्यु तक आर्थिक सहायता, प्रसूति लाभ, दुर्घटना बीमा और बच्चों की शिक्षा का खर्च देने वाली महात्वाकांक्षी योजना।',
+    benefit: 'दुर्घटना मृत्यु पर ₹4 लाख, सामान्य मृत्यु पर ₹2 लाख, प्रसूति सहायता ₹16000, अंत्येष्टि ₹5000 और बच्चों की मुफ़्त शिक्षा',
+    department: 'श्रम विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://sambal.mp.gov.in/',
+    applicationUrl: 'https://sambal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID) - परिवार और सदस्य की',
+      'श्रमिक का आधार कार्ड (Aadhaar Card)',
+      'बैंक खाता पासबुक (आधार से लिंक)',
+      'मोबाइल नंबर (आधार से जुड़ा हुआ)'
+    ],
+    documentsEn: [
+      'Samagra ID - of family and member',
+      'Worker\'s Aadhaar Card',
+      'Bank Account Passbook (Aadhaar linked)',
+      'Mobile Number (linked with Aadhaar)'
+    ],
+    steps: [
+      'संबल पोर्टल (sambal.mp.gov.in) पर जाकर अपना आधार ई-केवाईसी (e-KYC) पूरा करें।',
+      'इसके बाद असंगठित श्रमिक के रूप में पंजीयन के लिए फॉर्म भरें। (यह काम ग्राम पंचायत/लोक सेवा केंद्र से भी कराया जा सकता है)।',
+      'स्थानीय स्तर पर जांच अधिकारी आपके काम (श्रम) का सत्यापन करेगा।',
+      'सत्यापन के बाद आपका नया संबल कार्ड (Sambal 2.0 Card) जारी हो जाएगा, जिसे आप पोर्टल से डाउनलोड कर सकते हैं।'
+    ],
+    stepsEn: [
+      'Go to the Sambal Portal (sambal.mp.gov.in) and complete your Aadhaar e-KYC.',
+      'After this, fill the form for registration as an unorganized worker. (This work can also be done from Gram Panchayat/Lok Seva Kendra).',
+      'Locally, an investigation officer will verify your work (labor).',
+      'After verification, your new Sambal Card (Sambal 2.0 Card) will be issued, which you can download from the portal.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'worker', label: 'असंगठित क्षेत्र का मजदूर (कृषि/निर्माण/घरेलू आदि)' }
+    ],
+    sourceNotes: 'यह योजना "संबल योजना" का ही पूरा और आधिकारिक नाम है (मुख्यमंत्री जन कल्याण संबल योजना)।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने समाज के सबसे गरीब और मेहनत करने वाले वर्ग—असंगठित मज़दूरों (Unorganized Workers)—के जीवन में सुरक्षा कवच (Social Security Net) प्रदान करने के लिए "संबल योजना" (नया रूप संबल 2.0) लागू की है।',
+      'असंगठित मज़दूर वे हैं जो किसी कारखाने या सरकारी विभाग में स्थाई कर्मचारी नहीं हैं, बल्कि वे खेतों में काम करने वाले मज़दूर, ठेले वाले, चाय वाले, पल्लेदार, घरेलू कामगार (मेड), नाई, मोची आदि हैं। इस एक योजना के तहत मज़दूर को कई योजनाओं का लाभ मिलता है।'
+    ],
+    detailedDescriptionEn: [
+      'The MP Govt has implemented the "Sambal Yojana" (new format Sambal 2.0) to provide a Social Security Net in the lives of the poorest and hardworking section of society - Unorganized Workers.',
+      'Unorganized workers are those who are not permanent employees in any factory or govt department, rather they are farm laborers, street vendors, tea sellers, porters, domestic workers (maids), barbers, cobblers, etc. Under this one scheme, the laborer gets the benefit of many schemes.'
+    ],
+    benefitsList: [
+      {
+        heading: 'संबल कार्ड के मुख्य लाभ (Benefits)', points: [
+          'अनुग्रह सहायता (Death/Disability): दुर्घटना में मृत्यु होने पर परिवार को ₹4 लाख। सामान्य मृत्यु पर ₹2 लाख। स्थायी अपंगता (Permanent Disability) पर ₹2 लाख। आंशिक अपंगता पर ₹1 लाख।',
+          'अंत्येष्टि सहायता (Funeral): मज़दूर की मृत्यु पर अंतिम संस्कार के लिए ₹5,000 की तत्काल नकद सहायता।',
+          'प्रसूति सहायता (Maternity): मज़दूर महिला (या मज़दूर की पत्नी) को गर्भावस्था और प्रसव के दौरान कुल ₹16,000 की आर्थिक मदद।',
+          'आयुष्मान योजना: संबल कार्ड धारकों को स्वतः ही आयुष्मान भारत योजना (5 लाख तक मुफ़्त इलाज) का लाभ मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of Sambal Card', points: [
+          'Ex-gratia Assistance (Death/Disability): ₹4 lakh to the family in case of accidental death. ₹2 lakh on normal death. ₹2 lakh on Permanent Disability. ₹1 lakh on partial disability.',
+          'Funeral Assistance: Immediate cash assistance of ₹5,000 for funeral rites on the death of a laborer.',
+          'Maternity Assistance: Financial help of a total of ₹16,000 to the laborer woman (or laborer\'s wife) during pregnancy and delivery.',
+          'Ayushman Yojana: Sambal Cardholders automatically get the benefit of Ayushman Bharat Yojana (free treatment up to 5 lakhs).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और असंगठित क्षेत्र का श्रमिक होना चाहिए।',
+      'श्रमिक की आयु 18 वर्ष से 60 वर्ष के बीच होनी चाहिए।',
+      'आवेदक के पास 1 हेक्टेयर से अधिक कृषि भूमि नहीं होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of Madhya Pradesh and a worker in the unorganized sector.',
+      'The age of the worker should be between 18 years to 60 years.',
+      'The applicant should not have more than 1 hectare of agricultural land.'
+    ],
+    exclusions: [
+      'यदि व्यक्ति या उसकी पत्नी/पति शासकीय सेवा (Govt Job) में हैं, तो वे पात्र नहीं हैं।',
+      'आयकर दाता (Income Tax Payers) और EPF/ESIC के दायरे में आने वाले संगठित कर्मचारी इस योजना के लिए अपात्र हैं।'
+    ],
+    exclusionsEn: [
+      'If the person or their spouse is in Govt Job, they are not eligible.',
+      'Income Tax Payers and organized employees coming under EPF/ESIC are ineligible for this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (संबल पोर्टल)', steps: [
+          'योजना में आवेदन के लिए अब ऑनलाइन e-KYC अनिवार्य कर दिया गया है।',
+          'आप पोर्टल (sambal.mp.gov.in) पर जाकर "पंजीयन हेतु आवेदन करें" लिंक पर क्लिक कर सकते हैं।',
+          'समग्र आईडी से डेटा लिया जाएगा, और आवेदन के बाद आपके मोबाइल पर रजिस्ट्रेशन नंबर आएगा। आप पोर्टल से ही अपना स्टेटस भी चेक कर सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Sambal Portal)', steps: [
+          'Online e-KYC has now been made mandatory for applying to the scheme.',
+          'You can go to the portal (sambal.mp.gov.in) and click on the "Apply for registration" link.',
+          'Data will be fetched from Samagra ID, and after applying, the registration number will come on your mobile. You can also check your status from the portal itself.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या ई-श्रम कार्ड (e-Shram) और संबल कार्ड एक ही हैं?', answer: 'नहीं। ई-श्रम कार्ड केंद्र सरकार द्वारा बनाया जा रहा डेटाबेस है, जबकि संबल कार्ड मध्य प्रदेश सरकार की विशेष योजना है जिसके तहत सीधा पैसा (DBT) मिलता है।' },
+      { question: 'संबल कार्ड डाउनलोड कैसे करें?', answer: 'संबल पोर्टल पर "हितग्राही डैशबोर्ड" में अपनी 9 अंकों की समग्र आईडी डालकर आप अपना नया संबल 2.0 कार्ड डाउनलोड कर सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Are e-Shram Card and Sambal Card the same?', answer: 'No. e-Shram Card is a database being created by the Central Govt, while Sambal Card is a special scheme of MP Govt under which direct money (DBT) is received.' },
+      { question: 'How to download Sambal Card?', answer: 'You can download your new Sambal 2.0 Card by entering your 9-digit Samagra ID in the "Beneficiary Dashboard" on the Sambal Portal.' }
+    ]
+  },
+  'mukhyamantri-swarojgar-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री स्वरोज़गार योजना (उद्यम क्रांति)',
+    english: 'Mukhyamantri Swarojgar Yojana (Merged into Udyam Kranti)',
+    summary: 'नोट: इस योजना को अब "मुख्यमंत्री उद्यम क्रांति योजना" में विलय (Merge) कर दिया गया है। यह युवाओं को अपना व्यवसाय/उद्योग शुरू करने के लिए बैंक ऋण और ब्याज सब्सिडी देने की योजना है।',
+    benefit: 'नए उद्यम (Manufacturing/Service/Trade) के लिए ₹1 लाख से ₹50 लाख तक का बैंक ऋण और 3% प्रति वर्ष ब्याज सब्सिडी',
+    department: 'सूक्ष्म, लघु एवं मध्यम उद्यम (MSME) विभाग',
+    sourceUrl: 'https://msme.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'शैक्षणिक योग्यता प्रमाण पत्र (8वीं या 12वीं पास)',
+      'आय प्रमाण पत्र',
+      'प्रोजेक्ट रिपोर्ट (Project Report)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Educational Qualification Certificate (8th or 12th pass)',
+      'Income Certificate',
+      'Project Report',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'अब सभी नए आवेदन "मुख्यमंत्री उद्यम क्रांति योजना" के तहत MSME पोर्टल (SAMAST पोर्टल) के माध्यम से ऑनलाइन किए जाते हैं।',
+      'पोर्टल (samast.mponline.gov.in) पर जाकर अपना प्रोफाइल बनाएं और प्रोजेक्ट रिपोर्ट अपलोड करें।',
+      'ज़िला उद्योग केंद्र (DIC) द्वारा आवेदन की ऑनलाइन जाँच कर उसे संबंधित बैंक को भेजा जाता है।',
+      'बैंक द्वारा लोन स्वीकृत होने पर सरकार मार्जिन मनी और ब्याज में सब्सिडी प्रदान करती है।'
+    ],
+    stepsEn: [
+      'Now all new applications are made online through the MSME portal (SAMAST portal) under "Mukhyamantri Udyam Kranti Yojana".',
+      'Go to the portal (samast.mponline.gov.in), create your profile and upload the project report.',
+      'The District Industries Center (DIC) checks the application online and sends it to the concerned bank.',
+      'On approval of the loan by the bank, the govt provides a subsidy in margin money and interest.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'महत्वपूर्ण अपडेट: पुरानी "मुख्यमंत्री स्वरोज़गार योजना" को नवंबर 2021 से नई और व्यापक "मुख्यमंत्री उद्यम क्रांति योजना" में मिला दिया गया है।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने युवाओं में बेरोज़गारी कम करने और उन्हें नौकरी मांगने वाले की जगह नौकरी देने वाला (Entrepreneur) बनाने के लिए यह योजना बनाई थी।',
+      'नवंबर 2021 के बाद से, पुरानी स्वरोज़गार योजनाओं (जैसे मुख्यमंत्री स्वरोज़गार योजना) को मिलाकर एक नई और बड़ी योजना "मुख्यमंत्री उद्यम क्रांति योजना" (Mukhyamantri Udyam Kranti Yojana) शुरू की गई है, जिसके तहत लोन की सीमा बढ़ा दी गई है।'
+    ],
+    detailedDescriptionEn: [
+      'The Govt of MP had made this scheme to reduce unemployment among the youth and make them job creators (Entrepreneurs) instead of job seekers.',
+      'Since November 2021, by merging old self-employment schemes (like Mukhyamantri Swarojgar Yojana), a new and bigger scheme "Mukhyamantri Udyam Kranti Yojana" has been started, under which the loan limit has been increased.'
+    ],
+    benefitsList: [
+      {
+        heading: 'उद्यम क्रांति योजना के नए लाभ', points: [
+          'विनिर्माण (Manufacturing) इकाई के लिए: ₹1 लाख से ₹50 लाख तक का ऋण।',
+          'सेवा/व्यापार (Service/Trade) इकाई के लिए: ₹1 लाख से ₹25 लाख तक का ऋण।',
+          'ब्याज सब्सिडी: सरकार द्वारा बैंक को 3% प्रति वर्ष की दर से ब्याज अनुदान (Interest Subsidy) अधिकतम 7 वर्षों तक दिया जाता है।',
+          'गारंटी शुल्क: बैंक ऋण की गारंटी (CGTMSE) का शुल्क भी राज्य सरकार वहन करती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'New Benefits of Udyam Kranti Yojana', points: [
+          'For Manufacturing Unit: Loan from ₹1 lakh to ₹50 lakh.',
+          'For Service/Trade Unit: Loan from ₹1 lakh to ₹25 lakh.',
+          'Interest Subsidy: The govt gives an interest subsidy to the bank at the rate of 3% per annum for a max of 7 years.',
+          'Guarantee Fee: The state govt also bears the fee for the bank loan guarantee (CGTMSE).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक की आयु 18 से 45 वर्ष के बीच होनी चाहिए।',
+      'शैक्षणिक योग्यता: न्यूनतम 8वीं कक्षा उत्तीर्ण होना चाहिए (कुछ विशेष प्रोजेक्ट्स के लिए 12वीं)।',
+      'आवेदक के परिवार की वार्षिक आय ₹12 लाख से अधिक नहीं होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of Madhya Pradesh.',
+      'The age of the applicant should be between 18 to 45 years.',
+      'Educational Qualification: Minimum 8th class pass (12th for some special projects).',
+      'The annual income of the applicant\'s family should not exceed ₹12 lakh.'
+    ],
+    exclusions: [
+      'आवेदक खुद किसी बैंक या वित्तीय संस्था का डिफ़ॉल्टर (Defaulter) नहीं होना चाहिए।',
+      'यदि व्यक्ति पहले ही किसी राज्य या केंद्र सरकार की स्वरोज़गार योजना का लाभ ले रहा है, तो वह पात्र नहीं होगा।',
+      'केवल नए उद्यम स्थापित करने के लिए लाभ मिलेगा, पुराने चल रहे व्यापार के विस्तार के लिए नहीं।'
+    ],
+    exclusionsEn: [
+      'The applicant himself should not be a defaulter of any bank or financial institution.',
+      'If the person is already taking advantage of any self-employment scheme of the state or central govt, he will not be eligible.',
+      'Benefits will be given only for setting up new enterprises, not for the expansion of old running businesses.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST MPOnline)', steps: [
+          'सभी आवेदन पूरी तरह से ऑनलाइन होते हैं। किसी भी सरकारी ऑफिस में कागज़ की फ़ाइल नहीं देनी होती।',
+          'आवेदक SAMAST पोर्टल (samast.mponline.gov.in) पर जाकर "मुख्यमंत्री उद्यम क्रांति योजना" का चयन करें।',
+          'अपने प्रोजेक्ट की विस्तृत रिपोर्ट (Project Profile) बनाकर पोर्टल पर अपलोड करें, जिसे DIC द्वारा संबंधित बैंक को भेजा जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST MPOnline)', steps: [
+          'All applications are completely online. No paper file has to be given to any govt office.',
+          'The applicant should go to the SAMAST portal (samast.mponline.gov.in) and select "Mukhyamantri Udyam Kranti Yojana".',
+          'Make a detailed report of your project (Project Profile) and upload it on the portal, which will be sent by DIC to the concerned bank.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मैंने स्वरोज़गार योजना सुना था, यह उद्यम क्रांति क्या है?', answer: 'सरकार ने कई पुरानी स्वरोज़गार योजनाओं को बंद/मर्ज करके एक बड़ी "उद्यम क्रांति योजना" बना दी है। अब सभी नए लोन इसी के तहत मिलते हैं।' },
+      { question: 'क्या मुझे अपनी तरफ से कोई मार्जिन मनी लगानी होगी?', answer: 'हाँ, बैंक आमतौर पर प्रोजेक्ट लागत का कुछ हिस्सा (जैसे 5-10%) आपसे मार्जिन के रूप में लगाने को कहता है, बाकी लोन होता है।' }
+    ],
+    faqsEn: [
+      { question: 'I heard about Swarojgar Yojana, what is this Udyam Kranti?', answer: 'The govt has closed/merged many old self-employment schemes and made a big "Udyam Kranti Yojana". Now all new loans are available under this.' },
+      { question: 'Will I have to invest any margin money from my side?', answer: 'Yes, banks usually ask you to invest some part of the project cost (like 5-10%) as a margin, the rest is the loan.' }
+    ]
+  },
+  'mukhyamantri-medhavi-vidyarthi-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री मेधावी विद्यार्थी योजना (MMVY)',
+    english: 'Mukhyamantri Medhavi Vidyarthi Yojana (MMVY)',
+    summary: '12वीं बोर्ड में अच्छे अंक लाने वाले मेधावी छात्रों की उच्च शिक्षा (इंजीनियरिंग, मेडिकल, लॉ आदि) की पूरी ट्यूशन फीस राज्य सरकार द्वारा भरी जाती है।',
+    benefit: 'उच्च शिक्षा (B.Tech, MBBS, BA-LLB आदि) की पूरी ट्यूशन फीस (लाखों में) सरकार द्वारा माफ़/वहन',
+    department: 'तकनीकी शिक्षा एवं कौशल विकास विभाग',
+    sourceUrl: 'https://medhavikalyan.mp.gov.in/',
+    applicationUrl: 'https://medhavikalyan.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'छात्र का आधार कार्ड',
+      '10वीं और 12वीं बोर्ड की मार्कशीट (MP Board 70%+ या CBSE/ICSE 85%+)',
+      'आय प्रमाण पत्र (पिता/अभिभावक की आय ₹6 लाख से कम)',
+      'कॉलेज/संस्थान में प्रवेश का प्रमाण पत्र (Admission slip)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Student\'s Aadhaar Card',
+      '10th and 12th board marksheet (MP Board 70%+ or CBSE/ICSE 85%+)',
+      'Income Certificate (Father/Guardian income less than ₹6 Lakhs)',
+      'Certificate of admission in college/institute (Admission slip)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'कॉलेज या विश्वविद्यालय में प्रवेश लेने के बाद, मेधावी पोर्टल (medhavikalyan.mp.gov.in) पर ऑनलाइन रजिस्ट्रेशन करें।',
+      'लॉगिन कर अपना फॉर्म भरें और सभी ज़रूरी दस्तावेज़ (मार्कशीट, आय प्रमाण पत्र, एडमिशन स्लिप) अपलोड करें।',
+      'फॉर्म का प्रिंटआउट लेकर अपने कॉलेज के नोडल अधिकारी/प्राचार्य के पास जमा करें।',
+      'कॉलेज द्वारा ऑनलाइन सत्यापन के बाद, आपकी फीस की राशि सीधे कॉलेज के खाते में (या कुछ मामलों में छात्र के खाते में) भेज दी जाती है।'
+    ],
+    stepsEn: [
+      'After taking admission in the college or university, do online registration on the Medhavi portal (medhavikalyan.mp.gov.in).',
+      'Login and fill your form and upload all necessary documents (marksheet, income cert, admission slip).',
+      'Take a printout of the form and submit it to the nodal officer/principal of your college.',
+      'After online verification by the college, your fee amount is sent directly to the college account (or in some cases to the student\'s account).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: '12वीं पास छात्र' }
+    ],
+    sourceNotes: 'उच्च शिक्षा विभाग की फ्लैगशिप योजना, जो मध्य प्रदेश के होनहार बच्चों के लिए वरदान है (MMVY)।',
+    detailedDescription: [
+      'अक्सर पैसों की कमी के कारण होनहार बच्चे बड़े और महंगे कोर्स (जैसे इंजीनियरिंग, मेडिकल) की पढ़ाई नहीं कर पाते। इस समस्या को दूर करने के लिए मध्य प्रदेश सरकार ने "मुख्यमंत्री मेधावी विद्यार्थी योजना" (MMVY) शुरू की है।',
+      'यदि किसी छात्र ने 12वीं में अच्छे अंक प्राप्त किए हैं और वह भारत के किसी भी मान्यता प्राप्त राष्ट्रीय संस्थान (जैसे IIT, NIT, AIIMS, NLU) या राज्य के कॉलेजों में प्रवेश लेता है, तो उसकी लाखों रुपये की फीस सरकार भरेगी।'
+    ],
+    detailedDescriptionEn: [
+      'Often due to lack of money, bright children are not able to study big and expensive courses (like Engineering, Medical). To overcome this problem, the MP Govt has started "Mukhyamantri Medhavi Vidyarthi Yojana" (MMVY).',
+      'If a student has got good marks in 12th and takes admission in any recognized national institute of India (like IIT, NIT, AIIMS, NLU) or state colleges, the govt will pay their fees running into lakhs of rupees.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के तहत मिलने वाली फीस की जानकारी', points: [
+          'इंजीनियरिंग (B.E./B.Tech): JEE Mains रैंक 1.5 लाख के अंदर होने पर सरकारी कॉलेज की पूरी फीस, या प्राइवेट कॉलेज के लिए अधिकतम ₹1.5 लाख (या वास्तविक फीस जो भी कम हो)।',
+          'मेडिकल (MBBS/BDS): NEET के माध्यम से प्रवेश पाने पर किसी भी सरकारी या प्राइवेट मेडिकल कॉलेज की पूरी फीस सरकार भरती है।',
+          'लॉ (Law): CLAT के माध्यम से NLU (National Law University) में प्रवेश लेने पर पूरी फीस।',
+          'अन्य कोर्स: राज्य सरकार के अनुदान प्राप्त कॉलेजों या विश्वविद्यालयों के सभी ग्रेजुएशन कोर्सेस (B.A., B.Sc., B.Com आदि) की फीस।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Info about fees received under the scheme', points: [
+          'Engineering (B.E./B.Tech): Full fees of govt college if JEE Mains rank is within 1.5 lakhs, or max ₹1.5 lakhs for private college (or actual fees whichever is less).',
+          'Medical (MBBS/BDS): On getting admission through NEET, the govt pays the full fees of any govt or private medical college.',
+          'Law: Full fees on taking admission in NLU (National Law University) through CLAT.',
+          'Other Courses: Fees of all graduation courses (B.A., B.Sc., B.Com, etc.) of state govt aided colleges or universities.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी (Domicile) होना चाहिए।',
+      '12वीं कक्षा में: MP बोर्ड (माध्यमिक शिक्षा मण्डल) से 70% या उससे अधिक अंक, या CBSE/ICSE बोर्ड से 85% या उससे अधिक अंक होने चाहिए।',
+      'छात्र के पिता/अभिभावक की वार्षिक आय (Annual Income) ₹6 लाख से कम होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The student must be a domicile of Madhya Pradesh.',
+      'In 12th class: Must have 70% or more marks from MP Board, or 85% or more marks from CBSE/ICSE board.',
+      'The annual income of the student\'s father/guardian must be less than ₹6 Lakhs.'
+    ],
+    exclusions: [
+      'पोस्ट ग्रेजुएशन (PG) कोर्सेस इस योजना में शामिल नहीं हैं, यह केवल ग्रेजुएशन/अंडर-ग्रेजुएशन (UG) के लिए है।',
+      'मैनेजमेंट कोटा (Management Quota) से प्राइवेट कॉलेजों में एडमिशन लेने वाले छात्र इसके लिए अपात्र हैं।'
+    ],
+    exclusionsEn: [
+      'Post Graduation (PG) courses are not included in this scheme, it is only for Graduation/Under-graduation (UG).',
+      'Students taking admission in private colleges through Management Quota are ineligible for this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MMVY पोर्टल)', steps: [
+          'हर साल कॉलेज में एडमिशन प्रक्रिया पूरी होने के बाद मेधावी पोर्टल पर रजिस्ट्रेशन शुरू होते हैं।',
+          'आधार ई-केवाईसी (e-KYC) द्वारा प्रोफाइल बनाई जाती है।',
+          'अगर आपने 12वीं किसी अन्य राज्य से की है लेकिन निवासी MP के हैं, तो भी आप पात्र हैं, बशर्ते प्रतिशत का नियम (85%+) पूरा हो।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MMVY Portal)', steps: [
+          'Every year after the completion of the admission process in the college, registrations start on the Medhavi portal.',
+          'A profile is created through Aadhaar e-KYC.',
+          'Even if you have done 12th from another state but are a resident of MP, you are eligible, provided the percentage rule (85%+) is fulfilled.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं प्राइवेट कॉलेज में एडमिशन लेकर भी इस योजना का लाभ ले सकता हूँ?', answer: 'हाँ, लेकिन नियम अलग हैं। जैसे मेडिकल में पूरी फीस मिलती है, लेकिन इंजीनियरिंग प्राइवेट कॉलेज में 1.5 लाख या वास्तविक फीस (जो भी कम हो) तक सीमित है। एडमिशन JEE/NEET जैसी परीक्षाओं की मेरिट से होना चाहिए।' },
+      { question: 'क्या यह योजना हर साल के लिए है?', answer: 'हाँ, जब तक आपका कोर्स चलता है (जैसे 4 साल का B.Tech), आपको हर साल रिन्यूअल (Renewal) फॉर्म भरना होता है, बशर्ते आप बिना फेल हुए पास हो रहे हों।' }
+    ],
+    faqsEn: [
+      { question: 'Can I take advantage of this scheme even after taking admission in a private college?', answer: 'Yes, but the rules are different. Like in medical full fee is received, but in engineering private college it is limited to 1.5 lakh or actual fee (whichever is less). Admission should be by merit in exams like JEE/NEET.' },
+      { question: 'Is this scheme for every year?', answer: 'Yes, as long as your course runs (like 4 years B.Tech), you have to fill the Renewal form every year, provided you are passing without failing.' }
+    ]
+  },
+  'kisan-kalyan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री किसान कल्याण योजना',
+    english: 'Mukhyamantri Kisan Kalyan Yojana (Financial Support)',
+    summary: 'पीएम-किसान (PM-KISAN) योजना के पात्र किसानों को मध्य प्रदेश सरकार की ओर से सालाना ₹4,000 (दो किस्तों में) की अतिरिक्त आर्थिक सहायता।',
+    benefit: 'किसानों को ₹4,000 प्रति वर्ष की अतिरिक्त वित्तीय सहायता (PM-KISAN के ₹6000 मिलाकर कुल ₹10,000 सालाना)',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://saara.mp.gov.in/',
+    applicationUrl: 'https://saara.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'पीएम किसान सम्मान निधि का रजिस्ट्रेशन (PM-KISAN Registration)',
+      'भूमि के दस्तावेज़ (खसरा/खतौनी - Land Records)',
+      'बैंक खाता (आधार और NPCI से लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'PM-KISAN Registration',
+      'Land Records (Khasra/Khatauni)',
+      'Bank Account (Aadhaar & NPCI linked)'
+    ],
+    steps: [
+      'इस योजना के लिए कोई अलग से नया फॉर्म नहीं भरना पड़ता है।',
+      'यदि आप केंद्र सरकार की "PM-KISAN" योजना के लाभार्थी हैं, तो आपका नाम स्वतः (Automatically) इस योजना में जुड़ जाता है।',
+      'पटवारी द्वारा SAARA पोर्टल (saara.mp.gov.in) पर आपके खसरे (भूमि) का सत्यापन किया जाता है।',
+      'सत्यापन के बाद राशि सीधे (DBT) आपके आधार लिंक बैंक खाते में जमा कर दी जाती है।'
+    ],
+    stepsEn: [
+      'No separate new form has to be filled for this scheme.',
+      'If you are a beneficiary of the Central Govt\'s "PM-KISAN" scheme, your name is automatically added to this scheme.',
+      'Your Khasra (land) is verified by the Patwari on the SAARA portal (saara.mp.gov.in).',
+      'After verification, the amount is deposited directly (DBT) into your Aadhaar linked bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान (PM-KISAN लाभार्थी)' }
+    ],
+    sourceNotes: 'SAARA पोर्टल के माध्यम से संचालित राज्य सरकार की पूरक (Top-up) योजना।',
+    detailedDescription: [
+      'किसानों की आय दोगुनी करने और उन्हें खेती के लिए खाद-बीज खरीदने में मदद करने के लिए यह योजना शुरू की गई है।',
+      'केंद्र सरकार "पीएम किसान सम्मान निधि" के तहत किसानों को साल में ₹6,000 (2-2 हज़ार की 3 किस्तें) देती है। मध्य प्रदेश सरकार इसी में अपनी तरफ से ₹4,000 (2-2 हज़ार की 2 किस्तें) और जोड़ देती है। इस तरह मध्य प्रदेश के किसान को साल भर में कुल ₹10,000 मिलते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'This scheme has been started to double the income of farmers and help them buy fertilizers and seeds for farming.',
+      'The Central Govt gives ₹6,000 (3 installments of ₹2000 each) in a year to farmers under "PM Kisan Samman Nidhi". The MP Govt adds ₹4,000 (2 installments of ₹2000 each) from its side to this. Thus, a farmer of MP gets a total of ₹10,000 in a year.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के आर्थिक लाभ', points: [
+          'अतिरिक्त आय (Top-up Income): किसान को राज्य सरकार की ओर से ₹4,000 सालाना मिलते हैं।',
+          'प्रत्यक्ष लाभ अंतरण (DBT): पैसा सीधे खाते में आता है, बीच में कोई बिचौलिया नहीं।',
+          'मुफ़्त पंजीयन: जो किसान पहले से PM-KISAN में हैं, उन्हें अलग से भटकने की ज़रूरत नहीं है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Financial Benefits of the Scheme', points: [
+          'Top-up Income: The farmer gets ₹4,000 annually from the state govt.',
+          'Direct Benefit Transfer (DBT): Money comes directly into the account, no middleman in between.',
+          'Free Registration: Farmers who are already in PM-KISAN do not need to wander separately.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'किसान मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक का नाम केंद्र सरकार की "PM-KISAN" योजना के लाभार्थियों की सूची में होना अनिवार्य है।',
+      'किसान के पास स्वयं की कृषि भूमि होनी चाहिए (जिसका रिकॉर्ड भू-अभिलेख पोर्टल पर दर्ज़ हो)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The farmer must be a domicile of Madhya Pradesh.',
+      'It is mandatory for the applicant\'s name to be in the list of beneficiaries of the Central Govt\'s "PM-KISAN" scheme.',
+      'The farmer must have his own agricultural land (whose record is registered on the land records portal).'
+    ],
+    exclusions: [
+      'जो लोग इनकम टैक्स (Income Tax) भरते हैं, वे अपात्र हैं।',
+      'सरकारी कर्मचारी, अधिकारी, विधायक, सांसद, या ₹10,000 से अधिक पेंशन पाने वाले लोग इस योजना का लाभ नहीं ले सकते (PM-KISAN के नियमों के अनुसार)।'
+    ],
+    exclusionsEn: [
+      'Those who pay Income Tax are ineligible.',
+      'Govt employees, officers, MLAs, MPs, or people getting a pension of more than ₹10,000 cannot take advantage of this scheme (as per PM-KISAN rules).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'स्वतः (Automatic via PM-KISAN)', steps: [
+          'यदि आपको PM-KISAN के ₹2000 मिलते हैं, तो आपको कुछ नहीं करना है।',
+          'सिर्फ अपना बैंक खाता आधार और NPCI से लिंक (DBT चालू) रखें।',
+          'आप SAARA पोर्टल (saara.mp.gov.in) पर जाकर अपना स्टेटस (मुख्यमंत्री किसान कल्याण योजना डैशबोर्ड) चेक कर सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Automatic via PM-KISAN', steps: [
+          'If you get ₹2000 of PM-KISAN, you don\'t have to do anything.',
+          'Just keep your bank account linked with Aadhaar and NPCI (DBT enabled).',
+          'You can go to the SAARA portal (saara.mp.gov.in) and check your status (Mukhyamantri Kisan Kalyan Yojana Dashboard).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मुझे PM किसान के पैसे मिलते हैं लेकिन CM किसान के नहीं, क्या करूँ?', answer: 'इसका मुख्य कारण बैंक खाते में DBT/NPCI लिंक न होना या पटवारी द्वारा ज़मीन का ऑनलाइन सत्यापन (SAARA पोर्टल पर) न होना हो सकता है। अपने हल्का पटवारी से संपर्क करें।' },
+      { question: 'क्या मैं नया आवेदन कर सकता हूँ?', answer: 'आप सीधे CM किसान में आवेदन नहीं कर सकते। पहले आपको PM-KISAN में रजिस्ट्रेशन कराना होगा।' }
+    ],
+    faqsEn: [
+      { question: 'I get PM Kisan money but not CM Kisan money, what should I do?', answer: 'The main reason for this could be that DBT/NPCI is not linked in the bank account or online verification of land by Patwari (on SAARA portal) is not done. Contact your Halka Patwari.' },
+      { question: 'Can I make a new application?', answer: 'You cannot apply directly in CM Kisan. First, you have to register in PM-KISAN.' }
+    ]
+  },
+  'krishak-jeevan-kalyan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कृषक जीवन कल्याण योजना (मंडी बोर्ड)',
+    english: 'Mukhyamantri Krishak Jeevan Kalyan Yojana (Accident Compensation)',
+    summary: 'कृषि कार्य करते समय, मंडी जाते समय या मंडी में दुर्घटना होने पर किसान और उसके परिवार को वित्तीय सहायता प्रदान करने वाली योजना।',
+    benefit: 'कृषि कार्य/मंडी में दुर्घटना से मृत्यु होने पर ₹4 लाख तक, और अपंगता (Disability) होने पर ₹1 से ₹2 लाख तक की आर्थिक मदद',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग (मंडी बोर्ड)',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://mpkisan.gov.in/',
+    documents: [
+      'मृतक/घायल किसान का आधार कार्ड',
+      'समग्र आईडी (परिवार की)',
+      'ज़मीन के कागज़ात (B-1/खसरा नकल)',
+      'FIR की कॉपी या पुलिस पंचनामा (दुर्घटना के मामले में)',
+      'पोस्टमार्टम रिपोर्ट या मेडिकल सर्टिफिकेट (अपंगता के मामले में)',
+      'उत्तराधिकारी (Nominee) का बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card of deceased/injured farmer',
+      'Samagra ID (of family)',
+      'Land Documents (B-1/Khasra copy)',
+      'Copy of FIR or Police Panchnama (in case of accident)',
+      'Postmortem Report or Medical Certificate (in case of disability)',
+      'Bank Passbook of Nominee'
+    ],
+    steps: [
+      'दुर्घटना होने पर तुरंत पुलिस को सूचना दें (FIR/पंचनामा बनवाएं)।',
+      'मृत्यु होने पर पोस्टमार्टम ज़रूर कराएं।',
+      'दुर्घटना के 30 दिनों के भीतर अपनी नज़दीकी कृषि उपज मंडी समिति (Mandi Samiti) के सचिव के कार्यालय में आवेदन करें।',
+      'आवेदन के साथ सभी ज़रूरी दस्तावेज़ (FIR, PM रिपोर्ट, खसरा) जमा करें।',
+      'मंडी समिति और ज़िला स्तर (कलेक्टर) से मंज़ूरी मिलने के बाद पैसा सीधे खाते में भेजा जाता है।'
+    ],
+    stepsEn: [
+      'In case of an accident, inform the police immediately (get FIR/Panchnama made).',
+      'In case of death, must get a postmortem done.',
+      'Apply to the office of the Secretary of your nearest Krishi Upaj Mandi Samiti within 30 days of the accident.',
+      'Submit all necessary documents (FIR, PM report, Khasra) along with the application.',
+      'After approval from Mandi Samiti and District level (Collector), money is sent directly to the account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान/कृषक (Accident Victim)' }
+    ],
+    sourceNotes: 'मध्य प्रदेश राज्य कृषि विपणन (मंडी) बोर्ड द्वारा संचालित योजना।',
+    detailedDescription: [
+      'खेती का काम जोखिम भरा होता है (जैसे ट्रैक्टर चलाना, कुएं में उतरना, बिजली के मोटर सुधारना, कीटनाशक छिड़कना)। "मुख्यमंत्री कृषक जीवन कल्याण योजना" मध्य प्रदेश मंडी बोर्ड द्वारा चलाई जाती है ताकि खेती-किसानी करते समय अगर कोई दुर्घटना हो जाए, तो किसान के परिवार को फौरी राहत मिल सके।',
+      'यह योजना न केवल खेत में काम करते समय, बल्कि अपनी फसल बेचने के लिए मंडी जाते समय या मंडी से वापस आते समय होने वाली दुर्घटनाओं (जैसे सड़क दुर्घटना) को भी कवर करती है।'
+    ],
+    detailedDescriptionEn: [
+      'Farming is a risky job (like driving a tractor, getting into a well, repairing electric motors, spraying pesticides). "Mukhyamantri Krishak Jeevan Kalyan Yojana" is run by MP Mandi Board so that if any accident happens while doing farming, the farmer\'s family can get immediate relief.',
+      'This scheme covers accidents (like road accidents) not only while working in the field but also while going to the Mandi to sell the crop or returning from the Mandi.'
+    ],
+    benefitsList: [
+      {
+        heading: 'मुआवजा (Compensation) राशि', points: [
+          'मृत्यु (Death): दुर्घटना में किसान की मृत्यु होने पर परिवार को ₹4 लाख (नवीनतम प्रावधानों के अनुसार, कुछ पुराने मामलों में ₹2 लाख)।',
+          'स्थायी अपंगता (Permanent Disability): दो अंग या दोनों आँखें चले जाने पर ₹2 लाख।',
+          'आंशिक अपंगता (Partial Disability): एक अंग या एक आँख चले जाने पर ₹1 लाख।',
+          'अंतिम संस्कार सहायता: मृत्यु की स्थिति में ₹4,000 की तत्काल अंत्येष्टि सहायता।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Compensation Amount', points: [
+          'Death: On the death of a farmer in an accident, the family gets ₹4 lakhs (as per latest provisions, ₹2 lakhs in some old cases).',
+          'Permanent Disability: ₹2 lakhs on loss of two limbs or both eyes.',
+          'Partial Disability: ₹1 lakh on loss of one limb or one eye.',
+          'Funeral Assistance: Immediate funeral assistance of ₹4,000 in case of death.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'दुर्घटनाग्रस्त व्यक्ति मध्य प्रदेश का किसान या कृषक मज़दूर होना चाहिए।',
+      'दुर्घटना कृषि कार्य करते समय (जैसे जुताई, कटाई, कीटनाशक छिड़काव, बोरवेल/कुआं का काम), या कृषि उपज मंडी में, या मंडी आते-जाते समय होनी चाहिए।',
+      'सामान्य (प्राकृतिक) मृत्यु या आत्महत्या के मामलों में इस योजना का लाभ नहीं मिलता है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The accident victim must be a farmer or agricultural laborer of MP.',
+      'The accident must occur while doing agricultural work (like ploughing, harvesting, spraying pesticides, borewell/well work), or in Krishi Upaj Mandi, or while going to/coming from Mandi.',
+      'Benefits of this scheme are not available in cases of normal (natural) death or suicide.'
+    ],
+    exclusions: [
+      'आत्महत्या, आपराधिक कृत्य, या शराब पीकर वाहन चलाने से हुई दुर्घटना इसमें शामिल नहीं है।',
+      'अगर मृतक का नाम खसरे में दर्ज़ नहीं है या वह खेती से नहीं जुड़ा था, तो दावा खारिज हो सकता है।'
+    ],
+    exclusionsEn: [
+      'Accidents caused by suicide, criminal act, or drunk driving are not included in this.',
+      'If the name of the deceased is not recorded in Khasra or he was not related to farming, the claim can be rejected.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (कृषि उपज मंडी)', steps: [
+          'दुर्घटना होने पर सबसे पहले पुलिस FIR और मेडिकल/पोस्टमार्टम कराना अनिवार्य है।',
+          'दुर्घटना के 30 दिनों के भीतर सभी कागज़ात (FIR, PM रिपोर्ट, खसरा) लेकर अपने ब्लॉक/ज़िले की कृषि उपज मंडी में सचिव को आवेदन दें।',
+          'मंडी सचिव केस को जांचकर कलेक्टर की अध्यक्षता वाली समिति को भेजेंगे, जहाँ से पैसा पास होगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Krishi Upaj Mandi)', steps: [
+          'In case of accident, it is mandatory to do police FIR and medical/postmortem first.',
+          'Within 30 days of the accident, take all papers (FIR, PM report, Khasra) and apply to the Secretary in the Krishi Upaj Mandi of your block/district.',
+          'Mandi Secretary will check the case and send it to the committee headed by the Collector, from where the money will be passed.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या खेत में सांप काटने से मृत्यु पर लाभ मिलता है?', answer: 'हाँ, यदि किसान खेत में काम कर रहा था और सांप काटने (Snake bite) या बिजली गिरने से मृत्यु होती है, तो इसे दुर्घटना माना जाता है और लाभ मिलता है। (इसके लिए PM रिपोर्ट बहुत ज़रूरी है)।' },
+      { question: 'क्या सड़क दुर्घटना इसमें कवर है?', answer: 'हाँ, लेकिन केवल तभी जब किसान अपनी फसल लेकर ट्रैक्टर या वाहन से मंडी जा रहा हो या फसल बेचकर लौट रहा हो। सामान्य सड़क दुर्घटनाओं के लिए अन्य योजनाएं हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is benefit available on death by snake bite in the field?', answer: 'Yes, if the farmer was working in the field and dies due to snake bite or lightning strike, it is considered an accident and benefit is given. (PM report is very important for this).' },
+      { question: 'Is road accident covered in this?', answer: 'Yes, but only when the farmer is going to the Mandi with his crop by tractor or vehicle or returning after selling the crop. There are other schemes for normal road accidents.' }
+    ]
+  },
+  'mukhyamantri-yuva-internship-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री युवा इंटर्नशिप योजना (जनसेवा मित्र)',
+    english: 'Mukhyamantri Yuva Internship Yojana (Jan Sewa Mitra)',
+    summary: 'स्नातक/स्नातकोत्तर पास युवाओं को सरकारी योजनाओं के क्रियान्वयन का अनुभव देने के लिए 6 महीने से 1 साल तक की इंटर्नशिप और ₹8,000 प्रति माह स्टाइपेंड।',
+    benefit: 'युवाओं को मुख्यमंत्री "जनसेवा मित्र" के रूप में ₹8,000 प्रति माह स्टाइपेंड और फील्ड कार्य का अनुभव',
+    department: 'योजना, आर्थिक एवं सांख्यिकी विभाग',
+    sourceUrl: 'https://mmsky.mp.gov.in/',
+    applicationUrl: 'https://services.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'शैक्षणिक योग्यता प्रमाण पत्र (ग्रेजुएशन / पोस्ट ग्रेजुएशन)',
+      'मूल निवासी प्रमाण पत्र (MP Domicile)',
+      'बैंक खाता (Bank Account)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Educational Qualification Certificate (Graduation/Post Graduation)',
+      'Domicile Certificate (MP Domicile)',
+      'Bank Account'
+    ],
+    steps: [
+      'समय-समय पर MP e-Service (services.mp.gov.in) पोर्टल पर इंटर्नशिप (बैच) के लिए ऑनलाइन आवेदन आमंत्रित किए जाते हैं।',
+      'पोर्टल पर जाकर रजिस्ट्रेशन करें और अपनी प्रोफाइल पूरी कर आवेदन सबमिट करें।',
+      'शैक्षणिक अंकों (Merit) और इंटरव्यू के आधार पर चयन किया जाता है।',
+      'चयनित युवाओं को उनके विकासखंड (Block) स्तर पर "जनसेवा मित्र" के रूप में तैनात किया जाता है।'
+    ],
+    stepsEn: [
+      'From time to time online applications are invited for internship (batch) on MP e-Service portal (services.mp.gov.in).',
+      'Register by visiting the portal and complete your profile and submit the application.',
+      'Selection is done on the basis of academic marks (Merit) and interview.',
+      'Selected youths are deployed as "Jan Sewa Mitra" at their block level.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 29 वर्ष' },
+      { field: 'age', op: 'lte', value: 29, label: 'अधिकतम 29 वर्ष' }
+    ],
+    sourceNotes: 'युवाओं को शासन तंत्र से जोड़ने और फील्ड अनुभव देने का राज्य नीति एवं योजना आयोग का कार्यक्रम।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने युवाओं के लिए यह इंटर्नशिप (Internship) कार्यक्रम शुरू किया है, जिसके तहत युवाओं को सीधे सरकार के साथ ज़मीनी स्तर पर काम करने का मौक़ा मिलता है।',
+      'चयनित युवाओं को "जनसेवा मित्र" (Jan Sewa Mitra) कहा जाता है। इनका काम सरकार की प्रमुख कल्याणकारी योजनाओं (जैसे लाड़ली बहना, आयुष्मान कार्ड आदि) के बारे में गांव-गांव जाकर लोगों को बताना और योजनाओं का लाभ आम लोगों तक पहुँचाने में मदद करना होता है।'
+    ],
+    detailedDescriptionEn: [
+      'The Govt of MP has started this Internship program for the youth, under which the youth get a chance to work directly with the govt at the ground level.',
+      'The selected youths are called "Jan Sewa Mitra". Their job is to go from village to village and tell people about the govt\'s major welfare schemes (like Ladli Behna, Ayushman Card, etc.) and help in delivering the benefits of the schemes to the common people.'
+    ],
+    benefitsList: [
+      {
+        heading: 'इंटर्नशिप के मुख्य लाभ', points: [
+          'स्टाइपेंड (Stipend): जनसेवा मित्र को काम करने के दौरान ₹8,000 प्रति माह मानदेय दिया जाता है।',
+          'सर्टिफिकेट: इंटर्नशिप पूरी होने पर मुख्यमंत्री द्वारा अहस्ताक्षरित अनुभव प्रमाण पत्र (Experience Certificate) दिया जाता है, जो भविष्य में नौकरी पाने में काम आता है।',
+          'लीडरशिप स्किल (Leadership Skill): युवाओं में प्रशासन, समाज सेवा और नेतृत्व के गुण विकसित होते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main benefits of Internship', points: [
+          'Stipend: Jan Sewa Mitra is given an honorarium of ₹ 8,000 per month during work.',
+          'Certificate: On completion of the internship, an Experience Certificate signed by the CM is given, which is useful in getting a job in the future.',
+          'Leadership Skill: Qualities of administration, social service, and leadership are developed in the youth.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी (Domicile) होना चाहिए।',
+      'आवेदक की आयु न्यूनतम 18 वर्ष और अधिकतम 29 वर्ष होनी चाहिए।',
+      'शैक्षणिक योग्यता: आवेदक ने मान्यता प्राप्त विश्वविद्यालय से न्यूनतम 60% अंकों के साथ ग्रेजुएशन (UG) या पोस्ट ग्रेजुएशन (PG) पूरा किया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of Madhya Pradesh.',
+      'The age of the applicant should be minimum 18 years and maximum 29 years.',
+      'Educational Qualification: The applicant should have completed Graduation (UG) or Post Graduation (PG) from a recognized university with minimum 60% marks.'
+    ],
+    exclusions: [
+      'यदि कोर्स अभी पूरा नहीं हुआ है (Running semester), तो आवेदन नहीं किया जा सकता।',
+      'जिन लोगों ने पहले किसी बैच में जनसेवा मित्र के रूप में इंटर्नशिप कर ली है, उन्हें दोबारा मौक़ा नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If the course is not yet completed (Running semester), then application cannot be made.',
+      'Those who have already done an internship as Jan Sewa Mitra in any previous batch will not get a chance again.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MP e-Service)', steps: [
+          'इस योजना में साल भर आवेदन नहीं होते हैं। जब सरकार नए बैच की घोषणा करती है, तभी पोर्टल (services.mp.gov.in) खोला जाता है।',
+          'पोर्टल पर "मुख्यमंत्री युवा इंटर्नशिप योजना" के लिंक पर क्लिक करके फॉर्म भरा जाता है।',
+          'शॉर्टलिस्ट होने के बाद इंटरव्यू के लिए बुलाया जाता है और फिर अंतिम लिस्ट जारी होती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MP e-Service)', steps: [
+          'Applications are not accepted throughout the year in this scheme. The portal (services.mp.gov.in) is opened only when the govt announces a new batch.',
+          'The form is filled by clicking on the link of "Mukhyamantri Yuva Internship Yojana" on the portal.',
+          'After being shortlisted, you are called for an interview and then the final list is issued.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह एक सरकारी नौकरी (Govt Job) है?', answer: 'नहीं। यह एक इंटर्नशिप (सीखने का कार्यक्रम) है। इसमें कोई स्थायी नौकरी नहीं मिलती, केवल 6 महीने से 1 साल का अनुभव और मानदेय मिलता है।' },
+      { question: 'इसमें रोज़ काम क्या करना होता है?', answer: 'इसमें आपको अपने आवंटित ब्लॉक के गाँवों में जाना होता है, सरकारी योजनाओं के पात्र लोगों को ढूँढना, उन्हें योजना की जानकारी देना और फ़ॉर्म भरने में उनकी मदद करना होता है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this a govt job?', answer: 'No. This is an internship (learning program). There is no permanent job in this, only 6 months to 1-year experience and honorarium is given.' },
+      { question: 'What is the daily work to be done in this?', answer: 'In this, you have to go to the villages of your allotted block, find eligible people for govt schemes, give them info about the scheme and help them in filling the form.' }
+    ]
+  },
+  'madhya-pradesh-ladli-behna-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री लाड़ली बहना योजना',
+    english: 'Mukhyamantri Ladli Behna Yojana (Monthly DBT)',
+    summary: 'मध्य प्रदेश की महिलाओं (विवाहित, विधवा, तलाकशुदा) को आर्थिक रूप से स्वतंत्र बनाने के लिए राज्य सरकार द्वारा प्रतिमाह ₹1,250 (कुल ₹15,000 सालाना) की वित्तीय सहायता।',
+    benefit: 'पात्र महिलाओं के बैंक खाते में प्रतिमाह ₹1,250 की नकद राशि सीधे DBT के माध्यम से (हर महीने की 10 तारीख को)',
+    department: 'महिला एवं बाल विकास विभाग',
+    sourceUrl: 'https://cmladlibahna.mp.gov.in/',
+    applicationUrl: 'https://cmladlibahna.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (परिवार और महिला की) - ई-केवाईसी (e-KYC) पूर्ण होनी चाहिए',
+      'आधार कार्ड (मोबाइल नंबर से लिंक)',
+      'बैंक खाता (खुद के नाम का, आधार और DBT सक्रिय)',
+      'मोबाइल नंबर (OTPs के लिए)'
+    ],
+    documentsEn: [
+      'Samagra ID (of family and woman) - e-KYC must be complete',
+      'Aadhaar Card (linked with mobile number)',
+      'Bank Account (in own name, Aadhaar and DBT active)',
+      'Mobile Number (for OTPs)'
+    ],
+    steps: [
+      'सबसे पहले समग्र पोर्टल पर अपना आधार e-KYC पूरा करें और अपने बैंक खाते में DBT इनेबल (सक्रिय) कराएं।',
+      'सरकार द्वारा तय समय पर ग्राम पंचायत/वार्ड कार्यालय या विशेष शिविरों (Camps) में जाएं।',
+      'वहाँ अधिकारी समग्र आईडी के ज़रिए ऑनलाइन फॉर्म भरेंगे और आपकी लाइव फोटो (Live Photo) खींचेंगे।',
+      'सफल पंजीयन के बाद पावती मिलेगी, और हर महीने की 10 तारीख को खाते में पैसे आने लगेंगे।'
+    ],
+    stepsEn: [
+      'First of all, complete your Aadhaar e-KYC on the Samagra portal and get DBT enabled (active) in your bank account.',
+      'Go to the Gram Panchayat/Ward Office or special camps at the time fixed by the govt.',
+      'There the officer will fill the online form through Samagra ID and click your Live Photo.',
+      'After successful registration, you will get an acknowledgment, and money will start coming to the account on the 10th of every month.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'महिला (विवाहित/विधवा/परित्यक्ता)' },
+      { field: 'age', op: 'gte', value: 21, label: 'आयु 21 से 60 वर्ष' },
+      { field: 'age', op: 'lte', value: 60, label: 'अधिकतम 60 वर्ष' }
+    ],
+    sourceNotes: 'मध्य प्रदेश सरकार की सबसे बड़ी फ्लैगशिप योजना, जिससे राज्य की 1.29 करोड़ से अधिक महिलाएँ लाभान्वित हो रही हैं।',
+    detailedDescription: [
+      'महिलाओं के स्वास्थ्य, पोषण और उनके आर्थिक स्वावलंबन को सुनिश्चित करने के लिए मध्य प्रदेश सरकार ने मार्च 2023 में "मुख्यमंत्री लाड़ली बहना योजना" की शुरुआत की थी।',
+      'शुरुआत में यह राशि ₹1000 प्रति माह थी, जिसे बढ़ाकर ₹1250 कर दिया गया है। सरकार का लक्ष्य इसे धीरे-धीरे ₹3000 प्रति माह तक ले जाना है। इस योजना ने राज्य की महिलाओं को अपनी छोटी-छोटी ज़रूरतों के लिए दूसरों पर निर्भर रहने से आज़ाद किया है।'
+    ],
+    detailedDescriptionEn: [
+      'To ensure the health, nutrition, and financial independence of women, the MP Govt started the "Mukhyamantri Ladli Behna Yojana" in March 2023.',
+      'Initially, this amount was ₹1000 per month, which has been increased to ₹1250. The govt aims to gradually take it up to ₹3000 per month. This scheme has freed the women of the state from depending on others for their small needs.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के प्रमुख लाभ', points: [
+          'नियमित आय: प्रति माह ₹1250 की सुनिश्चित राशि। (सालाना ₹15,000)।',
+          'सीधे बैंक खाते में: पैसा सीधे लाभार्थी महिला के बैंक खाते में (DBT के माध्यम से) आता है, बीच में कोई बिचौलिया नहीं।',
+          'पारिवारिक सशक्तिकरण: इससे महिलाएं परिवार के निर्णयों में अधिक सक्षम होती हैं और बच्चों के पोषण पर खर्च कर सकती हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Major Benefits of the Scheme', points: [
+          'Regular Income: Assured amount of ₹1250 per month. (₹15,000 annually).',
+          'Direct to Bank Account: Money comes directly to the beneficiary woman\'s bank account (via DBT), no middlemen.',
+          'Family Empowerment: With this, women become more capable in family decisions and can spend on children\'s nutrition.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'महिला मध्य प्रदेश की स्थानीय निवासी होनी चाहिए।',
+      'महिला की आयु न्यूनतम 21 वर्ष और अधिकतम 60 वर्ष होनी चाहिए। (कैलेंडर वर्ष की 1 जनवरी की स्थिति में)।',
+      'महिला विवाहित होनी चाहिए (इसमें विधवा, तलाकशुदा एवं परित्यक्ता महिलाएँ भी शामिल हैं)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The woman must be a local resident of Madhya Pradesh.',
+      'The age of the woman should be minimum 21 years and maximum 60 years. (As of January 1 of the calendar year).',
+      'The woman must be married (this also includes widow, divorced and abandoned women).'
+    ],
+    exclusions: [
+      'जिनके परिवार की सम्मिलित वार्षिक आय ₹2.5 लाख से अधिक हो।',
+      'जिनके परिवार का कोई भी सदस्य आयकर दाता (Income Tax Payer) हो।',
+      'जिनके परिवार का कोई सदस्य सरकारी नौकरी (नियमित/स्थायी) में हो या जिन्हें सरकारी पेंशन मिल रही हो (बुजुर्ग/विधवा पेंशन इसके अपवाद हैं)।',
+      'जिनके परिवार के पास संयुक्त रूप से 5 एकड़ से अधिक कृषि भूमि हो, या परिवार के नाम पर ट्रैक्टर को छोड़कर कोई चार पहिया वाहन हो।'
+    ],
+    exclusionsEn: [
+      'Whose family\'s combined annual income is more than ₹2.5 lakhs.',
+      'Any member of whose family is an Income Tax Payer.',
+      'Any member of whose family is in a govt job (regular/permanent) or who is getting a govt pension (Old age/Widow pension are exceptions).',
+      'Whose family jointly owns more than 5 acres of agricultural land, or has any four-wheeler except a tractor in the name of the family.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (कैंप/पंचायत)', steps: [
+          'इस योजना के फॉर्म केवल सरकार द्वारा निर्धारित समय सीमा (कैंप/शिविर) में ही भरे जाते हैं। इसके लिए कोई पब्लिक पोर्टल नहीं है जिससे आप खुद फॉर्म भर सकें।',
+          'जब कैंप लगते हैं, तो महिलाओं को खुद (व्यक्तिगत रूप से) कैंप में जाना होता है, क्योंकि वहां उनकी लाइव फोटो (Live Photo) क्लिक की जाती है।',
+          'आवेदन निःशुल्क है। फॉर्म भरने के बाद तुरंत पावती (WhatsApp/SMS पर) मिल जाती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Camp/Panchayat)', steps: [
+          'The forms for this scheme are filled only within the time limit (camp) fixed by the govt. There is no public portal from which you can fill the form yourself.',
+          'When camps are held, women have to go to the camp themselves (personally) because their Live Photo is clicked there.',
+          'Application is free. Receipt is available immediately (on WhatsApp/SMS) after filling the form.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मेरे खाते में पैसे क्यों नहीं आ रहे हैं?', answer: 'इसके तीन मुख्य कारण हो सकते हैं: 1. बैंक खाते में DBT इनेबल न होना। 2. समग्र E-KYC पूरा न होना। 3. आधार कार्ड बैंक से लिंक न होना। तुरंत अपने बैंक शाखा से संपर्क करें।' },
+      { question: 'क्या अविवाहित लड़कियाँ आवेदन कर सकती हैं?', answer: 'नहीं, यह योजना केवल विवाहित (विधवा/तलाकशुदा सहित) महिलाओं के लिए है जिनकी उम्र 21 से 60 वर्ष है।' }
+    ],
+    faqsEn: [
+      { question: 'Why is money not coming into my account?', answer: 'There can be three main reasons for this: 1. DBT is not enabled in the bank account. 2. Samagra E-KYC is not complete. 3. Aadhaar card is not linked to the bank. Contact your bank branch immediately.' },
+      { question: 'Can unmarried girls apply?', answer: 'No, this scheme is only for married (including widow/divorced) women whose age is 21 to 60 years.' }
+    ]
+  },
+  'sambal-do-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री जन कल्याण (संबल 2.0) योजना',
+    english: 'Mukhyamantri Jan Kalyan Sambal 2.0 Yojana',
+    summary: 'असंगठित क्षेत्र के लाखों श्रमिकों को जन्म से लेकर मृत्यु तक हर संकट की घड़ी में (दुर्घटना, बीमारी, प्रसूति) सामाजिक व वित्तीय सुरक्षा प्रदान करने वाली योजना।',
+    benefit: 'दुर्घटना मृत्यु पर ₹4 लाख, सामान्य मृत्यु पर ₹2 लाख, आंशिक/पूर्ण अपंगता पर ₹1 से ₹2 लाख, अंत्येष्टि हेतु ₹5,000, और प्रसूति (मातृत्व) सहायता ₹16,000',
+    department: 'श्रम विभाग, मध्य प्रदेश',
+    sourceUrl: 'https://sambal.mp.gov.in/',
+    applicationUrl: 'https://sambal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID) - परिवार और सदस्य की',
+      'आधार कार्ड (Aadhaar Card) - मोबाइल नंबर से लिंक',
+      'बैंक खाता पासबुक (Bank Passbook) - DBT सक्रिय',
+      'असंगठित श्रमिक होने का स्व-प्रमाणित घोषणा पत्र (Self-declaration)',
+      'पासपोर्ट साइज़ फोटो (यदि आवश्यक हो)'
+    ],
+    documentsEn: [
+      'Samagra ID (of family and member)',
+      'Aadhaar Card (linked with mobile number)',
+      'Bank Account Passbook (DBT active)',
+      'Self-certified declaration of being an unorganized worker',
+      'Passport size photo (if required)'
+    ],
+    steps: [
+      'संबल 2.0 पोर्टल (sambal.mp.gov.in) पर जाकर "पंजीकरण हेतु आवेदन करें" (Apply for Registration) पर क्लिक करें।',
+      'अपनी समग्र आईडी और परिवार आईडी दर्ज करें और आधार ई-केवाईसी (e-KYC) पूरी करें।',
+      'अपनी जानकारी और पेशे (जैसे - कृषि मज़दूर, कुली, घरेलू कामगार) का चयन कर फॉर्म सबमिट करें।',
+      'इसके बाद आपके ग्राम पंचायत सचिव या वार्ड प्रभारी द्वारा आपके आवेदन का भौतिक सत्यापन (Verification) किया जाएगा।',
+      'सत्यापन सही पाए जाने पर आपका "डिजिटल संबल कार्ड" बन जाएगा जिसे आप पोर्टल से डाउनलोड कर सकते हैं।'
+    ],
+    stepsEn: [
+      'Go to the Sambal 2.0 portal (sambal.mp.gov.in) and click on "Apply for Registration".',
+      'Enter your Samagra ID and Family ID and complete Aadhaar e-KYC.',
+      'Submit the form by selecting your information and profession (like - agricultural laborer, porter, domestic worker).',
+      'After this, your application will be physically verified by your Gram Panchayat Secretary or Ward In-charge.',
+      'On successful verification, your "Digital Sambal Card" will be generated which you can download from the portal.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'worker', label: 'असंगठित क्षेत्र के मजदूर (Unorganized Worker)' }
+    ],
+    sourceNotes: 'श्रम विभाग MP की सबसे व्यापक सामाजिक सुरक्षा योजना। इसमें पुरानी कई योजनाओं (जैसे असंगठित मज़दूर सुरक्षा) का विलय कर दिया गया है।',
+    detailedDescription: [
+      'जो लोग असंगठित क्षेत्र (Unorganized Sector) में काम करते हैं (जैसे- रेहड़ी-पटरी वाले, खेतिहर मज़दूर, घरेलू कामगार, कुली, भवन निर्माण मज़दूर) उनके लिए सरकार ने यह एक "संबल कार्ड" (Sambal Card) बनाया है।',
+      'संबल कार्ड एक तरह का गारंटी कार्ड है। इसके होने से मज़दूर के परिवार को जन्म से लेकर मृत्यु तक सरकार की तरफ से आर्थिक मदद मिलती है, ताकि मुसीबत के समय उन्हें किसी के आगे हाथ न फैलाना पड़े।'
+    ],
+    detailedDescriptionEn: [
+      'For those who work in the Unorganized Sector (like- street vendors, agricultural laborers, domestic workers, porters, construction workers), the govt has made this "Sambal Card".',
+      'Sambal Card is a kind of guarantee card. Having this, the laborer\'s family gets financial help from the govt from birth to death, so that in times of trouble they do not have to beg before anyone.'
+    ],
+    benefitsList: [
+      {
+        heading: 'संबल कार्ड के मुख्य लाभ', points: [
+          'अनुग्रह राशि (मृत्यु पर): दुर्घटना में मृत्यु होने पर आश्रित को ₹4 लाख, और सामान्य मृत्यु होने पर ₹2 लाख।',
+          'अपंगता सहायता: स्थायी अपंगता (Permanent Disability) पर ₹2 लाख, और आंशिक अपंगता पर ₹1 लाख।',
+          'अंत्येष्टि सहायता: अंतिम संस्कार के लिए तुरंत ₹5,000 की नगद सहायता।',
+          'प्रसूति (मातृत्व) सहायता: गर्भवती महिलाओं को बच्चे के जन्म के समय कुल ₹16,000 की सहायता (अन्य प्रसूति योजनाओं के साथ मिलकर)।',
+          'शिक्षा: संबल कार्ड धारी परिवारों के बच्चों की स्कूलों/कॉलेजों में फीस माफ़ी और मेधावी छात्र योजना का लाभ।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of Sambal Card', points: [
+          'Ex-gratia Amount (on death): ₹4 lakh to the dependent on accidental death, and ₹2 lakh on normal death.',
+          'Disability Assistance: ₹2 lakh on Permanent Disability, and ₹1 lakh on partial disability.',
+          'Funeral Assistance: Immediate cash assistance of ₹5,000 for last rites.',
+          'Maternity Assistance: Total assistance of ₹16,000 to pregnant women at the time of childbirth (combined with other maternity schemes).',
+          'Education: Fee waiver in schools/colleges for children of Sambal Card holder families and benefit of Medhavi Chhatra Yojana.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक असंगठित क्षेत्र का श्रमिक (Unorganized Worker) होना चाहिए और उसकी आयु 18 से 60 वर्ष के बीच होनी चाहिए।',
+      'आवेदक के पास मध्य प्रदेश का वैध "समग्र आईडी" होना अनिवार्य है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a domicile of Madhya Pradesh.',
+      'The applicant must be an Unorganized Worker and their age should be between 18 to 60 years.',
+      'It is mandatory for the applicant to have a valid "Samagra ID" of Madhya Pradesh.'
+    ],
+    exclusions: [
+      'आवेदक या उसके परिवार का कोई सदस्य आयकर दाता (Income Tax Payer) नहीं होना चाहिए।',
+      'आवेदक या पति/पत्नी सरकारी सेवा में (नियमित कर्मचारी) नहीं होने चाहिए।',
+      'जिनके पास 1 हेक्टेयर (लगभग 2.5 एकड़) से अधिक कृषि भूमि है, वे अपात्र हैं।',
+      'जो लोग EPF/ESI (कर्मचारी भविष्य निधि) के दायरे में आते हैं, वे संबल के लिए पात्र नहीं हैं (उन्हें संगठित क्षेत्र माना जाता है)।'
+    ],
+    exclusionsEn: [
+      'The applicant or any member of their family should not be an Income Tax Payer.',
+      'The applicant or husband/wife should not be in govt service (regular employee).',
+      'Those who have more than 1 hectare (about 2.5 acres) of agricultural land are ineligible.',
+      'Those who come under EPF/ESI (Employees Provident Fund) are not eligible for Sambal (they are considered organized sector).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (संबल पोर्टल)', steps: [
+          'संबल 2.0 (sambal.mp.gov.in) पर आवेदन की प्रक्रिया पूरी तरह से ऑनलाइन और निःशुल्क है।',
+          'ऑनलाइन आवेदन के बाद, आपके क्षेत्र के अधिकारी (जैसे ग्रामीण क्षेत्र में पंचायत सचिव, शहरी क्षेत्र में वार्ड अधिकारी) आपके घर या मोहल्ले में आकर यह जांच करेंगे कि आप वास्तव में मज़दूर हैं या नहीं।',
+          'जांच (सत्यापन) सफल होने पर आपको SMS आ जाएगा और आप अपना संबल कार्ड डाउनलोड कर सकेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Sambal Portal)', steps: [
+          'The application process on Sambal 2.0 (sambal.mp.gov.in) is completely online and free.',
+          'After online application, the officer of your area (like Panchayat Secretary in rural area, Ward Officer in urban area) will come to your house or locality and check whether you are really a laborer or not.',
+          'On successful checking (verification), you will get an SMS and you will be able to download your Sambal Card.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मेरा आवेदन निरस्त (Reject) क्यों हो गया?', answer: 'अक्सर ई-केवाईसी न होने, समग्र आईडी में उम्र 60 से ज़्यादा होने, या सत्यापन अधिकारी द्वारा आपको अपात्र (ज़्यादा ज़मीन या पक्का मकान/व्यापार होने पर) पाए जाने पर फॉर्म निरस्त हो जाता है।' },
+      { question: 'क्या ई-श्रम कार्ड और संबल कार्ड एक ही हैं?', answer: 'नहीं। ई-श्रम (e-Shram) कार्ड केंद्र सरकार का है, जबकि संबल कार्ड मध्य प्रदेश सरकार का है, जिससे सीधे राज्य की योजनाओं (जैसे ₹4 लाख बीमा) का पैसा मिलता है।' }
+    ],
+    faqsEn: [
+      { question: 'Why was my application rejected?', answer: 'Often the form is rejected due to non-completion of e-KYC, age being more than 60 in Samagra ID, or being found ineligible by the verification officer (having more land or pucca house/business).' },
+      { question: 'Are e-Shram Card and Sambal Card the same?', answer: 'No. e-Shram Card belongs to the Central Govt, while Sambal Card belongs to the MP Govt, from which money of state schemes (like ₹4 lakh insurance) is received directly.' }
+    ]
+  },
+  'pratibha-kiran-yojana': {
+    ...reviewed,
+    title: 'प्रतिभा किरण योजना',
+    english: 'Pratibha Kiran Yojana (Urban Girl Scholarship)',
+    summary: 'शहरी क्षेत्र के गरीबी रेखा से नीचे (BPL) जीवन यापन करने वाले परिवारों की होनहार छात्राओं को 12वीं के बाद उच्च शिक्षा (कॉलेज) के लिए सरकार की ओर से हर साल ₹5,000 की छात्रवृत्ति।',
+    benefit: 'सामान्य ग्रेजुएशन कोर्सेस के लिए ₹5,000 प्रति वर्ष (₹500 x 10 माह) और तकनीकी/मेडिकल कोर्सेस के लिए ₹7,500 प्रति वर्ष की स्कॉलरशिप',
+    department: 'उच्च शिक्षा विभाग',
+    sourceUrl: 'https://scholarshipportal.mp.nic.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      '12वीं कक्षा की अंकसूची (न्यूनतम 60% अंकों के साथ)',
+      'शहरी क्षेत्र का BPL राशन कार्ड (BPL Certificate)',
+      'कॉलेज में प्रवेश का प्रमाण पत्र (Admission slip/Fee receipt)',
+      'बैंक खाता (आधार से लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      '12th class marksheet (with minimum 60% marks)',
+      'Urban area BPL Ration Card (BPL Certificate)',
+      'Certificate of admission in college (Admission slip/Fee receipt)',
+      'Bank Account (Aadhaar linked)'
+    ],
+    steps: [
+      '12वीं के बाद कॉलेज में एडमिशन लें।',
+      'स्टेट स्कॉलरशिप पोर्टल (scholarshipportal.mp.nic.in) पर रजिस्ट्रेशन करें।',
+      'लॉगिन करके "प्रतिभा किरण योजना" चुनें और अपना आवेदन भरें (समग्र आईडी और BPL जानकारी डालें)।',
+      'फॉर्म सबमिट करके उसका प्रिंट आउट निकालें और ज़रूरी दस्तावेज़ों के साथ अपने कॉलेज में जमा करें।',
+      'कॉलेज प्राचार्य द्वारा सत्यापन के बाद स्कॉलरशिप राशि सीधे बैंक खाते में जमा हो जाएगी।'
+    ],
+    stepsEn: [
+      'Take admission in college after 12th.',
+      'Register on the State Scholarship Portal (scholarshipportal.mp.nic.in).',
+      'Login and select "Pratibha Kiran Yojana" and fill your application (enter Samagra ID and BPL info).',
+      'Submit the form, take a print out of it and submit it in your college along with necessary documents.',
+      'After verification by the college principal, the scholarship amount will be deposited directly in the bank account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'शहरी क्षेत्र की BPL छात्राएं' },
+      { field: 'occupation', op: 'eq', value: 'student', label: 'कॉलेज में अध्ययनरत (UG/College Student)' }
+    ],
+    sourceNotes: 'उच्च शिक्षा विभाग MP द्वारा शहरी बालिकाओं (BPL) के लिए संचालित योजना।',
+    detailedDescription: [
+      'यह योजना खास तौर पर शहरों (Urban Areas) में रहने वाली उन गरीब बच्चियों (BPL) के लिए बनाई गई है जो पढ़ने में होनहार हैं, लेकिन पैसों की कमी के कारण 12वीं के बाद पढ़ाई छोड़ देती हैं।',
+      'सरकार का उद्देश्य है कि गरीब परिवारों की बेटियां भी उच्च शिक्षा (Graduation, Medical, Engineering) प्राप्त कर सकें और समाज में आगे बढ़ सकें।'
+    ],
+    detailedDescriptionEn: [
+      'This scheme is specially designed for those poor girls (BPL) living in cities (Urban Areas) who are bright in studies, but drop out of studies after 12th due to lack of money.',
+      'The objective of the govt is that the daughters of poor families can also get higher education (Graduation, Medical, Engineering) and move forward in society.'
+    ],
+    benefitsList: [
+      {
+        heading: 'छात्रवृत्ति (Scholarship) की राशि', points: [
+          'सामान्य पाठ्यक्रम: BA, B.Sc, B.Com जैसे रेगुलर कोर्सेस के लिए ₹500 प्रति माह (10 महीने के लिए) यानी कुल ₹5,000 प्रति वर्ष दिए जाते हैं।',
+          'तकनीकी/चिकित्सा पाठ्यक्रम: B.E, B.Tech, MBBS जैसे कोर्सेस के लिए ₹750 प्रति माह (10 महीने के लिए) यानी कुल ₹7,500 प्रति वर्ष दिए जाते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Scholarship Amount', points: [
+          'General Courses: For regular courses like BA, B.Sc, B.Com, ₹500 per month (for 10 months) i.e. total ₹5,000 per year is given.',
+          'Technical/Medical Courses: For courses like B.E, B.Tech, MBBS, ₹750 per month (for 10 months) i.e. total ₹7,500 per year is given.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्रा मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'छात्रा का परिवार शहरी क्षेत्र (Urban Area) में रहता हो और उनके पास गरीबी रेखा से नीचे (BPL) का राशन कार्ड हो।',
+      'छात्रा ने 12वीं कक्षा (माध्यमिक शिक्षा मण्डल, CBSE या ICSE) में कम से कम 60% अंक प्राप्त किए हों।',
+      'छात्रा ने किसी भी मान्यता प्राप्त सरकारी या प्राइवेट कॉलेज/विश्वविद्यालय में स्नातक (Graduation) में प्रवेश लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The girl student must be a domicile of Madhya Pradesh.',
+      'The student\'s family should live in an Urban Area and they should have a Below Poverty Line (BPL) ration card.',
+      'The student must have scored at least 60% marks in 12th class (MP Board, CBSE or ICSE).',
+      'The student must have taken admission in Graduation in any recognized govt or private college/university.'
+    ],
+    exclusions: [
+      'ग्रामीण (Rural) क्षेत्रों की छात्राएं इस योजना के लिए पात्र नहीं हैं (उनके लिए "गाँव की बेटी योजना" है)।',
+      'यदि छात्रा ने 12वीं में 60% से कम अंक प्राप्त किए हैं या BPL कार्ड नहीं है, तो वह अपात्र है।',
+      'डिस्टेंस लर्निंग (Distance Education) से पढ़ाई करने वाली छात्राओं को यह लाभ नहीं मिलता।'
+    ],
+    exclusionsEn: [
+      'Girl students of Rural areas are not eligible for this scheme (there is "Gaon Ki Beti Yojana" for them).',
+      'If the student has scored less than 60% marks in 12th or does not have a BPL card, she is ineligible.',
+      'Students studying through Distance Learning do not get this benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (State Scholarship Portal)', steps: [
+          'इस योजना के लिए आवेदन "मध्य प्रदेश स्टेट स्कॉलरशिप पोर्टल" के माध्यम से किया जाता है।',
+          'पोर्टल पर "Student Login" करके अपनी प्रोफाइल अपडेट करनी होती है।',
+          'स्कॉलरशिप का फॉर्म ऑनलाइन भरने के बाद, उसका प्रिंटआउट निकालकर अपने कॉलेज के स्कॉलरशिप विभाग/प्राचार्य के पास जमा करना अनिवार्य है, अन्यथा फॉर्म आगे नहीं बढ़ेगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (State Scholarship Portal)', steps: [
+          'Application for this scheme is done through "Madhya Pradesh State Scholarship Portal".',
+          'Profile has to be updated by doing "Student Login" on the portal.',
+          'After filling the scholarship form online, it is mandatory to take a printout of it and submit it to the scholarship department/principal of your college, otherwise the form will not move forward.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मेरे पास BPL कार्ड नहीं है लेकिन मैं गरीब हूँ, क्या मुझे लाभ मिलेगा?', answer: 'नहीं, इस योजना का लाभ लेने के लिए आपका नाम शहरी BPL सूची में होना अनिवार्य है। बिना वैध BPL/समग्र आईडी के आवेदन स्वीकार नहीं होगा।' },
+      { question: 'मैं गांव की रहने वाली हूँ, क्या मैं इसके लिए आवेदन कर सकती हूँ?', answer: 'नहीं। गांव की छात्राओं के लिए सरकार की "गाँव की बेटी योजना" (Gaon Ki Beti Yojana) है, आप उसमें आवेदन करें।' }
+    ],
+    faqsEn: [
+      { question: 'I don\'t have a BPL card but I am poor, will I get the benefit?', answer: 'No, to take advantage of this scheme, it is mandatory to have your name in the urban BPL list. Application will not be accepted without valid BPL/Samagra ID.' },
+      { question: 'I live in a village, can I apply for this?', answer: 'No. The govt has "Gaon Ki Beti Yojana" for village students, you should apply in that.' }
+    ]
+  },
+  'yuva-swabhimaan-yojana': {
+    ...reviewed,
+    title: 'युवा स्वाभिमान योजना',
+    english: 'Yuva Swabhiman Yojana (Urban Youth Employment)',
+    summary: 'शहरी क्षेत्रों के गरीब और बेरोजगार युवाओं को साल में कम से कम 100 दिन का अस्थायी रोज़गार (₹4,000 प्रति माह स्टाइपेंड) और कौशल प्रशिक्षण प्रदान करने की योजना।',
+    benefit: 'शहरी बेरोजगार युवाओं को 100 दिन का मानदेय रोज़गार (₹4,000/माह स्टाइपेंड) एवं निःशुल्क कौशल प्रशिक्षण (Skill Training)',
+    department: 'नगरीय विकास एवं आवास विभाग',
+    sourceUrl: 'https://mpurban.gov.in/',
+    applicationUrl: 'https://yuvaswabhimaan.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'शहरी निकाय का निवास प्रमाण (Domicile)',
+      'परिवार की वार्षिक आय का प्रमाण पत्र (₹2 लाख से कम)',
+      'बैंक पासबुक (Bank Passbook)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Urban body domicile certificate',
+      'Family annual income certificate (Less than ₹2 lakh)',
+      'Bank Passbook'
+    ],
+    steps: [
+      'युवा स्वाभिमान पोर्टल (yuvaswabhimaan.mp.gov.in) पर जाकर ऑनलाइन पंजीयन करें।',
+      'अपनी रूचि के अनुसार काम (Work) और कौशल प्रशिक्षण (Skill Training) का ट्रेड चुनें।',
+      'नगरीय निकाय (नगर निगम/नगर पालिका) द्वारा आपका दस्तावेजों का सत्यापन किया जाएगा।',
+      'सत्यापन के बाद आपको निकाय के कार्यों में 100 दिन का काम दिया जाएगा और काम के अनुसार बैंक खाते में पैसे (DBT) भेजे जाएंगे।'
+    ],
+    stepsEn: [
+      'Go to the Yuva Swabhiman portal (yuvaswabhimaan.mp.gov.in) and register online.',
+      'Choose the work and trade for skill training according to your interest.',
+      'Your documents will be verified by the urban body (Municipal Corporation/Municipality).',
+      'After verification, you will be given 100 days of work in the body\'s work and money (DBT) will be sent to the bank account according to the work.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 21, label: 'आयु 21 से 30 वर्ष' },
+      { field: 'age', op: 'lte', value: 30, label: 'अधिकतम 30 वर्ष' }
+    ],
+    sourceNotes: 'नगरीय विकास विभाग MP द्वारा शहरी युवाओं के लिए मनरेगा (MGNREGA) की तर्ज पर शुरू की गई योजना।',
+    detailedDescription: [
+      'जैसे गांवों में मज़दूरों को "मनरेगा" (MGNREGA) के तहत 100 दिन के रोज़गार की गारंटी मिलती है, उसी तरह शहरों में रहने वाले पढ़े-लिखे लेकिन बेरोज़गार युवाओं के लिए मध्य प्रदेश सरकार ने "युवा स्वाभिमान योजना" शुरू की है।',
+      'इस योजना में युवाओं को नगर निगम के काम (जैसे प्रॉपर्टी टैक्स वसूली, सर्वे, ऑफिस वर्क आदि) दिए जाते हैं। साथ ही उन्हें 10 दिन की ट्रेनिंग (Skill Training) भी दी जाती है ताकि वे भविष्य में खुद की परमानेंट नौकरी या बिज़नेस कर सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Just as laborers in villages get a guarantee of 100 days of employment under "MGNREGA", similarly the MP Govt has started "Yuva Swabhiman Yojana" for educated but unemployed youth living in cities.',
+      'In this scheme, youths are given Municipal Corporation work (like property tax collection, survey, office work etc.). They are also given 10 days training (Skill Training) so that they can get their own permanent job or do business in the future.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'रोज़गार की गारंटी: साल में कम से कम 100 दिन का काम मिलेगा।',
+          'मानदेय (Stipend): काम के दौरान ₹4,000 प्रति माह (लगभग ₹133 रोज़ के हिसाब से) सीधे बैंक खाते में मिलेंगे।',
+          'कौशल विकास (Skill Development): काम के साथ-साथ आपकी पसंद की फ़ील्ड में ट्रेनिंग दी जाएगी जिससे आगे चलकर नौकरी मिलने में आसानी हो।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of the Scheme', points: [
+          'Guarantee of Employment: Minimum 100 days of work in a year will be available.',
+          'Honorarium (Stipend): ₹4,000 per month (approx ₹133 per day) will be given directly to the bank account during work.',
+          'Skill Development: Along with work, training will be given in your preferred field to make it easier to get a job later.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश के शहरी क्षेत्र (Urban Area) का निवासी होना चाहिए।',
+      'आवेदक की आयु 21 से 30 वर्ष के बीच होनी चाहिए।',
+      'आवेदक के परिवार की कुल वार्षिक आय ₹2 लाख से कम होनी चाहिए।',
+      'आवेदक वर्तमान में किसी भी सरकारी या प्राइवेट नौकरी में नहीं होना चाहिए (पूर्णतः बेरोज़गार हो)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of an Urban Area of Madhya Pradesh.',
+      'The age of the applicant should be between 21 to 30 years.',
+      'The total annual income of the applicant\'s family should be less than ₹2 lakh.',
+      'The applicant should not be currently in any govt or private job (must be completely unemployed).'
+    ],
+    exclusions: [
+      'ग्रामीण (Rural) क्षेत्रों के युवा इस योजना के लिए अपात्र हैं (वे पंचायत/मनरेगा में जा सकते हैं)।',
+      'यदि आप रेगुलर पढ़ाई कर रहे हैं, तो आप रोज़ 8 घंटे काम नहीं कर पाएंगे, इसलिए रेगुलर छात्र इसे नहीं कर सकते।'
+    ],
+    exclusionsEn: [
+      'Youth from Rural areas are ineligible for this scheme (they can go to Panchayat/MGNREGA).',
+      'If you are doing regular studies, you will not be able to work 8 hours a day, so regular students cannot do this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (Yuva Swabhiman Portal)', steps: [
+          'युवा स्वाभिमान पोर्टल (yuvaswabhimaan.mp.gov.in) पर या अपने मोबाइल से ऐप डाउनलोड करके रजिस्ट्रेशन करें।',
+          'रजिस्ट्रेशन के बाद नगर निगम/नगर पालिका द्वारा आपको कॉल या SMS के ज़रिए काम पर बुलाया जाएगा।',
+          'काम के दिनों की उपस्थिति ऑनलाइन दर्ज होगी और उसी आधार पर मानदेय मिलेगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Yuva Swabhiman Portal)', steps: [
+          'Register on the Yuva Swabhiman Portal (yuvaswabhimaan.mp.gov.in) or by downloading the app from your mobile.',
+          'After registration, you will be called for work by the Municipal Corporation/Municipality through call or SMS.',
+          'Attendance of working days will be recorded online and honorarium will be received on the same basis.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह एक पक्की नौकरी है?', answer: 'नहीं, यह केवल 100 दिन का अस्थायी काम और ट्रेनिंग है, ताकि बेरोज़गार युवाओं को फौरी तौर पर कुछ पैसा और भविष्य के लिए स्किल मिल सके।' },
+      { question: 'मुझे काम कहाँ करना होगा?', answer: 'आपको अपने ही शहर की नगर पालिका या नगर निगम के दफ्तर या उनके द्वारा बताए गए वार्ड/फील्ड में काम करना होगा।' }
+    ],
+    faqsEn: [
+      { question: 'Is this a permanent job?', answer: 'No, this is only 100 days of temporary work and training, so that unemployed youth can immediately get some money and skill for the future.' },
+      { question: 'Where will I have to work?', answer: 'You will have to work in the office of your own city\'s Municipality or Municipal Corporation or in the ward/field specified by them.' }
+    ]
+  },
+  'mukhyamantri-scooty-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री स्कूटी योजना (Mukhyamantri Scooty Yojana)',
+    english: 'Mukhyamantri Scooty Yojana (School Topper Award)',
+    summary: 'सरकारी हायर सेकेंडरी स्कूलों में 12वीं कक्षा में प्रथम (First) स्थान प्राप्त करने वाले विद्यार्थियों (एक छात्र और एक छात्रा) को कॉलेज आने-जाने के लिए निःशुल्क ई-स्कूटी/पेट्रोल स्कूटी।',
+    benefit: 'स्कूल टॉपर को पेट्रोल स्कूटी के लिए ₹90,000 या ई-स्कूटी (Electric) के लिए ₹1.20 लाख सीधे बैंक खाते में (DBT)',
+    department: 'स्कूल शिक्षा विभाग',
+    sourceUrl: 'https://vimarsh.mp.gov.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      '12वीं बोर्ड परीक्षा की अंकसूची (टॉपर होने का प्रमाण)',
+      'कॉलेज/आगे की पढ़ाई में एडमिशन का प्रमाण',
+      'लर्नर लाइसेंस (Learner License) या ड्राइविंग लाइसेंस',
+      'बैंक खाता (आधार और DBT लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      '12th board exam marksheet (Proof of being a topper)',
+      'Proof of admission in college/further studies',
+      'Learner License or Driving License',
+      'Bank Account (Aadhaar and DBT linked)'
+    ],
+    steps: [
+      'विद्यार्थियों को इसके लिए अलग से कोई ऑनलाइन फॉर्म नहीं भरना होता है।',
+      'विमर्श पोर्टल (vimarsh.mp.gov.in) पर स्कूल शिक्षा विभाग द्वारा जिलेवार और स्कूलवार टॉपर्स की सूची (Merit List) जारी की जाती है।',
+      'यदि आपका नाम सूची में है, तो आपको अपने स्कूल के प्राचार्य (Principal) से संपर्क करना होगा।',
+      'आप पेट्रोल स्कूटी या ई-स्कूटी में से कोई एक चुन सकते हैं। इसके बाद आपके बैंक खाते में स्कूटी खरीदने के लिए सरकार पैसा डाल देगी।'
+    ],
+    stepsEn: [
+      'Students do not have to fill any separate online form for this.',
+      'A district-wise and school-wise merit list of toppers is released by the School Education Dept on the Vimarsh portal (vimarsh.mp.gov.in).',
+      'If your name is in the list, you have to contact the Principal of your school.',
+      'You can choose either a petrol scooty or an e-scooty. After this, the govt will put money in your bank account to buy the scooty.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: '12वीं कक्षा के स्कूल टॉपर (Government School)' }
+    ],
+    sourceNotes: 'स्कूल शिक्षा विभाग MP द्वारा मेधावी विद्यार्थियों को आगे की पढ़ाई (कॉलेज) के लिए गतिशीलता (Mobility) प्रदान करने की योजना।',
+    detailedDescription: [
+      'यह योजना खास तौर पर सरकारी स्कूलों (Government Higher Secondary Schools) में पढ़ने वाले उन मेधावी बच्चों के लिए है जो अपने स्कूल में टॉप करते हैं।',
+      'अक्सर कॉलेज स्कूल से दूर होते हैं और परिवहन की समस्या के कारण बच्चे, खासकर लड़कियाँ, आगे की पढ़ाई छोड़ देती हैं। इसी समस्या को हल करने के लिए मध्य प्रदेश सरकार हर सरकारी स्कूल के टॉपर (एक लड़का और एक लड़की) को स्कूटी देती है।'
+    ],
+    detailedDescriptionEn: [
+      'This scheme is specially for those meritorious children studying in Govt Higher Secondary Schools who top in their school.',
+      'Often colleges are far from school and due to transportation problems, children, especially girls, drop out of further studies. To solve this problem, the MP Govt gives a scooty to the topper of every govt school (one boy and one girl).'
+    ],
+    benefitsList: [
+      {
+        heading: 'मिलने वाला लाभ (अनुदान की राशि)', points: [
+          'पेट्रोल स्कूटी: यदि विद्यार्थी पेट्रोल वाली स्कूटी चुनता है, तो उसके खाते में अधिकतम ₹90,000 भेजे जाते हैं।',
+          'इलेक्ट्रिक स्कूटी (E-Scooty): यदि विद्यार्थी पर्यावरण के अनुकूल ई-स्कूटी चुनता है, तो उसके खाते में अधिकतम ₹1,20,000 भेजे जाते हैं।',
+          'यह पैसा डायरेक्ट बेनिफिट ट्रांसफर (DBT) के ज़रिए सीधे छात्र/छात्रा के खाते में आता है, जिससे वे शोरूम से स्कूटी खरीद सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefit Received (Grant Amount)', points: [
+          'Petrol Scooty: If the student chooses a petrol scooty, a max of ₹90,000 is sent to their account.',
+          'Electric Scooty (E-Scooty): If the student chooses an environment-friendly e-scooty, a max of ₹1,20,000 is sent to their account.',
+          'This money comes directly to the student\'s account through Direct Benefit Transfer (DBT), from which they can buy a scooty from the showroom.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'विद्यार्थी ने मध्य प्रदेश के किसी भी "शासकीय" (Government) हायर सेकेंडरी स्कूल से 12वीं की परीक्षा दी हो।',
+      'विद्यार्थी ने 12वीं बोर्ड परीक्षा में अपने स्कूल में प्रथम (First Position) स्थान प्राप्त किया हो। (एक स्कूल से एक छात्र और एक छात्रा का चयन होता है)।',
+      'विद्यार्थी के 12वीं में कम से कम 70% अंक (प्रथम प्रयास में) होने चाहिए।',
+      'उसे आगे कॉलेज/उच्च शिक्षा में प्रवेश लेना अनिवार्य है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The student must have appeared for the 12th exam from any "Government" Higher Secondary School in Madhya Pradesh.',
+      'The student must have secured the First Position in their school in the 12th board exam. (One boy and one girl from a school are selected).',
+      'The student must have at least 70% marks (in the first attempt) in 12th.',
+      'It is mandatory for them to take admission in college/higher education.'
+    ],
+    exclusions: [
+      'प्राइवेट स्कूलों में पढ़ने वाले बच्चे इस योजना के लिए अपात्र हैं।',
+      'यदि बच्चा 12वीं के बाद पढ़ाई छोड़ देता है (कॉलेज नहीं जाता), तो उसे स्कूटी नहीं मिलेगी।',
+      'पूरक (Supplementary) परीक्षा या रुक जाना नहीं योजना से पास होने वाले बच्चे अपात्र हैं।'
+    ],
+    exclusionsEn: [
+      'Children studying in Private schools are ineligible for this scheme.',
+      'If the child drops out of studies after 12th (does not go to college), they will not get a scooty.',
+      'Children passing from Supplementary exam or Ruk Jana Nahi scheme are ineligible.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'स्कूल द्वारा (Automatic List)', steps: [
+          'रिजल्ट आने के बाद शिक्षा विभाग खुद स्कूल-वार टॉपर्स की लिस्ट विमर्श पोर्टल पर डालता है।',
+          'छात्रों को अपना नाम विमर्श पोर्टल पर चेक करना है और स्कूल के प्रिंसिपल से संपर्क करना है।',
+          'प्रिंसिपल छात्र के बैंक खाते और लाइसेंस/लर्नर लाइसेंस की जानकारी पोर्टल पर फीड करेंगे, जिसके बाद पैसा ट्रांसफर होगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Through School (Automatic List)', steps: [
+          'After the result comes, the Education Dept itself puts the school-wise list of toppers on the Vimarsh portal.',
+          'Students have to check their name on the Vimarsh portal and contact the Principal of the school.',
+          'The Principal will feed the info of the student\'s bank account and license/learner license on the portal, after which the money will be transferred.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे स्कूटी मिलेगी या पैसा मिलेगा?', answer: 'सरकार आपको स्कूटी खरीदने के लिए सीधे आपके बैंक खाते में पैसे भेजेगी (पेट्रोल के लिए 90 हज़ार या ई-स्कूटी के लिए 1.2 लाख)। आपको उस पैसे से स्कूटी खरीदकर स्कूल में बिल (रसीद) जमा करनी होगी।' },
+      { question: 'मेरी उम्र 18 साल नहीं है, तो लाइसेंस कैसे बनेगा?', answer: '16 से 18 साल के बच्चों का बिना गियर वाली स्कूटी (50cc से कम या ई-स्कूटी) के लिए लर्नर लाइसेंस (Learner License) बन जाता है। स्कूटी लेने के लिए लर्नर लाइसेंस ज़रूरी है।' }
+    ],
+    faqsEn: [
+      { question: 'Will I get a scooty or money?', answer: 'The govt will send money directly to your bank account to buy a scooty (90 thousand for petrol or 1.2 lakh for e-scooty). You will have to buy a scooty with that money and submit the bill (receipt) in the school.' },
+      { question: 'I am not 18 years old, so how will the license be made?', answer: 'A Learner License is made for children of 16 to 18 years for a gearless scooty (less than 50cc or e-scooty). Learner license is mandatory to get a scooty.' }
+    ]
+  },
+  'mukhyamantri-solar-pump-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री सोलर पंप योजना',
+    english: 'Mukhyamantri Solar Pump Yojana',
+    summary: 'किसानों को सिंचाई के लिए बिजली या डीजल पर निर्भरता खत्म करने के लिए सरकार द्वारा 90% तक की भारी सब्सिडी पर खेतों में सोलर पंप (Solar Pump) लगाना।',
+    benefit: 'खेतों में सिंचाई के लिए सोलर पंप की स्थापना पर किसानों को 90% तक का सरकारी अनुदान (Subsidy)',
+    department: 'नवीन एवं नवकरणीय ऊर्जा विभाग',
+    sourceUrl: 'https://cmsolarpump.mp.gov.in/',
+    applicationUrl: 'https://cmsolarpump.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खेत की खसरा-खतौनी / B1 की नकल (Land details)',
+      'जल स्रोत (बोरवेल / कुआं / नदी) होने का प्रमाण',
+      'पासपोर्ट साइज़ फोटो और मोबाइल नंबर',
+      'बैंक खाता (Bank Passbook)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Khasra-Khatauni / B1 copy of farm (Land details)',
+      'Proof of having water source (Borewell / Well / River)',
+      'Passport size photo and mobile number',
+      'Bank Account (Bank Passbook)'
+    ],
+    steps: [
+      'सीएम सोलर पंप की आधिकारिक वेबसाइट (cmsolarpump.mp.gov.in) पर जाकर किसान के रूप में रजिस्ट्रेशन करें।',
+      'अपनी समग्र आईडी, आधार, खसरा नंबर और बैंक डिटेल्स डालकर आवेदन फॉर्म भरें।',
+      'आवेदन के समय 5000 रुपये (रजिस्ट्रेशन शुल्क) ऑनलाइन जमा करने होते हैं।',
+      'पंजीयन के बाद विभाग द्वारा आपके खेत का सर्वे (निरीक्षण) किया जाएगा।',
+      'सर्वे में पास होने पर आपको अपनी हिस्से की बाकी राशि जमा करनी होगी, जिसके बाद 120 दिन के अंदर खेत में सोलर पंप लगा दिया जाएगा।'
+    ],
+    stepsEn: [
+      'Register as a farmer by visiting the official website of CM Solar Pump (cmsolarpump.mp.gov.in).',
+      'Fill the application form by entering your Samagra ID, Aadhaar, Khasra number and bank details.',
+      'At the time of application, Rs 5000 (registration fee) has to be deposited online.',
+      'After registration, a survey (inspection) of your farm will be done by the department.',
+      'On passing the survey, you will have to deposit the remaining amount of your share, after which the solar pump will be installed in the field within 120 days.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान जिनके खेत में जल स्रोत हो' }
+    ],
+    sourceNotes: 'मुख्यमंत्री सोलर पंप योजना (अब प्रधानमंत्री कृषक मित्र सूर्य योजना से जुड़ी) के तहत किसानों को डीजल और ग्रिड बिजली से मुक्ति।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार की यह योजना उन किसानों के लिए वरदान है जिनके खेतों तक बिजली नहीं पहुँची है, या जहाँ बिजली की कटौती बहुत होती है।',
+      'किसान अब अपने खेतों में सूर्य की रोशनी (Solar Energy) से चलने वाले पंप (1 HP से 10 HP तक) लगवा सकते हैं। इससे उन्हें महँगा डीजल नहीं खरीदना पड़ेगा और न ही बिजली बिल की टेंशन रहेगी।'
+    ],
+    detailedDescriptionEn: [
+      'This scheme of MP Govt is a boon for those farmers whose fields have no electricity, or where there are frequent power cuts.',
+      'Farmers can now install pumps (from 1 HP to 10 HP) running on sunlight (Solar Energy) in their fields. With this, they will not have to buy expensive diesel, nor will there be tension of electricity bills.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'भारी सब्सिडी (Subsidy): किसान को सोलर पंप की कुल कीमत का सिर्फ 10% से 20% हिस्सा ही देना होता है, बाकी का खर्च केंद्र और राज्य सरकार उठाती है।',
+          'डीजल के खर्च से आज़ादी: सोलर पंप दिन में सूरज की रोशनी से चलता है, जिससे डीजल या बिजली का बिल ज़ीरो हो जाता है।',
+          'किसानों को प्राथमिकता: उन किसानों को पहले सोलर पंप दिया जाता है जिनके खेतों से बिजली की लाइन कम से कम 300 मीटर दूर है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main Benefits of the Scheme', points: [
+          'Heavy Subsidy: The farmer has to pay only 10% to 20% of the total cost of the solar pump, the rest is borne by the Central and State Govt.',
+          'Freedom from Diesel Cost: Solar pump runs on sunlight during the day, making diesel or electricity bill zero.',
+          'Priority to Farmers: Solar pumps are given first to those farmers whose fields are at least 300 meters away from the electricity line.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और एक किसान होना चाहिए।',
+      'किसान के पास अपनी कृषि भूमि होनी चाहिए (पट्टे या किराए की जमीन नहीं)।',
+      'खेत में सिंचाई के लिए एक सुनिश्चित जल स्रोत (बोरवेल, कुआं, नदी, नाला) होना चाहिए जिसमें पर्याप्त पानी हो।',
+      'यदि किसान के खेत में पहले से कृषि कार्य के लिए बिजली का परमानेंट कनेक्शन है, तो उसे सोलर पंप मिलने पर वह कनेक्शन कटवाना पड़ सकता है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native of Madhya Pradesh and a farmer.',
+      'The farmer must have his own agricultural land (not leased or rented land).',
+      'There must be an assured water source (borewell, well, river, drain) in the field for irrigation with sufficient water.',
+      'If the farmer already has a permanent electricity connection for agriculture in his field, he may have to get that connection disconnected on getting a solar pump.'
+    ],
+    exclusions: [
+      'जिन किसानों के पास खेत में पानी का कोई साधन नहीं है (बोरवेल/कुआं), वे सोलर पंप के लिए आवेदन नहीं कर सकते।',
+      'वन भूमि (Forest Land) पर खेती करने वाले इस योजना के पात्र नहीं हैं (जब तक कि उनके पास वैध पट्टा न हो)।'
+    ],
+    exclusionsEn: [
+      'Farmers who have no source of water in the field (borewell/well) cannot apply for solar pump.',
+      'Those cultivating on Forest Land are not eligible for this scheme (unless they have a valid lease).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (CM Solar Pump Portal)', steps: [
+          'यह प्रक्रिया पूरी तरह ऑनलाइन है। किसान खुद या CSC/MP Online के माध्यम से पोर्टल पर जा सकते हैं।',
+          'फॉर्म भरने और 5000 रुपये रजिस्ट्रेशन फीस (ऑनलाइन) कटने के बाद, जिला कार्यालय में आवेदन पहुँचता है।',
+          'कलेक्टर द्वारा गठित समिति तय करती है कि आपको कितने HP का पंप मिलेगा (आपके जल स्रोत और खेत के अनुसार)।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (CM Solar Pump Portal)', steps: [
+          'This process is completely online. Farmers can go to the portal themselves or through CSC/MP Online.',
+          'After filling the form and paying Rs 5000 registration fee (online), the application reaches the district office.',
+          'The committee formed by the Collector decides how many HP pump you will get (according to your water source and farm).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या 5000 रुपये जमा करने के बाद मुझे सोलर पंप पक्का मिल जाएगा?', answer: 'नहीं। 5000 रुपये सिर्फ रजिस्ट्रेशन के हैं। अगर सर्वे में आपका खेत या बोरवेल उपयुक्त नहीं पाया गया, तो वह राशि आपके खाते में वापस कर दी जाएगी।' },
+      { question: 'मुझे कितने HP (हॉर्स पावर) का पंप मिलेगा?', answer: 'यह आपके खेत के साइज, बोरवेल की गहराई और पानी की मात्रा पर निर्भर करता है। 1 से 3 HP तक के पंप छोटे कुओं के लिए और 5 से 10 HP तक के पंप गहरे बोरवेल के लिए होते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Will I definitely get a solar pump after depositing Rs 5000?', answer: 'No. Rs 5000 is only for registration. If your field or borewell is not found suitable in the survey, that amount will be refunded to your account.' },
+      { question: 'How many HP (Horse Power) pump will I get?', answer: 'It depends on the size of your field, depth of borewell and amount of water. Pumps from 1 to 3 HP are for small wells and 5 to 10 HP for deep borewells.' }
+    ]
+  },
+  'mukhyamantri-kaushal-apprentice-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री सीखो-कमाओ योजना (MMSKY)',
+    english: 'Mukhyamantri Seekho Kamao Yojana (MMSKY)',
+    summary: '12वीं पास, ITI, और ग्रेजुएट युवाओं को विभिन्न कंपनियों में ऑन-द-जॉब ट्रेनिंग (OJT) के साथ-साथ ₹8,000 से ₹10,000 तक का मासिक स्टाइपेंड (Stipend) देने की योजना।',
+    benefit: '1 साल की ट्रेनिंग (Apprenticeship), कंपनियों में काम का अनुभव, और हर महीने ₹8,000 से ₹10,000 का स्टाइपेंड',
+    department: 'तकनीकी शिक्षा, कौशल विकास एवं रोज़गार विभाग',
+    sourceUrl: 'https://mmsky.mp.gov.in/',
+    applicationUrl: 'https://mmsky.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID - E-KYC पूरा होना चाहिए)',
+      'आधार कार्ड (Aadhaar Card - बैंक से लिंक)',
+      'शैक्षणिक योग्यता (12वीं / ITI / डिप्लोमा / डिग्री की मार्कशीट)',
+      'बैंक खाता पासबुक (DBT इनेबल)',
+      'मोबाइल नंबर और ईमेल आईडी'
+    ],
+    documentsEn: [
+      'Samagra ID (E-KYC should be complete)',
+      'Aadhaar Card (Linked to bank)',
+      'Educational qualification (12th / ITI / Diploma / Degree marksheet)',
+      'Bank Account Passbook (DBT enabled)',
+      'Mobile Number and Email ID'
+    ],
+    steps: [
+      'MMSKY पोर्टल (mmsky.mp.gov.in) पर जाकर "कैंडिडेट रजिस्ट्रेशन" (Candidate Registration) पर क्लिक करें।',
+      'अपनी समग्र आईडी डालें, OTP वेरिफाई करें और अपनी प्रोफाइल पूरी करें (पढ़ाई की डिटेल्स डालें)।',
+      'लॉगिन आईडी पासवर्ड मिलने के बाद, पोर्टल पर जाकर अपनी पसंद के कोर्स और कंपनियों (Establisments) में अप्लाई करें।',
+      'कंपनी द्वारा आपका चयन (इंटरव्यू/मेरिट) किया जाएगा। चयन होने पर कॉन्ट्रैक्ट जनरेट होगा जिसे आपको ऑनलाइन एक्सेप्ट करना है।'
+    ],
+    stepsEn: [
+      'Go to MMSKY portal (mmsky.mp.gov.in) and click on "Candidate Registration".',
+      'Enter your Samagra ID, verify OTP and complete your profile (enter study details).',
+      'After getting the login ID password, go to the portal and apply for courses and companies (Establishments) of your choice.',
+      'You will be selected by the company (Interview/Merit). On selection, a contract will be generated which you have to accept online.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 29 वर्ष' },
+      { field: 'age', op: 'lte', value: 29, label: 'अधिकतम 29 वर्ष' }
+    ],
+    sourceNotes: 'कौशल विकास विभाग MP की फ्लैगशिप योजना, जो युवाओं को किताबी ज्ञान के साथ-साथ व्यावहारिक कार्य अनुभव (On the job training) देती है।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने युवाओं के लिए "सीखो-कमाओ योजना" (MMSKY) लागू की है, ताकि युवाओं को सिर्फ डिग्री न मिले, बल्कि काम करने का असली अनुभव (Experience) भी मिले।',
+      'इसमें रजिस्टर्ड प्राइवेट कंपनियों (जैसे टाटा, महिंद्रा, या स्थानीय फैक्टरियां) में युवाओं को 1 साल के लिए ट्रेनिंग पर रखा जाता है। इस दौरान उन्हें काम भी सिखाया जाता है और सरकार व कंपनी मिलकर स्टाइपेंड भी देते हैं। ट्रेनिंग पूरी होने पर सर्टिफिकेट मिलता है, जिससे पक्की नौकरी मिलना आसान हो जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'The MP Govt has implemented the "Seekho-Kamao Yojana" (MMSKY) for the youth, so that the youth not only get a degree, but also get real work experience.',
+      'In this, youth are kept on training for 1 year in registered private companies (like Tata, Mahindra, or local factories). During this, they are also taught work and the govt and the company together give a stipend. On completion of training, a certificate is given, which makes it easier to get a permanent job.'
+    ],
+    benefitsList: [
+      {
+        heading: 'मासिक स्टाइपेंड (Stipend) की राशि', points: [
+          '12वीं पास (12th Pass) युवाओं को: ₹8,000 प्रति माह।',
+          'ITI पास (ITI Pass) युवाओं को: ₹8,500 प्रति माह।',
+          'डिप्लोमा होल्डर (Diploma) युवाओं को: ₹9,000 प्रति माह।',
+          'स्नातक या उससे उच्च (Graduate/PG) युवाओं को: ₹10,000 प्रति माह।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Monthly Stipend Amount', points: [
+          'For 12th Pass youth: ₹8,000 per month.',
+          'For ITI Pass youth: ₹8,500 per month.',
+          'For Diploma holder youth: ₹9,000 per month.',
+          'For Graduate or higher (PG) youth: ₹10,000 per month.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक की आयु 18 से 29 वर्ष के बीच होनी चाहिए।',
+      'आवेदक की न्यूनतम शैक्षणिक योग्यता 12वीं पास होनी चाहिए (12वीं, ITI, डिप्लोमा, UG, PG सभी पात्र हैं)।',
+      'आवेदक के बैंक खाते में DBT (Direct Benefit Transfer) सक्रिय होना अनिवार्य है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native of Madhya Pradesh.',
+      'The age of the applicant should be between 18 to 29 years.',
+      'The minimum educational qualification of the applicant should be 12th pass (12th, ITI, Diploma, UG, PG all are eligible).',
+      'It is mandatory for DBT (Direct Benefit Transfer) to be active in the applicant\'s bank account.'
+    ],
+    exclusions: [
+      'जो लोग पहले से ही सरकारी नौकरी में हैं, वे अपात्र हैं।',
+      'यदि आपने पढ़ाई बीच में छोड़ दी है (9वीं, 10वीं पास) तो आप पात्र नहीं हैं (न्यूनतम 12वीं पास या ITI ज़रूरी है)।'
+    ],
+    exclusionsEn: [
+      'Those who are already in govt job are ineligible.',
+      'If you have dropped out of studies in middle (9th, 10th pass) then you are not eligible (minimum 12th pass or ITI is required).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MMSKY Portal)', steps: [
+          'इस योजना की सारी प्रक्रिया ऑनलाइन (mmsky.mp.gov.in) है। कोई ऑफलाइन फॉर्म नहीं है।',
+          'पोर्टल पर रजिस्ट्रेशन के बाद आपको कंपनियों द्वारा जारी की गई वैकेंसियों (रिक्तियों) में अप्लाई करना होता है।',
+          'जब कंपनी आपका अप्रूवल कर देती है, तो आपको ऑनलाइन ही एक कॉन्ट्रैक्ट एक्सेप्ट करना होता है, जिसके बाद आपकी ट्रेनिंग शुरू हो जाती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MMSKY Portal)', steps: [
+          'The whole process of this scheme is online (mmsky.mp.gov.in). There is no offline form.',
+          'After registration on the portal, you have to apply in the vacancies issued by the companies.',
+          'When the company approves you, you have to accept a contract online itself, after which your training starts.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या स्टाइपेंड का पूरा पैसा कंपनी देती है?', answer: 'नहीं। स्टाइपेंड का 75% पैसा मध्य प्रदेश सरकार डायरेक्ट DBT के ज़रिए आपके खाते में डालती है, और बाकी 25% पैसा कंपनी आपके खाते में जमा करती है।' },
+      { question: 'ट्रेनिंग के बाद क्या पक्की नौकरी मिलेगी?', answer: 'यह एक ट्रेनिंग प्रोग्राम है। पक्की नौकरी की गारंटी नहीं है, लेकिन अगर आपका काम अच्छा रहता है, तो ज़्यादातर कंपनियाँ ट्रेनिंग के बाद आपको अपने यहाँ नौकरी पर रख लेती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Does the company give the full stipend money?', answer: 'No. 75% of the stipend money is deposited in your account by the MP Govt directly through DBT, and the remaining 25% money is deposited by the company in your account.' },
+      { question: 'Will I get a permanent job after training?', answer: 'This is a training program. There is no guarantee of a permanent job, but if your work is good, most companies hire you after training.' }
+    ]
+  },
+  'mukhyamantri-nikah-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री निकाह योजना',
+    english: 'Mukhyamantri Nikah Yojana (Minority Marriage Aid)',
+    summary: 'मुस्लिम व अन्य अल्पसंख्यक समाज के गरीब परिवारों की बेटियों की शादी (निकाह) के लिए सरकार द्वारा 55,000 रुपये की आर्थिक सहायता प्रदान करने की योजना।',
+    benefit: 'अल्पसंख्यक समुदाय की कन्याओं के निकाह पर ₹55,000 (सामग्री और नकद)',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://socialjustice.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'वर और वधू दोनों का आधार कार्ड',
+      'आयु प्रमाण पत्र (मार्कशीट या जन्म प्रमाण पत्र)',
+      'आय प्रमाण पत्र (BPL कार्ड / आय प्रमाण)',
+      'मूल निवास प्रमाण पत्र',
+      'वधू का बैंक खाता (DBT इनेबल)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of both Bride and Groom',
+      'Age Certificate (Marksheet or Birth Certificate)',
+      'Income Certificate (BPL Card / Income Proof)',
+      'Domicile Certificate',
+      'Bride\'s Bank Account (DBT enabled)'
+    ],
+    steps: [
+      'निकाह योजना का फॉर्म अपनी नगर पंचायत, नगर पालिका या जनपद पंचायत कार्यालय से प्राप्त करें।',
+      'सामूहिक निकाह के आयोजन से कम से कम 15 दिन पहले फॉर्म भरकर जमा करें।',
+      'निकाह के दिन वधू को आयोजन स्थल पर उपस्थित होना होगा और मुस्लिम रीति-रिवाज से निकाह संपन्न कराया जाएगा।',
+      'निकाह के बाद सहायता राशि डायरेक्ट वधू के bank खाते में भेज दी जाती है।'
+    ],
+    stepsEn: [
+      'Get the Nikah Yojana form from your Nagar Panchayat, Municipality or Janpad Panchayat office.',
+      'Fill and submit the form at least 15 days before the mass marriage event.',
+      'On the day of Nikah, the bride will have to be present at the venue and Nikah will be performed according to Muslim customs.',
+      'After Nikah, the assistance amount is sent directly to the bride\'s bank account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'कन्या (वधू)' }
+    ],
+    sourceNotes: 'यह मुख्यमंत्री कन्या विवाह योजना का ही अल्पसंख्यक (मुस्लिम) स्वरूप है, जो सामूहिक निकाह कार्यक्रमों में लागू होता है।',
+    detailedDescription: [
+      'मुख्यमंत्री निकाह योजना का मुख्य उद्देश्य मुस्लिम एवं अन्य अल्पसंख्यक समुदायों की गरीब बेटियों की शादी के आर्थिक बोझ को कम करना है।',
+      'यह योजना मुख्यमंत्री कन्या विवाह योजना के समान ही है। इसमें सामूहिक निकाह (Mass Marriage) का आयोजन किया जाता है, जहाँ सरकार द्वारा पूरी व्यवस्था की जाती है और नव-विवाहित जोड़े को जीवन की शुरुआत के लिए आर्थिक मदद दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'The main objective of Mukhyamantri Nikah Yojana is to reduce the financial burden of marriage of poor daughters of Muslim and other minority communities.',
+      'This scheme is similar to Mukhyamantri Kanya Vivah Yojana. In this, Mass Marriage is organized, where complete arrangements are made by the govt and financial help is given to the newly wedded couple to start life.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के तहत मिलने वाली 55,000 रुपये की सहायता', points: [
+          '₹49,000 की राशि: नव-विवाहित जोड़े को गृहस्थी का सामान खरीदने के लिए डायरेक्ट लड़की (वधू) के बैंक खाते में भेजे जाते हैं।',
+          '₹6,000 का खर्च: यह पैसा सामूहिक निकाह का आयोजन करने वाली संस्था (नगर निगम/जनपद) को टेंट, भोजन आदि की व्यवस्था के लिए दिया जाता है।',
+          'ध्यान दें: विधवा या तलाकशुदा महिलाओं के पुनर्विवाह (निकाह) पर भी इस योजना का लाभ मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Assistance of Rs 55,000 under the Scheme', points: [
+          'Amount of ₹49,000: Sent directly to the girl\'s (bride\'s) bank account to buy household items for the newly married couple.',
+          'Expense of ₹6,000: This money is given to the organization (Municipal Corporation/Janpad) organizing the mass marriage for arrangement of tent, food etc.',
+          'Note: The benefit of this scheme is also available on remarriage (Nikah) of widow or divorced women.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'कन्या (वधू) के माता-पिता मध्य प्रदेश के मूल निवासी होने चाहिए।',
+      'निकाह के समय कन्या की उम्र 18 साल या उससे अधिक और लड़के की उम्र 21 साल या उससे अधिक होनी चाहिए।',
+      'परिवार का नाम BPL (गरीबी रेखा) सूची में होना चाहिए या परिवार की आय बहुत कम होनी चाहिए।',
+      'निकाह "सामूहिक विवाह/निकाह कार्यक्रम" में ही होना चाहिए (प्राइवेट घर की शादी में लाभ नहीं मिलता)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The parents of the girl (bride) must be a native of Madhya Pradesh.',
+      'At the time of Nikah, the age of the girl should be 18 years or more and the age of the boy should be 21 years or more.',
+      'The family\'s name should be in the BPL (Below Poverty Line) list or the family\'s income should be very low.',
+      'The Nikah must take place in a "Mass Marriage/Nikah Program" only (benefit is not given in a private home marriage).'
+    ],
+    exclusions: [
+      'आयकर दाता (Income Tax Payers) इस योजना का लाभ नहीं ले सकते।',
+      'अगर शादी घर पर प्राइवेट तौर पर की जा रही है, तो इस योजना के तहत कोई पैसा नहीं मिलेगा। यह सिर्फ सामूहिक निकाह के लिए है।'
+    ],
+    exclusionsEn: [
+      'Income Tax Payers cannot take advantage of this scheme.',
+      'If the marriage is being done privately at home, no money will be given under this scheme. It is only for mass Nikah.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Local Body)', steps: [
+          'जब भी आपके जिले/शहर में सामूहिक निकाह का आयोजन हो रहा हो, तो नगर निगम, नगर पालिका या जनपद पंचायत कार्यालय में संपर्क करें।',
+          'वहाँ से फॉर्म लेकर सभी आवश्यक दस्तावेज़ों (जैसे आधार, समग्र, आय प्रमाण) के साथ जमा करें।',
+          'आयोजन के दिन निकाह पढ़ें, जिसके बाद अधिकारी आपके दस्तावेज़ वेरिफाई कर पेमेंट की प्रक्रिया शुरू करेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Local Body)', steps: [
+          'Whenever mass Nikah is being organized in your district/city, contact the Municipal Corporation, Municipality or Janpad Panchayat office.',
+          'Take the form from there and submit it with all necessary documents (like Aadhaar, Samagra, income proof).',
+          'Recite Nikah on the day of the event, after which officials will verify your documents and start the payment process.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या घर पर निकाह करने के बाद पैसा मिल सकता है?', answer: 'नहीं। इस योजना का नियम है कि सरकार द्वारा आयोजित "सामूहिक निकाह" में शामिल होने वाले जोड़ों को ही इसका लाभ दिया जाता है।' },
+      { question: 'क्या एक से ज़्यादा बेटियों की शादी के लिए लाभ ले सकते हैं?', answer: 'हाँ, अगर परिवार पात्र है तो उनकी सभी बेटियों की शादी सामूहिक निकाह में होने पर योजना का लाभ मिलता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can I get money after doing Nikah at home?', answer: 'No. The rule of this scheme is that only couples participating in "Mass Nikah" organized by the govt are given its benefit.' },
+      { question: 'Can we take benefit for marriage of more than one daughter?', answer: 'Yes, if the family is eligible, the benefit of the scheme is given if all their daughters get married in mass Nikah.' }
+    ]
+  },
+  'atal-kisan-jyoti-yojana': {
+    ...reviewed,
+    title: 'अटल किसान ज्योति योजना',
+    english: 'Atal Kisan Jyoti Yojana (Subsidized Farm Power)',
+    summary: 'मध्य प्रदेश के किसानों को कृषि कार्य (सिंचाई) के लिए बहुत ही सस्ती और फ्लैट दर (Flat Rate) पर बिजली (Electricity) उपलब्ध कराने की योजना।',
+    benefit: '10 हॉर्सपावर (HP) तक के कृषि पंपों (मोटर) के लिए मात्र 750 रुपये प्रति HP सालाना की दर से बिजली बिल।',
+    department: 'ऊर्जा विभाग',
+    sourceUrl: 'https://energy.mp.gov.in/',
+    applicationUrl: 'https://energy.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'खेत की खतौनी/खसरा (Land Proof)',
+      'कृषि बिजली कनेक्शन का नंबर (IVRS / Consumer Number)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Farm Khatauni/Khasra (Land Proof)',
+      'Agriculture electricity connection number (IVRS / Consumer Number)'
+    ],
+    steps: [
+      'इस योजना के लिए अलग से कोई विशेष फॉर्म भरने की ज़रूरत नहीं होती है।',
+      'जब किसान कृषि सिंचाई (Agriculture) के लिए बिजली विभाग (जैसे MPPKVVCL) से 10 HP तक का कनेक्शन लेता है, तो यह योजना स्वतः लागू हो जाती है।',
+      'सब्सिडी का पैसा सरकार सीधे बिजली कंपनियों को देती है, और किसान को कटकर (छूट के साथ) बिल आता है।'
+    ],
+    stepsEn: [
+      'There is no need to fill any special separate form for this scheme.',
+      'When a farmer takes a connection up to 10 HP from the Electricity Dept (like MPPKVVCL) for agricultural irrigation, this scheme is automatically applied.',
+      'The govt gives the subsidy money directly to the electricity companies, and the farmer gets the bill after deduction (with discount).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: '10 HP तक कृषि पंप कनेक्शन वाले किसान' }
+    ],
+    sourceNotes: 'ऊर्जा विभाग MP की फ्लैट रेट योजना, जिसका लाभ सीधे बिल में कटौती के रूप में मिलता है।',
+    detailedDescription: [
+      'मध्य प्रदेश में किसानों को सिंचाई के लिए पानी की मोटरों (Pump) का उपयोग करना पड़ता है, जिससे बिजली का बिल बहुत ज़्यादा आता है। किसानों को इस बोझ से बचाने के लिए "अटल किसान ज्योति योजना" (पहले इंदिरा किसान ज्योति) चलाई जा रही है।',
+      'इसमें किसानों को यूनिट के हिसाब से बिल नहीं देना होता, बल्कि मोटर के HP (हॉर्स पावर) के हिसाब से एक फिक्स (Flat Rate) बिल देना होता है। बिजली की असली कीमत का 90% से ज़्यादा हिस्सा राज्य सरकार खुद भरती है।'
+    ],
+    detailedDescriptionEn: [
+      'In Madhya Pradesh, farmers have to use water motors (Pumps) for irrigation, due to which the electricity bill is very high. To save the farmers from this burden, "Atal Kisan Jyoti Yojana" (formerly Indira Kisan Jyoti) is being run.',
+      'In this, farmers do not have to pay the bill according to the unit, but have to pay a fixed (Flat Rate) bill according to the HP (Horse Power) of the motor. More than 90% of the actual cost of electricity is borne by the State Govt itself.'
+    ],
+    benefitsList: [
+      {
+        heading: 'कितना बिल देना पड़ता है?', points: [
+          '10 हॉर्सपावर (HP) तक के पंप: किसानों को मात्र ₹750 प्रति HP सालाना (यानी 5 HP मोटर के लिए साल का ₹3750) देना होता है। यह बिल दो छमाही किस्तों में (अक्टूबर और मार्च) भरा जा सकता है।',
+          'मीटर वाले कनेक्शन: अगर मीटर लगा है, तो भी बहुत भारी सब्सिडी मिलती है (लगभग 15 से 20 पैसे प्रति यूनिट)।',
+          'SC/ST किसानों को और छूट: 1 हेक्टेयर तक की ज़मीन और 5 HP मोटर वाले अनुसूचित जाति/जनजाति के किसानों को बिजली पूरी तरह मुफ्त (फ्री) दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much bill has to be paid?', points: [
+          'Pumps up to 10 Horsepower (HP): Farmers have to pay only ₹750 per HP annually (i.e. ₹3750 per year for 5 HP motor). This bill can be paid in two half-yearly installments (October and March).',
+          'Metered connections: Even if a meter is installed, heavy subsidy is given (around 15 to 20 paise per unit).',
+          'More discount to SC/ST farmers: Electricity is provided completely free of cost to SC/ST farmers having land up to 1 hectare and 5 HP motor.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'किसान मध्य प्रदेश का निवासी होना चाहिए।',
+      'किसान के नाम पर खेती की ज़मीन होनी चाहिए और बिजली का कनेक्शन "कृषि (Agriculture)" श्रेणी का होना चाहिए।',
+      'पंप (मोटर) की क्षमता 10 हॉर्सपावर (HP) या उससे कम होनी चाहिए। (10 HP से ज़्यादा वालों को भी कुछ सब्सिडी मिलती है, लेकिन दरें अलग होती हैं)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The farmer must be a resident of Madhya Pradesh.',
+      'The farmer must have agricultural land in his name and the electricity connection should be of "Agriculture" category.',
+      'The capacity of the pump (motor) should be 10 Horsepower (HP) or less. (Those with more than 10 HP also get some subsidy, but the rates are different).'
+    ],
+    exclusions: [
+      'घरेलू या कमर्शियल (दुकान/कारखाना) बिजली कनेक्शन पर यह योजना लागू नहीं होती।',
+      'अगर कोई किसान अवैध रूप से (चोरी से) बिजली जलाता है, तो पकड़े जाने पर उसे योजना से बाहर कर दिया जाता है और पेनल्टी लगती है।'
+    ],
+    exclusionsEn: [
+      'This scheme does not apply to domestic or commercial (shop/factory) electricity connections.',
+      'If a farmer uses electricity illegally (by theft), if caught, he is excluded from the scheme and penalty is imposed.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'स्वतः (Automatic)', steps: [
+          'इस योजना का लाभ उठाने के लिए अलग से कहीं जाने की ज़रूरत नहीं है।',
+          'जब आप कृषि कनेक्शन लेते हैं, तो बिजली कंपनी आपके बिल में खुद "सब्सिडी (Subsidy)" जोड़कर बिल घटा देती है।',
+          'यदि आपको सब्सिडी नहीं मिल रही है, तो आप अपने पुराने बिल की कॉपी लेकर नज़दीकी बिजली वितरण केंद्र (JE Office) में जाकर शिकायत दर्ज़ करा सकते हैं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Automatic', steps: [
+          'There is no need to go anywhere separately to avail this scheme.',
+          'When you take an agricultural connection, the electricity company automatically deducts the bill by adding "Subsidy" in your bill.',
+          'If you are not getting subsidy, you can take a copy of your old bill and register a complaint by going to the nearest electricity distribution center (JE Office).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या घर के बिजली बिल में भी छूट मिलेगी?', answer: 'नहीं, यह केवल खेतों में सिंचाई के लिए चलने वाली मोटर (पंप) के कनेक्शन के लिए है। घर के लिए "इंदिरा गृह ज्योति योजना" चलती है।' },
+      { question: 'मेरा बिल बहुत ज़्यादा आया है, मैं क्या करूँ?', answer: 'अगर आपका बिल फ्लैट रेट (750/HP) से ज़्यादा आ रहा है, तो हो सकता है कि सिस्टम में आपका कनेक्शन 10 HP से ज़्यादा का फीड हो गया हो, या कृषि की जगह कमर्शियल फीड हो गया हो। आप बिजली ऑफिस जाकर उसे सुधरवाएं।' }
+    ],
+    faqsEn: [
+      { question: 'Will I get discount on home electricity bill too?', answer: 'No, this is only for connection of motor (pump) used for irrigation in fields. "Indira Griha Jyoti Yojana" runs for homes.' },
+      { question: 'My bill has come very high, what should I do?', answer: 'If your bill is coming more than flat rate (750/HP), it may be that your connection is fed as more than 10 HP in the system, or commercial instead of agriculture. Go to electricity office and get it corrected.' }
+    ]
+  },
+  'shramik-sewa-prasuti-sahayata-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री श्रमिक सेवा प्रसूति सहायता योजना',
+    english: 'Mukhyamantri Shramik Sewa Prasuti Sahayata Yojana',
+    summary: 'संबल योजना से जुड़ी असंगठित महिला श्रमिकों को गर्भावस्था (Pregnancy) के दौरान पोषण और डिलीवरी के समय ₹16,000 की आर्थिक सहायता देने की योजना।',
+    benefit: 'गर्भवती महिला श्रमिकों को ₹16,000 की नकद सहायता (प्रसव पूर्व ₹4,000 और प्रसव के बाद ₹12,000)',
+    department: 'श्रम विभाग / लोक स्वास्थ्य एवं परिवार कल्याण विभाग',
+    sourceUrl: 'https://sambal.mp.gov.in/',
+    applicationUrl: 'https://sambal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'माता और पिता का आधार कार्ड',
+      'संबल कार्ड (Sambal Card) या असंगठित श्रमिक पंजीयन',
+      'सरकारी अस्पताल का मातृ एवं बाल सुरक्षा (MCP) कार्ड',
+      'बैंक खाता (Bank Passbook - DBT लिंक)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of Mother and Father',
+      'Sambal Card or Unorganized Worker Registration',
+      'Govt hospital Mother and Child Protection (MCP) card',
+      'Bank Account (Bank Passbook - DBT linked)'
+    ],
+    steps: [
+      'गर्भावस्था के पहले 3-4 महीनों के अंदर अपने नज़दीकी आंगनवाड़ी या प्राथमिक स्वास्थ्य केंद्र (PHC) में पंजीयन कराएं और MCP कार्ड बनवाएं।',
+      'सरकारी अस्पताल की ANM या आशा कार्यकर्ता के पास प्रसूति सहायता का फॉर्म भरें। अपना संबल कार्ड और बैंक खाता जमा करें।',
+      'गर्भावस्था के दौरान 4 बार जाँच कराने पर ₹4,000 की पहली किस्त खाते में आती है।',
+      'सरकारी अस्पताल में डिलीवरी होने और शिशु का टीकाकरण होने के बाद ₹12,000 की दूसरी किस्त खाते में आती है।'
+    ],
+    stepsEn: [
+      'Register at your nearest Anganwadi or PHC within the first 3-4 months of pregnancy and get an MCP card.',
+      'Fill the maternity assistance form with ANM or ASHA worker of govt hospital. Submit your Sambal card and bank account.',
+      'On getting checked 4 times during pregnancy, 1st installment of ₹4,000 comes into the account.',
+      'After delivery in govt hospital and vaccination of the baby, 2nd installment of ₹12,000 comes into the account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'संबल कार्ड धारक गर्भवती महिलाएं' }
+    ],
+    sourceNotes: 'मुख्यमंत्री जन कल्याण (संबल) योजना के तहत पंजीकृत महिला श्रमिकों के लिए प्रसूति सहायता।',
+    detailedDescription: [
+      'जो महिलाएँ मजदूरी करती हैं (असंगठित क्षेत्र में), उनके लिए गर्भावस्था के दौरान काम करना बहुत मुश्किल होता है और उन्हें आराम की ज़रूरत होती है।',
+      'इस नुकसान (मज़दूरी न कर पाने) की भरपाई और माँ-बच्चे के अच्छे पोषण के लिए मध्य प्रदेश सरकार "श्रमिक सेवा प्रसूति सहायता योजना" चलाती है। इसके तहत ₹16,000 सीधे महिला के बैंक खाते में भेजे जाते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'For women who work as labourers (in the unorganized sector), working during pregnancy is very difficult and they need rest.',
+      'To compensate for this loss (inability to work) and for good nutrition of mother-child, the MP Govt runs "Shramik Sewa Prasuti Sahayata Yojana". Under this, ₹16,000 are sent directly to the woman\'s bank account.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के तहत मिलने वाली ₹16,000 की राशि', points: [
+          'पहली किस्त (₹4,000): गर्भावस्था के अंतिम तिमाही (Last Trimester) में मिलती है। इसके लिए कम से कम 4 प्रसव पूर्व जाँचें (ANC) होना ज़रूरी है।',
+          'दूसरी किस्त (₹12,000): सरकारी अस्पताल में प्रसव (Delivery) होने और नवजात शिशु का आधार/संस्थागत पंजीयन (जन्म प्रमाण) व पहला टीकाकरण (0 Dosis) होने के बाद मिलती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Amount of ₹16,000 received under the scheme', points: [
+          'First installment (₹4,000): Received in the last trimester of pregnancy. For this, at least 4 Antenatal Checks (ANC) are mandatory.',
+          'Second installment (₹12,000): Received after delivery in govt hospital and Aadhaar/institutional registration (birth proof) of newborn and first vaccination (0 Dosis).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'गर्भवती महिला या उसके पति के पास मध्य प्रदेश का वैध "संबल कार्ड" (असंगठित श्रमिक कार्ड) होना चाहिए।',
+      'महिला की आयु 18 वर्ष से अधिक होनी चाहिए।',
+      'इस योजना का लाभ अधिकतम दो जीवित बच्चों के जन्म तक ही मिलता है (तीसरे बच्चे पर लाभ नहीं मिलेगा)।',
+      'प्रसव अनिवार्य रूप से किसी सरकारी अस्पताल (Government Hospital) में ही होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The pregnant woman or her husband must have a valid "Sambal Card" (Unorganized Worker Card) of Madhya Pradesh.',
+      'The age of the woman should be more than 18 years.',
+      'The benefit of this scheme is available only up to the birth of a maximum of two living children (no benefit on 3rd child).',
+      'The delivery must mandatorily take place in a Government Hospital only.'
+    ],
+    exclusions: [
+      'यदि प्रसव घर पर या प्राइवेट अस्पताल (Private Hospital) में होता है, तो इस योजना का लाभ नहीं मिलेगा।',
+      'शासकीय नौकरी करने वाली महिलाएँ (यहाँ तक कि संविदा कर्मी भी) इसके लिए अपात्र हैं।'
+    ],
+    exclusionsEn: [
+      'If delivery takes place at home or in a Private Hospital, the benefit of this scheme will not be given.',
+      'Women doing Govt jobs (even contract workers) are ineligible for this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ANM / ASHA Worker)', steps: [
+          'यह प्रक्रिया स्वास्थ्य विभाग और आंगनवाड़ी के माध्यम से होती है।',
+          'गर्भवती महिला को अपनी आशा (ASHA) कार्यकर्ता या एएनएम (ANM) को अपने दस्तावेज़ देने होते हैं।',
+          'ANM द्वारा "अनमोल पोर्टल" (ANMOL Portal) पर डेटा फीड किया जाता है, जिसके बाद स्वास्थ्य अधिकारी (BMO) इसे अप्रूव करते हैं और पैसा अकाउंट में आ जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (ANM / ASHA Worker)', steps: [
+          'This process is done through the Health Dept and Anganwadi.',
+          'The pregnant woman has to give her documents to her ASHA worker or ANM.',
+          'The data is fed on the "ANMOL Portal" by the ANM, after which the Health Officer (BMO) approves it and the money comes into the account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे जननी सुरक्षा योजना (JSY) के पैसे भी मिलेंगे?', answer: 'हाँ, संबल प्रसूति सहायता (16000/-) के अलावा आपको जननी सुरक्षा योजना के ₹1400 (ग्रामीण) या ₹1000 (शहरी) भी अलग से मिलते हैं।' },
+      { question: 'मेरे पति का संबल कार्ड है, मेरा नहीं, तो क्या मुझे लाभ मिलेगा?', answer: 'हाँ, संबल योजना में नियम है कि अगर पति का भी असंगठित श्रमिक कार्ड है, तो पत्नी प्रसूति सहायता की हक़दार होती है।' }
+    ],
+    faqsEn: [
+      { question: 'Will I also get Janani Suraksha Yojana (JSY) money?', answer: 'Yes, apart from Sambal Prasuti Sahayata (16000/-), you also get ₹1400 (rural) or ₹1000 (urban) of Janani Suraksha Yojana separately.' },
+      { question: 'My husband has a Sambal card, I don\'t, will I get the benefit?', answer: 'Yes, the rule in Sambal Yojana is that if the husband also has an unorganized worker card, the wife is entitled to maternity assistance.' }
+    ]
+  },
+  'mukhyamantri-jeevan-janani-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री जीवन जननी योजना',
+    english: 'Mukhyamantri Jeevan Janani Yojana',
+    summary: 'गर्भवती महिलाओं को पोषण और स्वास्थ्य सुरक्षा के लिए ₹4,000 की आर्थिक सहायता देने की घोषणा।',
+    benefit: 'गर्भवती महिलाओं को पोषण आहार हेतु ₹4,000 की नकद सहायता।',
+    department: 'लोक स्वास्थ्य एवं परिवार कल्याण विभाग',
+    sourceUrl: 'https://health.mp.gov.in/',
+    applicationUrl: 'https://health.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'सरकारी अस्पताल की जाँच पर्ची (MCP Card)',
+      'आय का प्रमाण (इनकम टैक्स रिटर्न न भरने का प्रमाण/घोषणा)',
+      'बैंक खाता (Bank Passbook)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Govt hospital checkup slip (MCP Card)',
+      'Income proof (Proof/Declaration of not filing Income Tax Return)',
+      'Bank Account (Bank Passbook)'
+    ],
+    steps: [
+      'गर्भावस्था के दौरान सरकारी स्वास्थ्य केंद्र, आंगनवाड़ी या आशा कार्यकर्ता के पास पंजीयन कराएं।',
+      'गर्भावस्था के दौरान सभी आवश्यक चेकअप (ANC) कराएं।',
+      'पात्र महिलाओं के बैंक खाते में पैसा ट्रांसफर किया जाएगा।'
+    ],
+    stepsEn: [
+      'Register at Govt health center, Anganwadi or with ASHA worker during pregnancy.',
+      'Get all necessary checkups (ANC) done during pregnancy.',
+      'Money will be transferred to the bank account of eligible women.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'गर्भवती महिलाएं (Income tax न भरने वाली)' }
+    ],
+    sourceNotes: 'पूर्व सीएम शिवराज सिंह चौहान द्वारा मातृ-शिशु पोषण सुधार हेतु घोषित योजना।',
+    detailedDescription: [
+      'मुख्यमंत्री जीवन जननी योजना का उद्देश्य मध्य प्रदेश की महिलाओं को गर्भावस्था के दौरान बेहतर पोषण और दवाइयां उपलब्ध कराना है।',
+      'इस योजना में गर्भवती महिलाओं के खाते में ₹4,000 भेजे जाते हैं ताकि वे गर्भावस्था के दौरान पौष्टिक आहार (फल, दूध, दवाइयां) खरीद सकें और कुपोषण या एनीमिया का शिकार न हों।'
+    ],
+    detailedDescriptionEn: [
+      'The objective of Mukhyamantri Jeevan Janani Yojana is to provide better nutrition and medicines to the women of Madhya Pradesh during pregnancy.',
+      'In this scheme, ₹4,000 are sent to the accounts of pregnant women so that they can buy nutritious food (fruits, milk, medicines) during pregnancy and do not become victims of malnutrition or anemia.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के लाभ', points: [
+          'पोषण सहायता: महिलाओं को ₹4,000 की नकद राशि सीधे खाते (DBT) में दी जाएगी।',
+          'मुफ्त दवाइयां: इसके अलावा सरकारी अस्पतालों में मुफ्त दवाइयां भी उपलब्ध कराई जाती हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefits of the Scheme', points: [
+          'Nutrition Assistance: Women will be given a cash amount of ₹4,000 directly into the account (DBT).',
+          'Free Medicines: Apart from this, free medicines are also made available in Govt hospitals.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'महिला मध्य प्रदेश की मूल निवासी होनी चाहिए और वह गर्भवती (Pregnant) होनी चाहिए।',
+      'महिला या उसके पति आयकर दाता (Income Tax Payer) नहीं होने चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The woman should be a native of Madhya Pradesh and she should be Pregnant.',
+      'The woman or her husband should not be Income Tax Payers.'
+    ],
+    exclusions: [
+      'इनकम टैक्स जमा करने वाले (अमीर) परिवारों की महिलाओं को इस योजना का लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'Women from families paying Income Tax (rich) will not get the benefit of this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Health Center)', steps: [
+          'योजना का लाभ लेने के लिए अपने नज़दीकी स्वास्थ्य केंद्र (PHC/CHC) या आशा/आंगनवाड़ी कार्यकर्ता से संपर्क करना होगा।',
+          'गर्भावस्था का समय पर रजिस्ट्रेशन ज़रूरी है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Health Center)', steps: [
+          'To take benefit of the scheme, you have to contact your nearest health center (PHC/CHC) or ASHA/Anganwadi worker.',
+          'Timely registration of pregnancy is necessary.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह संबल प्रसूति सहायता से अलग है?', answer: 'हाँ। संबल योजना का लाभ केवल मज़दूर (संबल कार्ड धारकों) को मिलता है, जबकि यह योजना उन सभी आम महिलाओं के लिए घोषित की गई थी जो इनकम टैक्स नहीं भरती हैं।' },
+      { question: 'क्या यह योजना अभी चालू है?', answer: 'यह योजना पूर्व मुख्यमंत्री द्वारा घोषित की गई थी। इसके लागू होने और फॉर्म भरे जाने के वर्तमान स्टेटस की जानकारी के लिए स्थानीय आशा कार्यकर्ता से संपर्क करें।' }
+    ],
+    faqsEn: [
+      { question: 'Is this different from Sambal Prasuti Sahayata?', answer: 'Yes. The benefit of Sambal Yojana is available only to laborers (Sambal card holders), whereas this scheme was announced for all common women who do not pay income tax.' },
+      { question: 'Is this scheme currently active?', answer: 'This scheme was announced by the former CM. For info on its implementation and current status of form filling, contact the local ASHA worker.' }
+    ]
+  },
+  'kanya-abhibhavak-pension-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कन्या अभिभावक पेंशन योजना',
+    english: 'Mukhyamantri Kanya Abhibhavak Pension Yojana',
+    summary: 'जिन माता-पिता की केवल बेटियां हैं (कोई जीवित पुत्र नहीं है), उन्हें बुढ़ापे में सम्मान और आर्थिक सुरक्षा देने के लिए ₹600 प्रति माह पेंशन।',
+    benefit: '60 वर्ष की उम्र के बाद ऐसे माता-पिता को ₹600 प्रति माह की नियमित पेंशन।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://socialjustice.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'माता-पिता का आधार कार्ड',
+      'आयु प्रमाण पत्र (60 वर्ष पूर्ण होने का)',
+      'जीवित पुत्र न होने का स्व-घोषणा पत्र (Affidavit)',
+      'आय प्रमाण पत्र',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card of parents',
+      'Age proof (completing 60 years)',
+      'Self-declaration of not having a living son (Affidavit)',
+      'Income Certificate',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'योजना का फॉर्म अपने ग्राम पंचायत, जनपद पंचायत, या नगर निगम/नगर पालिका कार्यालय से प्राप्त करें।',
+      'फॉर्म में सभी जानकारी भरकर हलफनामा (Affidavit) लगाएं कि आपका कोई जीवित पुत्र नहीं है।',
+      'स्थानीय निकाय (Local Body) कार्यालय में फॉर्म जमा करें।',
+      'स्वीकृति के बाद हर महीने आपके बैंक खाते में पेंशन की राशि आने लगेगी।'
+    ],
+    stepsEn: [
+      'Get the scheme form from your Gram Panchayat, Janpad Panchayat, or Municipal Corporation/Municipality office.',
+      'Fill all the information in the form and attach an affidavit stating that you do not have a living son.',
+      'Submit the form in the Local Body office.',
+      'After approval, the pension amount will start coming into your bank account every month.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 60, label: 'आयु 60 वर्ष या अधिक (केवल पुत्रियों वाले माता-पिता)' }
+    ],
+    sourceNotes: 'सामाजिक न्याय विभाग MP की योजना, जिसका उद्देश्य बालिकाओं के जन्म को प्रोत्साहित करना और वृद्ध अभिभावकों को सहारा देना है।',
+    detailedDescription: [
+      'समाज में आज भी कई लोग बुढ़ापे के सहारे के लिए बेटे की चाह रखते हैं। इस सोच को बदलने और जिन माता-पिता की केवल बेटियां हैं, उन्हें बुढ़ापे में सम्मान और सहारा देने के लिए सरकार ने "मुख्यमंत्री कन्या अभिभावक पेंशन योजना" शुरू की है।',
+      'इस योजना के तहत, जब माता-पिता की उम्र 60 साल हो जाती है, तो उन्हें सरकार की तरफ से हर महीने आर्थिक सहायता (पेंशन) दी जाती है ताकि वे किसी पर निर्भर न रहें।'
+    ],
+    detailedDescriptionEn: [
+      'Even today in society, many people desire a son for support in old age. To change this mindset and to give respect and support in old age to parents who only have daughters, the Govt has started "Mukhyamantri Kanya Abhibhavak Pension Yojana".',
+      'Under this scheme, when the age of the parents reaches 60 years, they are given monthly financial assistance (pension) from the govt so that they do not have to depend on anyone.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पेंशन की राशि', points: [
+          '₹600 प्रति माह: योजना के तहत लाभार्थी (माता या पिता में से किसी एक को, या संयुक्त खाते में) ₹600 प्रति माह की पेंशन दी जाती है।',
+          'DBT भुगतान: यह पैसा सीधे बैंक खाते में (Direct Benefit Transfer के ज़रिए) भेजा जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Pension Amount', points: [
+          '₹600 per month: Under the scheme, a pension of ₹600 per month is given to the beneficiary (either mother or father, or in a joint account).',
+          'DBT Payment: This money is sent directly to the bank account (through Direct Benefit Transfer).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'माता-पिता मध्य प्रदेश के मूल निवासी होने चाहिए।',
+      'दंपति (माता-पिता) का कोई भी जीवित पुत्र (बेटा) नहीं होना चाहिए (चाहे वो सगा हो या गोद लिया हुआ)। उनकी केवल बेटियां होनी चाहिए।',
+      'दंपति में से किसी एक (पति या पत्नी) की उम्र 60 वर्ष या उससे अधिक होनी चाहिए।',
+      'आवेदक आयकर दाता (Income Tax Payer) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The parents must be natives of Madhya Pradesh.',
+      'The couple (parents) must not have any living son (whether biological or adopted). They must only have daughters.',
+      'One of the couple (husband or wife) must be 60 years of age or more.',
+      'The applicant must not be an Income Tax Payer.'
+    ],
+    exclusions: [
+      'यदि किसी व्यक्ति का बेटा जीवित है, तो वे इसके लिए अपात्र हैं।',
+      'यदि आवेदक को पहले से कोई अन्य सामाजिक सुरक्षा पेंशन (जैसे वृद्धावस्था पेंशन) मिल रही है, तो वे इस योजना का लाभ नहीं ले सकते।'
+    ],
+    exclusionsEn: [
+      'If a person\'s son is alive, they are ineligible for this.',
+      'If the applicant is already receiving any other social security pension (like Old Age Pension), they cannot take advantage of this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Local Office)', steps: [
+          'ग्रामीण क्षेत्र में ग्राम पंचायत सचिव और शहरी क्षेत्र में वार्ड प्रभारी / नगर पालिका कार्यालय से संपर्क करें।',
+          'शपथ पत्र (कि पुत्र नहीं है) के साथ आवेदन फॉर्म भरकर जमा करें।',
+          'अधिकारियों द्वारा जाँच (सत्यापन) की जाएगी, जिसके बाद सामाजिक सुरक्षा पोर्टल (समग्र) पर नाम दर्ज हो जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Local Office)', steps: [
+          'Contact the Gram Panchayat Secretary in rural areas and Ward Incharge / Municipality office in urban areas.',
+          'Fill and submit the application form along with an affidavit (stating no son).',
+          'Checking (verification) will be done by officials, after which the name will be registered on the Social Security Portal (Samagra).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह पेंशन माता और पिता दोनों को अलग-अलग मिलेगी?', answer: 'नहीं। यह पेंशन परिवार (दंपति) के आधार पर दी जाती है। आमतौर पर यह घर के मुखिया या पति-पत्नी के संयुक्त (Joint) खाते में आती है।' },
+      { question: 'अगर मेरी बेटी की शादी हो गई है, तो क्या मुझे पेंशन मिलेगी?', answer: 'हाँ, बेटी की शादी हो चुकी हो या न हुई हो, इससे कोई फर्क नहीं पड़ता। अगर आपका कोई बेटा नहीं है और आपकी उम्र 60 साल हो गई है, तो आपको पेंशन मिलेगी।' }
+    ],
+    faqsEn: [
+      { question: 'Will this pension be given to both mother and father separately?', answer: 'No. This pension is given on the basis of family (couple). Usually it comes in the joint account of the head of the family or husband-wife.' },
+      { question: 'If my daughter is married, will I get pension?', answer: 'Yes, whether the daughter is married or not, it does not matter. If you do not have a son and you are 60 years old, you will get pension.' }
+    ]
+  },
+  'acharyashri-vidyasagar-gau-samvardhan-yojana': {
+    ...reviewed,
+    title: 'आचार्य विद्यासागर गौ-संवर्धन योजना',
+    english: 'Acharya Vidyasagar Gau Samvardhan Yojana (Dairy Subsidy)',
+    summary: 'किसानों और पशुपालकों को डेयरी फार्म (कम से कम 5 दुधारू पशु) खोलने के लिए बैंक लोन और सरकार द्वारा 75% तक की भारी सब्सिडी देने की योजना।',
+    benefit: '5 या अधिक गाय/भैंस की डेयरी खोलने पर सामान्य वर्ग को 50% (अधिकतम 1.50 लाख) और SC/ST को 75% (अधिकतम 2.25 लाख) की सब्सिडी।',
+    department: 'पशुपालन एवं डेयरी विभाग',
+    sourceUrl: 'https://animalhusbandry.mp.gov.in/',
+    applicationUrl: 'https://animalhusbandry.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      '1 एकड़ कृषि भूमि का प्रमाण (खसरा/खतौनी) हरा चारा उगाने के लिए',
+      'जाति प्रमाण पत्र (SC/ST के लिए)',
+      'बैंक पासबुक और बैंक से No Dues (ऋण न होने का प्रमाण)',
+      'प्रोजेक्ट रिपोर्ट (डेयरी का खाका)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Proof of 1 acre agricultural land (Khasra/Khatauni) to grow green fodder',
+      'Caste Certificate (for SC/ST)',
+      'Bank Passbook and No Dues from bank',
+      'Project Report (Dairy blueprint)'
+    ],
+    steps: [
+      'अपने ज़िले के पशु चिकित्सा अधिकारी (Veterinary Officer) या पशुपालन विभाग से संपर्क करें।',
+      'डेयरी का एक प्रोजेक्ट (Project Report) बनाकर फॉर्म के साथ विभाग में जमा करें।',
+      'ज़िला स्तर पर कलेक्टर की अध्यक्षता वाली समिति आपके प्रोजेक्ट को मंज़ूरी देगी।',
+      'मंज़ूरी के बाद बैंक से लोन पास होगा और पशु खरीदने के बाद सरकार सब्सिडी की रकम आपके बैंक खाते में भेज देगी।'
+    ],
+    stepsEn: [
+      'Contact the Veterinary Officer or Animal Husbandry Dept of your district.',
+      'Make a project (Project Report) of dairy and submit it with the form in the dept.',
+      'A committee headed by the Collector at the district level will approve your project.',
+      'After approval, loan will be passed from the bank and after buying animals, Govt will send the subsidy amount to your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'किसान/पशुपालक जिनके पास 1 एकड़ ज़मीन हो' }
+    ],
+    sourceNotes: 'मध्य प्रदेश में दूध उत्पादन बढ़ाने और किसानों को स्वरोज़गार देने के लिए पशुपालन विभाग की प्रमुख योजना।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार चाहती है कि किसान खेती के साथ-साथ पशुपालन (Dairy Farming) करके अपनी आमदनी बढ़ाएं। इसके लिए "आचार्य विद्यासागर गौ-संवर्धन योजना" शुरू की गई है।',
+      'इस योजना के तहत, अगर आप 5 या उससे ज़्यादा (अधिकतम 10) दुधारू पशु (गाय या भैंस) खरीदकर छोटी डेयरी खोलना चाहते हैं, तो सरकार आपको बैंक से लोन दिलाती है और उस लोन को चुकाने के लिए एक बड़ी सब्सिडी (Grant) भी देती है।'
+    ],
+    detailedDescriptionEn: [
+      'MP Govt wants farmers to increase their income by doing Animal Husbandry (Dairy Farming) along with farming. For this, "Acharya Vidyasagar Gau Samvardhan Yojana" has been started.',
+      'Under this scheme, if you want to open a small dairy by buying 5 or more (max 10) milch animals (cows or buffaloes), the govt helps you get a bank loan and also gives a huge subsidy (Grant) to repay that loan.'
+    ],
+    benefitsList: [
+      {
+        heading: 'मिलने वाली सब्सिडी (अनुदान)', points: [
+          'सामान्य वर्ग (General/OBC): प्रोजेक्ट की कुल लागत का 50% या अधिकतम ₹1,50,000 (जो भी कम हो) की सब्सिडी मिलेगी।',
+          'अनुसूचित जाति/जनजाति (SC/ST): प्रोजेक्ट की कुल लागत का 75% या अधिकतम ₹2,25,000 की सब्सिडी मिलेगी।',
+          'योजना की लागत में पशुओं की कीमत के साथ-साथ एक महीने का चारा और बीमा (Insurance) का खर्च भी शामिल होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy Received (Grant)', points: [
+          'General Category (General/OBC): Subsidy of 50% of the total cost of the project or max ₹1,50,000 (whichever is less) will be given.',
+          'Scheduled Caste/Tribe (SC/ST): Subsidy of 75% of the total cost of the project or max ₹2,25,000 will be given.',
+          'The cost of the scheme includes the price of animals as well as one month\'s fodder and insurance cost.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी होना चाहिए।',
+      'पशुपालक के पास कम से कम 1 एकड़ कृषि भूमि होनी चाहिए (ताकि वह पशुओं के लिए हरा चारा उगा सके)।',
+      'योजना में न्यूनतम 5 पशु खरीदने होंगे (पशु अच्छे नस्ल के दुधारू होने चाहिए)।',
+      'आवेदक बैंक का डिफ़ॉल्टर नहीं होना चाहिए (पहले का कोई लोन बकाया न हो)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of Madhya Pradesh.',
+      'The cattle rearer must have at least 1 acre of agricultural land (so that he can grow green fodder for animals).',
+      'A minimum of 5 animals will have to be bought in the scheme (animals should be of good milch breed).',
+      'The applicant should not be a bank defaulter (no previous loan outstanding).'
+    ],
+    exclusions: [
+      'जिन लोगों के पास ज़मीन नहीं है (भूमिहीन), वे इस योजना का लाभ नहीं ले सकते।',
+      'अगर आप सिर्फ 1 या 2 गाय खरीदना चाहते हैं, तो यह योजना आपके लिए नहीं है (इसके लिए न्यूनतम 5 पशु ज़रूरी हैं)।'
+    ],
+    exclusionsEn: [
+      'Those who do not have land (landless) cannot take advantage of this scheme.',
+      'If you want to buy only 1 or 2 cows, then this scheme is not for you (minimum 5 animals are required for this).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Veterinary Department)', steps: [
+          'अपने ब्लॉक (जनपद) के पशु चिकित्सा अधिकारी से मिलकर फॉर्म भरें।',
+          'बैंक से "No Dues" और अपनी ज़मीन का कागज़ लगाएँ।',
+          'प्रोजेक्ट पास होने पर बैंक लोन देगा। लोन मिलने के बाद आप पशु खरीदेंगे और सरकार आपके लोन अकाउंट में सब्सिडी भेज देगी (Margin Money)।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Veterinary Department)', steps: [
+          'Meet the Veterinary Officer of your block (Janpad) and fill the form.',
+          'Attach "No Dues" from the bank and your land paper.',
+          'Bank will give loan on passing of project. After getting the loan, you will buy animals and govt will send subsidy to your loan account (Margin Money).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे अपनी तरफ से भी कुछ पैसा लगाना होगा?', answer: 'हाँ। सामान्य वर्ग को प्रोजेक्ट लागत का 25% और SC/ST वर्ग को 5% पैसा अपनी तरफ से (Margin Money) लगाना होता है। बाकी का बैंक लोन और सब्सिडी होती है।' },
+      { question: 'क्या मैं किसी भी राज्य से गाय/भैंस खरीद सकता हूँ?', answer: 'हाँ, आप अच्छी नस्ल की गाय या भैंस अन्य राज्यों (जैसे पंजाब, हरियाणा) या राज्य के भीतर से भी खरीद सकते हैं, लेकिन खरीदी समिति (Purchase Committee) के सामने करनी होगी।' }
+    ],
+    faqsEn: [
+      { question: 'Will I also have to invest some money from my side?', answer: 'Yes. General category has to invest 25% of the project cost and SC/ST category has to invest 5% money from their side (Margin Money). Rest is bank loan and subsidy.' },
+      { question: 'Can I buy cow/buffalo from any state?', answer: 'Yes, you can buy good breed cow or buffalo from other states (like Punjab, Haryana) or even within the state, but purchase has to be done in front of the Purchase Committee.' }
+    ]
+  },
+  'pashudhan-bima-yojana': {
+    ...reviewed,
+    title: 'पशुधन बीमा योजना',
+    english: 'Pashudhan Bima Yojana (Cattle Insurance)',
+    summary: 'दुधारू पशुओं (गाय, भैंस) की अकाल मृत्यु (बीमारी या दुर्घटना) होने पर पशुपालकों को भारी आर्थिक नुकसान से बचाने के लिए बीमा (Insurance) योजना।',
+    benefit: 'पशु की मृत्यु होने पर बीमा राशि का भुगतान। प्रीमियम पर सरकार द्वारा 50% से 70% तक की भारी सब्सिडी।',
+    department: 'पशुपालन एवं डेयरी विभाग',
+    sourceUrl: 'https://animalhusbandry.mp.gov.in/',
+    applicationUrl: 'https://animalhusbandry.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'बैंक पासबुक (Bank Passbook)',
+      'पशु का स्वास्थ्य प्रमाण पत्र (Health Certificate by Vet)',
+      'जाति प्रमाण पत्र (SC/ST के लिए)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Bank Passbook',
+      'Health Certificate of the animal by Vet',
+      'Caste Certificate (for SC/ST)'
+    ],
+    steps: [
+      'नज़दीकी पशु चिकित्सालय (Veterinary Hospital) में डॉक्टर से संपर्क करें।',
+      'डॉक्टर पशु का स्वास्थ्य परीक्षण करेगा और उसके कान में एक टैग (Ear Tag) लगाएगा।',
+      'पशुपालक को अपने हिस्से का बहुत छोटा सा प्रीमियम (Premium) भरना होगा।',
+      'दुर्घटना/बीमारी से पशु की मृत्यु होने पर 24 घंटे के अंदर डॉक्टर को सूचित करें। क्लेम का पैसा सीधा बैंक खाते में आएगा।'
+    ],
+    stepsEn: [
+      'Contact the doctor at the nearest Veterinary Hospital.',
+      'The doctor will examine the health of the animal and put an Ear Tag on it.',
+      'The cattle rearer will have to pay a very small premium of his share.',
+      'In case of death of the animal due to accident/illness, inform the doctor within 24 hours. The claim money will come straight into the bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'पशुपालक (गाय, भैंस, बकरी आदि पालने वाले)' }
+    ],
+    sourceNotes: 'राष्ट्रीय पशुधन मिशन (NLM) के तहत राज्य में लागू।',
+    detailedDescription: [
+      'किसानों और पशुपालकों के लिए उनके दुधारू पशु (जैसे गाय, भैंस) बहुत कीमती होते हैं। अगर अचानक बीमारी, दुर्घटना, या बिजली गिरने से पशु की मृत्यु हो जाती है, तो किसान को हज़ारों रुपयों का नुकसान होता है।',
+      'इस नुकसान से बचाने के लिए सरकार ने "पशुधन बीमा योजना" शुरू की做到 है। इसमें पशु का बीमा (Insurance) किया जाता है। मज़े की बात यह है कि बीमा कंपनी को जो प्रीमियम (किश्त) देना होता है, उसका 50% से 70% पैसा सरकार खुद भरती है।'
+    ],
+    detailedDescriptionEn: [
+      'For farmers and cattle rearers, their milch animals (like cow, buffalo) are very precious. If the animal dies suddenly due to illness, accident, or lightning, the farmer suffers a loss of thousands of rupees.',
+      'To save from this loss, the Govt has started "Pashudhan Bima Yojana". In this, the animal is insured. The interesting thing is that the govt itself pays 50% to 70% of the premium (installment) to be paid to the insurance company.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के तहत मिलने वाली छूट (Subsidy) और क्लेम', points: [
+          'प्रीमियम पर छूट: सामान्य वर्ग (General) के पशुपालकों को बीमा प्रीमियम पर 50% की सब्सिडी मिलती है। अनुसूचित जाति / अनुसूचित जनजाति (SC/ST/BPL) को 70% की सब्सिडी मिलती है।',
+          'बीमा अवधि: आप 1 साल या एक साथ 3 साल का बीमा भी करा सकते हैं।',
+          'क्लेम (Claim): पशु की मृत्यु होने पर, कान में लगे टैग (Ear Tag) को निकालकर डॉक्टर को देना होता है, जिसके बाद पशु की पूरी कीमत का भुगतान बीमा कंपनी करती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Subsidy and Claim under the Scheme', points: [
+          'Discount on Premium: Gen category cattle rearers get 50% subsidy on insurance premium. SC/ST/BPL get 70% subsidy.',
+          'Insurance Period: You can get insurance for 1 year or 3 years together.',
+          'Claim: On the death of the animal, the Ear Tag has to be taken out and given to the doctor, after which the insurance company pays the full price of the animal.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और पशुपालक होना चाहिए।',
+      'गाय, भैंस, बैल, भेड़, बकरी, सूअर आदि सभी जानवरों का बीमा कराया जा सकता है।',
+      'एक परिवार (हितग्राही) अधिकतम 5 पशुओं (Cattle Unit) का बीमा सब्सिडी दर पर करा सकता है। (1 Cattle unit = 1 गाय/भैंस या 10 भेड़/बकरी)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a resident of Madhya Pradesh and a cattle rearer.',
+      'All animals like cow, buffalo, bull, sheep, goat, pig etc. can be insured.',
+      'A family (beneficiary) can get insurance of max 5 animals (Cattle Unit) at subsidy rate. (1 Cattle unit = 1 cow/buffalo or 10 sheep/goat).'
+    ],
+    exclusions: [
+      'अगर पशु के कान का टैग (Ear Tag) गिर जाता है या गुम हो जाता है और आपने तुरंत डॉक्टर को नहीं बताया, तो बीमा कंपनी क्लेम का पैसा नहीं देगी।',
+      'जानबूझकर पशु को मारने पर कोई क्लेम नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If the ear tag of the animal falls or is lost and you do not inform the doctor immediately, the insurance company will not pay the claim money.',
+      'No claim will be given for deliberately killing the animal.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Veterinary Hospital)', steps: [
+          'अपने नज़दीकी पशु चिकित्सालय में जाएं।',
+          'बीमा एजेंट या पशु डॉक्टर आपके घर आकर पशु की कीमत (Market Value) तय करेगा।',
+          'पशु के कान में पीला टैग लगाया जाएगा, और फोटो खींची जाएगी। आपको अपने हिस्से का प्रीमियम नकद या बैंक से देना होगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Veterinary Hospital)', steps: [
+          'Go to your nearest veterinary hospital.',
+          'The insurance agent or vet will come to your house and fix the market value of the animal.',
+          'A yellow tag will be put in the animal\'s ear, and a photo will be taken. You will have to pay your share of premium by cash or bank.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अगर पशु का टैग गिर जाए तो क्या करें?', answer: 'टैग गिरते ही तुरंत अपने पशु डॉक्टर को सूचित करें और नया टैग लगवाएं। मृत पशु के कान से टैग मिलना क्लेम पास होने के लिए सबसे ज़्यादा ज़रूरी है।' },
+      { question: 'क्या मैं 3 साल का बीमा एक साथ करवा सकता हूँ?', answer: 'हाँ, आप 1 साल के साथ-साथ सीधे 3 साल का बीमा (Long term policy) भी करा सकते हैं, जो बार-बार प्रीमियम भरने से सस्ता पड़ता है।' }
+    ],
+    faqsEn: [
+      { question: 'What to do if the animal\'s tag falls?', answer: 'Inform your vet immediately as soon as the tag falls and get a new tag inserted. Getting the tag from the ear of the dead animal is most important for passing the claim.' },
+      { question: 'Can I get 3 years insurance at once?', answer: 'Yes, along with 1 year, you can also directly get 3 years insurance (Long term policy), which is cheaper than paying premium again and again.' }
+    ]
+  },
+  'dudharu-pashu-praday-yojana': {
+    ...reviewed,
+    title: 'दुधारू पशु प्रदाय योजना (विशेष पिछड़ी जनजाति)',
+    english: 'Dudharu Pashu Praday Yojana (Tribal Dairy Support)',
+    summary: 'मध्य प्रदेश की विशेष पिछड़ी जनजातियों (PVTG - बैगा, भारिया, सहरिया) की महिलाओं को कुपोषण से बचाने और आजीविका के लिए 90% सब्सिडी पर दुधारू पशु (गाय/भैंस) देने की योजना।',
+    benefit: '2 दुधारू पशु (गाय या भैंस) खरीदने के लिए सरकार द्वारा 90% तक की भारी सब्सिडी। हितग्राही को केवल 10% पैसा देना होता है।',
+    department: 'जनजातीय कार्य विभाग एवं पशुपालन विभाग',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://animalhusbandry.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'विशेष पिछड़ी जनजाति (बैगा, भारिया, सहरिया) का प्रमाण पत्र',
+      'बैंक पासबुक',
+      'पासपोर्ट साइज़ फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Certificate of Particularly Vulnerable Tribal Group (Baiga, Bhariya, Sahariya)',
+      'Bank Passbook',
+      'Passport size photo'
+    ],
+    steps: [
+      'यह योजना विशेष रूप से आदिवासी बाहुल्य जिलों में चलती है। अपने ग्राम पंचायत या जनपद के पशुपालन विभाग में संपर्क करें।',
+      'फॉर्म के साथ अपनी विशेष जनजाति का प्रमाण पत्र (जाति प्रमाण पत्र) लगाएँ।',
+      'मंज़ूरी मिलने के बाद, हितग्राही को अपने हिस्से का 10% पैसा (Margin Money) जमा करना होता है।',
+      'कमेटी द्वारा बाज़ार से अच्छी नस्ल की 2 गाय या भैंस खरीदकर महिला हितग्राही को दी जाती हैं।'
+    ],
+    stepsEn: [
+      'This scheme runs specifically in tribal dominated districts. Contact your Gram Panchayat or Animal Husbandry Dept of Janpad.',
+      'Attach your special tribe certificate (caste certificate) with the form.',
+      'After approval, the beneficiary has to deposit 10% money (Margin Money) of her share.',
+      '2 good breed cows or buffaloes are bought from the market by the committee and given to the female beneficiary.'
+    ],
+    rules: [
+    ],
+    sourceNotes: 'PVTG (Particularly Vulnerable Tribal Groups) के आर्थिक विकास और कुपोषण उन्मूलन के लिए विशेष योजना।',
+    detailedDescription: [
+      'मध्य प्रदेश में "बैगा, भारिया और सहरिया" जनजातियों को विशेष रूप से कमज़ोर (PVTG) माना गया है। इन समाजों में गरीबी और कुपोषण (Malnutrition) एक बड़ी समस्या है।',
+      'इन परिवारों को आर्थिक रूप से मज़बूत बनाने और बच्चों को पीने के लिए शुद्ध दूध उपलब्ध कराने के लिए सरकार "दुधारू पशु प्रदाय योजना" चलाती है। इसके तहत परिवार की महिला मुखिया को 2 दुधारू मवेशी 90% की छूट पर दिए जाते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'In Madhya Pradesh, "Baiga, Bhariya and Sahariya" tribes are considered Particularly Vulnerable (PVTG). Poverty and Malnutrition is a major problem in these societies.',
+      'To financially strengthen these families and provide pure milk for children to drink, the govt runs "Dudharu Pashu Praday Yojana". Under this, the female head of the family is given 2 milch cattle at 90% discount.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या मिलता है?', points: [
+          '2 पशु (गाय या भैंस): परिवार को 2 अच्छे दुधारू पशु खरीद कर दिए जाते हैं।',
+          '90% की सब्सिडी: इस पूरे खर्चे (जैसे पशु की कीमत, बीमा, चारा) का 90% पैसा राज्य सरकार देती है। परिवार को सिर्फ 10% हिस्सा देना होता है।',
+          'चारा और बीमा: इसमें पशु का बीमा (Insurance) और कुछ महीनों के चारे (Fodder) का पैसा भी शामिल होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is received in the scheme?', points: [
+          '2 animals (cow or buffalo): 2 good milch animals are bought and given to the family.',
+          '90% Subsidy: State Govt pays 90% of this entire cost (like price of animal, insurance, fodder). Family has to pay only 10% share.',
+          'Fodder and Insurance: This also includes animal insurance and money for few months of fodder.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'लाभार्थी मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'परिवार केवल विशेष पिछड़ी जनजाति (Special Backward Tribe) यानी "बैगा", "भारिया", या "सहरिया" समुदाय का होना चाहिए।',
+      'योजना का लाभ परिवार की "महिला" (Female) सदस्य के नाम पर दिया जाता है।',
+      'परिवार के पास पशुओं को बांधने (रखने) के लिए पर्याप्त जगह होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The beneficiary must be a native of Madhya Pradesh.',
+      'The family must belong to Special Backward Tribe i.e. "Baiga", "Bhariya", or "Sahariya" community only.',
+      'The benefit of the scheme is given in the name of the "Female" member of the family.',
+      'The family must have sufficient space to tie (keep) the animals.'
+    ],
+    exclusions: [
+      'सामान्य वर्ग (General), OBC या अन्य सामान्य ST/SC वर्गों को इस विशेष योजना का लाभ नहीं मिलता। उनके लिए आचार्य विद्यासागर योजना है।',
+      'एक परिवार केवल एक ही बार इस योजना का लाभ ले सकता है।'
+    ],
+    exclusionsEn: [
+      'Gen category, OBC or other normal ST/SC categories do not get the benefit of this special scheme. Acharya Vidyasagar Yojana is for them.',
+      'A family can take advantage of this scheme only once.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Tribal Dept / Veterinary)', steps: [
+          'विशेष पिछड़ी जनजाति बहुल ज़िलों में ग्राम सभा या पंचायत के माध्यम से आवेदन आमंत्रित किए जाते हैं।',
+          'पशु चिकित्सा विस्तार अधिकारी (AVFO) से संपर्क कर फॉर्म भरें।',
+          'पशु क्रय समिति (Purchase Committee) हितग्राही की पसंद से पशु बाज़ार जाकर पशु की खरीदारी करवाती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Tribal Dept / Veterinary)', steps: [
+          'Applications are invited through Gram Sabha or Panchayat in districts dominated by Special Backward Tribes.',
+          'Contact the Assistant Veterinary Field Officer (AVFO) and fill the form.',
+          'The Purchase Committee takes the beneficiary to the cattle market and purchases the animal according to the beneficiary\'s choice.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं अपनी पसंद की गाय/भैंस ले सकता हूँ?', answer: 'हाँ, पशु क्रय समिति (Purchase committee) आपको साथ लेकर बाज़ार जाती है। पशु का दूध निकालकर चेक किया जाता है। आप अपनी पसंद का दुधारू पशु चुन सकते हैं।' },
+      { question: 'क्या इस योजना के तहत बैंक से लोन लेना पड़ता है?', answer: 'नहीं, इसमें बैंक लोन की ज़रूरत नहीं होती। सरकार सीधा 90% अनुदान (Grant) देती है और आपको सिर्फ 10% पैसा देना होता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can I take cow/buffalo of my choice?', answer: 'Yes, the Purchase committee takes you along to the market. The animal is checked by milking it. You can choose the milch animal of your choice.' },
+      { question: 'Do I have to take a bank loan under this scheme?', answer: 'No, bank loan is not required in this. The govt directly gives 90% grant and you have to pay only 10% money.' }
+    ]
+  },
+  'pashu-chikitsa-ambulance-yojana': {
+    ...reviewed,
+    title: 'पशु चिकित्सा एम्बुलेंस योजना (1962)',
+    english: 'Pashu Chikitsa Ambulance Yojana (1962)',
+    summary: 'बीमार पशुओं का घर बैठे इलाज करने के लिए मध्य प्रदेश सरकार द्वारा 1962 टोल फ्री नंबर पर पशु एम्बुलेंस सेवा।',
+    benefit: 'टोल फ्री नंबर 1962 पर कॉल करने पर घर पर चलित पशु चिकित्सा एम्बुलेंस, डॉक्टर और दवाएं उपलब्ध।',
+    department: 'पशुपालन एवं डेयरी विभाग',
+    sourceUrl: 'https://dahd.nic.in/',
+    applicationUrl: 'https://dahd.nic.in/',
+    documents: [
+      'पशुपालक का मोबाइल नंबर',
+      'बीमार पशु की स्थिति का विवरण',
+      'गाँव/घर का पूरा पता'
+    ],
+    documentsEn: [
+      'Mobile number of the cattle rearer',
+      'Details of the sick animal\'s condition',
+      'Full address of village/home'
+    ],
+    steps: [
+      'जब भी आपका कोई पालतू पशु (गाय, भैंस, कुत्ता, बकरी आदि) बीमार हो, अपने फोन से 1962 डायल करें।',
+      'कॉल सेंटर अधिकारी को अपने पशु की बीमारी, अपना नाम और पूरा पता नोट कराएं।',
+      'आपके क्षेत्र की मोबाइल पशु एम्बुलेंस (Mobile Veterinary Unit - MVU) आपके घर पहुंचेगी।',
+      'वैन में मौजूद डॉक्टर पशु का चेकअप करेगा और दवाइयां देगा।'
+    ],
+    stepsEn: [
+      'Whenever your pet/livestock (cow, buffalo, dog, goat etc.) falls ill, dial 1962 from your phone.',
+      'Note down your animal\'s illness, your name and full address to the call center executive.',
+      'The Mobile Veterinary Unit (MVU) of your area will reach your home.',
+      'The vet present in the van will check up the animal and give medicines.'
+    ],
+    rules: [],
+    sourceNotes: 'पशु संजीवनी 1962 सेवा के तहत पूरे प्रदेश में लागू। इंसानों के लिए 108 एम्बुलेंस की तर्ज पर शुरू की गई है।',
+    detailedDescription: [
+      'गाँवों में अक्सर पशुओं के बीमार होने पर उन्हें नज़दीकी अस्पताल ले जाना बहुत मुश्किल होता है, ख़ासकर बड़े जानवरों (जैसे गाय या भैंस) को। इस परेशानी को खत्म करने के लिए सरकार ने "पशु चिकित्सा एम्बुलेंस (MVU)" शुरू की है।',
+      'जिस तरह इंसानों के लिए 108 एम्बुलेंस होती है, उसी तरह पशुओं के लिए 1962 नंबर जारी किया गया है। यह एम्बुलेंस एक चलता-फिरता अस्पताल होती है जिसमें डॉक्टर, कंपाउंडर और दवाइयां हमेशा मौजूद रहती हैं।'
+    ],
+    detailedDescriptionEn: [
+      'In villages, it is often very difficult to take animals to the nearest hospital when they fall ill, especially large animals (like cow or buffalo). To eliminate this problem, the Govt has started "Pashu Chikitsa Ambulance (MVU)".',
+      'Just as there is 108 ambulance for humans, similarly 1962 number has been issued for animals. This ambulance is a mobile hospital in which doctor, compounder and medicines are always present.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के लाभ', points: [
+          'घर पहुँच सेवा (Doorstep Service): पशु को अस्पताल ले जाने का किराया और झंझट बचता है।',
+          'मुफ्त इलाज (Free Treatment): डॉक्टर की फीस और सामान्य दवाइयां बिल्कुल मुफ्त (या नाममात्र शुल्क पर) दी जाती हैं।',
+          'आपातकालीन सुविधा: किसी दुर्घटना (जैसे गाड़ी से एक्सीडेंट, हड्डी टूटना) में पशु का तुरंत इलाज हो जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefits of the Scheme', points: [
+          'Doorstep Service: Saves the fare and hassle of taking the animal to the hospital.',
+          'Free Treatment: Doctor\'s fee and general medicines are given absolutely free (or at nominal fee).',
+          'Emergency Facility: In case of any accident (like accident from vehicle, bone fracture), the animal gets immediate treatment.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'मध्य प्रदेश का कोई भी नागरिक (किसान या पशुपालक) इस सेवा का लाभ ले सकता है।',
+      'सभी प्रकार के पालतू जानवरों (गाय, भैंस, बैल, कुत्ता, बकरी, भेड़) के लिए यह सेवा उपलब्ध है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Any citizen (farmer or cattle rearer) of Madhya Pradesh can take advantage of this service.',
+      'This service is available for all types of pets/livestock (cow, buffalo, bull, dog, goat, sheep).'
+    ],
+    exclusions: [
+      'लावारिस पशुओं के लिए भी लोग कॉल कर सकते हैं, लेकिन उन्हें पकड़कर रखना कॉलर की जिम्मेदारी होती है ताकि टीम आकर इलाज कर सके।'
+    ],
+    exclusionsEn: [
+      'People can also call for stray animals, but it is the responsibility of the caller to catch and keep them so that the team can come and treat.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'कॉल सेंटर (1962)', steps: [
+          'इसके लिए किसी दफ्तर जाने या फॉर्म भरने की ज़रूरत नहीं है।',
+          'सिर्फ अपने मोबाइल से 1962 डायल करें और शिकायत दर्ज़ कराएं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Call Center (1962)', steps: [
+          'There is no need to go to any office or fill any form for this.',
+          'Just dial 1962 from your mobile and register a complaint.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह सेवा रात में भी चालू रहती है?', answer: 'कॉल सेंटर सुबह से शाम तक काम करता है। इमरजेंसी की स्थिति में नज़दीकी वैन से संपर्क कराया जाता है।' },
+      { question: 'क्या डॉक्टर को कोई फीस देनी होगी?', answer: 'नहीं। सरकारी एम्बुलेंस के डॉक्टर को फीस देने की ज़रूरत नहीं है। सिर्फ कुछ विशेष महंगी दवाइयों (जो वैन में नहीं हैं) का पैसा आपको बाज़ार से खरीदने पर देना पड़ सकता है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this service open at night also?', answer: 'The call center works from morning to evening. In case of emergency, contact is made with the nearest van.' },
+      { question: 'Will any fee have to be paid to the doctor?', answer: 'No. There is no need to pay fee to the govt ambulance doctor. You may have to pay money for some special expensive medicines (which are not in the van) only if you buy from market.' }
+    ]
+  },
+  'youth-internship-professional-development': {
+    ...reviewed,
+    title: 'मुख्यमंत्री यूथ इंटर्नशिप योजना (जन सेवा मित्र)',
+    english: 'Mukhyamantri Youth Internship Programme (Jan Seva Mitra)',
+    summary: 'ग्रेजुएट और पोस्ट-ग्रेजुएट युवाओं को सरकार के साथ काम करने का मौका और ₹8,000 प्रति माह स्टाइपेंड (Stipend) देने की योजना।',
+    benefit: 'सरकारी योजनाओं के ज़मीनी स्तर पर काम का अनुभव (Experience), मेंटरशिप और हर महीने ₹8,000 की वित्तीय सहायता।',
+    department: 'योजना, आर्थिक एवं सांख्यिकी विभाग (अटल बिहारी वाजपेयी सुशासन संस्थान)',
+    sourceUrl: 'https://mmsky.mp.gov.in/',
+    applicationUrl: 'https://mmsky.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID - eKYC के साथ)',
+      'आधार कार्ड (Aadhaar Card)',
+      'ग्रेजुएशन / पोस्ट-ग्रेजुएशन की मार्कशीट',
+      'मूल निवासी प्रमाण पत्र',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID (with eKYC)',
+      'Aadhaar Card',
+      'Graduation / Post-Graduation marksheet',
+      'Domicile Certificate',
+      'Bank Passbook'
+    ],
+    steps: [
+      'मध्य प्रदेश सरकार के MP Online (MP E-Service) पोर्टल पर "Youth Internship" के लिए ऑनलाइन फॉर्म भरें।',
+      'अपने सभी शैक्षणिक दस्तावेज़ अपलोड करें।',
+      'मेरिट (अंकों) या इंटरव्यू के आधार पर चयन किया जाता है।',
+      'चयन होने पर आपको अपने विकासखंड (Block) में "जन सेवा मित्र" के रूप में नियुक्त किया जाता है।'
+    ],
+    stepsEn: [
+      'Fill online form for "Youth Internship" on MP Online (MP E-Service) portal of MP Govt.',
+      'Upload all your educational documents.',
+      'Selection is done on the basis of merit (marks) or interview.',
+      'Upon selection, you are appointed as "Jan Seva Mitra" in your Block.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 29 वर्ष के बीच' }
+    ],
+    sourceNotes: 'इस योजना के तहत चुने गए युवाओं को जन सेवा मित्र कहा जाता है। यह युवाओं को सरकारी कामकाज सीखने का मौका देती है।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने कॉलेजों से पढ़ाई पूरी कर चुके युवाओं के लिए "मुख्यमंत्री यूथ इंटर्नशिप योजना (CMYIP)" शुरू की है। इस योजना के तहत युवाओं को "जन सेवा मित्र (Jan Seva Mitra)" के रूप में चुना जाता है।',
+      'जन सेवा मित्रों का काम गाँव-गाँव जाकर लोगों को सरकारी योजनाओं (जैसे लाडली बहना, किसान सम्मान निधि) की जानकारी देना और उनकी समस्याओं को सरकारी अधिकारियों (जैसे तहसीलदार, कलेक्टर) तक पहुंचाना होता है।'
+    ],
+    detailedDescriptionEn: [
+      'The MP Govt has started "Mukhyamantri Youth Internship Programme (CMYIP)" for youths who have completed their studies from colleges. Under this scheme, youths are selected as "Jan Seva Mitra".',
+      'The work of Jan Seva Mitras is to go from village to village to give info to people about govt schemes (like Ladli Behna, Kisan Samman Nidhi) and to convey their problems to govt officials (like Tehsildar, Collector).'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के फायदे', points: [
+          'स्टाइपेंड (मासिक सैलरी): हर जन सेवा मित्र को काम के दौरान ₹8,000 प्रति माह स्टाइपेंड मिलता है।',
+          'सरकारी काम का अनुभव: युवाओं को सीधे सरकारी दफ्तरों, कलेक्टर और पंचायत अधिकारियों के साथ काम करने और सीखने का मौका मिलता है।',
+          'सर्टिफिकेट: इंटर्नशिप (6 महीने या 1 साल) पूरी होने के बाद सरकार की तरफ से एक सर्टिफिकेट दिया जाता है, जो प्राइवेट या सरकारी नौकरी (Resume) में बहुत काम आता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefits of the Scheme', points: [
+          'Stipend (Monthly Salary): Every Jan Seva Mitra gets a stipend of ₹8,000 per month during work.',
+          'Experience of Govt work: Youths get a chance to work and learn directly with govt offices, Collector and Panchayat officials.',
+          'Certificate: After completion of internship (6 months or 1 year), a certificate is given by the govt, which is very useful in private or govt job (Resume).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक की आयु 18 से 29 वर्ष के बीच होनी चाहिए।',
+      'आवेदक ने मान्यता प्राप्त कॉलेज से ग्रेजुएशन (स्नातक) या पोस्ट-ग्रेजुएशन (स्नातकोत्तर) पूरा कर लिया हो (हाल ही के 2-3 सालों में पास आउट)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be a native of Madhya Pradesh.',
+      'Age of the applicant should be between 18 to 29 years.',
+      'Applicant must have completed Graduation or Post-Graduation from a recognized college (passed out in recent 2-3 years).'
+    ],
+    exclusions: [
+      'जो युवा अभी पढ़ाई कर रहे हैं (Running students), वे इंटर्नशिप नहीं कर सकते।',
+      'पहले से किसी सरकारी नौकरी में काम कर रहे लोग इसके पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'Youths who are currently studying (Running students) cannot do internship.',
+      'People already working in any govt job are not eligible for this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MP E-Service)', steps: [
+          'जब सरकार द्वारा बैच की भर्ती निकाली जाती है, तो MP E-Service पोर्टल पर लिंक एक्टिव हो जाता है।',
+          'ऑनलाइन पोर्टल पर समग्र आईडी डालकर रजिस्ट्रेशन करें।',
+          'मेरिट लिस्ट वेबसाइट पर आती है, जिसमें नाम आने पर आपको ज़िले के कलेक्ट्रेट या जनपद कार्यालय में जॉइनिंग देनी होती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MP E-Service)', steps: [
+          'When the govt takes out the recruitment of the batch, the link becomes active on the MP E-Service portal.',
+          'Register on the online portal by entering Samagra ID.',
+          'Merit list comes on the website, if your name is in it, you have to join at the district collectorate or Janpad office.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह परमानेंट (Permanent) सरकारी नौकरी है?', answer: 'नहीं। यह एक इंटर्नशिप (सीखने की प्रक्रिया) है, जो आमतौर पर 6 महीने या 1 साल के लिए होती है।' },
+      { question: 'फॉर्म कब निकलते हैं?', answer: 'इसके फॉर्म समय-समय पर (Batch-wise) निकलते हैं। आपको mpeservices.mp.gov.in पोर्टल पर नज़र रखनी चाहिए।' }
+    ],
+    faqsEn: [
+      { question: 'Is this a Permanent govt job?', answer: 'No. This is an internship (learning process), which is usually for 6 months or 1 year.' },
+      { question: 'When are the forms released?', answer: 'Its forms are released from time to time (Batch-wise). You should keep an eye on the mpeservices.mp.gov.in portal.' }
+    ]
+  },
+  'gausevak-prashikshan-yojana': {
+    ...reviewed,
+    title: 'गौसेवक प्रशिक्षण योजना',
+    english: 'Gausevak Prashikshan Yojana (Animal Husbandry Skill)',
+    summary: 'ग्रामीण बेरोजगार युवाओं को 6 महीने की ट्रेनिंग देकर "गौसेवक" बनाने और उन्हें स्वरोज़गार (Self-Employment) से जोड़ने की योजना।',
+    benefit: '6 महीने का मुफ्त प्राथमिक पशु उपचार प्रशिक्षण, काम करने के लिए मेडिकल किट (Toolkit) और प्रमाण पत्र।',
+    department: 'पशुपालन एवं डेयरी विभाग',
+    sourceUrl: 'https://animalhusbandry.mp.gov.in/',
+    applicationUrl: 'https://animalhusbandry.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      '10वीं कक्षा की मार्कशीट (न्यूनतम पास)',
+      'ग्राम पंचायत का प्रस्ताव / सरपंच का पत्र',
+      'मूल निवासी प्रमाण पत्र',
+      'बैंक खाता (Bank Passbook)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      '10th class marksheet (minimum pass)',
+      'Gram Panchayat proposal / Sarpanch\'s letter',
+      'Domicile Certificate',
+      'Bank Account (Bank Passbook)'
+    ],
+    steps: [
+      'अपने गांव के सरपंच या पंचायत सचिव से मिलकर ग्राम सभा से प्रस्ताव पारित करवाएं।',
+      'प्रस्ताव और सभी दस्तावेज़ों के साथ विकासखंड (Block) के पशु चिकित्सा अधिकारी के पास आवेदन करें।',
+      'चयन होने के बाद, सरकार द्वारा 6 महीने की ट्रेनिंग (प्रैक्टिकल और थ्योरी) दी जाएगी।',
+      'ट्रेनिंग पूरी होने के बाद आपको सर्टिफिकेट और इलाज का ज़रूरी सामान (Toolkit) दिया जाएगा।'
+    ],
+    stepsEn: [
+      'Meet the Sarpanch or Panchayat Secretary of your village and get the proposal passed from Gram Sabha.',
+      'Apply with the Veterinary Officer of the Block along with the proposal and all documents.',
+      'After selection, 6 months training (practical and theory) will be given by the govt.',
+      'After completion of training, you will be given a certificate and necessary medical items (Toolkit).'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 35 वर्ष' }
+    ],
+    sourceNotes: 'पशुपालन विभाग MP द्वारा ग्रामीण पशु सेवा नेटवर्क विस्तार एवं युवाओं को रोज़गार देने हेतु।',
+    detailedDescription: [
+      'गाँवों में अक्सर रात-बिरात पशुओं के बीमार होने पर डॉक्टर नहीं मिल पाते। इस समस्या को दूर करने और युवाओं को रोज़गार देने के लिए मध्य प्रदेश सरकार "गौसेवक प्रशिक्षण योजना" चलाती है।',
+      'इस योजना में हर ग्राम पंचायत से एक या दो युवाओं को चुनकर उन्हें पशुओं का प्राथमिक इलाज (First Aid) करने और कृत्रिम गर्भाधान (Artificial Insemination) करने की 6 महीने की ट्रेनिंग दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'In villages, doctors are often not available when animals fall ill at night. To overcome this problem and provide employment to youths, the MP Govt runs "Gausevak Prashikshan Yojana".',
+      'In this scheme, one or two youths are selected from every Gram Panchayat and given 6 months training in doing primary treatment (First Aid) and Artificial Insemination of animals.'
+    ],
+    benefitsList: [
+      {
+        heading: 'ट्रेनिंग और रोज़गार के अवसर', points: [
+          'मुफ्त ट्रेनिंग (Free Training): चुने गए युवाओं को 6 महीने तक पशुपालन विभाग द्वारा ट्रेनिंग दी जाती है (2 महीने थ्योरी, 4 महीने प्रैक्टिकल)।',
+          'सर्टिफिकेट और किट: पास होने पर सरकार "गौसेवक" का प्रमाण पत्र और एक टूलकिट (थर्मामीटर, कैंची, ज़रूरी दवाइयां) देती है।',
+          'कमाई का मौका: गौसेवक गाँव में रहकर पशुओं का इलाज कर सकते हैं और कृत्रिम गर्भाधान (AI) करने पर सरकार की तरफ से कमीशन (इंसेंटिव) भी कमा सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Training and Employment Opportunities', points: [
+          'Free Training: Selected youths are given training by the Animal Husbandry Dept for 6 months (2 months theory, 4 months practical).',
+          'Certificate and Kit: On passing, the govt gives a "Gausevak" certificate and a toolkit (thermometer, scissors, essential medicines).',
+          'Earning opportunity: Gausevaks can stay in the village and treat animals and can also earn commission (incentive) from the govt on doing Artificial Insemination (AI).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक उसी ग्राम पंचायत का मूल निवासी होना चाहिए, जहाँ से वह आवेदन कर रहा है।',
+      'आवेदक की उम्र 18 साल से कम और 35 साल से ज़्यादा नहीं होनी चाहिए।',
+      'कम से कम 10वीं कक्षा पास होना ज़रूरी है (विज्ञान विषय वालों को प्राथमिकता दी जाती है)।',
+      'ग्राम सभा (पंचायत) द्वारा उसका नाम प्रस्ताव (Resolution) के रूप में पास होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant must be a native of the same Gram Panchayat from where he is applying.',
+      'The age of the applicant should not be less than 18 years and more than 35 years.',
+      'Must have passed at least 10th class (preference is given to science subject candidates).',
+      'His name should be passed as a proposal (Resolution) by the Gram Sabha (Panchayat).'
+    ],
+    exclusions: [
+      'जिन लोगों पर कोई आपराधिक मुकदमा (Police Case) दर्ज़ है, वे गौसेवक नहीं बन सकते।',
+      'शहरी क्षेत्र के युवा इस योजना में आवेदन नहीं कर सकते, यह केवल ग्रामीण क्षेत्र के लिए है।'
+    ],
+    exclusionsEn: [
+      'Those people who have a criminal case (Police Case) registered against them cannot become Gausevak.',
+      'Youths from urban areas cannot apply in this scheme, it is only for rural areas.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Panchayat & Block Office)', steps: [
+          'सबसे पहले अपने गाँव के सरपंच को बोलकर ग्राम पंचायत की बैठक में अपना नाम पास करवाएं।',
+          'पंचायत के प्रस्ताव (लेटर) के साथ अपने ज़िले या ब्लॉक के पशु चिकित्सा कार्यालय (Veterinary Hospital) में फॉर्म जमा करें।',
+          'पशुपालन विभाग मेरिट के आधार पर चयन करके आपको ट्रेनिंग के लिए बुलाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Panchayat & Block Office)', steps: [
+          'First of all, tell the Sarpanch of your village and get your name passed in the Gram Panchayat meeting.',
+          'Submit the form in the Veterinary Hospital of your district or block along with the Panchayat proposal (letter).',
+          'Animal Husbandry Dept will select on merit basis and call you for training.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या गौसेवक बनने के बाद मुझे हर महीने सरकारी सैलरी मिलेगी?', answer: 'नहीं, यह परमानेंट सरकारी नौकरी नहीं है। यह एक स्वरोज़गार (Self-Employment) है। आप इलाज की फीस और सरकार की योजनाओं के कमीशन (Incentive) से पैसा कमाते हैं।' },
+      { question: 'ट्रेनिंग के दौरान रहना-खाना कहाँ होगा?', answer: 'आमतौर पर सरकार के प्रशिक्षण केंद्रों में ही रहने-खाने की व्यवस्था होती है या इसके बदले स्टाइपेंड दिया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Will I get monthly govt salary after becoming Gausevak?', answer: 'No, this is not a permanent govt job. This is a Self-Employment. You earn money from treatment fees and commission (Incentive) of govt schemes.' },
+      { question: 'Where will boarding-lodging be during training?', answer: 'Usually, boarding-lodging arrangements are made in govt training centers itself or stipend is given in lieu of this.' }
+    ]
+  },
+  'nishulk-cycle-vitaran-yojana': {
+    ...reviewed,
+    title: 'निःशुल्क साइकिल वितरण योजना',
+    english: 'Nishulk Cycle Vitaran Yojana (Free Bicycles)',
+    summary: 'ऐसे स्कूली छात्र-छात्राएं जिनके गांव में हाई स्कूल या मिडिल स्कूल नहीं है और उन्हें दूर पढ़ने जाना पड़ता है, उन्हें सरकार द्वारा मुफ्त साइकिल दी जाती है।',
+    benefit: 'कक्षा 6वीं और 9वीं में पढ़ने वाले पात्र छात्र-छात्राओं को साइकिल खरीदने के लिए सीधे बैंक खाते में ₹4,500 की राशि।',
+    department: 'स्कूल शिक्षा विभाग',
+    sourceUrl: 'https://educationportal.mp.gov.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'बैंक खाता पासबुक (DBT सक्रिय)',
+      'स्कूल का एडमिशन रिकॉर्ड',
+      'पासपोर्ट साइज़ फोटो'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Bank Account Passbook (DBT active)',
+      'School admission record',
+      'Passport size photo'
+    ],
+    steps: [
+      'इस योजना का लाभ लेने के लिए छात्रों को खुद ऑनलाइन फॉर्म नहीं भरना होता है।',
+      'जैसे ही छात्र कक्षा 6 या कक्षा 9 में प्रवेश लेता है, स्कूल के प्रिंसिपल (Headmaster) समग्र शिक्षा पोर्टल पर जानकारी अपडेट करते हैं।',
+      'शिक्षा विभाग द्वारा पात्रता चेक करने के बाद साइकिल की राशि (₹4,500) छात्र के बैंक खाते में भेज दी जाती है।'
+    ],
+    stepsEn: [
+      'Students do not have to fill the online form themselves to take advantage of this scheme.',
+      'As soon as the student takes admission in class 6 or class 9, the school Principal (Headmaster) updates the info on the Samagra Shiksha Portal.',
+      'After checking eligibility by the Education Dept, the bicycle amount (₹4,500) is sent to the student\'s bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'शासकीय स्कूल के कक्षा 6वीं या 9वीं के छात्र' }
+    ],
+    sourceNotes: 'स्कूल शिक्षा विभाग MP द्वारा बच्चों (ख़ासकर लड़कियों) को बीच में पढ़ाई छोड़ने (Drop-out) से रोकने के लिए लागू।',
+    detailedDescription: [
+      'मध्य प्रदेश के कई छोटे गाँवों में कक्षा 5 या कक्षा 8 के बाद आगे की पढ़ाई के लिए स्कूल नहीं होते। बच्चों को दूसरे गाँव या शहर पढ़ने जाना पड़ता है।',
+      'पैदल दूर तक जाने की परेशानी के कारण कई बच्चे (ख़ासकर लड़कियाँ) पढ़ाई छोड़ देते हैं। इसे रोकने के लिए सरकार ने "निःशुल्क साइकिल वितरण योजना" शुरू की है। इसमें कक्षा 6 और कक्षा 9 में एडमिशन लेने पर बच्चों को साइकिल दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'In many small villages of Madhya Pradesh, there are no schools for further studies after class 5 or class 8. Children have to go to another village or city to study.',
+      'Due to the trouble of walking far, many children (especially girls) drop out of studies. To stop this, the Govt has started "Nishulk Cycle Vitaran Yojana". In this, bicycles are given to children upon taking admission in class 6 and class 9.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के तहत मिलने वाला लाभ', points: [
+          'साइकिल की राशि: पहले छात्रों को सीधा साइकिल दी जाती थी, लेकिन अब छात्रों (या उनके अभिभावकों) के बैंक खाते में ₹4,500 ट्रांसफर (DBT) किए जाते हैं ताकि वे अपनी पसंद की साइकिल खरीद सकें।',
+          'लड़के और लड़कियों दोनों को लाभ: यह योजना लड़कों और लड़कियों दोनों के लिए लागू है (यदि वे पात्रता शर्तें पूरी करते हैं)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Benefit received under the scheme', points: [
+          'Bicycle Amount: Earlier bicycles were given directly to students, but now ₹4,500 is transferred (DBT) to the bank account of students (or their parents) so that they can buy a bicycle of their choice.',
+          'Benefit to both boys and girls: This scheme is applicable for both boys and girls (if they fulfill eligibility conditions).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश के किसी सरकारी स्कूल (Government School) का छात्र होना चाहिए। प्राइवेट स्कूल के बच्चों को यह लाभ नहीं मिलता।',
+      'छात्र कक्षा 6 या कक्षा 9 में पढ़ता हो।',
+      'दूरी का नियम: छात्र के अपने गाँव में मिडिल (6वीं से 8वीं) या हाई स्कूल (9वीं से 10वीं) नहीं होना चाहिए। उसे दूसरे गाँव पढ़ने जाना पड़ रहा हो, जिसकी दूरी कम से कम 2 किलोमीटर हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'The student must be a student of any Government School of Madhya Pradesh. Private school children do not get this benefit.',
+      'The student should be studying in class 6 or class 9.',
+      'Distance rule: There should not be a Middle (6th to 8th) or High School (9th to 10th) in the student\'s own village. He must be going to study in another village, the distance of which is at least 2 kilometers.'
+    ],
+    exclusions: [
+      'जिन बच्चों के गाँव में ही स्कूल मौजूद है (दूरी 2 किमी से कम है), उन्हें यह साइकिल नहीं मिलेगी।',
+      'जिन छात्रों ने हॉस्टल (Hostel) में एडमिशन लिया है, वे भी इस योजना के लिए अपात्र हैं।'
+    ],
+    exclusionsEn: [
+      'Children who have a school in their village itself (distance is less than 2 km) will not get this bicycle.',
+      'Students who have taken admission in Hostel are also ineligible for this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑटोमेटिक (School Portal)', steps: [
+          'छात्र को सिर्फ अपना बैंक खाता, आधार और समग्र आईडी स्कूल के मास्टर जी (शिक्षक) को देना होता है।',
+          'स्कूल के शिक्षक पोर्टल (Education Portal MP) पर बच्चे की मैपिंग (Mapping) करते हैं।',
+          'सिस्टम खुद चेक करता है कि बच्चा किस गाँव का है और स्कूल कितनी दूर है। पात्र होने पर पैसा सीधा खाते में आ जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Automatic (School Portal)', steps: [
+          'The student just has to give his bank account, Aadhaar and Samagra ID to the school master (teacher).',
+          'The school teachers do mapping of the child on the portal (Education Portal MP).',
+          'The system itself checks which village the child belongs to and how far the school is. If eligible, money comes straight into the account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या प्राइवेट स्कूल के बच्चों को भी साइकिल मिलेगी?', answer: 'नहीं। यह योजना केवल सरकारी स्कूलों (Govt Schools) में पढ़ने वाले छात्र-छात्राओं के लिए है।' },
+      { question: 'पैसे खाते में आने के बाद क्या करना होगा?', answer: 'पैसे आने के बाद छात्र को बाज़ार से नई साइकिल खरीदनी होती है और उसकी रसीद (बिल) और साइकिल के साथ अपनी फोटो स्कूल में जमा करनी होती है।' }
+    ],
+    faqsEn: [
+      { question: 'Will private school children also get bicycles?', answer: 'No. This scheme is only for students studying in Government Schools.' },
+      { question: 'What has to be done after the money comes into the account?', answer: 'After the money arrives, the student has to buy a new bicycle from the market and submit its receipt (bill) and his photo with the bicycle in the school.' }
+    ]
+  },
+  'mp-gaon-ki-beti-yojana': {
+    ...reviewed,
+    title: 'गाँव की बेटी योजना',
+    english: 'Gaon Ki Beti Yojana (Rural Girl Higher Education)',
+    summary: 'गाँव की बेटियों को 12वीं के बाद कॉलेज की पढ़ाई जारी रखने के लिए 5,000 रुपये प्रति वर्ष की छात्रवृत्ति देने की योजना।',
+    benefit: '12वीं कक्षा में फर्स्ट डिवीज़न (60% या अधिक) पास करने वाली गाँव की छात्राओं को कॉलेज में एडमिशन लेने पर ₹500 प्रति माह (₹5,000 प्रति वर्ष) की स्कॉलरशिप।',
+    department: 'उच्च शिक्षा विभाग',
+    sourceUrl: 'https://scholarshipportal.mp.nic.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      '12वीं की मार्कशीट (न्यूनतम 60% अंक)',
+      'कॉलेज का प्रवेश प्रमाण पत्र (Admission slip / Fee receipt)',
+      'ग्राम पंचायत द्वारा जारी "गाँव की बेटी" प्रमाण पत्र',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      '12th marksheet (minimum 60% marks)',
+      'College admission certificate (Admission slip / Fee receipt)',
+      '"Gaon Ki Beti" certificate issued by Gram Panchayat',
+      'Bank Passbook'
+    ],
+    steps: [
+      '12वीं पास करने के बाद किसी भी सरकारी या मान्यता प्राप्त प्राइवेट कॉलेज में एडमिशन लें।',
+      'अपने गाँव की पंचायत (सरपंच/सचिव) से "गाँव की बेटी" का प्रमाण पत्र बनवाएं।',
+      'MP State Scholarship Portal पर ऑनलाइन रजिस्ट्रेशन करें और फॉर्म भरें।',
+      'फॉर्म का प्रिंटआउट और ज़रूरी दस्तावेज़ अपने कॉलेज में जमा करें जहाँ से इसे वेरिफाई किया जाएगा।'
+    ],
+    stepsEn: [
+      'After passing 12th, take admission in any govt or recognized private college.',
+      'Get "Gaon ki Beti" certificate from your village panchayat (Sarpanch/Secretary).',
+      'Do online registration and fill the form on MP State Scholarship Portal.',
+      'Submit printout of form and necessary documents in your college from where it will be verified.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'केवल छात्राएं (लड़कियां)' }
+    ],
+    sourceNotes: 'उच्च शिक्षा विभाग MP द्वारा ग्रामीण बालिकाओं को उच्च शिक्षा हेतु प्रोत्साहित करने के लिए।',
+    detailedDescription: [
+      'हमारे गाँवों में कई होनहार लड़कियाँ 12वीं तक तो बहुत अच्छी पढ़ाई करती हैं, लेकिन कॉलेज का खर्च न उठा पाने के कारण उनकी पढ़ाई छूट जाती है।',
+      'इस समस्या को दूर करने के लिए मध्य प्रदेश सरकार ने "गाँव की बेटी योजना" शुरू की है। इसके तहत अगर कोई गाँव की बेटी 12वीं कक्षा फर्स्ट डिवीज़न (First Division) से पास करती है और कॉलेज में एडमिशन लेती है, तो उसे सरकार की तरफ से आर्थिक मदद दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'In our villages, many bright girls study very well till 12th, but due to inability to bear college expenses, their studies are dropped.',
+      'To solve this problem, the MP Govt has started "Gaon Ki Beti Yojana". Under this, if a village girl passes 12th class with First Division and takes admission in college, she is given financial help by the govt.'
+    ],
+    benefitsList: [
+      {
+        heading: 'छात्रवृत्ति (Scholarship) की राशि', points: [
+          'प्रति माह ₹500: छात्रा को कॉलेज की पढ़ाई के दौरान हर साल 10 महीने तक 500 रुपये प्रति माह दिए जाते हैं।',
+          'कुल ₹5,000 सालाना: इस तरह एक साल में कुल 5,000 रुपये सीधे छात्रा के बैंक खाते में जमा किए जाते हैं।',
+          'पूरी डिग्री के लिए: यह मदद सिर्फ फर्स्ट ईयर में नहीं, बल्कि सेकंड और थर्ड ईयर में भी मिलती है, बशर्ते छात्रा कॉलेज की परीक्षाओं में पास होती रहे।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Amount of Scholarship', points: [
+          '₹500 per month: The student is given ₹500 per month for 10 months every year during college studies.',
+          'Total ₹5,000 annually: Thus a total of ₹5,000 in a year is directly deposited into the student\'s bank account.',
+          'For whole degree: This help is received not only in first year, but also in 2nd and 3rd year, provided the student keeps passing the college exams.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक छात्रा मध्य प्रदेश के ग्रामीण क्षेत्र (गाँव) की निवासी होनी चाहिए। शहरी क्षेत्र (City) की छात्राएं इस योजना के लिए अपात्र हैं।',
+      'छात्रा ने कक्षा 12वीं की परीक्षा में कम से कम 60% (प्रथम श्रेणी) अंक प्राप्त किए हों।',
+      'छात्रा ने आगे की पढ़ाई (BA, BSc, BCom, Engineering, Medical आदि) के लिए किसी कॉलेज में नियमित (Regular) प्रवेश लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant student must be a resident of rural area (village) of Madhya Pradesh. Urban area students are ineligible for this scheme.',
+      'The student must have obtained at least 60% (First Division) marks in class 12th exam.',
+      'The student must have taken Regular admission in any college for further studies (BA, BSc, BCom, Engineering, Medical etc).'
+    ],
+    exclusions: [
+      'जो लड़कियाँ प्राइवेट (Private) फॉर्म भरकर कॉलेज की परीक्षा देती हैं (बिना रोज़ स्कूल/कॉलेज गए), उन्हें यह लाभ नहीं मिलता।',
+      'शहर (नगर निगम / नगर पालिका) में रहने वाली लड़कियों को इस योजना का लाभ नहीं मिलता (उनके लिए "प्रतिभा किरण योजना" है)।'
+    ],
+    exclusionsEn: [
+      'Girls who give college exams by filling Private form (without going to school/college daily), do not get this benefit.',
+      'Girls living in city (Municipal Corporation / Municipality) do not get benefit of this scheme (for them there is "Pratibha Kiran Yojana").'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (State Scholarship Portal)', steps: [
+          'सबसे पहले अपने गाँव के सरपंच से "गाँव की बेटी" प्रमाण पत्र बनवाएं।',
+          'फिर MP State Scholarship Portal (scholarshipportal.mp.nic.in) पर जाकर "Student Login/Registration" करें।',
+          'ऑनलाइन फॉर्म भरने के बाद उसकी रसीद निकालें और अपने कॉलेज के छात्रवृत्ति विभाग (Scholarship section) में जमा करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (State Scholarship Portal)', steps: [
+          'First of all get "Gaon Ki Beti" certificate made from the Sarpanch of your village.',
+          'Then go to MP State Scholarship Portal (scholarshipportal.mp.nic.in) and do "Student Login/Registration".',
+          'After filling online form, take out its receipt and submit it in the Scholarship section of your college.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मेरी 12वीं में 59% है, क्या मुझे लाभ मिलेगा?', answer: 'नहीं। इस योजना के लिए 12वीं में कम से কমপক্ষে 60% अंक (फर्स्ट डिवीज़न) होना अनिवार्य है।' },
+      { question: 'क्या शहर में पढ़ने जाने पर भी लाभ मिलेगा?', answer: 'हाँ, आपका निवास गाँव का होना चाहिए। कॉलेज चाहे गाँव में हो या शहर में, आप योजना का लाभ ले सकती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'I have 59% in 12th, will I get benefit?', answer: 'No. At least 60% marks (First Division) in 12th is mandatory for this scheme.' },
+      { question: 'Will I get benefit even if I go to study in city?', answer: 'Yes, your residence should be of a village. Whether the college is in village or city, you can take benefit of the scheme.' }
+    ]
+  },
+  'aahar-anudan-yojana': {
+    ...reviewed,
+    title: 'आहार अनुदान योजना (विशेष पिछड़ी जनजाति)',
+    english: 'Aahar Anudan Yojana (PVTG Nutrition Grant)',
+    summary: 'मध्य प्रदेश की विशेष पिछड़ी जनजातियों (बैगा, भारिया, सहरिया) के परिवारों को कुपोषण से बचाने के लिए हर महीने ₹1500 की आर्थिक मदद।',
+    benefit: 'विशेष पिछड़ी जनजाति परिवार की महिला मुखिया के बैंक खाते में बिना किसी शर्त के प्रतिमाह ₹1,500 की पौष्टिक आहार सहायता।',
+    department: 'जनजातीय कार्य विभाग',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://tribal.mp.gov.in/',
+    documents: [
+      'महिला मुखिया का आधार कार्ड',
+      'समग्र परिवार आईडी (Samagra ID)',
+      'विशेष पिछड़ी जनजाति (बैगा/भारिया/सहरिया) का जाति प्रमाण पत्र',
+      'महिला का बैंक खाता (जो आधार से लिंक हो - DBT)'
+    ],
+    documentsEn: [
+      'Aadhaar card of female head',
+      'Samagra Family ID',
+      'Caste Certificate of Special Backward Tribe (Baiga/Bhariya/Sahariya)',
+      'Bank account of the woman (linked with Aadhaar - DBT)'
+    ],
+    steps: [
+      'यह योजना विशेष पिछड़ी जनजाति बहुल ज़िलों (जैसे मंडला, डिंडोरी, छिंदवाड़ा, श्योपुर, शिवपुरी आदि) में चलती है।',
+      'योजना का लाभ लेने के लिए अपने ग्राम पंचायत के सचिव या आदिम जाति कल्याण विभाग के ब्लॉक कार्यालय में संपर्क करें।',
+      'वहाँ अपना फॉर्म और जाति प्रमाण पत्र जमा करें।',
+      'मंज़ूरी मिलने के बाद हर महीने पैसे सीधे बैंक खाते में आने शुरू हो जाते हैं।'
+    ],
+    stepsEn: [
+      'This scheme runs in districts dominated by Special Backward Tribes (like Mandla, Dindori, Chhindwara, Sheopur, Shivpuri etc).',
+      'To take benefit of the scheme, contact the Secretary of your Gram Panchayat or Block Office of Tribal Welfare Dept.',
+      'Submit your form and caste certificate there.',
+      'After approval, money starts coming directly to the bank account every month.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'महिला मुखिया' },
+    ],
+    sourceNotes: 'आहार अनुदान योजना के तहत 2017 में 1000 रुपये मिलते थे, जिसे बढ़ाकर 1500 रुपये कर दिया गया है।',
+    detailedDescription: [
+      'मध्य प्रदेश में बैगा, भारिया और सहरिया जनजातियों को अत्यंत कमज़ोर माना गया है। इन जनजातियों के बच्चों और महिलाओं में कुपोषण (Malnutrition - खून की कमी, कम वज़न) एक गंभीर समस्या रही है।',
+      'इस समस्या को खत्म करने के लिए सरकार ने "आहार अनुदान योजना" शुरू की है। इस योजना का मक़सद है कि परिवार हरी सब्ज़ियाँ, दालें, दूध और फल खरीद सकें ताकि उनके बच्चों को सही पोषण मिल सके।'
+    ],
+    detailedDescriptionEn: [
+      'In Madhya Pradesh, Baiga, Bhariya and Sahariya tribes are considered extremely vulnerable. Malnutrition (Anemia, underweight) among children and women of these tribes has been a serious problem.',
+      'To eradicate this problem, Govt has started "Aahar Anudan Yojana". The aim of this scheme is that families can buy green vegetables, pulses, milk and fruits so that their children get proper nutrition.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के सीधे लाभ', points: [
+          'प्रतिमाह ₹1500: सरकार हर महीने 1,500 रुपये की नकद राशि सीधे महिला मुखिया के बैंक खाते में डालती है।',
+          'बिना किसी शर्त के (Unconditional): इसके लिए कोई काम करने या फॉर्म बार-बार भरने की शर्त नहीं है। एक बार नाम जुड़ने पर हर महीने पैसे मिलते हैं।',
+          'महिलाओं के हाथ में पैसा: क्योंकि पैसा परिवार की महिला (माँ/पत्नी) के खाते में जाता है, इसलिए वह बच्चों के खान-पान पर बेहतर खर्च कर पाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Direct Benefits of Scheme', points: [
+          '₹1500 per month: The Govt puts cash amount of ₹1,500 directly into bank account of female head every month.',
+          'Unconditional: There is no condition to do any work or fill form again and again for this. Once name is added, money is received every month.',
+          'Money in hands of women: Because money goes to account of family\'s woman (mother/wife), she is able to spend better on children\'s food.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक परिवार मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'परिवार केवल "विशेष पिछड़ी जनजाति" (PVTG) अर्थात् बैगा (Baiga), भारिया (Bhariya) या सहरिया (Sahariya) वर्ग का होना चाहिए।',
+      'लाभ केवल परिवार की "महिला मुखिया" (Female Head - शादीशुदा महिला) के नाम पर दिया जाता है।'
+    ],
+    eligibilityDescriptionEn: [
+      'The applicant family must be a native of Madhya Pradesh.',
+      'The family must belong to "Particularly Vulnerable Tribal Group" (PVTG) i.e. Baiga, Bhariya or Sahariya category only.',
+      'The benefit is given only in the name of the "Female Head" (Married woman) of the family.'
+    ],
+    exclusions: [
+      'अन्य ST वर्ग (जैसे गोंड, भील) या SC, OBC, General वर्ग के लोग इस योजना के पात्र नहीं हैं।',
+      'यदि परिवार में कोई महिला मुखिया नहीं है (सिर्फ पुरुष हैं), तो विशेष परिस्थितियों में पुरुष मुखिया को लाभ दिया जा सकता है, लेकिन प्राथमिकता महिला को ही है।'
+    ],
+    exclusionsEn: [
+      'Other ST categories (like Gond, Bhil) or SC, OBC, General category people are not eligible for this scheme.',
+      'If there is no female head in family (only men), benefit can be given to male head in special circumstances, but preference is given to woman.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Gram Panchayat / Tribal Dept)', steps: [
+          'ज़्यादातर मामलों में सरकार खुद ग्राम पंचायत और आँगनवाड़ी के माध्यम से सर्वे करवाकर इन परिवारों को जोड़ती है।',
+          'यदि आपका नाम छूट गया है, तो अपना आधार, समग्र आईडी और जाति प्रमाण पत्र लेकर पंचायत सचिव (Secretary) या जनपद कार्यालय में जाएँ।',
+          'DBT चालू (Aadhaar Seeded) बैंक खाता होना अनिवार्य है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Gram Panchayat / Tribal Dept)', steps: [
+          'In most cases, govt itself adds these families by conducting surveys through Gram Panchayat and Anganwadi.',
+          'If your name is left out, take your Aadhaar, Samagra ID and caste certificate to Panchayat Secretary or Janpad office.',
+          'Having DBT active (Aadhaar Seeded) bank account is mandatory.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या लाड़ली बहना योजना के 1250 रुपए और आहार अनुदान के 1500 रुपए दोनों एक साथ मिल सकते हैं?', answer: 'हाँ। आहार अनुदान योजना एक विशेष जनजातीय योजना है, और लाड़ली बहना अलग योजना है। पात्र महिला को दोनों योजनाओं का पैसा (कुल ₹2750) मिल सकता है।' },
+      { question: 'मैं गोंड समाज से हूँ, क्या मुझे यह पैसा मिलेगा?', answer: 'नहीं। यह योजना सिर्फ बैगा, भारिया और सहरिया (PVTG) समाज के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'Can both ₹1250 of Ladli Behna Yojana and ₹1500 of Aahar Anudan be received together?', answer: 'Yes. Aahar Anudan Yojana is a special tribal scheme, and Ladli Behna is different. Eligible woman can get money from both (Total ₹2750).' },
+      { question: 'I am from Gond society, will I get this money?', answer: 'No. This scheme is only for Baiga, Bhariya and Sahariya (PVTG) society.' }
+    ]
+  },
+  'akanksha-yojana': {
+    ...reviewed,
+    title: 'आकांक्षा योजना (राष्ट्रीय प्रवेश परीक्षा कोचिंग)',
+    english: 'Akanksha Yojana (Free National Coaching ST)',
+    summary: 'आदिवासी (ST) छात्र-छात्राओं को डॉक्टर, इंजीनियर या वकील बनने के सपने को पूरा करने के लिए JEE, NEET और CLAT की बिल्कुल मुफ्त कोचिंग (Coaching) और हॉस्टल सुविधा।',
+    benefit: '11वीं व 12वीं में पढ़ाई के साथ-साथ JEE/NEET/CLAT की मुफ्त कोचिंग, रहना, खाना, किताबें और स्टेशनरी सब कुछ सरकार की तरफ से निःशुल्क।',
+    department: 'जनजातीय कार्य विभाग',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://tribal.mp.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'अनुसूचित जनजाति (ST) का डिजिटल जाति प्रमाण पत्र',
+      '10वीं कक्षा की मार्कशीट (न्यूनतम 60% अंक)',
+      'आय प्रमाण पत्र (Income Certificate)'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Digital Caste Certificate of Scheduled Tribe (ST)',
+      '10th class marksheet (minimum 60% marks)',
+      'Income Certificate'
+    ],
+    steps: [
+      '10वीं पास करने के बाद (हर साल मार्च-अप्रैल में) MP Tribal Portal (MPTAAS) पर ऑनलाइन फॉर्म भरें।',
+      'सरकार द्वारा एक प्रवेश परीक्षा (Entrance Exam) आयोजित की जाती है।',
+      'परीक्षा में मेरिट में आने वाले बच्चों को भोपाल/इंदौर/जबलपुर जैसे शहरों में एडमिशन मिलता है।',
+      'वहाँ पढ़ाई और कोचिंग का पूरा खर्च विभाग उठाता है।'
+    ],
+    stepsEn: [
+      'After passing 10th (every year in March-April), fill the online form on MP Tribal Portal (MPTAAS).',
+      'An Entrance Exam is conducted by the govt.',
+      'Children coming in merit in exam get admission in cities like Bhopal/Indore/Jabalpur.',
+      'There entire cost of study and coaching is borne by the dept.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: '10वीं पास छात्र' }
+    ],
+    sourceNotes: 'जनजातीय कार्य विभाग MP द्वारा ST वर्ग के मेधावी छात्रों को राष्ट्रीय स्तर की प्रतियोगी परीक्षाओं हेतु तैयार करने के लिए।',
+    detailedDescription: [
+      'बहुत से आदिवासी (ST) छात्र पढ़ने में बहुत होशियार होते हैं, लेकिन बड़ी-बड़ी कोचिंग क्लास (जैसे कोटा, इंदौर) की लाखों रुपये की फीस नहीं भर पाते। इस वजह से वे NEET (डॉक्टर) या JEE (इंजीनियर) की परीक्षा पास नहीं कर पाते।',
+      'इस समस्या को खत्म करने के लिए जनजातीय कार्य विभाग ने "आकांक्षा योजना" शुरू की है। इसमें बच्चों को 11वीं से ही बड़े शहरों (भोपाल, इंदौर, जबलपुर) में रखकर नामी कोचिंग संस्थानों (Top Coaching Institutes) द्वारा मुफ्त में तैयारी करवाई जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Many tribal (ST) students are very bright in studies, but are not able to pay lakhs of rupees fee of big coaching classes (like Kota, Indore). Due to this they are unable to pass NEET (Doctor) or JEE (Engineer) exam.',
+      'To eliminate this problem, Tribal Affairs Dept has started "Akanksha Yojana". In this, from 11th itself, children are kept in big cities (Bhopal, Indore, Jabalpur) and get free preparation by Top Coaching Institutes.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या मुफ़्त मिलता है?', points: [
+          'मुफ्त कोचिंग (Free Coaching): 11वीं और 12वीं की स्कूल की पढ़ाई के साथ-साथ JEE (Engineering), NEET (Medical) या CLAT (Law) की लाखों रुपये की कोचिंग एकदम मुफ्त दी जाती है।',
+          'मुफ्त हॉस्टल और खाना: रहने के लिए अच्छा हॉस्टल और पौष्टिक भोजन बिना किसी फीस के मिलता है।',
+          'किताबें और टैबलेट: पढ़ाई के लिए ज़रूरी सभी किताबें, स्टेशनरी, और कुछ मामलों में टैबलेट भी सरकार की तरफ से दिए जाते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What all is received free in the scheme?', points: [
+          'Free Coaching: Along with school studies of 11th and 12th, coaching of JEE (Engineering), NEET (Medical) or CLAT (Law) worth lakhs of rupees is given absolutely free.',
+          'Free Hostel and Food: Good hostel to stay and nutritious food is provided without any fee.',
+          'Books and Tablet: All necessary books for studies, stationery, and in some cases tablet is also given by the govt.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी और अनुसूचित जनजाति (ST - Scheduled Tribe) वर्ग का होना चाहिए।',
+      'छात्र ने 10वीं बोर्ड परीक्षा में कम से कम 60% (प्रथम श्रेणी) अंक प्राप्त किए हों।',
+      'यह योजना केवल उन छात्रों के लिए है जो अभी 10वीं पास कर रहे हैं (क्योंकि कोचिंग 11वीं से शुरू होती है)।'
+    ],
+    eligibilityDescriptionEn: [
+      'The student must be a native of Madhya Pradesh and belong to Scheduled Tribe (ST) category.',
+      'The student must have obtained at least 60% (First Division) marks in 10th board exam.',
+      'This scheme is only for those students who are currently passing 10th (because coaching starts from 11th).'
+    ],
+    exclusions: [
+      'SC, OBC या General वर्ग के छात्र इस योजना में आवेदन नहीं कर सकते।',
+      '12वीं पास कर चुके (Dropper) छात्रों को इस योजना का लाभ नहीं मिलता, यह सिर्फ 11वीं में जाने वाले बच्चों के लिए है।'
+    ],
+    exclusionsEn: [
+      'SC, OBC or General category students cannot apply in this scheme.',
+      'Students who have passed 12th (Droppers) do not get the benefit of this scheme, it is only for children going to 11th.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MPTAAS Portal)', steps: [
+          'हर साल 10वीं के रिजल्ट के आस-पास (या परीक्षा से पहले) आकांक्षा योजना के फॉर्म ऑनलाइन (MPTAAS पोर्टल) भरे जाते हैं।',
+          'इसके बाद विभाग द्वारा एक Entrance Test (प्रवेश परीक्षा) ली जाती है।',
+          'परीक्षा में पास होने वाले छात्रों की मेरिट लिस्ट बनती है और उन्हें मनचाहे शहर में एडमिशन दिया जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MPTAAS Portal)', steps: [
+          'Every year around the result of 10th (or before exam), forms of Akanksha Yojana are filled online (MPTAAS portal).',
+          'After this an Entrance Test is taken by the dept.',
+          'A merit list is made of the students who pass the exam and they are given admission in the city of their choice.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या प्रवेश परीक्षा कठिन होती है?', answer: 'यह परीक्षा 10वीं के सिलेबस (Maths, Science) पर आधारित होती है। थोड़ी मेहनत करने पर आसानी से पास की जा सकती है।' },
+      { question: 'क्या ड्रॉपर्स (12वीं पास) बच्चे भी फॉर्म भर सकते हैं?', answer: 'नहीं। इस योजना के नियम के अनुसार केवल 10वीं पास (11वीं में प्रवेश लेने वाले) छात्र ही इसके लिए पात्र हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is the entrance exam tough?', answer: 'This exam is based on 10th syllabus (Maths, Science). With a little hard work it can be easily passed.' },
+      { question: 'Can droppers (12th pass) children also fill the form?', answer: 'No. According to the rules of this scheme, only 10th pass (taking admission in 11th) students are eligible for this.' }
+    ]
+  },
+  'mukhyamantri-gas-cylinder-subsidy-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री गैस सिलिंडर सब्सिडी योजना (450 रु. गैस)',
+    english: 'Mukhyamantri Gas Cylinder 450 Subsidy Yojana',
+    summary: 'लाड़ली बहनों और उज्ज्वला योजना की महिला लाभार्थियों को केवल ₹450 में घरेलू रसोई गैस (LPG) सिलिंडर देने की योजना।',
+    benefit: 'लाभार्थी महिला को गैस सिलिंडर भराने पर बाज़ार मूल्य और ₹450 के बीच की अंतर राशि (Subsidy) सीधे बैंक खाते में वापस (Cashback) मिलेगी।',
+    department: 'खाद्य एवं नागरिक आपूर्ति विभाग',
+    sourceUrl: 'https://cmladlibahna.mp.gov.in/',
+    applicationUrl: 'https://cmladlibahna.mp.gov.in/',
+    documents: [
+      'LPG गैस कनेक्शन की डायरी / उपभोक्ता क्रमांक',
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'लाड़ली बहना का रजिस्ट्रेशन नंबर (यदि हो)',
+      'बैंक पासबुक (DBT सक्रिय)'
+    ],
+    documentsEn: [
+      'Diary of LPG Gas Connection / Consumer Number',
+      'Samagra ID',
+      'Aadhaar Card',
+      'Ladli Behna Registration Number (if any)',
+      'Bank Passbook (DBT active)'
+    ],
+    steps: [
+      'अपने गैस कनेक्शन की जानकारी ग्राम पंचायत सचिव या वार्ड ऑफिस में देकर ऑनलाइन दर्ज़ करवाएं (लाड़ली बहना पोर्टल पर)।',
+      'आप गैस एजेंसी से पूरी कीमत (जैसे ₹800 या ₹900) देकर ही गैस सिलिंडर बुक करें और भरवाएं।',
+      'सिलिंडर भराने के कुछ दिनों बाद, ₹450 के ऊपर की बाकी राशि (सब्सिडी) सरकार आपके बैंक खाते में ट्रांसफर कर देगी।'
+    ],
+    stepsEn: [
+      'Register your gas connection info online by giving it to Gram Panchayat Secretary or Ward Office (on Ladli Behna Portal).',
+      'Book and refill the gas cylinder from the gas agency by paying the full price (like ₹800 or ₹900).',
+      'A few days after refilling the cylinder, the remaining amount (subsidy) above ₹450 will be transferred to your bank account by the govt.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'महिला लाभार्थी (लाड़ली बहना या उज्ज्वला)' }
+    ],
+    sourceNotes: 'खाद्य विभाग एवं WCD MP द्वारा महिलाओं को धुएं से मुक्ति और महंगाई से राहत देने हेतु।',
+    detailedDescription: [
+      'रसोई गैस की बढ़ती कीमतों से महिलाओं को राहत देने के लिए मध्य प्रदेश सरकार ने "गैस सिलिंडर सब्सिडी योजना" लागू की है।',
+      'इस योजना के तहत, महिलाओं को रसोई गैस सिलिंडर केवल 450 रुपये में पड़ेगा। इसके लिए आपको पहले पूरी कीमत देकर गैस रिफिल करानी होती है, और बाकी का पैसा (450 रुपये काटकर) सरकार आपके बैंक खाते में "सब्सिडी (Subsidy)" के रूप में डाल देती है।'
+    ],
+    detailedDescriptionEn: [
+      'To provide relief to women from rising prices of cooking gas, the MP Govt has implemented "Gas Cylinder Subsidy Yojana".',
+      'Under this scheme, cooking gas cylinder will cost women only ₹450. For this, first you have to refill gas by paying full price, and rest of the money (deducting ₹450) is put by the govt in your bank account as "Subsidy".'
+    ],
+    benefitsList: [
+      {
+        heading: '450 रुपये में गैस कैसे मिलेगी?', points: [
+          'पूरा पैसा देना होगा: जब गैस वाला सिलिंडर देने आएगा, तो आपको उसे पूरी बाज़ार कीमत (मान लीजिए ₹850) देनी होगी।',
+          'सब्सिडी का पैसा वापस: महीने के अंत में सरकार ₹850 में से ₹450 काटकर, बचे हुए ₹400 आपके बैंक खाते (DBT) में वापस भेज देगी। यानी आपको सिलिंडर 450 का ही पड़ा।',
+          'हर महीने 1 सिलिंडर: यह छूट हर महीने एक गैस सिलिंडर (यानी साल में अधिकतम 12 सिलिंडर) रिफिल कराने पर ही मिलेगी।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How will gas be available for ₹450?', points: [
+          'Will have to pay full money: When the gas man comes to deliver the cylinder, you will have to pay him the full market price (say ₹850).',
+          'Subsidy money back: At the end of the month, govt will deduct ₹450 from ₹850, and send the remaining ₹400 back to your bank account (DBT). Which means the cylinder cost you only ₹450.',
+          '1 cylinder every month: This discount will be available only on refilling one gas cylinder every month (i.e. max 12 cylinders in a year).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक महिला मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'गैस कनेक्शन महिला के नाम पर ही होना चाहिए (पति या बेटे के नाम पर है तो लाभ नहीं मिलेगा)।',
+      'महिला या तो "प्रधानमंत्री उज्ज्वला योजना" की लाभार्थी होनी चाहिए, या फिर "मुख्यमंत्री लाड़ली बहना योजना" में रजिस्टर्ड होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant woman must be a native of Madhya Pradesh.',
+      'Gas connection must be in the name of the woman herself (if in husband or son\'s name, benefit will not be given).',
+      'The woman must either be a beneficiary of "Pradhan Mantri Ujjwala Yojana" or registered in "Mukhyamantri Ladli Behna Yojana".'
+    ],
+    exclusions: [
+      'यदि गैस कनेक्शन परिवार के किसी पुरुष सदस्य के नाम पर है, तो इसका लाभ नहीं मिलेगा। लाभ लेने के लिए कनेक्शन महिला के नाम ट्रांसफर करना होगा।',
+      'जिन महिलाओं का बैंक खाता आधार से लिंक (DBT Active) नहीं है, उनके खाते में पैसा नहीं आएगा।'
+    ],
+    exclusionsEn: [
+      'If the gas connection is in the name of any male member of the family, its benefit will not be given. To take benefit, connection has to be transferred to woman\'s name.',
+      'Women whose bank account is not linked with Aadhaar (DBT Active), money will not come in their account.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Panchayat/Ward Office)', steps: [
+          'ग्राम पंचायत के सचिव या शहर में वार्ड ऑफिस के कर्मचारी के पास जाएँ।',
+          'उन्हें अपनी लाड़ली बहना आईडी और गैस कनेक्शन की डायरी दिखाएं।',
+          'वे पोर्टल पर आपके गैस कनेक्शन नंबर को आपकी समग्र आईडी/लाड़ली बहना आईडी से जोड़ (Map) देंगे।',
+          'लिंक होने के बाद जब भी आप गैस भराएंगी, सब्सिडी अपने आप खाते में आ जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Panchayat/Ward Office)', steps: [
+          'Go to Gram Panchayat Secretary or Ward Office employee in the city.',
+          'Show them your Ladli Behna ID and Gas connection diary.',
+          'They will link (Map) your gas connection number with your Samagra ID/Ladli Behna ID on the portal.',
+          'After linking, whenever you refill gas, subsidy will automatically come in account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या उज्ज्वला योजना वालों को भी रजिस्ट्रेशन कराना होगा?', answer: 'उज्ज्वला योजना का डेटा सरकार के पास है, लेकिन फिर भी बैंक खाते में सही सब्सिडी आने के लिए पंचायत में जानकारी अपडेट कराना सुरक्षित रहता है।' },
+      { question: 'सब्सिडी का पैसा कब तक आता है?', answer: 'सिलिंडर भराने के बाद, अगले महीने की लाड़ली बहना किश्त के साथ या कुछ ही दिनों में अलग से पैसा खाते में ट्रांसफर कर दिया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Do Ujjwala Yojana people also have to register?', answer: 'Govt has the data of Ujjwala Yojana, but still it is safe to update info in Panchayat so that correct subsidy comes in bank account.' },
+      { question: 'By when does the subsidy money come?', answer: 'After refilling cylinder, money is transferred to account separately in a few days or along with next month\'s Ladli Behna installment.' }
+    ]
+  },
+  'bal-aashirwad-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री बाल आशीर्वाद योजना',
+    english: 'Mukhyamantri Bal Aashirwad Yojana (After Care)',
+    summary: 'अनाथ और बेसहारा बच्चों (जो अनाथालय में रहते हैं) को 18 वर्ष (बालिग) होने के बाद भी आगे की पढ़ाई और करियर बनाने के लिए आर्थिक सहायता।',
+    benefit: '18 वर्ष की आयु पूरी कर चुके अनाथ बच्चों को 24 वर्ष की उम्र तक ₹4,000 प्रति माह और उच्च शिक्षा/व्यावसायिक शिक्षा की पूरी फीस।',
+    department: 'महिला एवं बाल विकास विभाग',
+    sourceUrl: 'https://mpwcdmis.gov.in/',
+    applicationUrl: 'https://mpwcdmis.gov.in/',
+    documents: [
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)',
+      'बाल देखरेख संस्था (अनाथालय / CCI) का विमुक्ति प्रमाण पत्र (Discharge Certificate)',
+      'स्कूल/कॉलेज/ITI का प्रवेश प्रमाण',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Samagra ID',
+      'Aadhaar Card',
+      'Discharge Certificate of Child Care Institution (Orphanage / CCI)',
+      'Admission proof of School/College/ITI',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      '18 वर्ष के होने पर जैसे ही बच्चा अनाथालय (CCI) से बाहर जाने वाला हो, अनाथालय के अधीक्षक द्वारा फॉर्म भरवाया जाता है।',
+      'ज़िला बाल संरक्षण इकाई (DCPU) के पास दस्तावेज़ जमा होते हैं।',
+      'स्वीकृति के बाद पढ़ाई या इंटर्नशिप के दौरान 24 साल की उम्र तक हर महीने 4,000 रुपये मिलते हैं।'
+    ],
+    stepsEn: [
+      'As soon as the child is about to leave orphanage (CCI) on turning 18, form is filled by superintendent of orphanage.',
+      'Documents are submitted to District Child Protection Unit (DCPU).',
+      'After approval, ₹4,000 per month is received during studies or internship till age of 24.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 24 वर्ष' }
+    ],
+    sourceNotes: 'महिला एवं बाल विकास विभाग MP द्वारा आफ्टर-केयर सहायता। अनाथ बच्चों को बालिग होने पर सड़क पर आने से बचाने के लिए।',
+    detailedDescription: [
+      'जो अनाथ और बेसहारा बच्चे बाल देखरेख संस्थाओं (अनाथालयों / CCI) में पलते-बढ़ते हैं, नियम के अनुसार 18 साल के (बालिग) होने पर उन्हें संस्था छोड़नी पड़ती है। ऐसे में इन बच्चों के पास न पैसे होते हैं, न नौकरी और न रहने का ठिकाना।',
+      'इन बच्चों को आत्मनिर्भर बनाने के लिए मध्य प्रदेश सरकार ने "मुख्यमंत्री बाल आशीर्वाद योजना (आफ्टर केयर)" शुरू की है। इसके ज़रिए बच्चा जब 18 साल के बाद कॉलेज या ITI की पढ़ाई करता है, तो सरकार उसे सहारा देती है।'
+    ],
+    detailedDescriptionEn: [
+      'Orphan and destitute children who grow up in Child Care Institutions (Orphanages / CCI), have to leave institution on turning 18 (major) as per rules. In such a situation, these children neither have money, nor job nor a place to live.',
+      'To make these children self-reliant, MP Govt has started "Mukhyamantri Bal Aashirwad Yojana (After Care)". Through this, when child studies in college or ITI after 18 years, govt supports him.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या आर्थिक सहायता मिलती है?', points: [
+          'मासिक पैसा: पढ़ाई (कॉलेज, ITI, या कोचिंग) करने वाले बच्चे को 24 वर्ष की उम्र तक (अधिकतम) ₹4,000 हर महीने दिए जाते हैं।',
+          'कॉलेज फीस: NEET, JEE, CLAT या किसी सरकारी/प्राइवेट कॉलेज में प्रोफेशनल कोर्स करने पर पूरी फीस (अधिकतम 1.5 लाख प्रति वर्ष) सरकार भरती है।',
+          'इंटर्नशिप की मदद: अगर बच्चा कोई व्यावसायिक इंटर्नशिप कर रहा है तो उसे उस दौरान ₹4,000 प्रति माह मिलेंगे (1 साल तक)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What financial assistance is received in scheme?', points: [
+          'Monthly money: A studying child (College, ITI, or Coaching) is given ₹4,000 every month till age of 24 (max).',
+          'College Fee: On doing professional course in NEET, JEE, CLAT or any govt/private college, full fee (max 1.5 lakh per year) is paid by govt.',
+          'Internship help: If child is doing any vocational internship then he will get ₹4,000 per month during that (for 1 year).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक अनाथ (Orphan) होना चाहिए और उसने अपनी उम्र के 18 वर्ष पूरे कर लिए हों।',
+      'बच्चे ने अपना बचपन बाल देखरेख संस्था (Child Care Institution) में बिताया हो और 18 साल पूरे होने पर वहाँ से डिस्चार्ज हुआ हो।',
+      'बच्चा आगे शिक्षा प्राप्त कर रहा हो, या कोई इंटर्नशिप / व्यावसायिक प्रशिक्षण ले रहा हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be an orphan and must have completed 18 years of age.',
+      'Child must have spent his childhood in Child Care Institution and discharged from there on completing 18 years.',
+      'Child must be pursuing further education, or taking any internship / vocational training.'
+    ],
+    exclusions: [
+      'जो बच्चे अनाथालय से बाहर आने के बाद कोई पढ़ाई या काम (ट्रेनिंग) नहीं कर रहे हैं, उन्हें यह पैसा नहीं मिलेगा।',
+      '24 वर्ष की उम्र पूरी होते ही यह आर्थिक सहायता बंद हो जाएगी।'
+    ],
+    exclusionsEn: [
+      'Children who are not doing any studies or work (training) after coming out of orphanage, will not get this money.',
+      'This financial assistance will stop as soon as the age of 24 is completed.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (DCPU Office)', steps: [
+          'संस्था छोड़ने (18 वर्ष) से ठीक पहले अनाथालय का अधीक्षक बाल कल्याण समिति (CWC) के सामने बच्चे का केस रखता है।',
+          'ज़िला बाल संरक्षण अधिकारी (DCPO) बच्चे के आगे की पढ़ाई का प्लान बनाता है और फॉर्म भरवाता है।',
+          'कलेक्टर (Collector) की अध्यक्षता वाली समिति इसे पास करती है, जिसके बाद पैसा सीधा बच्चे के बैंक खाते में आना शुरू हो जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (DCPU Office)', steps: [
+          'Just before leaving institution (18 years) superintendent of orphanage puts child\'s case before Child Welfare Committee (CWC).',
+          'District Child Protection Officer (DCPO) makes plan of child\'s further studies and gets form filled.',
+          'Committee chaired by Collector passes it, after which money starts coming directly in child\'s bank account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह योजना उन अनाथ बच्चों के लिए है जो अपने रिश्तेदारों के साथ रहते हैं?', answer: 'हाँ, स्पॉन्सरशिप (Sponsorship) योजना के तहत 18 वर्ष से कम उम्र के ऐसे अनाथ बच्चों को भी रिश्तेदारों के यहाँ रहते हुए 4000 रुपये महीने मिल सकते हैं (मुख्यमंत्री बाल आशीर्वाद योजना का एक हिस्सा)।' },
+      { question: 'क्या 24 साल के बाद भी लाभ मिलेगा?', answer: 'नहीं। इस योजना का मक़सद 18 से 24 साल की उम्र के बीच बच्चों को पैरों पर खड़ा (आत्मनिर्भर) करना है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this scheme for orphan children who live with relatives?', answer: 'Yes, under Sponsorship scheme, such orphan children below 18 years living with relatives can also get 4000 rupees a month (a part of Mukhyamantri Bal Aashirwad Yojana).' },
+      { question: 'Will benefit be received even after 24 years?', answer: 'No. The purpose of this scheme is to make children between 18 to 24 years of age stand on their feet (self-reliant).' }
+    ]
+  },
+  'covid-19-bal-kalyan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कोविड-19 बाल कल्याण योजना',
+    english: 'Covid-19 Bal Kalyan Yojana (Orphan Support)',
+    summary: 'कोरोना महामारी (COVID-19) के दौरान अपने माता-पिता को खो चुके अनाथ बच्चों के लिए हर महीने 5,000 रुपये पेंशन, मुफ्त राशन और मुफ्त शिक्षा की योजना।',
+    benefit: 'कोविड-19 से अनाथ हुए बच्चों को 21 वर्ष की आयु तक ₹5,000 प्रति माह पेंशन, जीवन-यापन के लिए निःशुल्क राशन और कॉलेज तक मुफ्त शिक्षा।',
+    department: 'महिला एवं बाल विकास विभाग',
+    sourceUrl: 'https://mpwcdmis.gov.in/',
+    applicationUrl: 'https://mpwcdmis.gov.in/',
+    documents: [
+      'माता-पिता दोनों का मृत्यु प्रमाण पत्र (Death Certificate - कोविड संक्रमण से मृत्यु)',
+      'बच्चे का आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'मूल निवास प्रमाण पत्र',
+      'बच्चे के नाम से खुला बैंक खाता (Bank Passbook)'
+    ],
+    documentsEn: [
+      'Death Certificate of both parents (due to Covid infection)',
+      'Child\'s Aadhaar Card',
+      'Samagra ID',
+      'Domicile Certificate',
+      'Bank Account opened in child\'s name (Bank Passbook)'
+    ],
+    steps: [
+      'योजना का लाभ लेने के लिए ज़िला कलेक्टर कार्यालय (Collectorate) या ज़िला महिला एवं बाल विकास अधिकारी (DPO) से संपर्क करें।',
+      'वहाँ निर्धारित फॉर्म के साथ सभी दस्तावेज़ (विशेषकर मृत्यु प्रमाण पत्र) जमा करें।',
+      'कलेक्टर की अध्यक्षता वाली समिति द्वारा जाँच और मंज़ूरी दी जाएगी।',
+      'स्वीकृति के बाद हर महीने बच्चे के खाते में पेंशन आना शुरू हो जाएगी।'
+    ],
+    stepsEn: [
+      'To take benefit of scheme, contact District Collectorate or District Women & Child Development Officer (DPO).',
+      'Submit all documents (especially death certificates) along with prescribed form there.',
+      'Checking and approval will be given by committee chaired by Collector.',
+      'After approval, pension will start coming in child\'s account every month.'
+    ],
+    rules: [
+      { field: 'age', op: 'lte', value: 21, label: 'कोविड में माता-पिता खो चुके 21 वर्ष से कम आयु के बच्चे' }
+    ],
+    sourceNotes: 'WCD MP द्वारा कोरोना काल में अनाथ हुए बच्चों की सुरक्षा और भरण-पोषण हेतु विशेष पहल।',
+    detailedDescription: [
+      'कोरोना वायरस (COVID-19) की महामारी ने कई परिवारों को उजाड़ दिया। ऐसे कई बच्चे हैं जिनके सिर से माता-पिता दोनों का साया उठ गया। इन बेसहारा बच्चों का भविष्य सुरक्षित करने के लिए मध्य प्रदेश सरकार ने "मुख्यमंत्री कोविड-19 बाल कल्याण योजना" बनाई है।',
+      'इस योजना का उद्देश्य है कि अनाथ हुए बच्चों को आर्थिक तंगी का सामना न करना पड़े, उन्हें पेट भर खाना मिले और उनकी पढ़ाई न छूटे। सरकार इन बच्चों को 21 साल का होने तक पालने की पूरी ज़िम्मेदारी लेती है।'
+    ],
+    detailedDescriptionEn: [
+      'The Corona virus (COVID-19) pandemic devastated many families. There are many children who lost both their parents. To secure future of these destitute children, MP Govt has created "Mukhyamantri Covid-19 Bal Kalyan Yojana".',
+      'The objective of this scheme is that orphaned children do not have to face financial hardship, get full meals and their studies are not dropped. Govt takes full responsibility of raising these children till they turn 21.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          '₹5,000 मासिक पेंशन: बच्चे को हर महीने 5,000 रुपये नकद दिए जाते हैं ताकि उसकी रोज़मर्रा की ज़रूरतें पूरी हो सकें।',
+          'मुफ्त राशन (Free Food Grains): बच्चे को "राष्ट्रीय खाद्य सुरक्षा अधिनियम (NFSA)" के तहत पात्रता पर्ची दी जाती है, जिससे उसे सरकारी राशन दुकान से मुफ्त गेंहू/चावल मिलता है।',
+          'पहली से कॉलेज तक मुफ्त शिक्षा: बच्चा चाहे सरकारी स्कूल में पढ़े या प्राइवेट में (Right to Education के तहत), और आगे कॉलेज (BA, BSc, Engineering आदि) की पढ़ाई करे, उसका पूरा खर्च सरकार उठाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          '₹5,000 Monthly Pension: Child is given ₹5,000 cash every month so that his daily needs can be met.',
+          'Free Ration (Free Food Grains): Child is given eligibility slip under NFSA, from which he gets free wheat/rice from govt ration shop.',
+          'Free education from 1st to College: Whether child studies in govt school or private (under Right to Education), and further college studies (BA, BSc, Engineering etc), entire cost is borne by govt.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'बच्चे के माता-पिता दोनों की मृत्यु 1 मार्च 2021 से 30 जून 2021 के बीच कोविड-19 (Corona) के कारण हुई हो।',
+      'या फिर, माता-पिता में से किसी एक की मृत्यु पहले ही हो चुकी हो, और दूसरे (बचे हुए) की मृत्यु कोविड-19 से हो गई हो, जिससे बच्चा पूरी तरह अनाथ हो गया हो।',
+      'बच्चे की उम्र 21 साल से कम होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Both parents of the child must have died due to Covid-19 (Corona) between 1 March 2021 to 30 June 2021.',
+      'Or, one of the parents had already died, and the other (surviving) died due to Covid-19, making the child completely orphan.',
+      'The age of the child should be less than 21 years.'
+    ],
+    exclusions: [
+      'जिन बच्चों के माता-पिता में से कोई एक जीवित है (जैसे पिता की मृत्यु हुई, लेकिन माँ जीवित है), उन्हें इस योजना का लाभ नहीं मिलेगा।',
+      'अगर माता-पिता की मृत्यु कोविड के अलावा किसी अन्य बीमारी या दुर्घटना से हुई है, तो वे इस योजना के पात्र नहीं हैं (उनके लिए अन्य स्पॉन्सरशिप योजनाएं हैं)।'
+    ],
+    exclusionsEn: [
+      'Children who have one of their parents alive (e.g. father died, but mother is alive), will not get benefit of this scheme.',
+      'If parents died due to any other disease or accident other than Covid, they are not eligible for this scheme (there are other sponsorship schemes for them).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (Collector / DPO Office)', steps: [
+          'हालाँकि सरकार ने ऐसे अनाथ बच्चों को स्वयं ढूंढकर लाभ दिया है, फिर भी यदि कोई छूट गया है तो वह ज़िला महिला एवं बाल विकास अधिकारी (DPO) से मिल सकता है।',
+          'सभी दस्तावेज़ों (मृत्यु प्रमाण पत्र, समग्र, आधार) की फाइल तैयार कर ज़िला स्तरीय बाल कल्याण समिति (CWC) के समक्ष प्रस्तुत की जाती है।',
+          'कलेक्टर की मंज़ूरी के बाद लाभ चालू कर दिया जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Collector / DPO Office)', steps: [
+          'Although govt has itself found such orphan children and given benefits, still if someone is left out, they can meet District Women & Child Development Officer (DPO).',
+          'A file of all documents (Death Certificate, Samagra, Aadhaar) is prepared and presented before District level Child Welfare Committee (CWC).',
+          'After Collector\'s approval, benefit is started.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या 21 साल की उम्र के बाद भी पेंशन मिलेगी?', answer: 'नहीं। 21 साल का होने के बाद बच्चे को बालिग और आत्मनिर्भर मानकर पेंशन बंद कर दी जाती है।' },
+      { question: 'अगर बच्चे की कोई देखभाल करने वाला (संरक्षक/Guardian) है, तो पैसा किसे मिलेगा?', answer: 'पैसा सीधे बच्चे और उसके कानूनी संरक्षक के संयुक्त (Joint) बैंक खाते में भेजा जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'Will pension be received even after 21 years of age?', answer: 'No. After turning 21, the child is considered major and self-reliant and pension is stopped.' },
+      { question: 'If the child has a caretaker (Guardian), who will get money?', answer: 'Money is sent directly to the joint bank account of child and his legal guardian.' }
+    ]
+  },
+  'padho-aur-padhao-yojana': {
+    ...reviewed,
+    title: 'पढ़ो और पढ़ाओ योजना (अक्षर साथी)',
+    english: 'Padho Aur Padhao Yojana (Literacy Volunteer)',
+    summary: 'गांव या शहर के उन लोगों को जो पढ़ना-लिखना नहीं जानते (निरक्षर), उन्हें मुफ्त में अक्षर ज्ञान सिखाने और स्वयंसेवकों को इसके लिए प्रोत्साहित करने की योजना।',
+    benefit: 'पढ़ाने वाले स्वयंसेवकों (अक्षर साथी) को सरकार की ओर से प्रमाण-पत्र (Certificate), टीएलएम किट (Teaching Material) और प्रोत्साहन मिलता है।',
+    department: 'स्कूल शिक्षा विभाग (राज्य शिक्षा केंद्र)',
+    sourceUrl: 'https://educationportal.mp.gov.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'स्वयंसेवक (Volunteer) का आधार कार्ड',
+      'समग्र आईडी (Samagra ID)',
+      'स्वयंसेवक की कम से कम 10वीं पास की मार्कशीट',
+      'सीखने वाले व्यक्ति (शिक्षार्थी) का आधार कार्ड'
+    ],
+    documentsEn: [
+      'Aadhaar Card of Volunteer',
+      'Samagra ID',
+      'At least 10th pass marksheet of volunteer',
+      'Aadhaar Card of learning person (Learner)'
+    ],
+    steps: [
+      'पढ़ाने के इच्छुक लोग (छात्र, शिक्षक, रिटायर्ड व्यक्ति) अपने मोबाइल में ULLAS (उल्लास) ऐप डाउनलोड करें।',
+      'ऐप में खुद को "Volunteer" (स्वयंसेवक/अक्षर साथी) के रूप में रजिस्टर करें।',
+      'अपने आस-पास के उन लोगों (15 साल से बड़े) को ऐप में जोड़ें जो पढ़ना-लिखना सीखना चाहते हैं।',
+      'उन्हें अक्षर ज्ञान दें और सरकार द्वारा आयोजित बुनियादी साक्षरता परीक्षा (Basic Literacy Exam) दिलाएं।'
+    ],
+    stepsEn: [
+      'People interested in teaching (Students, Teachers, Retired persons) download ULLAS app in their mobile.',
+      'Register yourself in app as "Volunteer" (Akshar Saathi).',
+      'Add people around you (above 15 years) in the app who want to learn reading & writing.',
+      'Give them knowledge of letters and make them take Basic Literacy Exam conducted by govt.'
+    ],
+    rules: [],
+    sourceNotes: 'नव भारत साक्षरता कार्यक्रम के तहत 15 वर्ष से अधिक उम्र के असाक्षरों को साक्षर बनाने का अभियान।',
+    detailedDescription: [
+      'आज के समय में भी कई बड़े-बुज़ुर्ग (15 साल से ज़्यादा उम्र के लोग) ऐसे हैं, जिन्हें अक्षर ज्ञान नहीं है (यानी वे अपना नाम भी नहीं लिख सकते)। ऐसे लोगों को "अंगूठा छाप" से "साक्षर" बनाने के लिए सरकार ने "नव भारत साक्षरता कार्यक्रम (पढ़ो और पढ़ाओ)" शुरू किया है।',
+      'इस योजना में कोई भी पढ़ा-लिखा व्यक्ति (जैसे कॉलेज का छात्र, शिक्षक, या समाजसेवी) स्वेच्छा से "अक्षर साथी" बन सकता है और अपने आस-पास के निरक्षर लोगों को पढ़ना-लिखना, मोबाइल चलाना और बैंक के काम (संख्यात्मक ज्ञान) सिखा सकता है।'
+    ],
+    detailedDescriptionEn: [
+      'Even today there are many elderly people (above 15 years) who do not have knowledge of letters (i.e. they cannot even write their name). To make such people "literate" from "thumb impression", govt has started "Nav Bharat Saksharta Karyakram (Padho Aur Padhao)".',
+      'In this scheme, any educated person (like college student, teacher, or social worker) can voluntarily become "Akshar Saathi" and teach illiterate people around them reading & writing, using mobile and bank work (numerical knowledge).'
+    ],
+    benefitsList: [
+      {
+        heading: 'इसमें जुड़ने से क्या लाभ होगा?', points: [
+          'समाज सेवा: आप अपने गांव या मोहल्ले के बड़े-बुज़ुर्गों को साक्षर बनाकर समाज की बड़ी मदद करते हैं।',
+          'सरकारी प्रमाण-पत्र: एक व्यक्ति को साक्षर बनाने और परीक्षा पास करवाने पर आपको सरकार की तरफ से "अक्षर साथी" का आधिकारिक Certificate दिया जाता है (जो आपके रेज़्यूमे/CV में काम आता है)।',
+          'टीचिंग मटेरियल (TLM): पढ़ाने के लिए किताबें, स्लेट, पेंसिल (टीएलएम किट) सरकार द्वारा मुफ्त दी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is benefit of joining this?', points: [
+          'Social Service: You help society a lot by making elderly people of your village or locality literate.',
+          'Govt Certificate: On making a person literate and passing the exam, you are given an official Certificate of "Akshar Saathi" by govt (which is useful in your Resume/CV).',
+          'Teaching Material (TLM): Books, slate, pencil (TLM kit) for teaching are given free by govt.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'पढ़ाने वाला (स्वयंसेवक): कोई भी पढ़ा-लिखा व्यक्ति, जिसकी उम्र 18 साल या उससे अधिक हो और कम से कम 10वीं पास हो। (छात्र, NCC/NSS कैडेट, आँगनवाड़ी कार्यकर्ता आदि)।',
+      'पढ़ने वाला (शिक्षार्थी): कोई भी ऐसा व्यक्ति जिसकी उम्र 15 साल से ज़्यादा हो और जिसे पढ़ना-लिखना न आता हो (जो कभी स्कूल न गया हो)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Teacher (Volunteer): Any educated person, whose age is 18 years or more and at least 10th pass. (Students, NCC/NSS Cadets, Anganwadi workers etc).',
+      'Learner: Any such person whose age is more than 15 years and who does not know reading-writing (who has never been to school).'
+    ],
+    exclusions: [
+      'यह कोई नौकरी (Job) नहीं है, इसमें पढ़ाने वाले को कोई मासिक सैलरी (Salary) या वेतन नहीं मिलता। यह एक स्वयंसेवी (Voluntary) काम है।',
+      '15 साल से कम उम्र के बच्चों को इस योजना में शिक्षार्थी के रूप में नहीं जोड़ा जा सकता (उन्हें स्कूल भेजना ज़रूरी है)।'
+    ],
+    exclusionsEn: [
+      'This is not a Job, teacher does not get any monthly Salary or wage in this. This is a Voluntary work.',
+      'Children below 15 years cannot be added as learners in this scheme (it is mandatory to send them to school).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (ULLAS App)', steps: [
+          'अपने स्मार्टफोन के Google Play Store से ULLAS (उल्लास) - Nav Bharat Saksharta Karyakram ऐप डाउनलोड करें।',
+          'ऐप खोलें और "Volunteer" (अक्षर साथी) के तौर पर अपना मोबाइल नंबर डालकर रजिस्ट्रेशन करें।',
+          'फिर "Learner" सेक्शन में जाकर उन लोगों का आधार कार्ड नंबर डालकर उन्हें जोड़ें जिन्हें आप पढ़ाने वाले हैं।',
+          'जब वे लोग पढ़-लिख लें, तो साल में दो बार होने वाली बुनियादी साक्षरता परीक्षा (Basic Literacy Exam) में उन्हें बैठाएं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (ULLAS App)', steps: [
+          'Download ULLAS - Nav Bharat Saksharta Karyakram app from Google Play Store on your smartphone.',
+          'Open app and register yourself as "Volunteer" (Akshar Saathi) by entering your mobile number.',
+          'Then go to "Learner" section and add those people by entering their Aadhaar card number whom you are going to teach.',
+          'When those people learn to read & write, make them sit in Basic Literacy Exam held twice a year.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या अक्षर साथी बनने के लिए कोई पैसे मिलते हैं?', answer: 'नहीं। यह पूर्णतः स्वैच्छिक (Voluntary) सेवा है। इसमें आपको सरकार से सैलरी नहीं, बल्कि सम्मान और प्रमाण-पत्र मिलता है।' },
+      { question: 'शिक्षार्थी (पढ़ने वाले) को परीक्षा पास करने पर क्या मिलता है?', answer: 'परीक्षा पास करने पर उन्हें साक्षरता का प्रमाण पत्र (Literacy Certificate) दिया जाता है, जिससे वे आधिकारिक रूप से "साक्षर" माने जाते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is there any money for becoming Akshar Saathi?', answer: 'No. This is purely voluntary service. In this you do not get salary from govt, but honor and certificate.' },
+      { question: 'What does learner get on passing exam?', answer: 'On passing exam, they are given Literacy Certificate, by which they are officially considered "Literate".' }
+    ]
+  },
+  'ration-aapke-dwar-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री राशन आपके द्वार योजना',
+    english: 'Mukhyamantri Ration Aapke Dwar Yojana (Doorstep Food Delivery)',
+    summary: 'मध्य प्रदेश के 89 जनजातीय (आदिवासी) विकासखंडों में रहने वाले ग्रामीणों को राशन लेने के लिए दूर न जाना पड़े, इसलिए गांव में ही वाहन के माध्यम से राशन पहुँचाने की योजना।',
+    benefit: 'सुदूर गांवों के आदिवासियों को उनके घर/गांव में (द्वार पर) मुफ्त राशन (चावल, गेहूं, नमक) का वितरण।',
+    department: 'खाद्य एवं नागरिक आपूर्ति विभाग',
+    sourceUrl: 'https://epos.mp.gov.in/',
+    applicationUrl: 'https://epos.mp.gov.in/',
+    documents: [
+      'राशन पात्रता पर्ची (Ration Eligibility Slip)',
+      'समग्र आईडी (Samagra ID)',
+      'आधार कार्ड (Aadhaar Card)'
+    ],
+    documentsEn: [
+      'Ration Eligibility Slip',
+      'Samagra ID',
+      'Aadhaar Card'
+    ],
+    steps: [
+      'इस योजना का लाभ लेने के लिए आपको कहीं आवेदन नहीं करना है।',
+      'अगर आपका गांव 89 जनजातीय विकासखंडों की सूची में है और राशन दुकान से दूर है, तो राशन वाहन आपके गांव में ही आएगा।',
+      'गांव में तय दिन (वितरण दिवस) पर वाहन आने पर, पीओएस (e-PoS) मशीन पर अपना अंगूठा लगाएं और राशन प्राप्त करें।'
+    ],
+    stepsEn: [
+      'You do not have to apply anywhere to take benefit of this scheme.',
+      'If your village is in the list of 89 tribal blocks and is far from the ration shop, the ration vehicle will come to your village itself.',
+      'On the fixed day (distribution day) when vehicle arrives in village, put your thumb on e-PoS machine and get ration.'
+    ],
+    rules: [
+      { field: 'rural', op: 'eq', value: true, label: '89 जनजातीय विकासखंडों के ग्रामीण परिवार' }
+    ],
+    sourceNotes: 'आदिवासी बहुल क्षेत्रों में राशन दुकान तक की लंबी दूरी कम करने के लिए डोरस्टेप डिलीवरी।',
+    detailedDescription: [
+      'मध्य प्रदेश के पहाड़ी और जंगलों वाले आदिवासी (Tribal) इलाकों में कई बार लोगों को अपना 10-15 किलो राशन लेने के लिए 5 से 10 किलोमीटर दूर पंचायत मुख्यालय पैदल जाना पड़ता था। इससे उनकी एक दिन की मज़दूरी भी मारी जाती थी।',
+      'इस परेशानी को देखते हुए सरकार ने "राशन आपके द्वार योजना" शुरू की है। अब सरकार छोटे लोडिंग वाहनों (जैसे पिकअप) में राशन लादकर सीधे गांव के चौराहे तक भेजती है, जिससे लोगों को अपने गांव में ही राशन मिल जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'In hilly and forested tribal areas of MP, sometimes people had to walk 5 to 10 kilometers to the Panchayat headquarters to get their 10-15 kg ration. Due to this their one day wage was also lost.',
+      'Seeing this problem, Govt has started "Ration Aapke Dwar Yojana". Now Govt loads ration in small loading vehicles (like pickup) and sends it directly to the village crossroads, so that people get ration in their village itself.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य फायदे', points: [
+          'समय और पैसे की बचत: अब राशन लेने के लिए किराया खर्च करके या पैदल दूर नहीं जाना पड़ता।',
+          'मज़दूरी का नुकसान नहीं: गांव में राशन मिलने से आदिवासी भाई-बहनों की एक दिन की दिहाड़ी (मज़दूरी) बच जाती है।',
+          'पूरा और सही वज़न: वाहनों में इलेक्ट्रॉनिक कांटा और पीओएस मशीन (e-PoS) लगी होती है, जिससे पूरा और सही तौल कर राशन मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main benefits of the scheme', points: [
+          'Saving of time and money: Now one does not have to go far by spending fare or walking to get ration.',
+          'No loss of wage: Getting ration in village saves one day\'s wage of tribal brothers and sisters.',
+          'Full and correct weight: Vehicles are equipped with electronic weighing scale and e-PoS machine, which gives full and correctly weighed ration.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'परिवार मध्य प्रदेश के चिन्हित 89 जनजातीय (आदिवासी) विकासखंडों (Tribal Blocks) का निवासी होना चाहिए।',
+      'परिवार के पास राशन लेने के लिए वैद्य "पात्रता पर्ची (Eligibility Slip)" होनी चाहिए।',
+      'यह योजना उन गांवों के लिए है जहाँ उचित मूल्य की दुकान (Ration Shop) नहीं है या जो दुकान से काफी दूर हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'The family must be a resident of the identified 89 Tribal Blocks of Madhya Pradesh.',
+      'The family must have a valid "Eligibility Slip" to get ration.',
+      'This scheme is for those villages where there is no Fair Price Shop (Ration Shop) or which are quite far from the shop.'
+    ],
+    exclusions: [
+      'शहरी क्षेत्रों (Cities) या गैर-जनजातीय विकासखंडों में रहने वाले लोगों के लिए यह सुविधा नहीं है; उन्हें अपनी तय दुकान से ही राशन लेना होगा।',
+      'जिस गांव में पहले से ही सरकारी उचित मूल्य की दुकान है, वहाँ राशन वाहन नहीं भेजा जाता।'
+    ],
+    exclusionsEn: [
+      'This facility is not for people living in urban areas (Cities) or non-tribal blocks; they will have to get ration from their designated shop only.',
+      'Ration vehicle is not sent to the village which already has a govt fair price shop.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑटोमैटिक (Automatic Delivery)', steps: [
+          'योजना का लाभ लेने के लिए कोई अलग से फॉर्म नहीं भरना है।',
+          'खाद्य विभाग खुद गांव के हिसाब से रूट (Route) और दिन तय करता है।',
+          'गांव के सरपंच या सचिव द्वारा पहले ही सूचना दे दी जाती है कि राशन वाहन किस दिन गांव में आएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Automatic Delivery', steps: [
+          'No separate form has to be filled to take benefit of the scheme.',
+          'Food Dept itself decides the route and day according to the village.',
+          'Information is given in advance by the Sarpanch or Secretary of the village on which day the ration vehicle will come to the village.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'राशन वाहन महीने में कितनी बार आता है?', answer: 'आमतौर पर महीने में एक बार तय दिन पर वाहन राशन लेकर गांव में आता है।' },
+      { question: 'अगर मैं उस दिन गांव में नहीं हूँ तो क्या होगा?', answer: 'आप अपना राशन अपनी मूल उचित मूल्य की दुकान पर जाकर किसी भी दिन (महीने के अंत तक) प्राप्त कर सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'How many times in a month does the ration vehicle come?', answer: 'Usually once a month on a fixed day, the vehicle comes to the village with ration.' },
+      { question: 'What if I am not in the village that day?', answer: 'You can get your ration by going to your original fair price shop any day (till end of month).' }
+    ]
+  },
+  'yuva-annadoot-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री युवा अन्नदूत योजना',
+    english: 'Mukhyamantri Yuva Annadoot Yojana (Ration Delivery Vehicle)',
+    summary: 'बेरोज़गार युवाओं को राशन बाँटने वाले लोडिंग वाहन (Truck/Pickup) खरीदने के लिए बैंक लोन और सब्सिडी देकर स्वरोज़गार से जोड़ने की योजना।',
+    benefit: 'राशन परिवहन वाहन खरीदने के लिए ₹7.5 लाख तक का बैंक लोन, सरकार की तरफ से 3% ब्याज अनुदान, मार्जिन मनी और हर महीने पक्की कमाई (भाड़ा)।',
+    department: 'खाद्य एवं नागरिक आपूर्ति विभाग / MSME',
+    sourceUrl: 'https://epos.mp.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'न्यूनतम 8वीं पास की मार्कशीट',
+      'भारी/हल्का वाणिज्यिक वाहन चलाने का ड्राइविंग लाइसेंस (HMV/LMV)',
+      'मूल निवास प्रमाण पत्र'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Minimum 8th pass marksheet',
+      'Driving License to drive Heavy/Light Commercial Vehicle (HMV/LMV)',
+      'Domicile Certificate'
+    ],
+    steps: [
+      'योजना का विज्ञापन निकलने पर SAMAST पोर्टल (samast.mponline.gov.in) पर ऑनलाइन आवेदन करें।',
+      'कलेक्टर की अध्यक्षता वाली समिति आवेदनों की जाँच कर आपका चयन करेगी।',
+      'चयन होने पर बैंक से वाहन (Loading Vehicle) खरीदने के लिए लोन पास होगा।',
+      'वाहन मिलने के बाद आपको तय सेक्टर (राशन दुकानों) तक राशन पहुँचाने का ठेका मिल जाएगा।'
+    ],
+    stepsEn: [
+      'Apply online on SAMAST portal (samast.mponline.gov.in) when the scheme advertisement comes out.',
+      'A committee chaired by Collector will check applications and select you.',
+      'On selection, loan will be passed from bank to buy vehicle (Loading Vehicle).',
+      'After getting vehicle, you will get the contract to deliver ration to the fixed sector (ration shops).'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'राशन के परिवहन का काम ठेकेदारों से हटाकर स्थानीय युवाओं को देने की स्वरोज़गार योजना।',
+    detailedDescription: [
+      'पहले सरकारी गोदामों से राशन दुकानों तक गेहूं-चावल पहुँचाने का काम बड़े ठेकेदार (Transporters) करते थे। इससे स्थानीय युवाओं को कोई फायदा नहीं होता था।',
+      'अब मध्य प्रदेश सरकार ने "युवा अन्नदूत योजना" शुरू की है। इसमें सरकार बेरोजगार युवाओं को खुद का लोडिंग वाहन (जैसे टाटा एस, पिकअप) खरीदने के लिए आसान किश्तों पर लोन दिलवाती है और फिर उन्हीं युवाओं को राशन पहुँचाने का काम (भाड़ा) देती है। इससे युवा को एक पक्की मासिक आय (Income) होने लगती है।'
+    ],
+    detailedDescriptionEn: [
+      'Earlier, the work of transporting wheat and rice from govt warehouses to ration shops was done by big contractors (Transporters). Local youth did not get any benefit from this.',
+      'Now MP Govt has started "Yuva Annadoot Yojana". In this, govt gets easy installment loans for unemployed youth to buy their own loading vehicle (like Tata Ace, Pickup) and then gives the work of delivering ration (freight) to those same youth. Due to this, the youth starts getting a fixed monthly income.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के तहत मिलने वाली सुविधाएँ', points: [
+          'बैंक लोन की गारंटी: वाहन (Vehicle) खरीदने के लिए 7.5 लाख रुपये तक का लोन बैंक से आसानी से मिल जाता है।',
+          'ब्याज पर छूट: लोन के ब्याज पर सरकार 3% की सब्सिडी (अनुदान) देती है, यानी आपको कम ब्याज चुकाना पड़ता है।',
+          'पक्की कमाई: आपको सेक्टर (कुछ राशन दुकानों का समूह) दे दिया जाता है। आप जितना राशन ढोते हैं, उसके हिसाब से आपको हर महीने 50 हज़ार से 1 लाख रुपये (खर्च काटकर अच्छी बचत) तक का भाड़ा (Freight) सरकार से मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Facilities received under the scheme', points: [
+          'Bank Loan Guarantee: Loan up to ₹7.5 lakh to buy a vehicle is easily available from the bank.',
+          'Discount on Interest: Govt gives 3% subsidy on loan interest, meaning you have to pay less interest.',
+          'Fixed Income: You are given a sector (group of few ration shops). Depending on how much ration you carry, you get freight from govt up to ₹50,000 to ₹1 Lakh every month (good savings after deducting expenses).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और बेरोज़गार होना चाहिए।',
+      'उम्र 18 वर्ष से लेकर 45 वर्ष के बीच होनी चाहिए।',
+      'शैक्षणिक योग्यता कम से कम 8वीं कक्षा पास होनी चाहिए।',
+      'आवेदक के पास वाणिज्यिक वाहन (Commercial Vehicle) चलाने का वैध ड्राइविंग लाइसेंस होना अनिवार्य है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be a native of Madhya Pradesh and unemployed.',
+      'Age should be between 18 years to 45 years.',
+      'Educational qualification must be at least 8th class pass.',
+      'It is mandatory for the applicant to have a valid driving license to drive a commercial vehicle.'
+    ],
+    exclusions: [
+      'शासकीय सेवक, पेंशनर या जिनके परिवार का कोई सदस्य सरकारी नौकरी में है, वे इसके लिए अपात्र हैं।',
+      'डिफॉल्टर (जिनका किसी बैंक में लोन बकाया/खराब है) इस योजना में लोन नहीं ले सकते।'
+    ],
+    exclusionsEn: [
+      'Govt servants, pensioners or whose family member is in govt job are ineligible for this.',
+      'Defaulters (who have outstanding/bad loan in any bank) cannot take loan in this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'ज़िले में युवा अन्नदूत की वैकेंसी (सेक्टर) खाली होने पर विज्ञापन निकाला जाता है।',
+          'आपको MP Online के SAMAST पोर्टल (samast.mponline.gov.in) पर जाकर योजना में रजिस्ट्रेशन करना होता है।',
+          'सभी दस्तावेज़ ऑनलाइन अपलोड करें।',
+          'ज़िला स्तर पर कलेक्टर के नेतृत्व वाली समिति इंटरव्यू/मेरिट के आधार पर चयन करती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Advertisement is issued when Yuva Annadoot vacancy (sector) is empty in the district.',
+          'You have to go to MP Online\'s SAMAST portal (samast.mponline.gov.in) and register in the scheme.',
+          'Upload all documents online.',
+          'At district level, committee led by Collector selects on the basis of interview/merit.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे अपनी तरफ से भी कुछ पैसा लगाना होगा?', answer: 'हाँ, वाहन की कीमत का कुछ प्रतिशत (मार्जिन मनी) आपको लगाना पड़ सकता है, बाकी बैंक लोन देगा और सरकार मार्जिन मनी अनुदान देगी।' },
+      { question: 'क्या वाहन मैं अपनी मर्जी का ले सकता हूँ?', answer: 'विभाग द्वारा वाहन की क्षमता (जैसे 3 टन से 8 टन) तय की जाती है, आप उस क्षमता का कोई भी कमर्शियल वाहन ले सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Will I have to put some money from my side too?', answer: 'Yes, you may have to put some percentage (Margin Money) of vehicle cost, rest bank will give loan and govt will give margin money subsidy.' },
+      { question: 'Can I take vehicle of my choice?', answer: 'Capacity of vehicle (like 3 ton to 8 ton) is fixed by dept, you can take any commercial vehicle of that capacity.' }
+    ]
+  },
+  'mp-mukhyamantri-udyam-kranti-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री उद्यम क्रांति योजना',
+    english: 'Mukhyamantri Udyam Kranti Yojana (Self Employment)',
+    summary: 'पढ़े-लिखे बेरोज़गार युवाओं को खुद का उद्योग या व्यवसाय (Business) शुरू करने के लिए 1 से 50 लाख तक का बैंक लोन बिना किसी गारंटी के दिलवाने की योजना।',
+    benefit: 'युवाओं को व्यवसाय (Business/Service) के लिए ₹1 से ₹25 लाख और उद्योग (Manufacturing) के लिए ₹1 से ₹50 लाख तक का लोन, जिसमें बैंक गारंटी सरकार लेती है और 3% ब्याज भी सरकार भरती है।',
+    department: 'सूक्ष्म, लघु एवं मध्यम उद्यम (MSME) विभाग',
+    sourceUrl: 'https://samast.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'कम से कम 12वीं पास की मार्कशीट (12th Marksheet)',
+      'मूल निवास प्रमाण पत्र (Domicile)',
+      'बैंक खाता पासबुक (Bank Passbook)',
+      'प्रोजेक्ट रिपोर्ट (DPR - आप जो बिज़नेस करना चाहते हैं उसकी रिपोर्ट)'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'At least 12th pass Marksheet',
+      'Domicile Certificate',
+      'Bank Account Passbook',
+      'Project Report (DPR - report of the business you want to do)'
+    ],
+    steps: [
+      'सबसे पहले अपने उद्योग/व्यापार की एक अच्छी प्रोजेक्ट रिपोर्ट (DPR) तैयार करवाएं।',
+      'SAMAST पोर्टल (samast.mponline.gov.in) पर जाकर ऑनलाइन रजिस्ट्रेशन करें और प्रोफाइल बनाएं।',
+      'अपनी DPR और सारे दस्तावेज़ पोर्टल पर अपलोड कर अपनी बैंक शाखा (Branch) चुनें।',
+      'विभाग से मंज़ूरी मिलने के बाद, बैंक आपको बिना गारंटी (CGTMSE) के लोन दे देगा।'
+    ],
+    stepsEn: [
+      'First get a good Project Report (DPR) of your industry/business prepared.',
+      'Go to SAMAST portal (samast.mponline.gov.in) and register online to create profile.',
+      'Upload your DPR and all documents on portal and choose your bank branch.',
+      'After approval from dept, bank will give you loan without guarantee (CGTMSE).'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'MP में खुद का व्यापार और उद्योग लगाने के लिए सबसे बड़ी स्वरोज़गार योजना।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने देखा कि कई पढ़े-लिखे युवा खुद का बिज़नेस शुरू करना चाहते हैं, लेकिन उनके पास बैंक को गारंटी (ज़मीन/मकान के कागज़) देने के लिए कुछ नहीं होता। इसलिए बैंक उन्हें लोन नहीं देते।',
+      'इस समस्या को खत्म करने के ঘটতে सरकार ने "मुख्यमंत्री उद्यम क्रांति योजना" लॉन्च की। इसमें सरकार खुद आपकी गारंटी बैंक को देती है (CGTMSE के ज़रिए) ताकि आपको आसानी से लोन मिल सके। साथ ही, आपको ब्याज में भी छूट मिलती है जिससे किश्त (EMI) भरना आसान हो जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'MP Govt saw that many educated youths want to start their own business, but they have nothing to give as guarantee (land/house papers) to the bank. So banks don\'t give them loan.',
+      'To solve this problem, Govt launched "Mukhyamantri Udyam Kranti Yojana". In this, govt itself gives your guarantee to the bank (via CGTMSE) so that you get loan easily. Also, you get discount in interest which makes paying EMI easier.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में मुख्य रूप से क्या मिलता है?', points: [
+          'बड़ा लोन (Big Loan): दुकान, सर्विस सेंटर या ट्रेडिंग के लिए ₹25 लाख तक और कोई कारखाना/फैक्ट्री लगाने के लिए ₹50 लाख तक का लोन।',
+          'बिना गारंटी लोन (No Collateral): आपको बैंक के पास कोई ज़ेवर, ज़मीन या घर गिरवी नहीं रखना पड़ता।',
+          'ब्याज पर सब्सिडी (Interest Subsidy): 7 साल तक बैंक के ब्याज (Interest) में 3% की छूट सरकार अपनी तरफ से देती है।',
+          'गारंटी फीस माफ़: बैंक जो गारंटी फीस लेता है, उसे भी सरकार ही भरती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is mainly received in the scheme?', points: [
+          'Big Loan: Loan up to ₹25 lakh for shop, service center or trading and up to ₹50 lakh for setting up any factory.',
+          'No Collateral Loan: You do not have to mortgage any jewelry, land or house with bank.',
+          'Interest Subsidy: Govt gives 3% discount on bank interest for 7 years from its side.',
+          'Guarantee fee waived: Guarantee fee taken by bank is also paid by govt itself.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का स्थायी निवासी होना चाहिए।',
+      'उम्र कम से कम 18 वर्ष और अधिकतम 45 वर्ष होनी चाहिए।',
+      'आवेदक कम से कम 12वीं कक्षा पास होना चाहिए।',
+      'परिवार की वार्षिक आय (Annual Income) ₹12 लाख से अधिक नहीं होनी चाहिए।',
+      'आवेदक किसी भी बैंक का डिफॉल्टर (Defaulter) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be a permanent resident of Madhya Pradesh.',
+      'Age should be at least 18 years and maximum 45 years.',
+      'Applicant must be at least 12th class pass.',
+      'Annual Income of family should not exceed ₹12 Lakh.',
+      'Applicant should not be a defaulter of any bank.'
+    ],
+    exclusions: [
+      'अगर आप पहले से ही राज्य या केंद्र सरकार की किसी अन्य स्वरोज़गार योजना का लाभ ले रहे हैं, तो इसमें आवेदन नहीं कर सकते।',
+      'सिर्फ नए उद्यम/बिज़नेस के लिए ही लोन मिलेगा। पहले से चल रहे बिज़नेस को बढ़ाने के लिए यह लोन नहीं है।'
+    ],
+    exclusionsEn: [
+      'If you are already taking benefit of any other self-employment scheme of State or Central govt, you cannot apply in this.',
+      'Loan will be given only for new enterprise/business. This loan is not for expanding an already running business.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'MP Online के SAMAST (समस्त) पोर्टल पर जाएं।',
+          'अपना मोबाइल नंबर डालकर प्रोफाइल बनाएं।',
+          'योजना (उद्यम क्रांति) चुनें और फॉर्म भरें।',
+          'अपनी प्रोजेक्ट रिपोर्ट (DPR) और 12वीं की मार्कशीट सहित सभी कागज़ात अपलोड करें।',
+          'बैंक से बुलावा आने पर ओरिजिनल कागज़ लेकर जाएं और लोन मंज़ूर कराएं।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Go to MP Online\'s SAMAST portal.',
+          'Create profile by entering your mobile number.',
+          'Select scheme (Udyam Kranti) and fill form.',
+          'Upload all documents including your Project Report (DPR) and 12th marksheet.',
+          'When called by bank, go with original papers and get loan approved.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'प्रोजेक्ट रिपोर्ट (DPR) क्या होती है और कैसे बनेगी?', answer: 'DPR में आपके बिज़नेस की पूरी जानकारी होती है (लागत, कमाई, मशीनरी आदि)। इसे आप किसी CA या ज़िला उद्योग केंद्र (DIC) के सलाहकार से बनवा सकते हैं।' },
+      { question: 'क्या मुझे अपनी तरफ से पैसा (मार्जिन मनी) लगाना होगा?', answer: 'योजना के नियम अनुसार इस योजना में कोई मार्जिन मनी नहीं लगती, लेकिन बैंक अपनी सुरक्षा के लिए 5-10% मार्जिन की मांग कर सकता है।' }
+    ],
+    faqsEn: [
+      { question: 'What is Project Report (DPR) and how to make it?', answer: 'DPR contains full details of your business (cost, earning, machinery etc). You can get it made by a CA or consultant of District Industries Center (DIC).' },
+      { question: 'Will I have to put money (Margin Money) from my side?', answer: 'As per scheme rules there is no margin money in this scheme, but bank may demand 5-10% margin for its security.' }
+    ]
+  },
+  'mukhyamantri-krishak-udyami-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कृषक उद्यमी योजना',
+    english: 'Mukhyamantri Krishak Udyami Yojana (Agro Business Loan)',
+    summary: 'किसानों के बेटे-बेटियों (कृषक परिवार) को खेती से जुड़े उद्योग (जैसे दाल मिल, कस्टम हायरिंग सेंटर) लगाने के लिए सरकार द्वारा भारी वित्तीय मदद और सब्सिडी।',
+    benefit: 'किसानों के बच्चों को कृषि आधारित उद्योग लगाने के लिए ₹10 लाख से ₹2 करोड़ तक का बैंक लोन, 15% कैपिटल सब्सिडी और 5% ब्याज अनुदान।',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://samast.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'कम से कम 10वीं पास की मार्कशीट',
+      'माता-पिता के नाम कृषि भूमि (खेत) का खसरा/बी-1 (B1 Khasra)',
+      'मूल निवास प्रमाण पत्र',
+      'प्रोजेक्ट रिपोर्ट (DPR)'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'At least 10th pass Marksheet',
+      'Khasra/B-1 of agricultural land (farm) in name of parents (B1 Khasra)',
+      'Domicile Certificate',
+      'Project Report (DPR)'
+    ],
+    steps: [
+      'कृषि आधारित उद्योग की एक बढ़िया प्रोजेक्ट रिपोर्ट (DPR) तैयार करें।',
+      'SAMAST पोर्टल (samast.mponline.gov.in) पर जाकर ऑनलाइन आवेदन करें।',
+      'ज़िला स्तरीय टास्क फोर्स समिति (DTFC) आपके आवेदन और DPR की जाँच कर उसे बैंक को भेजेगी।',
+      'बैंक लोन पास करेगा और सरकार आपको सब्सिडी की रकम खाते में जमा कर देगी।'
+    ],
+    stepsEn: [
+      'Prepare a good Project Report (DPR) of agro-based industry.',
+      'Go to SAMAST portal (samast.mponline.gov.in) and apply online.',
+      'District Level Task Force Committee (DTFC) will check your application and DPR and send it to bank.',
+      'Bank will pass loan and govt will deposit subsidy amount in account.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'किसानों के बच्चों को खेती से निकालकर एग्रो-इंडस्ट्री (फूड प्रोसेसिंग आदि) का मालिक बनाने की योजना।',
+    detailedDescription: [
+      'खेती में अब पहले जैसी कमाई नहीं रही और ज़मीन भी बँटती जा रही है। इसलिए सरकार चाहती है कि किसान के बच्चे सिर्फ खेती तक सीमित न रहें, बल्कि वे खेती से जुड़ा व्यापार (Agro Business) करें, जैसे - अनाज की ग्रेडिंग, फूड प्रोसेसिंग, तेल मिल, दाल मिल या ट्रैक्टर किराए पर देने का कस्टम हायरिंग सेंटर खोलें।',
+      'इसी के लिए मध्य प्रदेश सरकार ने "मुख्यमंत्री कृषक उद्यमी योजना" बनाई है, जिसमें किसान के परिवार के युवाओं को 2 करोड़ रुपये तक का बड़ा लोन दिया जाता है और इसमें भारी छूट (Subsidy) भी मिलती है।'
+    ],
+    detailedDescriptionEn: [
+      'There is no longer same earning in farming as before and land is also getting divided. So govt wants farmer\'s children to not be limited to farming, but do Agro Business, like - open grain grading, food processing, oil mill, dal mill or custom hiring center to rent out tractors.',
+      'For this MP Govt has made "Mukhyamantri Krishak Udyami Yojana", in which big loan up to 2 crore rupees is given to youth of farmer\'s family and huge discount (Subsidy) is also given in it.'
+    ],
+    benefitsList: [
+      {
+        heading: 'कृषक युवाओं को क्या लाभ मिलेगा?', points: [
+          'बड़ा लोन: 10 लाख रुपये से लेकर 2 करोड़ रुपये तक का लोन बैंक से मिलता है।',
+          'कैपिटल सब्सिडी (पूंजीगत अनुदान): प्रोजेक्ट की लागत का 15% (अधिकतम 12 लाख रुपये तक) की छूट (Subsidy) सरकार सीधे आपके लोन खाते में डाल देती है।',
+          'ब्याज अनुदान (Interest Subsidy): 7 साल तक बैंक के ब्याज में 5% की भारी छूट सरकार देती है (महिलाओं के लिए यह छूट 6% है)।',
+          'गारंटी माफ़: लोन के लिए सरकार गारंटी फीस (CGTMSE) भी खुद भरती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits will farmer youth get?', points: [
+          'Big Loan: Loan from ₹10 lakh to ₹2 Crore is available from bank.',
+          'Capital Subsidy: Govt puts discount (Subsidy) of 15% of project cost (up to max ₹12 lakh) directly in your loan account.',
+          'Interest Subsidy: Govt gives huge discount of 5% in bank interest for 7 years (for women this discount is 6%).',
+          'Guarantee Waived: Govt itself pays guarantee fee (CGTMSE) for the loan.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और उम्र 18 से 45 वर्ष के बीच होनी चाहिए।',
+      'कम से कम 10वीं कक्षा (High School) पास होना ज़रूरी है।',
+      'आवेदक के पास (या उसके माता-पिता के नाम पर) खुद की कृषि भूमि (खेत) होना अनिवार्य है (तभी वह कृषक परिवार का माना जाएगा)।',
+      'आवेदक बैंक का डिफॉल्टर नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and age between 18 to 45 years.',
+      'Must be at least 10th class (High School) pass.',
+      'It is mandatory for applicant to have own agricultural land (farm) in his name (or in name of his parents) (then only he will be considered from farmer family).',
+      'Applicant should not be bank defaulter.'
+    ],
+    exclusions: [
+      'यह लोन सिर्फ कृषि आधारित उद्योगों (Agro Processing/Agro Allied) के लिए है (जैसे आटा चक्की, मसाला उद्योग, बीज प्लांट)। कपड़े या जूते की दुकान के लिए यह लोन नहीं मिलेगा।',
+      'अगर आयकर दाता (Income Tax Payee) हैं, तो सब्सिडी के नियम अलग हो सकते हैं (विस्तृत जानकारी पोर्टल पर)।'
+    ],
+    exclusionsEn: [
+      'This loan is only for agro based industries (Agro Processing/Agro Allied) (like flour mill, spices industry, seed plant). Will not get this loan for clothes or shoes shop.',
+      'If you are Income Tax Payee, rules for subsidy may be different (detailed info on portal).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST / MPOnline)', steps: [
+          'ज़िले के कृषि विभाग (उप संचालक कृषि) या ज़िला उद्योग केंद्र से मार्गदर्शन लें।',
+          'अपनी अच्छी DPR (Project Report) बनवाएं जिसमें कच्चे माल से लेकर माल बेचने तक का हिसाब हो।',
+          'samast.mponline.gov.in पोर्टल पर जाकर "कृषक उद्यमी योजना" के तहत फॉर्म भरें और खसरा-खतौनी की कॉपी अपलोड करें।',
+          'टास्क फोर्स कमिटी में इंटरव्यू दें, जिसके बाद फाइल बैंक को जाएगी और लोन पास होगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST / MPOnline)', steps: [
+          'Take guidance from district Agriculture dept (Deputy Director Agriculture) or District Industries Center.',
+          'Get good DPR (Project Report) made which has accounts from raw material to selling goods.',
+          'Go to samast.mponline.gov.in portal and fill form under "Krishak Udyami Yojana" and upload copy of Khasra-Khatauni.',
+          'Give interview in Task Force Committee, after which file will go to bank and loan will be passed.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'कस्टम हायरिंग सेंटर (Custom Hiring Center) क्या होता है?', answer: 'इसमें आप लोन से ट्रैक्टर, हार्वेस्टर और अन्य बड़े कृषि उपकरण खरीदते हैं और फिर उन्हें दूसरे छोटे किसानों को किराए (भाड़े) पर देते हैं, जिससे आपकी कमाई होती है।' },
+      { question: 'क्या मेरे नाम ज़मीन होना ज़रूरी है?', answer: 'अगर आपके नाम ज़मीन नहीं है, लेकिन आपके माता या पिता के नाम पर ज़मीन है, तो भी आप इस योजना के लिए पात्र माने जाएंगे।' }
+    ],
+    faqsEn: [
+      { question: 'What is Custom Hiring Center?', answer: 'In this you buy tractors, harvesters and other large agricultural equipment from loan and then give them on rent to other small farmers, which makes your earning.' },
+      { question: 'Is it necessary to have land in my name?', answer: 'If you do not have land in your name, but land is in name of your mother or father, even then you will be considered eligible for this scheme.' }
+    ]
+  },
+  'mukhyamantri-swarojgar-yojana-general': {
+    ...reviewed,
+    title: 'मुख्यमंत्री स्वरोजगार योजना (सामान्य)',
+    english: 'Mukhyamantri Swarojgar Yojana (General Micro Business Loan)',
+    summary: 'सभी वर्गों के नागरिकों को खुद की छोटी दुकान, सर्विस सेंटर, वर्कशॉप या छोटा व्यवसाय स्थापित करने हेतु बैंक लोन और सब्सिडी देने की योजना।',
+    benefit: 'छोटा व्यापार या सर्विस सेंटर खोलने के लिए ₹50,000 से ₹10 लाख तक का बैंक लोन और उस पर 15% से 30% तक मार्जिन मनी (सब्सिडी)।',
+    department: 'सूक्ष्म, लघु एवं मध्यम उद्यम (MSME) विभाग',
+    sourceUrl: 'https://samast.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'कम से कम 5वीं पास की मार्कशीट',
+      'मूल निवास प्रमाण पत्र (Domicile)',
+      'प्रोजेक्ट रिपोर्ट (अगर लागत 5 लाख से ज़्यादा हो)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'At least 5th pass Marksheet',
+      'Domicile Certificate',
+      'Project Report (if cost is more than 5 Lakh)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'MSME/उद्योग विभाग के SAMAST पोर्टल (samast.mponline.gov.in) पर ऑनलाइन रजिस्ट्रेशन करें।',
+      'अपने छोटे बिज़नेस (दुकान/सर्विस) की जानकारी और दस्तावेज़ पोर्टल पर अपलोड करें।',
+      'ज़िला उद्योग केंद्र (DIC) से मंज़ूरी मिलने के बाद आपका आवेदन बैंक भेजा जाएगा।',
+      'बैंक लोन पास करेगा और सरकार मार्जिन मनी अनुदान (Subsidy) आपके खाते में डालेगी।'
+    ],
+    stepsEn: [
+      'Register online on MSME/Industries dept SAMAST portal (samast.mponline.gov.in).',
+      'Upload details and documents of your small business (shop/service) on portal.',
+      'After approval from District Industries Center (DIC), your application will be sent to bank.',
+      'Bank will pass loan and govt will put margin money subsidy in your account.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'मध्य प्रदेश में छोटे-मझोले रोज़गार (किराना दुकान, टेलरिंग आदि) को बढ़ावा देने की सामान्य योजना।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार चाहती है कि युवा सिर्फ सरकारी नौकरी के भरोसे न रहें। अगर कोई खुद की किराना दुकान, मोबाइल रिपेयरिंग शॉप, टेलरिंग (सिलाई) की दुकान, ब्यूटी पार्लर या कोई भी छोटा-मोटा धंधा शुरू करना चाहता है, तो उसके पास पैसे (पूंजी) होने चाहिए।',
+      'लेकिन बैंक छोटे बिज़नेस के लिए बिना किसी मदद के लोन नहीं देते। इसलिए सरकार ने "मुख्यमंत्री स्वरोजगार योजना" शुरू की है। इसमें आप 50 हज़ार रुपये से लेकर 10 लाख रुपये तक का लोन ले सकते हैं। इसकी खासियत यह है कि इसमें आपको सरकार की तरफ से मार्जिन मनी (एक तरह की सब्सिडी या छूट) मिलती है।'
+    ],
+    detailedDescriptionEn: [
+      'MP Govt wants youth not to rely only on govt jobs. If anyone wants to start their own grocery shop, mobile repairing shop, tailoring shop, beauty parlor or any small business, they should have money (capital).',
+      'But banks don\'t give loan for small business without any help. That\'s why govt has started "Mukhyamantri Swarojgar Yojana". In this you can take loan from 50 thousand rupees up to 10 lakh rupees. Its specialty is that you get margin money (a kind of subsidy or discount) from govt side.'
+    ],
+    benefitsList: [
+      {
+        heading: 'लोन और सब्सिडी में क्या लाभ मिलता है?', points: [
+          'बैंक लोन: न्यूनतम ₹50,000 और अधिकतम ₹10,000,000 (10 लाख) रुपये तक का लोन।',
+          'सामान्य वर्ग के लिए छूट (General Category): प्रोजेक्ट की लागत का 15% (अधिकतम 1 लाख रुपये) मार्जिन मनी सरकार अपनी तरफ से देती है।',
+          'SC/ST/OBC/महिला/दिव्यांग के लिए छूट: प्रोजेक्ट की लागत का 30% (अधिकतम 2 लाख रुपये) मार्जिन मनी सरकार देती है। (यानी आपको लोन चुकाते समय इतनी रकम कम चुकानी होगी)।',
+          'ब्याज अनुदान (Interest Subsidy): 7 साल तक बैंक के ब्याज में हर साल 5% की छूट सरकार देती है (SC/ST/महिला के लिए 6%)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in loan and subsidy?', points: [
+          'Bank Loan: Minimum ₹50,000 and maximum up to ₹1,000,000 (10 Lakh) loan.',
+          'Discount for General Category: Govt gives 15% of project cost (max ₹1 Lakh) as margin money from its side.',
+          'Discount for SC/ST/OBC/Women/PwD: Govt gives 30% of project cost (max ₹2 Lakh) as margin money. (meaning you will have to pay this much less amount while repaying loan).',
+          'Interest Subsidy: Govt gives 5% discount in bank interest every year for 7 years (6% for SC/ST/Women).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी और उम्र 18 से 45 वर्ष के बीच होनी चाहिए।',
+      'कम से कम 5वीं कक्षा पास होना ज़रूरी है (ज़्यादा पढ़े-लिखे लोगों की ज़रूरत नहीं है)।',
+      'परिवार की वार्षिक आय (Annual Income) की कोई सीमा नहीं है।',
+      'आवेदक बैंक का डिफॉल्टर (Defaulter) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be resident of MP and age between 18 to 45 years.',
+      'Must be at least 5th class pass (highly educated people are not needed).',
+      'There is no limit on Annual Income of family.',
+      'Applicant should not be bank defaulter.'
+    ],
+    exclusions: [
+      'व्यापार सिर्फ नया (New Business) होना चाहिए। पहले से चल रहे पुराने व्यापार के विस्तार (बढ़ाने) के लिए यह लोन नहीं मिलेगा।',
+      'आवेदक ने पहले किसी अन्य सरकारी स्वरोज़गार योजना (जैसे PMMEGP) का लाभ न लिया हो।'
+    ],
+    exclusionsEn: [
+      'Business must be only new (New Business). Will not get this loan for expansion of an already running old business.',
+      'Applicant should not have taken benefit of any other govt self-employment scheme (like PMMEGP) earlier.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST / MPOnline)', steps: [
+          'MP Online के SAMAST पोर्टल (samast.mponline.gov.in) पर जाएँ।',
+          '"उद्योग विभाग" की "स्वरोज़गार योजना" को चुनें।',
+          'ऑनलाइन फॉर्म भरें और अपनी दुकान या बिज़नेस की जानकारी दें।',
+          'DIC (ज़िला उद्योग केंद्र) की समिति आपका इंटरव्यू लेकर फाइल बैंक को भेजेगी।',
+          'बैंक से लोन पास होने पर अपना काम शुरू करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST / MPOnline)', steps: [
+          'Go to MP Online\'s SAMAST portal (samast.mponline.gov.in).',
+          'Select "Swarojgar Yojana" of "Industries Dept".',
+          'Fill online form and give details of your shop or business.',
+          'DIC (District Industries Center) committee will take your interview and send file to bank.',
+          'Start your work on loan passing from bank.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे अपनी तरफ से पैसा लगाना होगा?', answer: 'योजना के नियम में मार्जिन मनी सरकार दे रही है, लेकिन बैंक अपनी पॉलिसी के हिसाब से आपसे 5-10% हिस्सा लगाने को कह सकता है।' },
+      { question: 'अगर मैं सिर्फ 8वीं पास हूँ तो क्या मुझे 10 लाख का लोन मिल जाएगा?', answer: 'हाँ, क्योंकि इस योजना में सिर्फ 5वीं पास होना माँगा गया है। आप अपनी दुकान या सर्विस के हिसाब से लोन के लिए आवेदन कर सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Will I have to put money from my side?', answer: 'In scheme rules govt is giving margin money, but bank can ask you to put 5-10% share according to its policy.' },
+      { question: 'If I am only 8th pass then will I get 10 lakh loan?', answer: 'Yes, because only 5th pass is asked in this scheme. You can apply for loan according to your shop or service.' }
+    ]
+  },
+  'mukhyamantri-arthik-kalyan-tribal-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री आर्थिक कल्याण योजना (जनजातीय / ST)',
+    english: 'Mukhyamantri Arthik Kalyan Yojana (Tribal Micro Loan)',
+    summary: 'आदिवासी (ST) समाज के सबसे गरीब लोगों को हाथ ठेला, साइकिल रिक्शा, सिलाई मशीन या छोटे औज़ार खरीदने के लिए ₹50,000 तक का लोन और उस पर 50% की भारी सब्सिडी।',
+    benefit: 'अनुसूचित जनजाति (ST) के BPL परिवारों को छोटा-मोटा काम (जैसे जूता पॉलिश, ठेला, वेल्डिंग, सिलाई) शुरू करने के लिए 50,000 रुपये तक का लोन और सरकार की तरफ से 50% अनुदान (मार्जिन मनी)।',
+    department: 'जनजातीय कार्य विभाग (Tribal Affairs Department)',
+    sourceUrl: 'https://samast.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'ST (अनुसूचित जनजाति) का डिजिटल जाति प्रमाण पत्र',
+      'गरीबी रेखा का राशन कार्ड (BPL Card)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Digital Caste Certificate of ST (Scheduled Tribe)',
+      'Below Poverty Line Ration Card (BPL Card)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'योजना में लाभ लेने के लिए SAMAST पोर्टल (samast.mponline.gov.in) पर जाएँ या जनसेवा केंद्र से फॉर्म भरवाएं।',
+      'फॉर्म में चुनें कि आपको कौन सा औज़ार (जैसे सिलाई मशीन, हाथ ठेला) या किट चाहिए।',
+      'जनजातीय कार्य विभाग का कार्यालय आपके आवेदन की जाँच करेगा।',
+      'बैंक लोन पास करेगा और सरकार आपकी आधी रकम (50%) बैंक में जमा कर देगी।'
+    ],
+    stepsEn: [
+      'To take benefit in scheme, go to SAMAST portal (samast.mponline.gov.in) or get form filled from Janseva Kendra.',
+      'Select in form which tool (like sewing machine, handcart) or kit you want.',
+      'Tribal Affairs Dept office will check your application.',
+      'Bank will pass loan and govt will deposit half of your amount (50%) in bank.'
+    ],
+    rules: [
+    ],
+    sourceNotes: 'आदिवासी समाज के सबसे कमज़ोर वर्ग (BPL) को मज़दूरी से हटाकर स्वयं का छोटा रोज़गार देने की पहल।',
+    detailedDescription: [
+      'आदिवासी (ST) समाज के कई लोग अत्यंत गरीब हैं और सिर्फ दिहाड़ी मज़दूरी कर पाते हैं। उनके पास इतना पैसा नहीं होता कि वे सब्ज़ी का ठेला, साइकिल रिक्शा, सिलाई मशीन या औज़ारों की कोई किट (Tool kit) खरीद सकें।',
+      'सरकार ने ऐसे ही गरीब लोगों को आत्मनिर्भर बनाने के लिए "मुख्यमंत्री आर्थिक कल्याण योजना (जनजातीय)" शुरू की है। इसमें सरकार बहुत छोटा लोन (10 हज़ार से 50 हज़ार तक) दिलवाती है और सबसे बड़ी बात यह做到 है कि उस लोन की आधी रकम (50%) सरकार खुद चुका देती है, आपको सिर्फ आधा पैसा ही बैंक को किश्तों में लौटाना होता है।'
+    ],
+    detailedDescriptionEn: [
+      'Many people of Tribal (ST) society are extremely poor and can only do daily wage labor. They do not have enough money to buy vegetable handcart, cycle rickshaw, sewing machine or any tool kit.',
+      'Govt has started "Mukhyamantri Arthik Kalyan Yojana (Tribal)" to make such poor people self-reliant. In this, govt gets very small loan (10 thousand to 50 thousand) and biggest thing is that govt itself pays half the amount (50%) of that loan, you only have to return half money to bank in installments.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के खास लाभ', points: [
+          'सूक्ष्म लोन (Micro Loan): ठेला, रिक्शा, बर्तन, सिलाई मशीन आदि खरीदने के लिए अधिकतम 50,000 रुपये तक का लोन।',
+          '50% की भारी छूट: प्रोजेक्ट की कुल लागत (लोन) का 50% हिस्सा (अधिकतम 15,000 रुपये तक) सरकार आपको मार्जिन मनी (सब्सिडी) के रूप में देती है।',
+          'गारंटी की ज़रूरत नहीं: इतने छोटे लोन के लिए बैंक कोई ज़मीन या मकान गिरवी नहीं रखता। यह पूरी तरह से गारंटी-फ्री होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Special benefits of scheme', points: [
+          'Micro Loan: Loan up to maximum ₹50,000 to buy handcart, rickshaw, utensils, sewing machine etc.',
+          'Huge discount of 50%: Govt gives you 50% share of total project cost (loan) (up to max ₹15,000) as margin money (subsidy).',
+          'No guarantee needed: Bank does not mortgage any land or house for such small loan. This is completely guarantee-free.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और अनुसूचित जनजाति (ST) वर्ग का होना चाहिए।',
+      'आवेदक की आयु 18 वर्ष से लेकर 55 वर्ष के बीच होनी चाहिए।',
+      'परिवार गरीबी रेखा के नीचे (BPL) जीवन यापन करता हो (BPL कार्ड धारक हो)।',
+      'आवेदक बैंक का डिफॉल्टर नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and belong to Scheduled Tribe (ST) category.',
+      'Age of applicant should be between 18 years to 55 years.',
+      'Family should be living below poverty line (BPL) (Must be BPL card holder).',
+      'Applicant should not be bank defaulter.'
+    ],
+    exclusions: [
+      'यह योजना बड़े बिज़नेस या दुकान के लिए नहीं है। यह सिर्फ बहुत छोटे रोज़गार (ठेला, गुमटी, औज़ार किट) के लिए है।',
+      'जिनके पास BPL कार्ड नहीं है (यानी जो गरीब नहीं हैं), वे इस योजना के लिए पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for big business or shop. This is only for very small employment (handcart, kiosk, tool kit).',
+      'Those who do not have BPL card (i.e. who are not poor), are not eligible for this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST) / ऑफ़लाइन', steps: [
+          'ज़िले के जनजातीय कार्य विभाग (सहायक आयुक्त कार्यालय) में जाएँ।',
+          'उन्हें बताएं कि आपको ठेला या सिलाई मशीन के लिए आर्थिक कल्याण योजना का फॉर्म भरना है।',
+          'आप MP Online / SAMAST पोर्टल के ज़रिए भी ऑनलाइन आवेदन कर सकते हैं।',
+          'दस्तावेज़ों (जाति, BPL कार्ड, आधार) की जाँच के बाद बैंक से आपका छोटा लोन (जैसे ₹20,000) पास हो जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST) / Offline', steps: [
+          'Go to District Tribal Affairs Dept (Assistant Commissioner Office).',
+          'Tell them that you have to fill form of Arthik Kalyan Yojana for handcart or sewing machine.',
+          'You can also apply online through MP Online / SAMAST portal.',
+          'After checking documents (Caste, BPL card, Aadhaar), your small loan (like ₹20,000) will be passed from bank.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अगर मैं 20,000 रुपये का लोन लेता हूँ तो मुझे कितने वापस करने होंगे?', answer: 'योजना के नियम अनुसार आपको 50% (अधिकतम 15,000) सब्सिडी मिलेगी। यानी 20 हज़ार पर आपको 10 हज़ार सरकार दे देगी, और बचे हुए 10 हज़ार रुपये ही आपको किश्तों में बैंक को लौटाने होंगे।' },
+      { question: 'क्या पढ़े-लिखे होना ज़रूरी है?', answer: 'नहीं, इस योजना में किसी भी शैक्षणिक योग्यता (Education) की ज़रूरत नहीं है। अनपढ़ (Illiterate) व्यक्ति भी ठेला लगाने के लिए लोन ले सकता है।' }
+    ],
+    faqsEn: [
+      { question: 'If I take loan of ₹20,000 then how much will I have to return?', answer: 'As per scheme rules you will get 50% (max 15,000) subsidy. Meaning on 20 thousand govt will give 10 thousand, and you will have to return only remaining 10 thousand rupees to bank in installments.' },
+      { question: 'Is it necessary to be educated?', answer: 'No, there is no need of any educational qualification in this scheme. Illiterate person can also take loan to set up handcart.' }
+    ]
+  },
+  'mukhyamantri-yuva-udyami-general-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री युवा उद्यमी योजना (सामान्य)',
+    english: 'Mukhyamantri Yuva Udyami Yojana (General Big Industry)',
+    summary: 'राज्य के पढ़े-लिखे युवाओं को बड़ा उद्योग (कारखाना, फैक्ट्री, अस्पताल आदि) लगाने के लिए 10 लाख से 1 करोड़ रुपये तक का बैंक लोन और सब्सिडी दिलाने की योजना।',
+    benefit: 'खुद का बड़ा उद्यम (Manufacturing/Service) लगाने के लिए ₹10 लाख से ₹1 करोड़ तक का गारंटी-फ्री लोन, 15% मार्जिन मनी सब्सिडी और 5% ब्याज अनुदान।',
+    department: 'सूक्ष्म, लघु एवं मध्यम उद्यम (MSME) विभाग',
+    sourceUrl: 'https://samast.mponline.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'कम से कम 10वीं पास की मार्कशीट (न्यूनतम शैक्षणिक योग्यता)',
+      'मूल निवास प्रमाण पत्र',
+      'प्रोजेक्ट रिपोर्ट (DPR - Project Report)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'At least 10th pass Marksheet (Minimum Educational Qualification)',
+      'Domicile Certificate',
+      'Project Report (DPR - Project Report)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'अपने बिज़नेस आइडिया की एक बेहतरीन प्रोजेक्ट रिपोर्ट (DPR) तैयार करवाएं।',
+      'MSME के SAMAST पोर्टल (samast.mponline.gov.in) पर जाकर ऑनलाइन आवेदन करें।',
+      'ज़िला उद्योग केंद्र (DIC) की समिति आपके आवेदन का परीक्षण (Interview) करेगी।',
+      'बैंक में फाइल जाने के बाद लोन स्वीकृत होगा और सरकार आपके लोन खाते में मार्जिन मनी जमा करेगी।'
+    ],
+    stepsEn: [
+      'Get a great Project Report (DPR) of your business idea prepared.',
+      'Go to MSME\'s SAMAST portal (samast.mponline.gov.in) and apply online.',
+      'District Industries Center (DIC) committee will check (Interview) your application.',
+      'After file goes to bank, loan will be approved and govt will deposit margin money in your loan account.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 40 वर्ष' },
+      { field: 'age', op: 'lte', value: 40, label: 'अधिकतम 40 वर्ष' }
+    ],
+    sourceNotes: 'मध्य प्रदेश में भारी औद्योगिक निवेश (Manufacturing) को बढ़ावा देने वाली फ्लैगशिप योजना।',
+    detailedDescription: [
+      'अगर कोई युवा बड़ा सपना देखता है कि वह खुद की कोई फैक्ट्री (जैसे प्लास्टिक फैक्ट्री, पैकेजिंग यूनिट, कपड़े का कारखाना) या बड़ा सर्विस सेक्टर (अस्पताल, बड़ा रेस्टोरेंट) खोले, तो उसे बहुत पैसे (पूंजी) की ज़रूरत होती है।',
+      'ऐसी बड़ी पूंजी के लिए मध्य प्रदेश सरकार ने "मुख्यमंत्री युवा उद्यमी योजना" शुरू की है। इस योजना के तहत आप 1 करोड़ रुपये (₹1,00,000,000) तक का बड़ा लोन बैंक से ले सकते हैं। सरकार न सिर्फ लोन पास कराने में मदद करती है, बल्कि करोड़ों के लोन पर बिना किसी ज़मीन/प्रॉपर्टी के अपनी गारंटी (CGTMSE) भी देती है।'
+    ],
+    detailedDescriptionEn: [
+      'If a youth dreams big of opening his own factory (like plastic factory, packaging unit, textile factory) or big service sector (hospital, big restaurant), he needs a lot of money (capital).',
+      'For such big capital, MP Govt has started "Mukhyamantri Yuva Udyami Yojana". Under this scheme, you can take a big loan up to ₹1 Crore (₹1,00,000,000) from bank. Govt not only helps in passing loan, but also gives its guarantee (CGTMSE) on loan of crores without any land/property.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या आर्थिक लाभ मिलते हैं?', points: [
+          'बड़ा बैंक लोन: कम से कम ₹10 लाख और अधिकतम ₹1 करोड़ तक का भारी लोन।',
+          'मार्जिन मनी (कैपिटल सब्सिडी): आपके प्रोजेक्ट की कुल लागत का 15% (अधिकतम ₹12 लाख) सरकार की तरफ से मार्जिन मनी के रूप में माफ हो जाता है। (BPL/SC/ST/महिला के लिए यह 20% या अधिकतम ₹18 लाख है)।',
+          'ब्याज पर छूट: आपको बैंक के भारी ब्याज दर पर 5% (महिलाओं के लिए 6%) की छूट सरकार 7 साल तक देती है।',
+          'गारंटी मुफ्त: ₹1 करोड़ तक के लोन के लिए बैंक कोई गारंटी (Collateral) नहीं माँगता, गारंटी फीस भी सरकार भरती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What financial benefits are received in the scheme?', points: [
+          'Big Bank Loan: Huge loan from minimum ₹10 lakh to maximum ₹1 Crore.',
+          'Margin Money (Capital Subsidy): 15% (max ₹12 Lakh) of total cost of your project is waived off as margin money from govt side. (For BPL/SC/ST/Women this is 20% or max ₹18 Lakh).',
+          'Discount on Interest: Govt gives you 5% (6% for women) discount on heavy bank interest rate for 7 years.',
+          'Guarantee Free: For loan up to ₹1 Crore, bank does not ask for any guarantee (Collateral), guarantee fee is also paid by govt.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'उम्र कम से कम 18 वर्ष और अधिकतम 40 वर्ष होनी चाहिए (ST/SC/महिला/BPL को उम्र में 5 वर्ष की छूट)।',
+      'कम से कम 10वीं कक्षा (High School) पास होना अनिवार्य है।',
+      'आवेदक आयकर दाता (Income Tax Payee) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be a native of Madhya Pradesh.',
+      'Age should be at least 18 years and maximum 40 years (5 years relaxation in age for ST/SC/Women/BPL).',
+      'Must be at least 10th class (High School) pass.',
+      'Applicant should not be an Income Tax Payee.'
+    ],
+    exclusions: [
+      'यह लोन सिर्फ "नए उद्योग (New Unit)" के लिए है। अगर आप पहले से फैक्ट्री चला रहे हैं और उसे बड़ा करना चाहते हैं, तो यह लोन नहीं मिलेगा।',
+      'व्यापार (Trading) करने के लिए (जैसे माल खरीदकर बेचना) यह लोन नहीं मिलता। यह सिर्फ निर्माण (Manufacturing) या सेवा (Service) के लिए है।'
+    ],
+    exclusionsEn: [
+      'This loan is only for "New Unit". If you are already running a factory and want to expand it, you will not get this loan.',
+      'This loan is not available for Trading (like buying and selling goods). This is only for Manufacturing or Service.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'एक अच्छी प्रोजेक्ट रिपोर्ट (DPR) तैयार करें।',
+          'SAMAST (समस्त) पोर्टल पर जाकर ऑनलाइन फॉर्म भरें।',
+          'अपने ज़िला उद्योग केंद्र (DIC) के महाप्रबंधक से संपर्क करें।',
+          'DIC द्वारा आपका इंटरव्यू (साक्षात्कार) लिया जाएगा और फिर फाइल बैंक भेजी जाएगी।',
+          'लोन पास होने पर बैंक आपके खाते में पैसा डाल देगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Prepare a good Project Report (DPR).',
+          'Go to SAMAST portal and fill online form.',
+          'Contact General Manager of your District Industries Center (DIC).',
+          'Your interview will be taken by DIC and then file will be sent to bank.',
+          'On passing loan, bank will put money in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे अपनी तरफ से पैसा (मार्जिन) लगाना होगा?', answer: 'हाँ, इतनी बड़ी योजना में मार्जिन मनी के अलावा आवेदक को अपनी तरफ से भी कुछ प्रतिशत (लगभग 5% से 10%) पैसा लगाना होता है।' },
+      { question: 'क्या ट्रेडिंग (दुकान) के लिए यह लोन मिल सकता है?', answer: 'नहीं, यह योजना विशेष रूप से विनिर्माण (कारखाना) और सेवा (जैसे होटल, अस्पताल) के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'Will I have to put money (margin) from my side?', answer: 'Yes, in such a big scheme, apart from margin money, applicant has to put some percentage (around 5% to 10%) money from his side too.' },
+      { question: 'Can this loan be available for trading (shop)?', answer: 'No, this scheme is specially for manufacturing (factory) and services (like hotel, hospital).' }
+    ]
+  },
+  'deendayal-antodaya-rasoi-yojana': {
+    ...reviewed,
+    title: 'दीनदयाल अंत्योदय रसोई योजना (5 रुपये थाली)',
+    english: 'Deendayal Antyodaya Rasoi Yojana (5 Rupee Meal Scheme)',
+    summary: 'गरीबों, मज़दूरों और ज़रूरतमंदों को शहर में मात्र 5 रुपये में भरपेट शुद्ध, ताज़ा और पौष्टिक भोजन (थाली) उपलब्ध कराने की योजना।',
+    benefit: 'दीनदयाल रसोई केंद्रों पर कोई भी व्यक्ति मात्र ₹5 का कूपन लेकर सम्मानपूर्वक भरपेट भोजन (रोटी, सब्ज़ी, दाल, चावल) कर सकता है।',
+    department: 'नगरीय विकास एवं आवास विभाग',
+    sourceUrl: 'https://mpurban.gov.in/',
+    applicationUrl: 'https://mpurban.gov.in/',
+    documents: [
+      'किसी भी प्रकार के दस्तावेज़ (ID Proof) की आवश्यकता नहीं है।'
+    ],
+    documentsEn: [
+      'No document (ID Proof) of any kind is required.'
+    ],
+    steps: [
+      'अपने शहर के बस स्टैंड, रेलवे स्टेशन या अस्पताल के पास स्थित "दीनदयाल रसोई केंद्र" पर जाएँ।',
+      'काउंटर पर 5 रुपये देकर भोजन का टोकन (कूपन) लें।',
+      'कुर्सी-टेबल पर बैठकर सम्मानपूर्वक भरपेट भोजन ग्रहण करें।'
+    ],
+    stepsEn: [
+      'Go to "Deendayal Rasoi Kendra" located near bus stand, railway station or hospital of your city.',
+      'Take food token (coupon) by paying 5 rupees at counter.',
+      'Sit on chair-table and have full meal respectfully.'
+    ],
+    rules: [],
+    sourceNotes: 'शहरों में "कोई भूखा न सोए" संकल्पना को साकार करने के लिए स्थापित रसोई।',
+    detailedDescription: [
+      'गांवों से रोज़गार या इलाज के लिए शहरों (बस स्टैंड, रेलवे स्टेशन, अस्पताल) में आने वाले गरीब मज़दूरों और कमज़ोर वर्ग के लोगों के लिए होटल या ढाबे का खाना बहुत महँगा होता है। वे 50-100 रुपये देकर खाना नहीं खा सकते।',
+      'ऐसे में प्रदेश में "दीनदयाल अंत्योदय रसोई योजना" शुरू की गई है। इस योजना के तहत प्रमुख शहरों में रसोई केंद्र (कैंटीन) खोले गए हैं, जहाँ कोई भी व्यक्ति (बिना किसी भेदभाव या कार्ड के) केवल 5 रुपये का टोकन कटवाकर भरपेट और पौष्टिक खाना खा सकता है।'
+    ],
+    detailedDescriptionEn: [
+      'Food in hotel or dhaba is very expensive for poor laborers and weaker sections coming to cities (bus stands, railway stations, hospitals) from villages for employment or treatment. They cannot eat by paying 50-100 rupees.',
+      'In such a situation, "Deendayal Antyodaya Rasoi Yojana" has been started in the state. Under this scheme, kitchen centers (canteens) have been opened in major cities, where any person (without any discrimination or card) can eat full and nutritious food by paying a token of only 5 rupees.'
+    ],
+    benefitsList: [
+      {
+        heading: 'दीनदयाल रसोई की विशेषताएँ', points: [
+          'मात्र 5 रुपये में भरपेट खाना: खाने की थाली में रोटी (चपाती), दाल, मौसमी सब्ज़ी और चावल दिया जाता है। (पहले इसकी कीमत 10 रुपये थी, जिसे घटाकर 5 रुपये कर दिया गया)।',
+          'सबके लिए खुला (Open for all): रसोई में खाना खाने के लिए कोई बीपीएल कार्ड (BPL Card) या आधार कार्ड नहीं दिखाना पड़ता। कोई भी व्यक्ति यहाँ खा सकता है।',
+          'बैठकर खाने की सुविधा: रसोई केंद्रों में साफ-सफाई के साथ कुर्सी-टेबल लगे होते हैं, जहाँ लोग सम्मान के साथ बैठकर भोजन करते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Features of Deendayal Rasoi', points: [
+          'Full meal in just 5 rupees: Roti (Chapati), Dal, seasonal vegetable and rice are given in food thali. (Earlier its price was 10 rupees, which has been reduced to 5 rupees).',
+          'Open for all: No BPL card or Aadhaar card has to be shown to eat in the kitchen. Anyone can eat here.',
+          'Facility of sitting and eating: Cleanliness is maintained in kitchen centers with chairs and tables, where people sit and eat with respect.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'इस योजना का लाभ लेने के लिए कोई उम्र, आय या जाति की सीमा नहीं है।',
+      'कोई भी भूखा व्यक्ति, चाहे वह मज़दूर हो, छात्र हो, मरीज़ का रिश्तेदार हो या मुसाफिर, यहाँ जाकर भोजन कर सकता है।'
+    ],
+    eligibilityDescriptionEn: [
+      'There is no age, income or caste limit to take benefit of this scheme.',
+      'Any hungry person, whether a laborer, student, patient\'s relative or traveler, can go here and eat.'
+    ],
+    exclusions: [
+      'यह योजना पार्सल (Take away) सुविधा के लिए नहीं है, आपको रसोई केंद्र में बैठकर ही भोजन करना होता है।',
+      'यह योजना सिर्फ दिन के भोजन (दोपहर के खाने / Lunch) के लिए चलाई जाती है, रात का खाना (Dinner) इसमें आमतौर पर नहीं मिलता (विशेष केंद्रों को छोड़कर)।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for Parcel (Take away) facility, you have to sit and eat in the kitchen center itself.',
+      'This scheme is run only for day meal (Lunch), Dinner is usually not available in this (except special centers).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (सीधे रसोई केंद्र पर)', steps: [
+          'दीनदयाल रसोई में खाने के लिए किसी भी तरह के रजिस्ट्रेशन (Registration) की ज़रूरत नहीं है।',
+          'आपको बस अपने नज़दीकी केंद्र पर जाना है, 5 रुपये देने हैं और खाना है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Directly at kitchen center)', steps: [
+          'No registration of any kind is required to eat in Deendayal Rasoi.',
+          'You just have to go to your nearest center, pay 5 rupees and eat.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'रसोई केंद्र कहाँ-कहाँ खुले हैं?', answer: 'सभी ज़िला मुख्यालयों, प्रमुख बस स्टैंड, बड़े सरकारी अस्पतालों और बड़े धार्मिक स्थलों (जैसे मैहर, ओरछा) के आस-पास ये केंद्र बनाए गए हैं।' },
+      { question: 'क्या खाना अच्छा और साफ होता है?', answer: 'हाँ, सरकार द्वारा साफ-सफाई (Hygiene) और पौष्टिकता का पूरा ध्यान रखा जाता है। स्वयंसेवी संस्थाएं (NGOs) इसकी निगरानी करती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Where are kitchen centers opened?', answer: 'These centers are built around all district headquarters, major bus stands, big govt hospitals and big religious places (like Maihar, Orchha).' },
+      { question: 'Is the food good and clean?', answer: 'Yes, full care of hygiene and nutrition is taken by govt. NGOs monitor it.' }
+    ]
+  },
+  'tantya-mama-arthik-kalyan-yojana': {
+    ...reviewed,
+    title: 'टंट्या मामा आर्थिक कल्याण योजना',
+    english: 'Tantya Mama Arthik Kalyan Yojana (Tribal Business)',
+    summary: 'जनजातीय (ST) वर्ग के सदस्यों को किराना, फल-सब्जी, वेल्डिंग, मोबाइल रिपेयरिंग जैसे छोटे धंधे शुरू करने हेतु बिना गारंटी आसान ऋण और ब्याज सब्सिडी देने की योजना।',
+    benefit: 'अनुसूचित जनजाति (ST) के युवाओं को नए सूक्ष्म व्यवसाय व उपकरण हेतु ₹10,000 से ₹1 लाख तक ऋण एवं 7% ब्याज अनुदान।',
+    department: 'आदिवासी वित्त एवं विकास निगम (जनजातीय कार्य विभाग)',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'ST (अनुसूचित जनजाति) का डिजिटल जाति प्रमाण पत्र',
+      'मूल निवास प्रमाण पत्र',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Digital Caste Certificate of ST (Scheduled Tribe)',
+      'Domicile Certificate',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'SAMAST पोर्टल (samast.mponline.gov.in) पर "टंट्या मामा योजना" चुनकर ऑनलाइन आवेदन करें।',
+      'आवेदन में अपने प्रस्तावित व्यवसाय (जैसे किराना, वेल्डिंग, टेंट हाउस) की जानकारी दें।',
+      'आदिवासी वित्त निगम द्वारा दस्तावेज़ों की जाँच उपरांत आवेदन बैंक को भेजा जाएगा।',
+      'बैंक से लोन पास होने पर आपको 5 वर्षों तक ब्याज में अनुदान (छूट) भी मिलेगा।'
+    ],
+    stepsEn: [
+      'Apply online on SAMAST portal (samast.mponline.gov.in) by selecting "Tantya Mama Yojana".',
+      'Give details of your proposed business (like grocery, welding, tent house) in application.',
+      'After checking of documents by Tribal Finance Corporation, application will be sent to bank.',
+      'On passing loan from bank, you will also get interest subsidy (discount) for 5 years.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 55 वर्ष' },
+      { field: 'age', op: 'lte', value: 55, label: 'अधिकतम 55 वर्ष' },
+    ],
+    sourceNotes: 'जनजातीय कार्य विभाग MP द्वारा क्रांतिसूर्य टंट्या मामा स्मृति योजना (छोटे व्यवसाय के लिए)।',
+    detailedDescription: [
+      'मध्य प्रदेश सरकार ने आदिवासी (ST) समाज के युवाओं को स्वरोज़गार से जोड़ने के लिए जननायक क्रांतिसूर्य टंट्या मामा के नाम पर यह योजना शुरू की है।',
+      'अगर कोई ST वर्ग का युवक या युवती अपना खुद का कोई छोटा-मोटा बिज़नेस (जैसे- चाय-नाश्ते की दुकान, फल-सब्ज़ी का ठेला, किराना दुकान, मोबाइल रिपेयरिंग, वेल्डिंग की दुकान, टेंट हाउस आदि) शुरू करना चाहता है, तो उसे ₹10,000 से लेकर ₹1,00,000 (एक लाख) तक का बैंक लोन दिलाया जाता है। इसमें बैंक आपसे कोई ज़मानत (गारंटी) नहीं माँगता और ब्याज का बड़ा हिस्सा सरकार भरती है।'
+    ],
+    detailedDescriptionEn: [
+      'MP Govt has started this scheme in name of Jannayak Krantisurya Tantya Mama to connect youth of Tribal (ST) society with self-employment.',
+      'If any ST category youth wants to start his own small business (like tea-breakfast shop, fruit-vegetable handcart, grocery shop, mobile repairing, welding shop, tent house etc.), he is given bank loan from ₹10,000 up to ₹1,00,000 (One Lakh). In this, bank does not ask for any collateral (guarantee) from you and govt pays major part of interest.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'लोन की राशि (Loan Amount): छोटा काम धंधा या औज़ार (Tool kit) खरीदने के लिए कम से कम ₹10,000 और अधिकतम ₹1 लाख तक का लोन।',
+          'ब्याज पर सब्सिडी (Interest Subsidy): बैंक जिस ब्याज दर पर लोन देगा, उसमें 7% ब्याज (Interest) सरकार अपनी तरफ से चुकाएगी। यानी आपको बहुत मामूली ब्याज दर ही देनी होगी। (यह लाभ अधिकतम 5 साल तक मिलेगा)।',
+          'गारंटी-फ्री: यह लोन पूरी तरह से ज़मानत मुक्त (Collateral Free) है। बैंक कोई ज़मीन या मकान गिरवी नहीं रखेगा, इसकी गारंटी सरकार (CGTMSE) देती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Main benefits of the scheme', points: [
+          'Loan Amount: Loan from minimum ₹10,000 up to max ₹1 Lakh to buy small business or tool kit.',
+          'Interest Subsidy: In whatever interest rate bank will give loan, govt will pay 7% interest from its side. Meaning you will have to pay very nominal interest rate. (This benefit will be available up to max 5 years).',
+          'Guarantee-Free: This loan is completely collateral free. Bank will not mortgage any land or house, its guarantee is given by govt (CGTMSE).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और अनुसूचित जनजाति (ST) का होना चाहिए।',
+      'आयु (Age) 18 वर्ष से लेकर 55 वर्ष के बीच होनी चाहिए।',
+      'यह योजना सिर्फ आयकर (Income Tax) नहीं देने वाले लोगों के लिए है।',
+      'आवेदक किसी भी बैंक का डिफॉल्टर (Defaulter) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and belong to Scheduled Tribe (ST).',
+      'Age should be between 18 years to 55 years.',
+      'This scheme is only for people who do not pay Income Tax.',
+      'Applicant should not be defaulter of any bank.'
+    ],
+    exclusions: [
+      'यह योजना केवल "नए व्यापार" (New Business) स्थापित करने के लिए है। पुराने चल रहे बिज़नेस को बढ़ाने के लिए यह लोन नहीं मिलेगा।',
+      'एक लाख से ज़्यादा के प्रोजेक्ट या कारखाने के लिए यह योजना नहीं है (उसके लिए बिरसा मुंडा स्वरोज़गार योजना है)।'
+    ],
+    exclusionsEn: [
+      'This scheme is only for setting up "New Business". This loan will not be available to expand old running business.',
+      'This scheme is not for project or factory of more than one lakh (For that there is Birsa Munda Swarojgar Yojana).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'MP Online के SAMAST पोर्टल पर जाएँ।',
+          '"जनजातीय कार्य विभाग" के अंतर्गत "टंट्या मामा आर्थिक कल्याण योजना" का चुनाव करें।',
+          'फॉर्म में अपनी निजी जानकारी और कौन सा व्यापार करना चाहते हैं (जैसे किराना दुकान), यह भरें।',
+          'दस्तावेज़ (जाति, आधार, पासबुक) अपलोड करें।',
+          'विभाग से स्वीकृति मिलने के बाद फाइल बैंक जाएगी और पैसा आपके खाते में आ जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Go to SAMAST portal of MP Online.',
+          'Select "Tantya Mama Arthik Kalyan Yojana" under "Tribal Affairs Department".',
+          'Fill your personal details and which business you want to do (like grocery shop) in the form.',
+          'Upload documents (Caste, Aadhaar, Passbook).',
+          'After getting approval from dept, file will go to bank and money will come in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या इसमें कोई पढ़ाई (Education) ज़रूरी है?', answer: 'नहीं, इस योजना में किसी प्रकार की शैक्षणिक योग्यता (जैसे 8वीं या 10वीं पास होना) ज़रूरी नहीं है।' },
+      { question: 'मुझे मार्जिन मनी (कैपिटल सब्सिडी) मिलेगी या ब्याज सब्सिडी?', answer: 'टंट्या मामा योजना में मार्जिन मनी (एकमुश्त छूट) नहीं मिलती, बल्कि 5 साल तक ब्याज में 7% की बड़ी छूट (ब्याज सब्सिडी) मिलती है।' }
+    ],
+    faqsEn: [
+      { question: 'Is any education required in this?', answer: 'No, any kind of educational qualification (like 8th or 10th pass) is not required in this scheme.' },
+      { question: 'Will I get margin money (capital subsidy) or interest subsidy?', answer: 'In Tantya Mama Yojana, margin money (lumpsum discount) is not available, rather a big discount of 7% in interest (interest subsidy) is available for 5 years.' }
+    ]
+  },
+  'bhagwan-birsa-munda-swarojgar-yojana': {
+    ...reviewed,
+    title: 'भगवान बिरसा मुंडा स्वरोजगार योजना',
+    english: 'Bhagwan Birsa Munda Swarojgar Yojana (ST Enterprise)',
+    summary: 'अनुसूचित जनजाति (ST) के शिक्षित युवाओं को स्वयं का कारखाना (Manufacturing), वर्कशॉप, होटल, ट्रांसपोर्ट या सर्विस सेंटर स्थापित करने के लिए भारी वित्तीय संबल।',
+    benefit: 'ST युवाओं को विनिर्माण हेतु ₹1 लाख से ₹50 लाख तथा सेवा क्षेत्र हेतु ₹1 लाख से ₹25 लाख तक गारंटी-फ्री लोन व 5% ब्याज अनुदान।',
+    department: 'आदिवासी वित्त एवं विकास निगम (जनजातीय कार्य विभाग)',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'ST (अनुसूचित जनजाति) का डिजिटल जाति प्रमाण पत्र',
+      'कम से कम 8वीं कक्षा उत्तीर्ण की मार्कशीट',
+      'प्रोजेक्ट रिपोर्ट (DPR - Project Report)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Digital Caste Certificate of ST (Scheduled Tribe)',
+      'At least 8th class passed Marksheet',
+      'Project Report (DPR - Project Report)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'अपने बिज़नेस की प्रोजेक्ट रिपोर्ट (DPR) किसी CA या एक्सपर्ट से बनवाएं।',
+      'SAMAST पोर्टल (samast.mponline.gov.in) पर ऑनलाइन आवेदन भरें।',
+      'ज़िला स्तर पर कलेक्टर की अध्यक्षता वाली टास्क फोर्स समिति (Task Force Committee) आपका इंटरव्यू लेगी।',
+      'समिति द्वारा स्वीकृति मिलने पर बैंक से लोन और सरकार द्वारा ब्याज अनुदान प्रदान किया जाता है।'
+    ],
+    stepsEn: [
+      'Get Project Report (DPR) of your business prepared by any CA or expert.',
+      'Fill online application on SAMAST portal (samast.mponline.gov.in).',
+      'Task Force Committee headed by Collector at district level will take your interview.',
+      'On getting approval by committee, loan from bank and interest subsidy by govt is provided.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' },
+    ],
+    sourceNotes: 'जनजातीय युवाओं को सफल उद्योगपति बनाने हेतु विशेष स्वरोज़गार योजना।',
+    detailedDescription: [
+      'आदिवासी (ST) समाज के ऐसे पढ़े-लिखे युवा जो बड़ा व्यापार या कारखाना लगाना चाहते हैं (जैसे- राइस मिल, दाल मिल, पैकेजिंग फैक्ट्री, रेस्टोरेंट, ट्रांसपोर्ट की बस/ट्रक खरीदना आदि), उन्हें बड़ी रकम की ज़रूरत होती है।',
+      'मध्य प्रदेश सरकार ने ऐसे बड़े सपनों को पूरा करने के लिए भगवान बिरसा मुंडा के नाम पर यह योजना बनाई है। इसमें ST युवाओं को 50 लाख रुपये तक का बड़ा लोन दिलवाया जाता है। सबसे अहम बात यह है कि बिना ज़मीन गिरवी रखे बैंक लोन देता है (गारंटी सरकार देती है) और बैंक के भारी ब्याज का ज़्यादातर हिस्सा भी सरकार खुद चुकाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Educated youth of Tribal (ST) society who want to set up big business or factory (like- rice mill, dal mill, packaging factory, restaurant, buying transport bus/truck etc.), they need huge amount of money.',
+      'MP Govt has made this scheme in name of Bhagwan Birsa Munda to fulfill such big dreams. In this, big loan up to 50 lakh rupees is given to ST youth. Most important thing is that bank gives loan without mortgaging land (guarantee is given by govt) and govt itself pays mostly share of heavy bank interest.'
+    ],
+    benefitsList: [
+      {
+        heading: 'लोन और सब्सिडी का विवरण', points: [
+          'विनिर्माण (Manufacturing/कारखाना): ₹1 लाख से लेकर ₹50 लाख रुपये तक का लोन।',
+          'सेवा क्षेत्र (Service/होटल/ट्रांसपोर्ट): ₹1 लाख से लेकर ₹25 लाख रुपये तक का लोन (रिटेल ट्रेड के लिए अधिकतम ₹25 लाख)।',
+          'ब्याज पर भारी छूट (Interest Subsidy): बैंक जो भी ब्याज लेगा, उसमें से 5% ब्याज (महिलाओं के लिए 6%) सरकार हर साल (अधिकतम 7 वर्षों तक) अनुदान के रूप में आपके खाते में डालेगी।',
+          'गारंटी-फ्री और ट्रेनिंग: इतने बड़े लोन के लिए किसी ज़मानत की ज़रूरत नहीं है (CGTMSE गारंटी सरकार देती है)। साथ ही सरकार मुफ़्त में उद्यमिता प्रशिक्षण (Training) भी करवाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Details of Loan and Subsidy', points: [
+          'Manufacturing (Factory): Loan from ₹1 Lakh up to ₹50 Lakh.',
+          'Service Sector (Hotel/Transport): Loan from ₹1 Lakh up to ₹25 Lakh (Max ₹25 Lakh for Retail Trade).',
+          'Heavy discount on interest (Interest Subsidy): Whatever interest bank takes, govt will put 5% interest (6% for women) out of it every year (max up to 7 years) as subsidy in your account.',
+          'Guarantee-Free and Training: No collateral is required for such a big loan (CGTMSE guarantee is given by govt). Also govt provides free entrepreneurship training.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और अनुसूचित जनजाति (ST) वर्ग का हो।',
+      'उम्र (Age) 18 वर्ष से 45 वर्ष के बीच होनी चाहिए।',
+      'शैक्षणिक योग्यता: आवेदक कम से कम 8वीं कक्षा पास होना चाहिए।',
+      'परिवार आयकर दाता (Income Tax Payee) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and belong to Scheduled Tribe (ST) category.',
+      'Age should be between 18 years to 45 years.',
+      'Educational Qualification: Applicant must be at least 8th class pass.',
+      'Family should not be Income Tax Payee.'
+    ],
+    exclusions: [
+      'यह योजना सिर्फ "नए प्रोजेक्ट" (New Project/Unit) के लिए है। पुरानी फैक्ट्री या बिज़नेस के लिए लोन नहीं मिलेगा।',
+      'जिसने पहले से किसी सरकारी स्वरोज़गार योजना (जैसे मुख्यमंत्री युवा उद्यमी या PMEGP) का लाभ ले रखा है, वह इसमें आवेदन नहीं कर सकता।'
+    ],
+    exclusionsEn: [
+      'This scheme is only for "New Project/Unit". Loan will not be available for old factory or business.',
+      'One who has already taken benefit of any govt self-employment scheme (like Mukhyamantri Yuva Udyami or PMEGP), cannot apply in this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'ज़िला आदिवासी वित्त विकास निगम कार्यालय जाकर योजना की जानकारी लें।',
+          'अपनी प्रोजेक्ट रिपोर्ट (DPR) तैयार करें (जैसे आप 20 लाख का राइस मिल लगाना चाहते हैं)।',
+          'MP Online के SAMAST पोर्टल पर ऑनलाइन फॉर्म भरें और DPR अपलोड करें।',
+          'ज़िला टास्क फोर्स (कलेक्टर/सीईओ) आपका इंटरव्यू लेगी।',
+          'पास होने पर बैंक आपके खाते में पैसा जमा कर देगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Go to District Tribal Finance Development Corporation office and take information about scheme.',
+          'Prepare your Project Report (DPR) (like you want to set up rice mill of 20 lakhs).',
+          'Fill online form on SAMAST portal of MP Online and upload DPR.',
+          'District Task Force (Collector/CEO) will take your interview.',
+          'On passing, bank will deposit money in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'टंट्या मामा योजना और बिरसा मुंडा योजना में क्या अंतर है?', answer: 'टंट्या मामा योजना बहुत छोटे व्यापार (10 हज़ार से 1 लाख तक) के लिए है, जबकि बिरसा मुंडा योजना बड़े उद्योग या कारखाने (1 लाख से 50 लाख तक) के लिए है।' },
+      { question: 'क्या बैंक मुझसे ज़मीन की रजिस्ट्री मांगेगा?', answer: 'नहीं, योजना के तहत यह लोन ज़मानत-मुक्त (Collateral Free) होता है। गारंटी की फीस सरकार द्वारा भरी जाती है।' }
+    ],
+    faqsEn: [
+      { question: 'What is difference between Tantya Mama scheme and Birsa Munda scheme?', answer: 'Tantya Mama scheme is for very small business (10 thousand to 1 lakh), whereas Birsa Munda scheme is for big industry or factory (1 lakh to 50 lakh).' },
+      { question: 'Will bank ask me for land registry?', answer: 'No, under scheme this loan is collateral free. Guarantee fee is paid by govt.' }
+    ]
+  },
+  'savitri-bai-phule-shg-yojana': {
+    ...reviewed,
+    title: 'सावित्री बाई फुले स्व-सहायता समूह योजना',
+    english: 'Savitri Bai Phule SHG Scheme',
+    summary: 'महिलाओं के स्व-सहायता समूहों (SHG) को खाद्य प्रसंस्करण, सिलाई, अगरबत्ती, हस्तशिल्प आदि उत्पाद बनाकर बाजार में बेचने के लिए आर्थिक सहायता देने की योजना।',
+    benefit: 'महिला स्व-सहायता समूहों को अपना कोई बिज़नेस (Micro Enterprise) लगाने के लिए ₹2 लाख तक का लोन और उस पर 30% तक की भारी सब्सिडी (अनुदान)।',
+    department: 'राज्य ग्रामीण/शहरी आजीविका मिशन',
+    sourceUrl: 'https://aajeevika.mp.gov.in/',
+    applicationUrl: 'https://aajeevika.mp.gov.in/',
+    documents: [
+      'समूह की सभी महिलाओं का आधार कार्ड',
+      'समग्र आईडी (Samagra ID)',
+      'समूह (SHG) का रजिस्ट्रेशन/प्रमाण पत्र',
+      'समूह का बैंक पासबुक और बचत खाता',
+      'बिज़नेस (कामकाज) का प्रस्ताव'
+    ],
+    documentsEn: [
+      'Aadhaar Card of all women of group',
+      'Samagra ID',
+      'Registration/Certificate of Group (SHG)',
+      'Bank passbook and savings account of group',
+      'Business proposal'
+    ],
+    steps: [
+      'अगर आपका महिलाओं का स्व-सहायता समूह नहीं है, तो पहले 10-12 महिलाओं का समूह बनाएं।',
+      'अपने ब्लॉक के आजीविका मिशन (SRLM/NULM) अधिकारी से संपर्क करें।',
+      'समूह के काम का प्रस्ताव बनाकर जमा करें।',
+      'आजीविका मिशन आपके समूह की ग्रेडिंग करेगा और बैंक से लोन व सब्सिडी पास करवाएगा।'
+    ],
+    stepsEn: [
+      'If you do not have a women\'s self-help group, first form a group of 10-12 women.',
+      'Contact Livelihood Mission (SRLM/NULM) officer of your block.',
+      'Make and submit a proposal for the group\'s work.',
+      'Livelihood Mission will grade your group and get loan and subsidy passed from bank.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'केवल महिला स्व-सहायता समूह' }
+    ],
+    sourceNotes: 'महिलाओं को एकजुट कर उन्हें उद्यमी (Entrepreneur) बनाने के लिए विशेष योजना।',
+    detailedDescription: [
+      'गांवों और शहरों में महिलाएं अकेले कोई बड़ा काम नहीं कर पातीं, लेकिन अगर वे 10-12 महिलाओं का एक स्व-सहायता समूह (Self Help Group - SHG) बना लें, तो वे अचार-पापड़, सिलाई-कढ़ाई, अगरबत्ती, मसाले पीसने या स्कूल ड्रेस सिलने जैसा कोई भी बड़ा काम कर सकती हैं।',
+      'ऐसी ही महिलाओं की मदद के लिए सरकार ने "सावित्री बाई फुले स्व-सहायता समूह योजना" शुरू की है। इसमें महिलाओं के समूहों को कोई भी उत्पाद बनाकर बेचने (Micro Enterprise) के लिए बड़ी आर्थिक मदद दी जाती है, ताकि महिलाएं आत्मनिर्भर बन सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Women in villages and cities cannot do any big work alone, but if they form a Self Help Group (SHG) of 10-12 women, they can do any big work like making pickle-papad, sewing-embroidery, incense sticks, grinding spices or sewing school dresses.',
+      'To help such women, govt has started "Savitri Bai Phule SHG Scheme". In this, big financial help is given to women\'s groups to make and sell any product (Micro Enterprise), so that women can become self-reliant.'
+    ],
+    benefitsList: [
+      {
+        heading: 'समूहों को क्या आर्थिक लाभ मिलता है?', points: [
+          'बैंक लोन (Bank Loan): समूह को अपना व्यापार शुरू करने के लिए अधिकतम ₹2,00,000 (दो लाख रुपये) तक का बैंक लोन दिलाया जाता है।',
+          '30% मार्जिन मनी (सब्सिडी): जितना लोन पास होता है, उसका 30% हिस्सा (अधिकतम 60,000 रुपये तक) सरकार अपनी तरफ से समूह के खाते में जमा कर देती है (यानी इतना पैसा महिलाओं को नहीं लौटाना पड़ता)।',
+          'ब्याज पर छूट: समूह अगर समय पर लोन चुकाता है, तो बैंक के ब्याज पर भी अतिरिक्त अनुदान दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What financial benefit do groups get?', points: [
+          'Bank Loan: Bank loan up to max ₹2,00,000 (Two Lakh rupees) is provided to group to start their business.',
+          '30% Margin Money (Subsidy): 30% part of loan passed (up to max 60,000 rupees) is deposited by govt from its side in group\'s account (meaning women do not have to return this much money).',
+          'Discount on Interest: If group repays loan on time, additional subsidy is also given on bank interest.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'योजना का लाभ किसी एक महिला को अकेले नहीं मिलता, बल्कि महिलाओं के पंजीकृत "स्व-सहायता समूह (SHG)" को मिलता है।',
+      'समूह आजीविका मिशन (SRLM/NRLM/NULM) में पंजीकृत होना चाहिए।',
+      'समूह नियमित रूप से बैठकें करता हो और अपनी बचत (Savings) जमा करता हो (यानी समूह एक्टिव होना चाहिए)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Benefit of scheme is not given to any one woman alone, but to registered "Self Help Group (SHG)" of women.',
+      'Group must be registered in Livelihood Mission (SRLM/NRLM/NULM).',
+      'Group should hold regular meetings and deposit its savings (meaning group should be active).'
+    ],
+    exclusions: [
+      'अगर कोई पुरुष इस योजना में अकेले या समूह बनाकर लोन लेना चाहे, तो वह पात्र नहीं है। यह सिर्फ महिलाओं के लिए है।',
+      'जो स्व-सहायता समूह (SHG) डिफॉल्टर हैं या जिनकी ग्रेडिंग (Grading) अच्छी नहीं है, उन्हें यह लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If any man wants to take loan in this scheme alone or by forming a group, he is not eligible. This is only for women.',
+      'Self Help Groups (SHGs) which are defaulters or whose grading is not good, will not get this benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ब्लॉक कार्यालय के माध्यम से)', steps: [
+          'समूह की सभी महिलाएं मिलकर तय करें कि वे क्या बिज़नेस करना चाहती हैं।',
+          'ग्राम पंचायत स्तर पर आजीविका मिशन के CRP (कम्युनिटी रिसोर्स पर्सन) या ब्लॉक मैनेजर से मिलें।',
+          'समूह का बिज़नेस प्लान और लोन का फॉर्म भरकर ब्लॉक में जमा करें।',
+          'ब्लॉक से फाइल बैंक जाएगी और समूह के खाते में लोन व सब्सिडी आ जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through Block Office)', steps: [
+          'All women of group together decide what business they want to do.',
+          'Meet CRP (Community Resource Person) or Block Manager of Livelihood Mission at Gram Panchayat level.',
+          'Fill group\'s business plan and loan form and submit it in block.',
+          'File will go from block to bank and loan and subsidy will come in group\'s account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं अकेली महिला होने पर भी इस योजना का लोन ले सकती हूँ?', answer: 'नहीं, यह योजना विशेष रूप से महिला समूहों (SHG) के लिए है। अकेले स्वरोज़गार के लिए आपको "मुख्यमंत्री स्वरोजगार योजना" आदि में आवेदन करना होगा।' },
+      { question: 'सब्सिडी का पैसा किसे मिलेगा?', answer: 'सब्सिडी (मार्जिन मनी) का पैसा सीधे बैंक में उस समूह के लोन खाते (Loan Account) में जमा किया जाता है, जिससे लोन की किश्तें कम हो जाती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can I take loan of this scheme even being a single woman?', answer: 'No, this scheme is specially for women groups (SHG). For single self-employment you have to apply in "Mukhyamantri Swarojgar Yojana" etc.' },
+      { question: 'Who will get subsidy money?', answer: 'Subsidy (margin money) money is deposited directly in loan account of that group in bank, due to which loan installments are reduced.' }
+    ]
+  },
+  'sant-ravidas-swarojgar-yojana': {
+    ...reviewed,
+    title: 'संत रविदास स्वरोजगार योजना',
+    english: 'Sant Ravidas Swarojgar Yojana (SC Entrepreneur)',
+    summary: 'अनुसूचित जाति (SC) के युवाओं को बड़े उद्यम, विनिर्माण इकाई या सेवा प्रतिष्ठान स्थापित करने के लिए भारी बैंक लोन (50 लाख तक) और ब्याज सब्सिडी की योजना।',
+    benefit: 'SC वर्ग के युवाओं को विनिर्माण (कारखाना) हेतु ₹1 लाख से ₹50 लाख तक व सेवा क्षेत्र हेतु ₹25 लाख तक का गारंटी-फ्री लोन और 5% वार्षिक ब्याज अनुदान।',
+    department: 'अनुसूचित जाति वित्त एवं विकास निगम',
+    sourceUrl: 'https://scdevelopmentmp.nic.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'SC (अनुसूचित जाति) का डिजिटल जाति प्रमाण पत्र',
+      'कम से कम 8वीं पास की मार्कशीट',
+      'प्रोजेक्ट रिपोर्ट (DPR - Detailed Project Report)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Digital Caste Certificate of SC (Scheduled Caste)',
+      'At least 8th pass Marksheet',
+      'Project Report (DPR - Detailed Project Report)',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'एक अच्छी प्रोजेक्ट रिपोर्ट (DPR) तैयार करें।',
+      'SAMAST पोर्टल (samast.mponline.gov.in) पर जाकर योजना में ऑनलाइन आवेदन करें।',
+      'कलेक्टर की अध्यक्षता वाली ज़िला समिति आपका साक्षात्कार (Interview) लेगी।',
+      'लोन पास होने पर आपको 7 साल तक बैंक के ब्याज में 5% की छूट मिलेगी।'
+    ],
+    stepsEn: [
+      'Prepare a good Project Report (DPR).',
+      'Go to SAMAST portal (samast.mponline.gov.in) and apply online in scheme.',
+      'District committee headed by Collector will take your Interview.',
+      'On passing loan, you will get 5% discount in bank interest for 7 years.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' },
+    ],
+    sourceNotes: 'SC वर्ग के युवाओं को उद्योगपति बनाने के लिए विशेष स्वरोज़गार योजना।',
+    detailedDescription: [
+      'अनुसूचित जाति (SC) वर्ग के जो युवा अपना खुद का कोई बड़ा व्यापार (जैसे दाल मिल, राइस मिल, पैकेजिंग यूनिट, होटल, ट्रांसपोर्ट, बड़ा सर्विस सेंटर) शुरू करना चाहते हैं, उनके पास इतनी बड़ी पूंजी नहीं होती।',
+      'सरकार ने ऐसे युवाओं को उद्योगपति (Entrepreneur) बनाने के लिए "संत रविदास स्वरोजगार योजना" शुरू की है। इसमें ST वर्ग की बिरसा मुंडा योजना की तरह ही SC वर्ग के लिए 50 लाख रुपये तक का बड़ा लोन दिया जाता है। इस बड़े लोन के लिए न तो बैंक आपसे कोई गारंटी (ज़मीन/प्रॉपर्टी) माँगता है, और न ही आपको पूरा ब्याज भरना होता है।'
+    ],
+    detailedDescriptionEn: [
+      'Youth of Scheduled Caste (SC) category who want to start their own big business (like dal mill, rice mill, packaging unit, hotel, transport, big service center), they do not have such big capital.',
+      'Govt has started "Sant Ravidas Swarojgar Yojana" to make such youth entrepreneurs. In this, like Birsa Munda scheme of ST category, big loan up to 50 lakh rupees is given for SC category. For this big loan, neither bank asks you for any guarantee (land/property), nor you have to pay full interest.'
+    ],
+    benefitsList: [
+      {
+        heading: 'लोन और ब्याज में क्या लाभ मिलता है?', points: [
+          'कारखाना/विनिर्माण (Manufacturing): अगर आप कोई सामान बनाने की फैक्ट्री लगाते हैं, तो ₹1 लाख से ₹50 लाख तक का लोन।',
+          'सेवा क्षेत्र (Service/Transport): अगर आप होटल, बस/ट्रक या कोई सर्विस सेंटर खोलते हैं, तो ₹1 लाख से ₹25 लाख तक का लोन।',
+          'ब्याज पर बड़ी छूट: बैंक के कुल ब्याज में से 5% ब्याज (प्रतिवर्ष) सरकार खुद बैंक শক चुकाती है। (यानी अगर बैंक का ब्याज 10% है, तो आपको सिर्फ 5% ही देना होगा)। यह लाभ 7 साल तक मिलता है।',
+          'गारंटी मुफ़्त (Collateral Free): बैंक इस लोन के लिए कोई चीज़ गिरवी नहीं रखता। इसकी गारंटी सरकार (CGTMSE) खुद देती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in loan and interest?', points: [
+          'Factory/Manufacturing: If you set up a factory to make any good, then loan from ₹1 Lakh to ₹50 Lakh.',
+          'Service Sector (Service/Transport): If you open hotel, bus/truck or any service center, then loan from ₹1 Lakh to ₹25 Lakh.',
+          'Big discount on interest: Out of total bank interest, govt itself pays 5% interest (per year) to bank. (Meaning if bank interest is 10%, you have to pay only 5%). This benefit is available for 7 years.',
+          'Guarantee Free (Collateral Free): Bank does not mortgage anything for this loan. Its guarantee is given by govt (CGTMSE) itself.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और अनुसूचित जाति (SC) वर्ग का होना चाहिए।',
+      'आवेदक की आयु 18 वर्ष से लेकर 45 वर्ष के बीच होनी चाहिए।',
+      'कम से कम 8वीं कक्षा पास होना अनिवार्य है।',
+      'परिवार आयकर दाता (Income Tax Payee) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and belong to Scheduled Caste (SC) category.',
+      'Age of applicant should be between 18 years to 45 years.',
+      'Must be at least 8th class pass.',
+      'Family should not be Income Tax Payee.'
+    ],
+    exclusions: [
+      'यह योजना सिर्फ और सिर्फ "नए उद्योग (New Unit)" के लिए है। पुराने चल रहे बिज़नेस को बढ़ाने के लिए नहीं।',
+      'अगर आपने मुख्यमंत्री युवा उद्यमी योजना या किसी अन्य योजना में पहले से लाभ ले रखा है, तो आप इसमें पात्र नहीं हैं।'
+    ],
+    exclusionsEn: [
+      'This scheme is only and only for "New Unit". Not for expanding old running business.',
+      'If you have already taken benefit in Mukhyamantri Yuva Udyami Yojana or any other scheme, then you are not eligible in this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'अपने बिज़नेस की जानकारी वाली प्रोजेक्ट रिपोर्ट (DPR) किसी सीए (CA) से बनवाएं।',
+          'MP Online के SAMAST (समस्त) पोर्टल पर जाकर फॉर्म भरें।',
+          'ज़िला अंत्यावसायी (अनुसूचित जाति) कार्यालय में संपर्क करें।',
+          'कलेक्टर की समिति आपका इंटरव्यू लेकर लोन पास करेगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Get Project Report (DPR) with details of your business prepared by any CA.',
+          'Go to SAMAST portal of MP Online and fill form.',
+          'Contact District Antyavasayi (Scheduled Caste) office.',
+          'Collector\'s committee will take your interview and pass loan.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या इस योजना में मार्जिन मनी (सब्सिडी) मिलेगी?', answer: 'संत रविदास योजना में मार्जिन मनी नहीं दी जाती, बल्कि बहुत बड़ी राशि (50 लाख तक) पर गारंटी फीस और 7 साल तक 5% ब्याज सब्सिडी (जो एक बड़ी रकम होती है) दी जाती है।' },
+      { question: 'क्या मैं किराना दुकान के लिए 50 लाख का लोन ले सकता हूँ?', answer: 'नहीं, किराना दुकान या रिटेल ट्रेड के लिए यह लोन नहीं मिलता। यह सिर्फ निर्माण (फैक्ट्री) और सेवा क्षेत्र के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'Will margin money (subsidy) be available in this scheme?', answer: 'Margin money is not given in Sant Ravidas scheme, rather guarantee fee on huge amount (up to 50 lakh) and 5% interest subsidy for 7 years (which is a big amount) is given.' },
+      { question: 'Can I take loan of 50 lakh for grocery shop?', answer: 'No, this loan is not available for grocery shop or retail trade. This is only for manufacturing (factory) and service sector.' }
+    ]
+  },
+  'dr-ambedkar-arthik-kalyan-yojana': {
+    ...reviewed,
+    title: 'डॉ भीमराव अम्बेडकर आर्थिक कल्याण योजना',
+    english: 'Dr Ambedkar Arthik Kalyan Yojana (SC Micro Business)',
+    summary: 'SC वर्ग के गरीब लोगों को अपना छोटा व्यवसाय, मरम्मत दुकान, फल-सब्जी दुकान, टेलरिंग आदि शुरू करने हेतु बिना किसी जटिलता के त्वरित बैंक ऋण और अनुदान।',
+    benefit: 'अनुसूचित जाति (SC) के बीपीएल/गरीब नागरिकों को छोटा काम-धंधा (उपकरण/व्यवसाय) शुरू करने के लिए ₹10,000 से ₹1 लाख तक ऋण और ब्याज अनुदान।',
+    department: 'अनुसूचित जाति वित्त एवं विकास निगम',
+    sourceUrl: 'https://scdevelopmentmp.nic.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'SC (अनुसूचित जाति) का डिजिटल जाति प्रमाण पत्र',
+      'आय प्रमाण पत्र (Income Certificate) या BPL राशन कार्ड',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Digital Caste Certificate of SC (Scheduled Caste)',
+      'Income Certificate or BPL Ration Card',
+      'Bank Account Passbook'
+    ],
+    steps: [
+      'MP Online के SAMAST पोर्टल पर डॉ. अम्बेडकर आर्थिक कल्याण योजना में ऑनलाइन आवेदन करें।',
+      'ज़िला अंत्यावसायी (अनुसूचित जाति) कार्यालय आपके दस्तावेज़ों और आवेदन की जाँच करेगा।',
+      'सही पाए जाने पर आपका आवेदन (फ़ाइल) नज़दीकी बैंक शाखा को भेज दिया जाएगा।',
+      'बैंक से लोन पास होगा और सरकार द्वारा 5 वर्षों तक 7% ब्याज अनुदान भी मिलेगा।'
+    ],
+    stepsEn: [
+      'Apply online in Dr. Ambedkar Arthik Kalyan Yojana on SAMAST portal of MP Online.',
+      'District Antyavasayi (Scheduled Caste) office will check your documents and application.',
+      'If found correct, your application (file) will be sent to nearest bank branch.',
+      'Loan will be passed from bank and 7% interest subsidy for 5 years will also be given by govt.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 55 वर्ष' },
+      { field: 'age', op: 'lte', value: 55, label: 'अधिकतम 55 वर्ष' },
+    ],
+    sourceNotes: 'आर्थिक रूप से कमज़ोर SC वर्ग के लिए सूक्ष्म स्वरोज़गार (Micro Business) योजना।',
+    detailedDescription: [
+      'अनुसूचित जाति (SC) समाज के कई लोग अत्यंत गरीब हैं और सिर्फ मज़दूरी कर पाते हैं। उनके पास इतना पैसा नहीं होता कि वे अपनी खुद की सिलाई मशीन, बढ़ई के औज़ार, फल-सब्ज़ी का ठेला या जूता पॉलिश की किट खरीद सकें।',
+      'ऐसे ही कमज़ोर वर्ग (BPL) को आत्मनिर्भर बनाने के लिए सरकार ने "डॉ. भीमराव अम्बेडकर आर्थिक कल्याण योजना" शुरू की है। इसमें बैंक बिना किसी ज़मानत के 10 हज़ार से 1 लाख रुपये तक का बहुत छोटा लोन देता है, ताकि लोग खुद का छोटा व्यवसाय शुरू कर सकें और गरीबी से बाहर आ सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Many people of Scheduled Caste (SC) society are extremely poor and can only do labor. They do not have enough money to buy their own sewing machine, carpenter\'s tools, fruit-vegetable handcart or shoe polish kit.',
+      'Govt has started "Dr. Bhimrao Ambedkar Arthik Kalyan Yojana" to make such weaker sections (BPL) self-reliant. In this, bank gives very small loan of 10 thousand to 1 lakh rupees without any collateral, so that people can start their own small business and come out of poverty.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के खास लाभ', points: [
+          'सूक्ष्म लोन (Micro Loan): ठेला, रिक्शा, बर्तन, सिलाई मशीन या कोई अन्य औज़ार/दुकान खोलने के लिए अधिकतम ₹1,00,000 (एक लाख रुपये) तक का लोन।',
+          'ब्याज पर छूट (Interest Subsidy): इतने छोटे लोन पर बैंक जो ब्याज लगाता है, उसमें से 7% ब्याज सरकार अपनी तरफ से (अधिकतम 5 साल तक) चुकाती है। इससे आपको बहुत कम ब्याज दर पर पैसा मिल जाता है।',
+          'गारंटी-मुक्त ऋण: बैंक इस लोन के लिए आपसे कोई मकान या ज़मीन गिरवी नहीं रखवाता। यह पूरी तरह से कोलैटरल फ्री (Collateral Free) होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Special benefits of scheme', points: [
+          'Micro Loan: Loan up to maximum ₹1,00,000 (One lakh rupees) to open handcart, rickshaw, utensils, sewing machine or any other tool/shop.',
+          'Interest Subsidy: Out of the interest charged by bank on such small loan, govt pays 7% interest from its side (max up to 5 years). By this you get money at very low interest rate.',
+          'Guarantee-free loan: Bank does not mortgage any house or land from you for this loan. This is completely Collateral Free.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और अनुसूचित जाति (SC) वर्ग का होना चाहिए।',
+      'आयु सीमा (Age): 18 वर्ष से 55 वर्ष के बीच।',
+      'आवेदक का परिवार आयकर दाता (Income Tax Payee) नहीं होना चाहिए।',
+      'शैक्षणिक योग्यता (Education) की कोई भी बाध्यता नहीं है (अनपढ़ भी पात्र हैं)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and belong to Scheduled Caste (SC) category.',
+      'Age limit: Between 18 years to 55 years.',
+      'Applicant\'s family should not be Income Tax Payee.',
+      'There is no obligation of Educational Qualification (Illiterates are also eligible).'
+    ],
+    exclusions: [
+      'यह योजना बड़े कारखाने या फैक्ट्री के लिए नहीं है (उसके लिए संत रविदास योजना है)।',
+      'अगर आवेदक पहले से किसी बैंक का डिफॉल्टर है (पुराना लोन नहीं चुकाया), तो उसे यह लोन नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for big factory or plant (For that there is Sant Ravidas scheme).',
+      'If applicant is already a defaulter of any bank (did not repay old loan), he will not get this loan.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST Portal)', steps: [
+          'ज़िले के अंत्यावसायी सहकारी विकास समिति कार्यालय में जाकर योजना की जानकारी लें।',
+          'SAMAST (समस्त) पोर्टल पर ऑनलाइन आवेदन भरें और दस्तावेज़ (जाति, आधार) अपलोड करें।',
+          'विभाग आपके आवेदन को पास करके बैंक को भेजेगा।',
+          'बैंक बिना किसी ज़मानत के आपके खाते में पैसे (लोन) डाल देगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Go to District Antyavasayi Cooperative Development Committee office and take information about scheme.',
+          'Fill online application on SAMAST portal and upload documents (Caste, Aadhaar).',
+          'Dept will pass your application and send to bank.',
+          'Bank will put money (loan) in your account without any collateral.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'संत रविदास योजना और अम्बेडकर योजना में क्या अंतर है?', answer: 'अम्बेडकर योजना बहुत छोटे काम (10 हज़ार से 1 लाख तक) के लिए है (और इसमें पढ़ाई ज़रूरी नहीं है), जबकि संत रविदास योजना बड़े उद्योग (1 लाख से 50 लाख) के लिए है (जिसमें 8वीं पास होना ज़रूरी है)।' },
+      { question: 'क्या मुझे इस लोन के लिए अपनी ज़मीन के कागज़ देने होंगे?', answer: 'नहीं, 1 लाख रुपये तक के इस लोन के लिए बैंक कोई ज़मीन या मकान गिरवी नहीं रखता।' }
+    ],
+    faqsEn: [
+      { question: 'What is difference between Sant Ravidas scheme and Ambedkar scheme?', answer: 'Ambedkar scheme is for very small work (10 thousand to 1 lakh) (and education is not required in it), whereas Sant Ravidas scheme is for big industry (1 lakh to 50 lakh) (in which 8th pass is mandatory).' },
+      { question: 'Will I have to give my land papers for this loan?', answer: 'No, bank does not mortgage any land or house for this loan up to 1 lakh rupees.' }
+    ]
+  },
+  'mukhyamantri-aawasiya-bhu-adhikar-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री आवासीय भू-अधिकार योजना',
+    english: 'Mukhyamantri Aawasiya Bhu Adhikar Yojana (Free Land Plot)',
+    summary: 'ऐसे ग्रामीण परिवार जिनके पास रहने के लिए खुद का कोई पक्का मकान या ज़मीन (प्लॉट) नहीं है, उन्हें सरकार द्वारा गांव की सरकारी (आबादी) ज़मीन पर घर बनाने के लिए मुफ्त पट्टा देने की योजना।',
+    benefit: 'ग्रामीण क्षेत्रों में आवासहीन (बेघर) गरीब परिवारों को घर बनाने के लिए अधिकतम 60 वर्ग मीटर (लगभग 645 वर्गफीट) का आवासीय भूखंड (Plot) और उसका पट्टा (Patta) एकदम मुफ़्त दिया जाता है।',
+    department: 'राजस्व विभाग (Revenue Department)',
+    sourceUrl: 'https://saara.mp.gov.in/',
+    applicationUrl: 'https://saara.mp.gov.in/',
+    documents: [
+      'पति और पत्नी दोनों का आधार कार्ड',
+      'समग्र परिवार आईडी (Samagra Family ID)',
+      'मतदाता पहचान पत्र (Voter ID)',
+      'ग्रामीण मूल निवास प्रमाण पत्र',
+      'भूमिहीन (ज़मीन न होने) का स्व-घोषणा पत्र (Self-Declaration)'
+    ],
+    documentsEn: [
+      'Aadhaar Card of both husband and wife',
+      'Samagra Family ID',
+      'Voter ID',
+      'Rural Domicile Certificate',
+      'Self-Declaration of being landless'
+    ],
+    steps: [
+      'राजस्व विभाग के SAARA पोर्टल (saara.mp.gov.in) पर "मुख्यमंत्री आवासीय भू-अधिकार" लिंक पर क्लिक करें।',
+      'अपनी समग्र आईडी डालकर ऑनलाइन फॉर्म (निःशुल्क) भरें।',
+      'पटवारी और तहसीलदार आपके आवेदन की जाँच (Survey) करेंगे।',
+      'ग्राम सभा (Gram Sabha) में पात्र लोगों की सूची पढ़ी जाएगी। सब कुछ सही होने पर ज़िला कलेक्टर द्वारा मुफ़्त पट्टा बाँटा जाएगा।'
+    ],
+    stepsEn: [
+      'Click on "Mukhyamantri Aawasiya Bhu-Adhikar" link on Revenue Department\'s SAARA portal (saara.mp.gov.in).',
+      'Fill online form (free) by entering your Samagra ID.',
+      'Patwari and Tehsildar will check (Survey) your application.',
+      'List of eligible people will be read in Gram Sabha. If everything is correct, free patta will be distributed by District Collector.'
+    ],
+    rules: [
+      { field: 'rural', op: 'eq', value: true, label: 'केवल ग्रामीण क्षेत्रों (Villages) के लिए' }
+    ],
+    sourceNotes: 'गांवों में "हर परिवार का अपना घर हो" के उद्देश्य से मुफ़्त ज़मीन (पट्टा) देने वाली सबसे बड़ी योजना।',
+    detailedDescription: [
+      'मध्य प्रदेश के कई गाँवों में आज भी ऐसे परिवार हैं, जो दूसरों की ज़मीन पर, या एक ही छोटे से कच्चे घर में कई-कई परिवारों (भाइयों) के साथ भीड़भाड़ में रहने को मजबूर हैं। उनके पास अपना खुद का कोई प्लॉट या ज़मीन नहीं है जहाँ वे नया घर बना सकें।',
+      'ऐसे सभी भूमिहीन (Landless) परिवारों को सरकार "मुख्यमंत्री आवासीय भू-अधिकार योजना" के तहत उनके ही गाँव की आबादी (सरकारी) ज़मीन में से लगभग 600 वर्गफीट (60 Sq. Mt.) का प्लॉट एकदम मुफ़्त दे रही है। इसका मालिकाना हक (पट्टा) पति और पत्नी दोनों के नाम पर संयुक्त (Joint) रूप से दिया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'Even today in many villages of MP, there are families who are forced to live in crowds on others\' land, or in a single small kutcha house with many families (brothers). They do not have their own plot or land where they can build a new house.',
+      'Govt is giving a plot of about 600 sq feet (60 Sq. Mt.) completely free to all such landless families from the abadi (govt) land of their own village under "Mukhyamantri Aawasiya Bhu-Adhikar Yojana". Its ownership right (patta) is given jointly in name of both husband and wife.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या मिलता है?', points: [
+          'मुफ़्त प्लॉट (Free Plot): घर बनाने के लिए गाँव की सरकारी ज़मीन में अधिकतम 60 वर्ग मीटर (लगभग 645 वर्गफीट) का भूखंड (ज़मीन)।',
+          'कानूनी अधिकार (Patta): उस ज़मीन का कानूनी कागज़ (पट्टा/Bhu-Adhikar Patra) मुफ़्त मिलता है। इसके लिए आपको कोई प्रीमियम या ज़मीन की कीमत नहीं चुकानी होती।',
+          'पीएम आवास (PM Awas) का रास्ता साफ: जब आपके पास ज़मीन का पट्टा आ जाएगा, तो आप उस ज़मीन पर "प्रधानमंत्री आवास योजना (PMAY)" के तहत घर बनाने के लिए सरकारी पैसे (डेढ़ लाख रुपये) की भी माँग कर सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is received in the scheme?', points: [
+          'Free Plot: Maximum 60 sq meters (about 645 sq feet) of plot (land) in village govt land to build house.',
+          'Legal Right (Patta): Legal paper (Patta/Bhu-Adhikar Patra) of that land is given free. You do not have to pay any premium or land price for this.',
+          'Way clear for PM Awas: When you get land patta, you can also demand govt money (one and half lakh rupees) to build house on that land under "Pradhan Mantri Awas Yojana (PMAY)".'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक परिवार उसी गाँव का निवासी होना चाहिए, जहाँ वह ज़मीन (पट्टा) चाहता है।',
+      'परिवार के पास रहने के लिए अपना खुद का कोई प्लॉट, मकान या पक्का घर नहीं होना चाहिए। (कच्चे घर में भीड़ में रहने वाले अलग परिवार माने जाएंगे)।',
+      'परिवार के पास 5 एकड़ (2 हेक्टेयर) से ज़्यादा खेती की ज़मीन नहीं होनी चाहिए।',
+      'परिवार का कोई सदस्य सरकारी नौकरी में या इनकम टैक्स (Income Tax) देने वाला नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant family must be resident of same village where they want land (patta).',
+      'Family should not have their own plot, house or pucca house to live in. (Families living in crowd in kutcha house will be considered separate families).',
+      'Family should not have more than 5 acres (2 hectares) of agricultural land.',
+      'No member of family should be in govt job or Income Tax payee.'
+    ],
+    exclusions: [
+      'यह योजना केवल ग्रामीण (Villages) इलाकों के लिए है। शहरों या नगर निगम क्षेत्रों में रहने वालों को इस योजना में प्लॉट नहीं मिलेगा।',
+      'जिनके पास पहले से गाँव में अच्छी खासी ज़मीन या पक्का मकान है, वे इसके लिए अपात्र (Ineligible) हैं।'
+    ],
+    exclusionsEn: [
+      'This scheme is only for rural (Villages) areas. Those living in cities or municipal corporation areas will not get plot in this scheme.',
+      'Those who already have good amount of land or pucca house in village, are ineligible for this.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAARA Portal)', steps: [
+          'राजस्व विभाग के "सारा (SAARA)" पोर्टल (saara.mp.gov.in) पर जाएँ।',
+          '"मुख्यमंत्री आवासीय भू-अधिकार योजना" के बॉक्स पर क्लिक करें।',
+          'Apply (आवेदन करें) पर क्लिक करें और अपनी समग्र आईडी (Samagra ID) डालें।',
+          'आपकी जानकारी स्क्रीन पर आ जाएगी। फॉर्म सबमिट करें। (यह काम आप MP Online या CSC से भी करवा सकते हैं)।',
+          'बाद में पटवारी सर्वे करेगा और ग्राम सभा में प्रस्ताव पास होने पर आपको पट्टा मिल जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAARA Portal)', steps: [
+          'Go to "SAARA" portal (saara.mp.gov.in) of Revenue Dept.',
+          'Click on box of "Mukhyamantri Aawasiya Bhu-Adhikar Yojana".',
+          'Click on Apply and enter your Samagra ID.',
+          'Your details will appear on screen. Submit the form. (You can also get this done from MP Online or CSC).',
+          'Later Patwari will do survey and on passing of proposal in Gram Sabha, you will get patta.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'पट्टा किसके नाम पर बनता है?', answer: 'इस योजना में ज़मीन का पट्टा (मालिकाना हक) पति और पत्नी दोनों के नाम पर संयुक्त (Joint) रूप से बनता है।' },
+      { question: 'क्या मुझे ज़मीन खरीदने के लिए पैसे देने होंगे?', answer: 'नहीं, यह भूखंड (प्लॉट) पूरी तरह से मुफ़्त (Free of cost) दिया जाता है।' }
+    ],
+    faqsEn: [
+      { question: 'In whose name is patta made?', answer: 'In this scheme, land patta (ownership right) is made jointly in name of both husband and wife.' },
+      { question: 'Will I have to pay money to buy land?', answer: 'No, this plot (land) is given completely free of cost.' }
+    ]
+  },
+  'madhya-pradesh-vridhavastha-pension-yojana': {
+    ...reviewed,
+    title: 'वृद्धावस्था पेंशन योजना (इंदिरा गांधी राष्ट्रीय)',
+    english: 'Vridhavastha Pension Yojana (Indira Gandhi National)',
+    summary: '60 वर्ष से अधिक उम्र के गरीब और बेसहारा बुजुर्गों को सम्मानजनक जीवन जीने के लिए सरकार द्वारा हर महीने दी जाने वाली पेंशन योजना।',
+    benefit: 'गरीबी रेखा (BPL) के नीचे जीवन यापन करने वाले 60 वर्ष या उससे अधिक आयु के बुजुर्गों को ₹600 प्रति माह की नियमित पेंशन मिलती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'आयु प्रमाण पत्र (वोटर आईडी / जन्म प्रमाण पत्र / 10वीं की अंकसूची)',
+      'BPL राशन कार्ड',
+      'आधार लिंक बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Age Certificate (Voter ID / Birth Certificate / 10th Marksheet)',
+      'BPL Ration Card',
+      'Aadhaar linked Bank Account Passbook'
+    ],
+    steps: [
+      'अपने नज़दीकी ग्राम पंचायत सचिव या नगर पालिका के वार्ड कार्यालय में जाएं।',
+      'वहाँ समग्र पेंशन (Samagra Pension) का फॉर्म भरें और दस्तावेज़ जमा करें।',
+      'अधिकारियों द्वारा आपके आवेदन का सत्यापन (Verification) किया जाएगा।',
+      'सत्यापन सही पाए जाने पर, अगले महीने से हर माह ₹600 आपके खाते में आने लगेंगे।'
+    ],
+    stepsEn: [
+      'Go to your nearest Gram Panchayat Secretary or Ward office of Municipality.',
+      'Fill Samagra Pension form there and submit documents.',
+      'Your application will be verified by officials.',
+      'If verification is found correct, ₹600 will start coming in your account every month from next month.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 60, label: 'आयु 60 वर्ष या अधिक (BPL परिवार)' }
+    ],
+    sourceNotes: 'बुजुर्गों को बुढ़ापे में दवा और दैनिक खर्चों के लिए आर्थिक सहारा।',
+    detailedDescription: [
+      'जब इंसान वृद्ध (बुज़ुर्ग) हो जाता है, तो वह मेहनत-मज़दूरी नहीं कर पाता। गरीब परिवारों में कई बार बुज़ुर्गों के पास दवा-गोली या अपने छोटे-मोटे खर्चे के लिए भी पैसे नहीं होते।',
+      'बुज़ुर्गों को इसी परेशानी से बचाने और उन्हें सम्मान से जीने का अधिकार देने के लिए भारत सरकार और राज्य सरकार मिलकर "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन योजना" चलाती हैं। इसके तहत हर गरीब बुज़ुर्ग के बैंक खाते में सीधा पैसा भेजा जाता है ताकि वे किसी पर मोहताज न रहें।'
+    ],
+    detailedDescriptionEn: [
+      'When a person becomes old (elderly), he is unable to do hard labor. In poor families many times elderly do not even have money for medicines or their small expenses.',
+      'To save elderly from this trouble and give them right to live with dignity, Govt of India and State Govt together run "Indira Gandhi National Old Age Pension Scheme". Under this, money is sent directly to bank account of every poor elderly so that they are not dependent on anyone.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पेंशन की राशि कितनी मिलती है?', points: [
+          '60 से 79 वर्ष: 60 से 79 वर्ष तक की आयु वाले बुज़ुर्गों को प्रति माह ₹600 की पेंशन दी जाती है।',
+          '80 वर्ष या अधिक: जो बुज़ुर्ग 80 साल या उससे ज़्यादा उम्र के हो जाते हैं, उन्हें भी प्रतिमाह ₹600 (या सरकार द्वारा निर्धारित बढ़ी हुई राशि) दी जाती है।',
+          'सीधे खाते में (DBT): यह पैसा किसी सरपंच या अधिकारी के हाथ में नहीं आता, बल्कि सीधे बुज़ुर्ग के उस बैंक खाते में आता है जो आधार कार्ड से लिंक (DBT Enabled) होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much pension amount is received?', points: [
+          '60 to 79 years: Elderly aged 60 to 79 years are given pension of ₹600 per month.',
+          '80 years or more: Elderly who become 80 years or more, are also given ₹600 per month (or increased amount set by govt).',
+          'Direct to Account (DBT): This money does not come in hands of any Sarpanch or official, but directly comes in bank account of elderly which is linked with Aadhaar card (DBT Enabled).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक (महिला या पुरुष) की उम्र 60 वर्ष या उससे अधिक होनी चाहिए।',
+      'आवेदक का नाम भारत सरकार की BPL (गरीबी रेखा) सूची में होना अनिवार्य है।',
+      'आवेदक को पहले से कोई अन्य सरकारी पेंशन (जैसे रिटायरमेंट पेंशन) नहीं मिल रही हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP.',
+      'Age of applicant (male or female) should be 60 years or more.',
+      'Applicant\'s name must be in BPL (Below Poverty Line) list of Govt of India.',
+      'Applicant should not be receiving any other govt pension (like retirement pension) already.'
+    ],
+    exclusions: [
+      'जो बुज़ुर्ग BPL (गरीबी रेखा) श्रेणी में नहीं आते, उन्हें इस राष्ट्रीय योजना का लाभ नहीं मिलता।',
+      'आयकर दाता (Income Tax Payee) या सरकारी नौकरी से रिटायर हुए लोगों को यह पेंशन नहीं मिलती।'
+    ],
+    exclusionsEn: [
+      'Elderly who do not come in BPL (Below Poverty Line) category, do not get benefit of this national scheme.',
+      'Income Tax Payees or people retired from govt jobs do not get this pension.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (पंचायत/नगर निगम)', steps: [
+          'अपने सभी दस्तावेज़ (आधार, बैंक पासबुक, BPL कार्ड, फोटो) की फोटोकॉपी कराएं।',
+          'गांव में हैं तो ग्राम पंचायत सचिव (Secretary) से मिलें, शहर में हैं तो वार्ड कार्यालय/ज़ोनल ऑफिस जाएं।',
+          'वहां वृद्धावस्था पेंशन का फॉर्म भरकर दस्तावेज़ जमा करें।',
+          'अधिकारी पोर्टल (samagra.gov.in) पर आपकी एंट्री करेंगे और पेंशन चालू हो जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Panchayat/Municipal Corporation)', steps: [
+          'Get photocopy of all your documents (Aadhaar, Bank Passbook, BPL Card, Photo).',
+          'If in village meet Gram Panchayat Secretary, if in city go to Ward office/Zonal office.',
+          'Fill old age pension form there and submit documents.',
+          'Officer will do your entry on portal (samagra.gov.in) and pension will start.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या पेंशन के लिए हर साल फॉर्म भरना पड़ता है?', answer: 'नहीं, एक बार पेंशन चालू होने के बाद यह आजीवन (Life-long) मिलती है, जब तक बुज़ुर्ग जीवित हैं। हर साल ई-केवाईसी (e-KYC) कराना ज़रूरी होता है।' },
+      { question: 'पेंशन के पैसे खाते में नहीं आ रहे, क्या करें?', answer: 'अगर पैसे आना बंद हो गए हैं, तो अपने बैंक जाकर KYC कराएं (आधार कार्ड और पैन कार्ड अपडेट कराएं) या पंचायत सचिव से संपर्क करें।' }
+    ],
+    faqsEn: [
+      { question: 'Do I have to fill form every year for pension?', answer: 'No, once pension starts it is received life-long, as long as elderly is alive. Doing e-KYC every year is mandatory.' },
+      { question: 'Pension money is not coming in account, what to do?', answer: 'If money has stopped coming, then go to your bank and get KYC done (update Aadhaar card and PAN card) or contact Panchayat Secretary.' }
+    ]
+  },
+  'madhya-pradesh-parityakta-pension-yojana': {
+    ...reviewed,
+    title: 'परित्यक्ता पेंशन योजना',
+    english: 'Parityakta Pension Yojana (Abandoned Women Aid)',
+    summary: 'जिन महिलाओं को उनके पति ने छोड़ (त्याग) दिया है और उनका कोई आर्थिक सहारा नहीं है, उन्हें सरकार द्वारा हर महीने दी जाने वाली पेंशन।',
+    benefit: 'पति द्वारा परित्यक्त (छोड़ी गई) बेसहारा महिलाओं को सम्मानजनक जीवन जीने के लिए ₹600 प्रति माह की सामाजिक सुरक्षा पेंशन दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'महिला का आधार कार्ड',
+      'समग्र परिवार आईडी (Samagra ID)',
+      'परित्यक्ता होने का प्रमाण (न्यायालय का आदेश, या ग्राम पंचायत का पंचनामा)',
+      'BPL राशन कार्ड या आय प्रमाण पत्र',
+      'महिला के नाम का बैंक खाता'
+    ],
+    documentsEn: [
+      'Woman\'s Aadhaar Card',
+      'Samagra Family ID',
+      'Proof of being abandoned (Court order, or Gram Panchayat Panchnama)',
+      'BPL Ration Card or Income Certificate',
+      'Bank account in woman\'s name'
+    ],
+    steps: [
+      'परित्यक्ता होने का दस्तावेज़ (जैसे कोर्ट का आदेश या सरपंच/पार्षद का प्रमाण) तैयार करें।',
+      'नज़दीकी जनपद पंचायत कार्यालय या नगर पालिका/नगर निगम के वार्ड ऑफिस जाएं।',
+      'पेंशन का आवेदन फॉर्म भरकर ज़रूरी कागज़ात जमा करें।',
+      'सत्यापन के बाद आपका पेंशन आदेश (Pension Order) जारी हो जाएगा और सीधे खाते में पैसे आने लगेंगे।'
+    ],
+    stepsEn: [
+      'Prepare document of being abandoned (like Court order or Sarpanch/Councilor proof).',
+      'Go to nearest Janpad Panchayat office or Ward office of Municipality/Municipal Corporation.',
+      'Fill pension application form and submit necessary papers.',
+      'After verification your Pension Order will be issued and money will start coming directly in account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'परित्यक्ता (पति द्वारा छोड़ी गई) महिलाएं' }
+    ],
+    sourceNotes: 'पति से अलग होकर अकेले रहने वाली महिलाओं के आर्थिक पुनर्वास के लिए।',
+    detailedDescription: [
+      'समाज में कई बार ऐसी स्थिति आती है जब कोई पुरुष अपनी पत्नी को छोड़ देता है (बिना किसी कानूनी तलाक के)। ऐसी त्यागी गई (परित्यक्त) महिलाओं के पास अगर आय का कोई साधन न हो, तो उनका जीवन बहुत कठिन हो जाता है।',
+      'ऐसी बेसहारा महिलाओं को किसी के सामने हाथ न फैलाना पड़े, इसलिए मध्य प्रदेश सरकार ने "परित्यक्ता पेंशन योजना" शुरू की है। इसके ज़रिए उन महिलाओं को हर महीने एक निश्चित आर्थिक मदद दी जाती है, ताकि वे अपना जीवन यापन कर सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Many times such situation comes in society when a man abandons his wife (without any legal divorce). If such abandoned women do not have any source of income, their life becomes very difficult.',
+      'So that such helpless women do not have to spread their hands in front of anyone, MP Govt has started "Parityakta Pension Yojana". Through this, a fixed financial help is given to those women every month, so that they can earn their living.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पेंशन में क्या मिलता है?', points: [
+          'आर्थिक मदद (Financial Aid): पात्र महिला को प्रतिमाह ₹600 की राशि राज्य सरकार की ओर से दी जाती है।',
+          'सीधे बैंक खाते में ट्रांसफर: पेंशन की यह रकम सीधे महिला के बैंक खाते में (Direct Benefit Transfer - DBT) भेजी जाती है।',
+          'आजीवन सुरक्षा: जब तक महिला कोई दूसरी शादी (पुनर्विवाह) नहीं कर लेती या उसकी स्थिति में कोई बड़ा बदलाव नहीं आता, तब तक यह पेंशन उसे आजीवन मिलती रहती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is received in pension?', points: [
+          'Financial Aid: Eligible woman is given amount of ₹600 per month from state govt.',
+          'Direct Transfer to Bank Account: This amount of pension is sent directly to woman\'s bank account (Direct Benefit Transfer - DBT).',
+          'Life-long security: Until woman does any second marriage (remarriage) or there is any big change in her situation, she keeps getting this pension life-long.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'महिला मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'महिला को उसके पति द्वारा छोड़ दिया गया हो (परित्यक्त हो)।',
+      'महिला गरीबी रेखा के नीचे (BPL) जीवन यापन करती हो या उसकी आय बहुत कम हो।',
+      'महिला ने दूसरी शादी न की हो और वह किसी भी सरकारी पद पर या आयकर दाता न हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Woman must be native of MP.',
+      'Woman must be abandoned by her husband.',
+      'Woman must be living below poverty line (BPL) or her income must be very low.',
+      'Woman must not have done second marriage and she must not be on any govt post or income tax payee.'
+    ],
+    exclusions: [
+      'अगर महिला ने अपने पति को छोड़ दिया है और वह आर्थिक रूप से संपन्न है, तो उसे यह लाभ नहीं मिलेगा।',
+      'विधवा महिलाओं (जिनके पति की मृत्यु हो गई है) के लिए यह योजना नहीं है (उनके लिए कल्याणी पेंशन योजना है)।'
+    ],
+    exclusionsEn: [
+      'If woman has left her husband and she is financially well off, she will not get this benefit.',
+      'This scheme is not for widow women (whose husbands have died) (for them there is Kalyani Pension Yojana).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (जनपद / निकाय कार्यालय)', steps: [
+          'न्यायालय का आदेश लाएं, या अगर कोर्ट केस नहीं है तो गांव के सरपंच/सचिव या शहर के पार्षद से पंचनामा बनवाएं कि पति ने छोड़ दिया है।',
+          'ग्राम पंचायत/जनपद पंचायत या नगर निगम/नगर पालिका के कार्यालय में जाएं।',
+          'सामाजिक सुरक्षा पेंशन (परित्यक्ता श्रेणी) का फॉर्म भरें।',
+          'फॉर्म के साथ फोटो, आधार और पंचनामा लगाकर जमा करें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Janpad / Body Office)', steps: [
+          'Bring Court order, or if there is no court case then get Panchnama made from village Sarpanch/Secretary or city Councilor that husband has abandoned.',
+          'Go to Gram Panchayat/Janpad Panchayat or Municipal Corporation/Municipality office.',
+          'Fill Social Security Pension (Abandoned category) form.',
+          'Attach photo, Aadhaar and Panchnama with form and submit.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'परित्यक्ता का प्रमाण कैसे बनता है?', answer: 'अगर कोर्ट में भरण-पोषण (Alimony) का कोई केस चल रहा है तो उसका आदेश मान्य है। या फिर ग्राम पंचायत की बैठक में सरपंच और पंचों द्वारा हस्ताक्षर किया हुआ "पंचनामा" (जिसमें लिखा हो कि पति ने छोड़ दिया है) मान्य होता है।' },
+      { question: 'क्या तलाकशुदा (Divorced) महिलाएं भी इसमें आवेदन कर सकती हैं?', answer: 'हाँ, तलाकशुदा और त्यागी गई, दोनों ही तरह की निराश्रित महिलाएं इस योजना के तहत पेंशन पा सकती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'How is proof of being abandoned made?', answer: 'If any Alimony case is going on in court then its order is valid. Or else "Panchnama" (in which it is written that husband has abandoned) signed by Sarpanch and Panchs in Gram Panchayat meeting is valid.' },
+      { question: 'Can Divorced women also apply in this?', answer: 'Yes, both types of destitute women, divorced and abandoned, can get pension under this scheme.' }
+    ]
+  },
+  'mukhyamantri-kalyani-pension-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कल्याणी पेंशन योजना',
+    english: 'Mukhyamantri Kalyani Pension Yojana (Widow Support)',
+    summary: 'जिन महिलाओं के पति का स्वर्गवास हो गया है (विधवा/कल्याणी), उन्हें सरकार द्वारा आर्थिक रूप से आत्मनिर्भर बनाने के लिए हर महीने दी जाने वाली पेंशन।',
+    benefit: '18 वर्ष या उससे अधिक उम्र की कल्याणी (विधवा) महिलाओं को प्रतिमाह ₹600 की आजीवन पेंशन राशि उनके बैंक खाते में सीधे भेजी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'महिला का आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'पति का मृत्यु प्रमाण पत्र (Death Certificate)',
+      'महिला के नाम का बैंक खाता पासबुक',
+      'आयु प्रमाण पत्र (अगर समग्र में आयु गलत है)'
+    ],
+    documentsEn: [
+      'Woman\'s Aadhaar Card',
+      'Samagra ID',
+      'Husband\'s Death Certificate',
+      'Bank account passbook in woman\'s name',
+      'Age Certificate (if age is wrong in Samagra)'
+    ],
+    steps: [
+      'सबसे पहले अपनी समग्र आईडी (Samagra ID) में पति का मृत्यु प्रमाण पत्र दर्ज कराएं।',
+      'ग्राम पंचायत सचिव या नगर पालिका के वार्ड कार्यालय में कल्याणी पेंशन का फॉर्म जमा करें। (या samagra.gov.in पर ऑनलाइन आवेदन करें)।',
+      'आपके दस्तावेज़ों का सत्यापन (Verification) किया जाएगा।',
+      'पेंशन पास होने पर सीधे आपके आधार-लिंक बैंक खाते में हर महीने पैसे आने लगेंगे।'
+    ],
+    stepsEn: [
+      'First register husband\'s death certificate in your Samagra ID.',
+      'Submit Kalyani Pension form to Gram Panchayat Secretary or Ward office of Municipality. (Or apply online on samagra.gov.in).',
+      'Your documents will be verified.',
+      'On passing pension, money will start coming directly to your Aadhaar-linked bank account every month.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'कल्याणी (विधवा) महिलाएं' }
+    ],
+    sourceNotes: 'विधवा महिलाओं को सम्मानजनक जीवन जीने के लिए आर्थिक सुरक्षा।',
+    detailedDescription: [
+      'पति की मृत्यु के बाद किसी भी महिला के जीवन में भावनात्मक के साथ-साथ भारी आर्थिक संकट भी आ जाता है। यदि महिला पढ़ी-लिखी न हो या उसके पास नौकरी न চরম हो, तो परिवार चलाना बहुत मुश्किल हो जाता है।',
+      'ऐसी स्थिति में मध्य प्रदेश सरकार "मुख्यमंत्री कल्याणी पेंशन योजना" के तहत इन महिलाओं को (जिन्हें सरकार सम्मान से कल्याणी कहती है) हर महीने एक निश्चित आर्थिक मदद देती है। इससे वे अपनी छोटी-मोटी ज़रूरतें पूरी कर सकती हैं और किसी पर आश्रित नहीं रहतीं।'
+    ],
+    detailedDescriptionEn: [
+      'After husband\'s death, emotional as well as huge financial crisis also comes in any woman\'s life. If woman is not educated or does not have a job, then running family becomes very difficult.',
+      'In such a situation, MP Govt under "Mukhyamantri Kalyani Pension Yojana" gives a fixed financial help every month to these women (whom govt respectfully calls Kalyani). By this they can fulfill their small needs and do not remain dependent on anyone.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पेंशन में क्या मिलता है?', points: [
+          'मासिक पेंशन (Monthly Pension): कल्याणी महिला को राज्य सरकार की ओर से प्रतिमाह ₹600 दिए जाते हैं।',
+          'सीधे खाते में भुगतान (DBT): यह राशि नकद या चेक के बजाय सीधे महिला के उस बैंक खाते में ट्रांसफर होती है, जिसमें आधार कार्ड लिंक होता है।',
+          'आजीवन लाभ: यह पेंशन महिला को आजीवन (Life-long) मिलती है। यदि महिला 60 वर्ष से ऊपर हो जाती है, तो उसे राष्ट्रीय वृद्धावस्था कल्याणी पेंशन में बदल दिया जाता है, लेकिन पेंशन चालू रहती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is received in pension?', points: [
+          'Monthly Pension: Kalyani woman is given ₹600 per month from state govt.',
+          'Direct payment to account (DBT): Instead of cash or cheque, this amount is directly transferred to woman\'s bank account which is linked with Aadhaar card.',
+          'Life-long benefit: This pension is received by woman life-long. If woman becomes above 60 years, then she is changed to National Old Age Kalyani Pension, but pension continues.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक महिला मध्य प्रदेश की निवासी होनी चाहिए।',
+      'महिला के पति की मृत्यु हो चुकी हो (विधवा हो)।',
+      'महिला की आयु 18 वर्ष या उससे अधिक होनी चाहिए।',
+      'इस योजना में गरीबी रेखा (BPL) में होने की कोई शर्त नहीं है, यानी बिना BPL कार्ड वाली महिलाएं भी आवेदन कर सकती हैं, बशर्ते वे सरकारी नौकरी में न हों।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant woman must be resident of MP.',
+      'Woman\'s husband must have died (must be widow).',
+      'Age of woman should be 18 years or more.',
+      'There is no condition of being in BPL (Below Poverty Line) in this scheme, meaning women without BPL card can also apply, provided they are not in govt job.'
+    ],
+    exclusions: [
+      'अगर महिला दूसरी शादी (पुनर्विवाह) कर लेती है, तो पेंशन उसी महीने से बंद कर दी जाएगी।',
+      'अगर महिला किसी भी सरकारी नौकरी में है, आयकर (Income Tax) भरती है, या उसे परिवार पेंशन (Family Pension) मिल रही है, तो वह इस योजना के लिए अपात्र है।'
+    ],
+    exclusionsEn: [
+      'If woman does second marriage (remarriage), then pension will be stopped from same month.',
+      'If woman is in any govt job, pays Income Tax, or she is getting Family Pension, then she is ineligible for this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (समग्र पोर्टल)', steps: [
+          'अपनी समग्र आईडी में पति की मृत्यु (Death Certificate) दर्ज करवाएं (यह काम पंचायत या ज़ोनल कार्यालय से होता है)।',
+          'उसके बाद MP Online या CSC सेंटर पर जाकर "सामाजिक सुरक्षा पेंशन पोर्टल (samagra.gov.in)" पर ऑनलाइन आवेदन भरें।',
+          'अपने दस्तावेज़ों की कॉपी अपलोड करें।',
+          'आपका आवेदन ग्राम पंचायत सचिव / नगर पालिका द्वारा ऑनलाइन पास कर दिया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Samagra Portal)', steps: [
+          'Get husband\'s death (Death Certificate) registered in your Samagra ID (This work is done from Panchayat or Zonal office).',
+          'After that go to MP Online or CSC center and fill online application on "Social Security Pension Portal (samagra.gov.in)".',
+          'Upload copy of your documents.',
+          'Your application will be passed online by Gram Panchayat Secretary / Municipality.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या कल्याणी पेंशन के लिए BPL कार्ड होना ज़रूरी है?', answer: 'नहीं। 2018 के बाद से मध्य प्रदेश सरकार ने कल्याणी पेंशन में BPL की बाध्यता खत्म कर दी है। सभी वर्गों की विधवा महिलाएं (जो आयकर दाता/सरकारी सेवक न हों) इसके लिए पात्र हैं।' },
+      { question: 'कल्याणी विवाह सहायता योजना क्या है?', answer: 'अगर कोई कल्याणी (विधवा) महिला दूसरी शादी करती है, तो सरकार उसे प्रोत्साहन के रूप में ₹2,00,000 (दो लाख रुपये) की आर्थिक मदद देती है। लेकिन इसके बाद उसकी मासिक पेंशन बंद हो जाती है।' }
+    ],
+    faqsEn: [
+      { question: 'Is BPL card necessary for Kalyani Pension?', answer: 'No. Since 2018 MP Govt has ended BPL obligation in Kalyani Pension. Widow women of all categories (who are not income tax payer/govt servant) are eligible for it.' },
+      { question: 'What is Kalyani Vivah Sahayata Yojana?', answer: 'If a Kalyani (widow) woman does second marriage, then govt gives her financial help of ₹2,00,000 (Two Lakh Rupees) as encouragement. But after this her monthly pension stops.' }
+    ]
+  },
+  'mukhyamantri-avivahit-mahila-pension-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री अविवाहित पेंशन योजना',
+    english: 'Mukhyamantri Avivahit Pension Yojana',
+    summary: 'ऐसी महिलाएं जिन्होंने जीवन भर विवाह नहीं किया (अविवाहित हैं) और उनकी उम्र 50 साल से ज़्यादा हो गई है, उन्हें सरकार द्वारा दी जाने वाली बुढ़ापे की पेंशन।',
+    benefit: '50 वर्ष या उससे अधिक उम्र की अविवाहित महिलाओं को ₹600 प्रति माह की सामाजिक सुरक्षा पेंशन उनके खाते में जीवन भर दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'महिला का आधार कार्ड (Aadhaar Card)',
+      'समग्र परिवार आईडी (Samagra ID)',
+      'आयु प्रमाण पत्र (वोटर आईडी, आधार या जन्म प्रमाण पत्र)',
+      'अविवाहित होने का प्रमाण/शपथ पत्र (Self Declaration)',
+      'आधार से लिंक बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Woman\'s Aadhaar Card',
+      'Samagra Family ID',
+      'Age Certificate (Voter ID, Aadhaar or Birth Certificate)',
+      'Proof/Self Declaration of being unmarried',
+      'Aadhaar linked bank account passbook'
+    ],
+    steps: [
+      'ग्राम पंचायत सचिव या नगर निगम/नगर पालिका के वार्ड ऑफिस में जाएं।',
+      'अविवाहित पेंशन का फॉर्म भरें और अपनी उम्र का प्रमाण (50+ साल) लगाएं।',
+      'अविवाहित होने का शपथ पत्र जमा करें।',
+      'अधिकारियों द्वारा जाँच (Verification) के बाद आपकी पेंशन चालू कर दी जाएगी।'
+    ],
+    stepsEn: [
+      'Go to Gram Panchayat Secretary or Ward office of Municipal Corporation/Municipality.',
+      'Fill unmarried pension form and attach proof of your age (50+ years).',
+      'Submit Self Declaration of being unmarried.',
+      'After check (Verification) by officials, your pension will be started.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'अविवाहित महिलाएं' },
+      { field: 'age', op: 'gte', value: 50, label: 'आयु 50 वर्ष या अधिक' }
+    ],
+    sourceNotes: '50 वर्ष से अधिक उम्र की अविवाहित महिलाओं के लिए सामाजिक सुरक्षा।',
+    detailedDescription: [
+      'समाज में कई बार कुछ महिलाएं किन्हीं कारणों से पूरे जीवन विवाह नहीं करतीं। जब उनकी उम्र बढ़ने लगती है, तो उनके माता-पिता या तो वृद्ध हो चुके होते हैं या दुनिया में नहीं रहते। ऐसे में उन्हें अपना बुढ़ापा अकेले काटना पड़ता है।',
+      '50 वर्ष की उम्र के बाद ऐसी महिलाओं को आर्थिक सहारे की ज़रूरत होती है। इसी को ध्यान में रखते हुए मध्य प्रदेश सरकार ने "मुख्यमंत्री अविवाहित पेंशन योजना" शुरू की है। इसमें उन अविवाहित महिलाओं को हर महीने पैसा दिया जाता है, ताकि वे सम्मान के साथ अपना जीवन जी सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Many times in society some women do not marry whole life due to some reasons. When their age starts increasing, their parents either become old or are not in world. In such a case they have to spend their old age alone.',
+      'After age of 50 years such women need financial support. Keeping this in mind MP Govt has started "Mukhyamantri Avivahit Pension Yojana". In this money is given every month to those unmarried women, so that they can live their life with dignity.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या लाभ हैं?', points: [
+          'मासिक पेंशन (Monthly Pension): अविवाहित महिला को हर महीने ₹600 की राशि दी जाती है।',
+          'DBT भुगतान: पैसा सीधे बैंक खाते में (Direct Benefit Transfer) भेजा जाता है, जिससे किसी दलाल या बिचौलिए का चक्कर नहीं रहता।',
+          'सम्मानजनक जीवन: बिना किसी दूसरे पर बोझ बने, महिला अपनी दैनिक ज़रूरतें खुद पूरी कर सकती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are benefits of scheme?', points: [
+          'Monthly Pension: Unmarried woman is given amount of ₹600 every month.',
+          'DBT Payment: Money is sent directly to bank account (Direct Benefit Transfer), due to which there is no hassle of any broker or middleman.',
+          'Dignified life: Without becoming burden on anyone else, woman can fulfill her daily needs herself.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक महिला मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'महिला की उम्र 50 वर्ष या उससे अधिक होनी चाहिए।',
+      'महिला पूरी तरह से अविवाहित (Unmarried) होनी चाहिए (तलाकशुदा या परित्यक्ता के लिए अलग पेंशन है)।',
+      'महिला आयकर दाता (Income Tax Payee) या सरकारी कर्मचारी न हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant woman must be native of MP.',
+      'Age of woman should be 50 years or more.',
+      'Woman must be completely Unmarried (There is separate pension for divorced or abandoned).',
+      'Woman must not be Income Tax Payee or govt employee.'
+    ],
+    exclusions: [
+      'जिन महिलाओं की शादी हो चुकी है, या वे तलाकशुदा (Divorced) हैं, या परित्यक्ता हैं, उन्हें इस योजना में लाभ नहीं मिलेगा। उनके लिए दूसरी योजनाएं हैं।',
+      'अगर महिला 50 वर्ष से कम उम्र की है, तो वह इस योजना के लिए पात्र नहीं है।'
+    ],
+    exclusionsEn: [
+      'Women who are married, or they are Divorced, or abandoned, will not get benefit in this scheme. There are other schemes for them.',
+      'If woman is less than 50 years of age, then she is not eligible for this scheme.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (जनपद / नगर निगम)', steps: [
+          'ग्राम पंचायत, जनपद पंचायत, या नगर निगम/नगर पालिका के कार्यालय में जाएं।',
+          'सामाजिक सुरक्षा पेंशन (अविवाहित श्रेणी) का आवेदन फॉर्म मांगें।',
+          'फॉर्म भरें और अपनी आयु का प्रमाण व अविवाहित होने का घोषणा पत्र लगाएं।',
+          'फॉर्म जमा करने के बाद अधिकारी पोर्टल पर एंट्री करेंगे और अगले महीने से खाते में पैसे आने लगेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Janpad / Municipal Corporation)', steps: [
+          'Go to office of Gram Panchayat, Janpad Panchayat, or Municipal Corporation/Municipality.',
+          'Ask for Social Security Pension (Unmarried category) application form.',
+          'Fill form and attach proof of your age and declaration of being unmarried.',
+          'After submitting form, officer will do entry on portal and money will start coming in account from next month.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अविवाहित होने का प्रमाण कैसे दें?', answer: 'इसके लिए किसी विशेष सर्टिफिकेट की ज़रूरत नहीं होती। आपको सिर्फ एक स्व-घोषणा पत्र (Self Declaration) या शपथ पत्र (Affidavit) देना होता है जिसमें लिखा हो कि आपने विवाह नहीं किया है।' },
+      { question: 'क्या मेरी उम्र 45 साल है, मैं आवेदन कर सकती हूँ?', answer: 'नहीं। इस योजना का लाभ उठाने के लिए महिला की उम्र कम से कम 50 वर्ष पूरी होनी चाहिए।' }
+    ],
+    faqsEn: [
+      { question: 'How to give proof of being unmarried?', answer: 'For this no special certificate is needed. You just have to give a Self Declaration or Affidavit in which it is written that you have not married.' },
+      { question: 'My age is 45 years, can I apply?', answer: 'No. To take benefit of this scheme, age of woman must be at least 50 years complete.' }
+    ]
+  },
+  'madhya-pradesh-nishakt-pension-yojana': {
+    ...reviewed,
+    title: 'निःशक्त (दिव्यांग) पेंशन योजना',
+    english: 'Nishakt Pension Yojana (Disability Support)',
+    summary: 'शारीरिक रूप से 40% या उससे अधिक दिव्यांग (विकलांग) व्यक्तियों को उनके दैनिक जीवन और दवाओं के खर्चे के लिए सरकार द्वारा दी जाने वाली मासिक पेंशन।',
+    benefit: '6 वर्ष या उससे अधिक उम्र के सभी पात्र दिव्यांगजनों (40% से अधिक निःशक्तता) को प्रतिमाह ₹600 की पेंशन दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'मेडिकल बोर्ड द्वारा जारी 40% या अधिक का दिव्यांगता प्रमाण पत्र (UDID Card)',
+      'BPL राशन कार्ड या आय प्रमाण पत्र',
+      'आधार लिंक बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card',
+      'Samagra ID',
+      'Disability Certificate of 40% or more issued by Medical Board (UDID Card)',
+      'BPL Ration Card or Income Certificate',
+      'Aadhaar linked bank passbook'
+    ],
+    steps: [
+      'ज़िला अस्पताल के मेडिकल बोर्ड से अपना दिव्यांगता प्रमाण पत्र (Disability Certificate / UDID) बनवाएं।',
+      'ग्राम पंचायत या नगर निगम/नगर पालिका के वार्ड ऑफिस में जाकर पेंशन का फॉर्म भरें।',
+      'फॉर्म के साथ UDID कार्ड और अन्य दस्तावेज़ जमा करें।',
+      'स्वीकृति मिलने के बाद हर महीने पैसे सीधे आपके बैंक खाते में आने लगेंगे।'
+    ],
+    stepsEn: [
+      'Get your Disability Certificate / UDID made from Medical Board of District Hospital.',
+      'Go to Gram Panchayat or Ward office of Municipal Corporation/Municipality and fill pension form.',
+      'Submit UDID card and other documents with form.',
+      'After getting approval, money will start coming directly to your bank account every month.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 6, label: '6 वर्ष या अधिक आयु' }
+    ],
+    sourceNotes: 'दिव्यांगों (निःशक्तजनों) को आत्मनिर्भर बनाने के लिए राज्य व केंद्र की संयुक्त पेंशन योजना।',
+    detailedDescription: [
+      'जो लोग शारीरिक या दृष्टि दोष के कारण दिव्यांग (विकलांग) होते हैं, उनके लिए काम-काज करना बहुत मुश्किल होता है। कई बार उन्हें रोज़ाना दवाओं और विशेष उपकरणों (जैसे बैसाखी या चश्मे) की ज़रूरत पड़ती ক্ষমতায় है।',
+      'दिव्यांगों को इन ज़रूरतों के लिए दूसरों पर निर्भर न रहना पड़े, इसके लिए मध्य प्रदेश सरकार और केंद्र सरकार मिलकर "निःशक्त पेंशन योजना" चलाती हैं। इसमें दिव्यांग व्यक्ति को हर महीने एक बंधी हुई राशि (पेंशन) दी जाती है, ताकि वह सम्मान से जी सके।'
+    ],
+    detailedDescriptionEn: [
+      'People who are divyang (disabled) due to physical or visual impairment, working is very difficult for them. Many times they need daily medicines and special equipment (like crutches or glasses).',
+      'So that divyangs do not have to depend on others for these needs, MP Govt and Central Govt together run "Nishakt Pension Yojana". In this, fixed amount (pension) is given to disabled person every month, so that he can live with dignity.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पेंशन में क्या मिलता है?', points: [
+          'मासिक पेंशन (Monthly Pension): दिव्यांग व्यक्ति के खाते में हर महीने ₹600 की राशि भेजी जाती है।',
+          'DBT ट्रांसफर: पैसा किसी अधिकारी के ज़रिए नहीं, बल्कि सीधे लाभार्थी के बैंक खाते में (Direct Benefit Transfer) आता है।',
+          'लगातार सहायता: यह पेंशन तब तक मिलती है जब तक दिव्यांगता का प्रतिशत 40% या उससे ज़्यादा बना रहता है (स्थायी दिव्यांगता में आजीवन)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is received in pension?', points: [
+          'Monthly Pension: Amount of ₹600 is sent to account of disabled person every month.',
+          'DBT Transfer: Money does not come through any officer, but directly to bank account of beneficiary (Direct Benefit Transfer).',
+          'Continuous Help: This pension is received as long as percentage of disability remains 40% or more (Life-long in permanent disability).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का निवासी होना चाहिए।',
+      'आवेदक की आयु 6 वर्ष या उससे अधिक होनी चाहिए (6 वर्ष से कम के बच्चों के लिए अलग नियम हैं)।',
+      'शासकीय मेडिकल बोर्ड द्वारा प्रमाणित 40% या उससे अधिक की दिव्यांगता (विकलांगता) होनी चाहिए।',
+      'आवेदक का परिवार बीपीएल (BPL) में हो, या उनकी आय योजना के निर्धारित मापदंडों के भीतर हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be resident of MP.',
+      'Age of applicant should be 6 years or more (There are different rules for children below 6 years).',
+      'Must have 40% or more disability certified by Govt Medical Board.',
+      'Applicant\'s family should be in BPL, or their income should be within prescribed criteria of scheme.'
+    ],
+    exclusions: [
+      'जिन लोगों की दिव्यांगता 40% से कम है (जैसे मामूली चोट या ठीक हो जाने वाली बीमारी), उन्हें यह पेंशन नहीं मिलेगी।',
+      'सरकारी कर्मचारियों या आयकर दाताओं को यह लाभ नहीं मिलता।'
+    ],
+    exclusionsEn: [
+      'People whose disability is less than 40% (like minor injury or curable disease), will not get this pension.',
+      'Govt employees or income tax payers do not get this benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (पंचायत / वार्ड कार्यालय)', steps: [
+          'ज़िला मेडिकल बोर्ड से 40% का प्रमाणपत्र (UDID) ज़रूर बनवा लें।',
+          'समग्र पोर्टल (samagra.gov.in) पर जाकर सामाजिक सुरक्षा पेंशन का फॉर्म डाउनलोड करें या पंचायत सचिव/वार्ड ऑफिस से लें।',
+          'फॉर्म के साथ UDID कार्ड, बैंक पासबुक और आधार की कॉपी लगाकर जमा करें।',
+          'अधिकारी पोर्टल पर एंट्री (Sanction Order) जनरेट करेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Panchayat / Ward Office)', steps: [
+          'Must get 40% certificate (UDID) made from District Medical Board.',
+          'Go to Samagra portal (samagra.gov.in) and download Social Security Pension form or get from Panchayat Secretary/Ward Office.',
+          'Submit UDID card, bank passbook and Aadhaar copy attached with form.',
+          'Officer will generate entry (Sanction Order) on portal.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'UDID कार्ड क्या है और यह क्यों ज़रूरी है?', answer: 'UDID (Unique Disability ID) कार्ड भारत सरकार द्वारा दिव्यांगों को दिया जाने वाला स्मार्ट कार्ड है। पेंशन लेने के लिए अब मेडिकल सर्टिफिकेट की जगह UDID कार्ड अनिवार्य कर दिया गया है।' },
+      { question: 'क्या 6 साल से छोटे दिव्यांग बच्चे को पेंशन मिलेगी?', answer: 'सामान्य निःशक्त पेंशन 6 वर्ष से शुरू होती है। अति गंभीर बहुविकलांग या मंदबुद्धि बच्चों के लिए "बहुविकलांग आर्थिक सहायता योजना" के तहत जन्म से ही सहायता मिलती है।' }
+    ],
+    faqsEn: [
+      { question: 'What is UDID card and why is it necessary?', answer: 'UDID (Unique Disability ID) card is a smart card given by Govt of India to divyangs. To take pension, UDID card has been made mandatory instead of medical certificate now.' },
+      { question: 'Will disabled child younger than 6 years get pension?', answer: 'General disability pension starts from 6 years. For very severe multiple disabled or mentally retarded children, help is available from birth under "Bahuviklang Arthik Sahayata Yojana".' }
+    ]
+  },
+  'mandbuddhi-bahuviklang-sahayata-yojana': {
+    ...reviewed,
+    title: 'मंदबुद्धि / बहुविकलांग आर्थिक सहायता योजना',
+    english: 'Mandbuddhi & Bahuviklang Sahayata Yojana',
+    summary: 'मानसिक रूप से अविकसित (मंदबुद्धि) या एक से अधिक दिव्यांगता (Multiple Disability) से ग्रस्त नागरिकों की विशेष देखभाल के लिए अभिभावक को दी जाने वाली आर्थिक मदद।',
+    benefit: 'गंभीर मानसिक मंदता या बहुदिव्यांगता वाले व्यक्तियों/बच्चों की देखभाल के लिए प्रतिमाह ₹600 की विशेष आर्थिक सहायता सीधे खाते में।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'दिव्यांग व्यक्ति और उसके अभिभावक (माता-पिता) का आधार कार्ड',
+      'समग्र आईडी (Samagra ID)',
+      'मेडिकल बोर्ड/DDRC द्वारा जारी मानसिक मंदता या बहुविकलांगता का विशेष प्रमाण पत्र (UDID)',
+      'अभिभावक/दिव्यांग का बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar Card of disabled person and his guardian (parents)',
+      'Samagra ID',
+      'Special certificate of mental retardation or multiple disability issued by Medical Board/DDRC (UDID)',
+      'Bank account passbook of guardian/disabled'
+    ],
+    steps: [
+      'ज़िला मेडिकल बोर्ड या ज़िला दिव्यांग पुनर्वास केंद्र (DDRC) से मंदबुद्धि/बहुविकलांगता का प्रमाण पत्र बनवाएं।',
+      'सामाजिक न्याय विभाग के ज़िला कार्यालय या अपने ग्राम पंचायत/निकाय में आवेदन करें।',
+      'अधिकारी मेडिकल रिपोर्ट की जाँच करेंगे।',
+      'स्वीकृति के बाद हर महीने सहायता राशि बैंक खाते में जमा होने लगेगी।'
+    ],
+    stepsEn: [
+      'Get certificate of mental retardation/multiple disability made from District Medical Board or District Disability Rehabilitation Center (DDRC).',
+      'Apply at District office of Social Justice Dept or your Gram Panchayat/Body.',
+      'Officer will check medical report.',
+      'After approval, aid amount will start getting deposited in bank account every month.'
+    ],
+    rules: [],
+    sourceNotes: 'जो लोग खुद से अपनी दैनिक क्रियाएं नहीं कर सकते, उनके परिवारों को सहारा।',
+    detailedDescription: [
+      'कई बच्चे या बड़े लोग मानसिक रूप से पूरी तरह अविकसित (मंदबुद्धि) होते हैं, या फिर उन्हें एक साथ कई दिव्यांगताएं (जैसे अंधापन और बहरापन दोनों) होती हैं। ऐसे लोग अपना कोई भी काम खुद नहीं कर पाते। उनके माता-पिता या अभिभावकों को चौबीसों घंटे उनकी देखभाल करनी पड़ती है।',
+      'ऐसी गंभीर स्थिति में परिवार पर आर्थिक बोझ बहुत बढ़ जाता है। इस बोझ को कम करने और ऐसे विशेष बच्चों की दवा-पोषण के लिए, सरकार "मंदबुद्धि एवं बहुविकलांग आर्थिक सहायता योजना" के तहत अभिभावकों को हर महीने एक विशेष आर्थिक मदद (पेंशन) देती है।'
+    ],
+    detailedDescriptionEn: [
+      'Many children or adults are completely mentally undeveloped (mentally retarded), or they have multiple disabilities at once (like both blindness and deafness). Such people cannot do any of their work themselves. Their parents or guardians have to take care of them round the clock.',
+      'In such a serious situation, financial burden on family increases a lot. To reduce this burden and for medicine-nutrition of such special children, govt gives a special financial help (pension) to guardians every month under "Mandbuddhi and Bahuviklang Arthik Sahayata Yojana".'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या सहायता मिलती है?', points: [
+          'मासिक आर्थिक सहायता: गंभीर दिव्यांग की देखभाल, दवा और पोषण के लिए हर महीने ₹600 की विशेष राशि दी जाती है।',
+          'बचपन से ही लाभ: सामान्य दिव्यांग पेंशन 6 वर्ष की उम्र के बाद मिलती है, लेकिन यह विशेष सहायता जन्म के बाद मेडिकल पुष्टि होते ही (बिना किसी आयु सीमा के) शुरू हो सकती है।',
+          'अभिभावक को राहत: अगर बच्चा बैंक खाता चलाने में सक्षम नहीं है, तो पैसा माता-पिता (Joint Account) या अभिभावक के खाते में दिया जा सकता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What help is received in scheme?', points: [
+          'Monthly Financial Help: Special amount of ₹600 is given every month for care, medicine and nutrition of severely disabled.',
+          'Benefit from childhood: Normal disability pension is received after 6 years of age, but this special help can start as soon as medical confirmation after birth (without any age limit).',
+          'Relief to Guardian: If child is not able to operate bank account, then money can be given in account of parents (Joint Account) or guardian.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'दिव्यांग व्यक्ति या बच्चा मध्य प्रदेश का निवासी होना चाहिए।',
+      'मेडिकल बोर्ड द्वारा प्रमाणित "गंभीर मानसिक मंदता (Mental Retardation)" या "बहुविकलांगता (Multiple Disabilities)" होनी चाहिए।',
+      'इस योजना में आयु की कोई न्यूनतम सीमा नहीं है (छोटे बच्चों को भी लाभ मिल सकता है)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Disabled person or child must be resident of MP.',
+      'Must have "Severe Mental Retardation" or "Multiple Disabilities" certified by Medical Board.',
+      'There is no minimum age limit in this scheme (young children can also get benefit).'
+    ],
+    exclusions: [
+      'सामान्य (एकल) शारीरिक दिव्यांगता वालों को यह योजना नहीं मिलती (उन्हें सामान्य निःशक्त पेंशन लेनी होती है)।',
+      'अगर दिव्यांग को पहले से कोई अन्य बड़ी पेंशन या संस्थागत (जैसे अनाथालय) सहायता मिल रही है, तो लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'Those with normal (single) physical disability do not get this scheme (they have to take normal disability pension).',
+      'If disabled is already getting any other big pension or institutional (like orphanage) help, then benefit will not be given.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (DDRC / सामाजिक न्याय कार्यालय)', steps: [
+          'ज़िला अस्पताल में हर बुधवार (या निर्धारित दिन) बैठने वाले मेडिकल बोर्ड से बच्चे का चेकअप करवाएं और प्रमाणपत्र लें।',
+          'प्रमाणपत्र के साथ ज़िला पंचायत, जनपद पंचायत, या नगर निगम कार्यालय में जाएं।',
+          'बहुविकलांग / मानसिक मंदता सहायता फॉर्म भरें।',
+          'फॉर्म जमा होने के बाद अधिकारी पोर्टल पर स्वीकृति देंगे और बैंक में पैसे आना शुरू हो जाएंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (DDRC / Social Justice Office)', steps: [
+          'Get child checked up from Medical Board sitting every Wednesday (or scheduled day) in District Hospital and take certificate.',
+          'Go to District Panchayat, Janpad Panchayat, or Municipal Corporation office with certificate.',
+          'Fill Multiple disability / Mental retardation aid form.',
+          'After submitting form, officer will give approval on portal and money will start coming in bank.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'बहुविकलांगता (Multiple Disability) का क्या मतलब है?', answer: 'जब किसी व्यक्ति में एक से अधिक प्रकार की दिव्यांगता हो, जैसे अंधापन भी हो और बोलने-सुनने में भी दिक्कत (मूक-बधिर) हो, या शारीरिक विकलांगता के साथ मानसिक मंदता भी हो, तो उसे बहुविकलांगता कहते हैं।' },
+      { question: 'क्या यह पैसा अभिभावक (पिता) के खाते में आ सकता है?', answer: 'हाँ, अगर दिव्यांग बच्चा खुद का खाता नहीं चला सकता (जैसे मानसिक मंद होने पर), तो अभिभावक के संयुक्त खाते (Joint Account) में पैसे दिए जाते हैं ताकि वे बच्चे की देखभाल में उसका इस्तेमाल कर सकें।' }
+    ],
+    faqsEn: [
+      { question: 'What does Multiple Disability mean?', answer: 'When a person has more than one type of disability, like blindness as well as difficulty in speaking-hearing (deaf-mute), or mental retardation along with physical disability, then it is called multiple disability.' },
+      { question: 'Can this money come in account of guardian (father)?', answer: 'Yes, if disabled child cannot operate his own account (like in case of mental retardation), then money is given in Joint Account of guardian so that they can use it in care of child.' }
+    ]
+  },
+  'vridhashram-antvasi-pension-yojana': {
+    ...reviewed,
+    title: 'वृद्धाश्रम निवासरत अंत:वासी पेंशन योजना',
+    english: 'Vridhashram Antvasi Pension Yojana',
+    summary: 'वृद्धाश्रम (Old Age Homes) में रहने वाले बेसहारा वृद्धजनों को उनकी छोटी-मोटी व्यक्तिगत ज़रूरतों (साबुन, तेल, फल आदि) के लिए दी जाने वाली मासिक पेंशन।',
+    benefit: 'शासन द्वारा मान्यता प्राप्त वृद्धाश्रमों में निवास करने वाले 60 वर्ष या उससे अधिक आयु के वृद्धजनों को प्रतिमाह ₹600 की राशि दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'वृद्धाश्रम के अधीक्षक (Superintendent) द्वारा जारी निवासरत होने का प्रमाण पत्र',
+      'आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      'आयु प्रमाण पत्र (60 वर्ष या अधिक)',
+      'वृद्धजन का बैंक या पोस्ट ऑफिस खाता'
+    ],
+    documentsEn: [
+      'Certificate of residence issued by Superintendent of Old Age Home',
+      'Aadhaar Card',
+      'Samagra ID',
+      'Age Certificate (60 years or more)',
+      'Bank or Post Office account of elderly'
+    ],
+    steps: [
+      'वृद्धजन जिस मान्यता प्राप्त वृद्धाश्रम में रह रहे हैं, वहां के अधीक्षक/संचालक को अपना आवेदन देंगे।',
+      'अधीक्षक सभी निवासरत वृद्धजनों की सूची और आवेदन सामाजिक न्याय विभाग (ज़िला कार्यालय) को भेजेंगे।',
+      'विभाग द्वारा स्वीकृति के बाद, पेंशन की राशि सीधे वृद्धजन के बैंक/पोस्ट ऑफिस खाते में या वृद्धाश्रम के माध्यम से दी जाएगी।'
+    ],
+    stepsEn: [
+      'Elderly will give their application to Superintendent/Manager of recognized Old Age Home where they are living.',
+      'Superintendent will send list and applications of all residing elderly to Social Justice Dept (District Office).',
+      'After approval by dept, pension amount will be given directly in bank/post office account of elderly or through Old Age Home.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 60, label: 'आयु 60 वर्ष या अधिक' }
+    ],
+    sourceNotes: 'आश्रम में रहने वाले वृद्धजनों को अपनी छोटी ज़रूरतों के लिए आश्रम प्रबंधन पर निर्भर न रहना पड़े।',
+    detailedDescription: [
+      'बहुत से वृद्धजनों के परिवार वाले उन्हें बेसहारा छोड़ देते हैं, जिसके कारण उन्हें अपना आखिरी समय वृद्धाश्रम (Old Age Homes) में बिताना पड़ता है। हालाँकि आश्रम में उन्हें खाना और रहना मुफ़्त मिलता है, लेकिन फल, बिस्किट, तेल-साबुन जैसी व्यक्तिगत ज़रूरतों के लिए उनके पास पैसे नहीं होते।',
+      'ऐसे निराश्रित वृद्धजनों का सम्मान बनाए रखने के लिए, मध्य प्रदेश सरकार "अंत:वासी पेंशन योजना" चलाती है। इसमें सरकारी मान्यता प्राप्त आश्रमों में रह रहे वृद्धों को हर महीने एक छोटी राशि दी जाती है, ताकि वे अपनी मर्ज़ी से अपनी छोटी-मोटी ज़रूरतें पूरी कर सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Families of many elderly leave them destitute, due to which they have to spend their last time in Old Age Homes. Although they get food and stay free in ashram, but they do not have money for personal needs like fruits, biscuits, oil-soap.',
+      'To maintain dignity of such destitute elderly, MP Govt runs "Antvasi Pension Yojana". In this, a small amount is given every month to elderly living in govt recognized ashrams, so that they can fulfill their small needs at their own will.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या लाभ हैं?', points: [
+          'व्यक्तिगत खर्च के लिए पैसे (Pocket Money): हर महीने ₹600 की पेंशन दी जाती है।',
+          'आत्मनिर्भरता: इस पैसे से आश्रम में रह रहे बुज़ुर्ग अपने लिए कोई मनपसंद चीज़ खरीद सकते हैं और उन्हें किसी के आगे हाथ नहीं फैलाना पड़ता।',
+          'सीधा खाता ट्रांसफर (DBT): पैसा सीधे उनके व्यक्तिगत बैंक या पोस्ट ऑफिस खाते में आता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are benefits of scheme?', points: [
+          'Money for personal expenses (Pocket Money): Pension of ₹600 is given every month.',
+          'Self-reliance: With this money, elderly living in ashram can buy any favorite thing for themselves and they don\'t have to beg before anyone.',
+          'Direct Account Transfer (DBT): Money comes directly in their personal bank or post office account.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'वृद्ध व्यक्ति की उम्र कम से कम 60 वर्ष होनी चाहिए।',
+      'वह मध्य प्रदेश शासन के সামাজিক न्याय विभाग से "मान्यता प्राप्त" या अनुदान प्राप्त वृद्धाश्रम में रह रहा हो।',
+      'वृद्ध व्यक्ति के पास स्वयं के भरण-पोषण का कोई अन्य साधन (जैसे पूर्व नौकरी की पेंशन) न हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Age of elderly person must be at least 60 years.',
+      'He/she must be living in Old Age Home "recognized" or funded by Social Justice Dept of MP Govt.',
+      'Elderly person must not have any other means of self-maintenance (like pension from previous job).'
+    ],
+    exclusions: [
+      'जो वृद्धजन अपने घर पर परिवार के साथ रह रहे हैं, उन्हें यह योजना नहीं मिलती (उन्हें सामान्य वृद्धावस्था पेंशन मिलती है)।',
+      'जो आश्रम शासन द्वारा मान्यता प्राप्त (Registered) नहीं हैं, वहां रहने वालों को इसका लाभ नहीं मिल पाता।'
+    ],
+    exclusionsEn: [
+      'Elderly who are living with family at their home, do not get this scheme (they get normal old age pension).',
+      'Those living in ashrams which are not recognized (Registered) by govt, do not get its benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (वृद्धाश्रम के माध्यम से)', steps: [
+          'इसमें वृद्ध व्यक्ति को किसी दफ़्तर के चक्कर नहीं लगाने होते।',
+          'वृद्धाश्रम का प्रबंधक (Manager) आश्रम में रहने वाले सभी पात्र बुज़ुर्गों के फॉर्म भरवाता है।',
+          'प्रबंधक सभी फॉर्म ज़िला सामाजिक न्याय कार्यालय (Joint Director Office) में जमा करता है।',
+          'विभाग वहां से पेंशन पास कर देता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through Old Age Home)', steps: [
+          'In this elderly person does not have to make rounds of any office.',
+          'Manager of Old Age Home gets forms filled of all eligible elderly living in ashram.',
+          'Manager submits all forms in District Social Justice Office (Joint Director Office).',
+          'Dept passes pension from there.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या सामान्य वृद्धावस्था पेंशन और अंत:वासी पेंशन एक ही है?', answer: 'नहीं। सामान्य वृद्धावस्था पेंशन घर पर रहने वाले गरीब बुज़ुर्गों को मिलती है, जबकि अंत:वासी पेंशन सिर्फ उन बुज़ुर्गों को मिलती है जो वृद्धाश्रम (Old age home) में निवास कर रहे हैं।' },
+      { question: 'अगर मैं वृद्धाश्रम छोड़कर वापस घर चला जाऊं तो क्या होगा?', answer: 'अगर आप आश्रम छोड़ देते हैं, तो आश्रम अधीक्षक द्वारा विभाग को सूचना दी जाएगी और यह "अंत:वासी" पेंशन बंद कर दी जाएगी। फिर आपको सामान्य पेंशन के लिए आवेदन करना होगा।' }
+    ],
+    faqsEn: [
+      { question: 'Are normal Old Age Pension and Antvasi Pension same?', answer: 'No. Normal Old Age pension is given to poor elderly living at home, whereas Antvasi pension is given only to those elderly who are residing in Old age home.' },
+      { question: 'What if I leave Old age home and go back home?', answer: 'If you leave ashram, then info will be given to dept by ashram superintendent and this "Antvasi" pension will be stopped. Then you will have to apply for normal pension.' }
+    ]
+  },
+  'divyang-shiksha-protsahan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री दिव्यांग शिक्षा प्रोत्साहन योजना',
+    english: 'Mukhyamantri Divyang Shiksha Protsahan Yojana',
+    summary: 'दिव्यांग (विकलांग) छात्र-छात्राओं को पढ़ाई में होने वाली परेशानी को दूर करने के लिए सरकार द्वारा लैपटॉप, ट्राइसाइकिल और छात्रवृत्ति देकर प्रोत्साहित करना।',
+    benefit: 'पात्र दिव्यांग विद्यार्थियों को लैपटॉप (कंप्यूटर), मोटराइज्ड ट्राइसाइकिल (बैटरी वाली साइकिल), हियरिंग एड (कान की मशीन) एवं विशेष छात्रवृत्ति (Scholarship) दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'छात्र का आधार कार्ड और समग्र आईडी',
+      '40% या अधिक की दिव्यांगता का प्रमाण पत्र (UDID Card)',
+      'स्कूल/कॉलेज में नियमित पढ़ाई करने का प्रमाण (Admission Receipt / ID Card)',
+      'पिछली कक्षा की मार्कशीट',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Student\'s Aadhaar Card and Samagra ID',
+      'Disability certificate of 40% or more (UDID Card)',
+      'Proof of studying regularly in school/college (Admission Receipt / ID Card)',
+      'Marksheet of previous class',
+      'Bank account passbook'
+    ],
+    steps: [
+      'स्कूल या कॉलेज के प्रिंसिपल (प्राचार्य) से एक सिफ़ारिश पत्र (Recommendation) लिखवाएं कि छात्र नियमित पढ़ने आता है।',
+      'ज़िला पंचायत या ज़िला सामाजिक न्याय कार्यालय (उप-संचालक) में अपना आवेदन जमा करें।',
+      'कलेक्टर की अध्यक्षता वाली समिति आवेदनों की जाँच करेगी।',
+      'चयनित छात्रों को शिविर लगाकर या सीधे खाते में लाभ दिया जाएगा।'
+    ],
+    stepsEn: [
+      'Get a Recommendation letter written by Principal of school or college that student comes to study regularly.',
+      'Submit your application in District Panchayat or District Social Justice Office (Deputy Director).',
+      'Committee headed by Collector will check applications.',
+      'Selected students will be given benefit by organizing camp or directly in account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'दिव्यांग विद्यार्थी' }
+    ],
+    sourceNotes: 'दिव्यांग विद्यार्थियों को समावेशी शिक्षा (Inclusive Education) और तकनीकी मदद।',
+    detailedDescription: [
+      'दिव्यांग बच्चों को स्कूल या कॉलेज जाने और वहां पढ़ाई करने में सामान्य बच्चों की तुलना में कहीं ज़्यादा मुश्किलें आती हैं। चलने-फिरने में असमर्थ बच्चों को कॉलेज जाने में दिक्कत होती है, तो वहीं देखने या सुनने में अक्षम बच्चों को पढ़ाई के विशेष उपकरणों की ज़रूरत पड़ती है।',
+      'इस समस्या को हल करने के लिए मध्य प्रदेश शासन ने "मुख्यमंत्री दिव्यांग शिक्षा प्रोत्साहन योजना" शुरू की है। इसमें उच्च शिक्षा (कॉलेज) प्राप्त कर रहे दिव्यांगों को बैटरी वाली ट्राइसाइकिल और होनहार छात्रों को लैपटॉप दिए जाते हैं, ताकि उनकी पढ़ाई बीच में न छूटे।'
+    ],
+    detailedDescriptionEn: [
+      'Divyang children face much more difficulties in going to school or college and studying there compared to normal children. Children unable to walk face difficulty in going to college, while children unable to see or hear need special study equipment.',
+      'To solve this problem MP Govt has started "Mukhyamantri Divyang Shiksha Protsahan Yojana". In this, battery operated tricycles and laptops are given to bright divyang students pursuing higher education (college), so that their studies are not left in middle.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या मिलता है?', points: [
+          'मोटराइज्ड ट्राइसाइकिल: जो छात्र कॉलेज (Higher Education) में नियमित (Regular) पढ़ते हैं और 60% से ज़्यादा अस्थि बाधित (चलने में अक्षम) हैं, उन्हें बैटरी से चलने वाली ट्राइसाइकिल मुफ़्त दी जाती है।',
+          'लैपटॉप प्रदाय: दृष्टिबाधित (नेत्रहीन) या अन्य गंभीर दिव्यांग मेधावी छात्रों को पढ़ाई के लिए लैपटॉप या कंप्यूटर खरीदने की आर्थिक सहायता।',
+          'उपकरण (Assistive Devices): श्रवण बाधित छात्रों को कान की मशीन (Hearing Aid) और अन्य ज़रूरी उपकरण दिए जाते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What all is received in scheme?', points: [
+          'Motorized Tricycle: Students who study regular in college (Higher Education) and are more than 60% orthopedically handicapped (unable to walk), are given battery operated tricycle free.',
+          'Laptop Provision: Financial help to visually impaired (blind) or other severely disabled meritorious students to buy laptop or computer for studies.',
+          'Equipment (Assistive Devices): Hearing Aid and other necessary equipment are given to hearing impaired students.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र/छात्रा मध्य प्रदेश के निवासी होने चाहिए।',
+      'न्यूनतम 40% दिव्यांगता होनी चाहिए (मोटराइज्ड ट्राइसाइकिल के लिए पैर से 60% या अधिक दिव्यांगता होना ज़रूरी है)।',
+      'छात्र किसी मान्यता प्राप्त स्कूल, कॉलेज, ITI या पॉलिटेक्निक में नियमित (Regular) विद्यार्थी के रूप में प्रवेशित हो।',
+      'छात्र की आयु 18 वर्ष से अधिक हो (विशेषकर ट्राइसाइकिल के लिए ड्राइविंग लाइसेंस की शर्तों के अनुसार)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be resident of MP.',
+      'Must have minimum 40% disability (For motorized tricycle it is necessary to have 60% or more disability from leg).',
+      'Student must be admitted as Regular student in any recognized school, college, ITI or Polytechnic.',
+      'Age of student must be more than 18 years (Especially as per conditions of driving license for tricycle).'
+    ],
+    exclusions: [
+      'प्राइवेट (Private) फॉर्म भरकर घर से पढ़ाई करने वाले (स्वाध्यायी) छात्रों को मोटराइज्ड ट्राइसाइकिल नहीं मिलती।',
+      'अगर छात्र ने पहले कभी सरकार से ट्राइसाइकिल या लैपटॉप लिया है, तो वह दोबारा आवेदन नहीं कर सकता।'
+    ],
+    exclusionsEn: [
+      'Students studying from home by filling Private form (Swadhyayi) do not get motorized tricycle.',
+      'If student has ever taken tricycle or laptop from govt before, then he cannot apply again.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ज़िला स्तर पर)', steps: [
+          'अपने स्कूल या कॉलेज के प्रिंसिपल से एक प्रमाण पत्र (Bonafide Certificate) लें कि आप वहां रोज़ पढ़ने आते हैं।',
+          'सामाजिक न्याय विभाग की वेबसाइट या ज़िला कार्यालय (कलेक्टर ऑफिस) से प्रोत्साहन योजना का फॉर्म लें।',
+          'फॉर्म में अपना UDID, कॉलेज की रसीद और मार्कशीट लगाकर ज़िला कार्यालय (उप-संचालक, सामाजिक न्याय) में जमा करें।',
+          'ज़िला स्तर की समिति (कलेक्टर) आपको उपकरण पास करेगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (At District Level)', steps: [
+          'Take a Bonafide Certificate from your school or college Principal that you come to study there everyday.',
+          'Take incentive scheme form from website of Social Justice Dept or District office (Collector Office).',
+          'Submit form by attaching your UDID, college receipt and marksheet in District office (Deputy Director, Social Justice).',
+          'District level committee (Collector) will pass equipment for you.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या 9वीं-10वीं के दिव्यांग छात्रों को भी बैटरी वाली साइकिल मिलेगी?', answer: 'नहीं। बैटरी वाली (मोटराइज्ड) ट्राइसाइकिल मुख्य रूप से उच्च शिक्षा (कॉलेज/ITI) में जाने वाले छात्रों के लिए है। स्कूल के बच्चों को मैन्युअल (हाथ से चलाने वाली) ट्राइसाइकिल दी जाती है।' },
+      { question: 'मैं प्राइवेट से BA कर रहा हूँ, क्या मुझे योजना का लाभ मिलेगा?', answer: 'दुर्भाग्यवश नहीं। मोटराइज्ड ट्राइसाइकिल और लैपटॉप मुख्य रूप से "नियमित (Regular)" छात्रों को स्कूल/कॉलेज जाने में मदद के लिए दिए जाते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Will 9th-10th divyang students also get battery cycle?', answer: 'No. Battery operated (Motorized) tricycle is mainly for students going in higher education (College/ITI). School children are given manual (hand operated) tricycle.' },
+      { question: 'I am doing BA from private, will I get benefit of scheme?', answer: 'Unfortunately no. Motorized tricycle and laptops are mainly given to "Regular" students to help them go to school/college.' }
+    ]
+  },
+  'rani-durgavati-shri-anna-protsahan-yojana': {
+    ...reviewed,
+    title: 'रानी दुर्गावती श्रीअन्न (मिलेट्स) प्रोत्साहन योजना',
+    english: 'Rani Durgavati Shri Anna (Millets) Protsahan Yojana',
+    summary: 'किसानों को मोटे अनाज (कोदो, कुटकी, ज्वार, बाजरा) उगाने के लिए प्रोत्साहित करने हेतु सरकार द्वारा दी जाने वाली अतिरिक्त नकद सहायता।',
+    benefit: 'कोदो-कुटकी (श्रीअन्न) की खेती करने वाले किसानों को फसल बेचने पर ₹10 प्रति किलो (या ₹1000 प्रति क्विंटल) की अतिरिक्त प्रोत्साहन राशि दी जाती है।',
+    department: 'किसान कल्याण तथा कृषि विकास विभाग',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: 'https://saara.mp.gov.in/',
+    documents: [
+      'किसान का आधार कार्ड',
+      'समग्र आईडी',
+      'खसरा/खतौनी (जमीन के कागज़) और गिरदावरी (फसल बोने का प्रमाण)',
+      'ई-उपार्जन पोर्टल का पंजीयन (Registration)',
+      'DBT चालू बैंक खाता (आधार लिंक)'
+    ],
+    documentsEn: [
+      'Farmer\'s Aadhaar Card',
+      'Samagra ID',
+      'Khasra/Khatauni (Land documents) and Girdawari (Proof of sowing crop)',
+      'Registration of e-Uparjan Portal',
+      'DBT active bank account (Aadhaar linked)'
+    ],
+    steps: [
+      'खेत में कोदो-कुटकी बोने के बाद पटवारी से गिरदावरी (फसल की एंट्री) करवाएं।',
+      'फसल कटने पर MP ई-उपार्जन पोर्टल पर समर्थन मूल्य (MSP) पर बेचने के लिए पंजीयन कराएं।',
+      'सरकारी उपार्जन केंद्र पर अपनी फसल बेचें।',
+      'बेची गई मात्रा के हिसाब से ₹10/किलो का बोनस सीधे आपके बैंक खाते में भेजा जाएगा।'
+    ],
+    stepsEn: [
+      'After sowing Kodo-Kutki in field, get Girdawari (Crop entry) done by Patwari.',
+      'On harvesting crop, register to sell at Minimum Support Price (MSP) on MP e-Uparjan portal.',
+      'Sell your crop at govt procurement center.',
+      'According to quantity sold, bonus of ₹10/kg will be sent directly to your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'श्रीअन्न (मिलेट्स) उत्पादक कृषक' }
+    ],
+    sourceNotes: 'मोटे अनाजों को बढ़ावा देने और आदिवासी क्षेत्रों के किसानों की आय बढ़ाने की पहल।',
+    detailedDescription: [
+      'कोदो, कुटकी, रागी, ज्वार, बाजरा जैसे अनाज जिन्हें "मोटा अनाज (Millets)" कहा जाता है, सेहत के लिए बहुत फ़ायदेमंद होते हैं। प्रधानमंत्री ने इन्हें सम्मान देते हुए "श्रीअन्न" नाम दिया है। मध्य प्रदेश के मंडला, डिंडोरी, बालाघाट जैसे आदिवासी क्षेत्रों में कोदो-कुटकी की खेती बहुत होती है।',
+      'किसानों को इन फसलों का सही दाम मिले और ज़्यादा से ज़्यादा किसान इन्हें उगाएं, इसके लिए "रानी दुर्गावती श्रीअन्न प्रोत्साहन योजना" शुरू की गई है। इसमें समर्थन मूल्य (MSP) के ऊपर सरकार अपनी तरफ से अलग से पैसे (बोनस) देती है, जिससे किसानों को अच्छा मुनाफ़ा होता है।'
+    ],
+    detailedDescriptionEn: [
+      'Grains like Kodo, Kutki, Ragi, Jowar, Bajra which are called "Millets", are very beneficial for health. Giving them respect, PM has named them "Shri Anna". Kodo-Kutki is cultivated a lot in tribal areas like Mandla, Dindori, Balaghat of MP.',
+      'So that farmers get right price for these crops and more and more farmers grow them, "Rani Durgavati Shri Anna Protsahan Yojana" has been started. In this govt gives separate money (bonus) from its side above Minimum Support Price (MSP), which gives good profit to farmers.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या फ़ायदा है?', points: [
+          'अतिरिक्त आय: अगर किसान 100 किलो (1 क्विंटल) कोदो-कुटकी बेचता है, तो उसे MSP के अलावा ₹1000 का सीधा बोनस मिलता है।',
+          'सीधा भुगतान (DBT): यह बोनस राशि किसी बिचौलिए के पास नहीं जाती, बल्कि फसल बिकने के बाद सीधे किसान के आधार-लिंक बैंक खाते में ट्रांसफर होती है।',
+          'मुफ़्त बीज: योजना के तहत किसानों को उन्नत किस्म के बीज भी अनुदान (Subsidy) पर या मुफ़्त दिए जाते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is benefit in scheme?', points: [
+          'Extra Income: If farmer sells 100 kg (1 quintal) Kodo-Kutki, then apart from MSP he gets direct bonus of ₹1000.',
+          'Direct Payment (DBT): This bonus amount does not go to any middleman, but gets transferred directly to farmer\'s Aadhaar-linked bank account after crop is sold.',
+          'Free Seeds: Under scheme farmers are also given improved variety seeds on subsidy or free.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और पंजीकृत किसान (Registered Farmer) होना चाहिए।',
+      'किसान ने अपने खेत में श्रीअन्न (विशेषकर कोदो-कुटकी) की खेती की हो।',
+      'राजस्व रिकॉर्ड (गिरदावरी) में फसल का दर्ज़ होना अनिवार्य है, तभी यह साबित होगा कि आपने श्रीअन्न उगाया है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and Registered Farmer.',
+      'Farmer must have cultivated Shri Anna (Especially Kodo-Kutki) in his field.',
+      'Entry of crop in revenue record (Girdawari) is mandatory, only then it will be proved that you have grown Shri Anna.'
+    ],
+    exclusions: [
+      'जो किसान खुले बाज़ार (मंडी में व्यापारियों) को फसल बेचते हैं, उन्हें यह ₹10 प्रति किलो वाला सरकारी बोनस नहीं मिलता।',
+      'जिन किसानों ने गिरदावरी (फसल का रजिस्ट्रेशन) में कोदो-कुटकी दर्ज नहीं कराया है, उन्हें लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'Farmers who sell crop in open market (to traders in mandi), do not get this govt bonus of ₹10 per kg.',
+      'Farmers who have not registered Kodo-Kutki in Girdawari (Crop registration), will not get benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (ई-उपार्जन / SAARA पोर्टल)', steps: [
+          'फसल बोने के बाद MP SAARA पोर्टल/ऐप या पटवारी के माध्यम से अपनी फसल की जानकारी (गिरदावरी) दर्ज कराएं।',
+          'फसल कटाई के समय सरकार द्वारा तय की गई तारीखों में MP ई-उपार्जन (e-Uparjan) पोर्टल पर अपना रजिस्ट्रेशन करें (यह CSC या समिति से होता है)।',
+          'SMS आने पर अपनी फसल लेकर सरकारी खरीद केंद्र (Procurement Center) पर जाएं और फसल तौलें।',
+          'फसल पास होने पर पैसे और बोनस खाते में आ जाएंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (e-Uparjan / SAARA Portal)', steps: [
+          'After sowing crop get your crop info (Girdawari) registered through MP SAARA portal/app or Patwari.',
+          'At time of harvesting register yourself on MP e-Uparjan portal on dates fixed by govt (This is done from CSC or Society).',
+          'On getting SMS go to govt Procurement Center with your crop and weigh crop.',
+          'On crop passing, money and bonus will come in account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह बोनस ज्वार और बाजरा पर भी मिलेगा?', answer: 'रानी दुर्गावती योजना विशेष रूप से आदिवासी क्षेत्रों में होने वाले "कोदो-कुटकी" को बढ़ावा देने के लिए लाई गई है। अन्य मिलेट्स के लिए कृषि विभाग की अलग सब्सिडी योजनाएं होती हैं।' },
+      { question: 'गिरदावरी क्या होती है?', answer: 'गिरदावरी सरकारी रिकॉर्ड होता है जिसमें दर्ज़ होता है कि किस किसान ने अपने खेत के कितने हिस्से में कौन सी फसल बोई है। यह जानकारी पटवारी दर्ज़ करता है।' }
+    ],
+    faqsEn: [
+      { question: 'Will this bonus be available on Jowar and Bajra also?', answer: 'Rani Durgavati scheme has been brought specially to promote "Kodo-Kutki" grown in tribal areas. There are separate subsidy schemes of Agriculture Dept for other millets.' },
+      { question: 'What is Girdawari?', answer: 'Girdawari is govt record in which it is registered that which farmer has sown which crop in how much part of his field. This info is registered by Patwari.' }
+    ]
+  },
+  'gramin-path-roshan-yojana': {
+    ...reviewed,
+    title: 'ग्रामीण पथ रोशन योजना (सोलर स्ट्रीट लाइट)',
+    english: 'Gramin Path Roshan Yojana (Solar Street Light)',
+    summary: 'गांव की सड़कों और चौराहों को रात में रोशन करने के लिए ग्राम पंचायतों में सोलर (सौर ऊर्जा वाली) लाइटें लगाने की योजना।',
+    benefit: 'इस योजना के तहत ग्राम पंचायत के प्रमुख स्थानों (चौराहे, बाज़ार, मुख्य मार्ग) पर मुफ़्त में सोलर स्ट्रीट लाइट लगाई जाती हैं।',
+    department: 'पंचायत एवं ग्रामीण विकास विभाग',
+    sourceUrl: 'https://prd.mp.gov.in/',
+    applicationUrl: 'https://prd.mp.gov.in/',
+    documents: [
+      'ग्राम पंचायत का प्रस्ताव / संकल्प पत्र (Resolution)',
+      'उन स्थानों की सूची जहाँ लाइट लगनी है',
+      'ग्राम सभा का अनुमोदन (Approval)',
+      'सरपंच और सचिव के हस्ताक्षर'
+    ],
+    documentsEn: [
+      'Proposal / Resolution of Gram Panchayat',
+      'List of places where lights are to be installed',
+      'Approval of Gram Sabha',
+      'Signatures of Sarpanch and Secretary'
+    ],
+    steps: [
+      'ग्रामीण लोग ग्राम पंचायत/सरपंच से गाँव में सोलर लाइट लगवाने की मांग करेंगे।',
+      'ग्राम सभा की बैठक में इस मांग का प्रस्ताव (Resolution) पास किया जाएगा।',
+      'सरपंच/सचिव यह प्रस्ताव जनपद पंचायत (ब्लॉक कार्यालय) को भेजेंगे।',
+      'स्वीकृति मिलने पर सरकारी एजेंसी द्वारा गाँव में सोलर लाइटें लगा दी जाएंगी।'
+    ],
+    stepsEn: [
+      'Villagers will demand Gram Panchayat/Sarpanch to install solar lights in village.',
+      'Proposal (Resolution) of this demand will be passed in meeting of Gram Sabha.',
+      'Sarpanch/Secretary will send this proposal to Janpad Panchayat (Block Office).',
+      'On getting approval, solar lights will be installed in village by govt agency.'
+    ],
+    rules: [
+      { field: 'rural', op: 'eq', value: true, label: 'ग्रामीण क्षेत्र' }
+    ],
+    sourceNotes: 'गाँव में रात के समय सुरक्षा और आवागमन को सुगम बनाने के लिए।',
+    detailedDescription: [
+      'आज भी कई गाँवों में रात के समय सड़कों और चौराहों पर घुप अंधेरा रहता है। इससे लोगों (खासकर महिलाओं और बच्चों) को निकलने में डर लगता है और हादसों या चोरी का खतरा रहता है। बिजली के खंभे हर जगह नहीं पहुँच पाते और बिजली का बिल भी पंचायत को देना पड़ता है।',
+      '"ग्रामीण पथ रोशन योजना" के तहत मध्य प्रदेश सरकार गाँवों में सोलर स्ट्रीट लाइट (सूर्य की रोशनी से चार्ज होने वाली बत्तियां) लगाती है। ये लाइटें दिन में चार्ज होती हैं और रात में अपने आप चालू होकर पूरे गाँव को रोशन कर देती हैं। इसमें बिजली का कोई बिल भी नहीं आता।'
+    ],
+    detailedDescriptionEn: [
+      'Even today in many villages there is pitch darkness on roads and intersections at night. Due to this people (especially women and children) are afraid to go out and there is risk of accidents or theft. Electric poles cannot reach everywhere and electricity bill also has to be paid by Panchayat.',
+      'Under "Gramin Path Roshan Yojana" MP Govt installs Solar Street Lights (lights charging from sunlight) in villages. These lights get charged in day and automatically turn on at night illuminating whole village. There is no electricity bill in this either.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या फायदे हैं?', points: [
+          'मुफ़्त बिजली, शून्य बिल: सोलर लाइटें सूरज की धूप से चलती हैं, इसलिए ग्राम पंचायत को बिजली विभाग को कोई बिल नहीं चुकाना पड़ता।',
+          'सुरक्षा: रात में गाँव की गलियों में रोशनी रहने से चोरी और हादसों में कमी आती है, महिलाएँ सुरक्षित महसूस करती हैं।',
+          'स्वचालित (Automatic): इनमें सेंसर लगे होते हैं, यानी शाम होते ही ये खुद चालू हो जाती हैं और सुबह होते ही बंद हो जाती हैं। रोज़ चालू-बंद करने का झंझट नहीं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are advantages of scheme?', points: [
+          'Free Electricity, Zero Bill: Solar lights run on sunlight, so Gram Panchayat does not have to pay any bill to electricity dept.',
+          'Safety: Due to light in village streets at night, thefts and accidents decrease, women feel safe.',
+          'Automatic: They have sensors, meaning they turn on automatically in evening and turn off in morning. No hassle of turning on-off everyday.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'यह योजना किसी एक व्यक्ति (Individual) के लिए नहीं, बल्कि पूरी ग्राम पंचायत (सार्वजनिक उपयोग) के लिए है।',
+      'गाँव में उन स्थानों का चयन किया जाता है जो सार्वजनिक हों (जैसे स्कूल के पास, चौराहे, पंचायत भवन, या मुख्य सड़क)।',
+      'ग्राम पंचायत को लाइटों के रखरखाव (Maintenance) की ज़िम्मेदारी लेनी होती है।'
+    ],
+    eligibilityDescriptionEn: [
+      'This scheme is not for any one person (Individual), but for whole Gram Panchayat (public use).',
+      'Places in village are selected which are public (like near school, intersections, Panchayat building, or main road).',
+      'Gram Panchayat has to take responsibility of maintenance of lights.'
+    ],
+    exclusions: [
+      'ये सोलर लाइटें किसी भी सरपंच, अधिकारी या व्यक्ति के निजी घर या निजी बाड़े (Private Property) के अंदर नहीं लगाई जा सकतीं।',
+      'शहरी क्षेत्रों (नगर पालिका/निगम) के लिए यह योजना नहीं है।'
+    ],
+    exclusionsEn: [
+      'These solar lights cannot be installed inside private house or private enclosure (Private Property) of any Sarpanch, officer or person.',
+      'This scheme is not for urban areas (Municipality/Corporation).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ग्राम सभा प्रस्ताव)', steps: [
+          'अगर आपके गाँव/मोहल्ले में लाइट नहीं है, तो आप सरपंच या पंचायत सचिव से इसकी शिकायत/मांग करें।',
+          'जब भी गाँव में "ग्राम सभा" (गाँव के सभी लोगों की बैठक) हो, उसमें सोलर लाइट का मुद्दा उठाएं।',
+          'सरपंच और पंच मिलकर एक लिखित प्रस्ताव पास करेंगे कि गाँव में 10 या 20 (ज़रूरत के अनुसार) सोलर लाइटें चाहिए।',
+          'यह प्रस्ताव ब्लॉक कार्यालय (जनपद) को भेजा जाएगा, जहाँ से बजट पास होकर लाइटें लगने आ जाएंगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Gram Sabha Proposal)', steps: [
+          'If there is no light in your village/locality, then complain/demand for it to Sarpanch or Panchayat Secretary.',
+          'Whenever there is "Gram Sabha" (meeting of all village people) in village, raise issue of solar light in it.',
+          'Sarpanch and Panchs together will pass a written proposal that 10 or 20 (as per need) solar lights are needed in village.',
+          'This proposal will be sent to Block Office (Janpad), from where budget will be passed and lights will come for installation.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं अपने घर की छत पर मुफ़्त सोलर लाइट लगवा सकता हूँ?', answer: 'नहीं। ग्रामीण पथ रोशन योजना सिर्फ गाँव की सड़कों (सार्वजनिक जगहों) के लिए है। घर के लिए आप "PM सूर्य घर योजना" में सब्सिडी ले सकते हैं।' },
+      { question: 'अगर लाइट खराब हो जाए तो क्या करें?', answer: 'लाइट खराब होने पर आपको सीधे अपने पंचायत सचिव या सरपंच को बताना होगा। लाइट लगाने वाली कंपनी 5 साल तक मुफ़्त रखरखाव (Warranty) देती है, जिसे बुलाने का काम पंचायत का होता है।' }
+    ],
+    faqsEn: [
+      { question: 'Can I get free solar light installed on roof of my house?', answer: 'No. Gramin Path Roshan Yojana is only for village roads (public places). For home you can take subsidy in "PM Surya Ghar Yojana".' },
+      { question: 'What to do if light breaks down?', answer: 'On breaking down of light you have to directly tell your Panchayat Secretary or Sarpanch. Company installing light gives free maintenance (Warranty) for 5 years, calling whom is work of Panchayat.' }
+    ]
+  },
+  'madhya-pradesh-paarth-yojana': {
+    ...reviewed,
+    title: 'पार्थ योजना (युवा करियर मार्गदर्शन)',
+    english: 'MP Paarth Yojana (Career Guidance)',
+    summary: 'युवाओं और छात्रों को उनके करियर (Career) के लिए सही रास्ता दिखाने और रोज़गार से जोड़ने के लिए सरकार द्वारा दी जाने वाली मुफ़्त काउंसलिंग।',
+    benefit: '16 से 28 वर्ष के युवाओं को विशेषज्ञों द्वारा मुफ़्त करियर काउंसलिंग (Career Counseling), ट्रेनिंग और रोज़गार मार्गदर्शन दिया जाता है।',
+    department: 'तकनीकी शिक्षा, कौशल विकास एवं रोज़गार विभाग',
+    sourceUrl: 'https://ssdm.mp.gov.in/',
+    applicationUrl: 'https://mprgp.gov.in/',
+    documents: [
+      'युवा का आधार कार्ड',
+      'समग्र आईडी',
+      '10वीं, 12वीं या कॉलेज की मार्कशीट',
+      'रोज़गार कार्यालय का पंजीयन (Employment Registration) - यदि हो'
+    ],
+    documentsEn: [
+      'Youth\'s Aadhaar Card',
+      'Samagra ID',
+      '10th, 12th or College marksheet',
+      'Employment Office Registration - if any'
+    ],
+    steps: [
+      'ज़िला रोज़गार कार्यालय (District Employment Office) या कॉलेज में आयोजित होने वाले "पार्थ करियर काउंसलिंग शिविर" का पता करें।',
+      'वहाँ जाकर अपना रजिस्ट्रेशन करवाएं।',
+      'विशेषज्ञ (Counselors) आपका एक छोटा सा साइकोमेट्रिक (Psychometric) टेस्ट लेंगे।',
+      'टेस्ट और आपकी रूचि के आधार पर आपको सही करियर या ट्रेनिंग (जैसे ITI, कौशल विकास) का सुझाव दिया जाएगा।'
+    ],
+    stepsEn: [
+      'Find out about "Paarth Career Counseling Camp" organized in District Employment Office or College.',
+      'Go there and get your registration done.',
+      'Experts (Counselors) will take your small Psychometric test.',
+      'Based on test and your interest, right career or training (like ITI, Skill Development) will be suggested to you.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 16, label: 'आयु 16 से 28 वर्ष' },
+      { field: 'age', op: 'lte', value: 28, label: 'अधिकतम 28 वर्ष' }
+    ],
+    sourceNotes: 'युवाओं को भटकने से बचाने और उनकी क्षमता के अनुसार सही दिशा दिखाने की पहल।',
+    detailedDescription: [
+      '10वीं या 12वीं पास करने के बाद बहुत से युवाओं को यह समझ नहीं आता कि उन्हें आगे क्या पढ़ना चाहिए या कौन सी नौकरी उनके लिए सही रहेगी। सही मार्गदर्शन (Guidance) न मिलने के कारण वे गलत फील्ड चुन लेते हैं और बाद में उन्हें नौकरी नहीं मिलती।',
+      'इस समस्या को दूर करने के लिए मध्य प्रदेश सरकार ने "पार्थ योजना" शुरू की है। महाभारत में जिस तरह कृष्ण ने अर्जुन (पार्थ) का मार्गदर्शन किया था, उसी तरह इस योजना में मनोवैज्ञानिक और विशेषज्ञ युवाओं की काउंसेलिंग करते हैं। वे बच्चे की रूचि और काबलियत जानकर उसे सही फील्ड (जैसे प्राइवेट जॉब, सरकारी तैयारी, या अपना बिज़नेस) चुनने में मदद करते हैं।'
+    ],
+    detailedDescriptionEn: [
+      'After passing 10th or 12th many youths do not understand what they should study next or which job will be right for them. Due to lack of right guidance they choose wrong field and later they do not get job.',
+      'To remove this problem MP Govt has started "Paarth Yojana". Just like Krishna guided Arjun (Paarth) in Mahabharat, similarly in this scheme psychologists and experts do counseling of youths. By knowing interest and ability of child, they help him choose right field (like private job, govt preparation, or own business).'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में युवाओं को क्या लाभ मिलता है?', points: [
+          'मुफ़्त साइकोमेट्रिक टेस्ट (Psychometric Test): यह एक ऐसा टेस्ट है जिससे पता चलता है कि युवा का दिमाग किस काम (इंजीनियरिंग, आर्ट्स, बिज़नेस) में सबसे अच्छा चलेगा। बाहर इस टेस्ट के हज़ारों रुपये लगते हैं, लेकिन यहाँ यह मुफ़्त है।',
+          'विशेषज्ञों की सलाह: अनुभवी काउंसेलर्स युवाओं को बताते हैं कि उनकी चुनी हुई फील्ड में नौकरी कैसे मिलेगी और उसके लिए कौन सी ट्रेनिंग ज़रूरी है।',
+          'प्लेसमेंट से जुड़ाव: सही ट्रेनिंग के बाद युवाओं को रोज़गार मेलों (Job Fairs) के ज़रिए प्राइवेट कंपनियों में नौकरी दिलवाने में भी मदद की जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits youths get in scheme?', points: [
+          'Free Psychometric Test: This is a test which tells in which work (engineering, arts, business) youth\'s brain will run best. Outside this test costs thousands of rupees, but here it is free.',
+          'Advice of Experts: Experienced counselors tell youths how to get job in their chosen field and which training is necessary for that.',
+          'Linkage with Placement: After right training, youths are also helped in getting jobs in private companies through Job Fairs.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'युवा मध्य प्रदेश का निवासी होना चाहिए।',
+      'युवा की उम्र 16 वर्ष से लेकर 28 वर्ष के बीच होनी चाहिए।',
+      'यह योजना मुख्य रूप से 10वीं, 12वीं, कॉलेज के छात्रों और कॉलेज पास आउट (बेरोज़गार) युवाओं के लिए है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Youth must be resident of MP.',
+      'Age of youth should be between 16 years to 28 years.',
+      'This scheme is mainly for 10th, 12th, college students and college pass out (unemployed) youths.'
+    ],
+    exclusions: [
+      '28 वर्ष से अधिक उम्र के लोगों को इस योजना (करियर काउंसलिंग) में प्राथमिकता नहीं दी जाती।',
+      'इसमें सरकार की तरफ से कोई नकद पैसा या भत्ता (Unemployment Allowance) नहीं मिलता, यह सिर्फ मार्गदर्शन के लिए है।'
+    ],
+    exclusionsEn: [
+      'People above 28 years of age are not given priority in this scheme (career counseling).',
+      'No cash money or allowance (Unemployment Allowance) is given by govt in this, this is only for guidance.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (काउंसलिंग शिविर)', steps: [
+          'अख़बारों या कॉलेज के नोटिस बोर्ड के ज़रिए "पार्थ करियर शिविर" या "रोज़गार मेले" की तारीख़ का पता करें।',
+          'अपने ज़िले के "ज़िला रोज़गार कार्यालय (District Employment Office)" में जाकर भी आप इस काउंसेलिंग के लिए समय (Appointment) मांग सकते हैं।',
+          'अपने सभी दस्तावेज़ (मार्कशीट) साथ ले जाएं।',
+          'वहां मौजूद अधिकारी आपका टेस्ट लेंगे और आपको सही कोर्स/नौकरी का रास्ता दिखाएंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Counseling Camp)', steps: [
+          'Find out date of "Paarth Career Camp" or "Job Fair" through newspapers or college notice board.',
+          'You can also ask for time (Appointment) for this counseling by going to "District Employment Office" of your district.',
+          'Take all your documents (marksheet) with you.',
+          'Officer present there will take your test and show you right course/job path.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या इस काउंसेलिंग के बाद नौकरी की गारंटी है?', answer: 'नहीं, नौकरी की कोई 100% गारंटी नहीं है। लेकिन इसके ज़रिए आपको सही रास्ता और ट्रेनिंग मिल जाती है, जिससे प्राइवेट सेक्टर (Job Fair) में नौकरी मिलने के मौके बहुत बढ़ जाते हैं।' },
+      { question: 'साइकोमेट्रिक टेस्ट क्या होता है?', answer: 'यह कोई पढ़ाई का एग्जाम नहीं है। इसमें कुछ आसान सवाल होते हैं, जो आपकी सोच, रूचि और व्यवहार को समझने के लिए पूछे जाते हैं, ताकि आपका असली टैलेंट पहचाना जा सके।' }
+    ],
+    faqsEn: [
+      { question: 'Is there job guarantee after this counseling?', answer: 'No, there is no 100% guarantee of job. But through this you get right path and training, due to which chances of getting job in private sector (Job Fair) increase a lot.' },
+      { question: 'What is psychometric test?', answer: 'It is not any study exam. It has some easy questions, which are asked to understand your thinking, interest and behavior, so that your real talent can be identified.' }
+    ]
+  },
+  'pratibhashali-vidyarthi-protsahan-yojana': {
+    ...reviewed,
+    title: 'प्रतिभाशाली विद्यार्थी प्रोत्साहन योजना (लैपटॉप)',
+    english: 'Pratibhashali Vidyarthi Protsahan Yojana (Laptop Scheme)',
+    summary: 'मध्य प्रदेश बोर्ड (MP Board) की 12वीं की परीक्षा में बहुत अच्छे नंबर (75% या उससे ज़्यादा) लाने वाले मेधावी छात्र-छात्राओं को लैपटॉप खरीदने के लिए ₹25,000 की नकद राशि।',
+    benefit: '12वीं कक्षा में 75% या उससे अधिक अंक लाने वाले छात्रों को लैपटॉप खरीदने के लिए ₹25,000 की राशि और एक प्रशस्ति पत्र (Certificate) दिया जाता है।',
+    department: 'स्कूल शिक्षा विभाग',
+    sourceUrl: 'https://educationportal.mp.gov.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'छात्र का आधार कार्ड (Aadhaar Card)',
+      'समग्र आईडी (Samagra ID)',
+      '12वीं बोर्ड की मार्कशीट (75%+ अंक)',
+      'छात्र के नाम का बैंक खाता (आधार से लिंक होना अनिवार्य)',
+      'आय प्रमाण पत्र (कुछ विशेष परिस्थितियों में)'
+    ],
+    documentsEn: [
+      'Student\'s Aadhaar Card',
+      'Samagra ID',
+      '12th Board Marksheet (75%+ marks)',
+      'Bank account in student\'s name (Aadhaar link mandatory)',
+      'Income Certificate (in some special conditions)'
+    ],
+    steps: [
+      '12वीं का रिजल्ट आने के बाद, स्कूल शिक्षा विभाग खुद ऐसे छात्रों की सूची (List) बनाता है जिनके 75% या ज़्यादा नंबर हैं।',
+      'छात्र को शिक्षा पोर्टल (Education Portal) पर जाकर अपना रोल नंबर डालकर अपना नाम चेक करना होता है।',
+      'अगर नाम है, तो पोर्टल पर अपना बैंक खाता (Account Number) और IFSC कोड अपडेट (Update) करना होता है।',
+      'मुख्यमंत्री द्वारा एक कार्यक्रम (Event) में या सीधे सिंगल क्लिक से ₹25,000 खाते में ट्रांसफर कर दिए जाते हैं।'
+    ],
+    stepsEn: [
+      'After 12th result comes, School Education Dept itself makes list of such students who have 75% or more marks.',
+      'Student has to go to Education Portal and check his name by entering his roll number.',
+      'If name is there, then bank account (Account Number) and IFSC code has to be updated on portal.',
+      '₹25,000 is transferred to account by Chief Minister in an event or directly by single click.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: '12वीं बोर्ड में 75% या अधिक अंक' }
+    ],
+    sourceNotes: 'छात्रों को डिजिटल रूप से जोड़ने और उच्च शिक्षा (कॉलेज) में मदद करने के लिए सबसे बड़ी योजना।',
+    detailedDescription: [
+      'आजकल कॉलेज की पढ़ाई और आगे के कोर्स बिना कंप्यूटर या लैपटॉप के करना बहुत मुश्किल है। लेकिन बहुत से मेधावी (होनहार) छात्र ऐसे होते हैं जो पढ़ने में तो बहुत तेज़ हैं, पर उनके माता-पिता इतने पैसे वाले नहीं होते कि उन्हें लैपटॉप दिला सकें।',
+      'ऐसे प्रतिभावान छात्रों का हौसला बढ़ाने के लिए मध्य प्रदेश सरकार ने "प्रतिभाशाली विद्यार्थी प्रोत्साहन योजना (लैपटॉप वितरण)" शुरू की है। इसमें बोर्ड परीक्षा में शानदार प्रदर्शन करने वाले बच्चों को सरकार अपनी तरफ से ₹25,000 देती है, ताकि वे अपनी पसंद का लैपटॉप खरीद सकें और अपनी कॉलेज की पढ़ाई अच्छे से कर सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Nowadays doing college studies and further courses without computer or laptop is very difficult. But there are many meritorious (bright) students who are very fast in studies, but their parents are not so rich that they can get them laptop.',
+      'To boost morale of such talented students MP Govt has started "Pratibhashali Vidyarthi Protsahan Yojana (Laptop Distribution)". In this, govt gives ₹25,000 from its side to children who perform excellently in board exams, so that they can buy laptop of their choice and do their college studies well.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या लाभ हैं?', points: [
+          'नकद राशि (Cash Amount): छात्र को लैपटॉप या कंप्यूटर खरीदने के लिए ₹25,000 की एकमुश्त (Lump sum) राशि मिलती है।',
+          'DBT ट्रांसफर: यह पैसा किसी स्कूल या टीचर के पास नहीं जाता, बल्कि सीधे छात्र के उस बैंक खाते में आता है जो आधार कार्ड से लिंक (DBT Enabled) होता है।',
+          'सम्मान (Recognition): पैसा मिलने के साथ-साथ मुख्यमंत्री के हस्ताक्षर वाला एक प्रमाण पत्र (Certificate) भी दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are benefits of scheme?', points: [
+          'Cash Amount: Student gets lump sum amount of ₹25,000 to buy laptop or computer.',
+          'DBT Transfer: This money does not go to any school or teacher, but comes directly in that bank account of student which is linked with Aadhaar card (DBT Enabled).',
+          'Recognition: Along with getting money, a certificate signed by Chief Minister is also given.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र/छात्रा ने माध्यमिक शिक्षा मण्डल (MP Board) भोपाल से कक्षा 12वीं की परीक्षा पास की हो।',
+      'छात्र मध्य प्रदेश का मूल निवासी हो।',
+      'छात्र ने अपनी 12वीं की परीक्षा में 75% या उससे अधिक अंक (Marks) प्राप्त किए हों (चाहे वह सरकारी स्कूल का छात्र हो या प्राइवेट स्कूल का)।',
+      'छात्र रेगुलर (Regular) पढ़ाई कर रहा हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should have passed class 12th exam from Board of Secondary Education (MP Board) Bhopal.',
+      'Student should be native of MP.',
+      'Student should have secured 75% or more marks in his 12th exam (whether he is student of govt school or private school).',
+      'Student should be studying Regular.'
+    ],
+    exclusions: [
+      'अगर छात्र CBSE या ICSE बोर्ड से पढ़ा है, तो वह इस योजना के लिए पात्र नहीं है (यह सिर्फ MP Board वालों के लिए है)।',
+      'जिन छात्रों ने "प्राइवेट" (Private/Swadhyayi) फॉर्म भरकर परीक्षा दी है, उन्हें इसका लाभ नहीं मिलता।',
+      'अगर छात्र के नंबर 75% से कम हैं (भले ही 74.9% हों), तो उसे यह राशि नहीं मिलेगी।'
+    ],
+    exclusionsEn: [
+      'If student has studied from CBSE or ICSE board, then he is not eligible for this scheme (this is only for MP Board ones).',
+      'Students who have given exam by filling "Private" (Swadhyayi) form, do not get its benefit.',
+      'If student\'s marks are less than 75% (even if 74.9%), then he will not get this amount.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (शिक्षा पोर्टल)', steps: [
+          'रिजल्ट आने के कुछ दिन बाद MP Education Portal (shikshaportal.mp.gov.in) पर जाएँ।',
+          '"Laptop scheme" वाले लिंक पर क्लिक करें।',
+          'अपना 12वीं का रोल नंबर डालें और अपनी पात्रता (Eligibility) जानें।',
+          'अगर आप पात्र हैं, तो वहां अपना बैंक अकाउंट नंबर (Account Number) दर्ज (Update) करें।',
+          'ध्यान रखें, आपके बैंक खाते की e-KYC (आधार लिंकिंग) पूरी होनी चाहिए, तभी पैसा आएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Education Portal)', steps: [
+          'Go to MP Education Portal (shikshaportal.mp.gov.in) few days after result comes.',
+          'Click on "Laptop scheme" link.',
+          'Enter your 12th roll number and know your Eligibility.',
+          'If you are eligible, then register (Update) your bank account number there.',
+          'Keep in mind, e-KYC (Aadhaar linking) of your bank account must be complete, only then money will come.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मैं प्राइवेट स्कूल (Private School) में पढ़ता था और मेरे 80% आए हैं, क्या मुझे भी लैपटॉप मिलेगा?', answer: 'हाँ! पहले यह योजना सिर्फ सरकारी स्कूलों के लिए थी, लेकिन अब यह प्राइवेट स्कूलों (MP Board) के छात्रों के लिए भी लागू है। आपको भी ₹25,000 मिलेंगे।' },
+      { question: 'मेरे खाते में पैसा नहीं आया जबकि लिस्ट में नाम था, क्या करूँ?', answer: 'अक्सर पैसा इसलिए अटकता है क्योंकि आपका बैंक खाता "आधार (NPCI)" से लिंक नहीं होता। बैंक जाकर अपना DBT चालू कराएं, पैसा अगली किस्त में आ जाएगा।' }
+    ],
+    faqsEn: [
+      { question: 'I used to study in Private School and got 80%, will I also get laptop?', answer: 'Yes! Earlier this scheme was only for govt schools, but now it is applicable for private school (MP Board) students also. You will also get ₹25,000.' },
+      { question: 'Money did not come in my account while name was in list, what to do?', answer: 'Often money gets stuck because your bank account is not linked with "Aadhaar (NPCI)". Go to bank and get your DBT started, money will come in next installment.' }
+    ]
+  },
+  'madhya-pradesh-samadhan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री समाधान योजना (CM Helpline 181)',
+    english: 'MP Samadhan Yojana (CM Helpline 181)',
+    summary: 'सरकारी विभागों से जुड़ी किसी भी समस्या, शिकायत या बिजली बिल विवाद को घर बैठे ऑनलाइन या फोन कॉल (181) के ज़रिए हल करने की सुविधा।',
+    benefit: 'सरकारी दफ्तरों के चक्कर लगाए बिना आपकी शिकायत का तय समय-सीमा (Time Limit) के अंदर ऑनलाइन समाधान किया जाता है।',
+    department: 'लोक सेवा प्रबंधन विभाग',
+    sourceUrl: 'https://cmhelpline.mp.gov.in/',
+    applicationUrl: 'https://cmhelpline.mp.gov.in/',
+    documents: [
+      'शिकायतकर्ता का आधार कार्ड',
+      'समग्र आईडी',
+      'चालू मोबाइल नंबर',
+      'शिकायत से जुड़ा दस्तावेज़ (जैसे गलत बिजली बिल की कॉपी)'
+    ],
+    documentsEn: [
+      'Complainant\'s Aadhaar Card',
+      'Samagra ID',
+      'Active mobile number',
+      'Document related to complaint (like copy of wrong electricity bill)'
+    ],
+    steps: [
+      'अपने मोबाइल से टोल-फ्री नंबर 181 (CM Helpline) पर कॉल करें या cmhelpline.mp.gov.in पोर्टल पर जाएँ।',
+      'कस्टमर केयर को अपनी पूरी समस्या (शिकायत) बताएं।',
+      'शिकायत दर्ज़ होने के बाद आपको SMS के ज़रिए एक शिकायत नंबर (Complaint ID) मिलेगा।',
+      'संबंधित अधिकारी आपकी समस्या का समाधान करेंगे। आप अपनी शिकायत का स्टेटस (Status) ऑनलाइन ट्रैक भी कर सकते हैं।'
+    ],
+    stepsEn: [
+      'Call toll-free number 181 (CM Helpline) from your mobile or go to cmhelpline.mp.gov.in portal.',
+      'Tell your complete problem (complaint) to customer care.',
+      'After complaint is registered you will get a complaint number (Complaint ID) through SMS.',
+      'Concerned officer will solve your problem. You can also track status of your complaint online.'
+    ],
+    rules: [],
+    sourceNotes: 'आम जनता को सरकारी दफ्तरों में होने वाली परेशानी और भ्रष्टाचार से बचाने का बहुत बड़ा कदम।',
+    detailedDescription: [
+      'अक्सर लोगों को राशन न मिलने, पेंशन रुक जाने, गलत बिजली बिल आने या किसी सरकारी कर्मचारी द्वारा रिश्वत मांगे जाने जैसी समस्याओं का सामना करना पड़ता है। इन शिकायतों के लिए छोटे दफ्तरों से लेकर बड़े दफ्तरों तक चक्कर लगाने पड़ते हैं।',
+      'इस परेशानी को खत्म करने के लिए मध्य प्रदेश सरकार ने "CM Helpline 181" (समाधान योजना) शुरू की है। इसमें कोई भी व्यक्ति घर बैठे फोन कॉल या पोर्टल के ज़रिए अपनी शिकायत सीधा मुख्यमंत्री कार्यालय तक पहुँचा सकता है। जब तक शिकायतकर्ता समाधान से संतुष्ट नहीं होता, शिकायत बंद नहीं की जाती।'
+    ],
+    detailedDescriptionEn: [
+      'Often people have to face problems like not getting ration, pension getting stopped, getting wrong electricity bill or bribe being asked by any govt employee. For these complaints one has to make rounds from small offices to big offices.',
+      'To end this trouble MP Govt has started "CM Helpline 181" (Samadhan Yojana). In this anyone can send his complaint directly to Chief Minister\'s office sitting at home through phone call or portal. Until complainant is satisfied with solution, complaint is not closed.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या फायदे हैं?', points: [
+          'घर बैठे समाधान: किसी भी विभाग (पुलिस, राजस्व, पंचायत, बिजली) की शिकायत के लिए ऑफिस नहीं जाना पड़ता।',
+          'समय-सीमा (Time Limit): हर शिकायत को हल करने का एक निश्चित समय होता है। अगर L1 (छोटा अधिकारी) हल नहीं करता, तो शिकायत अपने आप L2 (बड़े अधिकारी) के पास चली जाती है।',
+          'संतुष्टि ज़रूरी: जब तक शिकायत करने वाला व्यक्ति यह नहीं कहता कि उसकी समस्या हल हो गई है, अधिकारी ज़बरदस्ती शिकायत को बंद नहीं कर सकते।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are advantages of scheme?', points: [
+          'Solution sitting at home: Don\'t have to go to office for complaint of any department (Police, Revenue, Panchayat, Electricity).',
+          'Time Limit: There is a fixed time to solve every complaint. If L1 (junior officer) does not solve, complaint automatically goes to L2 (senior officer).',
+          'Satisfaction necessary: Until complaining person says that his problem is solved, officers cannot close complaint forcefully.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'शिकायत करने वाला व्यक्ति मध्य प्रदेश का नागरिक होना चाहिए।',
+      'योजना का उपयोग कोई भी आम नागरिक अपनी या अपने क्षेत्र की सार्वजनिक समस्या के लिए कर सकता है।',
+      'न्यायालय (Court) में चल रहे मामलों (Sub-judice) की शिकायत यहाँ दर्ज़ नहीं की जा सकती।'
+    ],
+    eligibilityDescriptionEn: [
+      'Complaining person must be citizen of MP.',
+      'Any common citizen can use scheme for his or his area\'s public problem.',
+      'Complaint of cases going on in Court (Sub-judice) cannot be registered here.'
+    ],
+    exclusions: [
+      'अगर कोई मामला पहले से कोर्ट में चल रहा है, तो 181 पर उसकी शिकायत दर्ज़ नहीं होगी।',
+      'सूचना का अधिकार (RTI) से जुड़े मामलों की मांग भी इस हेल्पलाइन पर नहीं की जा सकती।'
+    ],
+    exclusionsEn: [
+      'If any case is already going on in court, then its complaint will not be registered on 181.',
+      'Demands related to Right to Information (RTI) cases also cannot be made on this helpline.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (कॉल/पोर्टल/ऐप)', steps: [
+          'कॉलिंग: सबसे आसान तरीका है अपने फोन से 181 डायल करें। यह सुविधा सुबह 7 बजे से रात 11 बजे तक काम करती है।',
+          'वेबसाइट: cmhelpline.mp.gov.in पर जाकर "शिकायत दर्ज़ करें" पर क्लिक करें।',
+          'व्हाट्सऐप (WhatsApp): सरकार ने व्हाट्सऐप नंबर भी जारी किया है, जहाँ आप मैसेज भेजकर शिकायत दर्ज़ कर सकते हैं।',
+          'स्टेटस चेक: 181 पर कॉल करके अपना शिकायत नंबर बताएं और जानें कि फाइल कहाँ तक पहुँची।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Call/Portal/App)', steps: [
+          'Calling: Easiest way is dial 181 from your phone. This facility works from 7 AM to 11 PM.',
+          'Website: Go to cmhelpline.mp.gov.in and click on "Register Complaint".',
+          'WhatsApp: Govt has also issued WhatsApp number, where you can register complaint by sending message.',
+          'Status Check: Call 181 and tell your complaint number and know how far file has reached.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या 181 पर कॉल करने का कोई पैसा लगता है?', answer: 'नहीं, 181 एक टोल-फ्री (Toll-free) नंबर है। आप किसी भी नेटवर्क से इस पर मुफ़्त में कॉल कर सकते हैं।' },
+      { question: 'अगर अधिकारी ने बिना काम किए शिकायत बंद कर दी तो क्या करें?', answer: 'आप तुरंत 181 पर दोबारा कॉल करके बता सकते हैं कि अधिकारी ने गलत जानकारी देकर शिकायत बंद की है। आपकी शिकायत फिर से उच्च अधिकारी (Higher Authority) के पास खोल दी जाएगी।' }
+    ],
+    faqsEn: [
+      { question: 'Does it cost money to call 181?', answer: 'No, 181 is a Toll-free number. You can call it for free from any network.' },
+      { question: 'What if officer closes complaint without doing work?', answer: 'You can immediately call 181 again and tell that officer has closed complaint by giving wrong info. Your complaint will be opened again to Higher Authority.' }
+    ]
+  },
+  'mukhyamantri-dairy-plus-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री डेयरी प्लस योजना',
+    english: 'Mukhyamantri Dairy Plus Yojana',
+    summary: 'दूध उत्पादन बढ़ाने और किसानों की आमदनी दोगुनी करने के लिए उच्च नस्ल की दुधारू भैंसें (मुर्राह) और गाय खरीदने पर भारी सब्सिडी (अनुदान)।',
+    benefit: 'चयनित ज़िलों में किसानों को 2 मुर्राह भैंसें या साहीवाल गाय खरीदने के लिए 50% से 75% तक की भारी सब्सिडी दी जाती है।',
+    department: 'पशुपालन एवं डेयरी विभाग',
+    sourceUrl: 'https://mpdairyfed.mp.gov.in/',
+    applicationUrl: 'https://dahd.nic.in/',
+    documents: [
+      'किसान का आधार कार्ड',
+      'समग्र आईडी',
+      'जाति प्रमाण पत्र (SC/ST के लिए 75% सब्सिडी हेतु)',
+      'पशु आहार और चारे के लिए ज़मीन का रिकॉर्ड (खसरा/खतौनी)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Farmer\'s Aadhaar Card',
+      'Samagra ID',
+      'Caste Certificate (For 75% subsidy for SC/ST)',
+      'Land record for animal feed and fodder (Khasra/Khatauni)',
+      'Bank account passbook'
+    ],
+    steps: [
+      'अपने नज़दीकी पशु चिकित्सालय (Veterinary Hospital) में डॉक्टर से संपर्क कर फॉर्म भरें।',
+      'आवेदन पास होने पर आपको खुद का पैसा (Margin Money) जमा करना होगा।',
+      'पशुपालन विभाग की टीम आपको हरियाणा/पंजाब ले जाकर अच्छी नस्ल का पशु खरीदवाएगी।',
+      'सरकार बाकी का पैसा (सब्सिडी) सीधे आपके खाते में डाल देगी।'
+    ],
+    stepsEn: [
+      'Contact doctor in your nearest Veterinary Hospital and fill form.',
+      'On passing application you have to deposit your own money (Margin Money).',
+      'Team of Animal Husbandry Dept will take you to Haryana/Punjab and make you buy good breed animal.',
+      'Govt will put remaining money (Subsidy) directly in your account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'पशुपालक किसान' }
+    ],
+    sourceNotes: 'यह योजना पायलट प्रोजेक्ट के रूप में सीहोर, विदिशा और रायसेन ज़िलों में शुरू की गई है।',
+    detailedDescription: [
+      'खेती के साथ-साथ पशुपालन (Dairy) किसानों की आमदनी का सबसे बड़ा साधन है। लेकिन देसी नस्ल की गाएं या भैंसें कम दूध देती हैं, जिससे किसानों को ज़्यादा मुनाफ़ा नहीं हो पाता। अच्छी नस्ल (जैसे मुर्राह भैंस) की कीमत बहुत ज़्यादा होती है जिसे खरीदना एक आम किसान के बस की बात नहीं।',
+      'किसानों की इसी परेशानी को दूर करने के लिए मध्य प्रदेश सरकार ने "मुख्यमंत्री डेयरी प्लस योजना" लागू की है। इस योजना के तहत सरकार किसानों को हरियाणा और पंजाब से उच्च नस्ल की भैंसें या साहीवाल गाय खरीदने के लिए आधे से ज़्यादा पैसे अपनी तरफ से देती है। यह योजना अभी (पायलट प्रोजेक्ट) कुछ ही ज़िलों में चल रही है।'
+    ],
+    detailedDescriptionEn: [
+      'Along with farming, animal husbandry (Dairy) is biggest source of income for farmers. But indigenous breed cows or buffaloes give less milk, due to which farmers do not get much profit. Price of good breed (like Murrah buffalo) is very high which is out of reach of common farmer to buy.',
+      'To remove this problem of farmers MP Govt has implemented "Mukhyamantri Dairy Plus Yojana". Under this scheme govt gives more than half money from its side to farmers to buy high breed buffaloes or Sahiwal cows from Haryana and Punjab. This scheme is currently running (Pilot Project) in few districts only.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में कितनी सब्सिडी मिलती है?', points: [
+          'ST/SC वर्ग के लिए 75% अनुदान: अनुसूचित जाति (SC) और अनुसूचित जनजाति (ST) के किसानों को पशु की कुल कीमत का 75% पैसा सरकार देती है, उन्हें सिर्फ 25% पैसा लगाना होता है।',
+          'सामान्य/OBC के लिए 50% अनुदान: अन्य सभी किसानों को 50% (आधा पैसा) सरकार सब्सिडी के रूप में देती है।',
+          'बीमा और ट्रांसपोर्ट मुफ़्त: पशु खरीदने के बाद उसे दूसरे राज्य से लाने का खर्च और उसका बीमा (Insurance) भी सरकार इसी योजना के तहत कराती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much subsidy is received in scheme?', points: [
+          '75% Subsidy for ST/SC category: Govt gives 75% money of total price of animal to Scheduled Caste (SC) and Scheduled Tribe (ST) farmers, they have to put only 25% money.',
+          '50% Subsidy for General/OBC: Govt gives 50% (half money) as subsidy to all other farmers.',
+          'Free Insurance and Transport: After buying animal, expense of bringing it from other state and its insurance is also done by govt under this scheme.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'किसान उन ज़िलों (जैसे सीहोर, विदिशा, रायसेन) का निवासी हो जहाँ यह योजना लागू है।',
+      'किसान के पास पशुओं को खिलाने के लिए हरे चारे की व्यवस्था (ज़मीन) होनी चाहिए।',
+      'योजना में हर लाभार्थी को 2 दुधारू पशु (मुर्राह भैंस या साहीवाल गाय) खरीदना अनिवार्य है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Farmer should be resident of those districts (like Sehore, Vidisha, Raisen) where this scheme is applicable.',
+      'Farmer must have arrangement of green fodder (land) to feed animals.',
+      'It is mandatory for every beneficiary to buy 2 milch animals (Murrah buffalo or Sahiwal cow) in scheme.'
+    ],
+    exclusions: [
+      'जिन किसानों के पास पशुओं को रखने के लिए जगह (शेड) या चारे की व्यवस्था नहीं है, उन्हें लोन/सब्सिडी नहीं मिलेगी।',
+      'कोई भी किसान अकेले जाकर पशु नहीं खरीद सकता, उसे पशुपालन विभाग के डॉक्टरों की टीम के साथ जाकर ही पशु खरीदना होता है।'
+    ],
+    exclusionsEn: [
+      'Farmers who do not have place (shed) or fodder arrangement to keep animals, will not get loan/subsidy.',
+      'No farmer can go alone and buy animal, he has to go with team of doctors of Animal Husbandry Dept and buy animal.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (पशु चिकित्सालय)', steps: [
+          'अपने ज़िले के उप-संचालक (पशुपालन) कार्यालय या नज़दीकी पशु चिकित्सालय में जाएँ।',
+          'वहां डेयरी प्लस योजना का फॉर्म मांगें और भरें।',
+          'फॉर्म के साथ अपनी ज़मीन और जाति का प्रमाण पत्र लगाएं।',
+          'पास होने पर आपको पशु खरीदने के लिए विभाग द्वारा सूचित किया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Veterinary Hospital)', steps: [
+          'Go to office of Deputy Director (Animal Husbandry) or nearest Veterinary Hospital of your district.',
+          'Ask for Dairy Plus scheme form there and fill it.',
+          'Attach your land and caste certificate with form.',
+          'On passing you will be informed by dept to buy animal.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मुर्राह भैंस ही क्यों?', answer: 'मुर्राह नस्ल की भैंसें दुनिया में सबसे ज़्यादा दूध देने के लिए जानी जाती हैं। सामान्य भैंस जहाँ 4-5 लीटर दूध देती है, वहीं मुर्राह भैंस रोज़ाना 10 से 15 लीटर तक दूध देती है।' },
+      { question: 'क्या यह योजना पूरे मध्य प्रदेश में चालू है?', answer: 'शुरुआत में इसे पायलट प्रोजेक्ट के रूप में सीहोर, विदिशा और रायसेन में लागू किया गया था। इसकी सफलता के आधार पर सरकार इसे अन्य ज़िलों में भी लागू कर सकती है।' }
+    ],
+    faqsEn: [
+      { question: 'Why only Murrah buffalo?', answer: 'Murrah breed buffaloes are known to give most milk in world. Where normal buffalo gives 4-5 liters milk, Murrah buffalo gives upto 10 to 15 liters milk daily.' },
+      { question: 'Is this scheme active in whole MP?', answer: 'Initially it was implemented as pilot project in Sehore, Vidisha and Raisen. Based on its success govt can implement it in other districts also.' }
+    ]
+  },
+  'shaurya-sankalp-prashikshan-yojana': {
+    ...reviewed,
+    title: 'शौर्य संकल्प प्रशिक्षण योजना',
+    english: 'Shaurya Sankalp Prashikshan Yojana (Defence Coaching)',
+    summary: 'युवाओं को सेना (Army), पुलिस और सुरक्षा बलों में भर्ती के लिए खेल विभाग द्वारा दी जाने वाली मुफ़्त कोचिंग और ट्रेनिंग।',
+    benefit: 'अग्निपथ योजना और अन्य सुरक्षा बलों में जाने के इच्छुक युवाओं को मुफ़्त में रहने, खाने और शारीरिक/लिखित परीक्षा की तैयारी (Coaching) कराई जाती है।',
+    department: 'खेल एवं युवा कल्याण विभाग',
+    sourceUrl: 'https://sports.mp.gov.in/',
+    applicationUrl: 'https://sports.mp.gov.in/',
+    documents: [
+      'युवा का आधार कार्ड',
+      'समग्र आईडी',
+      '10वीं / 12वीं की मार्कशीट',
+      'मेडिकल फिटनेस (स्वास्थ्य) प्रमाण पत्र',
+      'मूल निवासी प्रमाण पत्र'
+    ],
+    documentsEn: [
+      'Youth\'s Aadhaar Card',
+      'Samagra ID',
+      '10th / 12th Marksheet',
+      'Medical Fitness (Health) Certificate',
+      'Domicile Certificate'
+    ],
+    steps: [
+      'अपने ज़िले के "ज़िला खेल एवं युवा कल्याण अधिकारी" (District Sports Officer) कार्यालय में जाकर योजना की जानकारी लें।',
+      'फॉर्म भरें और अपनी मार्कशीट व फिटनेस प्रमाण पत्र जमा करें।',
+      'विभाग आपका एक छोटा सा शारीरिक टेस्ट (Physical Test) लेगा।',
+      'टेस्ट पास करने पर आपको ट्रेनिंग कैंप में प्रवेश मिल जाएगा जहाँ आपको भर्ती की पूरी तैयारी कराई जाएगी।'
+    ],
+    stepsEn: [
+      'Get info about scheme by going to "District Sports and Youth Welfare Officer" office of your district.',
+      'Fill form and submit your marksheet and fitness certificate.',
+      'Dept will take your small Physical Test.',
+      'On passing test you will get admission in training camp where you will be fully prepared for recruitment.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 17, label: 'आयु 17.5 से 23 वर्ष' },
+      { field: 'age', op: 'lte', value: 23, label: 'अधिकतम 23 वर्ष' }
+    ],
+    sourceNotes: 'ग्रामीण युवाओं को सेना में भेजने के लिए यह एक बहुत ही अच्छी ट्रेनिंग योजना है।',
+    detailedDescription: [
+      'देश की सेवा करने के लिए सेना (Army), नेवी, वायुसेना या पुलिस में जाना बहुत से युवाओं का सपना होता है। लेकिन सही जानकारी और अच्छी ट्रेनिंग (Coaching) न मिल पाने के कारण बहुत से बच्चे दौड़ (Physical) में या लिखित परीक्षा में बाहर हो जाते हैं। प्राइवेट कोचिंग की फीस भरना भी हर किसी के बस की बात नहीं होती।',
+      'ऐसे युवाओं के सपने को पूरा करने के लिए मध्य प्रदेश सरकार ने "शौर्य संकल्प प्रशिक्षण योजना" शुरू की है। इसमें उन युवाओं को चुना जाता है जो शारीरिक रूप से फिट हैं। सरकार उन्हें कैंप में रखकर (आवासीय) अनुभवी कोच और पूर्व सैनिकों (Ex-Servicemen) के माध्यम से दौड़, व्यायाम और लिखित परीक्षा की मुफ़्त ट्रेनिंग देती है।'
+    ],
+    detailedDescriptionEn: [
+      'To serve country, joining Army, Navy, Airforce or Police is dream of many youths. But due to lack of right info and good training (Coaching) many children get out in running (Physical) or written exam. Paying fee of private coaching is also not possible for everyone.',
+      'To fulfill dream of such youths MP Govt has started "Shaurya Sankalp Prashikshan Yojana". In this those youths are selected who are physically fit. Govt keeps them in camp (residential) and gives free training of running, exercise and written exam through experienced coaches and Ex-Servicemen.'
+    ],
+    benefitsList: [
+      {
+        heading: 'ट्रेनिंग में क्या-क्या सुविधाएँ मिलती हैं?', points: [
+          'फिजिकल ट्रेनिंग (Physical Training): सेना में होने वाली दौड़ (1600 मीटर), लंबी कूद, सीना फुलाना जैसी सभी चीज़ों की तैयारी रोज़ सुबह-शाम कराई जाती है।',
+          'लिखित परीक्षा की तैयारी: सिर्फ दौड़ना ही नहीं, बल्कि परीक्षा पास करने के लिए गणित, सामान्य ज्ञान (GK) आदि की मुफ़्त कोचिंग भी दी जाती है।',
+          'आवास और भोजन: कुछ बड़े कैंपों में बच्चों के रहने और उनके खाने-पीने (पोषण) का खर्च भी सरकार उठाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What facilities are available in training?', points: [
+          'Physical Training: Preparation of all things like running (1600 meters) in army, long jump, chest expansion is done every morning-evening.',
+          'Written exam preparation: Not just running, but free coaching of Maths, General Knowledge (GK) etc is also given to pass exam.',
+          'Accommodation and Food: In some big camps, expense of children\'s stay and their food and drink (nutrition) is also borne by govt.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'युवा मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'युवा की उम्र 17.5 साल से लेकर 23 साल के बीच होनी चाहिए (जो सेना/अग्निपथ की उम्र होती है)।',
+      'शारीरिक और मानसिक रूप से पूरी तरह स्वस्थ होना चाहिए (कोई बड़ी बीमारी या विकलांगता न हो)।',
+      'न्यूनतम 10वीं या 12वीं कक्षा पास होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Youth must be native of MP.',
+      'Age of youth should be between 17.5 years to 23 years (which is age for Army/Agnipath).',
+      'Must be physically and mentally completely healthy (no major disease or disability).',
+      'Must be minimum 10th or 12th class pass.'
+    ],
+    exclusions: [
+      'जिन युवाओं पर कोई पुलिस केस (Criminal Record) दर्ज़ है, वे इस योजना में शामिल नहीं हो सकते।',
+      'जो शारीरिक रूप से मापदंड (जैसे हाइट या वजन) में अनफिट हैं, उन्हें कैंप में नहीं लिया जाता।'
+    ],
+    exclusionsEn: [
+      'Youths who have any police case (Criminal Record) registered on them, cannot join this scheme.',
+      'Those who are physically unfit in criteria (like height or weight), are not taken in camp.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (खेल अधिकारी कार्यालय)', steps: [
+          'खेल विभाग समय-समय पर (अक्सर पुलिस/आर्मी भर्ती से पहले) इस योजना के लिए विज्ञापन निकालता है।',
+          'अखबार या ज़िला खेल कार्यालय (District Sports Office) से तारीख पता करें।',
+          'निर्धारित तारीख पर मैदान में अपने दस्तावेज़ लेकर जाएँ।',
+          'वहां आपकी नाप-तौल (हाइट, सीना) और एक छोटी दौड़ कराई जाएगी। पास होने पर आपका चयन ट्रेनिंग के लिए हो जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Sports Officer Office)', steps: [
+          'Sports Dept releases advertisement for this scheme from time to time (often before Police/Army recruitment).',
+          'Find out date from newspaper or District Sports Office.',
+          'Go to ground with your documents on fixed date.',
+          'There your measurement (height, chest) and a small run will be done. On passing you will be selected for training.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या लड़कियों के लिए भी यह ट्रेनिंग है?', answer: 'हाँ, जहाँ भी महिला पुलिस या सेना (Women Military Police) की भर्तियाँ होती हैं, वहाँ युवतियों को भी इस योजना के तहत ट्रेनिंग दी जाती है।' },
+      { question: 'यह ट्रेनिंग कितने दिन चलती है?', answer: 'यह बैच के हिसाब से 3 महीने से लेकर 6 महीने तक चल सकती है, जो भर्ती रैली की तारीख पर निर्भर करता है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this training for girls also?', answer: 'Yes, wherever there are recruitments for Women Police or Army (Women Military Police), girls are also given training under this scheme.' },
+      { question: 'For how many days does this training run?', answer: 'Depending on batch, it can run from 3 months to 6 months, which depends on date of recruitment rally.' }
+    ]
+  },
+  'yashoda-dugdh-praday-yojana': {
+    ...reviewed,
+    title: 'यशोदा दुग्ध प्रदाय योजना',
+    english: 'Yashoda Dugdh Praday Yojana (Anganwadi Milk)',
+    summary: 'आंगनवाड़ी केंद्रों में बच्चों और गर्भवती/धात्री माताओं के कुपोषण को दूर करने के लिए मुफ़्त में मीठा और सुगंधित (Flavoured) दूध बांटने की योजना।',
+    benefit: 'आंगनवाड़ी आने वाले बच्चों और माताओं को हफ्ते में 3 दिन पीने के लिए सांची (Sanchi) का पौष्टिक मीठा दूध मुफ़्त दिया जाता है।',
+    department: 'महिला एवं बाल विकास विभाग',
+    sourceUrl: 'https://mpwcdmis.gov.in/',
+    applicationUrl: 'https://mpdairyfed.mp.gov.in/',
+    documents: [
+      'बच्चे या माता का आधार कार्ड',
+      'समग्र आईडी',
+      'आंगनवाड़ी केंद्र में नियमित रूप से नाम दर्ज़ होना (Registration)'
+    ],
+    documentsEn: [
+      'Aadhaar card of child or mother',
+      'Samagra ID',
+      'Name should be regularly registered in Anganwadi center (Registration)'
+    ],
+    steps: [
+      'अपने गांव या मोहल्ले की आंगनवाड़ी कार्यकर्ता (Anganwadi Worker) से मिलें।',
+      'अपने बच्चे (या अगर आप गर्भवती/स्तनपान कराने वाली माता हैं) का नाम आंगनवाड़ी रजिस्टर में दर्ज़ कराएं।',
+      'तय किए गए दिनों (जैसे सोमवार, बुधवार, शुक्रवार) में आंगनवाड़ी जाएं।',
+      'वहां कार्यकर्ता द्वारा बच्चों और माताओं को पीने के लिए दूध दिया जाएगा।'
+    ],
+    stepsEn: [
+      'Meet Anganwadi Worker of your village or locality.',
+      'Get name of your child (or if you are pregnant/lactating mother) registered in Anganwadi register.',
+      'Go to Anganwadi on fixed days (like Monday, Wednesday, Friday).',
+      'There milk will be given to children and mothers to drink by worker.'
+    ],
+    rules: [
+      { field: 'age', op: 'lte', value: 6, label: '0 से 6 वर्ष के बच्चे' }
+    ],
+    sourceNotes: 'मध्य प्रदेश में कुपोषण दर को कम करने के लिए सांची दुग्ध संघ के सहयोग से पहल।',
+    detailedDescription: [
+      'बच्चों की अच्छी ग्रोथ (शारीरिक और मानसिक विकास) के लिए दूध सबसे ज़रूरी चीज़ है। लेकिन गरीब परिवारों में बच्चों को रोज़ दूध पीने को नहीं मिल पाता, जिससे वे कमज़ोर (कुपोषित) रह जाते हैं। गर्भवती माताओं को भी कैल्शियम की बहुत ज़रूरत होती है।',
+      'इसी समस्या को सुलझाने के लिए मध्य प्रदेश सरकार ने "यशोदा दुग्ध प्रदाय योजना" लागू की है। इसमें राज्य के दुग्ध संघों (जैसे सांची) के ज़रिए आंगनवाड़ियों में दूध का पाउडर भेजा जाता है। कार्यकर्ता इसे साफ़ पानी में घोलकर, इसमें चीनी और इलायची/केसर का स्वाद (Flavour) मिलाकर बच्चों को पिलाती हैं, ताकि बच्चे इसे शौक से पिएं।'
+    ],
+    detailedDescriptionEn: [
+      'For good growth (physical and mental development) of children, milk is most important thing. But in poor families children do not get milk to drink everyday, due to which they remain weak (malnourished). Pregnant mothers also need lot of calcium.',
+      'To solve this problem MP Govt has implemented "Yashoda Dugdh Praday Yojana". In this milk powder is sent to Anganwadis through state dairy federations (like Sanchi). Worker dissolves it in clean water, adds sugar and cardamom/saffron flavor to it and gives it to children to drink, so that children drink it fondly.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या फायदे हैं?', points: [
+          'हफ्ते में 3 दिन दूध: बच्चों को हफ्ते में कम से कम 3 दिन (अक्सर सोमवार, बुधवार, शुक्रवार) दूध पीने को मिलता है।',
+          'पोषण में सुधार (Nutrition): दूध में प्रोटीन, कैल्शियम और विटामिन होते हैं, जिससे बच्चों का वज़न बढ़ता है और हड्डियां मज़बूत होती हैं।',
+          'स्वादिष्ट दूध: दूध में स्वाद (Flavour) मिलाया जाता है, जिससे जो बच्चे सादा दूध नहीं पीते, वे भी इसे खुशी-खुशी पी लेते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are advantages of scheme?', points: [
+          'Milk 3 days a week: Children get to drink milk at least 3 days a week (often Monday, Wednesday, Friday).',
+          'Improvement in Nutrition: Milk has protein, calcium and vitamins, which increases weight of children and makes bones strong.',
+          'Tasty Milk: Flavor is added to milk, so that children who do not drink plain milk, also drink it happily.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'योजना का लाभ 3 से 6 वर्ष की उम्र के उन बच्चों को मिलता है जो आंगनवाड़ी में पढ़ने आते हैं।',
+      'गर्भवती महिलाएं (Pregnant Women) और बच्चों को स्तनपान कराने वाली माताएं (Lactating Mothers) भी इस दूध को पीने की हकदार हैं।',
+      'इसके लिए कोई जाति या आय की सीमा नहीं है, आंगनवाड़ी में दर्ज़ हर बच्चे को दूध मिलेगा।'
+    ],
+    eligibilityDescriptionEn: [
+      'Benefit of scheme is given to those children of 3 to 6 years of age who come to study in Anganwadi.',
+      'Pregnant Women and Lactating Mothers are also entitled to drink this milk.',
+      'There is no caste or income limit for this, every child registered in Anganwadi will get milk.'
+    ],
+    exclusions: [
+      'जो बच्चे आंगनवाड़ी में दर्ज़ नहीं हैं या वहां नहीं जाते, उन्हें घर पर दूध (पाउडर) नहीं भेजा जाता है। दूध आंगनवाड़ी में ही बैठकर पीना होता है।',
+      '6 साल से ऊपर के स्कूल जाने वाले बच्चों के लिए यह योजना नहीं है (उनके लिए स्कूलों में मध्याह्न भोजन होता है)।'
+    ],
+    exclusionsEn: [
+      'Children who are not registered in Anganwadi or do not go there, milk (powder) is not sent to their home. Milk has to be drunk sitting in Anganwadi only.',
+      'This scheme is not for school going children above 6 years (they have Mid-Day Meal in schools).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (आंगनवाड़ी केंद्र)', steps: [
+          'इसके लिए किसी दफ्तर जाने या ऑनलाइन फॉर्म भरने की ज़रूरत नहीं है।',
+          'सिर्फ अपने गांव या वार्ड के आंगनवाड़ी केंद्र पर जाएं।',
+          'वहां कार्यकर्ता या सहायिका को अपने बच्चे का नाम, उम्र और समग्र आईडी रजिस्टर में दर्ज़ कराएं।',
+          'जब भी दूध बंटने का दिन हो (कार्यकर्ता बता देगी), बच्चे को आंगनवाड़ी भेजें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Anganwadi Center)', steps: [
+          'There is no need to go to any office or fill online form for this.',
+          'Just go to Anganwadi center of your village or ward.',
+          'Get your child\'s name, age and Samagra ID registered in register there to worker or helper.',
+          'Whenever it is day of distributing milk (worker will tell), send child to Anganwadi.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या दूध का पैकेट घर ले जा सकते हैं?', answer: 'नहीं। योजना के नियम के अनुसार, कार्यकर्ता दूध बनाकर बच्चों को अपने सामने ही पिलाती हैं। दूध का पाउडर या बना हुआ दूध घर ले जाने की अनुमति नहीं है।' },
+      { question: 'अगर दूध पीकर बच्चा बीमार हो जाए तो?', answer: 'यह दूध सांची (Sanchi) जैसी प्रमाणित सरकारी संस्थाओं द्वारा पूरी तरह जांच (Testing) के बाद ही भेजा जाता है। इसे साफ़-सफाई से उबाल कर दिया जाता है, इसलिए यह पूरी तरह सुरक्षित है।' }
+    ],
+    faqsEn: [
+      { question: 'Can we take milk packet home?', answer: 'No. As per scheme rule, worker prepares milk and gives it to children in front of her. Powder of milk or prepared milk is not allowed to be taken home.' },
+      { question: 'What if child gets sick after drinking milk?', answer: 'This milk is sent by certified govt institutions like Sanchi only after complete Testing. It is boiled with cleanliness, so it is completely safe.' }
+    ]
+  },
+  'social-security-old-age-pension-scheme': {
+    ...reviewed,
+    title: 'सामाजिक सुरक्षा वृद्धावस्था पेंशन योजना',
+    english: 'Social Security Old Age Pension Scheme',
+    summary: '60 वर्ष या उससे अधिक उम्र के गरीब वृद्धजनों को उनके सम्मानजनक जीवन-यापन के लिए सरकार की तरफ से हर महीने मिलने वाली आर्थिक सहायता।',
+    benefit: 'योजना के तहत पात्र वृद्धजनों (बुजुर्गों) को ₹600 प्रति माह नियमित पेंशन सीधे उनके बैंक खाते में दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी (Samagra ID)',
+      'आयु प्रमाण पत्र (60 वर्ष या अधिक होने का सबूत)',
+      'आधार से लिंक बैंक खाते की पासबुक',
+      'पासपोर्ट साइज़ फोटो'
+    ],
+    documentsEn: [
+      'Applicant\'s Aadhaar Card',
+      'Samagra ID',
+      'Age Proof (proof of being 60 years or above)',
+      'Aadhaar linked bank account passbook',
+      'Passport size photo'
+    ],
+    steps: [
+      'अपने ग्रामीण क्षेत्र (ग्राम पंचायत) या शहरी क्षेत्र (नगर पालिका/निगम) कार्यालय में संपर्क करें।',
+      'वहां वृद्धावस्था पेंशन का फॉर्म भरें और ज़रूरी दस्तावेज़ जमा करें।',
+      'आप लोक सेवा केंद्र या ऑनलाइन समग्र पोर्टल के ज़रिए भी आवेदन कर सकते हैं।',
+      'आवेदन मंजूर (Approve) होने के बाद पेंशन आपके बैंक खाते में आने लगेगी।'
+    ],
+    stepsEn: [
+      'Contact your rural area (Gram Panchayat) or urban area (Municipality/Corporation) office.',
+      'Fill old age pension form there and submit necessary documents.',
+      'You can also apply through Lok Seva Kendra or online Samagra Portal.',
+      'After application is approved, pension will start coming in your bank account.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 60, label: 'आयु 60 वर्ष या अधिक' }
+    ],
+    sourceNotes: 'वृद्धजनों को बुढ़ापे में दूसरों पर निर्भर न रहना पड़े, इसके लिए यह पेंशन दी जाती है।',
+    detailedDescription: [
+      'बुढ़ापे में जब शरीर काम करने लायक नहीं रहता, तब व्यक्ति को अपने रोज़मर्रा के छोटे-छोटे खर्चों के लिए दूसरों (बच्चों या रिश्तेदारों) के सामने हाथ फैलाना पड़ता है। गरीब परिवारों में यह स्थिति और भी ज़्यादा खराब होती है।',
+      'वृद्धजनों (बुजुर्गों) को इसी परेशानी से बचाने के लिए मध्य प्रदेश सरकार ने "सामाजिक सुरक्षा वृद्धावस्था पेंशन योजना" लागू की है। इस योजना में सरकार ऐसे निराश्रित और गरीब बुजुर्गों को हर महीने पेंशन देती है, ताकि वे अपनी दवाइयों या छोटी ज़रूरतों का खर्च खुद उठा सकें और सम्मान के साथ जी सकें।'
+    ],
+    detailedDescriptionEn: [
+      'In old age when body is not able to work, then person has to spread hands in front of others (children or relatives) for his daily small expenses. In poor families this situation is even worse.',
+      'To save elders from this trouble MP Govt has implemented "Social Security Old Age Pension Scheme". In this scheme govt gives monthly pension to such destitute and poor elders, so that they can bear expense of their medicines or small needs themselves and live with dignity.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या फायदे हैं?', points: [
+          'नियमित आय (Regular Income): बुजुर्ग व्यक्ति को हर महीने ₹600 की आर्थिक मदद (पेंशन) मिलती है।',
+          'सीधे बैंक खाते में (DBT): यह पेंशन राशि किसी बिचौलिए के पास नहीं जाती, बल्कि सीधे बुजुर्ग के उस बैंक खाते में ट्रांसफर की जाती है जो उनके आधार कार्ड से लिंक होता है।',
+          'आत्मनिर्भरता (Self-reliance): पेंशन मिलने से बुजुर्गों को अपनी छोटी-छोटी ज़रूरतों के लिए दूसरों पर निर्भर नहीं रहना पड़ता।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are advantages of scheme?', points: [
+          'Regular Income: Elderly person gets financial help (pension) of ₹600 every month.',
+          'Directly in Bank Account (DBT): This pension amount does not go to any middleman, but is directly transferred to that bank account of elder which is linked with their Aadhaar card.',
+          'Self-reliance: Due to getting pension elders do not have to depend on others for their small needs.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक (पुरुष या महिला) की उम्र 60 वर्ष या उससे अधिक होनी चाहिए।',
+      'आवेदक निराश्रित (Destitute) होना चाहिए या उनका परिवार गरीबी रेखा से नीचे (BPL) जीवन-यापन कर रहा हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP.',
+      'Age of applicant (male or female) must be 60 years or above.',
+      'Applicant must be Destitute or their family should be living below poverty line (BPL).'
+    ],
+    exclusions: [
+      'अगर बुजुर्ग या उनके परिवार का कोई सदस्य सरकारी नौकरी में है या इनकम टैक्स भरता है, ক্যামा वे इस पेंशन के हक़दार नहीं हैं।',
+      'जो लोग पहले से ही सरकार की कोई अन्य पेंशन (जैसे विकलांग पेंशन या विधवा पेंशन) ले रहे हैं, उन्हें यह वृद्धावस्था पेंशन नहीं मिलेगी।'
+    ],
+    exclusionsEn: [
+      'If elder or any member of their family is in govt job or pays income tax, then they are not entitled to this pension.',
+      'People who are already taking any other pension of govt (like handicap pension or widow pension), will not get this old age pension.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (समग्र पोर्टल) / ऑफ़लाइन', steps: [
+          'अगर आप खुद फॉर्म भरना चाहते हैं, तो समग्र पेंशन पोर्टल (samagra.gov.in) पर जाकर ऑनलाइन आवेदन कर सकते हैं।',
+          'ऑफ़लाइन के लिए: गांव के लोग अपने पंचायत सचिव/सरपंच के पास और शहर के लोग वार्ड पार्षद/नगर निगम कार्यालय जाएं।',
+          'अपने दस्तावेज़ों (आधार, समग्र, पासबुक) के साथ आवेदन फॉर्म भरें।',
+          'अधिकारियों द्वारा आपके दस्तावेज़ों की जांच (Verification) की जाएगी। जांच सही पाए जाने पर अगले महीने से पेंशन शुरू हो जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Samagra Portal) / Offline', steps: [
+          'If you want to fill form yourself, you can apply online by going to Samagra Pension Portal (samagra.gov.in).',
+          'For offline: Village people go to their Panchayat Secretary/Sarpanch and city people go to Ward Councilor/Municipal Corporation office.',
+          'Fill application form with your documents (Aadhaar, Samagra, passbook).',
+          'Your documents will be checked (Verification) by officers. On verification found correct, pension will start from next month.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'पेंशन के लिए उम्र का प्रमाण पत्र कहाँ से लाएं?', answer: 'उम्र के प्रमाण के लिए आप अपना आधार कार्ड, वोटर आईडी (Voter ID), या समग्र आईडी में दर्ज़ उम्र का उपयोग कर सकते हैं। अगर आप पढ़े-लिखे हैं, तो 10वीं की मार्कशीट भी काम आएगी।' },
+      { question: 'मेरी पेंशन अचानक आनी बंद हो गई, क्या करूँ?', answer: 'ऐसा तब होता है जब आपकी ई-केवाईसी (e-KYC) पूरी नहीं होती या बैंक खाते से आधार लिंक (DBT) हट जाता है। तुरंत समग्र पोर्टल पर जाकर अपनी e-KYC करें और बैंक में जाकर आधार लिंक करवाएं।' }
+    ],
+    faqsEn: [
+      { question: 'From where to get age certificate for pension?', answer: 'For proof of age you can use your Aadhaar card, Voter ID, or age registered in Samagra ID. If you are educated, then 10th marksheet will also work.' },
+      { question: 'My pension suddenly stopped coming, what to do?', answer: 'This happens when your e-KYC is not complete or Aadhaar link (DBT) is removed from bank account. Immediately go to Samagra portal and do your e-KYC and get Aadhaar linked by going to bank.' }
+    ]
+  },
+  'samagra-vridhashram-antvasi-pension-yojana': {
+    ...reviewed,
+    title: 'समग्र सामाजिक सुरक्षा वृद्धाश्रम अंत:वासी पेंशन योजना',
+    english: 'Samagra Vridhashram Pension Yojana',
+    summary: 'वृद्धाश्रमों (Old Age Homes) में रहने वाले अकेले और बेसहारा बुजुर्गों को अपने व्यक्तिगत खर्चों (साबुन, तेल, फल आदि) के लिए मिलने वाली पेंशन।',
+    benefit: 'सरकारी या अनुदान प्राप्त वृद्धाश्रमों में रह रहे बुजुर्गों को ₹600 प्रति माह की पेंशन उनके व्यक्तिगत खर्च के लिए दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'बुजुर्ग का आधार कार्ड',
+      'समग्र आईडी',
+      'वृद्धाश्रम में रहने का प्रमाण पत्र (अधीक्षक द्वारा जारी)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of elder',
+      'Samagra ID',
+      'Certificate of living in old age home (issued by superintendent)',
+      'Bank account passbook'
+    ],
+    steps: [
+      'बुजुर्ग जिस वृद्धाश्रम (Old Age Home) में रह रहे हैं, वहां के अधीक्षक (Superintendent) से मिलें।',
+      'अधीक्षक बुजुर्ग का नाम पेंशन सूची में जोड़कर फॉर्म भरवाएंगे।',
+      'यह फॉर्म ज़िला सामाजिक न्याय विभाग को भेजा जाएगा।',
+      'विभाग से मंज़ूरी मिलने के बाद पेंशन सीधे बुजुर्ग के बैंक खाते में आने लगेगी।'
+    ],
+    stepsEn: [
+      'Meet Superintendent of Old Age Home where elder is living.',
+      'Superintendent will add elder\'s name in pension list and get form filled.',
+      'This form will be sent to District Social Justice Department.',
+      'After getting approval from dept, pension will start coming directly in elder\'s bank account.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 60, label: 'वृद्धाश्रम में निवासरत 60 वर्ष से अधिक आयु के नागरिक' }
+    ],
+    sourceNotes: 'यह योजना उन बुजुर्गों के लिए है जिनका अपना घर-परिवार नहीं है और वे आश्रम में जीवन बिता रहे हैं।',
+    detailedDescription: [
+      'जो बुजुर्ग किसी कारणवश अपने परिवार से दूर वृद्धाश्रम (Old Age Homes) में रहते हैं, उनके रहने और खाने की व्यवस्था तो सरकार या संस्था कर देती है। लेकिन उन बुजुर्गों को कुछ व्यक्तिगत चीज़ों जैसे - फल, चाय-बिस्किट, नहाने का साबुन या धार्मिक चीज़ों के लिए भी कुछ पैसों की ज़रूरत होती है।',
+      'ऐसे असहाय बुजुर्गों को स्वावलंबी (आत्मनिर्भर) बनाने के लिए मध्य प्रदेश सरकार ने "समग्र सामाजिक सुरक्षा वृद्धाश्रम अंत:वासी पेंशन योजना" शुरू की है। इसमें आश्रम में रहने वाले बुजुर्गों को सरकार हर महीने एक निश्चित राशि (पेंशन) देती है, ताकि वे अपनी छोटी-मोटी ज़रूरतें पूरी कर सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Elders who live in Old Age Homes away from their family due to some reason, arrangement of their stay and food is done by govt or institution. But those elders also need some money for some personal things like - fruits, tea-biscuits, bathing soap or religious things.',
+      'To make such helpless elders self-reliant (Atmanirbhar) MP Govt has started "Samagra Samajik Suraksha Vridhashram Ant-vasi Pension Yojana". In this govt gives a fixed amount (pension) every month to elders living in ashram, so that they can fulfill their small needs.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के क्या फायदे हैं?', points: [
+          'व्यक्तिगत खर्च के लिए पैसे: आश्रम में रहने वाले बुजुर्ग को ₹600 प्रति माह नकद/खाते में दिए जाते हैं।',
+          'किसी पर निर्भरता नहीं: इस पैसे से वे अपनी पसंद का सामान खरीद सकते हैं और उन्हें किसी दूसरे के सामने हाथ नहीं फैलाना पड़ता।',
+          'सम्मानजनक जीवन: इससे आश्रम में रहने वाले बुजुर्गों को भी समाज में सम्मान के साथ जीने का एहसास होता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What are advantages of scheme?', points: [
+          'Money for personal expenses: ₹600 per month is given in cash/account to elder living in ashram.',
+          'No dependence on anyone: With this money they can buy things of their choice and they do not have to spread hands in front of anyone else.',
+          'Dignified life: Due to this elders living in ashram also feel living with dignity in society.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'बुजुर्ग की उम्र 60 वर्ष या उससे अधिक होनी चाहिए।',
+      'बुजुर्ग किसी ऐसे वृद्धाश्रम में रह रहा हो जिसे सरकार चलाती हो या जिसे सरकार से आर्थिक मदद (अनुदान) मिलती हो।',
+      'बुजुर्ग के पास आय का कोई दूसरा साधन न हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Age of elder must be 60 years or above.',
+      'Elder must be living in such old age home which is run by govt or which gets financial help (grant) from govt.',
+      'Elder must not have any other source of income.'
+    ],
+    exclusions: [
+      'जो बुजुर्ग प्राइवेट (निजी) वृद्धाश्रमों में रहते हैं और जिनका पूरा खर्च उनका परिवार उठाता है, वे इस पेंशन के हकदार नहीं हैं।',
+      'अगर बुजुर्ग किसी अन्य सरकारी पेंशन (जैसे सामान्य वृद्धावस्था पेंशन) का लाभ ले रहे हैं, तो उन्हें यह पेंशन अलग से नहीं मिलेगी।'
+    ],
+    exclusionsEn: [
+      'Elders who live in private old age homes and whose entire expense is borne by their family, are not entitled to this pension.',
+      'If elder is taking benefit of any other govt pension (like normal old age pension), then they will not get this pension separately.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (वृद्धाश्रम के माध्यम से)', steps: [
+          'इस पेंशन के लिए बुजुर्ग को खुद किसी दफ्तर जाने की ज़रूरत नहीं होती।',
+          'वृद्धाश्रम का अधीक्षक (Manager) आश्रम में रहने वाले नए बुजुर्गों की लिस्ट बनाता है।',
+          'अधीक्षक एक प्रमाण पत्र (Certificate) लिखता है कि फलां बुजुर्ग हमारे आश्रम में रह रहा है।',
+          'यह कागज़ात ज़िला कार्यालय (सामाजिक न्याय विभाग) में जमा किए जाते हैं और वहीं से पेंशन शुरू कर दी जाती है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through Old Age Home)', steps: [
+          'For this pension elder does not need to go to any office himself.',
+          'Superintendent (Manager) of old age home makes list of new elders living in ashram.',
+          'Superintendent writes a certificate that so-and-so elder is living in our ashram.',
+          'These documents are submitted in District Office (Social Justice Dept) and from there pension is started.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या आश्रम छोड़ने पर पेंशन मिलती रहेगी?', answer: 'अगर कोई बुजुर्ग वृद्धाश्रम छोड़कर वापस अपने घर/परिवार के पास चला जाता है, तो यह विशेष "अंत:वासी" पेंशन बंद कर दी जाती है। इसके बाद उन्हें सामान्य वृद्धावस्था पेंशन के लिए नया फॉर्म भरना पड़ता है।' },
+      { question: 'अगर बुजुर्ग का बैंक खाता नहीं है तो?', answer: 'आश्रम का अधीक्षक ही बुजुर्ग का "ज़ीरो बैलेंस" खाता (Zero Balance Account) बैंक में खुलवाने में मदद करता है ताकि पेंशन का पैसा सीधे उनके खाते में आ सके।' }
+    ],
+    faqsEn: [
+      { question: 'Will pension continue on leaving ashram?', answer: 'If any elder leaves old age home and goes back to his home/family, then this special "Ant-vasi" pension is stopped. After this they have to fill new form for normal old age pension.' },
+      { question: 'What if elder does not have bank account?', answer: 'Superintendent of ashram himself helps in opening "Zero Balance Account" of elder in bank so that pension money can come directly in their account.' }
+    ]
+  },
+  'mukhyamantri-kalyani-vivah-sahayata-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री कल्याणी विवाह सहायता योजना',
+    english: 'Mukhyamantri Kalyani Vivah Sahayata Yojana',
+    summary: 'समाज में कल्याणी (विधवा) महिलाओं के पुनर्विवाह को बढ़ावा देने और उन्हें नया जीवन शुरू करने के लिए सरकार की ओर से ₹2,00,000 की आर्थिक मदद।',
+    benefit: 'किसी कल्याणी (विधवा) महिला द्वारा दोबारा शादी (पुनर्विवाह) करने पर उसे अपना नया घर बसाने के लिए ₹2,00,000 (दो लाख रुपये) की नकद सहायता दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'कल्याणी महिला और उसके नए पति का आधार कार्ड',
+      'समग्र आईडी',
+      'पूर्व पति का मृत्यु प्रमाण पत्र (Death Certificate)',
+      'पुनर्विवाह का कानूनी प्रमाण पत्र (Marriage Certificate)',
+      'कल्याणी के नाम का बैंक खाता'
+    ],
+    documentsEn: [
+      'Aadhaar card of Kalyani woman and her new husband',
+      'Samagra ID',
+      'Death Certificate of previous husband',
+      'Legal Marriage Certificate of remarriage',
+      'Bank account in name of Kalyani'
+    ],
+    steps: [
+      'शादी (पुनर्विवाह) होने के बाद मैरिज रजिस्ट्रार (Marriage Registrar) से शादी का सर्टिफिकेट (Marriage Certificate) बनवाएं।',
+      'शादी की तारीख से 1 साल के अंदर अपने ब्लॉक (जनपद पंचायत) या नगर निगम कार्यालय में आवेदन फॉर्म भरें।',
+      'सभी कागज़ात (जैसे पुराने पति का मृत्यु प्रमाण पत्र और नई शादी का सर्टिफिकेट) जमा करें।',
+      'ज़िला कलेक्टर (Collector) द्वारा फॉर्म पास होने पर ₹2 लाख सीधे महिला के बैंक खाते में जमा कर दिए जाएंगे।'
+    ],
+    stepsEn: [
+      'After marriage (remarriage), get Marriage Certificate made from Marriage Registrar.',
+      'Within 1 year from date of marriage, fill application form in your block (Janpad Panchayat) or Municipal Corporation office.',
+      'Submit all documents (like death certificate of old husband and certificate of new marriage).',
+      'On passing of form by District Collector, ₹2 lakh will be deposited directly in woman\'s bank account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'कल्याणी (विधवा) महिला' }
+    ],
+    sourceNotes: 'समाज में विधवाओं के प्रति सोच बदलने और उनके सशक्तिकरण की एक बड़ी पहल।',
+    detailedDescription: [
+      'हमारे समाज में पति की मृत्यु के बाद एक औरत (कल्याणी/विधवा) का जीवन बहुत कठिन हो जाता है। बहुत से लोग विधवाओं की दूसरी शादी को समाज में सही नहीं मानते, जिसके कारण उस औरत को पूरा जीवन अकेले संघर्ष करना पड़ता है।',
+      'इस पुरानी सोच को बदलने और कल्याणी बहनों को एक खुशहाल नया जीवन (दांपत्य जीवन) शुरू करने में मदद करने के लिए सरकार ने "मुख्यमंत्री कल्याणी विवाह सहायता योजना" शुरू की है। इसके तहत अगर कोई कल्याणी महिला दोबारा शादी करती है, तो सरकार उसे अपना घर बसाने और आर्थिक रूप से मज़बूत होने के लिए 2 लाख रुपये की बड़ी रकम देती है।'
+    ],
+    detailedDescriptionEn: [
+      'In our society after death of husband, life of a woman (Kalyani/Widow) becomes very difficult. Many people do not consider second marriage of widows right in society, due to which that woman has to struggle alone whole life.',
+      'To change this old thinking and to help Kalyani sisters start a happy new life (married life), govt has started "Mukhyamantri Kalyani Vivah Sahayata Yojana". Under this if any Kalyani woman remarries, then govt gives her a big amount of 2 lakh rupees to settle her home and become financially strong.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या सहायता मिलती है?', points: [
+          'नकद आर्थिक मदद (Financial Help): महिला को एकमुश्त (Lump sum) ₹2,00,000 (दो लाख रुपये) मिलते हैं।',
+          'महिला के खाते में भुगतान: यह पैसा किसी और को नहीं, बल्कि सीधे उस कल्याणी महिला के बैंक खाते (DBT) में डाला जाता है।',
+          'सामाजिक सम्मान (Social Dignity): इस योजना से समाज में यह संदेश जाता है कि सरकार भी विधवा पुनर्विवाह का समर्थन करती है, जिससे उन्हें समाज में सम्मान मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What help is received in scheme?', points: [
+          'Cash Financial Help: Woman gets lump sum ₹2,00,000 (Two lakh rupees).',
+          'Payment in woman\'s account: This money is not put to anyone else, but directly in bank account (DBT) of that Kalyani woman.',
+          'Social Dignity: This scheme sends message in society that govt also supports widow remarriage, which gives them respect in society.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'महिला मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'महिला के पूर्व (पहले) पति की मृत्यु हो चुकी हो और उसके पास इसका मृत्यु प्रमाण पत्र (Death Certificate) हो।',
+      'पुनर्विवाह कानूनी रूप से पंजीकृत (Registered) होना चाहिए।',
+      'नए पति की उम्र 21 साल और महिला की उम्र 18 साल से ऊपर होनी चाहिए। (बाल विवाह न हो)'
+    ],
+    eligibilityDescriptionEn: [
+      'Woman must be native of MP.',
+      'Previous (first) husband of woman should have died and she should have his Death Certificate.',
+      'Remarriage must be legally Registered.',
+      'Age of new husband should be above 21 years and woman should be above 18 years. (No child marriage)'
+    ],
+    exclusions: [
+      'अगर महिला का पहले पति से तलाक (Divorce) हुआ है (मृत्यु नहीं हुई है), तो वह इस योजना के लिए पात्र नहीं है।',
+      'अगर शादी को 1 साल से ज़्यादा का समय बीत चुका है और आपने आवेदन नहीं किया, तो यह लाभ नहीं मिलेगा।',
+      'यदि नए पति ने अपनी पहली पत्नी के रहते हुए दूसरी शादी की है (बहुविवाह), तो भी लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If woman has divorced (Divorce) from first husband (death has not happened), then she is not eligible for this scheme.',
+      'If more than 1 year has passed since marriage and you have not applied, then this benefit will not be available.',
+      'If new husband has done second marriage while his first wife is alive (Polygamy), even then benefit will not be available.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (जनपद / नगर पालिका)', steps: [
+          'शादी होने के बाद सबसे पहले कोर्ट या नगर निगम/पंचायत से अपनी शादी का "मैरिज सर्टिफिकेट" (विवाह प्रमाण पत्र) बनवाएं।',
+          'इसके बाद अपने ज़िले के जनपद पंचायत (ग्रामीण) या नगर पालिका/निगम (शहरी) कार्यालय में जाएं।',
+          'वहां "कल्याणी विवाह सहायता" का फॉर्म लेकर भरें और अपने दस्तावेज़ (मैरिज सर्टिफिकेट, समग्र आईडी, बैंक पासबुक) जमा करें।',
+          'फॉर्म ज़िला कलेक्टर (Collector) के पास जाएगा। वहां से मंज़ूरी मिलने पर 2 लाख रुपये आपके खाते में आ जाएंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Janpad / Municipality)', steps: [
+          'After marriage, first get your "Marriage Certificate" made from Court or Municipal Corporation/Panchayat.',
+          'After this go to Janpad Panchayat (Rural) or Municipality/Corporation (Urban) office of your district.',
+          'Take form of "Kalyani Vivah Sahayata" there and fill it and submit your documents (Marriage Certificate, Samagra ID, Bank Passbook).',
+          'Form will go to District Collector. On getting approval from there, 2 lakh rupees will come in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या कल्याणी पेंशन लेने वाली महिला को यह लाभ मिलेगा?', answer: 'हाँ, बिल्कुल। जो महिला पहले से विधवा पेंशन (कल्याणी पेंशन) ले रही है, वह शादी करने पर इस 2 लाख रुपये की योजना का लाभ ले सकती है। (हालांकि शादी के बाद उसकी पुरानी पेंशन बंद हो जाएगी)।' },
+      { question: 'आवेदन कितने समय में करना होता है?', answer: 'नियम के अनुसार, आपको अपनी शादी की तारीख से 1 साल (12 महीने) के अंदर ही इसका आवेदन करना होगा। 1 साल के बाद किया गया आवेदन रद्द (Reject) कर दिया जाएगा।' }
+    ],
+    faqsEn: [
+      { question: 'Will woman taking Kalyani pension get this benefit?', answer: 'Yes, absolutely. Woman who is already taking widow pension (Kalyani pension), she can take benefit of this 2 lakh rupees scheme on getting married. (However after marriage her old pension will stop).' },
+      { question: 'In how much time application has to be done?', answer: 'As per rule, you will have to apply for it within 1 year (12 months) from date of your marriage. Application made after 1 year will be Rejected.' }
+    ]
+  },
+  'shaikshanik-chatravriti-yojana': {
+    ...reviewed,
+    title: 'समेकित शैक्षणिक छात्रवृत्ति योजना (कक्षा 1 से 10)',
+    english: 'Shaikshanik Chatravriti Yojana (Class 1 to 10)',
+    summary: 'सरकारी स्कूलों में कक्षा 1 से 10वीं तक पढ़ने वाले SC, ST, OBC और कमज़ोर वर्ग के बच्चों को पढ़ाई के खर्च (किताबें, ड्रेस) के लिए मिलने वाली नकद छात्रवृत्ति (Scholarship)।',
+    benefit: 'स्कूल में पढ़ने वाले पात्र छात्र-छात्राओं को उनकी कक्षा के आधार पर हर साल सरकार द्वारा एक निश्चित नकद छात्रवृत्ति सीधे बैंक खाते में दी जाती है।',
+    department: 'स्कूल शिक्षा विभाग / आदिम जाति कल्याण विभाग',
+    sourceUrl: 'https://scholarshipportal.mp.nic.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'छात्र का आधार कार्ड',
+      'समग्र आईडी (Samagra ID - बहुत ज़रूरी)',
+      'जाति प्रमाण पत्र (SC, ST, OBC वर्ग के लिए)',
+      'छात्र या माता-पिता का बैंक खाता (बैंक पासबुक)',
+      'आय प्रमाण पत्र (OBC या सामान्य वर्ग के लिए)'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID (Very important)',
+      'Caste Certificate (For SC, ST, OBC category)',
+      'Bank account of student or parents (Bank Passbook)',
+      'Income Certificate (For OBC or General category)'
+    ],
+    steps: [
+      'हर साल जुलाई-अगस्त (जब स्कूल खुलते हैं) में अपने स्कूल के हेडमास्टर/टीचर को अपनी समग्र आईडी और बैंक खाता दें।',
+      'टीचर "शिक्षा पोर्टल" (Education Portal) पर बच्चे की प्रोफाइल अपडेट (Update) करेंगे।',
+      'सिस्टम (Computer) अपने आप समग्र आईडी से बच्चे की जाति और पात्रता चेक कर लेगा।',
+      'सत्यापन होने के बाद छात्रवृत्ति (Scholarship) का पैसा सीधे बैंक खाते (DBT) में आ जाएगा।'
+    ],
+    stepsEn: [
+      'Every year in July-August (when schools open) give your Samagra ID and bank account to your school headmaster/teacher.',
+      'Teacher will update child\'s profile on "Education Portal".',
+      'System (Computer) will automatically check child\'s caste and eligibility from Samagra ID.',
+      'After verification Scholarship money will come directly in bank account (DBT).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'कक्षा 1 से 10वीं तक के स्कूली छात्र' }
+    ],
+    sourceNotes: 'बच्चों को स्कूल छोड़ने (Dropout) से रोकने और गरीब परिवारों पर पढ़ाई का बोझ कम करने के लिए।',
+    detailedDescription: [
+      'गरीब परिवारों के लिए बच्चों को स्कूल भेजना एक चुनौती होती है, क्योंकि स्कूल की फीस के अलावा कॉपियां, किताबें और यूनिफॉर्म (ड्रेस) का खर्च भी उठाना पड़ता है। पैसों की कमी के कारण बहुत से बच्चे बीच में ही स्कूल छोड़ देते हैं।',
+      'बच्चों की पढ़ाई बीच में न छूटे, इसके लिए मध्य प्रदेश सरकार ने "समेकित शैक्षणिक छात्रवृत्ति योजना" लागू की है। इसके तहत कक्षा 1 से लेकर 10वीं तक सरकारी स्कूलों में पढ़ने वाले अनुसूचित जाति (SC), जनजाति (ST), पिछड़ा वर्ग (OBC), और सामान्य वर्ग (BPL) के बच्चों को हर साल नकद छात्रवृत्ति (Scholarship) दी जाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Sending children to school is a challenge for poor families, because apart from school fees, expense of notebooks, books and uniform (dress) also has to be borne. Due to lack of money many children leave school in middle.',
+      'So that children\'s education is not left in middle, MP Govt has implemented "Samekit Shaikshanik Chatravriti Yojana". Under this, cash scholarship is given every year to children of Scheduled Caste (SC), Tribe (ST), Backward Class (OBC), and General category (BPL) studying in govt schools from class 1 to 10th.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या फायदा मिलता है?', points: [
+          'कक्षा 1 से 5 तक: छोटे बच्चों को ड्रेस और किताबों के लिए ₹250 से लेकर ₹500 तक (जाति और वर्ग के अनुसार) सालाना दिए जाते हैं।',
+          'कक्षा 6 से 8 तक: इस स्तर पर पढ़ाई का खर्च बढ़ता है, इसलिए छात्रवृत्ति ₹300 से लेकर ₹600 तक होती है।',
+          'कक्षा 9 और 10: बड़े बच्चों को ₹600 से लेकर ₹1000 तक की छात्रवृत्ति (Scholarship) दी जाती है। (लड़कियों को लड़कों के मुकाबले थोड़ी ज़्यादा राशि मिलती है)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefit is received in scheme?', points: [
+          'Class 1 to 5: Small children are given ₹250 to ₹500 annually (as per caste and category) for dress and books.',
+          'Class 6 to 8: At this level study expense increases, so scholarship is from ₹300 to ₹600.',
+          'Class 9 and 10: Big children are given scholarship from ₹600 to ₹1000. (Girls get slightly more amount than boys).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'बच्चा मध्य प्रदेश के किसी भी मान्यता प्राप्त सरकारी या अनुदान प्राप्त स्कूल में पढ़ रहा हो।',
+      'बच्चे की उपस्थिति (Attendance) स्कूल में अच्छी होनी चाहिए।',
+      'बच्चा आरक्षित वर्ग (SC/ST/OBC/विमुक्त घुमक्कड़ जाति) या फिर सामान्य वर्ग का है तो उसके परिवार के पास BPL (गरीबी रेखा) कार्ड होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Child should be studying in any recognized govt or grant-in-aid school of MP.',
+      'Child\'s Attendance in school should be good.',
+      'If child is of reserved category (SC/ST/OBC/Vimukt Ghumakkad Jati) or general category then his family should have BPL (Below Poverty Line) card.'
+    ],
+    exclusions: [
+      'प्राइवेट (निजी) स्कूलों में पढ़ने वाले सामान्य बच्चों को यह छात्रवृत्ति नहीं मिलती (सिर्फ RTE वालों को छोड़कर)।',
+      'अगर बच्चा किसी कक्षा में फेल हो जाता है और उसी कक्षा में दोबारा पढ़ता है, तो उसे उस साल की छात्रवृत्ति नहीं मिलेगी।'
+    ],
+    exclusionsEn: [
+      'General children studying in private schools do not get this scholarship (except only RTE ones).',
+      'If child fails in any class and studies in same class again, then he will not get scholarship for that year.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'स्कूल के माध्यम से ऑनलाइन', steps: [
+          'अभिभावकों (Parents) को खुद से कहीं ऑनलाइन फॉर्म भरने की ज़रूरत नहीं है।',
+          'स्कूल शुरू होने (जुलाई) पर आपको अपने बच्चे के क्लास टीचर को सिर्फ 3 चीज़ें देनी हैं: समग्र आईडी, आधार कार्ड की फोटोकॉपी, और बैंक पासबुक।',
+          'टीचर खुद "शिक्षा पोर्टल" (Education Portal) पर जाकर बच्चे का डेटा अपडेट करेंगे।',
+          'पोर्टल समग्र आईडी से चेक करके पैसा सीधे आपके बैंक खाते (DBT) में ट्रांसफर कर देगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online through School', steps: [
+          'Parents do not need to fill online form themselves anywhere.',
+          'On school starting (July) you just have to give 3 things to your child\'s class teacher: Samagra ID, Aadhaar card photocopy, and bank passbook.',
+          'Teacher himself will go to "Education Portal" and update child\'s data.',
+          'Portal will check from Samagra ID and transfer money directly in your bank account (DBT).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'मेरे बच्चे की छात्रवृत्ति अभी तक बैंक में नहीं आई, क्या करूँ?', answer: 'सबसे पहले अपने स्कूल के टीचर से पूछें कि क्या उन्होंने शिक्षा पोर्टल पर प्रोफाइल अपडेट (Profile Update) कर दी है? अगर हाँ, तो अपना बैंक खाता चेक करें कि वह चालू (Active) है या नहीं और उसमें आधार (e-KYC) लिंक है या नहीं।' },
+      { question: 'क्या सामान्य वर्ग (General Category) के बच्चों को भी यह मिलेगी?', answer: 'सामान्य वर्ग के बच्चों को यह छात्रवृत्ति तभी मिलती है जब उनके माता-पिता के पास BPL (गरीबी रेखा) का राशन कार्ड हो। SC/ST/OBC वालों को बिना BPL के भी मिलती है।' }
+    ],
+    faqsEn: [
+      { question: 'My child\'s scholarship has not come in bank yet, what to do?', answer: 'First ask your school teacher whether they have done Profile Update on education portal? If yes, then check your bank account whether it is Active or not and whether Aadhaar (e-KYC) is linked in it or not.' },
+      { question: 'Will children of General Category also get this?', answer: 'Children of general category get this scholarship only when their parents have BPL (Below Poverty Line) ration card. SC/ST/OBC ones get it even without BPL.' }
+    ]
+  },
+  'shiksha-protsahan-puraskar-yojana': {
+    ...reviewed,
+    title: 'शिक्षा प्रोत्साहन पुरस्कार योजना',
+    english: 'Shiksha Protsahan Puraskar Yojana',
+    summary: 'बोर्ड परीक्षा (10वीं और 12वीं) में फर्स्ट डिवीज़न (First Division) पास होने वाले आरक्षित वर्ग के मेधावी छात्र-छात्राओं को सरकार द्वारा नकद इनाम।',
+    benefit: '10वीं या 12वीं कक्षा में प्रथम श्रेणी (60% या अधिक अंक) लाने वाले SC/ST छात्रों को ₹5,000 से लेकर ₹15,000 तक का नकद पुरस्कार दिया जाता है।',
+    department: 'अनुसूचित जाति / जनजाति कल्याण विभाग',
+    sourceUrl: 'https://scdevelopmentmp.nic.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'छात्र का आधार कार्ड',
+      'समग्र आईडी',
+      'जाति प्रमाण पत्र (SC/ST)',
+      '10वीं या 12वीं बोर्ड परीक्षा की मार्कशीट (अंकसूची)',
+      'बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID',
+      'Caste Certificate (SC/ST)',
+      '10th or 12th Board Exam Marksheet',
+      'Bank account passbook'
+    ],
+    steps: [
+      'बोर्ड परीक्षा का रिज़ल्ट आने के बाद, अगर आपने फर्स्ट डिवीज़न हासिल किया है, तो अपने स्कूल के प्रिंसिपल/प्राचार्य से मिलें।',
+      'स्कूल द्वारा आपका नाम और मार्कशीट की जानकारी "शिक्षा पोर्टल" या विभागीय पोर्टल पर दर्ज की जाएगी।',
+      'ज़िला शिक्षा अधिकारी (DEO) / आदिवासी विकास विभाग द्वारा इसकी ऑनलाइन जांच (Verification) होगी।',
+      'जांच सही पाए जाने पर पुरस्कार राशि सीधे आपके बैंक खाते में जमा कर दी जाएगी।'
+    ],
+    stepsEn: [
+      'After board exam result comes, if you have achieved First Division, then meet Principal of your school.',
+      'Your name and marksheet info will be registered on "Education Portal" or departmental portal by school.',
+      'Online checking (Verification) of this will be done by District Education Officer (DEO) / Tribal Development Dept.',
+      'On verification found correct, prize amount will be deposited directly in your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'बोर्ड परीक्षा में प्रथम श्रेणी छात्र' }
+    ],
+    sourceNotes: 'कमज़ोर वर्ग के बच्चों में पढ़ाई के प्रति लगन और प्रतिस्पर्धा (Competition) बढ़ाने के लिए।',
+    detailedDescription: [
+      'हर माता-पिता का सपना होता है कि उनका बच्चा स्कूल में अच्छे नंबरों से पास हो। लेकिन अनुसूचित जाति (SC) और जनजाति (ST) के कई होनहार बच्चों को सही मार्गदर्शन या प्रोत्साहन नहीं मिल पाता, जिससे वे आगे की पढ़ाई के लिए प्रेरित नहीं সুইস पाते।',
+      'इन बच्चों का उत्साह बढ़ाने और उनमें पढ़ाई के प्रति लगन पैदा करने के लिए मध्य प्रदेश सरकार ने "शिक्षा प्रोत्साहन पुरस्कार योजना" शुरू की है। इसके तहत जो बच्चे 10वीं या 12वीं की बोर्ड परीक्षा में फर्स्ट डिवीज़न (प्रथम श्रेणी) लाते हैं, उन्हें सरकार शाबाशी के तौर पर नकद इनाम देती है ताकि वे आगे भी ऐसे ही मन लगाकर पढ़ें।'
+    ],
+    detailedDescriptionEn: [
+      'It is dream of every parent that their child passes in school with good marks. But many talented children of Scheduled Caste (SC) and Tribe (ST) do not get right guidance or encouragement, due to which they are not motivated for further studies.',
+      'To increase enthusiasm of these children and create dedication towards studies in them, MP Govt has started "Shiksha Protsahan Puraskar Yojana". Under this children who bring First Division in 10th or 12th board exam, govt gives them cash prize as appreciation so that they study with same dedication in future also.'
+    ],
+    benefitsList: [
+      {
+        heading: 'पुरस्कार में कितने पैसे मिलते हैं?', points: [
+          '10वीं कक्षा में: अगर कोई छात्र/छात्रा 10वीं में प्रथम श्रेणी (First Division) लाता है, तो उसे एकमुश्त (Lump sum) नकद पुरस्कार दिया जाता है। (यह राशि आमतौर पर ₹5000 के आसपास होती है)।',
+          '12वीं कक्षा में: 12वीं बोर्ड में फर्स्ट डिवीज़न आने पर आगे की पढ़ाई (College) के खर्च में मदद के तौर पर ₹15,000 तक की राशि इनाम में दी जाती है।',
+          'सीधे बैंक खाते में: यह पूरी राशि बिना किसी बिचौलिए के सीधे छात्र के बैंक खाते (DBT) में पहुंचती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much money is received in prize?', points: [
+          'In 10th Class: If any student brings First Division in 10th, then he is given lump sum cash prize. (This amount is usually around ₹5000).',
+          'In 12th Class: On getting First Division in 12th board, amount upto ₹15,000 is given in prize as help in further studies (College) expense.',
+          'Directly in bank account: This entire amount reaches directly in student\'s bank account (DBT) without any middleman.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का निवासी हो और यहीं के किसी मान्यता प्राप्त स्कूल से पढ़ाई की हो।',
+      'छात्र अनुसूचित जाति (SC) या अनुसूचित जनजाति (ST) वर्ग से संबंध रखता हो।',
+      'छात्र ने MP Board (माध्यमिक शिक्षा मंडल) की 10वीं या 12वीं की परीक्षा में प्रथम श्रेणी (60% या उससे ज़्यादा नंबर) हासिल की हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be resident of MP and should have studied from any recognized school here.',
+      'Student should belong to Scheduled Caste (SC) or Scheduled Tribe (ST) category.',
+      'Student should have achieved First Division (60% or more marks) in 10th or 12th exam of MP Board (Board of Secondary Education).'
+    ],
+    exclusions: [
+      'CBSE या ICSE बोर्ड से पढ़ने वाले बच्चों को इस योजना का लाभ नहीं मिलता। यह मुख्य रूप से MP Board के लिए है।',
+      'अगर छात्र के 59.9% भी हैं (प्रथम श्रेणी नहीं है), तो उसे यह पुरस्कार नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'Children studying from CBSE or ICSE board do not get benefit of this scheme. It is mainly for MP Board.',
+      'If student has even 59.9% (not first division), then he will not get this prize.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (स्कूल के ज़रिए)', steps: [
+          'बच्चों को अलग से कोई फॉर्म खरीदने या ऑनलाइन कैफे जाने की ज़रूरत नहीं है।',
+          'रिज़ल्ट आने के बाद, स्कूल के प्राचार्य (Principal) उन सभी SC/ST बच्चों की लिस्ट निकालते हैं जो फर्स्ट डिवीज़न से पास हुए हैं।',
+          'स्कूल इन बच्चों से बैंक पासबुक की कॉपी और समग्र आईडी मांगता है और उनकी फाइल ज़िला कार्यालय (अजाक विभाग) भेज देता है।',
+          'विभाग वहां से मंज़ूरी देकर पैसा सीधे बच्चों के खाते में डाल देता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through School)', steps: [
+          'Children do not need to buy any form separately or go to online cafe.',
+          'After result comes, Principal of school takes out list of all SC/ST children who have passed with first division.',
+          'School asks for bank passbook copy and Samagra ID from these children and sends their file to District Office (Tribal Dept).',
+          'Dept from there gives approval and puts money directly in children\'s account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह पुरस्कार हर साल मिलता है?', answer: 'नहीं, यह सिर्फ एक बार (One-time) मिलने वाला इनाम है। यह सिर्फ तब मिलता है जब आप 10वीं पास करते हैं, और फिर दोबारा तब मिलता है जब आप 12वीं में फर्स्ट डिवीज़न लाते हैं।' },
+      { question: 'क्या सामान्य वर्ग (General/OBC) के बच्चों को यह मिलता है?', answer: 'यह विशेष योजना मुख्य रूप से SC/ST (दलित/आदिवासी) बच्चों के लिए है। सामान्य और OBC वर्ग के मेधावी बच्चों के लिए मुख्यमंत्री मेधावी विद्यार्थी जैसी अन्य योजनाएं हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is this prize received every year?', answer: 'No, this is only a One-time prize. It is received only when you pass 10th, and then received again when you bring First Division in 12th.' },
+      { question: 'Do children of General Category (General/OBC) get this?', answer: 'This special scheme is mainly for SC/ST (Dalit/Tribal) children. For meritorious children of General and OBC category there are other schemes like Mukhyamantri Medhavi Vidyarthi.' }
+    ]
+  },
+  'kalyani-sahayata-yojana': {
+    ...reviewed,
+    title: 'कल्याणी सहायता योजना (आपातकालीन)',
+    english: 'Kalyani Sahayata Yojana (Emergency Financial Relief)',
+    summary: 'परिवार के मुखिया (पति) की अचानक मृत्यु हो जाने पर पीड़ित कल्याणी (विधवा) बहन और उनके बच्चों को तत्काल सहारा देने के लिए आपातकालीन वित्तीय सहायता।',
+    benefit: 'कमाने वाले पति की मौत होने पर महिला को तत्काल भरण-पोषण (राशन, ज़रूरी खर्च) के लिए और कल्याणी पेंशन की मंज़ूरी दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'कल्याणी महिला का आधार कार्ड',
+      'समग्र आईडी',
+      'पति का मृत्यु प्रमाण पत्र (Death Certificate)',
+      'आय प्रमाण पत्र या BPL राशन कार्ड',
+      'बैंक पासबुक की कॉपी'
+    ],
+    documentsEn: [
+      'Aadhaar card of Kalyani woman',
+      'Samagra ID',
+      'Death Certificate of husband',
+      'Income Certificate or BPL Ration Card',
+      'Copy of bank passbook'
+    ],
+    steps: [
+      'पति की मृत्यु के बाद जितनी जल्दी हो सके, मृत्यु प्रमाण पत्र बनवाएं।',
+      'अपने इलाके के ग्राम पंचायत (सरपंच/सचिव) या शहर में नगर पालिका/तहसील कार्यालय जाएं।',
+      'कल्याणी सहायता और पेंशन का एक संयुक्त फॉर्म (Joint Form) भरें।',
+      'जांच के तुरंत बाद, परिवार को खाने-पीने और तात्कालिक ज़रूरत के लिए सहायता दी जाती है और कल्याणी पेंशन भी शुरू कर दी जाती है।'
+    ],
+    stepsEn: [
+      'Get death certificate made as soon as possible after death of husband.',
+      'Go to Gram Panchayat (Sarpanch/Secretary) of your area or Municipality/Tehsil office in city.',
+      'Fill a joint form of Kalyani Sahayata and pension.',
+      'Immediately after verification, family is given help for food and drink and immediate need and Kalyani pension is also started.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'कल्याणी (विधवा) बहनें' }
+    ],
+    sourceNotes: 'अचानक आई विपत्ति (Crisis) में परिवार को टूटने और भूखे मरने से बचाने की पहल।',
+    detailedDescription: [
+      'जब किसी गरीब या मध्यमवर्गीय परिवार में कमाने वाले मुखिया (पति) की अचानक मौत हो जाती है, तो पीछे छूट गई पत्नी और बच्चों के सामने रोज़ी-रोटी का बहुत बड़ा संकट आ जाता है। उन्हें अगले दिन का राशन और दवाइयों का खर्च भी भारी लगने लगता है।',
+      'ऐसी दुखद और मुश्किल घड़ी में पीड़ित परिवार को सहारा देने के लिए "कल्याणी सहायता योजना" बनाई गई है। इसके तहत सरकार तुरंत एक्शन लेती है। महिला को तत्काल कुछ नकद सहायता दी जाती है ताकि घर का चूल्हा जल सके, और बिना किसी देरी के उनकी "कल्याणी पेंशन" चालू कर दी जाती है ताकि हर महीने एक तय रकम मिलती रहे।'
+    ],
+    detailedDescriptionEn: [
+      'When earning head (husband) of any poor or middle class family suddenly dies, then a huge crisis of livelihood comes in front of left behind wife and children. They start finding expense of next day\'s ration and medicines also heavy.',
+      'To support victim family in such sad and difficult time "Kalyani Sahayata Yojana" has been made. Under this govt takes immediate action. Woman is given some immediate cash help so that stove of house can burn, and without any delay their "Kalyani Pension" is started so that a fixed amount keeps coming every month.'
+    ],
+    benefitsList: [
+      {
+        heading: 'इस योजना में क्या मिलता है?', points: [
+          'तात्कालिक राहत (Immediate Relief): पति की मौत की जानकारी मिलने पर स्थानीय अधिकारियों (जैसे तहसीलदार/पटवारी) द्वारा तुरंत आर्थिक मदद की सिफ़ारिश की जाती है।',
+          'कल्याणी पेंशन की मंज़ूरी: महिला को दर-दर भटकना नहीं पड़ता, इसी आवेदन से उन्हें ₹600 प्रति माह वाली "कल्याणी (विधवा) पेंशन" चालू कर दी जाती है।',
+          'बच्चों की पढ़ाई में मदद: अगर बच्चे स्कूल में हैं, तो शिक्षा विभाग की योजनाओं से जोड़कर उन्हें मुफ़्त पढ़ाई और वज़ीफ़ा (Scholarship) दिलवाने में मदद की जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What is received in this scheme?', points: [
+          'Immediate Relief: On getting info of husband\'s death, immediate financial help is recommended by local officers (like Tehsildar/Patwari).',
+          'Approval of Kalyani Pension: Woman does not have to wander from door to door, from this application itself her "Kalyani (Widow) Pension" of ₹600 per month is started.',
+          'Help in children\'s education: If children are in school, then by connecting them with schemes of education dept help is given in getting them free education and Scholarship.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'महिला मध्य प्रदेश की निवासी हो।',
+      'महिला के पति की मृत्यु हो चुकी हो (जिसका प्रमाण पत्र होना ज़रूरी है)।',
+      'परिवार की आर्थिक स्थिति कमज़ोर हो (यानी उनका गुज़ारा मुश्किल हो रहा हो)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Woman should be resident of MP.',
+      'Husband of woman should have died (whose certificate is necessary to have).',
+      'Financial condition of family should be weak (i.e. their survival is becoming difficult).'
+    ],
+    exclusions: [
+      'अगर महिला खुद किसी सरकारी नौकरी में है और अच्छी सैलरी पा रही है, तो उन्हें यह आपातकालीन आर्थिक मदद नहीं मिलेगी।',
+      'अगर पति की मृत्यु का कारण कोई विवादित या आपराधिक मामला है, तो पुलिस जांच पूरी होने तक सहायता रोकी जा सकती है।'
+    ],
+    exclusionsEn: [
+      'If woman herself is in any govt job and getting good salary, then she will not get this emergency financial help.',
+      'If reason for death of husband is any disputed or criminal matter, then help can be stopped until police investigation is completed.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (तहसील / पंचायत)', steps: [
+          'जैसे ही मृत्यु प्रमाण पत्र (Death Certificate) बन जाए, तुरंत अपने क्षेत्र के पटवारी, ग्राम पंचायत सचिव या नगर पालिका में संपर्क करें।',
+          'उन्हें अपनी स्थिति बताएं और सहायता/पेंशन का फॉर्म भरें।',
+          'पटवारी या सचिव अपनी रिपोर्ट (Report) लगाएंगे कि वास्तव में परिवार को सहारे की ज़रूरत है।',
+          'यह रिपोर्ट तहसीलदार (Tehsildar) के पास जाएगी, और वहां से तुरंत सहायता राशि बैंक खाते में भेज दी जाएगी।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Tehsil / Panchayat)', steps: [
+          'As soon as Death Certificate is made, immediately contact Patwari, Gram Panchayat Secretary or Municipality of your area.',
+          'Tell them your situation and fill form of help/pension.',
+          'Patwari or Secretary will put their Report that family really needs support.',
+          'This report will go to Tehsildar, and from there help amount will be sent immediately in bank account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अगर मृत्यु प्रमाण पत्र बनने में देरी हो तो क्या करें?', answer: 'आप श्मशान घाट/कब्रिस्तान की रसीद या पंचायत सचिव के लिखित पंचनामे (Declaration) के आधार पर तात्कालिक मदद मांग सकते हैं, लेकिन पेंशन शुरू करने के लिए पक्का मृत्यु प्रमाण पत्र (Death Certificate) अनिवार्य होगा।' },
+      { question: 'क्या यह योजना सभी जाति और धर्म की महिलाओं के लिए है?', answer: 'हाँ, संकट की इस घड़ी में सरकार कोई भेदभाव नहीं करती। यह योजना हर वर्ग, जाति और धर्म की कल्याणी बहनों के लिए खुली है।' }
+    ],
+    faqsEn: [
+      { question: 'What to do if there is delay in making death certificate?', answer: 'You can ask for immediate help on basis of receipt of crematorium/graveyard or written Panchnama (Declaration) of Panchayat Secretary, but to start pension pucca Death Certificate will be mandatory.' },
+      { question: 'Is this scheme for women of all caste and religion?', answer: 'Yes, in this hour of crisis govt does not do any discrimination. This scheme is open for Kalyani sisters of every category, caste and religion.' }
+    ]
+  },
+  'vivah-sahayata-yojana': {
+    ...reviewed,
+    title: 'श्रमिक विवाह सहायता योजना (BOCW)',
+    english: 'BOCW Vivah Sahayata Yojana (Worker Marriage Assistance)',
+    summary: 'मज़दूरों (भवन निर्माण श्रमिकों) की बेटियों या खुद महिला मज़दूरों की शादी के लिए सरकार द्वारा ₹51,000 की नकद आर्थिक मदद।',
+    benefit: 'पंजीकृत मज़दूर के परिवार में (खुद की या अधिकतम 2 बेटियों की) शादी होने पर ₹51,000 (इक्यावन हज़ार रुपये) की सहायता दी जाती है।',
+    department: 'भवन एवं अन्य संनिर्माण कर्मकार कल्याण मंडल (BOCW) / श्रम विभाग',
+    sourceUrl: 'https://labour.mp.gov.in/',
+    applicationUrl: 'https://shramsewa.mp.gov.in/',
+    documents: [
+      'श्रमिक का वैध (Valid) मज़दूरी कार्ड (BOCW Card)',
+      'वर (लड़का) और वधू (लड़की) का आधार कार्ड',
+      'समग्र आईडी',
+      'शादी का निमंत्रण कार्ड (Wedding Card) या विवाह प्रमाण पत्र',
+      'श्रमिक का बैंक खाता पासबुक'
+    ],
+    documentsEn: [
+      'Valid labour card (BOCW Card) of worker',
+      'Aadhaar card of groom (boy) and bride (girl)',
+      'Samagra ID',
+      'Wedding invitation card or marriage certificate',
+      'Bank account passbook of worker'
+    ],
+    steps: [
+      'शादी तय होने के बाद या शादी होने के 90 दिन (3 महीने) के अंदर आवेदन करें।',
+      'अपने इलाके के श्रम विभाग कार्यालय (Labour Office) या लोक सेवा केंद्र जाएं।',
+      'वहां "विवाह सहायता" का फॉर्म भरें और अपनी बेटी की शादी का कार्ड और अपना मज़दूर डायरी (Labour Card) जमा करें।',
+      'श्रम अधिकारी (Labour Officer) द्वारा कागज़ात चेक करने के बाद ₹51,000 आपके बैंक खाते में जमा कर दिए जाएंगे।'
+    ],
+    stepsEn: [
+      'Apply after marriage is fixed or within 90 days (3 months) of marriage.',
+      'Go to Labour Office or Lok Seva Kendra of your area.',
+      'Fill "Vivah Sahayata" form there and submit your daughter\'s wedding card and your labour diary (Labour Card).',
+      'After checking documents by Labour Officer ₹51,000 will be deposited in your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'worker', label: 'पंजीकृत निर्माण श्रमिक (BOCW)' }
+    ],
+    sourceNotes: 'मज़दूरों को बेटियों की शादी के लिए कर्ज़ लेने से बचाने वाली सबसे बड़ी योजना।',
+    detailedDescription: [
+      'एक मज़दूर (जैसे राजमिस्त्री, प्लंबर, या ईंट ढोने वाले) दिन भर कड़ी मेहनत करके मुश्किल से अपने परिवार का पेट पाल पाता है। ऐसे में जब घर में बेटी की शादी की बात आती है, तो उसे साहूकारों से भारी ब्याज पर कर्ज़ लेना पड़ता है, जिसे चुकाने में उसकी पूरी ज़िंदगी बीत जाती है।',
+      'मज़दूरों को कर्ज़ के इस जाल से बचाने के लिए मध्य प्रदेश का श्रम विभाग "विवाह सहायता योजना" चलाता है। अगर आप सरकार के पास एक मज़दूर (निर्माण श्रमिक) के रूप में दर्ज़ हैं, तो सरकार आपकी बेटी की शादी का खर्च उठाने में मदद करती है और ₹51,000 की नकद सहायता देती है।'
+    ],
+    detailedDescriptionEn: [
+      'A labourer (like mason, plumber, or brick carrier) barely manages to feed his family by working hard all day. In such situation when it comes to daughter\'s marriage in house, he has to take loan at heavy interest from moneylenders, paying which his whole life passes.',
+      'To save labourers from this trap of debt, Labour Dept of MP runs "Vivah Sahayata Yojana". If you are registered as a labourer (construction worker) with govt, then govt helps in bearing expense of your daughter\'s marriage and gives cash help of ₹51,000.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या लाभ मिलता है?', points: [
+          'बड़ी आर्थिक मदद: मज़दूर परिवार को शादी के लिए पूरे ₹51,000 दिए जाते हैं, जिससे वे टेंट, खाना या ज़रूरी सामान बुक कर सकते हैं।',
+          'दो बेटियों तक लाभ: एक मज़दूर अपनी 2 बेटियों की शादी तक इस योजना का लाभ (यानी कुल 1 लाख 2 हज़ार रुपये) ले सकता है।',
+          'खुद की शादी पर भी: अगर कोई अविवाहित महिला खुद एक पंजीकृत मज़दूर है, तो वह अपनी खुद की शादी के लिए भी यह पैसा ले सकती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefit is received in scheme?', points: [
+          'Big financial help: Labourer family is given full ₹51,000 for marriage, so that they can book tent, food or necessary items.',
+          'Benefit upto two daughters: A labourer can take benefit of this scheme (i.e. total 1 lakh 2 thousand rupees) upto marriage of his 2 daughters.',
+          'Also on own marriage: If any unmarried woman is herself a registered worker, then she can also take this money for her own marriage.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश के श्रम विभाग (BOCW) में एक "निर्माण श्रमिक" के रूप में पंजीकृत होना चाहिए।',
+      'मज़दूर का कार्ड (पंजीयन) कम से कम 90 दिन पुराना होना चाहिए और चालू (Active/Renewed) होना चाहिए।',
+      'जिसकी शादी हो रही है (बेटी या स्वयं), उस लड़की की उम्र 18 साल और लड़के (वर) की उम्र 21 साल पूरी होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be registered as a "Construction Worker" in Labour Dept (BOCW) of MP.',
+      'Labourer\'s card (registration) must be at least 90 days old and should be Active/Renewed.',
+      'One whose marriage is happening (daughter or self), age of that girl should be 18 years and age of boy (groom) should be 21 years completed.'
+    ],
+    exclusions: [
+      'अगर मज़दूर का लेबर कार्ड रिन्यू (Renew) नहीं हुआ है या एक्सपायर हो गया है, तो आवेदन रिजेक्ट हो जाएगा।',
+      'अगर शादी को 90 दिन (3 महीने) से ज़्यादा बीत चुके हैं, तो आप इस योजना के लिए क्लेम नहीं कर सकते।',
+      'मुख्यमंत्री कन्या विवाह/निकाह योजना का लाभ ले चुके लोगों को यह लाभ दोबारा नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If labourer\'s labour card is not Renewed or has expired, then application will be rejected.',
+      'If more than 90 days (3 months) have passed since marriage, then you cannot claim for this scheme.',
+      'People who have taken benefit of Mukhyamantri Kanya Vivah/Nikah Yojana will not get this benefit again.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (श्रम सेवा पोर्टल)', steps: [
+          'आप MP Online कियोस्क (Kiosk) या लोक सेवा केंद्र के माध्यम से ऑनलाइन आवेदन करवा सकते हैं।',
+          'अपने मज़दूरी कार्ड, शादी के कार्ड और आधार कार्ड को स्कैन करके पोर्टल पर अपलोड (Upload) करवाएं।',
+          'शादी अगर हो चुकी है, तो विवाह का फोटो और सरपंच/पार्षद का प्रमाण पत्र भी लगाना होगा।',
+          'मंज़ूरी मिलने के बाद, मज़दूर (आवेदक) के बैंक खाते में पैसा आ जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Shram Sewa Portal)', steps: [
+          'You can get online application done through MP Online Kiosk or Lok Seva Kendra.',
+          'Get your labour card, wedding card and Aadhaar card scanned and uploaded on portal.',
+          'If marriage has happened, then wedding photo and certificate of Sarpanch/Councilor will also have to be attached.',
+          'After getting approval, money will come in bank account of worker (applicant).'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'शादी के कितने दिन पहले आवेदन कर सकते हैं?', answer: 'आप शादी की तय तारीख (शादी के कार्ड के आधार पर) से कुछ दिन पहले भी आवेदन कर सकते हैं, ताकि समय पर पैसा मिल जाए।' },
+      { question: 'क्या बेटे की शादी के लिए पैसा मिलेगा?', answer: 'नहीं, यह योजना मुख्य रूप से पंजीकृत मज़दूर की पुत्रियों (बेटियों) या महिला मज़दूर के स्वयं के विवाह के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'How many days before marriage can we apply?', answer: 'You can apply even few days before fixed date of marriage (based on wedding card), so that money is received on time.' },
+      { question: 'Will money be received for son\'s marriage?', answer: 'No, this scheme is mainly for daughters of registered worker or for own marriage of female worker.' }
+    ]
+  },
+  'ambedkar-kamdhenu-yojana': {
+    ...reviewed,
+    title: 'डॉ. भीमराव अंबेडकर कामधेनु योजना',
+    english: 'Dr. Bhimrao Ambedkar Kamdhenu Yojana',
+    summary: 'अनुसूचित जाति (SC) के गरीब परिवारों को दुधारू पशु (गाय/भैंस) खरीदने और डेयरी खोलने के लिए सरकार द्वारा 75% तक की बड़ी सब्सिडी (छूट)।',
+    benefit: 'SC वर्ग के पशुपालकों को 2 गाय या भैंस खरीदने पर भारी सरकारी अनुदान (Subsidy) दिया जाता है, ताकि वे दूध बेचकर रोज़गार कमा सकें।',
+    department: 'मध्य प्रदेश राज्य अनुसूचित जाति वित्त एवं विकास निगम',
+    sourceUrl: 'https://scdevelopmentmp.nic.in/',
+    applicationUrl: 'https://dahd.nic.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी',
+      'SC (अनुसूचित जाति) का डिजिटल जाति प्रमाण पत्र',
+      'आय प्रमाण पत्र या गरीबी रेखा (BPL) राशन कार्ड',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of applicant',
+      'Samagra ID',
+      'Digital caste certificate of SC (Scheduled Caste)',
+      'Income Certificate or Below Poverty Line (BPL) ration card',
+      'Bank passbook'
+    ],
+    steps: [
+      'अपने ज़िले के "अनुसूचित जाति वित्त विकास निगम" (SC Finance Development Corporation) कार्यालय या पशु चिकित्सा अधिकारी से संपर्क करें।',
+      'कामधेनु योजना का फॉर्म भरें और अपने ज़मीन (अगर है) और जाति के दस्तावेज़ लगाएं।',
+      'ज़िला स्तर की समिति (Committee) आपके आवेदन की जांच करेगी।',
+      'पास होने पर आपको पशु मेले से अच्छी नस्ल के दुधारू पशु खरीदने के लिए बैंक से लोन और सरकार से सब्सिडी मिलेगी।'
+    ],
+    stepsEn: [
+      'Contact "Scheduled Caste Finance Development Corporation" office or Veterinary Officer of your district.',
+      'Fill Kamdhenu scheme form and attach documents of your land (if any) and caste.',
+      'District level Committee will check your application.',
+      'On passing you will get loan from bank and subsidy from govt to buy good breed milch animals from cattle fair.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'SC वर्ग के पशुपालक' }
+    ],
+    sourceNotes: 'दलित समाज को स्वरोज़गार और डेयरी बिज़नेस से जोड़ने की बेहतरीन योजना।',
+    detailedDescription: [
+      'गांवों में बहुत से अनुसूचित जाति (SC) के परिवार ऐसे हैं जिनके पास खेती के लिए ज़मीन नहीं है (भूमिहीन हैं) और वे सिर्फ मज़दूरी करके गुज़ारा करते हैं। मज़दूरी में रोज़ काम नहीं मिलता। अगर ऐसे परिवारों के पास एक-दो अच्छी नस्ल की गाय या भैंस हों, तो वे दूध बेचकर हर दिन की पक्की कमाई कर सकते हैं।',
+      'इन परिवारों को खुद का बिज़नेस (डेयरी) शुरू करवाने के लिए सरकार ने "डॉ. भीमराव अंबेडकर कामधेनु योजना" शुरू की है। इसमें सरकार पशु खरीदने के लिए पैसे देती है, जिसमें से एक बहुत बड़ा हिस्सा (सब्सिडी) सरकार खुद भरती है, और लाभार्थी को बहुत कम पैसा चुकाना पड़ता है।'
+    ],
+    detailedDescriptionEn: [
+      'In villages there are many Scheduled Caste (SC) families who do not have land for farming (are landless) and they survive only by doing labour. In labour work is not available everyday. If such families have one-two good breed cow or buffalo, then they can make fixed daily earning by selling milk.',
+      'To make these families start their own business (dairy) govt has started "Dr. Bhimrao Ambedkar Kamdhenu Yojana". In this govt gives money to buy animals, out of which a very big part (subsidy) govt itself pays, and beneficiary has to pay very less money.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या फायदा मिलता है?', points: [
+          '2 दुधारू पशु (Cow/Buffalo): योजना के तहत 2 अच्छी नस्ल (जैसे जर्सी, साहीवाल या मुर्रा भैंस) के पशु खरीदने की मंज़ूरी मिलती है।',
+          'भारी सब्सिडी (Grant): पशुओं की कुल कीमत का 75% (या सरकार द्वारा तय सीमा तक) अनुदान सरकार देती है। यानी लाभार्थी को अपनी तरफ से सिर्फ 25% हिस्सा या बहुत छोटा लोन ही चुकाना होता है।',
+          'बीमा (Insurance): खरीदे गए पशुओं का बीमा भी कराया जाता है, ताकि अगर पशु बीमार हो जाए या मर जाए, तो गरीब परिवार को नुकसान न उठाना पड़े।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefit is received in scheme?', points: [
+          '2 Milch animals (Cow/Buffalo): Under scheme approval is received to buy 2 good breed (like Jersey, Sahiwal or Murrah buffalo) animals.',
+          'Heavy Subsidy (Grant): Govt gives grant of 75% of total cost of animals (or upto limit set by govt). Meaning beneficiary has to pay only 25% share or very small loan from his side.',
+          'Insurance: Insurance of bought animals is also done, so that if animal gets sick or dies, then poor family does not have to bear loss.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी और अनुसूचित जाति (SC) वर्ग का होना चाहिए।',
+      'आवेदक भूमिहीन कृषि मज़दूर हो या छोटा/सीमांत किसान (जिसके पास बहुत कम ज़मीन हो) हो।',
+      'आवेदक के पास पशुओं को बांधने और उन्हें चारा-पानी देने की जगह (शेड) की व्यवस्था होनी चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant must be native of MP and of Scheduled Caste (SC) category.',
+      'Applicant should be landless agricultural labourer or small/marginal farmer (who has very less land).',
+      'Applicant must have arrangement of space (shed) to tie animals and give them fodder and water.'
+    ],
+    exclusions: [
+      'जिन लोगों ने पहले से सरकार की किसी डेयरी योजना (जैसे आचार्य विद्यासागर योजना) का लाभ लिया है, उन्हें यह दोबारा नहीं मिलेगा।',
+      'जो लोग डिफाल्टर (Defaulter) हैं (जिन्होंने बैंक का पुराना कर्ज़ नहीं चुकाया है), उनके फॉर्म रद्द हो जाएंगे।'
+    ],
+    exclusionsEn: [
+      'People who have already taken benefit of any govt dairy scheme (like Acharya Vidyasagar Yojana), they will not get this again.',
+      'People who are Defaulter (who have not paid bank\'s old loan), their forms will be rejected.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (विभाग के ज़रिए)', steps: [
+          'ज़िले के पशु चिकित्सा अधिकारी (Veterinary Officer) या अजाक (SC Welfare) विभाग से संपर्क करें।',
+          'योजना का फॉर्म भरें। ग्राम पंचायत से प्रस्ताव (Resolution) पास कराकर फॉर्म के साथ लगाएं।',
+          'विभाग की समिति आपके घर आकर देखेगी कि आपके पास पशु रखने की जगह है या नहीं।',
+          'मंज़ूरी मिलने के बाद बैंक लोन पास करेगा और विभाग सब्सिडी जारी करेगा। फिर आप मेले से पशु खरीद सकेंगे।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through Dept)', steps: [
+          'Contact Veterinary Officer or SC Welfare dept of district.',
+          'Fill form of scheme. Get Resolution passed from Gram Panchayat and attach with form.',
+          'Dept\'s committee will come to your house and see whether you have space to keep animals or not.',
+          'After getting approval bank will pass loan and dept will issue subsidy. Then you will be able to buy animals from fair.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'पशु कहां से खरीदने होते हैं?', answer: 'आप सरकार द्वारा मान्यता प्राप्त पशु मेलों (Cattle Fairs) से या किसी अन्य प्रमाणित पशुपालक से पशु खरीद सकते हैं। पशु खरीदते समय डॉक्टर का वहां होना ज़रूरी होता है।' },
+      { question: 'क्या मैं एक साथ दोनों पशु खरीद सकता हूँ?', answer: 'आमतौर पर पहले एक पशु खरीदने की अनुमति दी जाती है। जब पहला पशु दूध देना कम कर देता है (करीब 5-6 महीने बाद), तब दूसरा पशु खरीदने का पैसा मिलता है, ताकि साल भर दूध का उत्पादन चालू रहे।' }
+    ],
+    faqsEn: [
+      { question: 'From where to buy animals?', answer: 'You can buy animals from govt recognized Cattle Fairs or from any other certified cattle rearer. It is necessary for doctor to be there while buying animal.' },
+      { question: 'Can I buy both animals together?', answer: 'Usually permission is given to buy one animal first. When first animal reduces giving milk (after about 5-6 months), then money to buy second animal is received, so that milk production continues throughout year.' }
+    ]
+  },
+  'delhi-chhatragrih-yojana': {
+    ...reviewed,
+    title: 'दिल्ली छात्रगृह योजना',
+    english: 'Delhi Chhatragrih Yojana (Hostel for UPSC Aspirants)',
+    summary: 'दिल्ली में रहकर UPSC (आईएएस/आईपीएस) की कोचिंग कर रहे मध्य प्रदेश के SC/ST/OBC छात्रों के लिए मुफ़्त हॉस्टल (रहने-खाने) की सुविधा।',
+    benefit: 'चयनित छात्रों को दिल्ली के पॉश इलाके में मुफ़्त कमरा, वाई-फाई, लाइब्रेरी और मेस (खाना) की सुविधा मिलती है, जिससे रहने का भारी खर्च बच जाता है।',
+    department: 'जनजातीय कार्य एवं अनुसूचित जाति कल्याण विभाग',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://scdevelopmentmp.nic.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी',
+      'जाति प्रमाण पत्र (SC/ST/OBC)',
+      'ग्रेजुएशन (स्नातक) की मार्कशीट',
+      'दिल्ली की किसी प्रतिष्ठित कोचिंग में एडमिशन की रसीद/प्रमाण'
+    ],
+    documentsEn: [
+      'Aadhaar card of applicant',
+      'Samagra ID',
+      'Caste Certificate (SC/ST/OBC)',
+      'Graduation marksheet',
+      'Receipt/Proof of admission in any reputed coaching of Delhi'
+    ],
+    steps: [
+      'विभाग (जनजातीय/अजाक) के पोर्टल पर "दिल्ली छात्रगृह" के लिए ऑनलाइन आवेदन (Application) निकलता है, उसे भरें।',
+      'अपनी मार्कशीट और कोचिंग एडमिशन की रसीद अपलोड करें।',
+      'मेरिट (नंबरों) के आधार पर छात्रों की लिस्ट बनती है।',
+      'नाम आने पर आपको दिल्ली स्थित मध्य प्रदेश भवन या सरकारी हॉस्टल में कमरा (Seat) आवंटित कर दिया जाता है।'
+    ],
+    stepsEn: [
+      'Online application comes for "Delhi Chhatragrih" on portal of dept (Tribal/SC Welfare), fill it.',
+      'Upload your marksheet and coaching admission receipt.',
+      'List of students is made on basis of Merit (marks).',
+      'On name coming you are allotted a room (Seat) in Madhya Pradesh Bhawan or govt hostel located in Delhi.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'दिल्ली में सिविल सेवा की तैयारी कर रहे छात्र' }
+    ],
+    sourceNotes: 'कमज़ोर वर्ग के बच्चों को देश की सबसे बड़ी परीक्षा में बराबरी का मौका देने की पहल।',
+    detailedDescription: [
+      'देश की सबसे बड़ी परीक्षा UPSC (IAS/IPS) पास करने का सपना बहुत से युवा देखते हैं, लेकिन इसकी अच्छी तैयारी के लिए दिल्ली जाना पड़ता है। दिल्ली में कोचिंग की फीस तो महँगी होती ही है, लेकिन उससे भी ज़्यादा महँगा होता है वहां रहना और खाना (कमरे का किराया, मेस आदि)। गरीब परिवारों के बच्चे इस भारी खर्च के कारण दिल्ली नहीं जा पाते।',
+      'इन प्रतिभाशाली छात्रों की राह आसान करने के लिए मध्य प्रदेश सरकार ने "दिल्ली छात्रगृह योजना" बनाई है। इसके तहत, जो बच्चे दिल्ली में किसी अच्छी कोचिंग में दाखिला ले लेते हैं, उन्हें सरकार दिल्ली में अपने खुद के हॉस्टल (छात्रगृह) में बिल्कुल मुफ़्त रहने की जगह देती है। वहां उन्हें शानदार लाइब्रेरी, इंटरनेट और सुरक्षा मिलती है।'
+    ],
+    detailedDescriptionEn: [
+      'Many youth dream of passing country\'s biggest exam UPSC (IAS/IPS), but to prepare well for it one has to go to Delhi. Coaching fees in Delhi is expensive, but even more expensive is living and eating there (room rent, mess etc). Children of poor families are unable to go to Delhi due to this heavy expense.',
+      'To make path of these talented students easy, MP Govt has made "Delhi Chhatragrih Yojana". Under this, children who take admission in any good coaching in Delhi, govt gives them completely free place to live in its own hostel (Chhatragrih) in Delhi. There they get excellent library, internet and security.'
+    ],
+    benefitsList: [
+      {
+        heading: 'छात्रगृह (हॉस्टल) में क्या-क्या सुविधाएँ मिलती हैं?', points: [
+          'मुफ़्त आवास (Free Accommodation): दिल्ली में रहने के लिए कमरा बिल्कुल मुफ़्त मिलता है। (बाहर यही कमरा ₹10-15 हज़ार महीने का मिलता है)।',
+          'लाइब्रेरी और इंटरनेट: पढ़ाई के लिए शांत लाइब्रेरी और मुफ़्त Wi-Fi की सुविधा।',
+          'मेस (खाना): हॉस्टल में ही बहुत ही कम दाम (रियायती दर) या मुफ़्त में अच्छा और पौष्टिक खाना मिलता है।',
+          'समूह चर्चा (Group Discussion): वहां सिर्फ मध्य प्रदेश के टॉपर बच्चे होते हैं, जिससे साथ मिलकर पढ़ने का बहुत अच्छा माहौल मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What facilities are available in Chhatragrih (Hostel)?', points: [
+          'Free Accommodation: Room to live in Delhi is available completely free. (Outside same room costs ₹10-15 thousand a month).',
+          'Library and Internet: Peaceful library for studying and free Wi-Fi facility.',
+          'Mess (Food): Good and nutritious food is available at very low price (subsidized rate) or free in hostel itself.',
+          'Group Discussion: Only topper children of MP are there, due to which very good environment of studying together is available.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी हो।',
+      'छात्र अनुसूचित जाति (SC), अनुसूचित जनजाति (ST) या अन्य पिछड़ा वर्ग (OBC) से संबंधित हो।',
+      'छात्र ने ग्रेजुएशन (स्नातक) पूरा कर लिया हो और अच्छे अंकों से पास हो।',
+      'छात्र ने दिल्ली के किसी प्रतिष्ठित (Recognized) कोचिंग संस्थान में सिविल सेवा (UPSC) की तैयारी के लिए एडमिशन ले लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be native of MP.',
+      'Student should belong to Scheduled Caste (SC), Scheduled Tribe (ST) or Other Backward Class (OBC).',
+      'Student should have completed Graduation and passed with good marks.',
+      'Student should have taken admission for preparation of Civil Services (UPSC) in any reputed (Recognized) coaching institute of Delhi.'
+    ],
+    exclusions: [
+      'अगर छात्र बीच में ही कोचिंग छोड़ देता है या अनुशासनहीनता करता है, तो उसे हॉस्टल से निकाल दिया जाता है।',
+      'यह सुविधा एक तय समय (आमतौर पर 1-2 साल) के लिए ही मिलती है, जीवन भर के लिए नहीं।'
+    ],
+    exclusionsEn: [
+      'If student leaves coaching in middle or does indiscipline, then he is expelled from hostel.',
+      'This facility is available only for a fixed time (usually 1-2 years), not for lifetime.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन पोर्टल', steps: [
+          'यह प्रक्रिया आमतौर पर साल में एक बार (जुलाई-अगस्त के आसपास) खुलती है।',
+          'आपको विभाग की वेबसाइट पर नज़र रखनी होगी। जब फॉर्म निकले, तो ऑनलाइन अप्लाई करें।',
+          'सभी ज़मीनी दस्तावेज़ (खासतौर पर कोचिंग की फीस की रसीद) सही से अपलोड करें।',
+          'सरकार एक कट-ऑफ (Cut-off) निकालती है। अगर आपके ग्रेजुएशन के मार्क्स कट-ऑफ से ऊपर हैं, तो आपको दिल्ली बुलाया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online Portal', steps: [
+          'This process usually opens once a year (around July-August).',
+          'You will have to keep an eye on dept\'s website. When form comes out, apply online.',
+          'Upload all ground documents (especially fee receipt of coaching) correctly.',
+          'Govt releases a Cut-off. If your graduation marks are above cut-off, then you will be called to Delhi.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'हॉस्टल में कुल कितनी सीटें हैं?', answer: 'हॉस्टल में सीटें सीमित (Limited) होती हैं। SC, ST और OBC वर्ग के लिए सीटें आरक्षित होती हैं, जिनमें लड़कियों (Girls) के लिए भी अलग से आरक्षण होता है।' },
+      { question: 'क्या दिल्ली जाने का किराया भी सरकार देती है?', answer: 'नहीं, सरकार सिर्फ रहने और पढ़ने की सुविधा मुफ़्त देती है। आने-जाने का किराया और कोचिंग की भारी फीस आपको खुद (या किसी अन्य सरकारी स्कॉलरशिप से) भरनी होती है।' }
+    ],
+    faqsEn: [
+      { question: 'How many total seats are there in hostel?', answer: 'Seats in hostel are Limited. Seats are reserved for SC, ST and OBC category, in which there is separate reservation for girls also.' },
+      { question: 'Does govt also give fare to go to Delhi?', answer: 'No, govt only gives free facility of living and studying. Travel fare and heavy fee of coaching you have to pay yourself (or through any other govt scholarship).' }
+    ]
+  },
+  'resham-samriddhi-yojana': {
+    ...reviewed,
+    title: 'रेशम समृद्धि योजना',
+    english: 'Resham Samriddhi Yojana (Silk Farming Scheme)',
+    summary: 'किसानों (विशेषकर महिलाओं) को रेशम कीट (Silk Worm) पालन के ज़रिए घर बैठे साल भर पक्की आमदनी कमाने का मौका।',
+    benefit: 'शहतूत के पेड़ लगाने, कीड़े पालने का शेड बनाने और रेशम कोकून के उत्पादन पर सरकार द्वारा 75% से 90% तक की भारी सब्सिडी दी जाती है।',
+    department: 'रेशम संचालनालय, कुटीर एवं ग्रामोद्योग विभाग',
+    sourceUrl: 'https://sericulture.mp.gov.in/',
+    applicationUrl: 'https://sericulture.mp.gov.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी',
+      'खेत (कृषि भूमि) की खसरा-खतौनी (B1)',
+      'बैंक खाता पासबुक',
+      'पासपोर्ट साइज़ फोटो'
+    ],
+    documentsEn: [
+      'Aadhaar card of applicant',
+      'Samagra ID',
+      'Khasra-Khatauni (B1) of field (agricultural land)',
+      'Bank account passbook',
+      'Passport size photo'
+    ],
+    steps: [
+      'अपने ज़िले के "ज़िला रेशम अधिकारी" (District Sericulture Officer) के कार्यालय में जाएं।',
+      'रेशम कृषक (Silk Farmer) के रूप में खुद को रजिस्टर करवाएं और अपने खेत के कागज़ दिखाएं।',
+      'विभाग आपको मुफ़्त में शहतूत के पौधे और रेशम के कीड़े (अंडे) देगा, साथ ही कीड़े पालने का घर (Shed) बनाने के लिए पैसे भी देगा।',
+      'जब कीड़े रेशम का कोकून (Cocoon) बना लें, तो विभाग खुद उसे अच्छे दाम पर खरीद लेगा और पैसा आपके खाते में आ जाएगा।'
+    ],
+    stepsEn: [
+      'Go to office of "District Sericulture Officer" of your district.',
+      'Get yourself registered as Silk Farmer and show documents of your field.',
+      'Dept will give you free mulberry plants and silk worms (eggs), also give money to build house (Shed) to rear worms.',
+      'When worms make silk Cocoon, then dept itself will buy it at good price and money will come in your account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'farmer', label: 'रेशम कीट पालन करने के इच्छुक कृषक' }
+    ],
+    sourceNotes: 'कम पानी वाली ज़मीन पर कम लागत में किसानों को लखपति बनाने वाली शानदार योजना।',
+    detailedDescription: [
+      'पारंपरिक खेती (गेहूं, सोयाबीन) में अक्सर मौसम की मार से नुकसान होता है। ऐसे में किसान खेती के साथ-साथ कोई ऐसा काम करना चाहते हैं जिससे पूरे साल पैसे आते रहें। "रेशम पालन" (Sericulture) एक ऐसा ही शानदार बिज़नेस है, जिसे महिलाएं घर के आंगन या खेत के एक छोटे से हिस्से में आसानी से कर सकती हैं।',
+      'इस काम को बढ़ावा देने के लिए "रेशम समृद्धि योजना" चलाई जा रही है। रेशम के कीड़े शहतूत (Mulberry) के पत्ते खाते हैं। सरकार शहतूत के पौधे मुफ़्त देती है। कीड़ों को रखने के लिए एक हवादार कमरा (शेड) बनाना होता है, जिसका ज़्यादातर खर्च सरकार उठाती है। 25-30 दिन में कीड़े रेशम का कोकून (गोला) बना देते हैं, जिसे सरकार तुरंत नकद में खरीद लेती है।'
+    ],
+    detailedDescriptionEn: [
+      'In traditional farming (wheat, soybean) there is often loss due to weather. In such situation farmers want to do some such work along with farming from which money keeps coming whole year. "Silk Farming" (Sericulture) is one such wonderful business, which women can easily do in courtyard of house or a small part of field.',
+      'To promote this work "Resham Samriddhi Yojana" is being run. Silk worms eat leaves of Mulberry. Govt gives mulberry plants for free. An airy room (shed) has to be made to keep worms, most of whose expense is borne by govt. In 25-30 days worms make silk cocoon (ball), which govt immediately buys in cash.'
+    ],
+    benefitsList: [
+      {
+        heading: 'सरकार से क्या-क्या मदद मिलती है?', points: [
+          'मुफ़्त पौधे: शहतूत की उन्नत किस्म के पौधे बिल्कुल मुफ़्त (या नाममात्र की कीमत पर) दिए जाते हैं।',
+          'शेड बनाने के लिए पैसा: कीड़े पालने का कमरा (Rearing Shed) बनाने पर 75% से 90% तक की सब्सिडी मिलती है (SC/ST/महिलाओं को ज़्यादा छूट)।',
+          'कीट पालन उपकरण: ट्रे, जाली, और दवाइयां खरीदने के लिए भी अनुदान मिलता है।',
+          'पक्की बिक्री (Buyback Guarantee): जो रेशम आप बनाएंगे, उसे बेचने के लिए बाज़ार नहीं भटकना पड़ेगा। रेशम विभाग खुद आपके गांव आकर उसे बाज़ार भाव पर खरीदेगा।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What help is received from govt?', points: [
+          'Free plants: Improved variety plants of mulberry are given completely free (or at nominal price).',
+          'Money to build shed: On making room to rear worms (Rearing Shed) subsidy of 75% to 90% is received (More discount for SC/ST/Women).',
+          'Worm rearing equipment: Grant is also received to buy trays, nets, and medicines.',
+          'Firm sale (Buyback Guarantee): Silk you will make, you will not have to wander in market to sell it. Silk dept will itself come to your village and buy it at market price.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'किसान के पास कम से कम आधा एकड़ (0.5 एकड़) ज़मीन होनी चाहिए, जहां शहतूत लगाया जा सके।',
+      'खेत में सिंचाई (पानी) की थोड़ी व्यवस्था होनी चाहिए ताकि शहतूत के पौधे जीवित रहें।',
+      'योजना में महिलाओं (Women) और स्व-सहायता समूहों (SHG) को विशेष प्राथमिकता दी जाती है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Farmer should have at least half acre (0.5 acre) of land, where mulberry can be planted.',
+      'There should be some arrangement of irrigation (water) in field so that mulberry plants stay alive.',
+      'In scheme special priority is given to Women and Self-Help Groups (SHG).'
+    ],
+    exclusions: [
+      'जिन लोगों के पास बिल्कुल ज़मीन नहीं है (भूमिहीन), वे शहतूत की खेती नहीं कर सकते, इसलिए उन्हें यह लाभ सीधे नहीं मिलता (वे मज़दूरी कर सकते हैं)।',
+      'अगर आप शहतूत तो लगा लें, लेकिन कीड़े पालने से मना कर दें, तो अनुदान की राशि वापस ली जा सकती है।'
+    ],
+    exclusionsEn: [
+      'People who have absolutely no land (landless), they cannot do farming of mulberry, so they do not get this benefit directly (they can do labour).',
+      'If you plant mulberry, but refuse to rear worms, then amount of grant can be taken back.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (रेशम केंद्र)', steps: [
+          'हर ज़िले में "रेशम विकास केंद्र" होता है। वहां जाएं।',
+          'योजना का फॉर्म भरें और अपनी ज़मीन का नक़्शा/खसरा जमा करें।',
+          'विभाग के अधिकारी आपके खेत का मुआयना (Inspection) करेंगे।',
+          'मंज़ूरी मिलने के बाद आपको ट्रेनिंग (प्रशिक्षण) दी जाएगी कि कीड़े कैसे पालने हैं, और फिर अनुदान मिलना शुरू हो जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Silk Center)', steps: [
+          'There is "Silk Development Center" in every district. Go there.',
+          'Fill form of scheme and submit map/khasra of your land.',
+          'Officers of dept will do Inspection of your field.',
+          'After getting approval you will be given training on how to rear worms, and then grant will start being received.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या रेशम की खेती में बहुत मेहनत है?', answer: 'खेती में ज़्यादा मेहनत नहीं है, बस कीड़ों को रोज़ ताज़े पत्ते खिलाने होते हैं और कमरे की साफ़-सफ़ाई रखनी होती है। 25-30 दिन की फसल होती है।' },
+      { question: 'रेशम की फसल साल में कितनी बार होती है?', answer: 'मध्य प्रदेश के मौसम में आप साल में आराम से 3 से 4 बार रेशम की फसल ले सकते हैं और हर बार नकद पैसा कमा सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is there lot of hard work in silk farming?', answer: 'There is not much hard work in farming, just worms have to be fed fresh leaves everyday and cleanliness of room has to be maintained. It is a crop of 25-30 days.' },
+      { question: 'How many times silk crop happens in a year?', answer: 'In weather of Madhya Pradesh you can comfortably take silk crop 3 to 4 times a year and earn cash money every time.' }
+    ]
+  },
+  'sardar-patel-coaching-yojana': {
+    ...reviewed,
+    title: 'सरदार पटेल कोचिंग प्रशिक्षण योजना',
+    english: 'Sardar Patel Coaching Yojana (Free UPSC/MPPSC Coaching)',
+    summary: 'अन्य पिछड़ा वर्ग (OBC) के मेधावी छात्र-छात्राओं को UPSC, MPPSC और बैंकिंग जैसी बड़ी प्रतियोगी परीक्षाओं की मुफ़्त कोचिंग की सुविधा।',
+    benefit: 'OBC वर्ग के छात्रों को सिविल सेवा और अन्य परीक्षाओं की तैयारी के लिए बड़े शहरों की नामी कोचिंग संस्थानों में मुफ़्त ट्रेनिंग और किताबों के लिए भत्ता मिलता है।',
+    department: 'पिछड़ा वर्ग एवं अल्पसंख्यक कल्याण विभाग',
+    sourceUrl: 'https://backwardwelfare.mp.gov.in/',
+    applicationUrl: 'https://backwardwelfare.mp.gov.in/',
+    documents: [
+      'छात्र का आधार कार्ड',
+      'समग्र आईडी',
+      'OBC जाति प्रमाण पत्र (Non-Creamy Layer)',
+      'ग्रेजुएशन (स्नातक) की मार्कशीट',
+      'आय प्रमाण पत्र (परिवार की वार्षिक आय ₹3 लाख से कम हो)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID',
+      'OBC Caste Certificate (Non-Creamy Layer)',
+      'Graduation marksheet',
+      'Income Certificate (Annual family income less than ₹3 lakh)',
+      'Bank passbook'
+    ],
+    steps: [
+      'विभाग की वेबसाइट पर कोचिंग के लिए जब फॉर्म निकलें, तब ऑनलाइन आवेदन करें।',
+      'सरकार द्वारा एक प्रवेश परीक्षा (Entrance Exam) आयोजित की जाती है, उसे दें।',
+      'परीक्षा में अच्छे नंबर (Merit) आने पर आपका चयन (Selection) होगा।',
+      'इसके बाद आपको भोपाल/इंदौर या दिल्ली के किसी बड़े कोचिंग संस्थान में मुफ़्त में पढ़ने के लिए भेज दिया जाएगा।'
+    ],
+    stepsEn: [
+      'Apply online on dept website when forms for coaching come out.',
+      'Give Entrance Exam organized by govt.',
+      'On getting good marks (Merit) in exam you will be selected.',
+      'After this you will be sent to study for free in any big coaching institute of Bhopal/Indore or Delhi.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'OBC वर्ग के स्नातक छात्र' }
+    ],
+    sourceNotes: 'OBC वर्ग के बच्चों को बड़े अफसरों वाले पदों पर पहुँचने में मदद करने की योजना।',
+    detailedDescription: [
+      'UPSC (कलेक्टर/SP) और MPPSC (डिप्टी कलेक्टर) जैसी परीक्षाएं पास करना बहुत कठिन होता है, जिसके लिए लाखों रुपये की फीस देकर अच्छी कोचिंग करनी पड़ती है। अन्य पिछड़ा वर्ग (OBC) के कई होनहार छात्र फीस के पैसे न होने की वजह से इन परीक्षाओं की तैयारी नहीं कर पाते और उनका अफसर बनने का सपना टूट जाता है।',
+      'OBC वर्ग के ऐसे गरीब लेकिन तेज़ दिमाग वाले बच्चों को अफ़सर बनाने के लिए सरकार ने "सरदार पटेल कोचिंग प्रशिक्षण योजना" शुरू की है। इसमें सरकार एक टेस्ट लेती है। जो बच्चे टेस्ट पास करते हैं, उनकी पूरी कोचिंग की फीस सरकार भर्ती है और उन्हें टॉप के कोचिंग सेंटर्स में मुफ़्त में पढ़ाया जाता है।'
+    ],
+    detailedDescriptionEn: [
+      'Passing exams like UPSC (Collector/SP) and MPPSC (Deputy Collector) is very difficult, for which one has to do good coaching by paying lakhs of rupees fee. Many talented students of Other Backward Class (OBC) are unable to prepare for these exams due to lack of fee money and their dream of becoming officer breaks.',
+      'To make such poor but sharp minded children of OBC category officers, govt has started "Sardar Patel Coaching Yojana". In this govt takes a test. Children who pass test, govt pays their entire coaching fee and they are taught for free in top coaching centers.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'पूरी फीस माफ़: बड़े कोचिंग संस्थानों की लाखों रुपये की फीस छात्र को नहीं देनी पड़ती, विभाग खुद कोचिंग को पैसा देता है।',
+          'किताबों के लिए भत्ता: कोचिंग के अलावा, अच्छी किताबें और स्टडी मटेरियल खरीदने के लिए भी नकद सहायता दी जाती है।',
+          'समान अवसर: यह योजना गाँव और छोटे शहरों के OBC बच्चों को भी बड़े शहरों के बच्चों के बराबर टक्कर देने के काबिल बनाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Full fee waived: Student does not have to pay lakhs of rupees fee of big coaching institutes, dept itself gives money to coaching.',
+          'Allowance for books: Apart from coaching, cash help is also given to buy good books and study material.',
+          'Equal opportunity: This scheme makes OBC children of villages and small towns capable to give equal competition to children of big cities.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी हो।',
+      'छात्र अन्य पिछड़ा वर्ग (OBC) से हो और वह क्रीमीलेयर में न आता हो (परिवार की वार्षिक आय ₹3 लाख से कम हो)।',
+      'छात्र ने ग्रेजुएशन (स्नातक) की डिग्री पूरी कर ली हो (यानी कॉलेज पास कर चुका हो)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be native of MP.',
+      'Student should be from Other Backward Class (OBC) and should not come in creamy layer (annual family income less than ₹3 lakh).',
+      'Student should have completed Graduation degree (i.e. has passed college).'
+    ],
+    exclusions: [
+      'अगर छात्र की पारिवारिक आय ₹3 लाख से ज़्यादा है, तो उसे यह सुविधा नहीं मिलेगी।',
+      'जो छात्र बीच में कोचिंग छोड़ देते हैं, उनसे सरकार कोचिंग पर खर्च किया गया पैसा वसूल सकती है।',
+      'एक छात्र को इस योजना का लाभ जीवन में केवल एक ही बार मिलता है।'
+    ],
+    exclusionsEn: [
+      'If student\'s family income is more than ₹3 lakh, then he will not get this facility.',
+      'Students who leave coaching in middle, govt can recover money spent on coaching from them.',
+      'A student gets benefit of this scheme only once in life.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (प्रवेश परीक्षा के ज़रिए)', steps: [
+          'इस योजना का लाभ लेने के लिए विभाग द्वारा हर साल एक विज्ञापन निकाला जाता है।',
+          'आपको विभाग की वेबसाइट पर जाकर ऑनलाइन आवेदन करना होता है।',
+          'इसके बाद एक प्रवेश परीक्षा (Entrance Test) होती है।',
+          'इस टेस्ट में जो बच्चे मेरिट में आते हैं (नंबर अच्छे लाते हैं), सिर्फ उन्हें ही मुफ़्त कोचिंग के लिए चुना जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Through Entrance Exam)', steps: [
+          'To take benefit of this scheme an advertisement is released every year by dept.',
+          'You have to go to dept website and apply online.',
+          'After this an Entrance Test takes place.',
+          'Children who come in merit (bring good marks) in this test, only they are selected for free coaching.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या इस कोचिंग से रहने का खर्च भी मिलता है?', answer: 'आमतौर पर यह योजना केवल कोचिंग की फीस और किताबों का खर्च उठाती है। अगर आप दूसरे शहर जाते हैं, तो रहने-खाने का खर्च आपको खुद उठाना पड़ सकता है (इसके लिए आप दूसरी हॉस्टल योजनाओं में आवेदन कर सकते हैं)।' },
+      { question: 'क्या 12वीं पास छात्र इसके लिए आवेदन कर सकते हैं?', answer: 'नहीं, यह योजना मुख्य रूप से UPSC और MPPSC के लिए है, इसलिए ग्रेजुएशन (कॉलेज) पास होना ज़रूरी है। कुछ विशेष कोर्स (जैसे NEET/JEE) के लिए अलग योजनाएं होती हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is living expense also received from this coaching?', answer: 'Usually this scheme only bears coaching fee and books expense. If you go to another city, you may have to bear living-food expense yourself (for this you can apply in other hostel schemes).' },
+      { question: 'Can 12th pass students apply for this?', answer: 'No, this scheme is mainly for UPSC and MPPSC, so graduation (college) pass is necessary. There are separate schemes for some special courses (like NEET/JEE).' }
+    ]
+  },
+  'kanya-saksharta-protsahan-yojana': {
+    ...reviewed,
+    title: 'कन्या साक्षरता प्रोत्साहन योजना',
+    english: 'Kanya Saksharta Protsahan Yojana (Girl Literacy Incentive)',
+    summary: 'SC/ST वर्ग की लड़कियों को 8वीं और 10वीं के बाद पढ़ाई न छोड़ने के लिए प्रेरित करने हेतु सरकार द्वारा नकद प्रोत्साहन (इनाम)।',
+    benefit: '9वीं कक्षा में एडमिशन लेने पर छात्रा को ₹1,000 और 11वीं कक्षा में एडमिशन लेने पर ₹2,000 की नकद राशि दी जाती है।',
+    department: 'जनजातीय कार्य विभाग / स्कूल शिक्षा विभाग',
+    sourceUrl: 'https://educationportal.mp.gov.in/',
+    applicationUrl: 'https://tribal.mp.gov.in/',
+    documents: [
+      'छात्रा का आधार कार्ड',
+      'समग्र आईडी',
+      'SC/ST (अनुसूचित जाति/जनजाति) का जाति प्रमाण पत्र',
+      'पिछली कक्षा (8वीं या 10वीं) पास करने की मार्कशीट',
+      'छात्रा का बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID',
+      'Caste Certificate of SC/ST (Scheduled Caste/Tribe)',
+      'Marksheet of passing previous class (8th or 10th)',
+      'Bank passbook of student'
+    ],
+    steps: [
+      '8वीं या 10वीं पास करने के बाद, अगली कक्षा (9वीं या 11वीं) में नियमित (Regular) एडमिशन लें।',
+      'स्कूल में एडमिशन के समय अपने शिक्षक (Teacher) को समग्र आईडी और जाति प्रमाण पत्र दें।',
+      'स्कूल द्वारा आपका नाम "शिक्षा पोर्टल" (Education Portal) पर दर्ज किया जाएगा।',
+      'जांच सही होने पर प्रोत्साहन का पैसा सीधे छात्रा के बैंक खाते में भेज दिया जाएगा।'
+    ],
+    stepsEn: [
+      'After passing 8th or 10th, take Regular admission in next class (9th or 11th).',
+      'At time of admission in school give Samagra ID and caste certificate to your Teacher.',
+      'Your name will be registered on "Education Portal" by school.',
+      'On verification being correct incentive money will be sent directly to student\'s bank account.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'कक्षा 9वीं या 11वीं में प्रवेशित SC/ST छात्राएं' },
+      { field: 'occupation', op: 'eq', value: 'student', label: 'स्कूली छात्राएं' }
+    ],
+    sourceNotes: 'गरीब आदिवासी और दलित परिवारों की बच्चियों का स्कूल ड्रॉप-आउट (School Drop-out) रोकने की योजना।',
+    detailedDescription: [
+      'हमारे समाज में आज भी बहुत से गरीब परिवारों में लड़कियों की पढ़ाई को ज़्यादा महत्व नहीं दिया जाता। अक्सर लड़कियां जब 8वीं या 10वीं पास कर लेती हैं, तो घरवाले उनकी पढ़ाई छुड़वा देते हैं (Drop-out) और घर के कामों या खेती में लगा देते हैं, क्योंकि उन्हें आगे की पढ़ाई का खर्च भारी लगने लगता है।',
+      'लड़कियों की पढ़ाई बीच में न छूटे, इसके लिए सरकार ने "कन्या साक्षरता प्रोत्साहन योजना" बनाई है। सरकार माता-पिता और बच्चियों को लालच (इनाम) देती है कि अगर आप 8वीं के बाद 9वीं में एडमिशन लोगे, तो आपको नकद पैसा मिलेगा, और अगर 10वीं के बाद 11वीं में एडमिशन लोगे, तो और ज़्यादा पैसा मिलेगा। इससे बच्चियों का स्कूल जाना बना रहता है।'
+    ],
+    detailedDescriptionEn: [
+      'Even today in many poor families of our society girl\'s education is not given much importance. Often when girls pass 8th or 10th, family members stop their studies (Drop-out) and put them in household chores or farming, because they start finding expense of further studies heavy.',
+      'So that girls\' studies do not stop in middle, govt has made "Kanya Saksharta Protsahan Yojana". Govt gives incentive (prize) to parents and girls that if you take admission in 9th after 8th, you will get cash money, and if you take admission in 11th after 10th, you will get more money. By this girls going to school continues.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में कितना पैसा मिलता है?', points: [
+          '9वीं में आने पर: 8वीं पास करके 9वीं में नियमित (Regular) एडमिशन लेने पर एकमुश्त ₹1,000 मिलते हैं।',
+          '11वीं में आने पर: 10वीं पास करके 11वीं कक्षा में एडमिशन लेने पर एकमुश्त ₹2,000 का इनाम मिलता है।',
+          'सीधे बैंक खाते में: यह पैसा स्कूल की ड्रेस, किताबें या कॉपी खरीदने के लिए छात्रा के खाते में सीधे डाला जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much money is received in scheme?', points: [
+          'On coming to 9th: On passing 8th and taking Regular admission in 9th lump sum ₹1,000 is received.',
+          'On coming to 11th: On passing 10th and taking admission in 11th class lump sum prize of ₹2,000 is received.',
+          'Directly in bank account: This money is put directly in student\'s account to buy school dress, books or notebooks.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्रा अनुसूचित जाति (SC) या अनुसूचित जनजाति (ST) वर्ग से होनी चाहिए।',
+      'छात्रा ने पिछली कक्षा (8वीं या 10वीं) पास कर ली हो।',
+      'छात्रा ने अगली कक्षा (9वीं या 11वीं) में एक नियमित (Regular) विद्यार्थी के रूप में प्रवेश लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be from Scheduled Caste (SC) or Scheduled Tribe (ST) category.',
+      'Student should have passed previous class (8th or 10th).',
+      'Student should have taken admission in next class (9th or 11th) as a Regular student.'
+    ],
+    exclusions: [
+      'प्राइवेट (Private) फॉर्म भरकर परीक्षा देने वाली लड़कियों को यह पैसा नहीं मिलता (नियमित रूप से स्कूल जाना ज़रूरी है)।',
+      'अगर कोई लड़की एक ही कक्षा में फेल हो जाती है और दोबारा उसी में पढ़ती है, तो उसे यह लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'Girls giving exam by filling Private form do not get this money (going to school regularly is necessary).',
+      'If any girl fails in same class and studies in it again, then she will not get this benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (स्कूल के माध्यम से)', steps: [
+          'इस योजना के लिए अलग से ऑनलाइन कैफे जाने की ज़रूरत नहीं है।',
+          'जब आप जुलाई-अगस्त में स्कूल में नया एडमिशन (9वीं या 11वीं) लेती हैं, तो स्कूल के शिक्षक आपका फॉर्म खुद भरवाते हैं।',
+          'आपको बस अपना बैंक खाता नंबर (Passbook) और समग्र आईडी सही-सही स्कूल में जमा करनी होती है।',
+          'शिक्षा पोर्टल पर सत्यापन के बाद पैसा खाते में आ जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through School)', steps: [
+          'There is no need to go to online cafe separately for this scheme.',
+          'When you take new admission (9th or 11th) in school in July-August, school teachers themselves get your form filled.',
+          'You just have to submit your bank account number (Passbook) and Samagra ID correctly in school.',
+          'After verification on education portal money comes in account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह पैसा हर महीने मिलता है?', answer: 'नहीं, यह पैसा सिर्फ एक बार (One-time) मिलता है, जब आप 9वीं में प्रवेश लेते हैं (₹1,000), और फिर दोबारा तब मिलता है जब आप 11वीं में प्रवेश लेते हैं (₹2,000)।' },
+      { question: 'क्या सामान्य वर्ग (General) की लड़कियों को भी यह मिलता है?', answer: 'नहीं, कन्या साक्षरता प्रोत्साहन योजना विशेष रूप से SC (दलित) और ST (आदिवासी) वर्ग की लड़कियों की शिक्षा दर बढ़ाने के लिए है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this money received every month?', answer: 'No, this money is received only One-time, when you take admission in 9th (₹1,000), and then received again when you take admission in 11th (₹2,000).' },
+      { question: 'Do girls of General category also get this?', answer: 'No, Kanya Saksharta Protsahan Yojana is specially to increase education rate of SC (Dalit) and ST (Tribal) category girls.' }
+    ]
+  },
+  'obc-minority-udyam-yojana': {
+    ...reviewed,
+    title: 'पिछड़ा वर्ग तथा अल्पसंख्यक उद्यम योजना',
+    english: 'OBC Minority Udyam Yojana (Big Enterprise Loan)',
+    summary: 'ओबीसी (OBC) और अल्पसंख्यक (Minority) वर्ग के लोगों को बड़े उद्योग (Factory/Plant) लगाने के लिए ₹10 लाख से ₹50 लाख तक का सस्ता कर्ज़।',
+    benefit: 'बड़ा बिज़नेस या उद्योग (जैसे राइस मिल, मैन्युफैक्चरिंग) लगाने के लिए सरकार द्वारा 50 लाख तक का लोन, जिस पर 5% ब्याज अनुदान (सब्सिडी) और मार्जिन मनी मिलती है।',
+    department: 'पिछड़ा वर्ग तथा अल्पसंख्यक वित्त एवं विकास निगम',
+    sourceUrl: 'https://backwardwelfare.mp.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी',
+      'OBC या अल्पसंख्यक होने का प्रमाण पत्र',
+      '10वीं पास की मार्कशीट (न्यूनतम)',
+      'बिज़नेस की डिटेल्ड प्रोजेक्ट रिपोर्ट (DPR)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of applicant',
+      'Samagra ID',
+      'Certificate of being OBC or Minority',
+      '10th pass marksheet (minimum)',
+      'Detailed Project Report (DPR) of business',
+      'Bank passbook'
+    ],
+    steps: [
+      'MPOnline के SAMAST पोर्टल पर अपना बिज़नेस प्लान (DPR) और सभी कागज़ात अपलोड करके ऑनलाइन फॉर्म भरें।',
+      'ज़िला स्तर पर विभाग की एक समिति (Task Force) आपके बिज़नेस प्लान की जाँच करेगी और आपका इंटरव्यू लेगी।',
+      'पास होने पर फाइल बैंक को भेजी जाएगी।',
+      'बैंक लोन पास करेगा और सरकार उस लोन पर अपनी तरफ से सब्सिडी (ब्याज छूट और मार्जिन मनी) जारी कर देगी।'
+    ],
+    stepsEn: [
+      'Fill online form by uploading your business plan (DPR) and all documents on SAMAST portal of MPOnline.',
+      'A committee of dept (Task Force) at district level will check your business plan and take your interview.',
+      'On passing file will be sent to bank.',
+      'Bank will pass loan and govt will issue subsidy (interest discount and margin money) on that loan from its side.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'पिछड़े वर्ग के लोगों को छोटे रोज़गार से निकालकर बड़े उद्योगपति बनाने की पहल।',
+    detailedDescription: [
+      'अक्सर पिछड़ा वर्ग (OBC) या अल्पसंख्यक (जैसे मुस्लिम, जैन, सिख) समुदाय के लोग अपनी छोटी-मोटी दुकान या व्यापार तक ही सीमित रह जाते हैं। अगर कोई बड़ा कारखाना, राइस मिल या आधुनिक मशीनरी वाला उद्योग लगाना चाहे, तो करोड़ों का खर्च आता है और बैंक आसानी से इतना बड़ा लोन नहीं देते।',
+      'ऐसे महत्वाकांक्षी युवाओं को बड़ा उद्योगपति बनाने के लिए मध्य प्रदेश सरकार ने "पिछड़ा वर्ग तथा अल्पसंख्यक उद्यम योजना" बनाई है। अगर आपके पास कोई अच्छा बिज़नेस आइडिया है और आप बड़ा प्लांट लगाना चाहते हैं, तो सरकार आपको ₹50 लाख तक का लोन दिलवाती है। यही नहीं, लोन के ब्याज में 5 साल तक भारी छूट (5% ब्याज अनुदान) भी देती है।'
+    ],
+    detailedDescriptionEn: [
+      'Often people of backward class (OBC) or minority (like Muslim, Jain, Sikh) community remain limited to their small shop or trade. If someone wants to setup a big factory, rice mill or industry with modern machinery, it costs crores and banks do not give such big loan easily.',
+      'To make such ambitious youth big industrialists, MP govt has made "OBC Minority Udyam Yojana". If you have any good business idea and you want to setup big plant, then govt gets you loan upto ₹50 lakh. Not only this, it also gives heavy discount in loan interest for 5 years (5% interest subsidy).'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में सरकार क्या मदद करती है?', points: [
+          'बड़ा लोन (Big Loan): उद्योग (Manufacturing) लगाने के लिए ₹10 लाख से लेकर ₹50 लाख तक का बैंक लोन आसानी से मिल जाता है।',
+          'मार्जिन मनी (Margin Money): बिज़नेस शुरू करने के लिए जो शुरुआती पैसा (Margin Money) आपको लगाना होता है, उसका एक बड़ा हिस्सा सरकार अपनी तरफ से देती है।',
+          'ब्याज अनुदान (Interest Subsidy): बैंक आपसे जो ब्याज लेगा, उसमें से 5% ब्याज सरकार लगातार 5 सालों तक खुद भरेगी, जिससे आपकी किस्त (EMI) बहुत कम हो जाएगी।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What help govt gives in scheme?', points: [
+          'Big Loan: Bank loan from ₹10 lakh to ₹50 lakh is easily available to setup industry (Manufacturing).',
+          'Margin Money: A big part of initial money (Margin Money) that you have to put to start business, govt gives from its side.',
+          'Interest Subsidy: From interest bank will charge you, 5% interest govt will itself pay continuously for 5 years, due to which your installment (EMI) will become very less.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी हो।',
+      'आवेदक अन्य पिछड़ा वर्ग (OBC) या अल्पसंख्यक (Minority) श्रेणी में आता हो।',
+      'उम्र 18 से 45 वर्ष के बीच होनी चाहिए।',
+      'कम से कम 10वीं कक्षा पास होना ज़रूरी है।',
+      'आवेदक किसी भी सरकारी या प्राइवेट बैंक का डिफाल्टर (Defaulter) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant should be native of MP.',
+      'Applicant should come in Other Backward Class (OBC) or Minority category.',
+      'Age should be between 18 to 45 years.',
+      'Passing at least 10th class is necessary.',
+      'Applicant should not be Defaulter of any govt or private bank.'
+    ],
+    exclusions: [
+      'यह योजना सिर्फ नया उद्योग लगाने के लिए है। पुराने चल रहे बिज़नेस का कर्ज़ चुकाने के लिए यह पैसा नहीं मिलेगा।',
+      'अगर आपका नाम बैंक की डिफाल्टर लिस्ट (CIBIL खराब है) में है, तो लोन रिजेक्ट हो जाएगा।',
+      'जिनके परिवार की वार्षिक आय बहुत ज़्यादा (क्रीमीलेयर) है, वे इसके पात्र नहीं माने जा सकते हैं।'
+    ],
+    exclusionsEn: [
+      'This scheme is only to setup new industry. This money will not be received to pay debt of old running business.',
+      'If your name is in bank\'s defaulter list (CIBIL is bad), then loan will be rejected.',
+      'Those whose family\'s annual income is very high (Creamy layer), they may not be considered eligible for it.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST पोर्टल)', steps: [
+          'योजना के लिए आवेदन पूरी तरह ऑनलाइन है। MPOnline के SAMAST (समस्त) पोर्टल पर जाएं।',
+          'वहां "उद्यम योजना" चुनें और अपनी DPR (प्रोजेक्ट रिपोर्ट) अपलोड करें (यह रिपोर्ट किसी CA से बनवाना बेहतर रहता है)।',
+          'ऑनलाइन आवेदन के बाद विभाग आपको इंटरव्यू के लिए बुलाएगा।',
+          'आपके बिज़नेस प्लान को पास करने के बाद फाइल बैंक को जाएगी और लोन खाते में आ जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Application for scheme is completely online. Go to SAMAST portal of MPOnline.',
+          'Select "Udyam Yojana" there and upload your DPR (Project Report) (It is better to get this report made by a CA).',
+          'After online application dept will call you for interview.',
+          'After passing your business plan file will go to bank and loan will come in account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं दुकान खोलने के लिए 50 लाख का लोन ले सकता हूँ?', answer: 'नहीं, 50 लाख तक का बड़ा लोन मुख्य रूप से विनिर्माण (Manufacturing) यानी कोई कारखाना, प्लांट या बड़ी मशीनरी लगाने के लिए मिलता है। साधारण दुकान के लिए छोटी स्वरोज़गार योजनाएं हैं।' },
+      { question: 'प्रोजेक्ट रिपोर्ट (DPR) क्या होती है?', answer: 'यह एक बुकलेट होती है जिसमें लिखा होता है कि आप कौन सा बिज़नेस करेंगे, कच्चा माल कहाँ से लाएंगे, कितना खर्चा आएगा और कितनी कमाई होगी। इसे चार्टर्ड अकाउंटेंट (CA) बनाते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can I take loan of 50 lakh to open shop?', answer: 'No, big loan upto 50 lakh is mainly received for Manufacturing i.e. setting up any factory, plant or big machinery. For ordinary shop there are small self-employment schemes.' },
+      { question: 'What is Project Report (DPR)?', answer: 'This is a booklet which contains written what business you will do, from where raw material will be brought, how much expense will come and how much earning will be there. Chartered Accountants (CA) make it.' }
+    ]
+  },
+  'obc-minority-swarojgar-yojana': {
+    ...reviewed,
+    title: 'पिछड़ा वर्ग तथा अल्पसंख्यक स्वरोजगार योजना',
+    english: 'OBC Minority Swarojgar Yojana (Self Employment)',
+    summary: 'OBC और अल्पसंख्यक वर्ग के युवाओं को खुद की छोटी दुकान, सर्विस सेंटर या वर्कशॉप खोलने के लिए ₹1 लाख से ₹10 लाख तक का सरकारी लोन।',
+    benefit: 'बेरोज़गार युवाओं को नया व्यवसाय शुरू करने के लिए 10 लाख तक का बैंक लोन मिलता है, जिसमें सरकार 25% (अधिकतम 2 लाख) मार्जिन मनी देती है।',
+    department: 'पिछड़ा वर्ग तथा अल्पसंख्यक वित्त एवं विकास निगम',
+    sourceUrl: 'https://backwardwelfare.mp.gov.in/',
+    applicationUrl: 'https://samast.mponline.gov.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी',
+      'OBC या अल्पसंख्यक होने का प्रमाण पत्र',
+      'कम से कम 5वीं पास की मार्कशीट',
+      'मूल निवास प्रमाण पत्र',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of applicant',
+      'Samagra ID',
+      'Certificate of being OBC or Minority',
+      'Marksheet of at least 5th pass',
+      'Domicile certificate',
+      'Bank passbook'
+    ],
+    steps: [
+      'MPOnline के SAMAST पोर्टल पर "स्वरोज़गार योजना" चुनें और ऑनलाइन फॉर्म भरें।',
+      'अपनी दुकान या छोटे बिज़नेस का विवरण (कि क्या काम करना चाहते हैं) पोर्टल पर डालें।',
+      'ज़िला स्तर पर अधिकारी इसकी जांच करेंगे और फाइल आपके नज़दीकी बैंक में भेजेंगे।',
+      'बैंक लोन मंज़ूर करेगा और सरकार आपकी मार्जिन मनी अनुदान (सब्सिडी) खाते में भेज देगी।'
+    ],
+    stepsEn: [
+      'Select "Swarojgar Yojana" on SAMAST portal of MPOnline and fill online form.',
+      'Enter details of your shop or small business (what work you want to do) on portal.',
+      'Officers at district level will check it and send file to your nearest bank.',
+      'Bank will approve loan and govt will send your margin money grant (subsidy) in account.'
+    ],
+    rules: [
+      { field: 'age', op: 'gte', value: 18, label: 'आयु 18 से 45 वर्ष' },
+      { field: 'age', op: 'lte', value: 45, label: 'अधिकतम 45 वर्ष' }
+    ],
+    sourceNotes: 'बेरोज़गार युवाओं को नौकरी खोजने की बजाय खुद की दुकान/बिज़नेस खोलने में मदद।',
+    detailedDescription: [
+      'आजकल बहुत से युवा बेरोज़गार हैं। वे नौकरी के इंतज़ार में बैठे रहते हैं जबकि वे खुद का कोई छोटा-मोटा काम (जैसे - सिलाई की दुकान, मोबाइल रिपेयरिंग, ब्यूटी पार्लर, किराना दुकान या वर्कशॉप) शुरू कर सकते हैं। लेकिन काम शुरू करने के लिए जो 1-2 लाख रुपये चाहिए होते हैं, वो उनके पास नहीं होते।',
+      'इस समस्या को दूर करने के लिए सरकार "पिछड़ा वर्ग तथा अल्पसंख्यक स्वरोजगार योजना" चला रही है। अगर आप OBC या अल्पसंख्यक वर्ग से हैं, तो सरकार आपको अपना खुद का काम (स्वरोज़गार) शुरू करने के लिए 10 लाख रुपये तक का कर्ज़ आसानी से दिलवाती है। साथ ही 25% पैसा सरकार अपनी तरफ से (मार्जिन मनी) देती है ताकि आपको शुरू में अपनी जेब से ज़्यादा पैसा न लगाना पड़े।'
+    ],
+    detailedDescriptionEn: [
+      'Nowadays many youth are unemployed. They sit waiting for job whereas they can start some small work of their own (like - tailoring shop, mobile repairing, beauty parlor, grocery shop or workshop). But 1-2 lakh rupees which are needed to start work, they do not have.',
+      'To solve this problem govt is running "OBC Minority Swarojgar Yojana". If you are from OBC or minority category, then govt gets you loan easily upto 10 lakh rupees to start your own work (self-employment). Also 25% money govt gives from its side (margin money) so that you do not have to put much money from your pocket in beginning.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'आसान कर्ज़: 1 लाख से लेकर 10 लाख तक का बैंक लोन बिना ज़्यादा भागदौड़ के मिल जाता है।',
+          'सब्सिडी (Margin Money): लोन का 25% (अधिकतम ₹2 लाख) सरकार खुद जमा कर देती है। यानी अगर आपने 1 लाख का लोन लिया, तो 25 हज़ार रुपये सरकार देगी, आपको सिर्फ 75 हज़ार ही चुकाने होंगे।',
+          'रोज़गार की आज़ादी: आप अपनी पसंद का कोई भी लीगल काम (दुकान, सर्विस सेंटर) शुरू कर सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Easy loan: Bank loan from 1 lakh to 10 lakh is available without much running around.',
+          'Subsidy (Margin Money): 25% of loan (max ₹2 lakh) govt itself deposits. Meaning if you took 1 lakh loan, then govt will give 25 thousand rupees, you will have to repay only 75 thousand.',
+          'Freedom of employment: You can start any legal work (shop, service center) of your choice.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'आवेदक अन्य पिछड़ा वर्ग (OBC) या अल्पसंख्यक (मुस्लिम, सिख, ईसाई आदि) समुदाय का होना चाहिए।',
+      'आवेदक की उम्र 18 साल से 45 साल के बीच होनी चाहिए।',
+      'कम से कम 5वीं कक्षा पास होना ज़रूरी है।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant should be native of MP.',
+      'Applicant should be of Other Backward Class (OBC) or Minority (Muslim, Sikh, Christian etc) community.',
+      'Age of applicant should be between 18 years to 45 years.',
+      'Passing at least 5th class is necessary.'
+    ],
+    exclusions: [
+      'जो व्यक्ति पहले से ही किसी सरकारी बैंक का डिफाल्टर (कर्ज़ न चुकाने वाला) है, उसे यह लोन नहीं मिलेगा।',
+      'जिसने पहले से प्रधानमंत्री रोज़गार योजना या मुख्यमंत्री उद्यम क्रांति योजना में लोन ले रखा है, वह इसके लिए पात्र नहीं है।',
+      'यह लोन सिर्फ नया काम शुरू करने के लिए है, पुराने व्यापार को बढ़ाने के लिए नहीं।'
+    ],
+    exclusionsEn: [
+      'Person who is already a defaulter (not repaying loan) of any govt bank, will not get this loan.',
+      'One who has already taken loan in Prime Minister Employment Scheme or Mukhyamantri Udyam Kranti Yojana, is not eligible for this.',
+      'This loan is only to start new work, not to expand old business.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (SAMAST पोर्टल)', steps: [
+          'अपने मोबाइल या कंप्यूटर से MPOnline के "SAMAST पोर्टल" (samast.mponline.gov.in) पर जाएं।',
+          'अपना रजिस्ट्रेशन करें और "स्वरोज़गार योजना" का फॉर्म भरें।',
+          'अपने सभी दस्तावेज़ (आधार, जाति, मार्कशीट) स्कैन करके अपलोड करें।',
+          'फाइल पास होने पर बैंक मैनेजर आपको बुलाएगा और लोन का पैसा आपके खाते में ट्रांसफर कर दिया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (SAMAST Portal)', steps: [
+          'Go to "SAMAST portal" of MPOnline from your mobile or computer.',
+          'Do your registration and fill form of "Swarojgar Yojana".',
+          'Scan and upload all your documents (Aadhaar, caste, marksheet).',
+          'On file passing bank manager will call you and loan money will be transferred in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मैं पशुपालन या खेती के लिए यह लोन ले सकता हूँ?', answer: 'नहीं, यह योजना मुख्य रूप से उद्योग, सर्विस (जैसे रिपेयरिंग) और व्यापार (जैसे दुकान) के लिए है। पशुपालन के लिए कामधेनु या आचार्य विद्यासागर जैसी अन्य योजनाएं हैं।' },
+      { question: 'क्या बैंक में कोई गारंटी देनी होगी?', answer: '10 लाख तक के लोन के लिए आमतौर पर सरकार क्रेडिट गारंटी स्कीम (CGTMSE) के तहत कवर देती है, लेकिन बैंक आपकी ज़मीनी हकीकत देखकर कुछ दस्तावेज़ मांग सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Can I take this loan for animal husbandry or farming?', answer: 'No, this scheme is mainly for industry, service (like repairing) and trade (like shop). For animal husbandry there are other schemes like Kamdhenu or Acharya Vidyasagar.' },
+      { question: 'Will any guarantee have to be given in bank?', answer: 'For loan upto 10 lakh usually govt gives cover under Credit Guarantee Scheme (CGTMSE), but bank can ask for some documents seeing your ground reality.' }
+    ]
+  },
+  'dnt-swarojgar-yojana': {
+    ...reviewed,
+    title: 'विमुक्त घुमन्तु और अर्द्ध घुमन्तु स्वरोजगार योजना',
+    english: 'DNT Swarojgar Yojana (Denotified Nomadic Tribes)',
+    summary: 'कंजड़, बंजारा, कालबेलिया जैसी विमुक्त व घुमन्तु (DNT) जनजातियों के लोगों को अपना खुद का पारंपरिक काम शुरू करने के लिए सरकारी लोन।',
+    benefit: 'अपना खुद का काम या व्यवसाय शुरू करने के लिए विमुक्त एवं घुमन्तु जातियों को ₹1 लाख तक का बैंक लोन मिलता है, जिसमें 25% पैसा सरकार (अनुदान) देती है।',
+    department: 'विमुक्त, घुमन्तु एवं अर्द्धघुमन्तु जनजाति कल्याण विभाग',
+    sourceUrl: 'https://denotifiedtribes.mp.gov.in/',
+    applicationUrl: 'https://denotifiedtribes.mp.gov.in/',
+    documents: [
+      'आवेदक का आधार कार्ड',
+      'समग्र आईडी',
+      'विमुक्त, घुमन्तु या अर्द्ध-घुमन्तु (DNT) जाति का प्रमाण पत्र',
+      'मूल निवास प्रमाण पत्र',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of applicant',
+      'Samagra ID',
+      'Caste certificate of Denotified, Nomadic or Semi-nomadic (DNT)',
+      'Domicile certificate',
+      'Bank passbook'
+    ],
+    steps: [
+      'अपने ज़िले के "विमुक्त जाति कल्याण विभाग" (आदिवासी विकास विभाग के पास) के कार्यालय में जाएं।',
+      'वहाँ से स्वरोज़गार योजना का ऑफलाइन फॉर्म लें और उसे भरकर सारे दस्तावेज़ों के साथ जमा करें।',
+      'अधिकारी आपके फॉर्म की जाँच करके उसे आपके नज़दीकी बैंक में भेज देंगे।',
+      'बैंक आपका काम (जैसे सिलाई मशीन, लोहारी के औज़ार, ढोल-बाजे) देखकर लोन देगा और सरकार उसमें 25% की छूट देगी।'
+    ],
+    stepsEn: [
+      'Go to office of "Denotified Tribe Welfare Dept" (near Tribal Development Dept) of your district.',
+      'Take offline form of Swarojgar Yojana from there and submit it by filling with all documents.',
+      'Officers will check your form and send it to your nearest bank.',
+      'Bank will give loan seeing your work (like sewing machine, blacksmith tools, drums-instruments) and govt will give 25% discount in it.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'self-employed', label: 'विमुक्त, घुमन्तु व अर्द्ध-घुमन्तु जाति सदस्य' }
+    ],
+    sourceNotes: 'विमुक्त और घुमक्कड़ जीवन जीने वाले समाज को मुख्यधारा से जोड़कर स्थायी रोज़गार देने की पहल।',
+    detailedDescription: [
+      'हमारे समाज में कई ऐसी जनजातियां हैं जिनका कोई एक स्थायी ठिकाना नहीं होता, वे जगह-जगह घूमकर अपना जीवन यापन करते हैं (जैसे- बंजारा, कालबेलिया, नट, कंजड़ आदि)। इन समाजों के पास अपने पारंपरिक हुनर तो होते हैं (जैसे- लोहे के औज़ार बनाना, हस्तशिल्प, खेल दिखाना), लेकिन पैसे की कमी के कारण वे कोई बड़ा और स्थायी काम शुरू नहीं कर पाते।',
+      'इन घुमक्कड़ (Nomadic) समाजों को एक जगह रहकर सम्मान की ज़िंदगी देने के लिए मध्य प्रदेश सरकार ने "विमुक्त, घुमन्तु और अर्द्ध-घुमन्तु स्वरोजगार योजना" शुरू की है। इसमें अगर कोई व्यक्ति अपना पारंपरिक या नया काम (दुकान, सिलाई, कारीगरी) शुरू करना चाहता है, तो उसे ₹1 लाख तक का लोन आसानी से मिल जाता है। इस लोन को चुकाने में सरकार बहुत मदद करती है।'
+    ],
+    detailedDescriptionEn: [
+      'There are many such tribes in our society who do not have any permanent place, they live their life by wandering from place to place (like- Banjara, Kalbelia, Nat, Kanjar etc). These societies have their traditional skills (like- making iron tools, handicrafts, showing games), but due to lack of money they are unable to start any big and permanent work.',
+      'To give a life of respect to these Nomadic societies by staying at one place, MP govt has started "DNT Swarojgar Yojana". In this if any person wants to start his traditional or new work (shop, sewing, craftsmanship), then he gets loan upto ₹1 lakh easily. Govt helps a lot in repaying this loan.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'लोन की सुविधा: छोटे औज़ार खरीदने, दुकान का सामान भरने या कच्चा माल लेने के लिए 1 लाख रुपये तक का बैंक लोन मिलता है।',
+          '25% की बड़ी छूट (Subsidy): मान लीजिए आपने 1 लाख का लोन लिया, तो उसमें से 25,000 रुपये सरकार खुद बैंक को दे देगी। आपको सिर्फ 75,000 रुपये ही किश्तों में चुकाने होंगे।',
+          'ज़िंदगी में ठहराव: इससे घुमक्कड़ परिवारों को दर-दर भटकने की बजाय एक जगह रहकर स्थायी काम करने का मौका मिलता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Loan facility: Bank loan upto 1 lakh rupees is available to buy small tools, fill shop goods or buy raw material.',
+          '25% big discount (Subsidy): Suppose you took 1 lakh loan, then from that 25,000 rupees govt itself will give to bank. You will have to repay only 75,000 rupees in installments.',
+          'Stability in life: By this nomadic families get chance to do permanent work staying at one place instead of wandering from door to door.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'आवेदक मध्य प्रदेश का मूल निवासी हो।',
+      'आवेदक का नाम विमुक्त, घुमन्तु या अर्द्ध-घुमन्तु (DNT) जातियों की सरकारी लिस्ट में होना चाहिए। (जैसे- बंजारा, सांसी, कंजड़, नट आदि)।',
+      'आपके पास अपना जाति प्रमाण पत्र होना ज़रूरी है।',
+      'आवेदक किसी भी बैंक का पुराना डिफाल्टर (कर्ज़ न चुकाने वाला) नहीं होना चाहिए।'
+    ],
+    eligibilityDescriptionEn: [
+      'Applicant should be native of MP.',
+      'Applicant\'s name should be in govt list of Denotified, Nomadic or Semi-nomadic (DNT) tribes. (Like- Banjara, Sansi, Kanjar, Nat etc).',
+      'Having your caste certificate is necessary.',
+      'Applicant should not be an old defaulter (not repaying loan) of any bank.'
+    ],
+    exclusions: [
+      'यह योजना सामान्य वर्ग (General), OBC या अन्य किसी वर्ग के लिए नहीं है, यह केवल DNT (घुमक्कड़) जातियों के लिए है।',
+      'अगर आपका काम 1 लाख से ज़्यादा का है (जैसे बड़ी गाड़ी खरीदना), तो यह योजना काम नहीं आएगी (यह छोटे रोज़गार के लिए है)।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for General category, OBC or any other category, it is only for DNT (Nomadic) tribes.',
+      'If your work is of more than 1 lakh (like buying big vehicle), then this scheme will not be useful (this is for small employment).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (ज़िला कार्यालय)', steps: [
+          'इस योजना का ऑनलाइन फॉर्म बहुत कम भरा जाता है। इसके लिए आपको अपने ज़िले के कलेक्ट्रेट या पंचायत कार्यालय जाना होगा।',
+          'वहां "सहायक आयुक्त, आदिवासी विकास" या "विमुक्त जाति कल्याण अधिकारी" से मिलें।',
+          'उनसे इस योजना का फॉर्म मांगें, उसे भरें और अपने सारे दस्तावेज़ (खासकर DNT का जाति प्रमाण पत्र) लगाकर वहीं जमा कर दें।',
+          'वे आपके फॉर्म को पास करके बैंक भेजेंगे, जहाँ से आपको पैसा मिल जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (District Office)', steps: [
+          'Online form of this scheme is rarely filled. For this you have to go to Collectorate or Panchayat office of your district.',
+          'Meet "Assistant Commissioner, Tribal Development" or "Denotified Tribe Welfare Officer" there.',
+          'Ask for form of this scheme from them, fill it and submit it there only attaching all your documents (especially caste certificate of DNT).',
+          'They will pass your form and send to bank, from where you will get money.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'DNT (घुमन्तु) जाति प्रमाण पत्र कैसे बनता है?', answer: 'यह प्रमाण पत्र आपके तहसील कार्यालय (SDM/तहसीलदार) द्वारा बनता है। इसके लिए आपको अपने परिवार के पुराने दस्तावेज़ या सरपंच/पार्षद का लेटर देना होता है कि आपका परिवार घुमक्कड़ जीवन जीता आया है।' },
+      { question: 'क्या मैं 1 लाख से ज़्यादा का लोन ले सकता हूँ?', answer: 'इस विशेष योजना में लिमिट 1 लाख रुपये ही है। अगर आपको ज़्यादा बड़ा लोन चाहिए तो आप "मुख्यमंत्री उद्यम क्रांति योजना" (1 लाख से 50 लाख) में आवेदन कर सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'How is DNT (Nomadic) caste certificate made?', answer: 'This certificate is made by your Tehsil office (SDM/Tehsildar). For this you have to give old documents of your family or letter of Sarpanch/Corporator that your family has been living a nomadic life.' },
+      { question: 'Can I take loan of more than 1 lakh?', answer: 'In this special scheme limit is 1 lakh rupees only. If you need bigger loan then you can apply in "Mukhyamantri Udyam Kranti Yojana" (1 lakh to 50 lakh).' }
+    ]
+  },
+  'sambal-shiksha-protsahan-yojana': {
+    ...reviewed,
+    title: 'मुख्यमंत्री जन कल्याण (शिक्षा प्रोत्साहन) योजना',
+    english: 'Sambal Shiksha Protsahan Yojana (College Fee Waiver)',
+    summary: 'संबल कार्ड (Sambal Card) वाले गरीब मज़दूरों के बच्चों की इंजीनियरिंग (B.Tech), मेडिकल (MBBS) या कॉलेज की पूरी फीस सरकार भरती है।',
+    benefit: 'मज़दूरों के बच्चों को उच्च शिक्षा (MBBS, Engineering, MBA, ITI, Polytechnic) के लिए लगने वाली लाखों रुपये की ट्यूशन फीस (Tuition Fee) सरकार सीधे कॉलेज को देती है।',
+    department: 'श्रम विभाग',
+    sourceUrl: 'https://sambal.mp.gov.in/',
+    applicationUrl: 'http://scholarshipportal.mp.nic.in/',
+    documents: [
+      'छात्र और माता-पिता का आधार कार्ड',
+      'समग्र आईडी',
+      'माता या पिता का वैध संबल कार्ड (Sambal Card)',
+      '12वीं की मार्कशीट',
+      'NEET/JEE (कॉम्पिटिटिव एग्जाम) का रिजल्ट या आवंटन पत्र (अगर लागू हो)',
+      'कॉलेज में एडमिशन की रसीद और फीस का ब्यौरा'
+    ],
+    documentsEn: [
+      'Aadhaar card of student and parents',
+      'Samagra ID',
+      'Valid Sambal Card of mother or father',
+      '12th marksheet',
+      'Result or allotment letter of NEET/JEE (competitive exam) (if applicable)',
+      'College admission receipt and fee details'
+    ],
+    steps: [
+      'सबसे पहले 12वीं के बाद किसी भी अच्छे सरकारी या प्राइवेट कॉलेज में एडमिशन लें।',
+      'एडमिशन लेने के बाद, एमपी स्कॉलरशिप पोर्टल (MP Scholarship Portal) पर "संबल शिक्षा प्रोत्साहन योजना" के तहत ऑनलाइन फॉर्म भरें।',
+      'फॉर्म भरते समय अपने पिता/माता का संबल कार्ड नंबर ज़रूर डालें।',
+      'ऑनलाइन फॉर्म का प्रिंट निकालकर और सभी कागज़ लगाकर अपने कॉलेज में जमा कर दें। कॉलेज इसे वेरीफाई करेगा और आपकी फीस सरकार भर देगी।'
+    ],
+    stepsEn: [
+      'First take admission in any good govt or private college after 12th.',
+      'After taking admission, fill online form under "Sambal Shiksha Protsahan Yojana" on MP Scholarship Portal.',
+      'While filling form must enter Sambal Card number of your father/mother.',
+      'Take print out of online form and attach all papers and submit in your college. College will verify it and govt will pay your fee.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'संबल कार्डधारी श्रमिकों के अध्ययनरत बच्चे' }
+    ],
+    sourceNotes: 'गरीब असंगठित मज़दूरों के बच्चों को पैसे की कमी के कारण डॉक्टर/इंजीनियर बनने से न रोकने की सबसे बड़ी योजना।',
+    detailedDescription: [
+      'एक गरीब मज़दूर (जो दिहाड़ी मज़दूरी, खेती या ठेले का काम करता है) का बच्चा अगर पढ़ने में बहुत होशियार भी हो, तो भी वह प्राइवेट कॉलेज से इंजीनियरिंग (B.Tech) या मेडिकल (MBBS) नहीं कर पाता। क्योंकि इन कोर्स की फीस लाखों रुपये होती है, जो मज़दूर कभी नहीं चुका सकता। इस वजह से कई होनहार बच्चे पढ़ाई छोड़ देते हैं।',
+      'गरीब मज़दूरों के बच्चों को डॉक्टर या इंजीनियर बनने का सपना पूरा करने के लिए सरकार ने "संबल शिक्षा प्रोत्साहन योजना" चलाई है। अगर आपके माता-पिता के पास "संबल कार्ड" (असंगठित मज़दूर कार्ड) है और आपका एडमिशन किसी अच्छे कॉलेज में हो गया है, तो आपको कॉलेज की भारी-भरकम फीस की चिंता करने की ज़रूरत नहीं है। आपकी पूरी की पूरी ट्यूशन फीस सरकार खुद कॉलेज के खाते में जमा कर देगी।'
+    ],
+    detailedDescriptionEn: [
+      'Child of a poor labourer (who does daily wage labour, farming or cart pulling) even if he is very smart in studies, cannot do Engineering (B.Tech) or Medical (MBBS) from private college. Because fee of these courses is in lakhs of rupees, which labourer can never repay. Due to this many talented children leave studies.',
+      'To fulfill dream of poor labourers\' children to become doctor or engineer, govt has run "Sambal Shiksha Protsahan Yojana". If your parents have "Sambal Card" (unorganized worker card) and you have got admission in any good college, then you don\'t need to worry about heavy fee of college. Govt itself will deposit your entire tuition fee in college\'s account.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'पूरी ट्यूशन फीस माफ़ (Full Fee Waiver): चाहे कॉलेज की फीस 50 हज़ार हो या 5 लाख, सरकार पूरी ट्यूशन फीस अपनी तरफ से कॉलेज को दे देती है।',
+          'बड़े कोर्सेस में फायदा: यह योजना विशेष रूप से इंजीनियरिंग (JEE के ज़रिए), मेडिकल (NEET के ज़रिए), पॉलिटेक्निक (PPT के ज़रिए) और ITI करने वाले बच्चों के लिए बहुत मददगार है।',
+          'पढ़ाई का तनाव खत्म: माता-पिता पर कर्ज़ लेने का बोझ नहीं पड़ता और बच्चा आज़ादी से अपनी पढ़ाई पर ध्यान दे पाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Full Tuition Fee Waiver: Whether college fee is 50 thousand or 5 lakh, govt gives entire tuition fee to college from its side.',
+          'Benefit in big courses: This scheme is very helpful specially for children doing Engineering (through JEE), Medical (through NEET), Polytechnic (through PPT) and ITI.',
+          'Study stress over: Burden of taking loan does not fall on parents and child can focus on his studies freely.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र के माता या पिता के पास श्रम विभाग द्वारा जारी "संबल कार्ड" (Sambal Card) होना चाहिए।',
+      'छात्र मध्य प्रदेश का मूल निवासी हो।',
+      'छात्र ने 12वीं की परीक्षा पास कर ली हो।',
+      'इंजीनियरिंग या मेडिकल जैसे कोर्स के लिए छात्र का एडमिशन JEE Mains या NEET जैसी प्रवेश परीक्षाओं (Entrance Exams) की मेरिट के आधार पर हुआ हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student\'s mother or father should have "Sambal Card" issued by Labour Dept.',
+      'Student should be native of MP.',
+      'Student should have passed 12th exam.',
+      'For courses like Engineering or Medical, student\'s admission should have been done on basis of merit of Entrance Exams like JEE Mains or NEET.'
+    ],
+    exclusions: [
+      'अगर छात्र बिना किसी प्रवेश परीक्षा (Management Quota / डायरेक्ट एडमिशन) के प्राइवेट कॉलेज में जाता है, तो उसे यह फीस माफ़ी नहीं मिलेगी।',
+      'यह योजना केवल ट्यूशन फीस (पढ़ाने की फीस) माफ़ करती है। हॉस्टल, मेस (खाना) या बस का किराया छात्र को खुद देना पड़ता है।',
+      'जिनके पास संबल कार्ड नहीं है (जैसे सरकारी नौकरी वाले या टैक्स भरने वाले), उन्हें यह लाभ नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If student goes to private college without any entrance exam (Management Quota / Direct Admission), then he will not get this fee waiver.',
+      'This scheme only waives tuition fee (teaching fee). Hostel, mess (food) or bus fare has to be paid by student himself.',
+      'Those who do not have Sambal Card (like govt job holders or tax payers), will not get this benefit.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (MP Scholarship Portal)', steps: [
+          'कॉलेज में एडमिशन होने के बाद, MP Online या किसी कैफे पर जाएँ।',
+          'MP स्कॉलरशिप पोर्टल (Scholarship Portal 2.0) खोलें।',
+          'वहां "संबल योजना" (Mukhyamantri Jan Kalyan Shiksha Protsahan Yojana) का विकल्प चुनें।',
+          'अपना संबल कार्ड नंबर डालें और फॉर्म भरें। इसका प्रिंट निकालकर कॉलेज के स्कॉलरशिप विभाग में जमा कर दें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (MP Scholarship Portal)', steps: [
+          'After getting admission in college, go to MP Online or any cafe.',
+          'Open MP Scholarship Portal (Scholarship Portal 2.0).',
+          'Select option of "Sambal Yojana" (Mukhyamantri Jan Kalyan Shiksha Protsahan Yojana) there.',
+          'Enter your Sambal Card number and fill form. Take its print out and submit in scholarship dept of college.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अगर मैं सिर्फ B.A., B.Sc. या B.Com. कर रहा हूँ, तो क्या मेरी फीस भी माफ़ होगी?', answer: 'हाँ, सरकारी कॉलेजों में सामान्य स्नातक (B.A., B.Sc.) करने पर भी संबल योजना के तहत फीस माफ़ हो जाती है, इसके लिए भी स्कॉलरशिप पोर्टल से आवेदन करना होता है।' },
+      { question: 'क्या मेरा खुद का संबल कार्ड होना ज़रूरी है?', answer: 'नहीं, छात्र का संबल कार्ड होना ज़रूरी नहीं है (क्योंकि वह तो पढ़ रहा है)। माता या पिता (जो मज़दूरी करते हैं) उनके नाम का संबल कार्ड होना चाहिए।' }
+    ],
+    faqsEn: [
+      { question: 'If I am only doing B.A., B.Sc. or B.Com., then will my fee also be waived?', answer: 'Yes, even on doing normal graduation (B.A., B.Sc.) in govt colleges fee is waived under Sambal Yojana, for this also application has to be made from scholarship portal.' },
+      { question: 'Is it necessary to have my own Sambal Card?', answer: 'No, it is not necessary for student to have Sambal Card (because he is studying). Mother or father (who do labour) should have Sambal Card in their name.' }
+    ]
+  },
+  'sindhu-darshan-yojana': {
+    ...reviewed,
+    title: 'सिंधु दर्शन योजना',
+    english: 'Sindhu Darshan Yojana (Pilgrimage Grant)',
+    summary: 'लेह-लद्दाख में होने वाले "सिंधु दर्शन महोत्सव" में जाने वाले श्रद्धालुओं को मध्य प्रदेश सरकार की तरफ से ₹25,000 की नकद सहायता।',
+    benefit: 'लद्दाख (लेह) में सिंधु नदी के दर्शन और तीर्थ यात्रा पर जाने वाले यात्रियों को उनके खर्च में मदद के लिए ₹25,000 का यात्रा अनुदान (सब्सिडी) सीधे बैंक खाते में दिया जाता है।',
+    department: 'धार्मिक न्यास एवं धर्मस्व विभाग',
+    sourceUrl: 'https://tirthdarshan.mp.gov.in/',
+    applicationUrl: 'https://tirthdarshan.mp.gov.in/',
+    documents: [
+      'यात्री का आधार कार्ड',
+      'समग्र आईडी',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'सिंधु दर्शन उत्सव समिति द्वारा दी गई रजिस्ट्रेशन की रसीद',
+      'यात्रा के टिकट (हवाई/ट्रेन/बस)',
+      'यात्री का बैंक खाता विवरण'
+    ],
+    documentsEn: [
+      'Aadhaar card of traveler',
+      'Samagra ID',
+      'Domicile certificate of MP',
+      'Registration receipt given by Sindhu Darshan Utsav Samiti',
+      'Travel tickets (Air/Train/Bus)',
+      'Bank account details of traveler'
+    ],
+    steps: [
+      'सबसे पहले सिंधु दर्शन उत्सव समिति (लेह) में अपना रजिस्ट्रेशन करवाएं और यात्रा पूरी करें।',
+      'यात्रा से वापस आने के बाद 60 दिनों के अंदर एक ऑफलाइन फॉर्म भरें।',
+      'इस फॉर्म के साथ यात्रा के टिकट और समिति की रसीद लगाकर अपने ज़िले के कलेक्टर कार्यालय (धार्मिक न्यास विभाग) में जमा करें।',
+      'ज़िला अधिकारी आपके कागज़ चेक करके फाइल भोपाल भेजेंगे, जहाँ से ₹25,000 आपके खाते में आ जाएंगे।'
+    ],
+    stepsEn: [
+      'First register yourself in Sindhu Darshan Utsav Samiti (Leh) and complete travel.',
+      'After coming back from travel, fill an offline form within 60 days.',
+      'Attach travel tickets and committee receipt with this form and submit in Collector office (Religious Trust Dept) of your district.',
+      'District officer will check your papers and send file to Bhopal, from where ₹25,000 will come in your account.'
+    ],
+    rules: [],
+    sourceNotes: 'राष्ट्रीय एकता और भारत की प्राचीन संस्कृति (सिंधु नदी) को बढ़ावा देने के लिए श्रद्धालुओं की आर्थिक मदद।',
+    detailedDescription: [
+      'सिंधु नदी (Indus River) हमारे देश की एक बहुत पवित्र और ऐतिहासिक नदी है। इसी नदी के नाम पर हमारे देश का नाम भारत (India/Hindustan) पड़ा है। हर साल जम्मू-कश्मीर (लेह-लद्दाख) में इस नदी के किनारे "सिंधु दर्शन महोत्सव" मनाया जाता है, जहाँ पूरे देश से लोग इस पवित्र नदी के दर्शन करने जाते हैं। लेह-लद्दाख की यात्रा बहुत महंगी होती है, जिससे कई लोग चाहकर भी वहाँ नहीं जा पाते।',
+      'अपने राज्य के लोगों को इस ऐतिहासिक यात्रा से जोड़ने के लिए मध्य प्रदेश सरकार ने "सिंधु दर्शन योजना" लागू की है। अगर आप अपने खर्चे पर सिंधु दर्शन यात्रा पर जाते हैं, तो वापस आने के बाद सरकार आपको इनाम के तौर पर ₹25,000 वापस कर देती है। इससे आपकी यात्रा का बहुत सारा खर्च निकल आता है।'
+    ],
+    detailedDescriptionEn: [
+      'Sindhu river (Indus River) is a very holy and historical river of our country. After this river only our country\'s name became Bharat (India/Hindustan). Every year on banks of this river in Jammu-Kashmir (Leh-Ladakh) "Sindhu Darshan Mahotsav" is celebrated, where people from all over country go to visit this holy river. Travel to Leh-Ladakh is very expensive, due to which many people cannot go there even if they want to.',
+      'To connect people of its state with this historical travel, MP govt has implemented "Sindhu Darshan Yojana". If you go on Sindhu Darshan travel at your own expense, then after coming back govt returns you ₹25,000 as prize. By this a lot of expense of your travel is covered.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में कितना पैसा मिलता है?', points: [
+          'नकद अनुदान: यात्रा पूरी करके लौटने पर प्रति व्यक्ति ₹25,000 की राशि दी जाती है।',
+          'बढ़ेगा पर्यटन: इससे आम लोग, जो लद्दाख की महंगी टिकटों (Flight/Train) से डरते थे, वे भी इस तीर्थ यात्रा का लाभ उठा सकते हैं।',
+          'सीधे खाते में भुगतान: यह पैसा किसी एजेंट को नहीं, बल्कि सीधे तीर्थयात्री के बैंक खाते में डाला जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much money is received in scheme?', points: [
+          'Cash Grant: On returning after completing travel, amount of ₹25,000 per person is given.',
+          'Tourism will increase: By this common people, who were afraid of expensive tickets of Ladakh (Flight/Train), can also take benefit of this pilgrimage.',
+          'Direct payment in account: This money is not given to any agent, but directly put in bank account of pilgrim.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'तीर्थयात्री मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'यात्री ने आधिकारिक "सिंधु दर्शन उत्सव समिति" के ज़रिए यात्रा की हो।',
+      'एक व्यक्ति अपने जीवन में सिर्फ एक ही बार इस योजना का लाभ (पैसा) ले सकता है।',
+      'यात्री कोई ऐसा सरकारी कर्मचारी या अधिकारी न हो, जिसने इसी यात्रा के लिए सरकार से पहले ही कोई भत्ता (LTC) लिया हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Pilgrim should be native of MP.',
+      'Traveler should have travelled through official "Sindhu Darshan Utsav Samiti".',
+      'A person can take benefit (money) of this scheme only once in his life.',
+      'Traveler should not be any such govt employee or officer, who has already taken any allowance (LTC) from govt for this travel.'
+    ],
+    exclusions: [
+      'अगर आप यात्रा से वापस आने के 60 दिन (2 महीने) बाद फॉर्म जमा करते हैं, तो आपका फॉर्म रिजेक्ट हो जाएगा।',
+      'बिना असली टिकट (Original Ticket) और रसीद के अनुदान राशि पास नहीं होती।',
+      'अगर आपने यात्रा बीच में ही छोड़ दी या आप लेह नहीं पहुंचे, तो पैसा नहीं मिलेगा।'
+    ],
+    exclusionsEn: [
+      'If you submit form after 60 days (2 months) of coming back from travel, then your form will be rejected.',
+      'Grant amount is not passed without original ticket and receipt.',
+      'If you left travel in middle or you did not reach Leh, then money will not be received.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (कलेक्टर कार्यालय)', steps: [
+          'यात्रा पूरी होने के बाद, योजना का फॉर्म डाउनलोड करें या कलेक्ट्रेट से लें।',
+          'फॉर्म में अपनी जानकारी भरें और साथ में टिकट की फोटोकॉपी, आधार कार्ड, बैंक पासबुक और लेह समिति की रसीद लगाएं।',
+          'इसे अपने ज़िले के कलेक्टर कार्यालय में धर्मस्व विभाग (तीर्थ दर्शन शाखा) के क्लर्क को जमा कर दें।',
+          'वहां से फाइल पास होकर संचालनालय (भोपाल) जाएगी और पैसा आपके खाते में आ जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Collector Office)', steps: [
+          'After travel is complete, download form of scheme or take from Collectorate.',
+          'Fill your details in form and attach photocopy of ticket, Aadhaar card, bank passbook and Leh committee receipt with it.',
+          'Submit it to clerk of Religious Trust Dept (Teerth Darshan Branch) in Collector office of your district.',
+          'From there file will pass and go to Directorate (Bhopal) and money will come in your account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या सरकार हमें ट्रेन/फ्लाइट में बैठाकर ले जाती है?', answer: 'नहीं, मुख्यमंत्री तीर्थ दर्शन योजना (जिसमें स्पेशल ट्रेन जाती है) से यह योजना अलग है। इसमें आपको अपनी टिकट और रहने की व्यवस्था खुद करनी होती है। सरकार सिर्फ वापस आने पर मदद के तौर पर ₹25,000 देती है।' },
+      { question: 'अगर मैं अपनी पत्नी के साथ जाऊँ तो कितने पैसे मिलेंगे?', answer: 'यह अनुदान "प्रति यात्री" ₹25,000 है। अगर पति और पत्नी दोनों के पास रजिस्ट्रेशन और टिकट है, तो दोनों अलग-अलग फॉर्म भरकर 25-25 हज़ार रुपये (कुल ₹50,000) पा सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Does govt take us sitting in train/flight?', answer: 'No, this scheme is different from Mukhyamantri Teerth Darshan Yojana (in which special train goes). In this you have to arrange your ticket and stay yourself. Govt only gives ₹25,000 as help on coming back.' },
+      { question: 'If I go with my wife then how much money will I get?', answer: 'This grant is ₹25,000 "per passenger". If both husband and wife have registration and ticket, then both can get 25-25 thousand rupees (total ₹50,000) by filling separate forms.' }
+    ]
+  },
+  'divyang-vivah-protsahan-yojana': {
+    ...reviewed,
+    title: 'दिव्यांग विवाह प्रोत्साहन योजना',
+    english: 'Divyang Vivah Protsahan Yojana (₹2 Lakh Incentive)',
+    summary: 'समाज में दिव्यांग (विकलांग) व्यक्तियों को अपनाने के लिए, किसी सामान्य व्यक्ति द्वारा दिव्यांग से शादी करने पर सरकार की तरफ से ₹2 लाख का नकद इनाम।',
+    benefit: 'दिव्यांग लड़के या लड़की से शादी करने पर जोड़े को अपना जीवन अच्छे से शुरू करने के लिए सरकार द्वारा ₹2,00,000 (दो लाख रुपये) की बड़ी एकमुश्त राशि दी जाती है।',
+    department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
+    sourceUrl: 'https://socialjustice.mp.gov.in/',
+    applicationUrl: 'https://samagra.gov.in/',
+    documents: [
+      'पति और पत्नी दोनों का आधार कार्ड',
+      'समग्र आईडी',
+      'दिव्यांग जीवनसाथी का 40% या उससे ज़्यादा का मेडिकल सर्टिफिकेट (UDID Card)',
+      'मैरिज सर्टिफिकेट (विवाह पंजीयन प्रमाण पत्र)',
+      'पति-पत्नी का जॉइंट बैंक खाता (Joint Account)'
+    ],
+    documentsEn: [
+      'Aadhaar card of both husband and wife',
+      'Samagra ID',
+      'Medical certificate of Divyang spouse of 40% or more (UDID Card)',
+      'Marriage Certificate (Vivah Panjiyan Praman Patra)',
+      'Joint Bank Account of husband-wife'
+    ],
+    steps: [
+      'शादी होने के बाद सबसे पहले नगर निगम या पंचायत से अपनी शादी का रजिस्ट्रेशन (Marriage Certificate) बनवाएं।',
+      'शादी के 1 साल के भीतर, अपने ज़िले के "सामाजिक न्याय विभाग" कार्यालय में जाएं।',
+      'वहां ऑफलाइन फॉर्म भरें। फॉर्म में जॉइंट बैंक खाते की जानकारी, विवाह का फोटो और दिव्यांगता का कार्ड लगाएं।',
+      'अधिकारियों द्वारा जाँच (Verification) होने के बाद, ₹2 लाख सीधे जॉइंट खाते में ट्रांसफर कर दिए जाएंगे।'
+    ],
+    stepsEn: [
+      'After getting married first of all get your marriage registered (Marriage Certificate) from Municipal Corporation or Panchayat.',
+      'Within 1 year of marriage, go to "Social Justice Dept" office of your district.',
+      'Fill offline form there. Attach joint bank account details, marriage photo and Divyangta card in form.',
+      'After Verification by officers, ₹2 lakh will be directly transferred to joint account.'
+    ],
+    rules: [],
+    sourceNotes: 'दिव्यांग लोगों को समाज में सम्मानजनक गृहस्थ जीवन दिलाने और उनके प्रति भेदभाव खत्म करने का बड़ा कदम।',
+    detailedDescription: [
+      'हमारे समाज में एक दिव्यांग (विकलांग) व्यक्ति, चाहे वह कितना भी पढ़ा-लिखा या नौकरीपेशा हो, उसे शादी करने में बहुत दिक्कत आती है। अक्सर सामान्य परिवार वाले अपने बच्चों की शादी किसी शारीरिक रूप से कमज़ोर व्यक्ति से करने में कतराते हैं। इसके कारण कई दिव्यांग जीवन भर अकेले रह जाते हैं।',
+      'समाज की इस सोच को बदलने के लिए सरकार ने "दिव्यांग विवाह प्रोत्साहन योजना" बनाई है। सरकार कहती है कि अगर कोई बिना किसी लालच के किसी दिव्यांग से शादी करता है, तो हम उस जोड़े का सम्मान करेंगे। उन्हें अपनी नई गृहस्थी (घर का सामान, ज़रूरतें) बसाने के लिए ₹2 लाख रुपये की बड़ी आर्थिक मदद दी जाती है, ताकि उनका जीवन बिना किसी परेशानी के शुरू हो सके।'
+    ],
+    detailedDescriptionEn: [
+      'In our society a Divyang (disabled) person, no matter how much educated or employed he is, faces a lot of difficulty in getting married. Often normal families hesitate to marry their children with a physically weak person. Due to this many Divyang remain lonely for whole life.',
+      'To change this thinking of society, govt has made "Divyang Vivah Protsahan Yojana". Govt says that if someone marries a Divyang without any greed, then we will respect that couple. They are given a big financial help of ₹2 lakh rupees to settle their new household (household items, needs), so that their life can start without any trouble.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          '₹2 लाख की नकद मदद: जोड़े (Couple) के जॉइंट खाते में एक साथ ₹2 लाख आते हैं, जिससे वे अपनी पसंद का घर का सामान, फ्रिज, टीवी, या गाड़ी ले सकते हैं।',
+          'सुरक्षित भविष्य: यह पैसा उनके नए जीवन को आर्थिक सुरक्षा देता है, जिससे दिव्यांग साथी पर कोई बोझ नहीं पड़ता।',
+          'सामाजिक सम्मान: इस योजना से समाज में यह संदेश जाता है कि दिव्यांगों को अपनाना एक पुण्य और सम्मान का काम है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Cash help of ₹2 lakh: ₹2 lakh comes at once in joint account of couple, from which they can buy household items of their choice, fridge, TV, or vehicle.',
+          'Secure future: This money gives financial security to their new life, due to which no burden falls on Divyang partner.',
+          'Social respect: From this scheme a message goes in society that accepting Divyang is a work of virtue and respect.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'शादी करने वाले दोनों (पति-पत्नी) में से कोई एक व्यक्ति 40% या उससे ज़्यादा दिव्यांग होना चाहिए।',
+      'जोड़ा मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'लड़के की उम्र 21 वर्ष और लड़की की उम्र 18 वर्ष से ज़्यादा होनी चाहिए।',
+      'यह शादी जोड़े की "पहली शादी" होनी चाहिए (तलाकशुदा या विधुर होने के विशेष मामलों को छोड़कर)।'
+    ],
+    eligibilityDescriptionEn: [
+      'One person out of both marrying (husband-wife) should be 40% or more Divyang.',
+      'Couple should be native of MP.',
+      'Age of boy should be 21 years and age of girl should be more than 18 years.',
+      'This marriage should be "first marriage" of couple (excluding special cases of being divorced or widower).'
+    ],
+    exclusions: [
+      'अगर शादी के 1 साल बाद आवेदन किया गया, तो पैसा नहीं मिलेगा (समय सीमा 1 साल है)।',
+      'अगर दोनों (पति-पत्नी) दिव्यांग हैं, तो भी योजना का लाभ मिलता है (कुछ नियमों के तहत)।',
+      'अगर यह पता चलता है कि शादी सिर्फ पैसे लेने के लिए की गई है और बाद में वे अलग हो गए, तो सरकार पैसा वापस मांग सकती है (Recovery)।'
+    ],
+    exclusionsEn: [
+      'If applied after 1 year of marriage, then money will not be received (time limit is 1 year).',
+      'If both (husband-wife) are Divyang, then also benefit of scheme is received (under some rules).',
+      'If it is found that marriage was done only to take money and later they got separated, then govt can ask for money back (Recovery).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (सामाजिक न्याय विभाग)', steps: [
+          'विवाह होने के बाद सबसे पहले मैरिज सर्टिफिकेट बनवाएं।',
+          'पति और पत्नी का किसी बैंक में जॉइंट अकाउंट (Joint Account) खुलवाएं।',
+          'ज़िला पंचायत या कलेक्ट्रेट में स्थित "सामाजिक न्याय विभाग" के ऑफिस जाएं।',
+          'वहां फॉर्म भरकर सारे दस्तावेज़ों के साथ जमा करें। अधिकारी वेरिफिकेशन करेंगे और पैसा आपके जॉइंट खाते में जमा कर दिया जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Social Justice Dept)', steps: [
+          'After getting married first of all get Marriage Certificate made.',
+          'Open Joint Account of husband and wife in any bank.',
+          'Go to office of "Social Justice Dept" located in Zila Panchayat or Collectorate.',
+          'Fill form there and submit with all documents. Officers will do verification and money will be deposited in your joint account.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुख्यमंत्री कन्यादान योजना में शादी करने पर भी यह पैसा मिलता है?', answer: 'हाँ, अगर किसी दिव्यांग ने सामूहिक विवाह सम्मेलन (कन्यादान योजना) में शादी की है, तो उसे उस योजना के लाभ (सामान/चेक) के अलावा यह ₹2 लाख का प्रोत्साहन भी अलग से मिलेगा।' },
+      { question: 'अगर पति और पत्नी दोनों दिव्यांग हैं, तो कितना पैसा मिलेगा?', answer: 'कुछ विशेष प्रावधानों के तहत, अगर दोनों दिव्यांग हैं तो प्रोत्साहन राशि ज़्यादा (₹1 लाख प्रति व्यक्ति के हिसाब से या राज्य के नए नियम अनुसार) मिल सकती है। इसके लिए विभाग से ताज़ा जानकारी लेना बेहतर है।' }
+    ],
+    faqsEn: [
+      { question: 'Is this money received even on marrying in Mukhyamantri Kanyadan Yojana?', answer: 'Yes, if a Divyang has married in mass marriage conference (Kanyadan Yojana), then apart from benefit of that scheme (items/cheque) he will also get this incentive of ₹2 lakh separately.' },
+      { question: 'If both husband and wife are Divyang, then how much money will be received?', answer: 'Under some special provisions, if both are Divyang then incentive amount can be more (as per ₹1 lakh per person or state\'s new rule). It is better to take fresh info from dept for this.' }
+    ]
+  },
+  'sainik-school-shulk-pratipurti-yojana': {
+    ...reviewed,
+    title: 'सैनिक स्कूल शिक्षण शुल्क प्रतिपूर्ति योजना',
+    english: 'Sainik School Tuition Fee Reimbursement',
+    summary: 'सैनिक स्कूल (रीवा) में पढ़ने वाले मध्य प्रदेश के बच्चों की पूरी स्कूल फीस और खाने-रहने (Mess) का खर्च सरकार उठाती है।',
+    benefit: 'सैनिक स्कूल रीवा में चुने गए छात्रों की 100% ट्यूशन फीस (Teaching Fee) और मेस शुल्क (Hostel/Food) राज्य सरकार सीधे स्कूल को देती है।',
+    department: 'स्कूल शिक्षा विभाग',
+    sourceUrl: 'https://educationportal.mp.gov.in/',
+    applicationUrl: 'https://educationportal.mp.gov.in/',
+    documents: [
+      'छात्र और माता-पिता का आधार कार्ड',
+      'समग्र आईडी',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'सैनिक स्कूल रीवा का प्रवेश पत्र (Admission Letter)',
+      'स्कूल की फीस रसीद (Fee Receipt)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student and parents',
+      'Samagra ID',
+      'Domicile certificate of MP',
+      'Admission Letter of Sainik School Rewa',
+      'Fee Receipt of school',
+      'Bank passbook'
+    ],
+    steps: [
+      'सबसे पहले ऑल इंडिया सैनिक स्कूल एंट्रेंस एग्जाम (AISSEE) पास करके सैनिक स्कूल रीवा में एडमिशन लें।',
+      'एडमिशन होने के बाद, स्कूल के प्रिंसिपल (प्राचार्य) से इस योजना का फॉर्म मांगें और भरें।',
+      'प्रिंसिपल आपके फॉर्म को खुद वेरीफाई करके राज्य शिक्षा संचालनालय (भोपाल) को भेजेंगे।',
+      'सरकार आपकी फीस का पैसा सीधे स्कूल के खाते में भेज देगी (या अगर आपने फीस भर दी है तो आपके खाते में वापस आ जाएगी)।'
+    ],
+    stepsEn: [
+      'First take admission in Sainik School Rewa by passing All India Sainik School Entrance Exam (AISSEE).',
+      'After getting admission, ask for form of this scheme from Principal of school and fill it.',
+      'Principal will himself verify your form and send to State Education Directorate (Bhopal).',
+      'Govt will send your fee money directly to school\'s account (or if you have paid fee then it will come back in your account).'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'सैनिक स्कूल रीवा में अध्ययनरत MP के छात्र' }
+    ],
+    sourceNotes: 'मध्य प्रदेश के बच्चों को भारतीय सेना (Army/Navy/Airforce) में अफसर बनने के लिए प्रेरित करने वाली योजना।',
+    detailedDescription: [
+      'सैनिक स्कूल (Sainik School) देश के वे सबसे बेहतरीन स्कूल हैं जहाँ बच्चों को बचपन से ही सेना में बड़ा अफसर (NDA के ज़रिए) बनने की ट्रेनिंग दी जाती है। मध्य प्रदेश में सैनिक स्कूल रीवा (Sainik School Rewa) है। लेकिन इस स्कूल की फीस और वहाँ रहने-खाने (Hostel/Mess) का खर्च बहुत ज़्यादा होता है, जिसे आम परिवार नहीं उठा सकते।',
+      'होशियार बच्चों को पैसे की कमी के कारण सैनिक स्कूल से बाहर न होना पड़े, इसके लिए सरकार ने "सैनिक स्कूल शिक्षण शुल्क प्रतिपूर्ति योजना" लागू की है। अगर आपके बच्चे का सेलेक्शन सैनिक स्कूल रीवा में हो जाता है, तो आपको उसकी फीस की कोई चिंता नहीं करनी है। बच्चे की पूरी ट्यूशन फीस और हॉस्टल में खाने का पूरा खर्च मध्य प्रदेश सरकार खुद उठाती है।'
+    ],
+    detailedDescriptionEn: [
+      'Sainik Schools are best schools of country where children are given training from childhood to become big officer (through NDA) in Army. In MP there is Sainik School Rewa. But fee of this school and living-food (Hostel/Mess) expense there is very high, which common families cannot bear.',
+      'So that smart children do not have to get out of Sainik School due to lack of money, govt has implemented "Sainik School Tuition Fee Reimbursement Scheme". If your child\'s selection happens in Sainik School Rewa, then you don\'t have to worry about his fee. Entire tuition fee of child and entire expense of food in hostel is borne by MP govt itself.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          '100% फीस माफ़: बच्चे की पढ़ाई (Tuition) का पूरा खर्च सरकार स्कूल को दे देती है।',
+          'रहना-खाना फ्री (Mess Fee): हॉस्टल में बच्चे के रहने और खाने का जो हज़ारों रुपये का बिल आता है, वो भी सरकार भरती है।',
+          'सेना में जाने का मौका: गरीब और मध्यम वर्ग के बच्चे भी सेना में बड़े अफसर (NDA) बनने का सपना पूरा कर सकते हैं।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          '100% fee waived: Entire expense of child\'s teaching (Tuition) govt gives to school.',
+          'Living-food free (Mess Fee): Bill of thousands of rupees that comes for child\'s living and food in hostel, govt also pays that.',
+          'Chance to go in Army: Children of poor and middle class can also fulfill dream of becoming big officer (NDA) in army.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'छात्र का एडमिशन एंट्रेंस एग्जाम (All India Sainik School Entrance Exam) पास करने के बाद रेगुलर सीट पर हुआ हो।',
+      'यह लाभ विशेष रूप से "सैनिक स्कूल रीवा" (Sainik School Rewa) में पढ़ने वाले छात्रों को ही मिलता है।',
+      'माता-पिता की आय के आधार पर स्कॉलरशिप की राशि तय हो सकती है (कुछ मामलों में 100% या उससे कम)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be native of MP.',
+      'Student\'s admission should have happened on regular seat after passing entrance exam (All India Sainik School Entrance Exam).',
+      'This benefit is specially received by students studying in "Sainik School Rewa" only.',
+      'Amount of scholarship can be decided on basis of parents\' income (in some cases 100% or less).'
+    ],
+    exclusions: [
+      'अगर बच्चा किसी दूसरे राज्य के सैनिक स्कूल (जैसे चित्तौड़गढ़ या सतारा) में पढ़ता है, तो उसे यह पूरी सुविधा नहीं मिलेगी (यह मुख्य रूप से रीवा स्कूल के लिए है)।',
+      'स्कूल की यूनिफॉर्म (Dress) या प्राइवेट खर्चे (Pocket Money) इस योजना में शामिल नहीं होते।',
+      'अगर बच्चा बीच में स्कूल छोड़ देता है या अनुशासनहीनता (Indiscipline) में निकाला जाता है, तो सरकार फीस देना बंद कर देगी।'
+    ],
+    exclusionsEn: [
+      'If child studies in Sainik School of any other state (like Chittorgarh or Satara), then he will not get this full facility (this is mainly for Rewa school).',
+      'School uniform (Dress) or private expenses (Pocket Money) are not included in this scheme.',
+      'If child leaves school in middle or is expelled in indiscipline, then govt will stop giving fee.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑफ़लाइन (स्कूल के माध्यम से)', steps: [
+          'इस योजना का ऑनलाइन फॉर्म किसी कैफे से नहीं भरा जाता।',
+          'सैनिक स्कूल रीवा में एडमिशन होने के बाद, स्कूल का ऑफिस (Administration) खुद माता-पिता को एक स्कॉलरशिप फॉर्म देता है।',
+          'आपको वह फॉर्म भरकर, अपना आय प्रमाण पत्र (Income Certificate) और एमपी का निवास प्रमाण पत्र स्कूल में जमा करना होता है।',
+          'स्कूल खुद वह फाइल भोपाल (शिक्षा विभाग) भेजता है और सीधे ग्रांट (Grant) प्राप्त कर लेता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Offline (Through School)', steps: [
+          'Online form of this scheme is not filled from any cafe.',
+          'After getting admission in Sainik School Rewa, school\'s office (Administration) itself gives a scholarship form to parents.',
+          'You have to fill that form, submit your Income Certificate and MP domicile certificate in school.',
+          'School itself sends that file to Bhopal (Education Dept) and directly receives grant.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'अगर मैं स्कूल की फीस पहले ही जमा कर दूँ तो क्या होगा?', answer: 'कई बार एडमिशन के समय पेरेंट्स को शुरुआत में कुछ फीस देनी पड़ती है। बाद में जब सरकार से पैसा आता है (प्रतिपूर्ति/Reimbursement), तो स्कूल वह पैसा पेरेंट्स के खाते में रिफंड (वापस) कर देता है या अगली किश्त में एडजस्ट कर लेता है।' },
+      { question: 'क्या लड़कियों को भी इसका लाभ मिलता है?', answer: 'हाँ, अब सैनिक स्कूलों में लड़कियों (Girls) के लिए भी एडमिशन खुल गए हैं। जो लड़कियां सैनिक स्कूल रीवा में प्रवेश लेंगी, वे भी इस फीस प्रतिपूर्ति की पूरी हकदार होंगी।' }
+    ],
+    faqsEn: [
+      { question: 'What will happen if I deposit school fee already?', answer: 'Many times at time of admission parents have to give some fee initially. Later when money comes from govt (Reimbursement), then school refunds (returns) that money in parents\' account or adjusts in next installment.' },
+      { question: 'Do girls also get its benefit?', answer: 'Yes, now admissions are open for girls also in Sainik Schools. Girls who will take admission in Sainik School Rewa, will also be fully entitled for this fee reimbursement.' }
+    ]
+  },
+  'civil-seva-protsahan-yojana': {
+    ...reviewed,
+    title: 'सिविल सेवा प्रोत्साहन योजना',
+    english: 'Civil Seva Protsahan Yojana (UPSC Award)',
+    summary: 'UPSC (कलेक्टर/SP) की परीक्षा पास करने वाले ST/SC/OBC वर्ग के छात्रों को आगे की तैयारी के लिए सरकार द्वारा ₹1,50,000 तक की नकद मदद।',
+    benefit: 'UPSC का प्री (Prelims) पास करने पर ₹1 लाख और मेन्स (Mains) पास करने पर ₹50 हज़ार का नकद इनाम सीधे छात्र के खाते में दिया जाता है।',
+    department: 'जनजातीय / अनुसूचित जाति / पिछड़ा वर्ग कल्याण विभाग',
+    sourceUrl: 'https://tribal.mp.gov.in/',
+    applicationUrl: 'https://tribal.mp.gov.in/',
+    documents: [
+      'छात्र का आधार कार्ड',
+      'समग्र आईडी',
+      'जाति प्रमाण पत्र (ST/SC/OBC)',
+      'UPSC का रोल नंबर (Admit Card) और पास होने का रिजल्ट',
+      'छात्र का बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID',
+      'Caste Certificate (ST/SC/OBC)',
+      'UPSC Roll Number (Admit Card) and passing result',
+      'Bank passbook of student'
+    ],
+    steps: [
+      'UPSC का रिजल्ट आने के 45 दिनों के अंदर संबंधित विभाग (SC/ST या OBC विभाग) के पोर्टल पर ऑनलाइन फॉर्म भरें।',
+      'फॉर्म में अपना UPSC का रोल नंबर और रिजल्ट की कॉपी अपलोड करें।',
+      'विभाग दिल्ली से आपका रिजल्ट वेरीफाई (चेक) करेगा।',
+      'रिजल्ट सही पाए जाने पर प्रोत्साहन राशि आपके बैंक खाते में जमा कर दी जाएगी।'
+    ],
+    stepsEn: [
+      'Within 45 days of UPSC result coming, fill online form on portal of respective dept (SC/ST or OBC dept).',
+      'Upload your UPSC roll number and copy of result in form.',
+      'Dept will verify (check) your result from Delhi.',
+      'On result being found correct incentive amount will be deposited in your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'UPSC प्रारंभिक/मुख्य परीक्षा उत्तीर्ण छात्र' }
+    ],
+    sourceNotes: 'कमज़ोर वर्ग के बच्चों को देश की सबसे बड़ी परीक्षा (IAS/IPS) पास करने के लिए आर्थिक ताकत देने की पहल।',
+    detailedDescription: [
+      'संघ लोक सेवा आयोग (UPSC) की परीक्षा, जिससे कलेक्टर (IAS) और SP (IPS) बनते हैं, देश की सबसे कठिन परीक्षा है। इस परीक्षा के तीन चरण होते हैं- प्री (Prelims), मेन्स (Mains) और इंटरव्यू (Interview)। जो छात्र पहला चरण (प्री) पास कर लेते हैं, उन्हें मेन्स की तैयारी के लिए दिल्ली जाना पड़ता है, महंगी किताबें खरीदनी पड़ती हैं और बहुत खर्च आता है। कई गरीब छात्र पैसों की कमी के कारण प्री पास करने के बाद भी मेन्स में हार जाते हैं।',
+      'इस दिक्कत को दूर करने के लिए मध्य प्रदेश सरकार ने "सिविल सेवा प्रोत्साहन योजना" शुरू की है। सरकार कहती है कि अगर आप (ST/SC/OBC) में से किसी ने UPSC का "प्री" एग्जाम पास कर लिया है, तो हम आपको तुरंत ₹1,00,000 (एक लाख रुपये) नकद देंगे, ताकि आप बिना टेंशन के "मेन्स" की तैयारी कर सकें। अगर आप मेन्स भी पास कर लेते हैं, तो इंटरव्यू की तैयारी के लिए आपको ₹50,000 और दिए जाएंगे।'
+    ],
+    detailedDescriptionEn: [
+      'Union Public Service Commission (UPSC) exam, from which Collector (IAS) and SP (IPS) are made, is toughest exam of country. There are three stages of this exam- Prelims, Mains and Interview. Students who pass first stage (Prelims), have to go to Delhi for Mains preparation, have to buy expensive books and lot of expense comes. Many poor students lose in Mains even after passing Prelims due to lack of money.',
+      'To solve this problem MP govt has started "Civil Seva Protsahan Yojana". Govt says that if anyone among you (ST/SC/OBC) has passed "Prelims" exam of UPSC, then we will immediately give you ₹1,00,000 (One Lakh Rupees) cash, so that you can prepare for "Mains" without tension. If you pass Mains also, then ₹50,000 more will be given to you for Interview preparation.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में कितना पैसा मिलता है?', points: [
+          'प्री (Prelims) पास करने पर: छात्र को तुरंत ₹1,00,000 (एक लाख रुपये) दिए जाते हैं, ताकि वह किताबें या कोचिंग ले सके।',
+          'मेन्स (Mains) पास करने पर: इंटरव्यू की तैयारी (Mock Interviews आदि) के लिए ₹50,000 और दिए जाते हैं।',
+          'इंटरव्यू पास करने पर: अगर छात्र IAS/IPS बन जाता है, तो उसे ₹50,000 का सम्मान इनाम अलग से मिलता है (कुल ₹2 लाख)।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'How much money is received in scheme?', points: [
+          'On passing Prelims: Student is immediately given ₹1,00,000 (One Lakh Rupees), so that he can buy books or take coaching.',
+          'On passing Mains: For interview preparation (Mock Interviews etc) ₹50,000 more are given.',
+          'On passing Interview: If student becomes IAS/IPS, then he gets honor prize of ₹50,000 separately (total ₹2 Lakh).'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी हो।',
+      'छात्र SC (अनुसूचित जाति), ST (अनुसूचित जनजाति) या OBC (अन्य पिछड़ा वर्ग) से आता हो। (सामान्य वर्ग/General के लिए अलग योजना है)।',
+      'छात्र ने हाल ही में UPSC सिविल सेवा का प्री या मेन्स एग्जाम पास किया हो।',
+      'OBC वर्ग के छात्रों के लिए आय सीमा का नियम लागू हो सकता है (क्रीमीलेयर)।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be native of MP.',
+      'Student should come from SC (Scheduled Caste), ST (Scheduled Tribe) or OBC (Other Backward Class). (There is separate scheme for General category).',
+      'Student should have recently passed Prelims or Mains exam of UPSC Civil Services.',
+      'Rule of income limit may apply for OBC category students (Creamy layer).'
+    ],
+    exclusions: [
+      'यह पैसा MPPSC (राज्य सेवा परीक्षा) के लिए नहीं मिलता। यह सिर्फ UPSC (IAS/IPS वाली परीक्षा) के लिए है। MPPSC के लिए राशि कम होती है (जैसे ₹15,000 से ₹25,000)।',
+      'अगर आप रिजल्ट आने के 45 दिनों के बाद अप्लाई करेंगे, तो फॉर्म रिजेक्ट हो जाएगा। (समय का ध्यान रखना बहुत ज़रूरी है)।',
+      'यह योजना हर चरण (Stage) के लिए जीवन में सिर्फ एक बार मिलती है (जैसे एक बार प्री का पैसा ले लिया, तो अगली साल दोबारा प्री पास करने पर पैसा नहीं मिलेगा)।'
+    ],
+    exclusionsEn: [
+      'This money is not received for MPPSC (State Service Exam). This is only for UPSC (IAS/IPS exam). Amount is less for MPPSC (like ₹15,000 to ₹25,000).',
+      'If you apply after 45 days of coming of result, then form will be rejected. (Taking care of time is very important).',
+      'This scheme is received only once in life for every stage (like once took money for Prelims, then on passing Prelims again next year money will not be received).'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (विभागीय पोर्टल)', steps: [
+          'UPSC का रिजल्ट आते ही अपने वर्ग के हिसाब से पोर्टल चुनें (OBC वाले backwardwelfare.mp.gov.in पर, SC/ST वाले tribal.mp.gov.in पर)।',
+          'योजनाओं के सेक्शन में "सिविल सेवा प्रोत्साहन" (Civil Seva Protsahan) पर क्लिक करें।',
+          'अपनी डिटेल, UPSC का रोल नंबर और पास होने का प्रिंटआउट (PDF) अपलोड करें।',
+          'वेरिफिकेशन के बाद पैसा सीधे आपके बैंक खाते में DBT के माध्यम से आ जाएगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Departmental Portal)', steps: [
+          'As soon as UPSC result comes select portal according to your category (OBC ones on backwardwelfare.mp.gov.in, SC/ST ones on tribal.mp.gov.in).',
+          'Click on "Civil Seva Protsahan" in schemes section.',
+          'Upload your details, UPSC roll number and printout of passing (PDF).',
+          'After verification money will come directly in your bank account through DBT.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह पैसा वापस करना पड़ता है अगर मेरा फाइनल सिलेक्शन न हो?', answer: 'नहीं, यह कोई लोन नहीं है, बल्कि सरकार की तरफ से इनाम (Incentive) है। अगर आप मेन्स या इंटरव्यू में फेल भी हो जाते हैं, तो भी यह पैसा आपको वापस नहीं लौटाना पड़ता।' },
+      { question: 'क्या MPPSC (मध्य प्रदेश पीएससी) वालों को भी ऐसा पैसा मिलता है?', answer: 'हाँ, राज्य सिविल सेवा (MPPSC) पास करने पर भी ऐसी ही योजना है, लेकिन उसमें राशि कम होती है (प्री पास करने पर लगभग ₹20,000 से ₹25,000)।' }
+    ],
+    faqsEn: [
+      { question: 'Does this money have to be returned if my final selection does not happen?', answer: 'No, this is not a loan, but a prize (Incentive) from govt. Even if you fail in Mains or Interview, you do not have to return this money.' },
+      { question: 'Do MPPSC (MP PSC) candidates also get such money?', answer: 'Yes, on passing State Civil Service (MPPSC) also there is similar scheme, but in that amount is less (approx ₹20,000 to ₹25,000 on passing prelims).' }
+    ]
+  },
+  'bhagwan-shri-krishna-medhavi-chatravriti-yojana': {
+    ...reviewed,
+    title: 'भगवान श्री कृष्ण मेधावी छात्रवृत्ति योजना',
+    english: 'Bhagwan Shri Krishna Medhavi Chatravriti',
+    summary: 'संस्कृत, वेद या पारंपरिक कलाओं की पढ़ाई करने वाले मेधावी छात्रों को उच्च शिक्षा के लिए सरकार की ओर से विशेष वार्षिक छात्रवृत्ति।',
+    benefit: 'वेद अध्ययन, पारंपरिक कला, संस्कृति और मेधावी छात्रों को कॉलेज की पढ़ाई (Graduation/Post Graduation) के लिए हर साल विशेष स्कॉलरशिप दी जाती है।',
+    department: 'उच्च शिक्षा विभाग',
+    sourceUrl: 'https://scholarshipportal.mp.nic.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
+    documents: [
+      'छात्र का आधार कार्ड',
+      'समग्र आईडी',
+      'पिछली कक्षा की मार्कशीट (न्यूनतम 60% अंक)',
+      'कॉलेज या संस्थान का एडमिशन लेटर (प्रवेश प्रमाण पत्र)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID',
+      'Marksheet of previous class (minimum 60% marks)',
+      'Admission Letter of college or institute',
+      'Bank passbook'
+    ],
+    steps: [
+      'कॉलेज में एडमिशन लेने के बाद "स्टेट स्कॉलरशिप पोर्टल (State Scholarship Portal 2.0)" पर जाएं।',
+      'अपना ऑनलाइन रजिस्ट्रेशन करें और भगवान श्री कृष्ण मेधावी योजना का फॉर्म भरें।',
+      'ऑनलाइन भरे गए फॉर्म का प्रिंट आउट निकालकर अपने कॉलेज के ऑफिस में जमा करें।',
+      'कॉलेज के प्रिंसिपल द्वारा वेरिफिकेशन होने के बाद, स्कॉलरशिप का पैसा आपके बैंक खाते में आ जाएगा।'
+    ],
+    stepsEn: [
+      'After taking admission in college go to "State Scholarship Portal (State Scholarship Portal 2.0)".',
+      'Do your online registration and fill form of Bhagwan Shri Krishna Medhavi Yojana.',
+      'Take print out of online filled form and submit in office of your college.',
+      'After verification by college principal, scholarship money will come in your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'उच्च शिक्षा में अध्ययनरत मेधावी छात्र' }
+    ],
+    sourceNotes: 'भारतीय संस्कृति, साहित्य और वेदों की पढ़ाई को बढ़ावा देने के लिए आर्थिक सहायता।',
+    detailedDescription: [
+      'हमारे देश की प्राचीन संस्कृति, वेद, संस्कृत भाषा और पारंपरिक कलाओं को ज़िंदा रखने के लिए सरकार यह योजना चला रही है। अक्सर देखा जाता है कि जो बच्चे इन पारंपरिक विषयों (जैसे संस्कृत, वेद, कर्मकांड) की पढ़ाई करना चाहते हैं, उनके पास अच्छे कॉलेजों की फीस भरने के पैसे नहीं होते।',
+      '"भगवान श्री कृष्ण मेधावी छात्रवृत्ति योजना" ऐसे होशियार (मेधावी) बच्चों को आर्थिक ताकत देती है। अगर आप कॉलेज स्तर पर अच्छे अंकों (कम से পণ্ডিত से कम 60%) के साथ पास होते हैं और इन विशेष विषयों की पढ़ाई आगे जारी रखते हैं, तो सरकार आपको हर साल एक तय छात्रवृत्ति (Scholarship) देती है। इससे आपको पढ़ाई का खर्चा उठाने में आसानी होती है।'
+    ],
+    detailedDescriptionEn: [
+      'To keep alive our country\'s ancient culture, Vedas, Sanskrit language and traditional arts govt is running this scheme. It is often seen that children who want to study these traditional subjects (like Sanskrit, Vedas, rituals), they do not have money to pay fee of good colleges.',
+      '"Bhagwan Shri Krishna Medhavi Chatravriti Yojana" gives financial strength to such smart (meritorious) children. If you pass at college level with good marks (at least 60%) and continue studying these special subjects further, then govt gives you a fixed scholarship every year. From this it becomes easy for you to bear expense of study.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'वार्षिक छात्रवृत्ति: होशियार छात्रों को कॉलेज की ट्यूशन फीस और किताबों के लिए हर साल पैसे दिए जाते हैं।',
+          'संस्कृति को बढ़ावा: वेद, संस्कृत और पारंपरिक कलाओं की पढ़ाई करने वाले छात्रों का सम्मान होता है।',
+          'सीधे खाते में पैसा: स्कॉलरशिप की राशि सीधे छात्र के बैंक खाते (DBT) में भेजी जाती है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Annual Scholarship: Smart students are given money every year for college tuition fee and books.',
+          'Promotion to culture: Students studying Vedas, Sanskrit and traditional arts are respected.',
+          'Direct money in account: Scholarship amount is sent directly to bank account (DBT) of student.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र मध्य प्रदेश का मूल निवासी होना चाहिए।',
+      'छात्र ने अपनी पिछली कक्षा में कम से कम 60% या उससे ज़्यादा अंक (First Division) प्राप्त किए हों।',
+      'छात्र किसी मान्यता प्राप्त कॉलेज या यूनिवर्सिटी में रेगुलर (Regular) पढ़ाई कर रहा हो।',
+      'छात्र एक साथ किसी अन्य सरकारी स्कॉलरशिप (जैसे पोस्ट मैट्रिक स्कॉलरशिप) का लाभ न ले रहा हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be native of MP.',
+      'Student should have obtained at least 60% or more marks (First Division) in his previous class.',
+      'Student should be studying regularly in any recognized college or university.',
+      'Student should not be taking benefit of any other govt scholarship (like Post Matric Scholarship) simultaneously.'
+    ],
+    exclusions: [
+      'अगर छात्र बीच में पढ़ाई छोड़ देता है (Drop out) या फेल हो जाता है, तो अगले साल स्कॉलरशिप नहीं मिलेगी।',
+      'प्राइवेट (Private) या कॉरेस्पोंडेंस (Distance Education) से पढ़ाई करने वाले छात्रों को यह लाभ नहीं मिलता।',
+      'अगर आपने फॉर्म में गलत जानकारी दी या बैंक खाता आधार से लिंक नहीं है, तो पैसा खाते में नहीं आएगा।'
+    ],
+    exclusionsEn: [
+      'If student leaves study in middle (Drop out) or fails, then scholarship will not be received next year.',
+      'Students studying privately or from correspondence (Distance Education) do not get this benefit.',
+      'If you gave wrong info in form or bank account is not linked with Aadhaar, then money will not come in account.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (स्कॉलरशिप पोर्टल)', steps: [
+          'कॉलेज में एडमिशन की रसीद मिलने के बाद MP Scholarship Portal पर जाएं।',
+          'वहां "Student Login" सेक्शन में जाकर अपनी समग्र आईडी से रजिस्ट्रेशन करें।',
+          'अपनी प्रोफाइल बनाएं और "Bhagwan Shri Krishna Medhavi Yojana" को सिलेक्ट करके अप्लाई करें।',
+          'एप्लीकेशन फॉर्म को लॉक करें, उसका प्रिंट आउट लें और ज़रूरी दस्तावेज़ों के साथ अपने कॉलेज में जमा कर दें। कॉलेज इसे आगे अप्रूव करेगा।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Scholarship Portal)', steps: [
+          'After getting admission receipt in college go to MP Scholarship Portal.',
+          'Go to "Student Login" section there and register with your Samagra ID.',
+          'Create your profile and apply by selecting "Bhagwan Shri Krishna Medhavi Yojana".',
+          'Lock application form, take its print out and submit with necessary documents in your college. College will approve it further.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या यह योजना सिर्फ संस्कृत पढ़ने वालों के लिए है?', answer: 'यह मुख्य रूप से पारंपरिक ज्ञान (संस्कृत, वेद, साहित्य) को बढ़ावा देने के लिए है, लेकिन उच्च शिक्षा विभाग द्वारा निर्धारित विशेष पाठ्यक्रमों के मेधावी छात्र भी इसमें शामिल होते हैं। कॉलेज के नोडल अधिकारी से अपने कोर्स की पात्रता कन्फर्म करें।' },
+      { question: 'मुझे कॉलेज से गाँव की बेटी योजना का पैसा मिल रहा है, क्या यह भी मिलेगा?', answer: 'नहीं। सरकारी नियम के अनुसार, एक छात्र एक समय में सिर्फ एक ही सरकारी स्कॉलरशिप ले सकता है। जो स्कॉलरशिप ज़्यादा फायदे वाली हो, आप उसे चुन सकते हैं।' }
+    ],
+    faqsEn: [
+      { question: 'Is this scheme only for those studying Sanskrit?', answer: 'This is mainly to promote traditional knowledge (Sanskrit, Vedas, literature), but meritorious students of special courses decided by Higher Education Dept are also included in it. Confirm eligibility of your course from nodal officer of college.' },
+      { question: 'I am getting money of Gaon Ki Beti Yojana from college, will I get this also?', answer: 'No. As per govt rule, a student can take only one govt scholarship at a time. Whichever scholarship is more beneficial, you can choose that.' }
+    ]
+  },
+  'vikramaditya-scholarship-yojana': {
+    ...reviewed,
+    title: 'विक्रमादित्य छात्रवृत्ति योजना',
+    english: 'Vikramaditya Scholarship (General Category BPL)',
+    summary: 'सामान्य वर्ग (General Category) के गरीब छात्रों को, जिनके 12वीं में अच्छे नंबर आए हैं, कॉलेज की पढ़ाई के लिए ₹2,500 सालाना मदद।',
+    benefit: 'सामान्य वर्ग (General) के BPL या कम आय वाले छात्रों को कॉलेज (Graduation) की फीस और किताबों के लिए ₹2,500 प्रति वर्ष की छात्रवृत्ति दी जाती है।',
+    department: 'उच्च शिक्षा विभाग',
+    sourceUrl: 'https://scholarshipportal.mp.nic.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
+    documents: [
+      'छात्र का आधार कार्ड',
+      'समग्र आईडी',
+      '12वीं कक्षा की मार्कशीट (न्यूनतम 60% अंक)',
+      'BPL राशन कार्ड या ₹1,18,000 से कम का आय प्रमाण पत्र',
+      'कॉलेज की फीस रसीद (Fee Receipt)',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of student',
+      'Samagra ID',
+      '12th class marksheet (minimum 60% marks)',
+      'BPL Ration Card or income certificate of less than ₹1,18,000',
+      'College Fee Receipt',
+      'Bank passbook'
+    ],
+    steps: [
+      'कॉलेज (BA, B.Sc, B.Com आदि) में एडमिशन लेने के बाद MP Scholarship Portal पर जाएं।',
+      'अपनी समग्र आईडी डालकर "विक्रमादित्य छात्रवृत्ति" के लिए ऑनलाइन फॉर्म भरें।',
+      'फॉर्म का प्रिंट आउट निकालें और आय प्रमाण पत्र या BPL कार्ड लगाकर कॉलेज में जमा करें।',
+      'कॉलेज द्वारा फॉर्म अप्रूव होते ही ₹2,500 आपके बैंक खाते में आ जाएंगे।'
+    ],
+    stepsEn: [
+      'After taking admission in college (BA, B.Sc, B.Com etc) go to MP Scholarship Portal.',
+      'Put your Samagra ID and fill online form for "Vikramaditya Scholarship".',
+      'Take print out of form and attach income certificate or BPL card and submit in college.',
+      'As soon as form is approved by college ₹2,500 will come in your bank account.'
+    ],
+    rules: [
+      { field: 'occupation', op: 'eq', value: 'student', label: 'सामान्य वर्ग के निर्धन स्नातक विद्यार्थी' }
+    ],
+    sourceNotes: 'सामान्य वर्ग के गरीब छात्रों को भी कॉलेज की पढ़ाई में मदद करने वाली योजना।',
+    detailedDescription: [
+      'अक्सर SC, ST और OBC वर्ग के छात्रों को कॉलेज में एडमिशन लेने पर आसानी से पोस्ट मैट्रिक स्कॉलरशिप मिल जाती है। लेकिन "सामान्य वर्ग (General Category)" के गरीब छात्रों के लिए ऐसी स्कॉलरशिप कम होती हैं। इस कारण सामान्य वर्ग के कई गरीब बच्चे, जो पढ़ाई में तेज़ होते हैं, वे पैसों की कमी से कॉलेज छोड़ देते हैं।',
+      'मध्य प्रदेश सरकार ने ऐसे ही सामान्य वर्ग के गरीब (BPL या कम आय वाले) होशियार बच्चों के लिए "विक्रमादित्य छात्रवृत्ति योजना" बनाई है। अगर आप सामान्य वर्ग से हैं, आपके परिवार की कमाई बहुत कम है, और आपने 12वीं में 60% से ज़्यादा नंबर लिए हैं, तो सरकार आपको कॉलेज की पढ़ाई के लिए हर साल ₹2,500 की स्कॉलरशिप देगी।'
+    ],
+    detailedDescriptionEn: [
+      'Often students of SC, ST and OBC category easily get Post Matric Scholarship on taking admission in college. But such scholarships are less for poor students of "General Category". Due to this many poor children of general category, who are smart in studies, leave college due to lack of money.',
+      'MP govt has made "Vikramaditya Scholarship Scheme" for such poor (BPL or low income) smart children of general category only. If you are from general category, your family\'s earning is very less, and you have got more than 60% marks in 12th, then govt will give you scholarship of ₹2,500 every year for college study.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'आर्थिक मदद: छात्रों को किताबें खरीदने और फीस भरने के लिए ₹2,500 हर साल (सालाना) दिए जाते हैं।',
+          'सामान्य वर्ग को सहारा: यह उन सवर्ण छात्रों के लिए बड़ी राहत है, जिन्हें अन्य स्कॉलरशिप नहीं मिल पाती।',
+          'पारदर्शिता: पैसा सीधे छात्र के आधार लिंक बैंक खाते में (DBT) आता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Financial help: ₹2,500 are given to students every year (annually) for buying books and paying fee.',
+          'Support to General Category: This is a big relief for those upper caste students, who cannot get other scholarships.',
+          'Transparency: Money comes directly in Aadhaar linked bank account (DBT) of student.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'छात्र सामान्य वर्ग (General Category) का होना चाहिए।',
+      'छात्र के परिवार की सालाना आय (Annual Income) ₹1,18,000 (एक लाख अट्ठारह हज़ार) से कम होनी चाहिए या परिवार के पास BPL कार्ड हो। (उच्च शिक्षा विभाग की वर्तमान सीमा अनुसार)।',
+      'छात्र ने 12वीं कक्षा में 60% या उससे ज़्यादा अंक (First Division) प्राप्त किए हों।',
+      'छात्र किसी मान्यता प्राप्त कॉलेज में ग्रेजुएशन (BA, B.Sc, B.Com आदि) की रेगुलर पढ़ाई कर रहा हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'Student should be of General Category.',
+      'Annual Income of student\'s family should be less than ₹1,18,000 (One lakh eighteen thousand) or family should have BPL card. (As per current limit of Higher Education Dept).',
+      'Student should have obtained 60% or more marks (First Division) in 12th class.',
+      'Student should be doing regular study of graduation (BA, B.Sc, B.Com etc) in any recognized college.'
+    ],
+    exclusions: [
+      'यह योजना SC/ST या OBC के छात्रों के लिए नहीं है (उनके लिए पोस्ट मैट्रिक स्कॉलरशिप होती है)।',
+      'अगर आपके 12वीं में 60% से कम नंबर हैं (सेकंड या थर्ड डिवीजन), तो यह स्कॉलरशिप नहीं मिलेगी।',
+      'प्राइवेट (Private) फॉर्म भरकर कॉलेज करने वाले छात्रों को यह लाभ नहीं मिलता, सिर्फ रेगुलर (Regular) छात्रों के लिए है।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for SC/ST or OBC students (Post Matric Scholarship is there for them).',
+      'If you have less than 60% marks in 12th (Second or Third division), then this scholarship will not be received.',
+      'Students doing college by filling Private form do not get this benefit, it is only for Regular students.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन (स्कॉलरशिप पोर्टल)', steps: [
+          'कॉलेज में एडमिशन और फीस जमा करने के बाद MP Scholarship Portal खोलें।',
+          'पोर्टल पर "Vikramaditya Scholarship" योजना खोजें और "Apply Online" पर क्लिक करें।',
+          'फॉर्म में अपनी 12वीं की मार्कशीट, आय प्रमाण पत्र/BPL कार्ड और बैंक डिटेल भरें।',
+          'फॉर्म को सबमिट (Lock) करें, प्रिंट निकालें और सभी कागज़ों के साथ कॉलेज के स्कॉलरशिप बाबू (क्लर्क) को जमा कर दें।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online (Scholarship Portal)', steps: [
+          'After depositing admission and fee in college open MP Scholarship Portal.',
+          'Search "Vikramaditya Scholarship" scheme on portal and click on "Apply Online".',
+          'Fill your 12th marksheet, income certificate/BPL card and bank details in form.',
+          'Submit (Lock) form, take print and submit with all papers to scholarship babu (clerk) of college.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे यह स्कॉलरशिप पोस्ट ग्रेजुएशन (MA/M.Sc) में भी मिलेगी?', answer: 'आमतौर पर यह योजना ग्रेजुएशन (स्नातक स्तर) की पढ़ाई के लिए दी जाती है। नियम समय-समय पर अपडेट होते हैं, इसलिए मास्टर डिग्री (PG) की पात्रता के लिए स्कॉलरशिप पोर्टल चेक करना बेहतर है।' },
+      { question: 'अगर मेरी आय सीमा ₹1.18 लाख से ज़्यादा है तो क्या करूँ?', answer: 'अगर आय सीमा इससे ज़्यादा है, तो आप इस योजना के पात्र नहीं हैं। आप "मुख्यमंत्री मेधावी विद्यार्थी योजना" (MMVY) का लाभ ले सकते हैं, जिसकी आय सीमा ₹6 लाख तक है (अगर आपके 12वीं में अच्छे नंबर हैं)।' }
+    ],
+    faqsEn: [
+      { question: 'Will I get this scholarship in Post Graduation (MA/M.Sc) also?', answer: 'Usually this scheme is given for study of graduation (undergraduate level). Rules get updated from time to time, so it is better to check scholarship portal for eligibility of master degree (PG).' },
+      { question: 'If my income limit is more than ₹1.18 lakh then what should I do?', answer: 'If income limit is more than this, then you are not eligible for this scheme. You can take benefit of "Mukhyamantri Medhavi Vidyarthi Yojana" (MMVY), whose income limit is up to ₹6 lakh (if you have good marks in 12th).' }
+    ]
+  },
+  'shri-medha-scheme-yojana': {
+    ...reviewed,
+    title: 'श्री मेधा योजना',
+    english: 'Shri Medha Yojana (Girls Coaching)',
+    summary: 'कॉलेज में पढ़ने वाली होशियार लड़कियों (छात्राओं) को प्रतियोगी परीक्षाओं (UPSC/MPPSC/Banking) की फ्री कोचिंग और वित्तीय मदद।',
+    benefit: 'प्रतिभाशाली छात्राओं को बड़े कंपटीशन एग्जाम की तैयारी के लिए सरकार द्वारा मुफ्त हाई-क्वालिटी कोचिंग, किताबें और हॉस्टल सुविधा दी जाती है।',
+    department: 'उच्च शिक्षा विभाग',
+    sourceUrl: 'https://highereducation.mp.gov.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
+    documents: [
+      'छात्रा का आधार कार्ड',
+      'समग्र आईडी',
+      'पिछली कक्षाओं (12वीं/ग्रेजुएशन) की मार्कशीट (कम से कम 60% नंबर)',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र',
+      'बैंक पासबुक'
+    ],
+    documentsEn: [
+      'Aadhaar card of girl student',
+      'Samagra ID',
+      'Marksheet of previous classes (12th/Graduation) (at least 60% marks)',
+      'Domicile certificate of MP',
+      'Bank passbook'
+    ],
+    steps: [
+      'योजना के फॉर्म आने पर उच्च शिक्षा विभाग (Higher Education Portal) पर ऑनलाइन अप्लाई करें।',
+      'मेरिट (अंकों) के आधार पर छात्राओं का चयन (Selection) होता है।',
+      'चुनी गई छात्राओं को कॉलेज के माध्यम से अच्छे कोचिंग संस्थानों (Institutes) में भेजा जाता है।',
+      'कोचिंग की फीस सरकार सीधे संस्थान को देती है।'
+    ],
+    stepsEn: [
+      'On coming of scheme\'s form apply online on Higher Education Portal.',
+      'Selection of girl students happens on basis of merit (marks).',
+      'Selected girl students are sent to good coaching institutes through college.',
+      'Govt gives fee of coaching directly to institute.'
+    ],
+    rules: [
+      { field: 'gender', op: 'eq', value: 'female', label: 'उच्च शिक्षा अध्ययनरत प्रतिभाशाली छात्राएं' },
+      { field: 'occupation', op: 'eq', value: 'student', label: 'छात्राएं' }
+    ],
+    sourceNotes: 'लड़कियों को बड़े अफसर (UPSC/PSC) बनने का मौका देने वाली खास योजना।',
+    detailedDescription: [
+      'अक्सर लड़कियां कॉलेज (BA, B.Sc) तो कर लेती हैं, लेकिन कॉलेज के बाद जब उन्हें सरकारी नौकरी (जैसे UPSC, MPPSC, बैंक या एसएससी) की तैयारी करनी होती है, तो कोचिंग की भारी फीस के कारण वे पीछे रह जाती हैं। माता-पिता भी लड़कियों पर इतना पैसा खर्च करने से कतराते हैं।',
+      'छात्राओं की इसी मजबूरी को समझते हुए मध्य प्रदेश सरकार ने "श्री मेधा योजना" शुरू की ক্ষমতায় शुरू की है। यह योजना लड़कियों को "मेंटरशिप" (गाइडेंस) और "कोचिंग" देती है। अगर आप पढ़ाई में होशियार (मेधावी) हैं (यानी आपके नंबर 60% या उससे ज़्यादा हैं), तो सरकार आपको मुफ्त में बेहतरीन कोचिंग दिलवाएगी। इसके साथ ही आपको किताबें खरीदने और हॉस्टल में रहने के लिए भी पैसे (अनुदान) दिए जाते हैं, ताकि आप बिना किसी रुकावट के अफ़सर बन सकें।'
+    ],
+    detailedDescriptionEn: [
+      'Often girls complete college (BA, B.Sc), but after college when they have to prepare for govt job (like UPSC, MPPSC, Bank or SSC), then due to heavy fee of coaching they stay behind. Parents also hesitate to spend so much money on girls.',
+      'Understanding this compulsion of girl students MP govt has started "Shri Medha Yojana". This scheme gives "Mentorship" (Guidance) and "Coaching" to girls. If you are smart in studies (meritorious) (i.e. your marks are 60% or more), then govt will get you excellent coaching for free. Along with this you are also given money (grant) to buy books and live in hostel, so that you can become officer without any hurdle.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना में क्या-क्या लाभ मिलते हैं?', points: [
+          'मुफ्त हाई-क्लास कोचिंग: UPSC, MPPSC, Banking या SSC जैसी बड़ी परीक्षाओं की फ्री तैयारी।',
+          'किताबों के लिए पैसे: महंगी किताबें खरीदने के लिए अलग से वित्तीय मदद दी जाती है।',
+          'हॉस्टल सुविधा: अगर छात्रा को कोचिंग के लिए किसी बड़े शहर (जैसे इंदौर/भोपाल) जाना पड़े, तो हॉस्टल का खर्चा भी दिया जाता है।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'What benefits are received in scheme?', points: [
+          'Free high-class coaching: Free preparation of big exams like UPSC, MPPSC, Banking or SSC.',
+          'Money for books: Financial help is given separately to buy expensive books.',
+          'Hostel facility: If girl student has to go to any big city (like Indore/Bhopal) for coaching, then hostel expense is also given.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'यह योजना सिर्फ लड़कियों (छात्राओं) के लिए है।',
+      'छात्रा मध्य प्रदेश की मूल निवासी होनी चाहिए।',
+      'छात्रा का पढ़ाई का रिकॉर्ड बहुत अच्छा होना चाहिए (पिछली परीक्षाओं में फर्स्ट डिवीजन या 60%+ अंक)।',
+      'छात्रा वर्तमान में किसी कॉलेज (ग्रेजुएशन या पोस्ट ग्रेजुएशन) में पढ़ रही हो।'
+    ],
+    eligibilityDescriptionEn: [
+      'This scheme is only for girls (girl students).',
+      'Girl student should be native of MP.',
+      'Study record of girl student should be very good (First division or 60%+ marks in previous exams).',
+      'Girl student should be currently studying in any college (Graduation or Post Graduation).'
+    ],
+    exclusions: [
+      'यह योजना लड़कों (छात्रों) के लिए नहीं है।',
+      'अगर 60% से कम नंबर हैं, तो आवेदन स्वीकार नहीं होगा (यह मेधावी यानी तेज़ छात्रों के लिए है)।',
+      'अगर छात्रा बीच में ही कोचिंग छोड़ देती है (Drop), तो उसे सुविधा मिलना बंद हो जाएगी।'
+    ],
+    exclusionsEn: [
+      'This scheme is not for boys (students).',
+      'If marks are less than 60%, then application will not be accepted (this is for meritorious i.e. smart students).',
+      'If girl student leaves coaching in middle (Drop), then facility will stop getting.'
+    ],
+    applicationProcess: [
+      {
+        mode: 'ऑनलाइन / कॉलेज के माध्यम से', steps: [
+          'जब योजना के आवेदन शुरू होते हैं, तो कॉलेज के नोटिस बोर्ड पर इसकी सूचना लगाई जाती है।',
+          'छात्राओं को MP Higher Education Portal पर जाकर या कॉलेज के माध्यम से ऑनलाइन अप्लाई करना होता है।',
+          'अपने सभी दस्तावेज़ (मार्कशीट आदि) कॉलेज में वेरीफाई करवाने होते हैं।',
+          'ज़िले की मेरिट लिस्ट बनने के बाद, टॉप छात्राओं को सिलेक्ट करके कोचिंग के लिए भेज दिया जाता है।'
+        ]
+      }
+    ],
+    applicationProcessEn: [
+      {
+        mode: 'Online / Through College', steps: [
+          'When applications of scheme start, then its notice is put on college\'s notice board.',
+          'Girl students have to apply online by going to MP Higher Education Portal or through college.',
+          'Have to get all your documents (marksheet etc) verified in college.',
+          'After merit list of district is made, top girl students are selected and sent for coaching.'
+        ]
+      }
+    ],
+    faqs: [
+      { question: 'क्या मुझे अपनी पसंद की कोचिंग चुनने का मौका मिलेगा?', answer: 'आमतौर पर उच्च शिक्षा विभाग अच्छे कोचिंग संस्थानों के साथ करार (Tie-up) करता है। छात्राओं को विभाग द्वारा निर्धारित लिस्ट (Panel) में से ही कोचिंग चुननी होती है।' },
+      { question: 'क्या यह योजना सिर्फ सरकारी कॉलेज की छात्राओं के लिए है?', answer: 'ज़्यादातर लाभ सरकारी कॉलेजों में पढ़ने वाली छात्राओं को दिया जाता है। प्राइवेट कॉलेज की छात्राओं की पात्रता के लिए योजना के ताज़ा दिशानिर्देश (Guidelines) पोर्टल চেক करें।' }
+    ],
+    faqsEn: [
+      { question: 'Will I get chance to choose coaching of my choice?', answer: 'Usually Higher Education Dept does tie-up with good coaching institutes. Girl students have to choose coaching from list (Panel) decided by dept only.' },
+      { question: 'Is this scheme only for girl students of govt college?', answer: 'Mostly benefit is given to girl students studying in govt colleges. For eligibility of private college girl students check fresh guidelines of scheme on portal.' }
+    ]
   }
 };

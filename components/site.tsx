@@ -264,7 +264,7 @@ export function Sidebar({category='all'}:{category?:string}){
 
 export function Status({s}:{s:Pick<Scheme, 'status'>}){
   const {t}=useLanguage();
-  return <span className={'status '+(s.status==='ACTIVE'?'verified':'')}><span/>{t.statusLabels[s.status as keyof typeof t.statusLabels]??statusLabels[s.status]}</span>;
+  return <span className={'status '+(s.status==='ACTIVE'?'verified':s.status==='CLOSED'?'closed':'')}><span/>{t.statusLabels[s.status as keyof typeof t.statusLabels]??statusLabels[s.status]}</span>;
 }
 
 export function Card({s, priority = false}:{s:SchemeSummary; priority?: boolean}){
@@ -309,7 +309,7 @@ export function Card({s, priority = false}:{s:SchemeSummary; priority?: boolean}
       {!isCurrent && <p className="source-review-note">{lang === 'en' ? 'Detailed benefits and documents are hidden until this information is reviewed again.' : 'लाभ और दस्तावेज़ों का विस्तृत विवरण दोबारा समीक्षा पूरी होने तक नहीं दिखाया जा रहा है।'}</p>}
     </div>
 
-    <div className="card-bottom">{s.editorial?.publicationStatus !== 'REVIEWED' ? <span className="status">{lang === 'hi' ? 'सत्यापन आवश्यक' : 'Review needed'}</span> : <Status s={s}/>}<Link prefetch={false} href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
+    <div className="card-bottom"><Status s={s}/><Link prefetch={false} href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
   </article>;
 }
 
