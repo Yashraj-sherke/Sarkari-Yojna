@@ -315,8 +315,6 @@ export function YojnaDetailClient({
             <p>ये सामान्य जानकारी के गाइड हैं। आवश्यक दस्तावेज़ योजना के वर्तमान आधिकारिक नियमों से मिलाएँ।</p>
             <ul className="flat-list">{relatedGuides.map(g => <li key={g.slug}><Link className="inline-link" href={`/guide/${g.slug}`}>{g.title}</Link></li>)}</ul>
           </section>}
-          <SchemeFeedback slug={s.slug} title={pageLang === 'en' ? s.english : s.title} english={pageLang === 'en'}/>
-
           {relatedSchemes.length > 0 && (
             <section className="flat-section" id="related" style={{marginTop: 40}}>
               <h2 className="flat-section-heading">{t.detailRelated}</h2>
@@ -331,6 +329,8 @@ export function YojnaDetailClient({
               </ul>
             </section>
           )}
+          <SchemeFeedback slug={s.slug} title={pageLang === 'en' ? s.english : s.title} english={pageLang === 'en'}/>
+
           
         </div>
 

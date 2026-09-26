@@ -43,11 +43,13 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   // Build rich structured data
   const isActive=isIndexableScheme(s);
   const schemesList = await allSchemes();
-  const relatedSchemes = schemesList.filter(x =>
-    x.category === s.category &&
-    x.slug !== s.slug &&
-    isIndexableScheme(x)
-  ).slice(0, 3);
+  let relatedSchemes = schemesList.filter(x => x.category === s.category && x.slug !== s.slug && isIndexableScheme(x));
+  if (relatedSchemes.length < 3) {
+    const otherSchemes = schemesList.filter(x => x.slug !== s.slug && isIndexableScheme(x) && !relatedSchemes.some(r => r.slug === x.slug));
+    relatedSchemes = relatedSchemes.concat(otherSchemes).slice(0, 3);
+  } else {
+    relatedSchemes = relatedSchemes.slice(0, 3);
+  }
   const category = categories.find(c=>c.id===s.category);
 
   const articleSchema=isActive?{
