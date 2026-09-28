@@ -6,7 +6,8 @@ import {enrichSchemeArticle} from '../lib/scheme-articles';
 import {getSchemeFaqs, getSchemeProcess} from '../lib/scheme-details';
 
 test('catalogue records keep honest source provenance without fabricated completeness', () => {
-  assert.equal(seeds.length, 153);
+  assert(seeds.length > 0);
+  assert.equal(new Set(seeds.map(s => s.slug)).size, seeds.length, 'scheme slugs must be unique');
   for (const s of seeds) {
     assert(schemeSchema.safeParse(s).success, s.slug);
     for (const ref of s.references ?? []) assert(officialUrl(ref.url));

@@ -1,8 +1,8 @@
 import { summarizeScheme } from '@/lib/scheme-summary';
 import { allSchemes } from '@/lib/server';
+import { getAllSamachar } from '@/lib/samachar';
 import { Directory } from '@/components/directory';
 import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_ALTERNATE_NAMES, SITE_URL } from '@/lib/config';
-import { SchemeIndex } from '@/components/scheme-index';
 import { isIndexableScheme } from '@/lib/seo';
 
 const title = 'Sarkari Yojana — सरकारी योजनाओं के लाभ, पात्रता और आवेदन';
@@ -18,6 +18,8 @@ export const revalidate = 3600;
 
 export default async function Home() {
   const schemes = await allSchemes();
+  const news = await getAllSamachar();
+  const latestNews = news.slice(0, 3).map(({ body, ...rest }) => rest);
   const reviewedSchemes = schemes.filter(isIndexableScheme);
   const websiteSchema={
     '@context':'https://schema.org',
@@ -61,10 +63,49 @@ export default async function Home() {
     },
   };
 
+
+  const faqSchema={
+    '@context':'https://schema.org',
+    '@type':'FAQPage',
+    mainEntity:[
+      {
+        '@type':'Question',
+        name:'महिलाओं के लिए अभी कौन सी योजना चल रही है?',
+        acceptedAnswer:{
+          '@type':'Answer',
+          text:'वर्तमान में महिलाओं के लिए कई प्रमुख योजनाएं चल रही हैं, जिनमें लाडली बहना योजना, महतारी वंदन योजना, पीएम मातृ वंदना योजना, और लखपति दीदी योजना प्रमुख हैं।'
+        }
+      },
+      {
+        '@type':'Question',
+        name:'₹ 2100 किन महिलाओं को मिलेंगे?',
+        acceptedAnswer:{
+          '@type':'Answer',
+          text:'हाल ही में कुछ राज्य सरकारों (जैसे महाराष्ट्र में माझी लाडकी बहीण योजना) द्वारा गरीब महिलाओं को मासिक 2100 रुपये देने की घोषणाएं की गई हैं। यह 21 से 60 वर्ष की गरीब और बेसहारा महिलाओं को दी जाती है।'
+        }
+      },
+      {
+        '@type':'Question',
+        name:'गरीबों के लिए कौन-कौन सी योजना चल रही है?',
+        acceptedAnswer:{
+          '@type':'Answer',
+          text:'गरीब परिवारों के लिए केंद्र सरकार की कई योजनाएं हैं: 1. पीएम गरीब कल्याण अन्न योजना 2. आयुष्मान भारत योजना 3. पीएम आवास योजना 4. पीएम उज्ज्वला योजना।'
+        }
+      },
+      {
+        '@type':'Question',
+        name:'महिलाओं को 10,000 कैसे मिलेंगे?',
+        acceptedAnswer:{
+          '@type':'Answer',
+          text:'महिलाओं को 10,000 रुपये की सहायता स्वनिधि योजना या मुद्रा योजना (शिशु लोन) के तहत बिना गारंटी के लोन के रूप में मिल सकती है।'
+        }
+      }
+    ]
+  };
+
   return (
     <>
-      <Directory schemes={schemes.map(summarizeScheme)} initialState="central" isHomePage={true} />
-      <SchemeIndex schemes={schemes} />
+      <Directory schemes={schemes.map(summarizeScheme)} latestNews={latestNews} initialState="central" isHomePage={true} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(collectionSchema).replace(/</g,'\\u003c')}}/>

@@ -12,6 +12,10 @@ export function InformationPage({page}: {page: InformationPageKey}) {
     {page === 'contact' && <div className="panel"><h2>हमारा संपर्क ईमेल</h2><a href={`mailto:${CONTACT_EMAIL}`} style={{overflowWrap:'anywhere',fontWeight:600}}>{CONTACT_EMAIL}</a><p>ईमेल लिंक खोलने से आपके मेल ऐप में संदेश तैयार होता है। आपकी अनुमति के बिना संदेश नहीं भेजा जाता।</p></div>}
     {content.sections.map((section,i) => <section key={section.title} aria-labelledby={`info-${i}`} style={{marginTop:32}}><h2 id={`info-${i}`}>{section.title}</h2>{'paragraphs' in section && section.paragraphs?.map(p=><p key={p}>{p}</p>)}{'items' in section && section.items && <ul>{section.items.map(p=><li key={p}>{p}</li>)}</ul>}{page === 'privacy' && i === 4 && <DeleteData/>}</section>)}
     <aside className="panel" style={{marginTop:36}}><h2>सवाल या सुधार भेजें</h2><p><a href={`mailto:${CONTACT_EMAIL}`} style={{overflowWrap:'anywhere'}}>{CONTACT_EMAIL}</a></p><nav aria-label="संबंधित जानकारी" style={{display:'flex',flexWrap:'wrap',gap:'12px 24px'}}>{Object.entries(informationPages).filter(([key])=>key!==page).map(([key,value])=><Link key={key} href={`/${key}`}>{value.title}</Link>)}</nav></aside>
+    {page === 'about' && <section aria-labelledby="explore-content" style={{marginTop:32}}>
+      <h2 id="explore-content">योजना की जानकारी कहाँ से शुरू करें?</h2>
+      <p><Link href="/yojna">समीक्षित सरकारी योजना लेख</Link> में पात्रता, दस्तावेज़ और सरकारी स्रोत पढ़ें। आवेदन की तैयारी के लिए <Link href="/guide">सरल हिन्दी में दस्तावेज़ और सुरक्षा गाइड</Link> देखें।</p>
+    </section>}
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structured).replace(/</g,'\\u003c')}}/>
   </main>;
 }

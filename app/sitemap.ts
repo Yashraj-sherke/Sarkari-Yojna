@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
 
   const statics: MetadataRoute.Sitemap = [
     {url:SITE_URL,lastModified:latest},
+    {url:`${SITE_URL}/yojna`,lastModified:latest},
     ...(hasReviewedMpScheme ? [{url:`${SITE_URL}/state/madhya-pradesh`,lastModified:latest}] : []),
     {url:`${SITE_URL}/guide`},
     ...Object.keys(informationPages).map(key=>({

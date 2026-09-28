@@ -8,6 +8,20 @@
       "when": 1790089931452,
       "tag": "0000_high_pretty_boy",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790417614372,
+      "tag": "0001_breezy_purple_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790427823869,
+      "tag": "0002_smooth_pride",
+      "breakpoints": true
     }
   ]
 }

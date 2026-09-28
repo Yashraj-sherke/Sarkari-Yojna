@@ -3580,7 +3580,7 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: 'कृषि उपकरणों का लाइव डेमो, विशेषज्ञों से सीधी सलाह, सरकारी योजनाओं की त्वरित जानकारी',
     department: 'किसान कल्याण तथा कृषि विकास विभाग',
     sourceUrl: 'https://mpkrishi.mp.gov.in/',
-    applicationUrl: 'https://dbt.mpdage.org/',
+    applicationUrl: '',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'आधार कार्ड (Aadhaar Card)',
@@ -3906,7 +3906,7 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: 'जैविक खाद, कीटनाशक, पैकेजिंग और प्रमाणीकरण हेतु 3 वर्ष में ₹31,500 प्रति हेक्टेयर (DBT)',
     department: 'किसान कल्याण तथा कृषि विकास विभाग',
     sourceUrl: 'https://mpkrishi.mp.gov.in/',
-    applicationUrl: 'https://dbt.mpdage.org/',
+    applicationUrl: '',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'आधार कार्ड (Aadhaar Card)',
@@ -4016,7 +4016,7 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: 'तालाब निर्माण पर सामान्य वर्ग को 40% (₹80K), छोटे किसानों को 50% (₹80K) व SC/ST को 75% (₹1 लाख) तक अनुदान',
     department: 'किसान कल्याण तथा कृषि विकास विभाग',
     sourceUrl: 'https://mpkrishi.mp.gov.in/',
-    applicationUrl: 'https://dbt.mpdage.org/',
+    applicationUrl: '',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'आधार कार्ड (Aadhaar Card)',
@@ -4241,8 +4241,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     summary: 'छोटे और सीमांत किसानों को खेती के काम और फसल परिवहन के लिए बैलगाड़ी या बैल जोड़ी खरीदने पर 50% तक सरकारी अनुदान।',
     benefit: 'बैलगाड़ी एवं बैलों की खरीद पर 50% सरकारी अनुदान (विभिन्न जिलों में लक्ष्य के अनुसार)',
     department: 'किसान कल्याण तथा कृषि विकास विभाग',
-    sourceUrl: 'https://dbt.mpdage.org/',
-    applicationUrl: 'https://dbt.mpdage.org/',
+    sourceUrl: 'https://mpkrishi.mp.gov.in/',
+    applicationUrl: '',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'आधार कार्ड (Aadhaar Card)',
@@ -4570,7 +4570,7 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: 'सूक्ष्म सिंचाई (ड्रिप/स्प्रिंकलर) उपकरणों की स्थापना पर 45% से 55% तक वित्तीय अनुदान',
     department: 'उद्यानिकी एवं खाद्य प्रसंस्करण / कृषि विकास विभाग',
     sourceUrl: 'https://mpfsts.mp.gov.in/',
-    applicationUrl: 'https://dbt.mpdage.org/',
+    applicationUrl: '',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'आधार कार्ड (Aadhaar Card)',
@@ -5881,8 +5881,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     summary: 'दिव्यांग (Disabled) व्यक्तियों को विवाह के बाद अपना घर बसाने और सुखद जीवन शुरू करने के लिए सरकार की ओर से ₹2 लाख की आर्थिक सहायता।',
     benefit: 'दिव्यांग युवक या युवती (या दोनों) के विवाह पर ₹2,00,000 (दो लाख रुपये) की एकमुश्त प्रोत्साहन राशि',
     department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
-    sourceUrl: 'http://socialsecurity.mp.gov.in/',
-    applicationUrl: 'http://socialsecurity.mp.gov.in/',
+    sourceUrl: 'https://socialsecurity.mp.gov.in/',
+    applicationUrl: 'https://socialsecurity.mp.gov.in/',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'वर और वधू दोनों का आधार कार्ड',
@@ -6100,8 +6100,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     summary: 'जिन माता-पिता की केवल एक ही संतान (बेटी) है, उस बेटी की शिक्षा के लिए सरकार द्वारा ₹5,000 प्रति वर्ष की छात्रवृत्ति (Scholarship)।',
     benefit: 'स्कूल/कॉलेज में पढ़ाई जारी रखने के लिए इकलौती बेटियों को ₹5,000 प्रति वर्ष की वित्तीय सहायता',
     department: 'स्कूल शिक्षा / उच्च शिक्षा विभाग, मध्य प्रदेश',
-    sourceUrl: 'http://educationportal.mp.gov.in/',
-    applicationUrl: 'http://scholarshipportal.mp.nic.in/',
+    sourceUrl: 'https://educationportal.mp.gov.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'छात्रा का आधार कार्ड',
@@ -6319,8 +6319,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     summary: '50 वर्ष या उससे अधिक आयु की अविवाहित महिलाओं को आत्मनिर्भर बनाने के लिए राज्य सरकार द्वारा ₹600 प्रतिमाह की आर्थिक सहायता।',
     benefit: '50 वर्ष या उससे अधिक उम्र की अविवाहित महिलाओं को ₹600 प्रति माह नियमित पेंशन (DBT)',
     department: 'सामाजिक न्याय एवं दिव्यांगजन सशक्तिकरण विभाग',
-    sourceUrl: 'http://socialsecurity.mp.gov.in/',
-    applicationUrl: 'http://socialsecurity.mp.gov.in/',
+    sourceUrl: 'https://socialsecurity.mp.gov.in/',
+    applicationUrl: 'https://socialsecurity.mp.gov.in/',
     documents: [
       'समग्र आईडी (Samagra ID)',
       'आधार कार्ड (Aadhaar Card)',
@@ -15113,7 +15113,7 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     benefit: 'मज़दूरों के बच्चों को उच्च शिक्षा (MBBS, Engineering, MBA, ITI, Polytechnic) के लिए लगने वाली लाखों रुपये की ट्यूशन फीस (Tuition Fee) सरकार सीधे कॉलेज को देती है।',
     department: 'श्रम विभाग',
     sourceUrl: 'https://sambal.mp.gov.in/',
-    applicationUrl: 'http://scholarshipportal.mp.nic.in/',
+    applicationUrl: 'https://scholarshipportal.mp.nic.in/',
     documents: [
       'छात्र और माता-पिता का आधार कार्ड',
       'समग्र आईडी',

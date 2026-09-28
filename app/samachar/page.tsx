@@ -16,12 +16,12 @@ export default async function SamacharIndex() {
   return (
     <div className="workspace">
       <Sidebar />
-      <main id="main" className="directory" style={{padding: '2rem'}}>
+      <main id="main" className="directory samachar-main">
         <div className="breadcrumb" style={{marginBottom: '20px'}}>
           <Link href="/">होम</Link> <span>/</span> समाचार
         </div>
         
-        <h1 style={{fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', color: '#111'}}>ताज़ा समाचार</h1>
+        <h1 className="samachar-header-title">ताज़ा समाचार</h1>
         <p style={{color: '#4a5568', marginBottom: '2rem'}}>सरकारी योजनाओं और नीतियों से जुड़ी नवीनतम जानकारी और अपडेट्स।</p>
         
         <div style={{marginTop: 20, marginBottom: 40}}>
@@ -30,7 +30,7 @@ export default async function SamacharIndex() {
 
         <div style={{display: 'grid', gap: '20px'}}>
           {news.map(item => (
-            <article key={item.slug} style={{border: '1px solid #e2e8f0', borderRadius: '12px', padding: '20px', background: 'white'}}>
+            <article key={item.slug} className="samachar-article-card">
               <div style={{display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '10px'}}>
                 <span style={{background: '#edf2f7', color: '#4a5568', padding: '4px 10px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 600}}>
                   {item.category}

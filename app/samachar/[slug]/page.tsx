@@ -1,16 +1,19 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getSamachar } from '@/lib/samachar';
 import { Sidebar } from '@/components/site';
 import { AdSensePlaceholder } from '@/components/ads';
+import { SITE_URL } from '@/lib/config';
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}) {
   const {slug} = await params;
   const s = await getSamachar(slug);
   if (!s) return { title: 'समाचार नहीं मिला' };
+  const title = s.title.length > 52 ? `${s.title.slice(0, 51).trim()}…` : s.title;
   
   return {
-    title: s.title,
+    title,
     description: s.summary,
     alternates: { canonical: `/samachar/${slug}` },
     robots: { index: false, follow: true },
@@ -23,16 +26,25 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
   const s = await getSamachar(slug);
   
   if (!s) return notFound();
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {'@type':'ListItem', position:1, name:'होम', item:`${SITE_URL}/`},
+      {'@type':'ListItem', position:2, name:'समाचार', item:`${SITE_URL}/samachar`},
+      {'@type':'ListItem', position:3, name:s.title, item:`${SITE_URL}/samachar/${s.slug}`},
+    ],
+  };
 
   return (
     <div className="workspace">
       <Sidebar />
-      <main id="main" className="directory" style={{padding: '2rem'}}>
+      <main id="main" className="directory samachar-main">
         <div className="breadcrumb" style={{marginBottom: '20px'}}>
           <Link href="/">होम</Link> <span>/</span> <Link href="/samachar">समाचार</Link> <span>/</span> {s.title}
         </div>
         
-        <article style={{background: 'white', borderRadius: '12px', padding: '30px', border: '1px solid #e2e8f0'}}>
+        <article className="samachar-detail-article">
           <div style={{display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '15px'}}>
             <span style={{background: '#edf2f7', color: '#4a5568', padding: '4px 10px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 600}}>
               {s.category}
@@ -42,21 +54,28 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
             </time>
           </div>
           
-          <h1 style={{fontSize: '2.2rem', fontWeight: 800, marginBottom: '20px', color: '#111', lineHeight: 1.3}}>
+          <h1 className="samachar-detail-title">
             {s.title}
           </h1>
-          
+
           <div style={{marginBottom: '30px', color: '#4a5568', fontWeight: 500}}>
             लेखा: {s.author}
           </div>
+
+          {s.imageUrl && (
+            <div className="samachar-cover">
+              <Image src={s.imageUrl} alt={s.title} fill style={{objectFit: 'cover'}} />
+            </div>
+          )}
+
 
           <div style={{marginTop: 20, marginBottom: 40}}>
             <AdSensePlaceholder client="ca-pub-xxxxxxxx" slot="xxxxxxxxx" />
           </div>
           
-          <div className="article-body" style={{fontSize: '1.1rem', color: '#2d3748', lineHeight: 1.7}}>
+          <div className="article-body samachar-body" style={{fontSize: '1.1rem', color: '#2d3748', lineHeight: 1.7}}>
             {s.body.map((p, idx) => (
-              <p key={idx} style={{marginBottom: '20px'}}>{p}</p>
+              <p key={idx} dangerouslySetInnerHTML={{ __html: p }} />
             ))}
           </div>
 
@@ -64,6 +83,7 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
             <AdSensePlaceholder client="ca-pub-xxxxxxxx" slot="xxxxxxxxx" />
           </div>
         </article>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb).replace(/</g,'\\u003c')}} />
       </main>
     </div>
   );

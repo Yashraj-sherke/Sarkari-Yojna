@@ -1,0 +1,12 @@
+{
+  "providedAt": "2026-09-27",
+  "source": "User-supplied Search Console screenshot and hourly export; not a live API connection",
+  "property": "sarkariyojanasetu.com",
+  "period": "24 hours, 26 September 18:30 to 27 September 17:30 IST",
+  "searchType": "Web (text)",
+  "clicks": 2,
+  "impressions": 4,
+  "ctr": "50%",
+  "averagePosition": 19.3,
+  "limitation": "Four impressions are insufficient for trend, CTR or ranking opportunity conclusions. Query/page breakdowns, longer periods and indexing reports were not supplied. Zero-impression hours are not position-zero rankings."
+}

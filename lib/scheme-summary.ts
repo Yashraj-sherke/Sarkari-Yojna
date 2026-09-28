@@ -4,12 +4,12 @@ import type { Scheme } from './domain';
 export type SchemeSummary = Pick<Scheme,
   'slug' | 'title' | 'english' | 'category' | 'state' | 'summary' | 'summaryEn' |
   'benefit' | 'benefitEn' | 'department' | 'documents' | 'status' |
-  'nextReviewAt' | 'lastUpdated' | 'sourceUrl' | 'isSample' | 'editorial'
+  'nextReviewAt' | 'lastUpdated' | 'sourceUrl' | 'isSample' | 'editorial' | 'imageUrl'
 >;
 
 export function summarizeScheme(s: Scheme): SchemeSummary {
   const { slug, title, english, category, state, summary, summaryEn, benefit,
-    benefitEn, department, documents, status, nextReviewAt, lastUpdated, sourceUrl, isSample, editorial } = s;
+    benefitEn, department, documents, status, nextReviewAt, lastUpdated, sourceUrl, isSample, editorial, imageUrl } = s;
   return { slug, title, english, category, state, summary, summaryEn, benefit,
-    benefitEn, department, documents, status, nextReviewAt, lastUpdated, sourceUrl, isSample, editorial };
+    benefitEn, department, documents, status, nextReviewAt, lastUpdated, sourceUrl, isSample, editorial, imageUrl };
 }

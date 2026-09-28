@@ -38,7 +38,7 @@ export const schemeSchema = z.object({
   summary:z.string().min(10).max(1500), benefit:z.string().min(3).max(600), department:z.string().min(2).max(180),
   documents:z.array(z.string().min(1).max(250)).max(20), steps:z.array(z.string().min(1).max(500)).max(20), rules:z.array(ruleSchema).max(20),
   sourceUrl:official, applicationUrl:official, sourceNotes:z.string().max(2000),
-  status:z.enum(['REQUIRES_OFFICIAL_VERIFICATION','ACTIVE','NEEDS_REVIEW','ARCHIVED','CLOSED']),
+  status:z.enum(['DRAFT','FACT_CHECK','REQUIRES_OFFICIAL_VERIFICATION','ACTIVE','NEEDS_REVIEW','UPDATE_REQUIRED','ARCHIVED','CLOSED']),
   priority:z.boolean(), isSample:z.boolean(), verifiedAt:z.string().nullable(), nextReviewAt:z.string().nullable(),
   detailedDescription: z.array(z.string()).optional(),
   benefitsList: z.array(z.object({ heading: z.string(), points: z.array(z.string()) })).optional(),
@@ -56,6 +56,8 @@ export const schemeSchema = z.object({
   references: z.array(z.object({ title: z.string(), organization: z.string(), url: official, sections: z.array(z.string()), accessedAt: z.string().nullable(), note: z.string().optional() })).optional(),
   practicalGuidance: z.array(z.string()).optional(),
   trackingGuidance: z.string().optional(),
+  imageUrl: z.string().optional(),
+  seoDescription: z.string().max(300).optional(),
   // English Translation Fields
   summaryEn: z.string().optional(),
   benefitEn: z.string().optional(),
@@ -101,7 +103,7 @@ function getSearchSynonyms(term: string): string[] {
 
 export function searchSchemes<T extends SchemeSummary>(items: T[], q = '', category = 'all', state = 'all') {
   const filtered = items.filter(s => 
-    !['ARCHIVED', 'CLOSED'].includes(s.status) &&
+    s.status === 'ACTIVE' &&
     (category === 'all' || s.category === category) &&
     (state === 'all' || s.state === 'central' || s.state === state)
   );
@@ -145,4 +147,4 @@ export function evaluate(s:Scheme,p:Profile) {
 export function rankSchemes(s:Scheme[],p:Profile){return s.map(x=>evaluate(x,p)).filter(x=>!x.blocked).sort((a,b)=>b.trust-a.trust||b.score-a.score);}
 export const reportSchema=z.object({slug:z.string().max(100),reason:z.enum(['wrong-benefit','wrong-eligibility','broken-link','closed','outdated','contact','other']),detail:z.string().max(1000)}).strict();
 export const reminderSchema=z.object({slug:z.string().max(100),date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/)}).strict();
-export const statusLabels:Record<string,string>={ACTIVE:'स्रोत से सत्यापित',REQUIRES_OFFICIAL_VERIFICATION:'सत्यापन बाकी',NEEDS_REVIEW:'दोबारा समीक्षा जरूरी',ARCHIVED:'संग्रहित',CLOSED:'योजना बंद'};
+export const statusLabels:Record<string,string>={ACTIVE:'स्रोत से सत्यापित',REQUIRES_OFFICIAL_VERIFICATION:'सत्यापन बाकी',NEEDS_REVIEW:'दोबारा समीक्षा जरूरी',ARCHIVED:'संग्रहित',CLOSED:'योजना बंद',DRAFT:'प्रारूप',FACT_CHECK:'तथ्य जांच',UPDATE_REQUIRED:'अपडेट आवश्यक'};

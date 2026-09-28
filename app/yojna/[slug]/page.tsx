@@ -14,8 +14,9 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const s=await getScheme(slug);
   if(!s) notFound();
   const isPublic=isIndexableScheme(s);
-  const {title, description:desc}=schemeSearchPresentation(s);
-  const image=officialImages[s.slug]?.src ?? DEFAULT_OG_IMAGE;
+  const {title, description: defaultDesc}=schemeSearchPresentation(s);
+  const desc = s.seoDescription || defaultDesc;
+  const image= s.imageUrl || officialImages[s.slug]?.src || DEFAULT_OG_IMAGE;
   return {
     title,
     description:desc,
@@ -29,7 +30,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 export default async function Page({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s) return notFound();
+  if(!s || (s.status !== 'ACTIVE' && s.status !== 'CLOSED' && s.status !== 'ARCHIVED')) return notFound();
   const d=db();
   // Feedback is optional: database downtime must not make the article unavailable.
   const cRes=d?await d`SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=${slug} AND u.expires_at>${new Date().toISOString()}`.catch(()=>[{n:0}]):[{n:0}];
@@ -50,6 +51,11 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   } else {
     relatedSchemes = relatedSchemes.slice(0, 3);
   }
+  const relatedSchemesMapped = relatedSchemes.map(rs => ({
+    slug: rs.slug,
+    title: rs.title,
+    english: rs.english,
+  }));
   const category = categories.find(c=>c.id===s.category);
 
   const articleSchema=isActive?{
@@ -84,7 +90,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       eligibilityList={eligibilityList} 
       processInfo={processInfo} 
       faqs={faqs} 
-      relatedSchemes={relatedSchemes} 
+      relatedSchemes={relatedSchemesMapped as any} 
       initialCount={c?.n??0} 
     />
 

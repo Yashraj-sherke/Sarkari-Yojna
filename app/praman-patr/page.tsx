@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {PageTitle} from '@/components/site';
 
 export const metadata:Metadata={
-  title:'प्रमाण पत्र कैसे बनाएं — आय, जाति, निवास, जन्म प्रमाण पत्र MP',
+  title:'MP प्रमाण पत्र गाइड — आय, जाति, निवास और जन्म',
   description:'मध्य प्रदेश में आय प्रमाण पत्र, जाति प्रमाण पत्र, निवास प्रमाण पत्र, जन्म प्रमाण पत्र और समग्र ID कैसे बनाएं — ज़रूरी दस्तावेज़, ऑनलाइन आवेदन और पूरी प्रक्रिया हिन्दी में।',
   alternates:{canonical:'/praman-patr'},
   robots:{index:false,follow:true},
@@ -129,8 +129,8 @@ export default function PramanPatrPage(){
       <div className="pp-links">
         {[
           {href:'/yojna/ladli-behna',label:'लाड़ली बहना योजना'},
-          {href:'/yojna/seekho-kamao',label:'सीखो कमाओ योजना'},
-          {href:'/yojna/gaon-ki-beti',label:'गांव की बेटी योजना'},
+          {href:'/yojna/mukhyamantri-seekho-kamao',label:'सीखो कमाओ योजना'},
+          {href:'/yojna/mp-gaon-ki-beti',label:'गांव की बेटी योजना'},
           {href:'/yojna/sambal-yojana',label:'संबल योजना'},
           {href:'/yojna/ladli-laxmi',label:'लाड़ली लक्ष्मी योजना'},
           {href:'/category/shiksha',label:'छात्रवृत्ति योजनाएं'},
