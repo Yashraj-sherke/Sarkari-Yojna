@@ -10,7 +10,7 @@ import { useLanguage } from '@/lib/i18n';
 import { ProcessFlow } from './process-flow';
 
 
-export function Directory({ schemes, initialCategory = 'all', initialState = 'all', isHomePage = false }: { schemes: SchemeSummary[]; initialCategory?: string; initialState?: string; isHomePage?: boolean }) {
+export function Directory({ schemes, initialCategory = 'all', initialState = 'all', isHomePage = false, latestNews }: { schemes: SchemeSummary[]; initialCategory?: string; initialState?: string; isHomePage?: boolean; latestNews?: any[] }) {
   const { t, lang } = useLanguage();
 
   const [q, setQ] = useState('');
@@ -49,9 +49,9 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
         <div className="discovery-copy">
           <div className="hero-kicker"><span /> {t.heroBadge}</div>
           <h1>{routeTitle ?? <>Sarkari Yojana<br /><span>{lang === 'hi' ? 'सरकारी योजनाओं की सरल जानकारी' : 'Understand government schemes'}</span></>}</h1>
-          <p>{t.heroDesc.split('\n').map((line, i) => <span key={i}>{line}{i === 0 && <br />}</span>)}</p>
+          <div className="hero-desc">{t.heroDesc.split('\n').map((line, i) => <span key={i}>{line}{i === 0 && <br />}</span>)}</div>
           {isHomePage && <>
-            <p>{lang === 'hi' ? 'Sarkari Yojana (सरकारी योजना), sarkariyojanasetu.com पर एक स्वतंत्र नागरिक सूचना मंच है। इसे Sarkari Yojana Setu नाम से भी पहचान सकते हैं। यह सरकारी वेबसाइट नहीं है। अभी केंद्र और मध्य प्रदेश की योजनाओं पर जानकारी उपलब्ध है।' : 'Sarkari Yojana, also known as Sarkari Yojana Setu, is an independent citizen-information platform at sarkariyojanasetu.com. It currently covers Central and Madhya Pradesh schemes and is not a government website.'}</p>
+            <div className="hero-desc-sub">{lang === 'hi' ? 'Sarkari Yojana (सरकारी योजना), sarkariyojanasetu.com पर एक स्वतंत्र नागरिक सूचना मंच है। इसे Sarkari Yojana Setu नाम से भी पहचान सकते हैं। यह सरकारी वेबसाइट नहीं है। अभी केंद्र और मध्य प्रदेश की योजनाओं पर जानकारी उपलब्ध है।' : 'Sarkari Yojana, also known as Sarkari Yojana Setu, is an independent citizen-information platform at sarkariyojanasetu.com. It currently covers Central and Madhya Pradesh schemes and is not a government website.'}</div>
           </>}
           <form className="search-box" onSubmit={e => { e.preventDefault(); setQuery(q); if (q && isHomePage && state === 'central') { setState('all'); } track('search_performed'); }}>
             <div className="search-brand-mark" title="Sarkari Yojana">
@@ -72,8 +72,36 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
             <span>{t.searchSuggest}</span>
             {t.searchTags.map(tag => <button key={tag} onClick={() => { setQ(tag); setQuery(tag); if (isHomePage && state === 'central') { setState('all'); } track('search_performed'); }}>{tag}</button>)}
           </div>
+          {isHomePage && <div className="discovery-links" style={{marginTop: '1rem'}}>
+            <Link className="inline-link" href="/yojna">{lang === 'hi' ? 'सभी समीक्षित सरकारी योजना लेख देखें' : 'Browse all reviewed scheme articles'}</Link>
+            {' · '}
+            <Link className="inline-link" href="/guide">{lang === 'hi' ? 'दस्तावेज़ और आवेदन की तैयारी के गाइड' : 'Documents and application preparation guides'}</Link>
+          </div>}
         </div>
       </section>
+
+      {isHomePage && latestNews && latestNews.length > 0 && (
+        <section className="latest-news-section" style={{marginTop: 30, marginBottom: 30}}>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12}}>
+            <h2 style={{fontSize: '1.25rem', fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: 8}}>
+              <span style={{color: '#e53e3e', fontSize: '1.5rem', lineHeight: 1}}>•</span> ताज़ा समाचार
+            </h2>
+            <Link href="/samachar" style={{fontSize: '0.9rem', color: '#3182ce', fontWeight: 600, textDecoration: 'none'}}>सभी देखें →</Link>
+          </div>
+          <div className="marquee-container" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 0' }}>
+            <div className="marquee-content" style={{ display: 'flex', gap: 32, alignItems: 'center', paddingRight: 32 }}>
+              {[...latestNews, ...latestNews, ...latestNews, ...latestNews, ...latestNews, ...latestNews].map((news: any, index: number) => (
+                <Link href={`/samachar/${news.slug}`} key={`${news.slug}-${index}`} style={{textDecoration: 'none', color: '#e53e3e', flex: '0 0 auto', display: 'flex', alignItems: 'center', gap: 32}} className="news-card-link">
+                  <span style={{fontSize: '0.95rem', fontWeight: 600, whiteSpace: 'nowrap'}}>
+                    {news.title}
+                  </span>
+                  <span style={{color: '#cbd5e0'}}>•</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <div className="match-box">
         <span className="match-icon"><Sparkles size={26} /></span>

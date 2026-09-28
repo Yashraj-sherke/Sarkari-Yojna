@@ -16,9 +16,14 @@ const categoryBanners: Record<string, { src: string; alt: string; credit: string
 
 import Image from 'next/image';
 
-export function OfficialImage({ slug, scheme, priority = false, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }: { slug: string; scheme?: Pick<Scheme, 'category' | 'title' | 'english' | 'sourceUrl' | 'department'>, priority?: boolean; sizes?: string }) {
+export function OfficialImage({ slug, scheme, priority = false, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }: { slug: string; scheme?: Pick<Scheme, 'category' | 'title' | 'english' | 'sourceUrl' | 'department' | 'imageUrl'>, priority?: boolean; sizes?: string }) {
   const [failed, setFailed] = useState(false);
-  const specific = officialImages[slug];
+  
+  let specific = officialImages[slug];
+  if (scheme?.imageUrl) {
+    specific = { src: scheme.imageUrl, alt: scheme.title, source: scheme.sourceUrl, credit: scheme.department, width: 1200, height: 630 };
+  }
+
   const cat = scheme?.category || 'kisan';
   const catBanner = categoryBanners[cat] || categoryBanners.kisan;
 

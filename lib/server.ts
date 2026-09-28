@@ -2,15 +2,43 @@ import { getChatGPTUser } from '@/app/chatgpt-auth';
 import { schemeSchema, effectiveStatus, type Scheme } from './domain';
 import { seeds } from './seed';
 import { enrichSchemeArticle } from './scheme-articles';
-import { neon } from '@neondatabase/serverless';
+import { neonConfig, Pool } from '@neondatabase/serverless';
+
+// Ensure the Edge Runtime doesn't cache DB connections aggressively
+neonConfig.fetchConnectionCache = false;
+(neonConfig as any).fetchOptions = { cache: undefined };
 
 let dbUrl = '';
 if (typeof process !== 'undefined' && process.env.DATABASE_URL) {
   dbUrl = process.env.DATABASE_URL;
 }
 
+try {
+  // @ts-ignore
+  const cf = await import(/* webpackIgnore: true */ "cloudflare:workers");
+  if (cf && cf.env && (cf.env as any).DATABASE_URL) {
+    dbUrl = (cf.env as any).DATABASE_URL;
+  }
+} catch {}
+
 export function db() {
-  return dbUrl ? neon(dbUrl) : null;
+  if (!dbUrl) return null;
+  // Use a transient WebSocket pool that is instantly closed to prevent
+  // Cloudflare Miniflare from hanging on open sockets and crashing the Vite server.
+  return async function(strings: TemplateStringsArray, ...values: any[]) {
+    const pool = new Pool({ connectionString: dbUrl });
+    try {
+      let text = strings[0];
+      for (let i = 1; i < strings.length; i++) {
+        text += '$' + i + strings[i];
+      }
+      const result = await pool.query(text, values);
+      return result.rows;
+    } finally {
+      // Critical: Immediately sever the connection so the Edge process doesn't hang
+      await pool.end();
+    }
+  } as any;
 }
 
 export async function maintenance() {
@@ -37,7 +65,7 @@ export async function allSchemes(): Promise<Scheme[]> {
   if (!sql) return seeds.map(normalizeScheme);
   try {
     const results = await sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
-    return results.map((x) => {
+    return results.map((x: any) => {
       const s = schemeSchema.parse(JSON.parse(x.data));
       s.lastUpdated = x.updated_at;
       return normalizeScheme(s);
@@ -169,17 +197,15 @@ export async function saveScheme(input: unknown, actor: string, changes: string,
   if (!oldSlug && prior) throw new HttpError(409, 'यह URL पहले से मौजूद है।');
   if (oldSlug && !prior) throw new HttpError(404, 'योजना नहीं मिली।');
   
-  await sql.transaction((tx) => [
-    tx`
-      INSERT INTO schemes(slug, data, status, next_review_at, updated_at) 
-      VALUES (${s.slug}, ${JSON.stringify(s)}, ${s.status}, ${s.nextReviewAt}, ${now.toISOString()}) 
-      ON CONFLICT(slug) DO UPDATE SET data=EXCLUDED.data, status=EXCLUDED.status, next_review_at=EXCLUDED.next_review_at, updated_at=EXCLUDED.updated_at
-    `,
-    tx`
-      INSERT INTO verification_logs (id, slug, actor, source, changes, created_at) 
-      VALUES (${crypto.randomUUID()}, ${s.slug}, ${actor}, ${s.sourceUrl}, ${JSON.stringify({ note: changes, before: prior, after: s })}, ${now.toISOString()})
-    `
-  ]);
+  await sql`
+    INSERT INTO schemes(slug, data, status, next_review_at, updated_at) 
+    VALUES (${s.slug}, ${JSON.stringify(s)}, ${s.status}, ${s.nextReviewAt}, ${now.toISOString()}) 
+    ON CONFLICT(slug) DO UPDATE SET data=EXCLUDED.data, status=EXCLUDED.status, next_review_at=EXCLUDED.next_review_at, updated_at=EXCLUDED.updated_at
+  `;
+  await sql`
+    INSERT INTO verification_logs (id, slug, actor, source, changes, created_at) 
+    VALUES (${crypto.randomUUID()}, ${s.slug}, ${actor}, ${s.sourceUrl}, ${JSON.stringify({ note: changes, before: prior, after: s })}, ${now.toISOString()})
+  `;
   
   return s;
 }

@@ -67,6 +67,6 @@ export const rationArticle: Partial<Scheme> = {
     {title: 'खाद्यान्न आवंटन और मुफ्त वितरण की अवधि', organization: 'खाद्य एवं सार्वजनिक वितरण विभाग', url: 'https://dfpd.gov.in/allocation-of-food-grains/en', sections: ['विवरण', 'लाभ'], accessedAt: checked},
     {title: 'नया राशन कार्ड: राज्यवार आवेदन मार्गदर्शन', organization: 'NFSA पोर्टल', url: 'https://nfsa.gov.in/portal/apply_ration_card', sections: ['आवेदन प्रक्रिया', 'आवश्यक दस्तावेज़'], accessedAt: checked},
     {title: 'आधिकारिक प्रश्नोत्तर और राशन पोर्टेबिलिटी', organization: 'खाद्य एवं सार्वजनिक वितरण विभाग', url: 'https://dfpd.gov.in/faqs/hi', sections: ['पात्रता', 'दस्तावेज़', 'सवाल'], accessedAt: checked},
-    {title: 'पात्रता और आधार लिंक पर केंद्रीय स्पष्टीकरण, 22 मार्च 2022', organization: 'पत्र सूचना कार्यालय', url: 'https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1808675', sections: ['अपवाद'], accessedAt: checked, note: 'यह प्रकाशित स्पष्टीकरण है; राज्य की वर्तमान प्रक्रिया अलग से जाँचें।'},
+    {title: 'पात्रता और आधार लिंक पर केंद्रीय स्पष्टीकरण, 22 मार्च 2022', organization: 'पत्र सूचना कार्यालय', url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=1808675', sections: ['अपवाद'], accessedAt: checked, note: 'यह प्रकाशित स्पष्टीकरण है; राज्य की वर्तमान प्रक्रिया अलग से जाँचें।'},
   ],
 };

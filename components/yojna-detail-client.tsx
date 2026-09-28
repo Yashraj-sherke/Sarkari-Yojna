@@ -2,6 +2,7 @@
 import {translations, useLanguage} from '@/lib/i18n';
 import {categories, type Scheme} from '@/lib/domain';
 import {guides} from '@/lib/guides';
+import {isGuideRelevantToScheme} from '@/lib/guide-links';
 import {BackButton} from '@/components/back-button';
 import {OfficialImage} from '@/components/official-image';
 import Link from 'next/link';
@@ -33,11 +34,11 @@ export function YojnaDetailClient({
     s.eligibilityDescriptionEn?.length && s.exclusionsEn?.length &&
     s.applicationProcessEn?.length && s.documentsEn?.length && s.faqsEn?.length
   );
-  const pageLang = lang === 'en' && hasEnglishArticle ? 'en' : 'hi';
+  const pageLang = lang;
   const t = translations[pageLang];
   const isReviewed = s.editorial?.publicationStatus === 'REVIEWED';
   const category = categories.find(c => c.id === s.category);
-  const relatedGuides = guides.filter(g => g.slug === "safe-application" || (g.slug === "income-certificate" && s.documents.some(d => /आय प्रमाण|income certificate/i.test(d))) || (g.slug === "ration-card" && s.documents.some(d => /राशन|ration/i.test(d))));
+  const relatedGuides = guides.filter(g => isGuideRelevantToScheme(g.slug, s));
   const hasDatedSources = Boolean(s.references?.some((reference) => reference.accessedAt));
   const displayDocuments = pageLang === 'en' ? (s.documentsEn ?? []) : s.documents;
   const displayFaqs = pageLang === 'en'
@@ -48,6 +49,10 @@ export function YojnaDetailClient({
   const officialApplicationUrl = s.applicationUrl || s.sourceUrl || processInfo.formUrl || null;
   const applicationIsPdf = officialApplicationUrl?.toLowerCase().endsWith('.pdf');
   const hasDocuments = hasDatedSources && displayDocuments.length > 0;
+  const hasExclusions = Boolean(
+    (pageLang === 'en' && s.exclusionsEn && s.exclusionsEn.length > 0) ||
+    (s.exclusions && s.exclusions.length > 0)
+  );
   const hasProcess = Boolean(
     (pageLang === 'en' && s.applicationProcessEn && s.applicationProcessEn.length > 0) ||
     (hasDatedSources && s.applicationProcess && s.applicationProcess.length > 0) ||
@@ -73,7 +78,7 @@ export function YojnaDetailClient({
         {isReviewed && <p className="scheme-lead">{pageLang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>}
         
         <div className="yojna-tags-row" style={{marginTop:'15px', marginBottom:'15px'}}>
-          {s.lastUpdated && <span className="yojna-tag-pill-outline" style={{borderColor: '#ecc94b', color: '#b7791f'}}>{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN')}</span>}
+          {s.lastUpdated && <span className="yojna-tag-pill-updated">{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN')}</span>}
           {tags.map((tag,idx)=>(
             <span key={idx} className="yojna-tag-pill-outline">{tag}</span>
           ))}
@@ -102,7 +107,7 @@ export function YojnaDetailClient({
             <a href="#vivaran" className="nav-link active">{t.detailDescription}</a>
             <a href="#labh" className="nav-link">{t.detailBenefits}</a>
             <a href="#patrata" className="nav-link">{t.detailEligibility}</a>
-            <a href="#apvad" className="nav-link">{t.detailExclusions}</a>
+            {hasExclusions && <a href="#apvad" className="nav-link">{t.detailExclusions}</a>}
             {hasDocuments && <a href="#dastavej" className="nav-link">{t.detailDocuments}</a>}
             {hasProcess && <a href="#aavedan" className="nav-link">{t.detailProcess}</a>}
             {s.trackingGuidance && <a href="#stithi" className="nav-link">{pageLang === 'en' ? 'Status / e-KYC' : 'स्थिति / e-KYC'}</a>}
@@ -120,7 +125,7 @@ export function YojnaDetailClient({
           {/* 1. विवरण */}
           <section className="flat-section" id="vivaran">
             <h2 className="flat-section-heading">{t.detailDescription}</h2>
-            <p><strong>{pageLang === 'en' ? 'Scope: ' : 'योजना का क्षेत्र: '}</strong>{s.state === 'madhya-pradesh' ? 'मध्य प्रदेश' : 'केंद्रीय योजना — लागू क्षेत्र और स्थानीय प्रक्रिया योजना के नियमों के अनुसार'}</p>
+            <p><strong>{pageLang === 'en' ? 'Scope: ' : 'योजना का क्षेत्र: '}</strong>{s.state === 'madhya-pradesh' ? (pageLang === 'en' ? 'Madhya Pradesh' : 'मध्य प्रदेश') : (pageLang === 'en' ? 'Central Scheme — Coverage and local process as per scheme rules' : 'केंद्रीय योजना — लागू क्षेत्र और स्थानीय प्रक्रिया योजना के नियमों के अनुसार')}</p>
             {pageLang === 'en' && s.detailedDescriptionEn ? (
               s.detailedDescriptionEn.map((p, idx) => <p key={idx} style={{marginBottom:'1em'}}>{p}</p>)
             ) : s.detailedDescription ? (
@@ -181,12 +186,12 @@ export function YojnaDetailClient({
                   const cleanText=item.replace('(या)','').replace('(or)','').trim();
                   return <li key={idx}>{cleanText} {(item.includes('(या)') || item.includes('(or)'))&&<span style={{color:'#718096'}}>{pageLang === 'en' ? '(or)' : '(या)'}</span>}</li>;
                 })}
-              </ol> : <p className="verification-needed">सत्यापन आवश्यक: आधिकारिक स्रोत से पूरी पात्रता सूची की समीक्षा अभी बाकी है।</p>
+              </ol> : <p className="verification-needed">{pageLang === 'en' ? 'Verification required: Full eligibility list from official source is pending review.' : 'सत्यापन आवश्यक: आधिकारिक स्रोत से पूरी पात्रता सूची की समीक्षा अभी बाकी है।'}</p>
             )}
           </section>
 
           {/* 4. अपवाद */}
-          <section className="flat-section" id="apvad">
+          {hasExclusions && <section className="flat-section" id="apvad">
             <h2 className="flat-section-heading">{t.detailExclusions}</h2>
             <h3>{pageLang === 'en' ? 'Who is excluded, and what needs checking?' : 'कौन पात्र नहीं है और किन बातों की जाँच चाहिए?'}</h3>
             {pageLang === 'en' && s.exclusionsEn && s.exclusionsEn.length > 0 ? (
@@ -197,10 +202,8 @@ export function YojnaDetailClient({
               <ul className="flat-list">
                 {s.exclusions.map((exc, idx) => <li key={idx}>{exc}</li>)}
               </ul>
-            ) : (
-              <p className="verification-needed">सत्यापन आवश्यक: आधिकारिक दिशानिर्देश में दी गई अपात्रता और अपवाद की शर्तें अभी दर्ज नहीं हैं।</p>
-            )}
-          </section>
+            ) : null}
+          </section>}
 
           {/* 5. आवेदन प्रक्रिया */}
           {hasProcess && <section className="flat-section" id="aavedan">
@@ -284,7 +287,7 @@ export function YojnaDetailClient({
                   </div>
                 </details>
               ))}
-              {!displayFaqs.length && <p className="verification-needed">इस योजना के लिए स्रोत-समर्थित सवाल-जवाब की समीक्षा अभी बाकी है।</p>}
+              {!displayFaqs.length && <p className="verification-needed">{pageLang === 'en' ? 'Source-backed FAQs for this scheme are pending review.' : 'इस योजना के लिए स्रोत-समर्थित सवाल-जवाब की समीक्षा अभी बाकी है।'}</p>}
             </div>
           </section>
 
@@ -297,7 +300,7 @@ export function YojnaDetailClient({
               <li><b>{t.nodalDept}</b> {s.department}</li>
               <li><b>{t.officialSource}</b> {s.sourceUrl ? <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{color:'#3182ce', textDecoration:'underline'}} onClick={() => { import('@/components/site').then(m => m.track('official_link_clicked')); }}>{new URL(s.sourceUrl).hostname}</a> : t.notAvailable}</li>
             </ul>
-            <p><strong>इस लेख का अंतिम स्वतंत्र सत्यापन: </strong>{s.editorial?.reviewedAt ? new Date(s.editorial.reviewedAt).toLocaleDateString('hi-IN') : 'सत्यापन आवश्यक'}</p>
+            <p><strong>{pageLang === 'en' ? 'Last independent verification of this article: ' : 'इस लेख का अंतिम स्वतंत्र सत्यापन: '}</strong>{s.editorial?.reviewedAt ? new Date(s.editorial.reviewedAt).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN') : (pageLang === 'en' ? 'Verification Required' : 'सत्यापन आवश्यक')}</p>
             <p>{s.sourceNotes}</p>
             <ol className="flat-list">
               {s.references?.map((ref,i) => <li key={ref.url + i} style={{marginBottom:18}}>
@@ -307,12 +310,12 @@ export function YojnaDetailClient({
                 {ref.note && <p>{ref.note}</p>}
               </li>)}
             </ol>
-            <p>Sarkari Yojana एक स्वतंत्र सूचना वेबसाइट है। अंतिम पात्रता संबंधित विभाग द्वारा निर्धारित की जाती है।</p>
+            <p>{pageLang === 'en' ? 'Sarkari Yojana is an independent information website. Final eligibility is determined by the respective department.' : 'Sarkari Yojana एक स्वतंत्र सूचना वेबसाइट है। अंतिम पात्रता संबंधित विभाग द्वारा निर्धारित की जाती है।'}</p>
           </section>
 
           {relatedGuides.length > 0 && <section className="flat-section">
-            <h2 className="flat-section-heading">दस्तावेज़ और आवेदन की तैयारी</h2>
-            <p>ये सामान्य जानकारी के गाइड हैं। आवश्यक दस्तावेज़ योजना के वर्तमान आधिकारिक नियमों से मिलाएँ।</p>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? 'Documents and Application Prep' : 'दस्तावेज़ और आवेदन की तैयारी'}</h2>
+            <p>{pageLang === 'en' ? 'These are general information guides. Check required documents against the current official rules of the scheme.' : 'ये सामान्य जानकारी के गाइड हैं। आवश्यक दस्तावेज़ योजना के वर्तमान आधिकारिक नियमों से मिलाएँ।'}</p>
             <ul className="flat-list">{relatedGuides.map(g => <li key={g.slug}><Link className="inline-link" href={`/guide/${g.slug}`}>{g.title}</Link></li>)}</ul>
           </section>}
           {relatedSchemes.length > 0 && (

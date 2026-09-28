@@ -5,7 +5,7 @@ import {OfficialImage} from './official-image';
 import {useState} from 'react';
 import {usePathname} from 'next/navigation';
 import Image from 'next/image';
-import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages,FileText,BookOpen,AlertCircle,Mail} from 'lucide-react';
+import {Sprout,HeartHandshake,GraduationCap,HeartPulse,House,BriefcaseBusiness,Accessibility,Wheat,ArrowUpRight,ArrowRight,ShieldCheck,MapPin,Menu,Search,Users,Bookmark,Bell,Compass,Info,Check,ChevronRight,Languages,FileText,BookOpen,AlertCircle,Mail,Newspaper} from 'lucide-react';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {categories,statusLabels,type Scheme} from '@/lib/domain';
 import {useLanguage} from '@/lib/i18n';
@@ -43,6 +43,7 @@ export function Header(){
           {href:'/',label:t.navSearch},
           {href:'/mere-liye',label:t.navForMe},
           {href:'/guide',label:t.navGuide},
+          {href:'/samachar',label:lang==='hi'?'समाचार':'News'},
         ].map(n=><Link onClick={()=>setOpen(false)} className={path===n.href?'active':''} key={n.href} href={n.href}>{n.label}</Link>)}
       </nav>
       <div className="header-end">
@@ -64,6 +65,7 @@ export function Header(){
 }
 
 export function Footer(){
+  const {t} = useLanguage();
   return (
     <footer className="portal-gov-footer" role="contentinfo">
       <div className="portal-footer-inner">
@@ -93,39 +95,39 @@ export function Footer(){
           {/* Column 2: त्वरित लिंक */}
           <div className="portal-footer-col">
             <h3 className="portal-col-title">
-              त्वरित लिंक
+              {t.footerQuickLinks}
               <span className="title-bar" />
             </h3>
             <ul className="portal-link-list">
-              <li><Link href="/yojna"><BookOpen size={15} className="link-icon" /><span>सत्यापित योजनाओं की सूची</span></Link></li>
+              <li><Link href="/yojna"><BookOpen size={15} className="link-icon" /><span>{t.footerVerifiedList}</span></Link></li>
               <li>
                 <Link href="/">
                   <Search size={15} className="link-icon" />
-                  <span>योजना खोज</span>
+                  <span>{t.footerSchemeSearch}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/mere-liye">
                   <Users size={15} className="link-icon" />
-                  <span>मेरे लिए योजनाएं</span>
+                  <span>{t.navForMe}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/praman-patr">
                   <FileText size={15} className="link-icon" />
-                  <span>दस्तावेज़ मार्गदर्शिका</span>
+                  <span>{t.footerDocGuide}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/guide">
                   <BookOpen size={15} className="link-icon" />
-                  <span>आवेदन कैसे करें</span>
+                  <span>{t.footerHowToApply}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/state/madhya-pradesh">
                   <MapPin size={15} className="link-icon" />
-                  <span>मध्य प्रदेश की योजनाएं</span>
+                  <span>{t.footerMPSchemes}</span>
                 </Link>
               </li>
             </ul>
@@ -134,38 +136,38 @@ export function Footer(){
           {/* Column 3: महत्वपूर्ण */}
           <div className="portal-footer-col">
             <h3 className="portal-col-title">
-              महत्वपूर्ण
+              {t.footerImportant}
               <span className="title-bar" />
             </h3>
             <ul className="portal-link-list">
               <li>
                 <Link href="/about">
                   <Info size={15} className="link-icon" />
-                  <span>हमारे बारे में</span>
+                  <span>{t.footerAbout}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/privacy">
                   <ShieldCheck size={15} className="link-icon" />
-                  <span>गोपनीयता नीति</span>
+                  <span>{t.footerPrivacy}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/terms">
                   <FileText size={15} className="link-icon" />
-                  <span>उपयोग के नियम</span>
+                  <span>{t.footerTerms}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/disclaimer">
                   <AlertCircle size={15} className="link-icon" />
-                  <span>अस्वीकरण</span>
+                  <span>{t.footerDisclaimer2}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Mail size={15} className="link-icon" style={{ flexShrink: 0 }} />
-                  <span>संपर्क करें</span>
+                  <span>{t.footerContact}</span>
                 </Link>
               </li>
             </ul>
@@ -174,7 +176,7 @@ export function Footer(){
           {/* Column 4: अधिकृत सरकारी पोर्टल्स */}
           <div className="portal-footer-col portals-col">
             <h3 className="portal-col-title">
-              अधिकृत सरकारी पोर्टल्स
+              {t.footerGovPortals}
               <span className="title-bar" />
             </h3>
             <div className="portal-cards-grid">
@@ -193,9 +195,9 @@ export function Footer(){
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://mp.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
+              <a href="https://www.mponline.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
                 <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-                <span className="portal-card-text">MP.gov.in</span>
+                <span className="portal-card-text">MPOnline.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
             </div>
@@ -203,7 +205,7 @@ export function Footer(){
             <div className="portal-security-note" style={{ background: 'transparent', boxShadow: 'none', border: 'none', padding: '10px 0', borderTop: '1px solid rgba(22, 79, 57, 0.1)', marginTop: '20px' }}>
               <span className="lock-icon">🔒</span>
               <p style={{ opacity: 0.85, fontSize: '0.85rem' }}>
-                <strong>सुरक्षा:</strong> कभी भी किसी अज्ञात व्यक्ति के साथ बैंक OTP, UPI पिन या गोपनीय पासवर्ड साझा न करें!
+                <strong>{t.footerSecurityNotice}</strong>
               </p>
             </div>
           </div>
@@ -213,7 +215,7 @@ export function Footer(){
         {/* Bottom Strip: Disclaimer on left, Social Media in center, Copyright on right */}
         <div className="portal-footer-bottom">
           <div className="footer-disclaimer-text">
-            <strong>{SITE_NAME_EN}</strong> एक स्वतंत्र सूचना प्लेटफ़ॉर्म है। यह भारत सरकार या किसी राज्य सरकार की आधिकारिक वेबसाइट नहीं है। योजनाओं की अंतिम पात्रता, लाभ और आवेदन प्रक्रिया संबंधित सरकारी विभाग/पोर्टल द्वारा निर्धारित की जाती है।
+            <strong>{SITE_NAME_EN}</strong> {t.footerDisclaimerText}
           </div>
 
           <nav className="footer-social-cluster" aria-label="सोशल मीडिया लिंक्स">
@@ -233,7 +235,7 @@ export function Footer(){
 
           <div className="footer-copyright-block">
             <span className="copy-title">© 2026 {SITE_NAME_EN}</span>
-            <span className="copy-sub">सभी अधिकार सुरक्षित</span>
+            <span className="copy-sub">{t.footerCopyright}</span>
           </div>
         </div>
       </div>
@@ -247,6 +249,7 @@ export function Sidebar({category='all'}:{category?:string}){
     <p className="eyebrow">{t.sidebarForYou}</p>
     <Link className={category==='all'?'side-item selected':'side-item'} href="/"><Compass size={19}/>{t.navSearch}<ChevronRight size={15}/></Link>
     <Link className="side-item" href="/state/madhya-pradesh"><MapPin size={19}/>{t.stateMP}<span style={{marginLeft:'auto',fontSize:'0.7rem',background:'#eaf3eb',padding:'2px 7px',borderRadius:'10px',color:'#1d694c',fontWeight:700}}>129+</span></Link>
+    <Link className="side-item" href="/samachar"><Newspaper size={19}/>समाचार (News)</Link>
     <Link className="side-item" href="/mere-liye"><Users size={19}/>{t.navForMe}</Link>
     <Link className="side-item" href="/saved"><Bookmark size={19}/>{t.navSaved}</Link>
     <Link className="side-item" href="/reminders"><Bell size={19}/>{t.navReminders}</Link>
