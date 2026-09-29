@@ -31,7 +31,8 @@ export function Header(){
       <Link href="/" className="brand" aria-label={t.brandName}>
         <Image
           src="/navbar-logo.webp"
-          alt="Sarkari Yojana लोगो"
+          alt="Sarkari Yojana (सरकारी योजना) - Official Portal Logo"
+          title="Sarkari Yojana Home"
           className="navbar-brand-logo"
           width={123}
           height={75}
@@ -77,7 +78,8 @@ export function Footer(){
             <div className="portal-brand-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px', marginBottom: '20px' }}>
               <Image
                 src="/sarkari-yojana-map-logo.webp"
-                alt="Sarkari Yojana लोगो"
+                alt="Sarkari Yojana Information Portal Logo - Find Schemes"
+                title="Sarkari Yojana Portal"
                 className="portal-map-logo"
                 width={200}
                 height={100}
@@ -181,22 +183,22 @@ export function Footer(){
             </h3>
             <div className="portal-cards-grid">
               <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="India.gov.in Official Portal Icon" title="India.gov.in Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">India.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="myScheme Official Portal Icon" title="myScheme Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">myScheme</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="PM-KISAN Official Portal Icon" title="PM-KISAN Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://www.mponline.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="MPOnline Official Portal Icon" title="MPOnline Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">MPOnline.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>

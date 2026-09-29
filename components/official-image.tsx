@@ -38,14 +38,19 @@ export function OfficialImage({ slug, scheme, priority = false, sizes = "(max-wi
 
   const finalSrc = failed ? catBanner.src : asset.src;
 
+  const finalAlt = failed || !specific ? (scheme ? `${scheme.title} - सरकारी योजना (Sarkari Yojana): पात्रता, लाभ और आवेदन प्रक्रिया` : catBanner.alt) : asset.alt;
+  const finalTitle = scheme ? `${scheme.title} में ऑनलाइन आवेदन करें (Apply Online)` : 'सरकारी योजना (Sarkari Yojana)';
+
   return <figure className="official-image" style={{ position: 'relative', width: '100%', aspectRatio: `${asset.width}/${asset.height}`, backgroundColor: '#f1f5f9' }}>
     <Image
       src={finalSrc}
-      alt={scheme ? `${scheme.title} — योजना संबंधी चित्र` : (failed || !specific ? catBanner.alt : asset.alt.replace(/आधिकारिक /g, ''))}
+      alt={finalAlt}
+      title={finalTitle}
       width={asset.width}
       height={asset.height}
       priority={priority}
       sizes={sizes}
+      unoptimized={finalSrc.endsWith('.svg')}
       style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
       onError={() => setFailed(true)}
     />

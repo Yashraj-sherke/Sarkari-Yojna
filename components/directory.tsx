@@ -54,10 +54,11 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
             <div className="hero-desc-sub">{lang === 'hi' ? 'Sarkari Yojana (सरकारी योजना), sarkariyojanasetu.com पर एक स्वतंत्र नागरिक सूचना मंच है। इसे Sarkari Yojana Setu नाम से भी पहचान सकते हैं। यह सरकारी वेबसाइट नहीं है। अभी केंद्र और मध्य प्रदेश की योजनाओं पर जानकारी उपलब्ध है।' : 'Sarkari Yojana, also known as Sarkari Yojana Setu, is an independent citizen-information platform at sarkariyojanasetu.com. It currently covers Central and Madhya Pradesh schemes and is not a government website.'}</div>
           </>}
           <form className="search-box" onSubmit={e => { e.preventDefault(); setQuery(q); if (q && isHomePage && state === 'central') { setState('all'); } track('search_performed'); }}>
-            <div className="search-brand-mark" title="Sarkari Yojana">
+            <div className="search-brand-mark" title="Search Government Schemes on Sarkari Yojana">
               <Image
                 src="/search-logo.webp"
-                alt="Sarkari Yojana Emblem"
+                alt="Sarkari Yojana Search Portal Logo - Find Government Schemes"
+                title="Sarkari Yojana Search"
                 className="search-logo-img"
                 width={33}
                 height={47}
@@ -178,7 +179,7 @@ export function Directory({ schemes, initialCategory = 'all', initialState = 'al
     <ProcessFlow lang={lang} />
     <section className="faq-section">
         <div className="faq-image">
-          <Image src="/faq-illustration.webp" alt="FAQ Illustration" width={400} height={300} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 400px" />
+          <Image src="/faq-illustration.webp" alt="Frequently Asked Questions (FAQ) about Sarkari Yojana Government Schemes" title="Government Schemes FAQ" width={400} height={300} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 400px" />
         </div>
         <div className="faq-content">
           <h2><HelpCircle size={22} /> {t.faqTitle}</h2>
