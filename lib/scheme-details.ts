@@ -133,8 +133,8 @@ export function getSchemeTags(s: Scheme): string[] {
 export function getSchemeEligibilityList(s: Scheme): string[] {
   if (s.eligibilityDescription?.length) return s.eligibilityDescription;
   const meta = customSchemeMeta[s.slug];
-  if (s.editorial?.publicationStatus === 'REVIEWED' && meta?.eligibility?.length) return meta.eligibility;
-  if (s.editorial?.publicationStatus === 'REVIEWED') return s.rules.map(r=>r.label);
+  if (meta?.eligibility?.length) return meta.eligibility;
+  if (s.rules?.length) return s.rules.map(r=>r.label);
   return [];
 }
 

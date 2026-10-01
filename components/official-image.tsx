@@ -20,7 +20,7 @@ export function OfficialImage({ slug, scheme, priority = false, sizes = "(max-wi
   const [failed, setFailed] = useState(false);
   
   let specific = officialImages[slug];
-  if (scheme?.imageUrl) {
+  if (scheme?.imageUrl && scheme.imageUrl !== '/placeholder-scheme.webp') {
     specific = { src: scheme.imageUrl, alt: scheme.title, source: scheme.sourceUrl, credit: scheme.department, width: 1200, height: 630 };
   }
 

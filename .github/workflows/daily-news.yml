@@ -1,0 +1,28 @@
+name: Daily News Generation
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # Runs at 04:00 UTC (9:30 AM IST) every day
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  generate_news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Daily News Cron Endpoint
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          SITE_URL: ${{ secrets.SITE_URL || 'https://www.sarkariyojanasetu.com' }}
+        run: |
+          echo "Pinging $SITE_URL/api/cron/daily-news..."
+          HTTP_STATUS=$(curl -s -o response.json -w "%{http_code}" -H "Authorization: Bearer $CRON_SECRET" "$SITE_URL/api/cron/daily-news")
+          
+          echo "HTTP Status: $HTTP_STATUS"
+          cat response.json
+          
+          if [ "$HTTP_STATUS" -ne 200 ]; then
+            echo "Failed to generate news. HTTP Status: $HTTP_STATUS"
+            exit 1
+          fi
+          
+          echo "Successfully generated daily news draft!"

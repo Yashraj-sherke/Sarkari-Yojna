@@ -2,7 +2,7 @@ import { getChatGPTUser } from '@/app/chatgpt-auth';
 import { schemeSchema, effectiveStatus, type Scheme } from './domain';
 import { seeds } from './seed';
 import { enrichSchemeArticle } from './scheme-articles';
-import { neonConfig, Pool } from '@neondatabase/serverless';
+import { neon, neonConfig, Pool } from '@neondatabase/serverless';
 
 // Ensure the Edge Runtime doesn't cache DB connections aggressively
 neonConfig.fetchConnectionCache = false;
@@ -23,22 +23,7 @@ try {
 
 export function db() {
   if (!dbUrl) return null;
-  // Use a transient WebSocket pool that is instantly closed to prevent
-  // Cloudflare Miniflare from hanging on open sockets and crashing the Vite server.
-  return async function(strings: TemplateStringsArray, ...values: any[]) {
-    const pool = new Pool({ connectionString: dbUrl });
-    try {
-      let text = strings[0];
-      for (let i = 1; i < strings.length; i++) {
-        text += '$' + i + strings[i];
-      }
-      const result = await pool.query(text, values);
-      return result.rows;
-    } finally {
-      // Critical: Immediately sever the connection so the Edge process doesn't hang
-      await pool.end();
-    }
-  } as any;
+  return neon(dbUrl);
 }
 
 export async function maintenance() {
@@ -60,16 +45,26 @@ export async function maintenance() {
   }
 }
 
+let _schemesCache: { schemes: Scheme[], time: number } | null = null;
+
 export async function allSchemes(): Promise<Scheme[]> {
+  if (_schemesCache && Date.now() - _schemesCache.time < 60000) {
+    return _schemesCache.schemes;
+  }
   const sql = db();
   if (!sql) return seeds.map(normalizeScheme);
   try {
-    const results = await sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
-    return results.map((x: any) => {
+    const queryPromise = sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
+    const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 5 seconds')), 5000));
+    const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
+    
+    const schemes = results.map((x: any) => {
       const s = schemeSchema.parse(JSON.parse(x.data));
       s.lastUpdated = x.updated_at;
       return normalizeScheme(s);
     });
+    _schemesCache = { schemes, time: Date.now() };
+    return schemes;
   } catch (e) {
     console.error('allSchemes error', e);
     return seeds.map(normalizeScheme);
@@ -82,6 +77,9 @@ function normalizeScheme(input: Scheme): Scheme {
 }
 
 export async function getScheme(slug: string): Promise<Scheme | null> {
+  if (_schemesCache && Date.now() - _schemesCache.time < 60000) {
+    return _schemesCache.schemes.find(x => x.slug === slug) || null;
+  }
   const sql = db();
   if (!sql) {
     const s = seeds.find(x => x.slug === slug);
@@ -89,7 +87,9 @@ export async function getScheme(slug: string): Promise<Scheme | null> {
     return normalizeScheme(s);
   }
   try {
-    const results = await sql`SELECT data, updated_at FROM schemes WHERE slug=${slug}`;
+    const queryPromise = sql`SELECT data, updated_at FROM schemes WHERE slug=${slug}`;
+    const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 5 seconds')), 5000));
+    const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
     if (results.length === 0) return null;
     const r = results[0];
     const s = schemeSchema.parse(JSON.parse(r.data));

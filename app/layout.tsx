@@ -3,7 +3,8 @@ import {Header,Footer} from '@/components/site';
 import {Toaster} from '@/components/ui/sonner';
 import {Offline} from '@/components/offline';
 import {LanguageProvider} from '@/lib/i18n';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
+
 import "./globals.css";
 
 import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_TAGLINE, SITE_URL } from "@/lib/config";
@@ -35,13 +36,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hi">
+      <head>
+        <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp" fetchPriority="high" />
+      </head>
       <body className="antialiased">
         <LanguageProvider>
           <Header/>{children}<div data-nosnippet=""><Footer/></div>
           <Toaster position="bottom-right"/>
           <Offline/>
         </LanguageProvider>
-        {/* <GoogleAnalytics gaId="G-X5LKN3EQP3" /> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X5LKN3EQP3"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X5LKN3EQP3');
+          `}
+        </Script>
+
       </body>
     </html>
   );

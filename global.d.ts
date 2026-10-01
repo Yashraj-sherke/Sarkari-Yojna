@@ -11,3 +11,18 @@ declare module 'next/link' {
   const Link: any;
   export default Link;
 }
+
+declare global {
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements {
+        marquee: any;
+      }
+    }
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      marquee: any;
+    }
+  }
+}

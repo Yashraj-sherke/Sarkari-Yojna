@@ -13,7 +13,7 @@ export const categories = [
   { id: 'khadya', name: 'खाद्य और राशन', short: 'राशन', icon: 'Wheat', color: 'amber' },
 ] as const;
 export const profileSchema = z.object({
-  state: z.enum(['madhya-pradesh', 'other']).optional(),
+  state: z.enum(['madhya-pradesh', 'uttar-pradesh', 'bihar', 'maharashtra', 'rajasthan', 'haryana', 'gujarat', 'punjab', 'chhattisgarh', 'jharkhand', 'karnataka', 'tamil-nadu', 'west-bengal', 'other']).optional(),
   age: z.number().int().min(0).max(120).optional(),
   gender: z.enum(['female', 'male', 'other']).optional(),
   occupation: z.enum(['farmer', 'student', 'worker', 'self-employed', 'other']).optional(),
@@ -26,7 +26,7 @@ export const ruleSchema = z.object({ field: z.enum(['state','age','gender','occu
   if(numeric && (typeof r.value!=='number'||r.value<0)) c.addIssue({code:'custom',message:'Numeric rule requires a nonnegative number'});
   if(!numeric && r.op!=='eq') c.addIssue({code:'custom',message:'Only numeric fields support comparisons'});
   if(r.field==='rural' && typeof r.value!=='boolean') c.addIssue({code:'custom',message:'Rural must be boolean'});
-  const allowed:Record<string,string[]>={state:['madhya-pradesh','other'],gender:['female','male','other'],occupation:['farmer','student','worker','self-employed','other']};
+  const allowed:Record<string,string[]>={state:['madhya-pradesh', 'uttar-pradesh', 'bihar', 'maharashtra', 'rajasthan', 'haryana', 'gujarat', 'punjab', 'chhattisgarh', 'jharkhand', 'karnataka', 'tamil-nadu', 'west-bengal', 'other'],gender:['female','male','other'],occupation:['farmer','student','worker','self-employed','other']};
   if(allowed[r.field]&&!allowed[r.field].includes(String(r.value))) c.addIssue({code:'custom',message:'Invalid rule value'});
 });
 export type Rule = z.infer<typeof ruleSchema>;
@@ -34,7 +34,7 @@ export function officialUrl(value:string) { try { const u=new URL(value); return
 const official = z.string().max(1500).refine((v: any)=>v===''||officialUrl(v),'Use an HTTPS government .gov.in or .nic.in URL');
 export const schemeSchema = z.object({
   slug:z.string().regex(/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/).max(100), title:z.string().min(5).max(180), english:z.string().max(180),
-  category:z.string().refine(v=>categories.some(c=>c.id===v)), state:z.enum(['central','madhya-pradesh']),
+  category:z.string().refine(v=>categories.some(c=>c.id===v)), state:z.enum(['central', 'madhya-pradesh', 'uttar-pradesh', 'bihar', 'maharashtra', 'rajasthan', 'haryana', 'gujarat', 'punjab', 'chhattisgarh', 'jharkhand', 'karnataka', 'tamil-nadu', 'west-bengal']),
   summary:z.string().min(10).max(1500), benefit:z.string().min(3).max(600), department:z.string().min(2).max(180),
   documents:z.array(z.string().min(1).max(250)).max(20), steps:z.array(z.string().min(1).max(500)).max(20), rules:z.array(ruleSchema).max(20),
   sourceUrl:official, applicationUrl:official, sourceNotes:z.string().max(2000),
@@ -110,7 +110,7 @@ export function searchSchemes<T extends SchemeSummary>(items: T[], q = '', categ
 
   const originalTerms = q.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   if (!originalTerms.length) {
-    return filtered.sort((a, b) => Number(effectiveStatus(b) === 'ACTIVE') - Number(effectiveStatus(a) === 'ACTIVE'));
+    return filtered.sort((a, b) => Number(b.priority) - Number(a.priority) || Number(effectiveStatus(b) === 'ACTIVE') - Number(effectiveStatus(a) === 'ACTIVE'));
   }
 
   const fuse = new Fuse(filtered, {
@@ -135,10 +135,11 @@ export function searchSchemes<T extends SchemeSummary>(items: T[], q = '', categ
     validItems = new Set([...validItems].filter(x => groupMatches.has(x)));
   }
 
-  return Array.from(validItems).sort((a, b) => Number(effectiveStatus(b) === 'ACTIVE') - Number(effectiveStatus(a) === 'ACTIVE'));
+  return Array.from(validItems).sort((a, b) => Number(b.priority) - Number(a.priority) || Number(effectiveStatus(b) === 'ACTIVE') - Number(effectiveStatus(a) === 'ACTIVE'));
 }
+
 export function evaluate(s:Scheme,p:Profile) {
-  const rules:Rule[]=[...(s.state==='madhya-pradesh'?[{field:'state' as const,op:'eq' as const,value:'madhya-pradesh',label:'मध्य प्रदेश के निवासी'}]:[]),...s.rules];
+  const rules:Rule[]=[...(s.state!=='central'?[{field:'state' as const,op:'eq' as const,value:s.state,label:`${s.state.replace('-', ' ')} के निवासी`}]:[]),...s.rules];
   const reasons=rules.map(r=>{const v=p[r.field];const result=v===undefined?'unknown':(r.op==='eq'?v===r.value:r.op==='gte'?Number(v)>=Number(r.value):Number(v)<=Number(r.value))?'match':'no';return{label:r.label,result};});
   const matches=reasons.filter(r=>r.result==='match').length, missing=reasons.filter(r=>r.result==='unknown').length;
   const blocked=reasons.some(r=>r.result==='no')||['ARCHIVED','CLOSED'].includes(s.status);

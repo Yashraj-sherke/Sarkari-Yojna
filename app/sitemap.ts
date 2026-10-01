@@ -1,3 +1,4 @@
+import {stateNames} from '@/lib/state-names';
 import type {MetadataRoute} from 'next';
 import {allSchemes} from '@/lib/server';
 import {categories} from '@/lib/domain';
@@ -10,12 +11,12 @@ export const revalidate = 86400;
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
   const schemes=(await allSchemes()).filter(isIndexableScheme);
   const latest=schemes.map(s=>contentDate(s.lastUpdated??s.editorial?.reviewedAt)).filter((date): date is string => Boolean(date)).sort().at(-1);
-  const hasReviewedMpScheme=schemes.some(s=>s.state==='madhya-pradesh');
+  const reviewedStates = Object.keys(stateNames).filter(state => state !== 'central' && schemes.some(s => s.state === state));
 
   const statics: MetadataRoute.Sitemap = [
     {url:SITE_URL,lastModified:latest},
     {url:`${SITE_URL}/yojna`,lastModified:latest},
-    ...(hasReviewedMpScheme ? [{url:`${SITE_URL}/state/madhya-pradesh`,lastModified:latest}] : []),
+    ...reviewedStates.map(state => ({url:`${SITE_URL}/state/${state}`,lastModified:schemes.filter(s => s.state === state).map(s => contentDate(s.lastUpdated ?? s.editorial?.reviewedAt)).filter((date): date is string => Boolean(date)).sort().at(-1)})),
     {url:`${SITE_URL}/guide`},
     ...Object.keys(informationPages).map(key=>({
       url:`${SITE_URL}/${key}`,

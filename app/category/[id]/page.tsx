@@ -33,8 +33,9 @@ export async function generateMetadata({params}:{params:Promise<{id:string}>}){
   };
 }
 
-export default async function Page({params}:{params:Promise<{id:string}>}){
+export default async function Page({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{page?:string}>}){
   const {id}=await params;
+  const page=Math.max(1,Number.parseInt((await searchParams).page??'1',10)||1);
   const category=categories.find(c=>c.id===id);
   if(!category)notFound();
 
@@ -63,7 +64,7 @@ export default async function Page({params}:{params:Promise<{id:string}>}){
   };
   return (
     <>
-      <Directory schemes={schemes.map(summarizeScheme)} initialCategory={id}/>
+      <Directory schemes={schemes.map(summarizeScheme)} initialCategory={id} initialPage={page} paginationBasePath={`/category/${id}`}/>
       <SchemeIndex schemes={schemes.filter(s => s.category === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(collectionSchema).replace(/</g,'\\u003c')}}/>

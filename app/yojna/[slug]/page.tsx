@@ -17,13 +17,14 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {title, description: defaultDesc}=schemeSearchPresentation(s);
   const desc = s.seoDescription || defaultDesc;
   const image= s.imageUrl || officialImages[s.slug]?.src || DEFAULT_OG_IMAGE;
+
   return {
-    title,
+    title: title,
     description:desc,
     alternates:{canonical:'/yojna/'+slug},
     robots:{index:isPublic,follow:true,...(isPublic ? {maxImagePreview:'large' as const} : {})},
-    openGraph:{title,description:desc,url:`${SITE_URL}/yojna/${slug}`,siteName:SITE_NAME_EN,locale:'hi_IN',type:'article',images:[{url:image,alt:s.title}]},
-    twitter:{card:'summary_large_image',title,description:desc,images:[image]},
+    openGraph:{title: title,description:desc,url:`${SITE_URL}/yojna/${slug}`,siteName:SITE_NAME_EN,locale:'hi_IN',type:'article',images:[{url:image,alt:s.title}]},
+    twitter:{card:'summary_large_image',title: title,description:desc,images:[image]},
   };
 }
 
@@ -44,13 +45,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   // Build rich structured data
   const isActive=isIndexableScheme(s);
   const schemesList = await allSchemes();
-  let relatedSchemes = schemesList.filter(x => x.category === s.category && x.slug !== s.slug && isIndexableScheme(x));
-  if (relatedSchemes.length < 3) {
-    const otherSchemes = schemesList.filter(x => x.slug !== s.slug && isIndexableScheme(x) && !relatedSchemes.some(r => r.slug === x.slug));
-    relatedSchemes = relatedSchemes.concat(otherSchemes).slice(0, 3);
-  } else {
-    relatedSchemes = relatedSchemes.slice(0, 3);
-  }
+  const relatedSchemes = schemesList.filter(x => x.category === s.category && x.slug !== s.slug && isIndexableScheme(x)).sort((a, b) => Number(b.state === s.state) - Number(a.state === s.state)).slice(0, 3);
   const relatedSchemesMapped = relatedSchemes.map(rs => ({
     slug: rs.slug,
     title: rs.title,
@@ -58,19 +53,6 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   }));
   const category = categories.find(c=>c.id===s.category);
 
-  const articleSchema=isActive?{
-    '@context':'https://schema.org',
-    '@type':'Article',
-    headline:s.title,
-    description:s.summary,
-    inLanguage:'hi-IN',
-    mainEntityOfPage:`${SITE_URL}/yojna/${s.slug}`,
-    dateModified:contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
-    publisher:{'@type':'Organization','@id':`${SITE_URL}/#organization`,name:SITE_NAME_EN,url:SITE_URL},
-    articleSection:category?.name,
-    ...(officialImages[s.slug] ? {image:`${SITE_URL}${officialImages[s.slug].src}`} : {}),
-    citation:s.references?.map(ref=>ref.url),
-  }:null;
   const breadcrumbItems=[
     {name:'होम',item:`${SITE_URL}/`},
     ...(s.state==='madhya-pradesh' ? [{name:'मध्य प्रदेश की योजनाएं',item:`${SITE_URL}/state/madhya-pradesh`}] : []),
@@ -82,6 +64,28 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     '@type':'BreadcrumbList',
     itemListElement:breadcrumbItems
   };
+
+  const faqSchema = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
+  } : null;
+
+  const webPageSchema = isActive ? {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: s.title,
+    description: s.summary,
+    inLanguage: 'hi-IN',
+    url: `${SITE_URL}/yojna/${s.slug}`,
+    dateModified: contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
+    about: { '@type': 'Thing', name: s.title },
+    citation: s.references?.map(reference => reference.url),
+  } : null;
 
   return <main id="main" className="page-wrap">
     <YojnaDetailClient 
@@ -96,6 +100,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
     {/* Structured data for Google rich results */}
     {breadcrumbSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>}
-    {articleSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema).replace(/</g,'\\u003c')}}/>}
+    {webPageSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webPageSchema).replace(/</g,'\\u003c')}}/>}
+    {faqSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>}
   </main>;
 }

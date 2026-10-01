@@ -15,7 +15,7 @@ export const icons={Sprout,HeartHandshake,GraduationCap,HeartPulse,House,Briefca
 export {Search,ArrowRight,ShieldCheck,MapPin};
 export async function api<T>(path:string,data?:unknown,method='POST'):Promise<T>{const r=await fetch(path,{method,headers:{'Content-Type':'application/json'},...(data===undefined?{}:{body:JSON.stringify(data)})});const b=await r.json() as T & {error?:string};if(!r.ok)throw Error(b.error??'कुछ गलत हुआ। फिर कोशिश करें।');return b;}
 export function track(name:string){void api('/api/events',{name}).catch(()=>{});}
-export function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(v:string)=>void;options:{value:string;label:string}[]}){return <Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label} className="choice"><SelectValue placeholder={label}/></SelectTrigger><SelectContent position="popper">{options.map(o=><SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>)}</SelectContent></Select>;}
+export function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(v:string)=>void;options:{value:string;label:string;iconUrl?:string}[]}){return <Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label} className="choice"><SelectValue placeholder={label}/></SelectTrigger><SelectContent position="popper">{options.map(o=><SelectItem key={o.value} value={o.value}><div style={{display:'flex',alignItems:'center',gap:'8px'}}>{o.iconUrl && <img src={o.iconUrl} alt="" style={{height:'24px',width:'auto',objectFit:'contain',mixBlendMode:'multiply',borderRadius:'2px'}}/>}<span>{o.label}</span></div></SelectItem>)}</SelectContent></Select>;}
 
 export function Header(){
   const path = usePathname();
@@ -30,13 +30,14 @@ export function Header(){
     <header className="site-header">
       <Link href="/" className="brand" aria-label={t.brandName}>
         <Image
-          src="/navbar-logo.webp"
+                src="/navbar-logo-optimized.webp"
           alt="Sarkari Yojana (सरकारी योजना) - Official Portal Logo"
           title="Sarkari Yojana Home"
           className="navbar-brand-logo"
           width={123}
           height={75}
-          priority={true}
+          loading="eager"
+          sizes="123px"
         />
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
@@ -77,14 +78,15 @@ export function Footer(){
           <div className="portal-footer-col brand-col">
             <div className="portal-brand-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px', marginBottom: '20px' }}>
               <Image
-                src="/sarkari-yojana-map-logo.webp"
+                src="/sarkari-yojana-map-logo-optimized.webp"
                 alt="Sarkari Yojana Information Portal Logo - Find Schemes"
                 title="Sarkari Yojana Portal"
                 className="portal-map-logo"
                 width={200}
                 height={100}
                 loading="lazy"
-                style={{ objectFit: 'contain', width: '100%', maxWidth: '220px', height: 'auto', marginBottom: '-55px' }}
+                sizes="(max-width: 768px) 100vw, 220px"
+                style={{ objectFit: 'contain', width: '100%', maxWidth: '220px', aspectRatio: '2/1', marginBottom: '10px' }}
               />
               <div className="portal-brand-text" style={{ marginTop: '0px', textAlign: 'center', maxWidth: '260px' }}>
                 <p className="portal-brand-desc" style={{ fontSize: '0.92rem', color: '#2d3748', opacity: 0.95, lineHeight: '1.5', fontWeight: 600 }}>
@@ -193,12 +195,12 @@ export function Footer(){
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=pmkisan.gov.in&sz=32" alt="PM-KISAN Official Portal Icon" title="PM-KISAN Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image loading="lazy" src="/pm-kisan-official.webp" alt="PM-KISAN Official Portal Icon" title="PM-KISAN Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
               <a href="https://www.mponline.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
-                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mp.gov.in&sz=32" alt="MPOnline Official Portal Icon" title="MPOnline Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mponline.gov.in&sz=32" alt="MPOnline Official Portal Icon" title="MPOnline Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">MPOnline.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
@@ -246,23 +248,26 @@ export function Footer(){
 }
 
 export function Sidebar({category='all'}:{category?:string}){
-  const {t}=useLanguage();
-  return <aside className="sidebar">
-    <p className="eyebrow">{t.sidebarForYou}</p>
-    <Link className={category==='all'?'side-item selected':'side-item'} href="/"><Compass size={19}/>{t.navSearch}<ChevronRight size={15}/></Link>
-    <Link className="side-item" href="/state/madhya-pradesh"><MapPin size={19}/>{t.stateMP}<span style={{marginLeft:'auto',fontSize:'0.7rem',background:'#eaf3eb',padding:'2px 7px',borderRadius:'10px',color:'#1d694c',fontWeight:700}}>129+</span></Link>
-    <Link className="side-item" href="/samachar"><Newspaper size={19}/>समाचार (News)</Link>
-    <Link className="side-item" href="/mere-liye"><Users size={19}/>{t.navForMe}</Link>
-    <Link className="side-item" href="/saved"><Bookmark size={19}/>{t.navSaved}</Link>
-    <Link className="side-item" href="/reminders"><Bell size={19}/>{t.navReminders}</Link>
-    <div className="side-rule"/>
-    <p className="eyebrow">{t.sidebarByCategory}</p>
-    {categories.map(c=>{const Icon=icons[c.icon];return <Link onClick={()=>track('category_opened')} href={'/category/'+c.id} key={c.id} className={'side-item '+(category===c.id?'selected':'')}><Icon size={18}/>{c.short}</Link>})}
-    <div className="sidebar-help">
-      <ShieldCheck size={24}/>
-      <h3>{t.sidebarSafetyTitle}</h3>
-      <p>{t.sidebarSafetyDesc}</p>
-      <Link href="/disclaimer">{t.sidebarSafetyLink} <ArrowUpRight size={14}/></Link>
+  const {t, lang}=useLanguage();
+  return <aside className="sidebar right-sidebar">
+    <div className="trending-widget">
+      <h3 className="widget-title">{lang === 'hi' ? 'ट्रेंडिंग योजनाएं' : 'Trending Schemes'}</h3>
+      <ul className="trending-list">
+        <li><Link href="/yojna/pm-awas-gramin">PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
+        <li><Link href="/yojna/ladli-behna">Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
+        <li><Link href="/yojna/pm-kisan">PM Kisan Samman Nidhi Yojana 18th Installment Date</Link></li>
+        <li><Link href="/yojna/ayushman-bharat">Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
+        <li><Link href="/yojna/pm-surya-ghar">PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
+      </ul>
+    </div>
+
+    <div className="trending-widget" style={{marginTop: '25px'}}>
+      <h3 className="widget-title">{lang === 'hi' ? 'लेटेस्ट अपडेट्स' : 'Latest Updates'}</h3>
+      <ul className="trending-list updates">
+        <li><Link href="/yojna/pm-kisan"><strong>PM Kisan:</strong> 18th Installment released, check status</Link></li>
+        <li><Link href="/yojna/ladli-behna"><strong>Ladki Bahin:</strong> Application deadline extended to 15th</Link></li>
+        <li><Link href="/yojna/pm-awas-gramin"><strong>Awas Yojana:</strong> New beneficiary list out</Link></li>
+      </ul>
     </div>
   </aside>;
 }
@@ -277,44 +282,25 @@ export function Card({s, priority = false}:{s:SchemeSummary; priority?: boolean}
   const cat=categories.find(c=>c.id===s.category)!;
   const Icon=icons[cat.icon];
   const isCurrent = s.status === 'ACTIVE' && !s.isSample && s.editorial?.publicationStatus === 'REVIEWED';
-  return <article className="scheme-card">
-    <OfficialImage slug={s.slug} scheme={s} priority={priority}/>
+  return <article className="scheme-card" style={{ position: 'relative' }}>
+    <Link prefetch={false} href={'/yojna/'+s.slug} aria-label={lang === 'en' ? s.english : s.title} style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10 }} />
+    <OfficialImage slug={s.slug} scheme={s} priority={priority} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     <div className="card-top">
       <span className={'category-icon '+cat.color}><Icon size={23}/></span>
       <span className="scope"><MapPin size={13}/>{s.state==='central'?t.centralGov:t.mpGov}</span>
     </div>
-    <Link prefetch={false} href={'/yojna/'+s.slug} className="card-title"><h3>{lang === 'en' ? s.english : s.title}</h3></Link>
+    <div className="card-title"><h3>{lang === 'en' ? s.english : s.title}</h3></div>
     <p className="english">{s.english}</p>
     
     <div className="card-extended-details">
       {s.lastUpdated && <div style={{fontSize: '0.75rem', color: '#805313', marginBottom: 8}}>{t.lastUpdate} {new Date(s.lastUpdated).toLocaleDateString(lang === 'en' ? 'en-IN' : 'hi-IN')}</div>}
       <div className="card-detail-section">
         <h4 className="detail-heading"><FileText size={15}/> {t.glanceTitle}</h4>
-        <p className="card-summary">{lang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>
+        <p className="card-summary" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{lang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>
       </div>
-      
-      {isCurrent && <div className="card-detail-section">
-        <h4 className="detail-heading"><Check size={15}/> {t.benefitLabel}</h4>
-        <p className="card-benefit-text">{lang === 'en' ? (s.benefitEn ?? s.benefit) : s.benefit}</p>
-      </div>}
-      
-      {isCurrent && s.documents && s.documents.length > 0 && (
-        <div className="card-detail-section">
-          <h4 className="detail-heading"><BookOpen size={15}/> {t.docsTitle}</h4>
-          <ul className="card-doc-list">
-            {s.documents.slice(0, 3).map((doc, i) => (
-              <li key={i}>{doc}</li>
-            ))}
-            {s.documents.length > 3 && (
-              <li className="more-docs">+ {s.documents.length - 3} {lang === 'hi' ? 'और' : 'more'}</li>
-            )}
-          </ul>
-        </div>
-      )}
-      {!isCurrent && <p className="source-review-note">{lang === 'en' ? 'Detailed benefits and documents are hidden until this information is reviewed again.' : 'लाभ और दस्तावेज़ों का विस्तृत विवरण दोबारा समीक्षा पूरी होने तक नहीं दिखाया जा रहा है।'}</p>}
     </div>
 
-    <div className="card-bottom"><Status s={s}/><Link prefetch={false} href={'/yojna/'+s.slug} aria-label={s.title}><ArrowRight size={20}/></Link></div>
+    <div className="card-bottom"><Status s={s}/><span aria-hidden="true" style={{color: '#166534'}}><ArrowRight size={20}/></span></div>
   </article>;
 }
 

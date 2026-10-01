@@ -19,10 +19,7 @@ export function schemeSearchPresentation(s: Scheme) {
     'ration-support': 'राशन कार्ड (NFSA): पात्रता, राशन मात्रा और आवेदन',
   };
   const baseTitle = names[s.slug] ?? s.title;
-  let title = `${baseTitle} — पात्रता और आवेदन`;
-  if (title.length + 17 > 70) {
-    title = baseTitle.length + 17 > 70 ? baseTitle.substring(0, 50) + '...' : baseTitle;
-  }
+  const title = names[s.slug] ?? (baseTitle.length < 42 ? `${baseTitle}: पात्रता और आवेदन` : baseTitle);
   const description = isIndexableScheme(s)
     ? `${s.title}: ${s.benefit}। पात्रता, दस्तावेज़, आवेदन और सरकारी स्रोत सरल हिन्दी में देखें।`
     : `${s.title} की जानकारी की समीक्षा जारी है। वर्तमान लाभ, पात्रता और आवेदन की पुष्टि संबंधित सरकारी विभाग से करें।`;

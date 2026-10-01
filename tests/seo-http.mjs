@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-const base = process.env.TEST_BASE_URL || 'http://localhost:3100';
+const base = process.env.TEST_BASE_URL || 'http://localhost:5173';
 const origin = 'https://www.sarkariyojanasetu.com';
 const fetchPage = async path => {
   const r = await fetch(base + path, {headers: {'User-Agent': 'Twitterbot/1.0'}, redirect: 'manual'});
@@ -36,8 +36,10 @@ for (const path of ['/yojna/does-not-exist','/category/does-not-exist','/state/d
   if(r.status === 200) console.log(`LIMITATION: ${path} streams HTTP 200 with noindex; verify production handling`);
 }
 for (const path of ['/admin','/saved','/family','/reminders','/mere-liye']) {
-  const {html} = await fetchPage(path);
-  assert(/<meta name="robots" content="[^"]*noindex/.test(html), path);
+  const {r: resp, html} = await fetchPage(path);
+  const hasMetaNoindex = /<meta name="robots" content="[^"]*noindex/.test(html);
+  const hasHeaderNoindex = /noindex/i.test(resp.headers.get('x-robots-tag') ?? '');
+  assert(hasMetaNoindex || hasHeaderNoindex, path + ': missing noindex in both meta and x-robots-tag');
 }
 const redirect = await fetchPage('/state/central');
 assert.equal(redirect.r.status, 308);
@@ -54,7 +56,7 @@ assert(website.alternateName.includes('Sarkari Yojana Setu'));
 assert(website.alternateName.includes('sarkariyojanasetu.com'));
 assert.equal(website.publisher['@id'], organization['@id']);
 assert.equal(organization.name, 'Sarkari Yojana');
-assert(/<h1>Sarkari Yojana/.test(home));
+assert(/<h1[^>]*>Sarkari Yojana/.test(home));
 assert(home.includes('<meta property="og:site_name" content="Sarkari Yojana"'));
 assert(home.includes('<title>Sarkari Yojana'));
 for (const url of urls.filter(u=>u.includes('/yojna/'))) assert(home.includes('href="' + new URL(url).pathname + '"'), url + ': home discovery link missing');
