@@ -1,13 +1,9 @@
-# Sarkari Yojna
+# Sarkari Yojana
 
-Sarkari Yojna is an independent platform that helps Indian citizens discover, understand, and apply for government schemes.
+> Sarkari Yojana (sarkariyojanasetu.com) is an independent citizen-information platform providing simplified information, eligibility rules, and application guidance for Indian government social welfare schemes (Central and State).
 
-## Features
-- Scheme Discovery
-- Categorized schemes for central and state governments (Madhya Pradesh focus)
-- Feedback and verified updates
-
-## Important Links
-- [Home](https://sarkariyojna.in/)
-- [Privacy Policy](https://sarkariyojna.in/privacy)
-- [Terms](https://sarkariyojna.in/terms)
+## Key Pages
+- [Schemes Directory](/yojna): Comprehensive list of all verified government schemes, their benefits, and rules.
+- [Guides](/guide): In-depth walkthroughs on safe applications and necessary documents.
+- [Eligibility Checker](/mere-liye): A demographic-based tool to find schemes tailored to individual users.
+- [Status Check](/status-directory): Official portal links to check application status or beneficiary lists.

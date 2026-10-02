@@ -1,4 +1,5 @@
 'use client';
+import React, { useState } from 'react';
 import {translations, useLanguage} from '@/lib/i18n';
 import {categories, type Scheme} from '@/lib/domain';
 import {guides} from '@/lib/guides';
@@ -11,15 +12,32 @@ import {ShieldCheck} from 'lucide-react';
 import {SchemeActions} from '@/components/scheme-actions';
 import {SchemeFeedback} from '@/components/scheme-feedback';
 import {WhatsAppFloatingCTA, WhatsAppShareBanner} from '@/components/whatsapp-share';
+import { SITE_URL, AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_LINKEDIN_URL } from '@/lib/config';
+import { SchemeQuickFacts } from '@/components/scheme/quick-facts';
+import { SchemeQuickAnswer } from '@/components/scheme/quick-answer';
+import { buildSchemeNavigation } from '@/lib/scheme-navigation';
+import { gobardhanFaqSources } from '@/lib/scheme-content/gobardhan-faqs';
 
-const parseMarkdownLinks = (text: string) => {
-  const parts = text.split(/(\[.*?\]\(.*?\))/g);
-  return parts.map((part, i) => {
+const parseRichText = (text: string) => {
+  // First handle markdown links, then handle bold tags (** or <strong>)
+  const linkParts = text.split(/(\[.*?\]\(.*?\))/g);
+  return linkParts.map((part, i) => {
     const match = part.match(/\[(.*?)\]\((.*?)\)/);
     if (match) {
       return <Link key={i} href={match[2]} style={{color:'#2b6cb0', textDecoration:'underline'}}>{match[1]}</Link>;
     }
-    return part;
+    
+    // Process bold text in the non-link parts
+    const boldParts = part.split(/(\*\*.*?\*\*|<strong>.*?<\/strong>)/g);
+    return boldParts.map((bp, j) => {
+      if (bp.startsWith('**') && bp.endsWith('**')) {
+        return <strong key={`${i}-${j}`}>{bp.slice(2, -2)}</strong>;
+      }
+      if (bp.startsWith('<strong>') && bp.endsWith('</strong>')) {
+        return <strong key={`${i}-${j}`}>{bp.slice(8, -9)}</strong>;
+      }
+      return bp;
+    });
   });
 };
 
@@ -48,6 +66,7 @@ export function YojnaDetailClient({
   );
   const pageLang = lang === 'en' && hasEnglishArticle ? 'en' : 'hi';
   const t = translations[pageLang];
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isReviewed = s.editorial?.publicationStatus === 'REVIEWED';
   const category = categories.find(c => c.id === s.category);
   const relatedGuides = guides.filter(g => isGuideRelevantToScheme(g.slug, s));
@@ -71,6 +90,18 @@ export function YojnaDetailClient({
     (isReviewed && s.steps.length > 0) ||
     officialApplicationUrl
   );
+  const navigation = buildSchemeNavigation(s.slug, (pageLang === 'en' ? s.detailedDescriptionEn : s.detailedDescription) ?? [], [
+    {id: 'vivaran', label: t.detailDescription},
+    {id: 'labh', label: t.detailBenefits},
+    {id: 'patrata', label: t.detailEligibility},
+    ...(hasExclusions ? [{id: 'apvad', label: t.detailExclusions}] : []),
+    ...(hasDocuments ? [{id: 'dastavej', label: t.detailDocuments}] : []),
+    ...(hasProcess ? [{id: 'aavedan', label: t.detailProcess}] : []),
+    ...(s.trackingGuidance ? [{id: 'stithi', label: pageLang === 'en' ? 'Status / e-KYC' : 'स्थिति / e-KYC'}] : []),
+    {id: 'faqs', label: t.detailFaqs},
+    {id: 'sandarbh', label: t.detailSources},
+    {id: 'feedback', label: t.detailFeedback},
+  ], pageLang);
 
   return (
     <>
@@ -89,7 +120,8 @@ export function YojnaDetailClient({
           {pageLang === 'en' ? s.english : s.title}
         </h1>
         {pageLang === 'hi' && s.english && <p lang="en" className="english">{s.english}</p>}
-        <p className="scheme-lead">{pageLang === 'en' ? (s.summaryEn ?? s.summary) : s.summary}</p>
+        
+        <SchemeQuickAnswer s={s} pageLang={pageLang} />
 
         <div className="yojna-tags-row" style={{marginTop:'15px', marginBottom:'15px'}}>
           {s.editorial?.reviewedAt && (
@@ -119,57 +151,42 @@ export function YojnaDetailClient({
       )}
       {lang === 'en' && !hasEnglishArticle && <p className="source-review-note" lang="en">A complete verified English version is not available yet. The reviewed Hindi content is shown below.</p>}
 
-
-
-      <section className="panel scheme-quick-facts" aria-labelledby="scheme-quick-heading">
-        <h2 id="scheme-quick-heading">{pageLang === 'en' ? 'Scheme at a glance' : 'योजना एक नज़र में'}</h2>
-        <dl>
-          <div><dt>{pageLang === 'en' ? 'Department' : 'विभाग'}</dt><dd>{s.department}</dd></div>
-          <div><dt>{pageLang === 'en' ? 'Benefit' : 'लाभ'}</dt><dd>{pageLang === 'en' ? (s.benefitEn ?? s.benefit) : s.benefit}</dd></div>
-          {hasProcess && <div><dt>{pageLang === 'en' ? 'Application process' : 'आवेदन प्रक्रिया'}</dt><dd><a href="#aavedan">{pageLang === 'en' ? 'Read the application steps' : 'आवेदन के चरण पढ़ें'}</a></dd></div>}
-        </dl>
-        <nav aria-label={pageLang === 'en' ? 'Find an answer' : 'अपने सवाल का जवाब खोजें'} className="scheme-question-links">
-          <a href="#patrata">{pageLang === 'en' ? 'Am I eligible?' : 'कौन पात्र है?'}</a>
-          <a href="#labh">{pageLang === 'en' ? 'What are the benefits?' : 'क्या लाभ मिलेगा?'}</a>
-          {hasDocuments && <a href="#dastavej">{pageLang === 'en' ? 'Which documents?' : 'कौन से दस्तावेज़ चाहिए?'}</a>}
-          {hasProcess && <a href="#aavedan">{pageLang === 'en' ? 'How do I apply?' : 'आवेदन कैसे करें?'}</a>}
-          {s.trackingGuidance && <a href="#stithi">{pageLang === 'en' ? 'How do I track it?' : 'स्थिति कैसे देखें?'}</a>}
-          <a href="#sandarbh">{pageLang === 'en' ? 'Official sources' : 'आधिकारिक स्रोत'}</a>
-        </nav>
-      </section>
-
       <div className="detail-grid">
         {/* 1. Left Navigation */}
         <aside className="detail-left-sidebar">
-          <nav className="detail-left-nav">
-            <a href="#vivaran" className="nav-link active">{t.detailDescription}</a>
-            <a href="#labh" className="nav-link">{t.detailBenefits}</a>
-            <a href="#patrata" className="nav-link">{t.detailEligibility}</a>
-            {hasExclusions && <a href="#apvad" className="nav-link">{t.detailExclusions}</a>}
-            {hasDocuments && <a href="#dastavej" className="nav-link">{t.detailDocuments}</a>}
-            {hasProcess && <a href="#aavedan" className="nav-link">{t.detailProcess}</a>}
-            {s.trackingGuidance && <a href="#stithi" className="nav-link">{pageLang === 'en' ? 'Status / e-KYC' : 'स्थिति / e-KYC'}</a>}
-            <a href="#faqs" className="nav-link">{t.detailFaqs}</a>
-            <a href="#sandarbh" className="nav-link">{t.detailSources}</a>
-            <a href="#feedback" className="nav-link">{t.detailFeedback}</a>
+          {/* Mobile TOC Toggle */}
+          <button 
+            className="mobile-toc-toggle" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+          >
+            ☰ {pageLang === 'en' ? 'View in this scheme' : 'इस योजना में देखें'}
+          </button>
+          
+          <nav className={`detail-left-nav ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+            {navigation.customized && <h2 className="scheme-nav-heading">इस योजना में देखें</h2>}
+            {navigation.sidebar.map((item, index) => <a key={item.id} href={`#${item.id}`} className={`nav-link${index === 0 ? ' active' : ''}`}>{item.label}</a>)}
           </nav>
         </aside>
 
         {/* 2. Main Content Body */}
         <div className="detail-body" lang={pageLang}>
           <OfficialImage slug={s.slug} scheme={s} priority={true} sizes="(max-width: 880px) 100vw, (max-width: 1200px) 65vw, 760px" />
-
+          {navigation.customized && <nav className="scheme-content-toc" aria-labelledby="scheme-toc-heading">
+            <h2 id="scheme-toc-heading" className="flat-section-heading">इस लेख में क्या मिलेगा</h2>
+            <ol className="flat-list">{navigation.toc.map(item => <li key={item.id}><a className="inline-link" href={`#${item.id}`}>{item.label}</a></li>)}</ol>
+          </nav>}
 
           {/* 1. विवरण */}
           <section className="flat-section" id="vivaran">
-            <h2 className="flat-section-heading">{t.detailDescription}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailDescription : s.title + ' का ' + t.detailDescription}</h2>
             <p><strong>{pageLang === 'en' ? 'Scope: ' : 'योजना का क्षेत्र: '}</strong>{s.state === 'madhya-pradesh' ? (pageLang === 'en' ? 'Madhya Pradesh' : 'मध्य प्रदेश') : (pageLang === 'en' ? 'Central Scheme — Coverage and local process as per scheme rules' : 'केंद्रीय योजना — लागू क्षेत्र और स्थानीय प्रक्रिया योजना के नियमों के अनुसार')}</p>
             {pageLang === 'en' && s.detailedDescriptionEn ? (
-              s.detailedDescriptionEn.map((p, idx) => <p key={idx} style={{marginBottom:'1em'}}>{parseMarkdownLinks(p)}</p>)
+              navigation.description.map((p, idx) => p.trim().startsWith('<') ? <div key={idx} className={navigation.customized ? 'scheme-rich-article' : undefined} dangerouslySetInnerHTML={{__html: p}} style={{marginBottom:'1em'}} /> : <p key={idx} style={{marginBottom:'1em'}}>{parseRichText(p)}</p>)
             ) : s.detailedDescription ? (
-              s.detailedDescription.map((p, idx) => <p key={idx} style={{marginBottom:'1em'}}>{parseMarkdownLinks(p)}</p>)
+              navigation.description.map((p, idx) => p.trim().startsWith('<') ? <div key={idx} className={navigation.customized ? 'scheme-rich-article' : undefined} dangerouslySetInnerHTML={{__html: p}} style={{marginBottom:'1em'}} /> : <p key={idx} style={{marginBottom:'1em'}}>{parseRichText(p)}</p>)
             ) : (
-              <p>{parseMarkdownLinks(pageLang === 'en' ? (s.summaryEn ?? s.summary) : s.summary)}</p>
+              <p>{parseRichText(pageLang === 'en' ? (s.summaryEn ?? s.summary) : s.summary)}</p>
             )}
             {s.practicalGuidance?.length ? <div style={{marginTop:24}}><h3>इस जानकारी को अपने काम में कैसे लें</h3>{s.practicalGuidance.map((p,i) => <p key={i}>{p}</p>)}</div> : null}
 
@@ -193,13 +210,13 @@ export function YojnaDetailClient({
 
           {/* 2. लाभ */}
           <section className="flat-section" id="labh">
-            <h2 className="flat-section-heading">{t.detailBenefits}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailBenefits : s.title + ' के ' + t.detailBenefits}</h2>
             {(pageLang === 'en' && s.benefitsListEn && s.benefitsListEn.length > 0) ? (
               s.benefitsListEn.map((b, i) => (
                 <div key={i} style={{marginBottom:15}}>
                   <h3 style={{fontSize:'1.1rem', fontWeight:600, marginBottom:8, color:'#2d3748'}}>{b.heading}</h3>
                   <ul className="flat-list">
-                    {b.points.map((p, j) => <li key={j}>{p}</li>)}
+                    {b.points.map((p, j) => <li key={j}>{parseRichText(p)}</li>)}
                   </ul>
                 </div>
               ))
@@ -208,7 +225,7 @@ export function YojnaDetailClient({
                 <div key={i} style={{marginBottom:15}}>
                   <h3 style={{fontSize:'1.1rem', fontWeight:600, marginBottom:8, color:'#2d3748'}}>{b.heading}</h3>
                   <ul className="flat-list">
-                    {b.points.map((p, j) => <li key={j}>{p}</li>)}
+                    {b.points.map((p, j) => <li key={j}>{parseRichText(p)}</li>)}
                   </ul>
                 </div>
               ))
@@ -221,18 +238,18 @@ export function YojnaDetailClient({
 
           {/* 3. पात्रता */}
           <section className="flat-section" id="patrata">
-            <h2 className="flat-section-heading">{t.detailEligibility}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailEligibility : s.title + ' की ' + t.detailEligibility}</h2>
             <p>{pageLang === 'en' ? 'Read these conditions together. The department makes the final eligibility decision.' : 'इन शर्तों को साथ पढ़ें। केवल एक शर्त पूरी होने से आवेदन मंजूर होना तय नहीं है। अंतिम पात्रता संबंधित विभाग द्वारा निर्धारित की जाती है।'}</p>
             {pageLang === 'en' && s.eligibilityDescriptionEn ? (
               <ul className="flat-list">
                 {s.eligibilityDescriptionEn.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                  <li key={idx}>{parseRichText(item)}</li>
                 ))}
               </ul>
             ) : s.eligibilityDescription ? (
               <ul className="flat-list">
                 {s.eligibilityDescription.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                  <li key={idx}>{parseRichText(item)}</li>
                 ))}
               </ul>
             ) : (
@@ -247,7 +264,7 @@ export function YojnaDetailClient({
 
           {/* 4. अपवाद */}
           {hasExclusions && <section className="flat-section" id="apvad">
-            <h2 className="flat-section-heading">{t.detailExclusions}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailExclusions : s.title + ' के ' + t.detailExclusions}</h2>
             <h3>{pageLang === 'en' ? 'Who is excluded, and what needs checking?' : 'कौन पात्र नहीं है और किन बातों की जाँच चाहिए?'}</h3>
             {pageLang === 'en' && s.exclusionsEn && s.exclusionsEn.length > 0 ? (
               <ul className="flat-list">
@@ -262,7 +279,7 @@ export function YojnaDetailClient({
 
           {/* 5. आवेदन प्रक्रिया */}
           {hasProcess && <section className="flat-section" id="aavedan">
-            <h2 className="flat-section-heading">{t.detailProcess}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailProcess : s.title + ' की ' + t.detailProcess}</h2>
 
             {pageLang === 'en' && s.applicationProcessEn && s.applicationProcessEn.length > 0 ? (
               <div>
@@ -319,7 +336,7 @@ export function YojnaDetailClient({
 
           {/* 6. आवश्यक दस्तावेज़ */}
           {hasDocuments && <section className="flat-section" id="dastavej">
-            <h2 className="flat-section-heading">{t.detailDocuments}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailDocuments : s.title + ' के लिए ' + t.detailDocuments}</h2>
             <p>{pageLang === 'en' ? 'Check which documents apply to your application in the current official form. Conditional documents are not required from everyone.' : 'वर्तमान सरकारी प्रपत्र से मिलाएँ कि आपके मामले में कौन-सा दस्तावेज़ लागू है। किसी खास श्रेणी के लिए माँगा गया प्रमाण हर आवेदक के लिए जरूरी नहीं होता।'}</p>
             {hasDocuments && <ul className="flat-list">
               {displayDocuments.map((doc,idx)=>(
@@ -333,8 +350,8 @@ export function YojnaDetailClient({
             <h2 style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e3a8a', marginBottom: '15px'}}>{pageLang === 'en' ? 'Trending Schemes' : 'ट्रेंडिंग योजनाएं'}</h2>
             <ul style={{listStyle: 'none', paddingLeft: 0, margin: 0}}>
               <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
-              <li style={{marginBottom: '12px'}}><Link href="/yojna/ladli-behna" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
-              <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan Samman Nidhi Yojana 18th Installment Date</Link></li>
+              <li style={{marginBottom: '12px'}}><Link href="/yojna/mukhyamantri-majhi-ladki-bahin-yojana" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
+              <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan Samman Nidhi Yojana 24th Installment Date</Link></li>
               <li style={{marginBottom: '12px'}}><Link href="/yojna/ayushman-bharat" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
               <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-surya-ghar" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
             </ul>
@@ -342,7 +359,7 @@ export function YojnaDetailClient({
 
           {/* 7. अधिकतर पूछे जाने वाले सवाल */}
           <section className="flat-section" id="faqs">
-            <h2 className="flat-section-heading">{t.detailFaqs}</h2>
+            <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailFaqs : s.title + ' के ' + t.detailFaqs}</h2>
             <div className="faq-accordion-list">
               {displayFaqs.map((f,idx)=>(
                 <details key={idx} className="yojna-faq-details" open={idx===0} style={{border:'1px solid #e2e8f0', borderRadius:6, marginBottom:10, padding:15, background:'#f7fafc'}}>
@@ -356,9 +373,22 @@ export function YojnaDetailClient({
               ))}
               {!displayFaqs.length && <p className="verification-needed">{pageLang === 'en' ? 'Scheme-specific FAQs are not available yet. Check the official source for current rules.' : 'इस योजना के विशेष सवाल-जवाब अभी उपलब्ध नहीं हैं। वर्तमान नियम आधिकारिक स्रोत में देखें।'}</p>}
             </div>
+            {s.slug === 'gobardhan-scheme' && displayFaqs.length > 0 && <div className="faq-sources">
+              <p><strong>सवाल-जवाब के आधिकारिक स्रोत</strong> · जाँच: 3 अक्टूबर 2026</p>
+              <ul className="flat-list">{gobardhanFaqSources.map(source => <li key={source.url}><a className="inline-link" href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></li>)}</ul>
+            </div>}
           </section>
 
           <div data-nosnippet=""><WhatsAppShareBanner title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/></div>
+
+          <section className="flat-section" style={{background: '#f8fafc', padding: '20px', borderRadius: '8px', marginTop: '20px', border: '1px solid #e2e8f0'}}>
+            <h2 className="flat-section-heading" style={{fontSize: '1.1rem'}}>{pageLang === 'en' ? 'Help others by sharing this guide' : 'इस जानकारी को दूसरों तक पहुँचाएं (Share & Link)'}</h2>
+            <p style={{fontSize: '0.95rem', marginBottom: '10px'}}>{pageLang === 'en' ? 'If you found this guide helpful, please share it on social media or link to it from your blog/website to help others find accurate information.' : 'अगर आपको यह जानकारी मददगार लगी, तो इसे अपने दोस्तों के साथ शेयर करें या अपनी वेबसाइट/ब्लॉग पर लिंक देकर दूसरों की मदद करें।'}</p>
+            <div style={{display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '10px', borderRadius: '4px', border: '1px dashed #cbd5e1'}}>
+              <code style={{flex: 1, fontSize: '0.85rem', wordBreak: 'break-all', color: '#475569'}}>{`${SITE_URL}/yojna/${s.slug}`}</code>
+              <button onClick={() => {navigator.clipboard.writeText(`${SITE_URL}/yojna/${s.slug}`); alert('Link copied!');}} style={{background: '#e2e8f0', padding: '4px 12px', borderRadius: '4px', fontSize: '0.85rem', fontWeight: 600}}>Copy Link</button>
+            </div>
+          </section>
 
           {/* 8. स्रोत और संदर्भ */}
           <section className="flat-section" id="sandarbh">
@@ -367,7 +397,7 @@ export function YojnaDetailClient({
               <li><b>{t.nodalDept}</b> {s.department}</li>
               <li><b>{t.officialSource}</b> {s.sourceUrl ? <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{color:'#3182ce', textDecoration:'underline'}} onClick={() => { import('@/components/site').then(m => m.track('official_link_clicked')); }}>{new URL(s.sourceUrl).hostname}</a> : t.notAvailable}</li>
             </ul>
-            <p><strong>{pageLang === 'en' ? 'Last independent editorial review: ' : 'अंतिम स्वतंत्र संपादकीय समीक्षा: '}</strong>{s.editorial?.reviewedAt ? new Date(s.editorial.reviewedAt).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN') : (pageLang === 'en' ? 'Pending' : 'लंबित')}</p>
+            <p><strong>{pageLang === 'en' ? 'Last independent editorial review: ' : 'अंतिम स्वतंत्र संपादकीय समीक्षा: '}</strong>{s.editorial?.reviewedAt ? new Date(s.editorial.reviewedAt).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN') : (t.statusLabels?.[s.status as keyof typeof t.statusLabels] || (s.status === 'ACTIVE' ? (pageLang === 'en' ? 'Active' : 'सक्रिय') : (pageLang === 'en' ? 'Verification Pending' : 'सत्यापन बाकी')))}</p>
             <p>{s.sourceNotes}</p><p><Link className="inline-link" href="/contact">{pageLang === 'en' ? 'Report an error or request a correction' : 'जानकारी में गलती बताएं या सुधार भेजें'}</Link></p>
             <ol className="flat-list">
               {s.references?.map((ref,i) => <li key={ref.url + i} style={{marginBottom:18}}>
@@ -378,6 +408,18 @@ export function YojnaDetailClient({
               </li>)}
             </ol>
             <p>{pageLang === 'en' ? 'Sarkari Yojana is an independent information website. Final eligibility is determined by the respective department.' : 'Sarkari Yojana एक स्वतंत्र सूचना वेबसाइट है। अंतिम पात्रता संबंधित विभाग द्वारा निर्धारित की जाती है।'}</p>
+          </section>
+
+          <section className="flat-section author-bio" style={{background: '#f8fafc', padding: '20px', borderRadius: '8px', marginTop: '20px', display: 'flex', gap: '15px', alignItems: 'center', border: '1px solid #e2e8f0'}}>
+            <div style={{width: '50px', height: '50px', borderRadius: '50%', background: '#cbd5e1', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: '#334155', fontSize: '1.2rem'}}>
+              {AUTHOR_NAME.charAt(0)}
+            </div>
+            <div>
+              <p style={{margin: 0, fontWeight: 700, fontSize: '1.05rem', color: '#0f172a'}}>
+                {AUTHOR_LINKEDIN_URL ? <a href={AUTHOR_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" style={{color: '#0f172a', textDecoration: 'none'}}>{AUTHOR_NAME}</a> : AUTHOR_NAME}
+              </p>
+              <p style={{margin: 0, fontSize: '0.9rem', color: '#475569'}}>{AUTHOR_ROLE}</p>
+            </div>
           </section>
 
           {relatedGuides.length > 0 && <section className="flat-section">

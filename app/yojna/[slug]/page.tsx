@@ -6,7 +6,7 @@ import { officialImages } from '@/lib/scheme-images';
 
 import {YojnaDetailClient} from '@/components/yojna-detail-client';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
-import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL} from '@/lib/config';
+import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL, AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_LINKEDIN_URL} from '@/lib/config';
 export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
@@ -75,14 +75,42 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     }))
   } : null;
 
+  const howToSchema = (s.steps && s.steps.length > 0) ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `${s.title} के लिए आवेदन कैसे करें`,
+    description: s.summary,
+    step: s.steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      text: step,
+    }))
+  } : null;
+
   const webPageSchema = isActive ? {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@type': 'Article',
     name: s.title,
+    headline: s.title,
     description: s.summary,
     inLanguage: 'hi-IN',
     url: `${SITE_URL}/yojna/${s.slug}`,
+    datePublished: contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
     dateModified: contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
+    author: {
+      '@type': 'Person',
+      name: AUTHOR_NAME,
+      jobTitle: AUTHOR_ROLE,
+      url: `${SITE_URL}/`,
+      ...(AUTHOR_LINKEDIN_URL ? { sameAs: [AUTHOR_LINKEDIN_URL] } : {}),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME_EN,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/icon-192.png`
+      }
+    },
     about: { '@type': 'Thing', name: s.title },
     citation: s.references?.map(reference => reference.url),
   } : null;
@@ -102,5 +130,6 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     {breadcrumbSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>}
     {webPageSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webPageSchema).replace(/</g,'\\u003c')}}/>}
     {faqSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>}
+    {howToSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(howToSchema).replace(/</g,'\\u003c')}}/>}
   </main>;
 }

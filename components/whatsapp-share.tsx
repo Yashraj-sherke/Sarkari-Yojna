@@ -46,22 +46,45 @@ export function WhatsAppShareBanner({ title, slug }: { title: string; slug: stri
   const {t} = useLanguage();
   const url = `${SITE_URL}/yojna/${slug}`;
   return (
-    <div className="wa-share-banner">
+    <div className="wa-share-banner" style={{display: 'flex', flexWrap: 'wrap', gap: '10px'}}>
       <div className="wa-share-banner-icon">{WA_ICON}</div>
-      <div className="wa-share-banner-text">
+      <div className="wa-share-banner-text" style={{flex: 1}}>
         <p>{t.waShareBannerMsg}</p>
         <span>{t.waShareBannerSub}</span>
       </div>
-      <a
-        href={getWhatsAppUrl(title, url)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="wa-share-banner-btn"
-        onClick={() => track('wa_share_banner')}
-      >
-        {WA_ICON}
-        {t.waShareBtn}
-      </a>
+      <div style={{display: 'flex', gap: '8px', flexWrap: 'wrap'}}>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            track('native_share_banner');
+            if (typeof navigator !== 'undefined' && navigator.share) {
+              navigator.share({
+                title: title,
+                text: `${title} — पात्रता, लाभ और आवेदन प्रक्रिया`,
+                url: url,
+              }).catch(() => {});
+            } else {
+              navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard! Share it on your blog or social media.');
+              });
+            }
+          }}
+          className="wa-share-banner-btn"
+          style={{background: '#3182ce'}}
+        >
+          {SHARE_ICON} Share / Copy
+        </button>
+        <a
+          href={getWhatsAppUrl(title, url)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="wa-share-banner-btn"
+          onClick={() => track('wa_share_banner')}
+        >
+          {WA_ICON}
+          {t.waShareBtn}
+        </a>
+      </div>
     </div>
   );
 }

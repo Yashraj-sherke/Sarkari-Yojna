@@ -46,6 +46,16 @@ test('ration distinguishes household amounts and state-specific unknowns', () =>
 test('FAQ metadata uses the same questions as the rendered Hindi article', () => {
   for (const s of seeds) if (s.faqs?.length) assert.deepEqual(getSchemeFaqs(s), s.faqs.map(f => ({q:f.question,a:f.answer})));
 });
+test('older GOBARdhan records receive FAQs while existing editorial FAQs are preserved', () => {
+  const source = seeds.find(s => s.slug === 'gobardhan-scheme')!;
+  const olderRecord = {...source, faqs: []};
+  const enriched = enrichSchemeArticle(olderRecord);
+  assert.equal(enriched.faqs?.length, 9);
+  assert.deepEqual(getSchemeFaqs(enriched), enriched.faqs!.map(f => ({q: f.question, a: f.answer})));
+  assert.deepEqual(olderRecord.faqs, []);
+  const existingFaqs = [{question: 'मौजूदा सवाल', answer: 'मौजूदा जवाब'}];
+  assert.deepEqual(enrichSchemeArticle({...source, faqs: existingFaqs}).faqs, existingFaqs);
+});
 test('an official homepage alone does not establish online application mode', () => {
   const s = {...seeds[0], applicationProcess: undefined, applicationUrl: 'https://pmkisan.gov.in/'};
   assert.match(getSchemeProcess(s).mode, /सत्यापन आवश्यक/);

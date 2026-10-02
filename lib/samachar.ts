@@ -15,50 +15,60 @@ export const samacharSchema = z.object({
 export type Samachar = z.infer<typeof samacharSchema>;
 
 export async function getAllSamachar(): Promise<Samachar[]> {
+  let dbNews: Samachar[] = [];
   try {
     const sql = await import('./server').then(m => m.db());
     if (sql) {
-    const results = await sql`SELECT * FROM samachar WHERE status = 'PUBLISHED' ORDER BY updated_at DESC`;
-    if (results.length > 0) {
-      return results.map((row: any) => ({
-        slug: row.slug,
-        title: row.title,
-        date: row.updated_at,
-        category: row.category,
-        author: 'Sarkari Yojana Desk',
-        imageUrl: row.image_url || undefined,
-        body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
-        summary: row.summary
-      }));
-    }
+      const results = await sql`SELECT * FROM samachar WHERE status = 'PUBLISHED' ORDER BY updated_at DESC`;
+      if (results.length > 0) {
+        dbNews = results.map((row: any) => ({
+          slug: row.slug,
+          title: row.title,
+          date: row.updated_at,
+          category: row.category,
+          author: 'Sarkari Yojana Desk',
+          imageUrl: row.image_url || undefined,
+          body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
+          summary: row.summary
+        }));
+      }
     }
   } catch (error) {
     console.error('getAllSamachar error', error);
   }
   
-  // Fallback to static JSON
+  // Merge DB and static JSON, preventing duplicates by slug
   const data = samacharData as Samachar[];
-  return data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const allNews = [...dbNews, ...data];
+  const uniqueNewsMap = new Map<string, Samachar>();
+  
+  allNews.forEach(item => {
+    if (!uniqueNewsMap.has(item.slug)) {
+      uniqueNewsMap.set(item.slug, item);
+    }
+  });
+
+  return Array.from(uniqueNewsMap.values()).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export async function getSamachar(slug: string): Promise<Samachar | null> {
   try {
     const sql = await import('./server').then(m => m.db());
     if (sql) {
-    const results = await sql`SELECT * FROM samachar WHERE slug = ${slug} AND status = 'PUBLISHED'`;
-    if (results.length > 0) {
-      const row = results[0];
-      return {
-        slug: row.slug,
-        title: row.title,
-        date: row.updated_at,
-        category: row.category,
-        author: 'Sarkari Yojana Desk',
-        imageUrl: row.image_url || undefined,
-        body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
-        summary: row.summary
-      };
-    }
+      const results = await sql`SELECT * FROM samachar WHERE slug = ${slug} AND status = 'PUBLISHED'`;
+      if (results.length > 0) {
+        const row = results[0];
+        return {
+          slug: row.slug,
+          title: row.title,
+          date: row.updated_at,
+          category: row.category,
+          author: 'Sarkari Yojana Desk',
+          imageUrl: row.image_url || undefined,
+          body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
+          summary: row.summary
+        };
+      }
     }
   } catch (error) {
     console.error('getSamachar error', error);

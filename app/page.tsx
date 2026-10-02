@@ -2,11 +2,11 @@ import { summarizeScheme } from '@/lib/scheme-summary';
 import { allSchemes } from '@/lib/server';
 import { getAllSamachar } from '@/lib/samachar';
 import { Directory } from '@/components/directory';
-import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_ALTERNATE_NAMES, SITE_URL } from '@/lib/config';
+import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_ALTERNATE_NAMES, SITE_URL, SOCIAL_X_URL, SOCIAL_INSTAGRAM_URL, SOCIAL_FACEBOOK_URL, SOCIAL_YOUTUBE_URL } from '@/lib/config';
 import { isIndexableScheme } from '@/lib/seo';
 import Link from 'next/link';
 
-const title = 'Sarkari Yojana 2026 — सरकारी योजना सूची और ऑनलाइन आवेदन';
+const title = 'Sarkari Yojana 2026 — सभी सरकारी योजनाओं की सूची (All Government Schemes)';
 const description = 'Sarkari Yojana 2026 की सत्यापित सूची, पात्रता, दस्तावेज़, सरकारी योजना अपडेट और ऑनलाइन आवेदन की आधिकारिक जानकारी सरल हिन्दी में देखें।';
 export const metadata = {
   title: {absolute: title}, description,
@@ -42,7 +42,8 @@ export default async function Home() {
     name:SITE_NAME_EN,
     alternateName:SITE_ALTERNATE_NAMES,
     url:`${SITE_URL}/`,
-    logo:`${SITE_URL}/icon-192.png`
+    logo:`${SITE_URL}/icon-192.png`,
+    sameAs: [SOCIAL_X_URL, SOCIAL_INSTAGRAM_URL, SOCIAL_FACEBOOK_URL, SOCIAL_YOUTUBE_URL].filter(Boolean)
   };
 
   const collectionSchema={

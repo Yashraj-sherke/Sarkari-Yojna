@@ -10,7 +10,9 @@ import { Sidebar, Card, Empty, Choice, icons, SampleNotice, track, Search, Arrow
 import { useLanguage } from '@/lib/i18n';
 import { OfficialImage } from './official-image';
 import { stateNames } from '@/lib/state-names';
+import { trendingLinksHindi, stateSchemesLinks } from '@/lib/trending-data';
 import { ProcessFlow } from './process-flow';
+import { NewSchemeBadge } from './new-scheme-badge';
 
 const answerPaths = [
   { icon: BadgeCheck, hi: 'क्या मैं पात्र हूँ?', en: 'Am I eligible?', href: '/mere-liye' },
@@ -105,7 +107,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
 
   const CARDS_PER_PAGE = 9;
   
-  const trendingSlugs = ['ladli-behna', 'pm-awas-gramin', 'pm-kisan', 'ayushman-bharat', 'pm-surya-ghar', 'pm-vishwakarma'];
+  const trendingSlugs = ['mukhyamantri-kanya-vivah-yojana', 'gobardhan-scheme', 'ladli-behna', 'pm-awas-gramin', 'pm-kisan', 'ayushman-bharat', 'pm-surya-ghar', 'pm-vishwakarma'];
   
   const displayedMpSchemes = isFeatured 
     ? [
@@ -197,14 +199,11 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
           <div className="sarkari-three-col">
             {/* Column 1: Trendy */}
             <div className="sarkari-col">
-              <h2 className="sarkari-col-header">{lang === 'hi' ? 'ट्रेंडिंग योजनाएं' : 'Trending Yojanas'}</h2>
+              <h2 className="sarkari-col-header">{lang === 'hi' ? 'सबसे ज्यादा खोजी गई योजनाएं' : 'Most Searched'}</h2>
               <ul className="sarkari-col-list">
-                <li><Link href="/yojna/ladli-behna">मुख्यमंत्री माझी लाडकी बहीण योजना</Link></li>
-                <li><Link href="/yojna/pm-kisan">पीएम किसान सम्मान निधि</Link></li>
-                <li><Link href="/yojna/ayushman-bharat">आयुष्मान भारत योजना</Link></li>
-                <li><Link href="/yojna/pm-surya-ghar">पीएम सूर्य घर मुफ़्त बिजली योजना</Link></li>
-                <li><Link href="/yojna/pm-vishwakarma">पीएम विश्वकर्मा योजना</Link></li>
-                <li><Link href="/yojna/pm-awas-gramin">पीएम आवास योजना (ग्रामीण)</Link></li>
+                {trendingLinksHindi.map((link, idx) => (
+                  <li key={idx}><Link href={link.href}>{link.label}<NewSchemeBadge href={link.href} /></Link></li>
+                ))}
               </ul>
               <div className="sarkari-col-footer">
                 <Link href="/yojna">{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
@@ -215,12 +214,9 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
             <div className="sarkari-col">
               <h2 className="sarkari-col-header">{lang === 'hi' ? 'राज्य की योजनाएं' : 'State Schemes'}</h2>
               <ul className="sarkari-col-list">
-                <li><Link href="/yojna/ladli-behna">लाड़ली बहना योजना (MP & MH)</Link></li>
-                <li><Link href="/yojna/up-kanya-sumangala-yojana">यूपी कन्या सुमंगला योजना (UP)</Link></li>
-                <li><Link href="/yojna/bihar-kanya-utthan-yojana">बिहार कन्या उत्थान योजना (Bihar)</Link></li>
-                <li><Link href="/yojna/rajasthan-palanhar-yojana">पालनहार योजना (Rajasthan)</Link></li>
-                <li><Link href="/yojna/gujarat-vahli-dikri-yojana">वहाली डिक्री योजना (Gujarat)</Link></li>
-                <li><Link href="/yojna/punjab-ashirwad-yojana">आशीर्वाद योजना (Punjab)</Link></li>
+                {stateSchemesLinks.map((link, idx) => (
+                  <li key={idx}><Link href={link.href}>{link.label}<NewSchemeBadge href={link.href} /></Link></li>
+                ))}
               </ul>
               <div className="sarkari-col-footer">
                 <Link href="/yojna">{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
@@ -393,8 +389,8 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
           <h2 style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e3a8a', marginBottom: '15px'}}>{lang === 'hi' ? 'ट्रेंडिंग योजनाएं' : 'Trending Schemes'}</h2>
           <ul style={{listStyle: 'none', paddingLeft: 0, margin: 0}}>
             <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/ladli-behna" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan Samman Nidhi Yojana 18th Installment Date</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/mukhyamantri-majhi-ladki-bahin-yojana" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan Samman Nidhi Yojana 24th Installment Date</Link></li>
             <li style={{marginBottom: '12px'}}><Link href="/yojna/ayushman-bharat" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
             <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-surya-ghar" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
           </ul>

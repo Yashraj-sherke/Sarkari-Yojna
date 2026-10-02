@@ -1,10 +1,13 @@
 import type { Scheme } from './domain';
 import { rationArticle } from './scheme-content/ration-support';
 import { reviewedCorrections } from './scheme-content/reviewed-corrections';
+import { gobardhanFaqs } from './scheme-content/gobardhan-faqs';
 
 export function enrichSchemeArticle(input: Scheme): Scheme {
   const correction = input.slug === 'ration-support' ? rationArticle : reviewedCorrections[input.slug];
   const s: Scheme = correction ? { ...input, ...correction } : { ...input };
+  // Existing database records may predate the FAQ content added to the seed.
+  if (s.slug === 'gobardhan-scheme' && !s.faqs?.length) s.faqs = gobardhanFaqs;
   // Do not retain English versions of fields whose facts changed in Hindi.
   if (correction) for (const field of ['summary','benefit','documents','steps','detailedDescription','benefitsList','eligibilityDescription','exclusions','applicationProcess','faqs'] as const) {
     if (field in correction) delete s[`${field}En`];

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getAllSamachar } from '@/lib/samachar';
-import { Sidebar } from '@/components/site';
 import { AdSensePlaceholder } from '@/components/ads';
 
 export const metadata = {
@@ -15,7 +14,6 @@ export default async function SamacharIndex() {
 
   return (
     <div className="workspace">
-      <Sidebar />
       <main id="main" className="directory samachar-main">
         <div className="breadcrumb" style={{marginBottom: '20px'}}>
           <Link href="/">होम</Link> <span>/</span> समाचार

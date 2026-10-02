@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getSamachar } from '@/lib/samachar';
-import { Sidebar } from '@/components/site';
 import { AdSensePlaceholder } from '@/components/ads';
 import { SITE_URL } from '@/lib/config';
 
@@ -38,7 +37,6 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
 
   return (
     <div className="workspace">
-      <Sidebar />
       <main id="main" className="directory samachar-main">
         <div className="breadcrumb" style={{marginBottom: '20px'}}>
           <Link href="/">होम</Link> <span>/</span> <Link href="/samachar">समाचार</Link> <span>/</span> {s.title}
@@ -74,9 +72,14 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
           </div>
           
           <div className="article-body samachar-body" style={{fontSize: '1.1rem', color: '#2d3748', lineHeight: 1.7}}>
-            {s.body.map((p, idx) => (
-              <p key={idx} dangerouslySetInnerHTML={{ __html: p }} />
-            ))}
+            {s.body.map((p, idx) => {
+              const isBlock = /^<(h[1-6]|ul|ol|div|blockquote)/i.test(p.trim());
+              return isBlock ? (
+                <div key={idx} dangerouslySetInnerHTML={{ __html: p }} style={{marginBottom: '1.5em'}} className="samachar-block" />
+              ) : (
+                <p key={idx} dangerouslySetInnerHTML={{ __html: p }} style={{marginBottom: '1.5em'}} />
+              );
+            })}
           </div>
 
           <div style={{marginTop: 40}}>

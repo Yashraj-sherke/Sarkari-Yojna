@@ -38,6 +38,30 @@ export default function RootLayout({
     <html lang="hi">
       <head>
         <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp" fetchPriority="high" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Sarkari Yojana Setu",
+          "url": "https://www.sarkariyojanasetu.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.sarkariyojanasetu.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Sarkari Yojana Setu",
+          "url": "https://www.sarkariyojanasetu.com/",
+          "logo": "https://www.sarkariyojanasetu.com/logo-icon.webp",
+          "description": "Sarkari Yojana Setu is an independent citizen-information platform providing simplified details on Indian government schemes.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "sarkariyojanasetu@gmail.com",
+            "contactType": "customer support"
+          }
+        })}} />
       </head>
       <body className="antialiased">
         <LanguageProvider>

@@ -55,7 +55,7 @@ export async function allSchemes(): Promise<Scheme[]> {
   if (!sql) return seeds.map(normalizeScheme);
   try {
     const queryPromise = sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
-    const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 5 seconds')), 5000));
+    const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 15 seconds')), 15000));
     const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
     
     const schemes = results.map((x: any) => {

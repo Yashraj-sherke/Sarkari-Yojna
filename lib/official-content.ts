@@ -1,9 +1,244 @@
 import type { Scheme } from './domain';
+import {gobardhanFaqs} from './scheme-content/gobardhan-faqs';
 
 // Editorial review of the linked official pages, not an automatic eligibility decision.
 export const reviewedAt = '2026-09-14T00:00:00.000Z';
 const reviewed = { status: 'ACTIVE' as const, isSample: false, verifiedAt: reviewedAt, nextReviewAt: '2026-12-13T00:00:00.000Z' };
 export const officialContent: Record<string, Partial<Scheme>> = {
+  'gobardhan-scheme': {
+    ...reviewed,
+    faqs: gobardhanFaqs,
+    summary: 'गोबर और जैविक कचरे से बनेगी CBG। ₹23,731 करोड़ की योजना के तहत परियोजनाओं और MSME को सहायता।',
+    benefit: 'अधिकतम ₹2 करोड़/TPD कैपिटल सहायता',
+    imageUrl: '/gobardhan-scheme.jpg',
+    sourceUrl: 'https://sbm.gov.in/', applicationUrl: 'https://sbm.gov.in/',
+    documents: ['परियोजना की जानकारी', 'CBG उत्पादन क्षमता', 'फीडस्टॉक स्रोत', 'भूमि/स्थान विवरण', 'तकनीकी परियोजना विवरण', 'वित्तीय/ऋण संबंधी जानकारी', 'संबंधित स्वीकृतियां'],
+    documentsEn: ['Project Details', 'CBG Production Capacity', 'Feedstock Source', 'Land Details', 'Technical Project Details', 'Financial Details', 'Approvals'],
+    steps: ['Unified GOBARdhan Portal पर जाएं।', 'अपनी परियोजना के प्रकार के अनुसार संबंधित आधिकारिक दिशा-निर्देशों का पालन करें।', 'Biogas और नए CBG योजना के लिए अलग-अलग विकल्प चुनें।'],
+    stepsEn: ['Visit Unified GOBARdhan Portal.', 'Follow official guidelines according to your project type.', 'Select separate options for Biogas and new CBG scheme.'],
+    rules: [],
+    sourceNotes: 'GOBARdhan Scheme 2026 (National Circular Bioenergy Scheme) 1 अक्टूबर 2026 को लॉन्च की गई।',
+    detailedDescription: [`<h1>GOBARdhan Scheme 2026: गोबर और जैविक कचरे से बनेगी CBG, ₹23,731 करोड़ की योजना के तहत जानें पूरी जानकारी</h1>
+<p><strong>GOBARdhan Scheme 2026:</strong> केंद्र सरकार ने देश में <strong>Compressed Biogas (CBG)</strong> के उत्पादन को बढ़ावा देने के लिए <strong>GOBARdhan (गोबरधन) योजना</strong> को राष्ट्रीय स्तर पर नए एकीकृत ढांचे के रूप में आगे बढ़ाया है। केंद्रीय मंत्रिमंडल ने इस योजना को <strong>6 अगस्त 2026</strong> को मंजूरी दी थी और <strong>1 अक्टूबर 2026</strong> को इसका औपचारिक शुभारंभ किया गया। योजना के लिए कुल <strong>₹23,731 करोड़</strong> का परिव्यय निर्धारित किया गया है और इसका कार्यान्वयन वित्तीय वर्ष <strong>2026-27 से 2035-36</strong> तक यानी 10 वर्षों के लिए किया जाना है।</p>
+<p>इस योजना का मुख्य उद्देश्य कृषि अवशेष, पशुओं का गोबर, प्रेसमड, नगरों के जैविक कचरे और अन्य जैविक संसाधनों को उपयोग में लेकर <strong>Compressed Biogas यानी CBG</strong>, जैविक खाद और ग्रामीण आर्थिक गतिविधियां विकसित करना है। सरकार का लक्ष्य घरेलू CBG उत्पादन को लगभग <strong>10 गुना बढ़ाकर करीब 5 MMSCMD</strong> तक पहुंचाना है।</p>
+<h2>GOBARdhan योजना क्या है?</h2>
+<p>GOBARdhan का पूरा नाम <strong>Galvanizing Organic Bio-Agro Resources Dhan</strong> है। मूल GOBARdhan पहल को वर्ष <strong>2018 में स्वच्छ भारत मिशन (ग्रामीण)</strong> के अंतर्गत शुरू किया गया था, जिसका उद्देश्य जैविक कचरे जैसे पशु अपशिष्ट, रसोई के जैविक कचरे और कृषि अवशेषों को बायोगैस तथा जैविक स्लरी में बदलकर गांवों में स्वच्छता और अपशिष्ट प्रबंधन को बेहतर करना था।</p>
+<p>2026 में केंद्र सरकार ने GOBARdhan को <strong>National Circular Bioenergy Scheme</strong> के रूप में CBG क्षेत्र के लिए एक अधिक व्यापक और एकीकृत राष्ट्रीय ढांचे के रूप में मंजूरी दी है। इसके तहत पहले से मौजूद अलग-अलग सहायता और हस्तक्षेपों को एक व्यापक व्यवस्था से जोड़ने का प्रयास किया गया है।</p>
+<h2>GOBARdhan Scheme 2026 की मुख्य जानकारी</h2>
+<table class="table-auto w-full border-collapse border border-gray-300 my-4">
+  <thead>
+    <tr class="bg-gray-100">
+      <th class="border border-gray-300 px-4 py-2 text-left">विवरण</th>
+      <th class="border border-gray-300 px-4 py-2 text-left">जानकारी</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="border border-gray-300 px-4 py-2">योजना का नाम</td><td class="border border-gray-300 px-4 py-2">GOBARdhan / National Circular Bioenergy Scheme</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">मुख्य क्षेत्र</td><td class="border border-gray-300 px-4 py-2">Compressed Biogas (CBG)</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">कुल परिव्यय</td><td class="border border-gray-300 px-4 py-2">₹23,731 करोड़</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">अवधि</td><td class="border border-gray-300 px-4 py-2">वित्तीय वर्ष 2026-27 से 2035-36</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">लक्ष्य</td><td class="border border-gray-300 px-4 py-2">घरेलू CBG उत्पादन में लगभग 10 गुना वृद्धि</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">लक्षित उत्पादन</td><td class="border border-gray-300 px-4 py-2">करीब 5 MMSCMD</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">नोडल मंत्रालय</td><td class="border border-gray-300 px-4 py-2">पेट्रोलियम एवं प्राकृतिक गैस मंत्रालय</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">लॉन्च</td><td class="border border-gray-300 px-4 py-2">1 अक्टूबर 2026</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">कैपिटल सहायता</td><td class="border border-gray-300 px-4 py-2">पात्र CBG परियोजनाओं के लिए अधिकतम ₹2 करोड़ प्रति TPD क्षमता</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">CBG कीमत ढांचा</td><td class="border border-gray-300 px-4 py-2">₹2,110 प्रति MMBTU</td></tr>
+    <tr><td class="border border-gray-300 px-4 py-2">MSME क्रेडिट गारंटी</td><td class="border border-gray-300 px-4 py-2">डिफॉल्ट की स्थिति में बकाया राशि के 85% तक, निर्धारित सीमा के अधीन</td></tr>
+  </tbody>
+</table>
+<h2>GOBARdhan Scheme 2026 का उद्देश्य क्या है?</h2>
+<p>इस योजना को केवल कचरे से गैस बनाने की योजना के रूप में नहीं देखा जा रहा है। इसका उद्देश्य पूरे CBG इकोसिस्टम को विकसित करना है।</p>
+<p>इसके प्रमुख उद्देश्य हैं:</p>
+<p><strong>1. जैविक कचरे का उपयोग:</strong><br/>
+कृषि अवशेष, पशुओं का गोबर, प्रेसमड, नगरों का जैविक कचरा और अन्य बायोमास संसाधनों को आर्थिक रूप से उपयोगी बनाना।</p>
+<p><strong>2. घरेलू स्वच्छ ऊर्जा उत्पादन बढ़ाना:</strong><br/>
+देश में CBG की उत्पादन क्षमता बढ़ाकर प्राकृतिक गैस की मांग का एक हिस्सा घरेलू नवीकरणीय स्रोतों से पूरा करने में मदद करना।</p>
+<p><strong>3. ग्रामीण अर्थव्यवस्था को बढ़ावा देना:</strong><br/>
+फीडस्टॉक संग्रह, परिवहन, प्रसंस्करण, प्लांट संचालन और जैविक खाद के कारोबार से ग्रामीण क्षेत्रों में आर्थिक अवसर पैदा करना।</p>
+<p><strong>4. आयातित जीवाश्म ईंधन पर निर्भरता कम करना:</strong><br/>
+CBG को घरेलू स्तर पर उत्पादित नवीकरणीय गैसीय ईंधन के रूप में बढ़ावा देकर ऊर्जा सुरक्षा को मजबूत करना।</p>
+<h2>CBG क्या होता है?</h2>
+<p><strong>CBG यानी Compressed Biogas</strong> जैविक कचरे और बायोमास से तैयार की जाने वाली गैस है। इसके लिए पशुओं का गोबर, कृषि अवशेष, प्रेसमड और अन्य जैविक संसाधनों का उपयोग किया जा सकता है।</p>
+<p>सरकारी जानकारी के अनुसार CBG रासायनिक रूप से प्राकृतिक गैस के समकक्ष है और इसे गैस के मौजूदा इकोसिस्टम में उपयोग किया जा सकता है। इससे CNG परिवहन और PNG घरेलू उपयोग जैसे क्षेत्रों में इसकी भूमिका बढ़ सकती है।</p>
+<p>सरल भाषा में समझें तो:</p>
+<p><strong>गोबर/कृषि कचरा → जैव गैस उत्पादन → शुद्धिकरण → Compressed Biogas (CBG) → ऊर्जा के रूप में उपयोग</strong></p>
+<p>इसके साथ प्लांट से <strong>FOM/LFOM जैसे जैविक खाद उत्पाद</strong> भी प्राप्त होते हैं, जिससे कचरे के साथ-साथ खाद के उपयोग का भी रास्ता बनता है।</p>
+<h2>GOBARdhan Scheme 2026 के 6 बड़े हिस्से</h2>
+<p>सरकार ने GOBARdhan के अंतर्गत CBG क्षेत्र को बढ़ाने के लिए छह प्रमुख हस्तक्षेप निर्धारित किए हैं।</p>
+<h3>1. CBG की खरीद का आश्वासन</h3>
+<p>CBG प्लांट से उत्पादित गैस के लिए बाजार उपलब्ध कराने पर जोर दिया गया है। योजना के तहत <strong>City Gas Distribution (CGD)</strong> संस्थाओं के माध्यम से खरीद व्यवस्था को बढ़ावा दिया जाएगा।</p>
+<p>CBG Obligation यानी CBO के तहत CNG (Transport) और PNG (Domestic) क्षेत्र के लिए खरीद/ब्लेंडिंग लक्ष्य इस प्रकार रखा गया है:</p>
+<ul>
+<li>वित्तीय वर्ष <strong>2026-27: 3%</strong></li>
+<li>वित्तीय वर्ष <strong>2027-28: 4%</strong></li>
+<li>वित्तीय वर्ष <strong>2028-29 से आगे: 5%</strong></li>
+</ul>
+<p>इसका उद्देश्य CBG उत्पादकों के लिए लंबी अवधि में मांग का अधिक स्पष्ट संकेत उपलब्ध कराना है।</p>
+<h3>2. CBG के लिए स्थिर मूल्य ढांचा</h3>
+<p>GOBARdhan योजना में <strong>₹2,110 प्रति MMBTU</strong> का प्रशासित CBG मूल्य ढांचा पेश किया गया है।</p>
+<p>सरकारी विवरण के अनुसार इस व्यवस्था का उद्देश्य CBG उत्पादकों को लंबे समय के लिए अधिक राजस्व दृश्यता देना है, जबकि उपभोक्ताओं की वहनीयता को भी ध्यान में रखा गया है। यह ढांचा न्यूनतम 10 वर्ष के दृष्टिकोण के साथ तैयार किया गया है।</p>
+<h3>3. CBG प्लांट के लिए कैपिटल असिस्टेंस</h3>
+<p>यह योजना CBG प्रोजेक्ट लगाने वालों के लिए महत्वपूर्ण प्रावधान लेकर आई है।</p>
+<p><strong>पात्र Greenfield CBG परियोजनाओं को स्थापित क्षमता के आधार पर अधिकतम ₹2 करोड़ प्रति TPD (Ton Per Day) तक कैपिटल सहायता</strong> मिल सकती है।</p>
+<p>यह सहायता केवल मुख्य मशीनरी तक सीमित नहीं है। इसमें फीडस्टॉक एग्रीगेशन तथा जैविक खाद के प्रसंस्करण और वैल्यू एडिशन से जुड़े कुछ जरूरी उपकरण भी शामिल किए जा सकते हैं। पात्र <strong>Brownfield परियोजनाओं में उत्पादन क्षमता बढ़ाने</strong> के लिए भी सहायता का प्रावधान है।</p>
+<p><strong>उदाहरण से समझें:</strong><br/>
+मान लीजिए कोई पात्र CBG प्रोजेक्ट <strong>5 TPD</strong> की स्थापित क्षमता का है। केवल घोषित अधिकतम दर के आधार पर गणितीय सीमा ₹10 करोड़ बनती है, लेकिन वास्तविक सहायता <strong>लागू दिशा-निर्देशों और पात्रता शर्तों</strong> के अनुसार तय होगी। इसलिए इसे हर परियोजना के लिए स्वतः मिलने वाली ₹10 करोड़ की राशि नहीं माना जाना चाहिए।</p>
+<h3>4. पाइपलाइन कनेक्टिविटी के लिए सहायता</h3>
+<p>कई CBG प्लांटों के सामने गैस को बाजार तक पहुंचाने की समस्या रहती है। इसे दूर करने के लिए योजना में पाइपलाइन इन्फ्रास्ट्रक्चर पर भी समर्थन दिया गया है।</p>
+<p>सरकारी जानकारी के अनुसार:</p>
+<ul>
+<li>CBG क्लस्टर को ट्रंक पाइपलाइन नेटवर्क से जोड़ने वाली पाइपलाइन के पात्र पूंजीगत खर्च का <strong>80% तक</strong> समर्थन उपलब्ध हो सकता है।</li>
+<li>Standalone CBG प्लांट को CGD नेटवर्क से जोड़ने के लिए पात्र पूंजीगत खर्च का <strong>50% तक</strong> समर्थन उपलब्ध हो सकता है।</li>
+</ul>
+<h3>5. MSME के लिए Credit Guarantee Support</h3>
+<p>CBG क्षेत्र में वित्त की उपलब्धता बढ़ाने के लिए पात्र <strong>MSME आधारित CBG परियोजनाओं</strong> के लिए समर्पित Credit Guarantee व्यवस्था बनाई गई है।
+योजना के अंतर्गत डिफॉल्ट की स्थिति में पात्र ऋण की बकाया राशि के <strong>85% तक</strong> गारंटी कवरेज उपलब्ध हो सकता है, निर्धारित परियोजना सीमाओं के अधीन।</p>
+<p>गारंटी की अधिकतम सीमा:</p>
+<ul>
+<li>सामान्य MSME परियोजना: <strong>₹20 करोड़ प्रति परियोजना</strong></li>
+<li>महिला-नेतृत्व वाली MSME परियोजना: <strong>₹25 करोड़ प्रति परियोजना</strong></li>
+</ul>
+<h3>6. CBG Ecosystem Challenge Fund</h3>
+<p>योजना के तहत <strong>CBG Ecosystem Challenge Fund</strong> भी स्थापित किया गया है।
+इस फंड के माध्यम से निम्न क्षेत्रों में सहायता दी जा सकती है:</p>
+<ul>
+<li>फीडस्टॉक संसाधनों का आकलन और मैपिंग</li>
+<li>फीडस्टॉक एग्रीगेशन</li>
+<li>जिला स्तर पर CBG विकास योजना</li>
+<li>नई तकनीक अपनाना, क्षमता निर्माण और हितधारकों में जागरूकता</li>
+</ul>
+<h2>किसानों को GOBARdhan Scheme से क्या फायदा होगा?</h2>
+<p>किसानों के लिए इस योजना का सबसे महत्वपूर्ण पहलू <strong>जैविक संसाधनों को आर्थिक गतिविधि से जोड़ना</strong> है।
+CBG संयंत्रों के आसपास कृषि अवशेष और पशु अपशिष्ट की आवश्यकता बढ़ने पर किसानों, फीडस्टॉक संग्रहकर्ताओं और ग्रामीण उद्यमियों के लिए नए बाजार अवसर बन सकते हैं।</p>
+<p>इसके संभावित लाभों में शामिल हैं:
+<strong>फसल अवशेष का उपयोग:</strong> कृषि कचरे को जलाने के बजाय उसे आर्थिक रूप से उपयोगी फीडस्टॉक में बदला जा सकता है।
+<strong>ग्रामीण आय के अवसर:</strong> संग्रह, परिवहन और प्रसंस्करण जैसी गतिविधियों से स्थानीय कारोबार विकसित हो सकते हैं।
+<strong>जैविक खाद:</strong> CBG प्लांट से निकलने वाले FOM/LFOM को जैविक खाद के रूप में वैल्यू एडिशन और उपयोग के लिए बढ़ावा दिया जा रहा है।</p>
+<h2>क्या हर किसान को सीधे ₹2 करोड़ मिलेंगे?</h2>
+<p><strong>नहीं।</strong>
+यह बात विशेष रूप से समझना जरूरी है। GOBARdhan के तहत घोषित <strong>₹2 करोड़ प्रति TPD तक की कैपिटल सहायता पात्र CBG परियोजनाओं के लिए है</strong>, न कि प्रत्येक किसान के बैंक खाते में मिलने वाली व्यक्तिगत आर्थिक सहायता। इसी तरह Credit Guarantee भी पात्र MSME आधारित CBG परियोजनाओं के लिए है।</p>
+<h2>GOBARdhan Scheme में कौन-कौन भाग ले सकता है?</h2>
+<p>2026 के नए CBG ढांचे में संभावित भागीदारी का दायरा काफी व्यापक है। इसमें विशेष रूप से:</p>
+<ul>
+<li>निजी CBG डेवलपर</li>
+<li>MSME</li>
+<li>ग्रामीण उद्यमी</li>
+<li>सहकारी संस्थाएं</li>
+<li>CBG परियोजना विकसित करने वाली संस्थाएं</li>
+<li>राज्य सरकारें</li>
+<li>City Gas Distribution संस्थाएं</li>
+</ul>
+<h2>GOBARdhan Scheme के लिए आवेदन कैसे करें?</h2>
+<p>1 अक्टूबर 2026 को योजना की लॉन्चिंग के साथ <strong>Unified GOBARdhan Portal</strong> भी शुरू किया गया है। आवेदक को अपनी परियोजना के प्रकार के अनुसार संबंधित आधिकारिक दिशा-निर्देशों और पोर्टल पर उपलब्ध प्रक्रिया का पालन करना होगा।</p>
+<p><strong>जरूरी दस्तावेज और जानकारी:</strong></p>
+<ul>
+<li>परियोजना की जानकारी</li>
+<li>CBG उत्पादन क्षमता</li>
+<li>फीडस्टॉक स्रोत</li>
+<li>भूमि/स्थान से संबंधित विवरण</li>
+<li>तकनीकी परियोजना विवरण</li>
+<li>वित्तीय/ऋण संबंधी जानकारी</li>
+<li>संबंधित स्वीकृतियां और अनुमतियां</li>
+</ul>
+<h2>GOBARdhan Portal क्या है?</h2>
+<p>GOBARdhan के लिए पहले से <strong>Ministry of Jal Shakti</strong> के अंतर्गत एक Unified Registration Portal मौजूद है, जो बायोगैस प्लांट से संबंधित पंजीकरण और जानकारी के लिए उपयोग किया जाता रहा है। पोर्टल पर वर्तमान में स्पष्ट रूप से बताया गया है कि यह पोर्टल <strong>Biogas plants के लिए है और CBG registration के लिए अलग विकल्प</strong> उपलब्ध है।</p>
+<h2>GOBARdhan Scheme का देश को क्या फायदा होगा?</h2>
+<p>सरकारी अनुमान के अनुसार योजना के परिणामस्वरूप:</p>
+<ul>
+<li>घरेलू CBG उत्पादन में लगभग <strong>10 गुना</strong> वृद्धि हो सकती है।</li>
+<li><strong>₹40,000 करोड़ से अधिक</strong> विदेशी मुद्रा बचत का प्रभाव हो सकता है।</li>
+<li>GDP में <strong>₹75,000 करोड़ से अधिक</strong> का योगदान होने की उम्मीद है।</li>
+<li><strong>1.5 लाख से अधिक रोजगार</strong> के अवसर पैदा होने का अनुमान है।</li>
+<li>लगभग <strong>10 मिलियन टन जीवाश्म ईंधन</strong> को स्वच्छ गैस से प्रतिस्थापित करने का लक्ष्य/अनुमान है।</li>
+<li><strong>40 मिलियन टन से अधिक CO₂ उत्सर्जन</strong> में कमी की अपेक्षा है।</li>
+</ul>
+<h2>2026 में GOBARdhan Scheme की सबसे बड़ी नई बात क्या है?</h2>
+<p>GOBARdhan की 2026 की नई व्यवस्था की सबसे महत्वपूर्ण बात यह है कि CBG क्षेत्र के लिए पहले से मौजूद अलग-अलग सहायता उपायों को एक <strong>राष्ट्रीय एकीकृत ढांचे</strong> में लाने की कोशिश की गई है। इसमें एक साथ: <strong>मांग का आश्वासन + स्थिर मूल्य ढांचा + कैपिटल सहायता + पाइपलाइन सहायता + क्रेडिट गारंटी + इकोसिस्टम फंड</strong> शामिल किए गए हैं।</p>
+<h2>अगस्त 2026 तक CBG क्षेत्र की स्थिति</h2>
+<p>सरकारी आंकड़ों के अनुसार <strong>अगस्त 2026 तक भारत में 217 से अधिक CBG प्लांट commissioned</strong> हो चुके थे और उनकी स्थापित क्षमता <strong>1,700 TPD से अधिक</strong> थी। नई GOBARdhan योजना का उद्देश्य इस आधार को राष्ट्रीय स्तर पर और तेजी से बढ़ाना है।</p>
+<h2>निष्कर्ष</h2>
+<p><strong>GOBARdhan Scheme 2026</strong> भारत में जैविक कचरे को स्वच्छ ऊर्जा और आर्थिक गतिविधि में बदलने के लिए एक व्यापक राष्ट्रीय पहल है। ₹23,731 करोड़ के परिव्यय और 10 साल की अवधि वाले इस ढांचे में CBG की खरीद, मूल्य स्थिरता, परियोजना कैपिटल सहायता, पाइपलाइन कनेक्टिविटी, MSME क्रेडिट गारंटी और इकोसिस्टम विकास को एक साथ जोड़ा गया है।</p>
+<p><strong>हालांकि, यह ध्यान रखना जरूरी है कि GOBARdhan की कैपिटल सहायता प्रत्येक किसान को मिलने वाली सीधी नकद राशि नहीं है। लाभ परियोजना की पात्रता, श्रेणी और लागू सरकारी दिशा-निर्देशों के अनुसार तय होंगे।</strong></p>
+`],
+    detailedDescriptionEn: [
+      'The central government has launched the GOBARdhan Scheme 2026 as a new integrated framework to promote Compressed Biogas (CBG) production in India. Launched on October 1, 2026, the scheme has a total outlay of ₹23,731 crore for 10 years.',
+      'The objective is to utilize agricultural residue, cattle dung, and organic waste to produce CBG, organic fertilizer, and boost rural economic activities. Note: The scheme does not give direct cash of ₹2 crore to individual farmers, but provides capital assistance to eligible CBG projects.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के 6 मुख्य फायदे', points: [
+          '<strong>कैपिटल सहायता:</strong> पात्र CBG परियोजनाओं को ₹2 करोड़ प्रति TPD तक की सहायता।',
+          '<strong>CBG खरीद की गारंटी:</strong> City Gas Distribution (CGD) के माध्यम से बाजार उपलब्ध।',
+          '<strong>स्थिर मूल्य:</strong> ₹2,110 प्रति MMBTU का प्रशासित CBG मूल्य।',
+          '<strong>पाइपलाइन कनेक्टिविटी:</strong> नेटवर्क से जोड़ने के लिए 50% से 80% तक समर्थन।',
+          '<strong>MSME के लिए Credit Guarantee:</strong> डिफॉल्ट की स्थिति में 85% तक (अधिकतम ₹20-25 करोड़)।',
+          '<strong>फीडस्टॉक संग्रह:</strong> किसानों और ग्रामीण उद्यमियों के लिए कृषि कचरे से अतिरिक्त आय।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: '6 Key Interventions', points: [
+          '<strong>Capital Assistance:</strong> Up to ₹2 crore per TPD for eligible CBG projects.',
+          '<strong>Assured CBG Procurement:</strong> Market via City Gas Distribution (CGD) entities.',
+          '<strong>Stable Pricing:</strong> Administered CBG price of ₹2,110 per MMBTU.',
+          '<strong>Pipeline Connectivity:</strong> 50% to 80% support for network connection.',
+          '<strong>Credit Guarantee for MSME:</strong> Up to 85% coverage (Max ₹20-25 cr) in case of default.',
+          '<strong>Feedstock Aggregation:</strong> Extra income for farmers from agri-waste.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'निजी CBG डेवलपर, MSME, ग्रामीण उद्यमी, सहकारी संस्थाएं और CBG परियोजना विकसित करने वाली संस्थाएं पात्र हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'Private CBG developers, MSMEs, rural entrepreneurs, cooperative societies, and project development entities are eligible.'
+    ]
+  },
+  'sabki-yojana-sabka-vikas': {
+    ...reviewed,
+    summary: '2 अक्टूबर 2026 से विशेष ग्राम सभाओं के साथ "सबकी योजना, सबका विकास" (People’s Plan Campaign) शुरू। अपनी पंचायत की विकास योजनाओं (2027-28) में भागीदारी करें।',
+    benefit: 'ग्राम पंचायत विकास योजना (GPDP) में भागीदारी',
+    sourceUrl: 'https://panchayat.gov.in/', applicationUrl: 'https://egramswaraj.gov.in/',
+    documents: ['कोई विशिष्ट दस्तावेज़ आवश्यक नहीं', 'ग्राम सभा में भाग लेने के लिए केवल स्थानीय निवासी होना आवश्यक है'],
+    documentsEn: ['No specific documents required', 'Must be a local resident to participate in Gram Sabha'],
+    steps: ['2 अक्टूबर 2026 या उसके बाद होने वाली विशेष ग्राम सभा में भाग लें।', 'अपने गांव की समस्याओं और विकास प्राथमिकताओं पर सुझाव दें।', 'आपकी प्राथमिकताओं के आधार पर 2027-28 के लिए ग्राम पंचायत विकास योजना (GPDP) eGramSwaraj पर तैयार की जाएगी।'],
+    stepsEn: ['Participate in the special Gram Sabha meeting held on or after October 2, 2026.', 'Suggest local local priorities.', 'Based on the priorities, the Gram Panchayat Development Plan (GPDP) for 2027-28 will be uploaded.'],
+    rules: [],
+    sourceNotes: 'पंचायती राज मंत्रालय द्वारा जन योजना अभियान 2026-27 के तहत विशेष ग्राम सभाओं (2 अक्टूबर 2026 से शुरू) का आयोजन।',
+    detailedDescription: [
+      'देशभर में 2 अक्टूबर 2026 को विशेष ग्राम सभाओं के साथ जन योजना अभियान 2026-27 (People’s Plan Campaign) यानी "सबकी योजना, सबका विकास" की शुरुआत की गई है। इस अभियान का उद्देश्य ग्राम पंचायतों की विकास योजनाओं को स्थानीय जरूरतों और ग्रामीणों की प्राथमिकताओं के आधार पर तैयार करना है।',
+      '2 अक्टूबर 2026 को होने वाली इन बैठकों में ग्रामीण क्षेत्रों से जुड़े विकास कार्यों, सरकारी योजनाओं के क्रियान्वयन और स्थानीय जरूरतों पर चर्चा की जाएगी। इसके आधार पर वित्तीय वर्ष 2027-28 के लिए ग्राम पंचायत विकास योजनाएं (GPDP) तैयार की जाएंगी और eGramSwaraj पोर्टल पर अपलोड होंगी।'
+    ],
+    detailedDescriptionEn: [
+      'The People’s Plan Campaign 2026-27, also known as "Sabki Yojana, Sabka Vikas," has been launched across the country on October 2, 2026, with special Gram Sabhas.',
+      'Based on the feedback and local priorities discussed in these meetings, the Gram Panchayat Development Plans (GPDP) for the financial year 2027-28 will be prepared and uploaded to the eGramSwaraj portal.'
+    ],
+    benefitsList: [
+      {
+        heading: 'योजना के मुख्य लाभ', points: [
+          'गांव के विकास की योजना में सीधे ग्रामीणों की भागीदारी।',
+          'सड़क, पेयजल, स्वच्छता, स्वास्थ्य और शिक्षा जैसी स्थानीय प्राथमिकताओं का समाधान।',
+          'पंचायत की कार्यप्रणाली और योजनाओं के क्रियान्वयन में पारदर्शिता।'
+        ]
+      }
+    ],
+    benefitsListEn: [
+      {
+        heading: 'Key Benefits', points: [
+          'Direct participation of villagers in the village development plan.',
+          'Resolution of local priorities like roads, drinking water, sanitation, health, and education.',
+          'Transparency in the functioning of the panchayat and implementation of schemes.'
+        ]
+      }
+    ],
+    eligibilityDescription: [
+      'ग्राम पंचायत के सभी नागरिक जिनकी उम्र 18 वर्ष से अधिक है और जिनका नाम मतदाता सूची में है, वे ग्राम सभा में भाग ले सकते हैं।'
+    ],
+    eligibilityDescriptionEn: [
+      'All citizens of the Gram Panchayat above 18 years of age whose names are on the voter list can participate in the Gram Sabha.'
+    ]
+  },
   'pm-kisan': {
     ...reviewed,
     summary: 'भूमिधारक पात्र किसान परिवारों को सालाना ₹6,000 की आय सहायता, तीन बराबर किस्तों में सीधे बैंक खाते में।',
@@ -17,7 +252,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     sourceNotes: 'PM-KISAN के योजना विवरण और अपात्रता सूची की 14 सितंबर 2026 को समीक्षा। आयकरदाता, संस्थागत भूमिधारक और निर्दिष्ट सरकारी कर्मचारी/पेशेवर सहित अपात्रता श्रेणियां लागू हैं। परिवार में पति, पत्नी और नाबालिग बच्चे शामिल हैं।',
     detailedDescription: [
       'प्रधानमंत्री किसान सम्मान निधि (PM-KISAN) भारत सरकार की एक केंद्रीय क्षेत्र की योजना है जो सभी भूमिधारक किसानों के परिवारों को आय सहायता प्रदान करती है।',
-      'योजना के तहत ₹6,000 प्रति वर्ष की राशि ₹2,000 की तीन समान किस्तों में सीधे लाभार्थियों के बैंक खातों में हस्तांतरित की जाती है।'
+      'योजना के तहत ₹6,000 प्रति वर्ष की राशि ₹2,000 की तीन समान किस्तों में सीधे लाभार्थियों के बैंक खातों में हस्तांतरित की जाती है।',
+      '<strong>ताज़ा समाचार (News):</strong> 24वीं किस्त जल्द जारी होने वाली है। किन गलतियों से आपका पैसा अटक सकता है? <a href="/samachar/pm-kisan-24th-installment-status-check" style="color:#2563eb;text-decoration:underline;font-weight:600;">पूरी खबर यहाँ पढ़ें</a>'
     ],
     detailedDescriptionEn: [
       'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a Central Sector scheme by the Government of India that provides income support to all landholding farmer families.',
@@ -119,7 +355,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     sourceNotes: 'आधिकारिक पोर्टल पर मासिक लाभ ₹1,500 दर्ज है। आवेदन वर्ष की 1 जनवरी को आयु 21 वर्ष पूरी और 60 से कम होना आवश्यक है। इस तारीख-आधारित शर्त का स्वचालित मिलान नहीं किया गया है। आय, संपत्ति और अन्य अपात्रता शर्तें भी लागू हैं। नए आवेदन खुले होने की पुष्टि स्थानीय कार्यालय से करें।',
     detailedDescription: [
       'मध्य प्रदेश सरकार के महिला एवं बाल विकास विभाग द्वारा "मुख्यमंत्री लाड़ली बहना योजना" संचालित की जा रही है। इसका मुख्य उद्देश्य महिलाओं को आर्थिक रूप से स्वतंत्र बनाना और परिवार के निर्णय लेने में उनकी भूमिका को मजबूत करना है।',
-      'वर्तमान में इस योजना के तहत पात्र महिलाओं को ₹1,500 प्रति माह उनके आधार-लिंक बैंक खाते में सीधे भेजे जाते हैं।'
+      'वर्तमान में इस योजना के तहत पात्र महिलाओं को ₹1,500 प्रति माह उनके आधार-लिंक बैंक खाते में सीधे भेजे जाते हैं।',
+      '<strong>ताज़ा अपडेट:</strong> 41वीं किस्त 10 से 12 अक्टूबर के बीच आने की संभावना है। अपना स्टेटस कैसे चेक करें? <a href="/samachar/ladli-behna-41st-installment-date-status" style="color:#2563eb;text-decoration:underline;font-weight:600;">पूरी खबर यहाँ पढ़ें</a>'
     ],
     detailedDescriptionEn: [
       '"Mukhyamantri Ladli Behna Yojana" is operated by the Women and Child Development Department of the Madhya Pradesh Government. Its main objective is to make women economically independent and strengthen their role in family decision-making.',
@@ -242,7 +479,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     faqs: [
       { question: 'क्या इस योजना में कोई नकद राशि मिलती है?', answer: 'नहीं, यह एक कैशलेस स्वास्थ्य बीमा योजना है। इसमें इलाज का खर्च सीधे अस्पताल को चुकाया जाता है।' },
       { question: 'कौन से अस्पताल योजना में शामिल हैं?', answer: 'सरकारी और सूचीबद्ध निजी अस्पताल। आप NHA पोर्टल पर अस्पतालों की सूची देख सकते हैं।' },
-      { question: 'क्या 70 वर्ष से अधिक आयु वालों के लिए कोई आय सीमा है?', answer: 'नहीं, 70 वर्ष और उससे अधिक आयु के सभी वरिष्ठ नागरिक इस योजना के लिए पात्र हैं, चाहे उनकी आय कुछ भी हो।' }
+      { question: 'क्या 70 वर्ष से अधिक आयु वालों के लिए कोई आय सीमा है?', answer: 'नहीं, 70 वर्ष और उससे अधिक आयु के सभी वरिष्ठ नागरिक इस योजना के लिए पात्र हैं, चाहे उनकी आय कुछ भी हो।' },
+      { question: 'आयुष्मान वय वंदना कार्ड कैसे बनवाएं (Ayushman Vay Vandana Card Apply)?', answer: '70 वर्ष या उससे अधिक आयु के वरिष्ठ नागरिक अपना कार्ड ऑनलाइन या ऑफलाइन बनवा सकते हैं। ऑनलाइन के लिए: आधिकारिक वेबसाइट (beneficiary.nha.gov.in) या Ayushman App पर जाएं, मोबाइल नंबर से लॉगिन करें, आधार से eKYC पूरा करें और कार्ड डाउनलोड करें। ऑफलाइन के लिए: आप किसी भी सूचीबद्ध अस्पताल या CSC केंद्र में जाकर सहायता ले सकते हैं।' }
     ]
   },
   'pm-awas-gramin': {
@@ -291,7 +529,8 @@ export const officialContent: Record<string, Partial<Scheme>> = {
     faqs: [
       { question: 'क्या मैं PMAY-G के लिए सीधे ऑनलाइन आवेदन कर सकता हूँ?', answer: 'नहीं, सीधा आवेदन संभव नहीं है। लाभार्थियों का चयन सरकारी सर्वे (आवास+) की सूची के आधार पर होता है।' },
       { question: 'घर बनाने का पैसा कैसे मिलेगा?', answer: 'पैसा आपके बैंक खाते में 3-4 किस्तों में भेजा जाएगा। हर किस्त निर्माण के एक स्तर (जैसे प्लिंथ, लिंटेल, छत) के पूरा होने पर मिलती है।' },
-      { question: 'शौचालय के लिए पैसा अलग से मिलेगा?', answer: 'हाँ, घर की सहायता राशि के अलावा, शौचालय बनाने के लिए SBM-G के तहत ₹12,000 दिए जाते हैं।' }
+      { question: 'शौचालय के लिए पैसा अलग से मिलेगा?', answer: 'हाँ, घर की सहायता राशि के अलावा, शौचालय बनाने के लिए SBM-G के तहत ₹12,000 दिए जाते हैं।' },
+      { question: 'pmayg.nic.in beneficiary list check / पीएम आवास ग्रामीण लिस्ट (मध्य प्रदेश) कैसे देखें?', answer: 'आधिकारिक वेबसाइट (pmayg.nic.in) पर जाएं। मेनू में "Awaassoft" के अंदर "Report" पर क्लिक करें। "Social Audit Reports" सेक्शन में "Beneficiary details for verification" चुनें। अब अपना राज्य (जैसे मध्य प्रदेश), जिला, ब्लॉक और ग्राम पंचायत चुनकर अपनी गांव की पूरी सूची देख सकते हैं। अगर आपके पास रजिस्ट्रेशन नंबर है, तो आप सीधे "Stakeholders" > "IAY/PMAYG Beneficiary" में जाकर भी स्टेटस चेक कर सकते हैं।' }
     ]
   },
   'social-pension': {

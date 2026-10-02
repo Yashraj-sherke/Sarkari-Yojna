@@ -637,6 +637,27 @@ h3 {
   font-size: 1.2rem;
 }
 
+.new-scheme-badge {
+  display: inline-block;
+  margin-inline-start: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #fff1d6;
+  color: #9a3412;
+  font-size: 0.65rem;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  white-space: nowrap;
+  animation: new-scheme-blink 1.8s ease-in-out infinite;
+}
+
+@keyframes new-scheme-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
 .sarkari-col-list {
   list-style-type: disc;
   padding: 18px 18px 18px 38px;
@@ -4859,6 +4880,13 @@ h3 {
   gap: 8px;
 }
 
+.scheme-nav-heading { font-size: 1.05rem; font-weight: 600; color: #4a5568; margin: 0 14px 8px; }
+.scheme-content-toc { border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 28px; }
+.scheme-content-toc ol { margin-bottom: 0; }
+.scheme-rich-article h2 { margin-top: 32px; margin-bottom: 12px; }
+.scheme-rich-article h3 { margin-top: 24px; margin-bottom: 10px; }
+.scheme-rich-article > :first-child { margin-top: 0; }
+
 .nav-link {
   padding: 10px 14px;
   color: #4a5568;
@@ -5159,6 +5187,9 @@ h3 {
   color: #1a2921 !important;
   font-weight: 600 !important;
 }
+.mobile-toc-toggle {
+  display: none;
+}
 
 .filter-select {
   color: #1a2921 !important;
@@ -5175,7 +5206,35 @@ h3 {
   }
 
   .detail-left-sidebar {
-    display: none !important;
+    display: block !important;
+    position: relative !important;
+    top: 0 !important;
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+  .mobile-toc-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+  }
+  .detail-left-nav {
+    display: none;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    margin-top: -4px;
+    padding-top: 10px;
+  }
+  .detail-left-nav.open {
+    display: flex;
   }
 
   .hide-on-mobile {
@@ -5538,6 +5597,7 @@ h3 {
 
 /* Samachar (News) Responsive Styles */
 .samachar-main {
+  grid-column: 1 / -1;
   padding: 2rem;
 }
 @media (max-width: 768px) {

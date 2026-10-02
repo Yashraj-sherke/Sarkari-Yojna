@@ -1,6 +1,7 @@
 import {DEFAULT_OG_IMAGE, SITE_URL} from '@/lib/config';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
+import Image from 'next/image';
 import {guides} from '@/lib/guides';
 import {PageTitle} from '@/components/site';
 import {allSchemes} from '@/lib/server';
@@ -31,7 +32,19 @@ export default async function Page({params}:{params:Promise<{slug:string}>}) {
       <Link href="/">होम</Link><span> / </span><Link href="/guide">सभी गाइड</Link><span> / </span><span aria-current="page">{guide.title}</span>
     </nav>
     <PageTitle eyebrow={guide.category} title={guide.title} description={guide.description}/>
-    {guide.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+    {guide.imageUrl && (
+      <div className="guide-cover" style={{position: 'relative', width: '100%', height: '400px', marginBottom: '30px', borderRadius: '12px', overflow: 'hidden'}}>
+        <Image src={guide.imageUrl} alt={guide.title} fill style={{objectFit: 'cover'}} />
+      </div>
+    )}
+    {guide.paragraphs.map((paragraph, index) => {
+      const isBlock = /^<(h[1-6]|ul|ol|div|blockquote)/i.test(paragraph.trim());
+      return isBlock ? (
+        <div key={index} dangerouslySetInnerHTML={{ __html: paragraph }} style={{marginBottom: '1.5em'}} />
+      ) : (
+        <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} style={{marginBottom: '1.5em'}} />
+      );
+    })}
     <p className="small">यह सामान्य जानकारी है। यह किसी राज्य की पूर्ण या वर्तमान आवेदन प्रक्रिया होने का दावा नहीं करती।</p>
     {relatedSchemes.length > 0 && <section aria-labelledby="guide-schemes">
       <h2 id="guide-schemes">संबंधित योजना लेख</h2>
