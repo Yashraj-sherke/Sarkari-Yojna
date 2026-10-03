@@ -14,6 +14,10 @@ export const samacharSchema = z.object({
 
 export type Samachar = z.infer<typeof samacharSchema>;
 
+export function getSamacharRelatedSchemeSlugs(item: Pick<Samachar, 'body'>) {
+  return [...new Set([...item.body.join('\n').matchAll(/href=['"]\/yojna\/([^'"/?#]+)['"]/gi)].map(match => match[1]))];
+}
+
 export async function getAllSamachar(): Promise<Samachar[]> {
   let dbNews: Samachar[] = [];
   try {

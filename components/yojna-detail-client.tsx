@@ -15,6 +15,7 @@ import {WhatsAppFloatingCTA, WhatsAppShareBanner} from '@/components/whatsapp-sh
 import { SITE_URL, AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_LINKEDIN_URL } from '@/lib/config';
 import { SchemeQuickFacts } from '@/components/scheme/quick-facts';
 import { SchemeQuickAnswer } from '@/components/scheme/quick-answer';
+import { SchemeClusterLinks } from '@/components/scheme/cluster-links';
 import { buildSchemeNavigation } from '@/lib/scheme-navigation';
 import { gobardhanFaqSources } from '@/lib/scheme-content/gobardhan-faqs';
 
@@ -48,6 +49,7 @@ export function YojnaDetailClient({
   processInfo,
   faqs,
   relatedSchemes,
+  relatedUpdates,
   initialCount
 }: {
   s: Scheme;
@@ -56,6 +58,7 @@ export function YojnaDetailClient({
   processInfo: { mode: string; formUrl?: string | null; formName?: string | null };
   faqs: { q: string; a: string }[];
   relatedSchemes: Scheme[];
+  relatedUpdates: { slug: string; title: string }[];
   initialCount: number;
 }) {
   const {lang} = useLanguage();
@@ -172,10 +175,18 @@ export function YojnaDetailClient({
         {/* 2. Main Content Body */}
         <div className="detail-body" lang={pageLang}>
           <OfficialImage slug={s.slug} scheme={s} priority={true} sizes="(max-width: 880px) 100vw, (max-width: 1200px) 65vw, 760px" />
+          <SchemeQuickFacts s={s} pageLang={pageLang} />
           {navigation.customized && <nav className="scheme-content-toc" aria-labelledby="scheme-toc-heading">
             <h2 id="scheme-toc-heading" className="flat-section-heading">इस लेख में क्या मिलेगा</h2>
             <ol className="flat-list">{navigation.toc.map(item => <li key={item.id}><a className="inline-link" href={`#${item.id}`}>{item.label}</a></li>)}</ol>
           </nav>}
+          <SchemeClusterLinks
+            navigation={navigation.sidebar}
+            relatedSchemes={relatedSchemes}
+            relatedGuides={relatedGuides}
+            relatedUpdates={relatedUpdates}
+            pageLang={pageLang}
+          />
 
           {/* 1. विवरण */}
           <section className="flat-section" id="vivaran">
@@ -190,22 +201,6 @@ export function YojnaDetailClient({
             )}
             {s.practicalGuidance?.length ? <div style={{marginTop:24}}><h3>इस जानकारी को अपने काम में कैसे लें</h3>{s.practicalGuidance.map((p,i) => <p key={i}>{p}</p>)}</div> : null}
 
-            {relatedSchemes.length > 0 && (
-              <div style={{marginTop: 24, padding: 16, background: '#f0f4f8', borderRadius: 8, borderLeft: '4px solid #3182ce'}}>
-                <h3 style={{fontSize: '1.05rem', fontWeight: 700, marginBottom: 12, color: '#2b6cb0'}}>
-                  {pageLang === 'en' ? 'Related Schemes' : 'यह भी पढ़ें (संबंधित योजनाएं):'}
-                </h3>
-                <ul className="flat-list" style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: 0 }}>
-                  {relatedSchemes.map(rs => (
-                    <li key={rs.slug} style={{ marginBottom: '6px' }}>
-                      <Link href={'/yojna/' + rs.slug} style={{ color: '#2b6cb0', textDecoration: 'underline', fontWeight: 600 }}>
-                        {pageLang === 'en' ? rs.english : rs.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </section>
 
           {/* 2. लाभ */}

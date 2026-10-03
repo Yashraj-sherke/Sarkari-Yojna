@@ -6,6 +6,7 @@ import {Directory} from '@/components/directory';
 import { SchemeIndex } from '@/components/scheme-index';
 import { isIndexableScheme } from '@/lib/seo';
 import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/config';
+import { DiscoveryIndex } from '@/components/discovery-index';
 
 export const revalidate = 3600;
 
@@ -65,6 +66,7 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
   return (
     <>
       <Directory schemes={schemes.map(summarizeScheme)} initialCategory={id} initialPage={page} paginationBasePath={`/category/${id}`}/>
+      <DiscoveryIndex schemes={schemes} />
       <SchemeIndex schemes={schemes.filter(s => s.category === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(collectionSchema).replace(/</g,'\\u003c')}}/>

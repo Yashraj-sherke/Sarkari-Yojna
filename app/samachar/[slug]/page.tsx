@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSamachar } from '@/lib/samachar';
+import { getSamachar, getSamacharRelatedSchemeSlugs } from '@/lib/samachar';
+import { allSchemes } from '@/lib/server';
+import { isIndexableScheme } from '@/lib/seo';
 import { AdSensePlaceholder } from '@/components/ads';
 import { SITE_URL } from '@/lib/config';
 
@@ -15,7 +17,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
     title,
     description: s.summary,
     alternates: { canonical: `/samachar/${slug}` },
-    robots: { index: false, follow: true },
+    robots: { follow: true },
     openGraph: { title: s.title, description: s.summary, url: `/samachar/${slug}`, type: 'article', locale: 'hi_IN' }
   };
 }
@@ -25,6 +27,8 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
   const s = await getSamachar(slug);
   
   if (!s) return notFound();
+  const relatedSlugs = getSamacharRelatedSchemeSlugs(s);
+  const relatedSchemes = (await allSchemes()).filter(scheme => relatedSlugs.includes(scheme.slug) && isIndexableScheme(scheme));
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -85,6 +89,13 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
           <div style={{marginTop: 40}}>
             <AdSensePlaceholder client="ca-pub-xxxxxxxx" slot="xxxxxxxxx" />
           </div>
+
+          {relatedSchemes.length > 0 && <section className="scheme-cluster-links" aria-labelledby="update-schemes-heading">
+            <h2 id="update-schemes-heading">इस अपडेट से जुड़ी योजनाएं</h2>
+            <ul>
+              {relatedSchemes.map(scheme => <li key={scheme.slug}><Link href={`/yojna/${scheme.slug}`}>{scheme.title}</Link></li>)}
+            </ul>
+          </section>}
         </article>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb).replace(/</g,'\\u003c')}} />
       </main>

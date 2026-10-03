@@ -6,6 +6,7 @@ import { officialImages } from '@/lib/scheme-images';
 
 import {YojnaDetailClient} from '@/components/yojna-detail-client';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
+import {getAllSamachar, getSamacharRelatedSchemeSlugs} from '@/lib/samachar';
 import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL, AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_LINKEDIN_URL} from '@/lib/config';
 export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
 
@@ -51,6 +52,10 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     title: rs.title,
     english: rs.english,
   }));
+  const relatedUpdates = (await getAllSamachar())
+    .filter(update => getSamacharRelatedSchemeSlugs(update).includes(s.slug))
+    .slice(0, 3)
+    .map(update => ({slug: update.slug, title: update.title}));
   const category = categories.find(c=>c.id===s.category);
 
   const breadcrumbItems=[
@@ -123,6 +128,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       processInfo={processInfo} 
       faqs={faqs} 
       relatedSchemes={relatedSchemesMapped as any} 
+      relatedUpdates={relatedUpdates}
       initialCount={c?.n??0} 
     />
 

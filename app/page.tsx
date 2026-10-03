@@ -5,6 +5,7 @@ import { Directory } from '@/components/directory';
 import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_ALTERNATE_NAMES, SITE_URL, SOCIAL_X_URL, SOCIAL_INSTAGRAM_URL, SOCIAL_FACEBOOK_URL, SOCIAL_YOUTUBE_URL } from '@/lib/config';
 import { isIndexableScheme } from '@/lib/seo';
 import Link from 'next/link';
+import { DiscoveryIndex } from '@/components/discovery-index';
 
 const title = 'Sarkari Yojana 2026 — सभी सरकारी योजनाओं की सूची (All Government Schemes)';
 const description = 'Sarkari Yojana 2026 की सत्यापित सूची, पात्रता, दस्तावेज़, सरकारी योजना अपडेट और ऑनलाइन आवेदन की आधिकारिक जानकारी सरल हिन्दी में देखें।';
@@ -69,6 +70,7 @@ export default async function Home() {
   return (
     <>
       <Directory schemes={schemes.map(summarizeScheme)} centralSchemes={centralSchemes.map(summarizeScheme)} latestNews={latestNews} initialState="all" isHomePage={true} />
+      <DiscoveryIndex schemes={schemes} />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationSchema).replace(/</g,'\\u003c')}}/>

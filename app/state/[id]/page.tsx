@@ -5,6 +5,8 @@ import {Directory} from '@/components/directory';
 import { SchemeIndex } from '@/components/scheme-index';
 import { isIndexableScheme } from '@/lib/seo';
 import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/config';
+import { DiscoveryIndex } from '@/components/discovery-index';
+import { StateOpportunity } from '@/components/state-opportunity';
 
 export const revalidate = 3600;
 
@@ -77,6 +79,8 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
         initialPage={page}
         paginationBasePath={`/state/${id}`}
       />
+      <StateOpportunity stateName={stateName} schemes={reviewedSchemes} />
+      <DiscoveryIndex schemes={schemes} />
       <SchemeIndex schemes={schemes.filter(s => s.state === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(collectionSchema).replace(/</g,'\\u003c')}}/>

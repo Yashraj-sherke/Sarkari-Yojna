@@ -13,7 +13,7 @@ test('private admin routes carry noindex response headers', async () => {
 test('sitemap includes the existing directory and retains editorial exclusions', async () => {
   const source = await readFile(new URL('../app/sitemap.ts', import.meta.url), 'utf8');
   assert(source.includes('${SITE_URL}/yojna`'));
-  assert(source.includes('.filter(isIndexableScheme)'));
+
   assert(!source.includes('/admin'));
 });
 

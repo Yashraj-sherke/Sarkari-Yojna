@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { isIndexableScheme } from '@/lib/seo';
 import { categories } from '@/lib/domain';
 import { guides } from '@/lib/guides';
+import { DiscoveryIndex } from '@/components/discovery-index';
 
 const title = 'Sarkari Yojana 2026 List — ऑनलाइन आवेदन और पात्रता';
 const description = 'Sarkari Yojana 2026 की समीक्षा की गई सूची देखें। पात्रता, दस्तावेज़, लाभ, सरकारी पोर्टल और ऑनलाइन आवेदन की प्रक्रिया सरल हिन्दी में समझें।';
@@ -31,6 +32,7 @@ export default async function YojnaDirectory({searchParams}: {searchParams: Prom
   return (
     <>
       <Directory schemes={schemes.map(summarizeScheme)} initialCategory="all" initialState="all" initialPage={page} paginationBasePath="/yojna" isHomePage={false} />
+      <DiscoveryIndex schemes={schemes} />
       <section className="page-wrap panel" aria-labelledby="reviewed-directory">
         <h2 id="reviewed-directory">सरकारी योजना सूची 2026</h2>
         <p>

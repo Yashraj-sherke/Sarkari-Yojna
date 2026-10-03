@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { db } from '@/lib/server';
 import { schemeSchema } from '@/lib/domain';
 import { enrichSchemeArticle } from '@/lib/scheme-articles';
-import { schemeHealth } from '@/lib/seo-health';
+import { schemeHealth, schemeInventory } from '@/lib/seo-health';
 import crawl from '@/artifacts/seo/live/latest.json';
 import performance from '@/artifacts/seo/search-console-baseline.json';
 
@@ -11,6 +11,7 @@ export const metadata = { title: 'SEO Health', robots: { index: false, follow: f
 
 export default async function SeoHealthPage() {
   const records: ReturnType<typeof schemeHealth>[] = [];
+  const inventory: ReturnType<typeof schemeInventory>[] = [];
   let databaseError = '';
   const invalidRecords: string[] = [];
   try {
@@ -21,7 +22,9 @@ export default async function SeoHealthPage() {
       for (const row of rows) {
         try {
           const scheme = schemeSchema.parse(typeof row.data === 'string' ? JSON.parse(row.data) : row.data);
-          records.push(schemeHealth(enrichSchemeArticle(scheme)));
+            const enriched = enrichSchemeArticle(scheme);
+            records.push(schemeHealth(enriched));
+            inventory.push(schemeInventory(enriched));
         } catch { invalidRecords.push(String(row.slug)); }
       }
     }
@@ -72,6 +75,27 @@ export default async function SeoHealthPage() {
         <ul className="list-disc pl-5">{record.issues.map(issue => <li key={issue}>{issue}</li>)}</ul>
         {!record.issues.length && <p>No missing-field observations. Human factual review remains required.</p>}
       </li>)}</ul>
+    </section>
+    <section className="rounded-lg border bg-white p-5">
+      <h2 className="text-xl font-semibold">Internal scheme inventory</h2>
+      <p className="text-sm text-slate-600">Classifications are operational triage labels, not rankings or public scores. Search demand, duplicate risk and traffic metrics are Data unavailable until verified evidence is imported.</p>
+      <div className="mt-4 overflow-x-auto">
+        <table className="w-full text-left text-sm">
+          <caption className="text-left font-semibold">Coverage and publication inventory</caption>
+          <thead><tr className="border-b"><th className="p-2">Scheme</th><th className="p-2">Category / state</th><th className="p-2">Status</th><th className="p-2">Indexable</th><th className="p-2">Priority</th><th className="p-2">Last review/update</th><th className="p-2">Primary intent</th><th className="p-2">Missing intents</th><th className="p-2">Class</th></tr></thead>
+          <tbody>{inventory.map(item => <tr key={item.slug} className="border-t align-top">
+            <td className="p-2"><Link href={`/admin/schemes/edit/${item.slug}`} className="text-blue-700 underline">{item.title}</Link><div className="text-xs text-slate-500">{item.slug}</div></td>
+            <td className="p-2">{item.category}<br />{item.state}</td>
+            <td className="p-2">{item.status}</td>
+            <td className="p-2">{item.indexable ? 'Yes' : 'No'}<br /><span className="text-xs text-slate-500">Source: {item.officialSource ? 'Yes' : 'No'}</span></td>
+            <td className="p-2">{item.priority ? 'High' : 'Normal'}</td>
+            <td className="p-2">{item.latestKnownUpdate ? new Date(item.latestKnownUpdate).toLocaleDateString('en-IN') : 'Data unavailable'}</td>
+            <td className="p-2">{item.primaryIntent}<br /><span className="text-xs text-slate-500">Evidence: {item.searchEvidence}</span></td>
+            <td className="p-2">{item.missingIntents.length ? item.missingIntents.join(', ') : 'None recorded'}</td>
+            <td className="p-2"><strong>{item.classification}</strong><br /><span className="text-xs text-slate-500">{item.classificationNote}</span></td>
+          </tr>)}</tbody>
+        </table>
+      </div>
     </section>
     <section className="rounded-lg border bg-amber-50 p-5">
       <h2 className="text-xl font-semibold">Morning drafts: evidence before publishing</h2>
