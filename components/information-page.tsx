@@ -6,6 +6,7 @@ import {SITE_NAME_EN, SITE_URL} from '@/lib/config';
 export function InformationPage({page}: {page: InformationPageKey}) {
   const content = informationPages[page];
   const structured = {'@context':'https://schema.org','@type':page === 'about' ? 'AboutPage' : page === 'contact' ? 'ContactPage' : 'WebPage',name:content.title,description:content.description,url:`${SITE_URL}/${page}`,inLanguage:'hi-IN',dateModified:INFORMATION_UPDATED,isPartOf:{'@type':'WebSite','@id':`${SITE_URL}/#website`,name:SITE_NAME_EN,url:SITE_URL}};
+  const breadcrumb = {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'मुख्य पृष्ठ',item:`${SITE_URL}/`},{'@type':'ListItem',position:2,name:content.title,item:`${SITE_URL}/${page}`}]};
   return <main id="main" className="page-wrap prose">
     <nav aria-label="ब्रेडक्रंब"><Link href="/">मुख्य पृष्ठ</Link> / <span>{content.title}</span></nav>
     <header className="page-heading" style={{marginTop:24}}><p className="eyebrow green-text">{SITE_NAME_EN} · जानकारी और नीतियाँ</p><h1>{content.title}</h1><p>{content.intro}</p><small>अंतिम संशोधन: <time dateTime={INFORMATION_UPDATED}>23 सितंबर 2026</time></small></header>
@@ -17,5 +18,6 @@ export function InformationPage({page}: {page: InformationPageKey}) {
       <p><Link href="/yojna">समीक्षित सरकारी योजना लेख</Link> में पात्रता, दस्तावेज़ और सरकारी स्रोत पढ़ें। आवेदन की तैयारी के लिए <Link href="/guide">सरल हिन्दी में दस्तावेज़ और सुरक्षा गाइड</Link> देखें।</p>
     </section>}
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structured).replace(/</g,'\\u003c')}}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb).replace(/</g,'\\u003c')}}/>
   </main>;
 }

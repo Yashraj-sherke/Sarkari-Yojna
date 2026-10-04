@@ -58,6 +58,8 @@ export const schemeSchema = z.object({
   trackingGuidance: z.string().optional(),
   imageUrl: z.string().optional(),
   seoDescription: z.string().max(300).optional(),
+  relatedSchemeSlugs: z.array(z.string()).optional(),
+  targetAudience: z.array(z.string()).optional(),
   // English Translation Fields
   summaryEn: z.string().optional(),
   benefitEn: z.string().optional(),

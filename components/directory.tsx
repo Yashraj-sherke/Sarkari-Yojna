@@ -49,7 +49,7 @@ function RecentUpdates({ news, lang }: { news: any[]; lang: string }) {
 }
 
 
-function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', initialState = 'all', initialPage = 1, paginationBasePath = '/yojna', isHomePage = false, latestNews }: { schemes: SchemeSummary[]; centralSchemes?: SchemeSummary[]; initialCategory?: string; initialState?: string; initialPage?: number; paginationBasePath?: string; isHomePage?: boolean; latestNews?: any[] }) {
+function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', initialState = 'all', initialPage = 1, paginationBasePath = '/yojna', isHomePage = false, latestNews, pillarContent }: { schemes: SchemeSummary[]; centralSchemes?: SchemeSummary[]; initialCategory?: string; initialState?: string; initialPage?: number; paginationBasePath?: string; isHomePage?: boolean; latestNews?: any[]; pillarContent?: React.ReactNode }) {
   const { t, lang } = useLanguage();
 
 
@@ -180,19 +180,23 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
           </section>
         </>
       ) : (
-        <div className="state-page-header" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '24px', marginBottom: '24px' }}>
-          <h1 style={{ fontSize: '1.8rem', fontWeight: '700', color: '#1a202c', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            {initialState && stateLogos[initialState] && (
-              <img src={stateLogos[initialState]} alt={`${stateDisplayName} State Emblem`} style={{ height: '64px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', borderRadius: '4px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }} />
-            )}
-            {routeTitle}
-          </h1>
-          <p style={{ color: '#475569', fontSize: '1.05rem', margin: 0 }}>
-            {lang === 'hi' 
-              ? `${stateDisplayName || (routeCategory ? routeCategory.name : '')} सरकार की नवीनतम सामाजिक कल्याण योजनाओं की जानकारी और अपडेट।` 
-              : `Latest social welfare schemes news, information and updates for ${stateDisplayName || (routeCategory ? routeCategory.name : '')}.`}
-          </p>
-        </div>
+        <>
+          <div className="state-page-header" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '24px', marginBottom: '24px' }}>
+            <h1 style={{ fontSize: '1.8rem', fontWeight: '700', color: '#1a202c', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+              {initialState && initialState !== 'all' && stateLogos[initialState] && (
+                <img src={stateLogos[initialState]} alt={`${stateDisplayName} State Emblem`} style={{ height: '64px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', borderRadius: '4px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }} />
+              )}
+              {routeTitle}
+            </h1>
+            <p style={{ color: '#475569', fontSize: '1.05rem', margin: 0 }}>
+              {lang === 'hi' 
+                ? `${stateDisplayName || (routeCategory ? routeCategory.name : '')} सरकार की नवीनतम सामाजिक कल्याण योजनाओं की जानकारी और अपडेट।` 
+                : `Latest social welfare schemes news, information and updates for ${stateDisplayName || (routeCategory ? routeCategory.name : '')}.`}
+            </p>
+          </div>
+          <RecentUpdates news={latestNews ?? []} lang={lang} />
+          {pillarContent}
+        </>
       )}
       {isFeatured && (
         <section className="sarkari-three-col-section">
@@ -343,7 +347,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
           )}
         </> : <Empty description={verified ? t.emptyVerifiedDesc : undefined} />}
 
-        {isFeatured && centralOnly.length > 0 && (
+        {((isFeatured && centralOnly.length > 0) || (centralSchemes && centralSchemes.length > 0)) && (
           <div style={{marginTop: '50px'}}>
             <div className="section-heading">
               <div>
@@ -352,7 +356,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
               </div>
             </div>
             <div className="sarkari-list-view">
-              {centralOnly.slice(0, isFeatured ? 5 : undefined).map((s, idx) => {
+              {(isFeatured ? centralOnly : (centralSchemes || [])).slice(0, 5).map((s, idx) => {
                 const cat = categories.find(c => c.id === s.category) || categories[0];
                 return (
                   <div key={s.slug} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -374,7 +378,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
               })}
             </div>
             
-            {isFeatured && (
+            {(isFeatured || (centralSchemes && centralSchemes.length > 0)) && (
               <div style={{ textAlign: 'center', marginTop: '20px' }}>
                 <Link href="/state/central" className="btn">{lang === 'hi' ? 'सभी केंद्र सरकार योजनाएं देखें' : 'View all Central Schemes'} <ArrowRight size={17}/></Link>
               </div>

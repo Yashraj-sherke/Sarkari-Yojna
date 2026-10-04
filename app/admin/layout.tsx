@@ -58,6 +58,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <NavLink href="/admin/schemes/draft" icon="✨" label="AI Draft Assistant" />
           <NavLink href="/admin/sources" icon="🔍" label="Verification Logs" />
           <NavLink href="/admin/seo" icon="📈" label="SEO Health" />
+          <NavLink href="/admin/quality" icon="🛡️" label="Quality Gate" />
 
           <div className="px-3 py-2 mt-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">System</div>
           <NavLink href="/admin/settings" icon="⚙️" label="Settings" />

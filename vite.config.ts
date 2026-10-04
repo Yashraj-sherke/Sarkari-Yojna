@@ -2,9 +2,9 @@ import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
+import { cloudflare } from "@cloudflare/vite-plugin";
 
-const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
-  "00000000-0000-4000-8000-000000000000";
+const SITE_CREATOR_PLACEHOLDER_DATABASE_ID = "00000000-0000-4000-8000-000000000000";
 
 const { d1, r2 } = hostingConfig;
 
@@ -65,50 +65,40 @@ function weakRefPolyfillPlugin(): import("vite").Plugin {
           return `if (typeof globalThis.WeakRef === 'undefined') { globalThis.WeakRef = class WeakRef { constructor(t) { this.t = t; } deref() { return this.t; } }; }\n` + code;
         }
       }
-    }
+    },
   };
 }
 
-export default defineConfig(async () => {
-  // Use Miniflare's local Request.cf placeholder unless fetching is requested.
-  process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
-  process.env.WRANGLER_SEND_METRICS ??= "false";
+// Set environment variables before config
+process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
+process.env.WRANGLER_SEND_METRICS ??= "false";
+process.env.WRANGLER_WRITE_LOGS ??= "false";
+process.env.WRANGLER_LOG_PATH ??= ".wrangler/logs";
+process.env.WRANGLER_REGISTRY_PATH ??= ".wrangler/dev-registry";
+process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
-  // Keep Wrangler and Miniflare state project-local. These are non-secret tool
-  // settings; application environment belongs in ignored `.env*` files.
-  process.env.WRANGLER_WRITE_LOGS ??= "false";
-  process.env.WRANGLER_LOG_PATH ??= ".wrangler/logs";
-  process.env.WRANGLER_REGISTRY_PATH ??= ".wrangler/dev-registry";
-  process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
-
-  // Wrangler snapshots its log path while the Cloudflare plugin is imported.
-  const { cloudflare } = await import("@cloudflare/vite-plugin");
-
-  return {
-    server: isCodexSeatbeltSandbox
-      ? { watch: { useFsEvents: false, usePolling: true } }
-      : undefined,
-    // Pre-bundle lucide-react as one chunk to avoid "Duplicated JavaScript" warnings
-    optimizeDeps: {
-      include: ['lucide-react'],
-    },
-    // Target modern browsers → eliminates "Legacy JavaScript" transforms
-    build: {
-      target: 'es2020',
-    },
-    plugins: [
-      weakRefPolyfillPlugin(),
-      patchVinextLinkPlugin(),
-      vinext(),
-      sites(),
-      cloudflare({
-        viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
-        inspectorPort: false,
-        config: {
-          ...localBindingConfig,
-          compatibility_date: "2024-09-23"
-        },
-      }),
-    ],
-  };
+export default defineConfig({
+  server: isCodexSeatbeltSandbox
+    ? { watch: { useFsEvents: false, usePolling: true } }
+    : undefined,
+  appType: 'custom',
+  // Pre-bundle lucide-react as one chunk to avoid "Duplicated JavaScript" warnings
+  optimizeDeps: { include: ['lucide-react'] },
+  // Target modern browsers → eliminates "Legacy JavaScript" transforms
+  build: { target: 'es2020' },
+  plugins: [
+    weakRefPolyfillPlugin(),
+    patchVinextLinkPlugin(),
+    vinext(),
+    sites(),
+    cloudflare({
+      viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
+      inspectorPort: false,
+      config: {
+        ...localBindingConfig,
+        compatibility_date: "2024-09-23"
+      }
+    })
+  ],
 });
+

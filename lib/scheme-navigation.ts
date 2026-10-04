@@ -27,6 +27,26 @@ const schemeTopics: Record<string, Topic[]> = {
     {key: 'faqs', coreId: 'faqs', label: 'अक्सर पूछे जाने वाले सवाल', sidebarLabel: 'FAQs'},
     {key: 'sources', coreId: 'sandarbh', label: 'आधिकारिक स्रोत और उपयोगी लिंक', sidebarLabel: 'आधिकारिक स्रोत'},
   ],
+  'rani-durgavati-shri-anna-protsahan-yojana': [
+    {key: 'about', coreId: 'vivaran', match: /रानी दुर्गावती श्रीअन्न.*क्या है/i, label: 'योजना क्या है?', sidebarLabel: 'योजना क्या है?'},
+    {key: 'highlights', match: /मुख्य जानकारी/i, label: 'मुख्य जानकारी', sidebarLabel: 'मुख्य जानकारी'},
+    {key: 'objective', match: /^रानी दुर्गावती श्रीअन्न योजना का उद्देश्य$/, label: 'योजना का उद्देश्य', sidebarLabel: 'उद्देश्य'},
+    {key: 'benefits', coreId: 'labh', match: /लाभ मिलता है/i, label: 'कितना लाभ मिलता है?', sidebarLabel: 'कितना लाभ मिलता है?'},
+    {key: 'prices', match: /उपार्जन मूल्य/i, label: 'उपार्जन मूल्य', sidebarLabel: 'उपार्जन मूल्य'},
+    {key: 'stats', match: /पंजीयन कराया/i, label: 'पंजीकरण आंकड़े', sidebarLabel: 'पंजीकरण आंकड़े'},
+    {key: 'reg_date_old', match: /2025-26.*पंजीयन कब/i, label: '2025-26 पंजीयन तारीख', sidebarLabel: '2025-26 पंजीयन'},
+    {key: 'reg_date_new', match: /2026-27.*पंजीयन कब/i, label: '2026-27 पंजीयन तारीख', sidebarLabel: '2026-27 पंजीयन'},
+    {key: 'districts', match: /जिले शामिल/i, label: 'शामिल जिले', sidebarLabel: 'शामिल जिले'},
+    {key: 'eligibility', coreId: 'patrata', match: /कौन पात्र है/i, label: 'कौन पात्र है?', sidebarLabel: 'पात्रता'},
+    {key: 'documents', coreId: 'dastavej', match: /जरूरी दस्तावेज/i, label: 'जरूरी दस्तावेज', sidebarLabel: 'जरूरी दस्तावेज'},
+    {key: 'application', coreId: 'aavedan', match: /आवेदन कैसे/i, label: 'आवेदन कैसे करें?', sidebarLabel: 'आवेदन प्रक्रिया'},
+    {key: 'bonus_vs_hectare', match: /बोनस और ₹3,900/i, label: 'बोनस vs ₹3,900 सहायता', sidebarLabel: 'बोनस vs सहायता'},
+    {key: 'what_is_shri_anna', match: /श्रीअन्न क्या है/i, label: 'श्रीअन्न क्या है?', sidebarLabel: 'श्रीअन्न क्या है?'},
+    {key: 'status_2026', match: /2026 में.*स्थिति/i, label: '2026 में योजना की स्थिति', sidebarLabel: '2026 में स्थिति'},
+    {key: 'important', match: /महत्वपूर्ण सूचना/i, label: 'महत्वपूर्ण सूचना', sidebarLabel: 'महत्वपूर्ण सूचना'},
+    {key: 'sources', coreId: 'sandarbh', match: /आधिकारिक स्रोत/i, label: 'आधिकारिक स्रोत', sidebarLabel: 'आधिकारिक स्रोत'},
+    {key: 'conclusion', match: /^निष्कर्ष$/, label: 'निष्कर्ष', sidebarLabel: 'निष्कर्ष'},
+  ],
 };
 
 export function buildSchemeNavigation(slug: string, description: string[], core: SchemeNavigationItem[], language: 'hi' | 'en' = 'hi') {

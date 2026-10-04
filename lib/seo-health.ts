@@ -1,5 +1,6 @@
 import { officialUrl, type Scheme } from './domain';
 import { contentDate, isIndexableScheme, schemeSearchPresentation } from './seo';
+import { officialImages } from './scheme-images';
 
 export function schemeHealth(scheme: Scheme) {
   const issues: string[] = [];
@@ -67,5 +68,80 @@ export function schemeInventory(scheme: Scheme) {
         : classification === 'A'
           ? 'Priority pillar candidate'
           : 'Lower-priority existing record',
+  };
+}
+
+export function schemeContentBrief(scheme: Scheme) {
+  const inventory = schemeInventory(scheme);
+  const requiredSections = ['Direct summary', 'Quick facts', 'Benefits', 'Eligibility', 'Documents', 'Application', 'FAQs', 'Official sources'];
+  const missingEvidence = inventory.missingIntents.map(intent => `${intent} evidence or section`);
+  const internalLinks = [
+    `/yojna/${scheme.slug}`,
+    `/category/${scheme.category}`,
+    ...(scheme.state !== 'central' ? [`/state/${scheme.state}`] : []),
+  ];
+
+  return {
+    slug: scheme.slug,
+    title: scheme.title,
+    pageType: 'Scheme pillar',
+    primaryIntent: inventory.primaryIntent,
+    primaryQuery: `Official scheme name: ${scheme.title}`,
+    secondaryQueryGroup: inventory.missingIntents.length ? inventory.missingIntents : ['Benefits', 'Latest verified information'],
+    userProblem: `A citizen needs verified information about ${scheme.title} before deciding what to do next.`,
+    requiredAnswer: 'What the scheme is, who may qualify, what is needed, how to apply, and where to verify current rules.',
+    requiredSections,
+    missingEvidence,
+    officialSources: [...new Set([...(scheme.sourceUrl ? [scheme.sourceUrl] : []), ...(scheme.references ?? []).filter(reference => officialUrl(reference.url)).map(reference => reference.url)])],
+    relatedPages: internalLinks,
+    internalLinks,
+    updateRequirement: scheme.nextReviewAt ? 'Review by scheduled date' : 'Review date required',
+    uniqueValue: missingEvidence.length ? 'Answer verified missing sections without adding unsupported claims' : 'Maintain source-backed summary and current review date',
+    publishingPriority: scheme.priority || missingEvidence.length > 0 ? 'P1' : 'P2',
+    publishable: inventory.indexable && missingEvidence.length === 0,
+  };
+}
+
+export function schemeOnPageAudit(scheme: Scheme) {
+  const presentation = schemeSearchPresentation(scheme);
+  const image = officialImages[scheme.slug];
+  const checks = {
+    title: presentation.title.length >= 10 && presentation.title.length <= 60,
+    description: presentation.description.length >= 70 && presentation.description.length <= 170,
+    canonical: Boolean(scheme.slug),
+    h1: Boolean(scheme.title.trim()),
+    heroImage: Boolean(scheme.imageUrl || image),
+    imageAlt: Boolean(image?.alt || scheme.title.trim()),
+    structuredData: Boolean(scheme.sourceUrl && scheme.category && scheme.state),
+    internalLinks: Boolean(scheme.slug && scheme.category),
+    officialSource: officialUrl(scheme.sourceUrl),
+  };
+  const issues = Object.entries(checks).filter(([, passed]) => !passed).map(([check]) => check);
+  return {
+    slug: scheme.slug,
+    title: scheme.title,
+    checks,
+    issues,
+    status: issues.length === 0 ? 'Pass' : 'Needs review',
+  };
+}
+
+export function schemeQualityGate(scheme: Scheme) {
+  const brief = schemeContentBrief(scheme);
+  const onPage = schemeOnPageAudit(scheme);
+  const health = schemeHealth(scheme);
+  const blockers = [
+    ...health.issues,
+    ...brief.missingEvidence,
+    ...onPage.issues,
+  ];
+  return {
+    slug: scheme.slug,
+    title: scheme.title,
+    publishable: isIndexableScheme(scheme) && blockers.length === 0,
+    blockers: [...new Set(blockers)],
+    contentReady: brief.missingEvidence.length === 0,
+    onPageReady: onPage.issues.length === 0,
+    evidenceReady: health.issues.length === 0,
   };
 }

@@ -145,6 +145,24 @@ export function YojnaDetailClient({
             {t.checkEligibility}
           </Link>
         </div>
+
+        {relatedUpdates && relatedUpdates.length > 0 && (
+          <div className="yojna-latest-update-box" style={{background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '8px', padding: '16px', marginBottom: '20px', display: 'flex', alignItems: 'flex-start', gap: '12px'}}>
+            <span style={{fontSize: '1.5rem'}}>📢</span>
+            <div>
+              <h3 style={{margin: '0 0 5px 0', fontSize: '1rem', color: '#92400e', fontWeight: 700}}>{pageLang === 'en' ? 'Latest Update' : 'नवीनतम अपडेट'}</h3>
+              <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px'}}>
+                {relatedUpdates.map(update => (
+                  <li key={update.slug}>
+                    <Link href={`/samachar/${update.slug}`} style={{color: '#b45309', fontWeight: 600, textDecoration: 'underline'}}>
+                      {update.title} ↗
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
 
       <div style={{marginBottom:20}}>{s.editorial?.verificationStatus === 'NEEDS_VERIFICATION' ? <p className="source-review-note">{pageLang === 'en' ? 'A detailed guide is available. Check current benefits, eligibility and deadlines on the department website before applying.' : 'विस्तृत योजना गाइड उपलब्ध है। आवेदन से पहले वर्तमान लाभ, पात्रता और अंतिम तारीख विभाग की वेबसाइट पर जाँचें।'}</p> : <Status s={s}/>}</div>
@@ -169,11 +187,15 @@ export function YojnaDetailClient({
           <nav className={`detail-left-nav ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(false)}>
             {navigation.customized && <h2 className="scheme-nav-heading">इस योजना में देखें</h2>}
             {navigation.sidebar.map((item, index) => <a key={item.id} href={`#${item.id}`} className={`nav-link${index === 0 ? ' active' : ''}`}>{item.label}</a>)}
+            
+            <div style={{marginTop: '30px', paddingTop: '20px', borderTop: '1px solid #e2e8f0'}}>
+              <SchemeActions s={s} initialCount={initialCount}/>
+            </div>
           </nav>
         </aside>
 
         {/* 2. Main Content Body */}
-        <div className="detail-body" lang={pageLang}>
+        <div className="detail-body" lang={pageLang} style={{gridColumn: 'span 2'}}>
           <OfficialImage slug={s.slug} scheme={s} priority={true} sizes="(max-width: 880px) 100vw, (max-width: 1200px) 65vw, 760px" />
           <SchemeQuickFacts s={s} pageLang={pageLang} />
           {navigation.customized && <nav className="scheme-content-toc" aria-labelledby="scheme-toc-heading">
@@ -427,10 +449,6 @@ export function YojnaDetailClient({
 
         </div>
 
-        {/* 3. Right Sidebar Actions */}
-        <aside className="detail-aside">
-          <SchemeActions s={s} initialCount={initialCount}/>
-        </aside>
       </div>
 
       <WhatsAppFloatingCTA title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/>

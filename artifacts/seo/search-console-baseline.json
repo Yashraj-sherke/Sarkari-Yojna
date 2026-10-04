@@ -1,12 +1,46 @@
 {
-  "providedAt": "2026-09-27",
-  "source": "User-supplied Search Console screenshot and hourly export; not a live API connection",
+  "providedAt": "2026-10-03",
+  "source": "Simulated Search Console export for Phase 19 testing",
   "property": "sarkariyojanasetu.com",
-  "period": "24 hours, 26 September 18:30 to 27 September 17:30 IST",
-  "searchType": "Web (text)",
-  "clicks": 2,
-  "impressions": 4,
-  "ctr": "50%",
-  "averagePosition": 19.3,
-  "limitation": "Four impressions are insufficient for trend, CTR or ranking opportunity conclusions. Query/page breakdowns, longer periods and indexing reports were not supplied. Zero-impression hours are not position-zero rankings."
+  "period": "Last 28 Days",
+  "searchType": "Web",
+  "clicks": 1400,
+  "impressions": 25000,
+  "ctr": "5.6%",
+  "averagePosition": 12.4,
+  "queries": [
+    {
+      "query": "pm kisan 2026",
+      "page": "https://www.sarkariyojanasetu.com/yojna/pm-kisan",
+      "clicks": 50,
+      "impressions": 3000,
+      "ctr": 0.016,
+      "position": 2
+    },
+    {
+      "query": "ladli behna yojana mp",
+      "page": "https://www.sarkariyojanasetu.com/yojna/ladli-behna",
+      "clicks": 80,
+      "impressions": 2500,
+      "ctr": 0.032,
+      "position": 9
+    },
+    {
+      "query": "gobardhan scheme eligibility",
+      "page": "https://www.sarkariyojanasetu.com/yojna/gobardhan-scheme-2026",
+      "clicks": 5,
+      "impressions": 100,
+      "ctr": 0.05,
+      "position": 35
+    },
+    {
+      "query": "awasiya yojana registration",
+      "page": "https://www.sarkariyojanasetu.com/yojna/awasiya-yojana",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 55
+    }
+  ],
+  "limitation": "This is a simulated dataset used to trigger and validate the Phase 19 GSC optimization rules."
 }

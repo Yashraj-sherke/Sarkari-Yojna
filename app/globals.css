@@ -1353,10 +1353,12 @@ h3 {
 }
 
 .status>span {
+  display: inline-block;
   width: 5px;
   height: 5px;
   background: #c29b50;
-  border-radius: 50%
+  border-radius: 50%;
+  margin-right: 4px;
 }
 
 .status.verified {
@@ -5042,6 +5044,8 @@ h3 {
 .scheme-rich-article h2 { margin-top: 32px; margin-bottom: 12px; }
 .scheme-rich-article h3 { margin-top: 24px; margin-bottom: 10px; }
 .scheme-rich-article > :first-child { margin-top: 0; }
+.scheme-rich-article { min-width: 0; overflow-wrap: anywhere; }
+.scheme-rich-article table { max-width: 100%; }
 
 .nav-link {
   padding: 10px 14px;
@@ -5405,6 +5409,20 @@ h3 {
     grid-column: 1;
     grid-row: auto;
     order: 3;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .scheme-rich-article table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .detail-left-nav .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
   }
 
   #feedback {

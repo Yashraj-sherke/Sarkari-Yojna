@@ -7,7 +7,7 @@ import Script from 'next/script';
 
 import "./globals.css";
 
-import { DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_TAGLINE, SITE_URL } from "@/lib/config";
+import { DEFAULT_OG_IMAGE, SITE_ALTERNATE_NAMES, SITE_NAME_EN, SITE_TAGLINE, SITE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: {default:`${SITE_NAME_EN} — MP योजनाएं, प्रमाण पत्र, पात्रता जानकारी`,template:`%s | ${SITE_NAME_EN}`},
@@ -37,12 +37,14 @@ export default function RootLayout({
   return (
     <html lang="hi">
       <head>
-        <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp" fetchPriority="high" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Sarkari Yojana Setu",
+          "@id": "https://www.sarkariyojanasetu.com/#website",
+          "name": SITE_NAME_EN,
+          "alternateName": SITE_ALTERNATE_NAMES,
           "url": "https://www.sarkariyojanasetu.com/",
+          "publisher": {"@id": "https://www.sarkariyojanasetu.com/#organization"},
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://www.sarkariyojanasetu.com/?q={search_term_string}",
@@ -52,7 +54,9 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Sarkari Yojana Setu",
+          "@id": "https://www.sarkariyojanasetu.com/#organization",
+          "name": SITE_NAME_EN,
+          "alternateName": SITE_ALTERNATE_NAMES,
           "url": "https://www.sarkariyojanasetu.com/",
           "logo": "https://www.sarkariyojanasetu.com/logo-icon.webp",
           "description": "Sarkari Yojana Setu is an independent citizen-information platform providing simplified details on Indian government schemes.",

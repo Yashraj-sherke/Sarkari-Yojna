@@ -25,3 +25,11 @@ test('public scheme and directory routes use explicit indexability metadata', as
   const sitemap = await readFile(new URL('../app/sitemap.ts', import.meta.url), 'utf8');
   assert.match(sitemap, /filter\(isIndexableScheme\)/);
 });
+
+test('scheme detail CSS protects mobile content from overflow and undersized nav targets', async () => {
+  const css = await readFile(new URL('../app/globals.css', import.meta.url), 'utf8');
+  assert(css.includes('.scheme-rich-article table'));
+  assert(css.includes('overflow-x: auto'));
+  assert(css.includes('.detail-left-nav .nav-link'));
+  assert(css.includes('min-height: 48px'));
+});

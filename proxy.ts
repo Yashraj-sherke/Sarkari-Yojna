@@ -22,7 +22,7 @@ export function proxy(_request: NextRequest) {
   }
 
   const response = NextResponse.next();
-  response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+  // No X-Robots-Tag header for public routes; admin routes handled above.
   return response;
 }
 

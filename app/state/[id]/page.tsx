@@ -1,12 +1,14 @@
 import { summarizeScheme } from '@/lib/scheme-summary';
 import {notFound} from 'next/navigation';
 import {allSchemes} from '@/lib/server';
+import {getAllSamachar, getSamacharRelatedSchemeSlugs} from '@/lib/samachar';
 import {Directory} from '@/components/directory';
 import { SchemeIndex } from '@/components/scheme-index';
 import { isIndexableScheme } from '@/lib/seo';
 import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/config';
 import { DiscoveryIndex } from '@/components/discovery-index';
 import { StateOpportunity } from '@/components/state-opportunity';
+import { MPSuccessStories } from '@/components/mp-success-stories';
 
 export const revalidate = 3600;
 
@@ -54,6 +56,13 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
   const schemes = await allSchemes();
   const reviewedSchemes = schemes.filter(s => s.state === id && isIndexableScheme(s));
   const centralSchemes = schemes.filter(s => s.state === 'central' && isIndexableScheme(s)).slice(0, 9);
+  
+  // Phase 26: Latest updates for this state
+  const allUpdates = await getAllSamachar();
+  const stateUpdates = allUpdates.filter(u => {
+    const related = getSamacharRelatedSchemeSlugs(u);
+    return related.some(slug => schemes.find(s => s.slug === slug)?.state === id);
+  }).slice(0, 5);
 
   const collectionSchema = {
     '@context': 'https://schema.org',
@@ -78,8 +87,10 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
         initialState={id}
         initialPage={page}
         paginationBasePath={`/state/${id}`}
+        latestNews={stateUpdates}
       />
       <StateOpportunity stateName={stateName} schemes={reviewedSchemes} />
+      {id === 'madhya-pradesh' && <MPSuccessStories />}
       <DiscoveryIndex schemes={schemes} />
       <SchemeIndex schemes={schemes.filter(s => s.state === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>

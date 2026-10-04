@@ -2,6 +2,7 @@ import { summarizeScheme } from '@/lib/scheme-summary';
 import {notFound} from 'next/navigation';
 import {categories} from '@/lib/domain';
 import {allSchemes} from '@/lib/server';
+import {getAllSamachar, getSamacharRelatedSchemeSlugs} from '@/lib/samachar';
 import {Directory} from '@/components/directory';
 import { SchemeIndex } from '@/components/scheme-index';
 import { isIndexableScheme } from '@/lib/seo';
@@ -51,6 +52,14 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
 
   const schemes = await allSchemes();
   const reviewedSchemes=schemes.filter(s=>s.category===id&&isIndexableScheme(s));
+  
+  // Phase 25: Latest updates for this category
+  const allUpdates = await getAllSamachar();
+  const categoryUpdates = allUpdates.filter(u => {
+    const related = getSamacharRelatedSchemeSlugs(u);
+    return related.some(slug => schemes.find(s => s.slug === slug)?.category === id);
+  }).slice(0, 5);
+
   const collectionSchema={
     '@context':'https://schema.org',
     '@type':'CollectionPage',
@@ -63,9 +72,40 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
       itemListElement:reviewedSchemes.map((scheme,index)=>({'@type':'ListItem',position:index+1,name:scheme.title,url:`${SITE_URL}/yojna/${scheme.slug}`})),
     },
   };
+  let pillarContent = null;
+  if (id === 'kisan') {
+    pillarContent = (
+      <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '8px', padding: '24px', marginBottom: '24px' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#166534', marginBottom: '12px' }}>
+          किसानों के लिए प्रमुख सरकारी योजनाएं
+        </h2>
+        <p style={{ color: '#15803d', fontSize: '1.05rem', marginBottom: '16px' }}>
+          भारत और मध्य प्रदेश सरकार किसानों की आय बढ़ाने, खेती की लागत कम करने और प्राकृतिक आपदाओं से फसल सुरक्षा के लिए कई लाभकारी योजनाएं चला रही हैं। यहाँ आपको सभी महत्वपूर्ण कृषि योजनाओं की जानकारी मिलेगी।
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+          <div style={{ background: '#fff', padding: '16px', borderRadius: '6px', border: '1px solid #dcfce7' }}>
+            <h3 style={{ fontWeight: '600', color: '#166534', marginBottom: '8px' }}>आर्थिक सहायता (DBT)</h3>
+            <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>PM Kisan और मुख्यमंत्री किसान कल्याण योजना के तहत किसानों को हर साल ₹12,000 तक की सीधी आर्थिक सहायता दी जाती है।</p>
+          </div>
+          <div style={{ background: '#fff', padding: '16px', borderRadius: '6px', border: '1px solid #dcfce7' }}>
+            <h3 style={{ fontWeight: '600', color: '#166534', marginBottom: '8px' }}>फसल बीमा एवं उपकरण</h3>
+            <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>PM फसल बीमा योजना से नुकसान की भरपाई और सोलर पंप, सिंचाई उपकरण आदि पर भारी सब्सिडी उपलब्ध है।</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
-      <Directory schemes={schemes.map(summarizeScheme)} initialCategory={id} initialPage={page} paginationBasePath={`/category/${id}`}/>
+      <Directory 
+        schemes={schemes.map(summarizeScheme)} 
+        initialCategory={id} 
+        initialPage={page} 
+        paginationBasePath={`/category/${id}`}
+        latestNews={categoryUpdates}
+        pillarContent={pillarContent}
+      />
       <DiscoveryIndex schemes={schemes} />
       <SchemeIndex schemes={schemes.filter(s => s.category === id)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>

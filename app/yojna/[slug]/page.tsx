@@ -8,12 +8,14 @@ import {YojnaDetailClient} from '@/components/yojna-detail-client';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
 import {getAllSamachar, getSamacharRelatedSchemeSlugs} from '@/lib/samachar';
 import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL, AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_LINKEDIN_URL} from '@/lib/config';
-export const revalidate = 3600; // 1 hour caching for blazingly fast TTFB
+export const revalidate = 0; // 1 hour caching for blazingly fast TTFB - forcing reload
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s) notFound();
+  if(!s) { 
+    return { title: 'Not Found', robots: { index: false } };
+  }
   const isPublic=isIndexableScheme(s);
   const {title, description: defaultDesc}=schemeSearchPresentation(s);
   const desc = s.seoDescription || defaultDesc;
@@ -32,7 +34,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 export default async function Page({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s || (s.status !== 'ACTIVE' && s.status !== 'CLOSED' && s.status !== 'ARCHIVED')) return notFound();
+  if(!s || (s.status !== 'ACTIVE' && s.status !== 'CLOSED' && s.status !== 'ARCHIVED')) { return notFound(); }
   const d=db();
   // Feedback is optional: database downtime must not make the article unavailable.
   const cRes=d?await d`SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=${slug} AND u.expires_at>${new Date().toISOString()}`.catch(()=>[{n:0}]):[{n:0}];
@@ -46,7 +48,34 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   // Build rich structured data
   const isActive=isIndexableScheme(s);
   const schemesList = await allSchemes();
-  const relatedSchemes = schemesList.filter(x => x.category === s.category && x.slug !== s.slug && isIndexableScheme(x)).sort((a, b) => Number(b.state === s.state) - Number(a.state === s.state)).slice(0, 3);
+  const availableIndexableSchemes = schemesList.filter(x => x.slug !== s.slug && isIndexableScheme(x));
+  
+  // Phase 24 Logic
+  const relatedSet = new Set<typeof schemesList[0]>();
+  
+  // 1. Hardcoded
+  if (s.relatedSchemeSlugs?.length) {
+    availableIndexableSchemes.forEach(x => {
+      if (s.relatedSchemeSlugs?.includes(x.slug)) relatedSet.add(x);
+    });
+  }
+
+  // 2. Same Target Audience
+  if (s.targetAudience?.length && relatedSet.size < 3) {
+    availableIndexableSchemes.forEach(x => {
+      if (x.targetAudience?.some(t => s.targetAudience?.includes(t))) relatedSet.add(x);
+    });
+  }
+
+  // 3. Same category + same state
+  if (relatedSet.size < 3) {
+    availableIndexableSchemes
+      .filter(x => x.category === s.category)
+      .sort((a, b) => Number(b.state === s.state) - Number(a.state === s.state))
+      .forEach(x => relatedSet.add(x));
+  }
+
+  const relatedSchemes = Array.from(relatedSet).slice(0, 3);
   const relatedSchemesMapped = relatedSchemes.map(rs => ({
     slug: rs.slug,
     title: rs.title,
@@ -77,17 +106,6 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a }
-    }))
-  } : null;
-
-  const howToSchema = (s.steps && s.steps.length > 0) ? {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: `${s.title} के लिए आवेदन कैसे करें`,
-    description: s.summary,
-    step: s.steps.map((step, index) => ({
-      '@type': 'HowToStep',
-      text: step,
     }))
   } : null;
 
@@ -136,6 +154,5 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     {breadcrumbSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema).replace(/</g,'\\u003c')}}/>}
     {webPageSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webPageSchema).replace(/</g,'\\u003c')}}/>}
     {faqSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>}
-    {howToSchema&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(howToSchema).replace(/</g,'\\u003c')}}/>}
   </main>;
 }
