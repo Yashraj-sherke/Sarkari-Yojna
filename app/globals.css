@@ -6412,3 +6412,21 @@ h3 {
 .right-sidebar-layout .sidebar {
   display: block !important;
 }
+
+.scheme-rich-article h1, 
+.scheme-rich-article h2, 
+.scheme-rich-article h3, 
+.scheme-rich-article h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.scheme-rich-article p,
+.scheme-rich-article ul {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.scheme-rich-article li {
+  margin-bottom: 0.5em;
+}

@@ -18,6 +18,7 @@ export function schemeSearchPresentation(s: Scheme) {
   const names: Record<string, string> = {
     'pm-kisan': 'PM Kisan योजना: पात्रता, दस्तावेज़ और आवेदन',
     'ration-support': 'राशन कार्ड (NFSA): पात्रता, राशन मात्रा और आवेदन',
+    'social-security-pension-portal-mp': 'Social Security Pension Portal MP 2026: Online Apply, Pension Status, Passbook और ₹600 Pension की पूरी जानकारी',
   };
   const baseTitle = names[s.slug] ?? s.title;
   const title = names[s.slug] ?? (baseTitle.length < 42 ? `${baseTitle}: पात्रता और आवेदन` : baseTitle);
