@@ -1,9 +1,9 @@
 import { effectiveStatus, type Scheme } from './domain';
 
 export function isIndexableScheme(s: Scheme) {
-  // Indexable if the scheme is active and has a source URL.
+  // Indexable if the scheme is active.
   // The editorial review status is no longer required for indexing to avoid unintended noindex.
-  return s.status === 'ACTIVE' && !s.isSample && Boolean(s.sourceUrl);
+  return s.status === 'ACTIVE';
 }
 
 /** Omit unknown dates rather than substituting another page's review date. */
