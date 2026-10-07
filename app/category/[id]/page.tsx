@@ -94,6 +94,20 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
         </div>
       </div>
     );
+  } else {
+    pillarContent = (
+      <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '24px', marginBottom: '24px' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#1e293b', marginBottom: '12px' }}>
+          {category.name} की योजनाएं
+        </h2>
+        <p style={{ color: '#334155', fontSize: '1.05rem', marginBottom: '16px' }}>
+          यहाँ आप {category.name} से जुड़ी सभी सरकारी योजनाओं की सूची देख सकते हैं। केंद्र और राज्य सरकार द्वारा नागरिकों को सीधा लाभ पहुँचाने के लिए कई कल्याणकारी योजनाएं चलाई जा रही हैं। 
+        </p>
+        <p style={{ fontSize: '0.95rem', color: '#475569' }}>
+          नीचे दी गई सूची में अपनी जरूरत के अनुसार योजना चुनें और पात्रता, आवश्यक दस्तावेज़, तथा आवेदन प्रक्रिया की पूरी जानकारी सरल हिन्दी में प्राप्त करें।
+        </p>
+      </div>
+    );
   }
 
   return (

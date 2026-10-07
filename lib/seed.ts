@@ -1,6 +1,7 @@
 import type { Scheme } from './domain';
 import {officialContent} from './official-content.ts';
 import {mpSchemes} from './mp-schemes-data.ts';
+import {upSchemes} from './up-schemes-data.ts';
 import {enrichSchemeArticle} from './scheme-articles';
 const base={department:'संबंधित सरकारी विभाग',documents:['दस्तावेजों की सूची official portal पर जाँचें।'],steps:['पहले official source पर वर्तमान शर्तें पढ़ें।','दस्तावेजों और आवेदन के तरीके की पुष्टि करें।','आवेदन केवल संबंधित सरकारी पोर्टल या अधिकृत केंद्र पर करें।'],sourceNotes:'डेमो रिकॉर्ड। संक्षिप्त विवरण और पात्रता नियम केवल उत्पाद का अनुभव दिखाने के लिए हैं। पूरी सरकारी शर्तों का सत्यापन बाकी है।',applicationUrl:'',status:'REQUIRES_OFFICIAL_VERIFICATION' as const,isSample:true,verifiedAt:null,nextReviewAt:null};
 const originalSeeds:Scheme[]=[
@@ -10,6 +11,7 @@ const originalSeeds:Scheme[]=[
   {...base,slug:'ladli-behna',title:'मुख्यमंत्री लाड़ली बहना योजना',english:'Mukhyamantri Ladli Behna Yojana',category:'mahila',state:'madhya-pradesh',summary:'मध्य प्रदेश की महिलाओं के लिए सहायता। वर्तमान लाभ, आयु सीमा और आवेदन की उपलब्धता की पुष्टि आवश्यक है।',summaryEn:'Support for women in Madhya Pradesh. Confirmation of current benefits, age limit and application availability is required.',benefit:'महिलाओं की आर्थिक भागीदारी के लिए सहायता',benefitEn:'Assistance for economic participation of women',sourceUrl:'',priority:true,rules:[{field:'gender',op:'eq',value:'female',label:'महिलाओं के लिए (उदाहरण नियम)'}]},
   {...base,slug:'mukhyamantri-majhi-ladki-bahin-yojana',title:'मुख्यमंत्री माझी लाडकी बहीण योजना',english:'Majhi Ladki Bahin Yojana',category:'mahila',state:'maharashtra',summary:'महाराष्ट्र सरकार द्वारा महिलाओं को आर्थिक स्वतंत्रता के लिए ₹1,500 प्रति माह की आर्थिक सहायता।',benefit:'₹1,500 प्रति माह',department:'महिला एवं बाल विकास विभाग, महाराष्ट्र',sourceUrl:'https://ladakibahin.maharashtra.gov.in/',priority:true,rules:[{field:'gender',op:'eq',value:'female',label:'महाराष्ट्र की निवासी महिलाएं (21-65 वर्ष)'}]},
  {...base,slug:'ayushman-bharat',title:'आयुष्मान भारत – प्रधानमंत्री जन आरोग्य योजना',english:'Ayushman Bharat PM JAY',category:'swasthya',state:'central',summary:'पात्र परिवारों के लिए अस्पताल में उपचार से जुड़ी सहायता। अपनी पात्रता official source से जाँचें।',benefit:'अस्पताल में इलाज के लिए स्वास्थ्य सुरक्षा',sourceUrl:'',priority:true,rules:[]},
+  {...base,slug:'ayushman-card-hospital-list-mp',title:'Ayushman Card Hospital List MP 2026: जिला Wise List',english:'Ayushman Card Hospital List MP',category:'swasthya',state:'madhya-pradesh',summary:'Ayushman Card Hospital List MP 2026 देखें।',benefit:'आयुष्मान कार्ड से ₹5 लाख तक का स्वास्थ्य कवर',sourceUrl:'',priority:true,rules:[]},
  {...base,slug:'pm-awas-gramin',title:'प्रधानमंत्री आवास योजना – ग्रामीण',english:'PM Awas Yojana Gramin Housing',category:'awas',state:'central',summary:'ग्रामीण परिवारों के लिए आवास सहायता से जुड़ी योजना। चयन और लाभ की शर्तों का सत्यापन बाकी है।',benefit:'पात्र ग्रामीण परिवारों को आवास सहायता',sourceUrl:'',priority:false,rules:[{field:'rural',op:'eq',value:true,label:'ग्रामीण क्षेत्र में निवास (उदाहरण नियम)'}]},
  {...base,slug:'mp-scholarship',title:'मध्य प्रदेश छात्रवृत्ति सहायता',english:'MP Scholarship Students Education',category:'shiksha',state:'madhya-pradesh',summary:'विद्यार्थियों को छात्रवृत्ति योजनाओं तक पहुँचाने वाला उदाहरण रिकॉर्ड। पाठ्यक्रम और श्रेणी की शर्तें अलग हो सकती हैं।',benefit:'पढ़ाई के लिए सहायता की जानकारी',sourceUrl:'',priority:false,rules:[{field:'occupation',op:'eq',value:'student',label:'विद्यार्थी (उदाहरण नियम)'}]},
  {...base,slug:'social-pension',title:'सामाजिक सुरक्षा पेंशन',english:'Social Security Old Age Pension',category:'pension',state:'madhya-pradesh',summary:'वरिष्ठ नागरिकों के लिए पेंशन सहायता का उदाहरण। आयु, आय और अन्य शर्तों की सरकारी पुष्टि जरूरी है।',benefit:'वरिष्ठ नागरिकों के लिए सामाजिक सुरक्षा',sourceUrl:'',priority:false,rules:[{field:'age',op:'gte',value:60,label:'60 वर्ष या अधिक (केवल उदाहरण नियम)'}]},
@@ -41,6 +43,11 @@ for (const s of baseSeeds) {
   seedMap.set(s.slug, s);
 }
 for (const s of mpSchemes) {
+  if (!seedMap.has(s.slug)) {
+    seedMap.set(s.slug, officialContent[s.slug] ? { ...s, ...officialContent[s.slug] } : s);
+  }
+}
+for (const s of upSchemes) {
   if (!seedMap.has(s.slug)) {
     seedMap.set(s.slug, officialContent[s.slug] ? { ...s, ...officialContent[s.slug] } : s);
   }

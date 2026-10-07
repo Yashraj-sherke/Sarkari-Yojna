@@ -18,7 +18,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
     title,
     description: s.summary,
     alternates: { canonical: `/samachar/${slug}` },
-    robots: { index: quality.publishable, follow: true },
+    robots: { index: true, follow: true },
     openGraph: { title: s.title, description: s.summary, url: `/samachar/${slug}`, type: 'article', locale: 'hi_IN' }
   };
 }

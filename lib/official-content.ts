@@ -2,11 +2,16 @@ import type { Scheme } from './domain';
 import {gobardhanFaqs} from './scheme-content/gobardhan-faqs';
 import { deendayalRasoiContent } from './scheme-content/deendayal-rasoi';
 import { socialSecurityPensionContent } from './scheme-content/social-security-pension';
+import { ayushmanHospitalListMpContent } from './scheme-content/ayushman-hospital-list-mp';
 
 // Editorial review of the linked official pages, not an automatic eligibility decision.
 export const reviewedAt = '2026-09-14T00:00:00.000Z';
 const reviewed = { status: 'ACTIVE' as const, isSample: false, verifiedAt: reviewedAt, nextReviewAt: '2026-12-13T00:00:00.000Z' };
 export const officialContent: Record<string, Partial<Scheme>> = {
+  'ayushman-card-hospital-list-mp': {
+    ...reviewed,
+    ...ayushmanHospitalListMpContent
+  },
   'gobardhan-scheme': {
     ...reviewed,
     faqs: gobardhanFaqs,

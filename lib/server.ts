@@ -3,6 +3,7 @@ import { schemeSchema, effectiveStatus, type Scheme } from './domain';
 import { seeds } from './seed';
 import { enrichSchemeArticle } from './scheme-articles';
 import { neon, neonConfig, Pool } from '@neondatabase/serverless';
+import { unstable_cache } from 'next/cache';
 
 // Ensure the Edge Runtime doesn't cache DB connections aggressively
 neonConfig.fetchConnectionCache = false;
@@ -45,28 +46,37 @@ export async function maintenance() {
   }
 }
 
-let _schemesCache: { schemes: Scheme[], time: number } | null = null;
+const getCachedSchemesRaw = unstable_cache(
+  async () => {
+    const sql = db();
+    if (!sql) return null;
+    try {
+      const queryPromise = sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
+      const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 15 seconds')), 15000));
+      const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
+      return results.map((x: any) => ({ data: x.data, updated_at: x.updated_at }));
+    } catch (e) {
+      console.error('Database fetch error', e);
+      return null;
+    }
+  },
+  ['all-schemes-data'],
+  { revalidate: 3600 }
+);
 
 export async function allSchemes(): Promise<Scheme[]> {
-  if (_schemesCache && Date.now() - _schemesCache.time < 60000) {
-    return _schemesCache.schemes;
-  }
-  const sql = db();
-  if (!sql) return seeds.map(normalizeScheme);
+  const cachedData = await getCachedSchemesRaw();
+  if (!cachedData) return seeds.map(normalizeScheme);
+  
   try {
-    const queryPromise = sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
-    const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 15 seconds')), 15000));
-    const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
-    
-    const schemes = results.map((x: any) => {
+    const schemes = cachedData.map((x: any) => {
       const s = schemeSchema.parse(JSON.parse(x.data));
       s.lastUpdated = x.updated_at;
       return normalizeScheme(s);
     });
-    _schemesCache = { schemes, time: Date.now() };
     return schemes;
   } catch (e) {
-    console.error('allSchemes error', e);
+    console.error('allSchemes parse error', e);
     return seeds.map(normalizeScheme);
   }
 }
@@ -77,29 +87,8 @@ function normalizeScheme(input: Scheme): Scheme {
 }
 
 export async function getScheme(slug: string): Promise<Scheme | null> {
-  if (_schemesCache && Date.now() - _schemesCache.time < 60000) {
-    return _schemesCache.schemes.find(x => x.slug === slug) || null;
-  }
-  const sql = db();
-  if (!sql) {
-    const s = seeds.find(x => x.slug === slug);
-    if (!s) return null;
-    return normalizeScheme(s);
-  }
-  try {
-    const queryPromise = sql`SELECT data, updated_at FROM schemes WHERE slug=${slug}`;
-    const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 5 seconds')), 5000));
-    const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
-    if (results.length === 0) return null;
-    const r = results[0];
-    const s = schemeSchema.parse(JSON.parse(r.data));
-    s.lastUpdated = r.updated_at;
-    return normalizeScheme(s);
-  } catch {
-    const s = seeds.find(x => x.slug === slug);
-    if (!s) return null;
-    return normalizeScheme(s);
-  }
+  const schemes = await allSchemes();
+  return schemes.find(x => x.slug === slug) || null;
 }
 
 export async function adminIdentity() {

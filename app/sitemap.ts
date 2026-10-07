@@ -11,7 +11,7 @@ export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
   const schemes=(await allSchemes()).filter(isIndexableScheme);
-  const updates=(await getAllSamachar()).filter(update => samacharQuality(update).publishable);
+  const updates = await getAllSamachar();
   const latest=schemes.map(s=>contentDate(s.lastUpdated??s.editorial?.reviewedAt)).filter((date): date is string => Boolean(date)).sort().at(-1);
   const reviewedStates = Object.keys(stateNames).filter(state => state !== 'central' && schemes.some(s => s.state === state));
 

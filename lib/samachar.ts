@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import samacharData from '../data/samachar.json';
+import { unstable_cache } from 'next/cache';
 
 export const samacharSchema = z.object({
   slug: z.string().max(100),
@@ -39,31 +40,41 @@ export function samacharQuality(item: Samachar) {
   return {slug: item.slug, title: item.title, issues, publishable: issues.length === 0};
 }
 
+const getCachedSamacharRaw = unstable_cache(
+  async () => {
+    try {
+      const sql = await import('./server').then(m => m.db());
+      if (sql) {
+        const results = await sql`SELECT * FROM samachar WHERE status = 'PUBLISHED' ORDER BY updated_at DESC LIMIT 50`;
+        return results;
+      }
+    } catch (error) {
+      console.error('getAllSamachar DB error', error);
+    }
+    return null;
+  },
+  ['all-samachar-data'],
+  { revalidate: 3600 }
+);
+
 export async function getAllSamachar(): Promise<Samachar[]> {
   let dbNews: Samachar[] = [];
-  try {
-    const sql = await import('./server').then(m => m.db());
-    if (sql) {
-      const results = await sql`SELECT * FROM samachar WHERE status = 'PUBLISHED' ORDER BY updated_at DESC`;
-      if (results.length > 0) {
-        dbNews = results.map((row: any) => ({
-          slug: row.slug,
-          title: row.title,
-          date: row.updated_at,
-          category: row.category,
-          author: 'Sarkari Yojana Desk',
-          imageUrl: row.image_url || undefined,
-          body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
-          summary: row.summary,
-          changes: row.changes || undefined,
-          affected: row.affected || undefined,
-          sourceUrl: row.source_url || undefined,
-          schemeSlugs: Array.isArray(row.scheme_slugs) ? row.scheme_slugs : undefined,
-        }));
-      }
-    }
-  } catch (error) {
-    console.error('getAllSamachar error', error);
+  const results = await getCachedSamacharRaw();
+  if (results && results.length > 0) {
+    dbNews = results.map((row: any) => ({
+      slug: row.slug,
+      title: row.title,
+      date: row.updated_at,
+      category: row.category,
+      author: 'Sarkari Yojana Desk',
+      imageUrl: row.image_url || undefined,
+      body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
+      summary: row.summary,
+      changes: row.changes || undefined,
+      affected: row.affected || undefined,
+      sourceUrl: row.source_url || undefined,
+      schemeSlugs: Array.isArray(row.scheme_slugs) ? row.scheme_slugs : undefined,
+    }));
   }
   
   // Merge DB and static JSON, preventing duplicates by slug
@@ -81,32 +92,6 @@ export async function getAllSamachar(): Promise<Samachar[]> {
 }
 
 export async function getSamachar(slug: string): Promise<Samachar | null> {
-  try {
-    const sql = await import('./server').then(m => m.db());
-    if (sql) {
-      const results = await sql`SELECT * FROM samachar WHERE slug = ${slug} AND status = 'PUBLISHED'`;
-      if (results.length > 0) {
-        const row = results[0];
-        return {
-          slug: row.slug,
-          title: row.title,
-          date: row.updated_at,
-          category: row.category,
-          author: 'Sarkari Yojana Desk',
-          imageUrl: row.image_url || undefined,
-          body: typeof row.body === 'string' ? JSON.parse(row.body) : row.body,
-          summary: row.summary,
-          changes: row.changes || undefined,
-          affected: row.affected || undefined,
-          sourceUrl: row.source_url || undefined,
-          schemeSlugs: Array.isArray(row.scheme_slugs) ? row.scheme_slugs : undefined,
-        };
-      }
-    }
-  } catch (error) {
-    console.error('getSamachar error', error);
-  }
-
-  const data = samacharData as Samachar[];
-  return data.find(s => s.slug === slug) || null;
+  const all = await getAllSamachar();
+  return all.find(s => s.slug === slug) || null;
 }
