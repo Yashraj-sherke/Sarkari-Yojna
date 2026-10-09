@@ -284,7 +284,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
                 <div key={s.slug} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <Link prefetch={false} href={'/yojna/'+s.slug} className="sarkari-list-item blog-style">
                     <div className="sarkari-list-image">
-                      <OfficialImage slug={s.slug} scheme={s} priority={false} sizes="(max-width: 680px) 100px, 180px" />
+                      <OfficialImage slug={s.slug} scheme={s} priority={idx === 0} sizes="(max-width: 680px) 100px, 180px" />
                     </div>
                     <div className="sarkari-list-content">
                       <h3 className="sarkari-list-title">{lang === 'en' ? s.english : s.title}</h3>
@@ -362,7 +362,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
                   <div key={s.slug} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                     <Link prefetch={false} href={'/yojna/'+s.slug} className="sarkari-list-item blog-style">
                       <div className="sarkari-list-image">
-                        <OfficialImage slug={s.slug} scheme={s} priority={false} sizes="160px" />
+                        <OfficialImage slug={s.slug} scheme={s} priority={idx === 0 && (!displayedMpSchemes || displayedMpSchemes.length === 0)} sizes="160px" />
                       </div>
                       <div className="sarkari-list-content">
                         <h3 className="sarkari-list-title">{lang === 'en' ? s.english : s.title}</h3>

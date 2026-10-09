@@ -66,6 +66,7 @@ export default function RootLayout({
             "contactType": "customer support"
           }
         })}} />
+        <script dangerouslySetInnerHTML={{__html: `if (window.trustedTypes && trustedTypes.createPolicy) { trustedTypes.createPolicy('default', { createHTML: (string) => string, createScriptURL: (string) => string, createScript: (string) => string }); }`}} />
       </head>
       <body className="antialiased">
         <LanguageProvider>

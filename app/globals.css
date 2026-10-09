@@ -959,7 +959,7 @@ h3 {
 }
 
 .small-label {
-  color: #698567;
+  color: #506e4e;
   font-size: .71rem
 }
 
@@ -1313,7 +1313,7 @@ h3 {
 }
 
 .card-summary {
-  color: #788274;
+  color: #5c6758;
   line-height: 1.8;
   font-size: .8rem;
   flex: 1
@@ -1430,7 +1430,7 @@ h3 {
 
 .footer>p {
   font-size: .78rem;
-  color: #7d897c;
+  color: #5f6d5d;
   margin: 10px 0 18px
 }
 
@@ -1439,7 +1439,7 @@ h3 {
   justify-content: space-between;
   gap: 20px;
   font-size: .74rem;
-  color: #8a9486
+  color: #5f6d5d
 }
 
 .footer-bottom nav {
