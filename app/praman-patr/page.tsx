@@ -6,7 +6,7 @@ export const metadata:Metadata={
   title:'MP प्रमाण पत्र गाइड — आय, जाति, निवास और जन्म',
   description:'मध्य प्रदेश में आय प्रमाण पत्र, जाति प्रमाण पत्र, निवास प्रमाण पत्र, जन्म प्रमाण पत्र और समग्र ID कैसे बनाएं — ज़रूरी दस्तावेज़, ऑनलाइन आवेदन और पूरी प्रक्रिया हिन्दी में।',
   alternates:{canonical:'/praman-patr'},
-  robots:{index:false,follow:true},
+  robots:{index:true,follow:true},
   openGraph:{title:'प्रमाण पत्र कैसे बनाएं — MP',description:'आय, जाति, निवास, जन्म — सभी प्रमाण पत्र की जानकारी एक जगह।',url:'/praman-patr',type:'article',locale:'hi_IN'},
 };
 
