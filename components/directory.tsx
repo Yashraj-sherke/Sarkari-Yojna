@@ -37,7 +37,7 @@ function RecentUpdates({ news, lang }: { news: any[]; lang: string }) {
           {news.map((n, i) => (
             <span key={n.slug}>
               {i > 0 && <span className="sarkari-ticker-divider">|</span>}
-              <Link href={`/samachar/${n.slug}`} className="sarkari-ticker-link">
+              <Link href={`/samachar/${n.slug}`} className="sarkari-ticker-link" title={n.title}>
                 {n.title}
               </Link>
             </span>
@@ -119,7 +119,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
   return <>
     <main id="main" className="directory">
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
-      <nav className="breadcrumb" aria-label="breadcrumb"><Link href="/">{t.breadcrumbHome}</Link>{routeTitle && <> <span>/</span> <span aria-current="page">{routeTitle}</span></>}</nav>
+      <nav className="breadcrumb" aria-label="breadcrumb"><Link href="/" title={t.breadcrumbHome}>{t.breadcrumbHome}</Link>{routeTitle && <> <span>/</span> <span aria-current="page">{routeTitle}</span></>}</nav>
 
       {isHomePage ? (
         <>
@@ -206,11 +206,11 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
               <h2 className="sarkari-col-header">{lang === 'hi' ? 'सबसे ज्यादा खोजी गई योजनाएं' : 'Most Searched'}</h2>
               <ul className="sarkari-col-list">
                 {trendingLinksHindi.map((link, idx) => (
-                  <li key={idx}><Link href={link.href}>{link.label}<NewSchemeBadge href={link.href} /></Link></li>
+                  <li key={idx}><Link href={link.href} title={link.label}>{link.label}<NewSchemeBadge href={link.href} /></Link></li>
                 ))}
               </ul>
               <div className="sarkari-col-footer">
-                <Link href="/yojna">{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
+                <Link href="/yojna" title={lang === 'hi' ? 'सभी सत्यापित योजनाएं देखें' : 'View all verified schemes'}>{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
               </div>
             </div>
 
@@ -219,11 +219,11 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
               <h2 className="sarkari-col-header">{lang === 'hi' ? 'राज्य की योजनाएं' : 'State Schemes'}</h2>
               <ul className="sarkari-col-list">
                 {stateSchemesLinks.map((link, idx) => (
-                  <li key={idx}><Link href={link.href}>{link.label}<NewSchemeBadge href={link.href} /></Link></li>
+                  <li key={idx}><Link href={link.href} title={link.label}>{link.label}<NewSchemeBadge href={link.href} /></Link></li>
                 ))}
               </ul>
               <div className="sarkari-col-footer">
-                <Link href="/yojna">{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
+                <Link href="/yojna" title={lang === 'hi' ? 'सभी सत्यापित योजनाएं देखें' : 'View all verified schemes'}>{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
               </div>
             </div>
 
@@ -231,15 +231,15 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
             <div className="sarkari-col">
               <h2 className="sarkari-col-header">{lang === 'hi' ? 'केंद्र सरकार की योजनाएं' : 'Central Schemes'}</h2>
               <ul className="sarkari-col-list">
-                <li><Link href="/yojna/pm-kisan">पीएम किसान सम्मान निधि</Link></li>
-                <li><Link href="/yojna/pm-surya-ghar">पीएम सूर्य घर: मुफ्त बिजली योजना</Link></li>
-                <li><Link href="/yojna/pm-ujjwala">प्रधानमंत्री उज्ज्वला योजना 2.0</Link></li>
-                <li><Link href="/yojna/sukanya-samriddhi">सुकन्या समृद्धि योजना (SSY)</Link></li>
-                <li><Link href="/yojna/pm-mudra">प्रधानमंत्री मुद्रा योजना (PMMY)</Link></li>
-                <li><Link href="/yojna/atal-pension">अटल पेंशन योजना (APY)</Link></li>
+                <li><Link href="/yojna/pm-kisan" title="पीएम किसान सम्मान निधि">पीएम किसान सम्मान निधि</Link></li>
+                <li><Link href="/yojna/pm-surya-ghar" title="पीएम सूर्य घर: मुफ्त बिजली योजना">पीएम सूर्य घर: मुफ्त बिजली योजना</Link></li>
+                <li><Link href="/yojna/pm-ujjwala" title="प्रधानमंत्री उज्ज्वला योजना 2.0">प्रधानमंत्री उज्ज्वला योजना 2.0</Link></li>
+                <li><Link href="/yojna/sukanya-samriddhi" title="सुकन्या समृद्धि योजना (SSY)">सुकन्या समृद्धि योजना (SSY)</Link></li>
+                <li><Link href="/yojna/pm-mudra" title="प्रधानमंत्री मुद्रा योजना (PMMY)">प्रधानमंत्री मुद्रा योजना (PMMY)</Link></li>
+                <li><Link href="/yojna/atal-pension" title="अटल पेंशन योजना (APY)">अटल पेंशन योजना (APY)</Link></li>
               </ul>
               <div className="sarkari-col-footer">
-                <Link href="/state/central">{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
+                <Link href="/state/central" title={lang === 'hi' ? 'सभी केंद्र सरकार योजनाएं देखें' : 'View all Central Schemes'}>{lang === 'hi' ? 'और देखें »' : 'View more »'}</Link>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
               const cat = categories.find(c => c.id === s.category) || categories[0];
               return (
                 <div key={s.slug} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  <Link prefetch={false} href={'/yojna/'+s.slug} className="sarkari-list-item blog-style">
+                  <Link prefetch={false} href={'/yojna/'+s.slug} className="sarkari-list-item blog-style" title={lang === 'en' ? s.english : s.title}>
                     <div className="sarkari-list-image">
                       <OfficialImage slug={s.slug} scheme={s} priority={idx === 0} sizes="(max-width: 680px) 100px, 180px" />
                     </div>
@@ -360,7 +360,7 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
                 const cat = categories.find(c => c.id === s.category) || categories[0];
                 return (
                   <div key={s.slug} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    <Link prefetch={false} href={'/yojna/'+s.slug} className="sarkari-list-item blog-style">
+                    <Link prefetch={false} href={'/yojna/'+s.slug} className="sarkari-list-item blog-style" title={lang === 'en' ? s.english : s.title}>
                       <div className="sarkari-list-image">
                         <OfficialImage slug={s.slug} scheme={s} priority={idx === 0 && (!displayedMpSchemes || displayedMpSchemes.length === 0)} sizes="160px" />
                       </div>
@@ -392,11 +392,11 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
         <div className="mobile-only-trending" style={{marginTop: '30px', marginBottom: '30px', padding: '20px', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '8px'}}>
           <h2 style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e3a8a', marginBottom: '15px'}}>{lang === 'hi' ? 'ट्रेंडिंग योजनाएं' : 'Trending Schemes'}</h2>
           <ul style={{listStyle: 'none', paddingLeft: 0, margin: 0}}>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/mukhyamantri-majhi-ladki-bahin-yojana" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan Samman Nidhi Yojana 24th Installment Date</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/ayushman-bharat" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-surya-ghar" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="PM Awas Yojana Gramin List 2026 (NEW) - Download PDF">PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/mukhyamantri-majhi-ladki-bahin-yojana" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="Majhi Ladki Bahin Yojana - Online Apply & Status Check">Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="PM Kisan Samman Nidhi Yojana 24th Installment Date">PM Kisan Samman Nidhi Yojana 24th Installment Date</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/ayushman-bharat" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="Ayushman Bharat Yojana: Download Card & Check Hospital List">Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-surya-ghar" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="PM Surya Ghar Muft Bijli Yojana - Online Registration">PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
           </ul>
         </div>
       )}

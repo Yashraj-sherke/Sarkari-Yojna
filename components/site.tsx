@@ -24,13 +24,13 @@ export function Header(){
   const [open,setOpen]=useState(false);
   const {t,lang,toggleLang}=useLanguage();
   return <>
-    <a className="skip" href="#main">{lang==='hi'?'मुख्य सामग्री पर जाएं':'Skip to main content'}</a>
+    <a className="skip" href="#main" title={lang==='hi'?'मुख्य सामग्री पर जाएं':'Skip to main content'}>{lang==='hi'?'मुख्य सामग्री पर जाएं':'Skip to main content'}</a>
     <div className="independent">
       <div><ShieldCheck size={14}/>{t.independent}</div>
       <span>{t.yourInfo}</span>
     </div>
     <header className="site-header">
-      <Link href="/" className="brand" aria-label={t.brandName}>
+      <Link href="/" className="brand" aria-label={t.brandName} title={t.brandName}>
         <Image
                 src="/navbar-logo-optimized.webp"
           alt="Sarkari Yojana (सरकारी योजना) - Official Portal Logo"
@@ -41,6 +41,7 @@ export function Header(){
           loading="eager"
           sizes="123px"
         />
+        <span className="sr-only">{t.brandName}</span>
       </Link>
       <nav aria-label={lang==='hi'?'मुख्य नेविगेशन':'Main navigation'} className={open?'nav open':'nav'}>
         {[
@@ -48,7 +49,7 @@ export function Header(){
           {href:'/mere-liye',label:t.navForMe},
           {href:'/guide',label:t.navGuide},
           {href:'/samachar',label:lang==='hi'?'समाचार':'News'},
-        ].map(n=><Link onClick={()=>setOpen(false)} className={path===n.href?'active':''} key={n.href} href={n.href}>{n.label}</Link>)}
+        ].map(n=><Link onClick={()=>setOpen(false)} className={path===n.href?'active':''} key={n.href} href={n.href} title={n.label}>{n.label}</Link>)}
       </nav>
       <div className="header-end">
         <button
@@ -60,8 +61,8 @@ export function Header(){
           <Languages size={16}/>
           <span>{lang==='hi'?'EN':'हि'}</span>
         </button>
-        <Link href="/saved" className="icon-link" aria-label={t.navSaved}><Bookmark size={20}/></Link>
-        <Link href="/reminders" className="icon-link" aria-label={t.navReminders}><Bell size={20}/></Link>
+        <Link href="/saved" className="icon-link" aria-label={t.navSaved} title={t.navSaved}><Bookmark size={20}/><span className="sr-only">{t.navSaved}</span></Link>
+        <Link href="/reminders" className="icon-link" aria-label={t.navReminders} title={t.navReminders}><Bell size={20}/><span className="sr-only">{t.navReminders}</span></Link>
         <button className="mobile-menu icon-link" aria-label={t.navMenu} aria-expanded={open} onClick={()=>setOpen(!open)}><Menu/></button>
       </div>
     </header>
@@ -105,33 +106,33 @@ export function Footer(){
               <span className="title-bar" />
             </h3>
             <ul className="portal-link-list">
-              <li><Link href="/yojna"><BookOpen size={15} className="link-icon" /><span>{t.footerVerifiedList}</span></Link></li>
+              <li><Link href="/yojna" title={t.footerVerifiedList}><BookOpen size={15} className="link-icon" /><span>{t.footerVerifiedList}</span></Link></li>
               <li>
-                <Link href="/">
+                <Link href="/" title={t.footerSchemeSearch}>
                   <Search size={15} className="link-icon" />
                   <span>{t.footerSchemeSearch}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/mere-liye">
+                <Link href="/mere-liye" title={t.navForMe}>
                   <Users size={15} className="link-icon" />
                   <span>{t.navForMe}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/praman-patr">
+                <Link href="/praman-patr" title={t.footerDocGuide}>
                   <FileText size={15} className="link-icon" />
                   <span>{t.footerDocGuide}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/guide">
+                <Link href="/guide" title={t.footerHowToApply}>
                   <BookOpen size={15} className="link-icon" />
                   <span>{t.footerHowToApply}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/state/madhya-pradesh">
+                <Link href="/state/madhya-pradesh" title={t.footerMPSchemes}>
                   <MapPin size={15} className="link-icon" />
                   <span>{t.footerMPSchemes}</span>
                 </Link>
@@ -147,31 +148,31 @@ export function Footer(){
             </h3>
             <ul className="portal-link-list">
               <li>
-                <Link href="/about">
+                <Link href="/about" title={t.footerAbout}>
                   <Info size={15} className="link-icon" />
                   <span>{t.footerAbout}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy">
+                <Link href="/privacy" title={t.footerPrivacy}>
                   <ShieldCheck size={15} className="link-icon" />
                   <span>{t.footerPrivacy}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/terms">
+                <Link href="/terms" title={t.footerTerms}>
                   <FileText size={15} className="link-icon" />
                   <span>{t.footerTerms}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/disclaimer">
+                <Link href="/disclaimer" title={t.footerDisclaimer2}>
                   <AlertCircle size={15} className="link-icon" />
                   <span>{t.footerDisclaimer2}</span>
                 </Link>
               </li>
               <li>
-                <Link href="/contact" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Link href="/contact" style={{ display: 'flex', alignItems: 'center', gap: '8px' }} title={t.footerContact}>
                   <Mail size={15} className="link-icon" style={{ flexShrink: 0 }} />
                   <span>{t.footerContact}</span>
                 </Link>
@@ -186,22 +187,22 @@ export function Footer(){
               <span className="title-bar" />
             </h3>
             <div className="portal-cards-grid">
-              <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
+              <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }} title="India.gov.in Portal">
                 <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=india.gov.in&sz=32" alt="India.gov.in Official Portal Icon" title="India.gov.in Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">India.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
+              <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }} title="myScheme Portal">
                 <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=myscheme.gov.in&sz=32" alt="myScheme Official Portal Icon" title="myScheme Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">myScheme</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
+              <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }} title="PM-KISAN Portal">
                 <Image loading="lazy" src="/pm-kisan-official.webp" alt="PM-KISAN Official Portal Icon" title="PM-KISAN Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">PM-KISAN</span>
                 <ArrowUpRight size={13} className="ext-icon" />
               </a>
-              <a href="https://www.mponline.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }}>
+              <a href="https://www.mponline.gov.in/" target="_blank" rel="noopener noreferrer" className="gov-portal-card" style={{ background: 'transparent', border: 'none', boxShadow: 'none', padding: '6px 0' }} title="MPOnline Portal">
                 <Image unoptimized loading="lazy" src="https://www.google.com/s2/favicons?domain=mponline.gov.in&sz=32" alt="MPOnline Official Portal Icon" title="MPOnline Portal" className="portal-card-icon" width={18} height={18} style={{borderRadius:'2px', objectFit:'contain'}} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="portal-card-text">MPOnline.gov.in</span>
                 <ArrowUpRight size={13} className="ext-icon" />
@@ -225,17 +226,21 @@ export function Footer(){
           </div>
 
           <nav className="footer-social-cluster" aria-label="सोशल मीडिया लिंक्स">
-            {SOCIAL_YOUTUBE_URL ? <a href={SOCIAL_YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="social-pill youtube" aria-label="YouTube">
+            {SOCIAL_YOUTUBE_URL ? <a href={SOCIAL_YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="social-pill youtube" aria-label="YouTube" title="YouTube">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span className="sr-only">YouTube</span>
             </a> : null}
-            {SOCIAL_X_URL ? <a href={SOCIAL_X_URL} target="_blank" rel="noopener noreferrer" className="social-pill x-twitter" aria-label="X (Twitter)">
+            {SOCIAL_X_URL ? <a href={SOCIAL_X_URL} target="_blank" rel="noopener noreferrer" className="social-pill x-twitter" aria-label="X (Twitter)" title="X (Twitter)">
               <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span className="sr-only">X (Twitter)</span>
             </a> : null}
-            {SOCIAL_FACEBOOK_URL ? <a href={SOCIAL_FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="social-pill facebook" aria-label="Facebook">
+            {SOCIAL_FACEBOOK_URL ? <a href={SOCIAL_FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="social-pill facebook" aria-label="Facebook" title="Facebook">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span className="sr-only">Facebook</span>
             </a> : null}
-            {SOCIAL_INSTAGRAM_URL ? <a href={SOCIAL_INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="social-pill instagram" aria-label="Instagram">
+            {SOCIAL_INSTAGRAM_URL ? <a href={SOCIAL_INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="social-pill instagram" aria-label="Instagram" title="Instagram">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span className="sr-only">Instagram</span>
             </a> : null}
           </nav>
 
@@ -256,7 +261,7 @@ export function Sidebar({category='all', showNewBadges = true}:{category?:string
       <h3 className="widget-title">{lang === 'hi' ? 'ट्रेंडिंग योजनाएं' : 'Trending Schemes'}</h3>
       <ul className="trending-list">
         {trendingLinksEnglish.map((link, idx) => (
-          <li key={idx}><Link href={link.href}>{link.label}{showNewBadges && <NewSchemeBadge href={link.href} />}</Link></li>
+          <li key={idx}><Link href={link.href} title={link.label}>{link.label}{showNewBadges && <NewSchemeBadge href={link.href} />}</Link></li>
         ))}
       </ul>
     </div>
@@ -266,7 +271,7 @@ export function Sidebar({category='all', showNewBadges = true}:{category?:string
       <ul className="trending-list updates">
         {latestUpdatesLinks.map((link, idx) => (
           <li key={idx}>
-            <Link href={link.href}>
+            <Link href={link.href} title={link.label}>
               {(showNewBadges || link.prefix !== 'New Scheme:') && <strong>{link.prefix}</strong>} {link.label}
             </Link>
           </li>

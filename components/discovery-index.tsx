@@ -39,7 +39,7 @@ export function DiscoveryIndex({
             <ul>
               {categoryLinks.map((item) => (
                 <li key={item.id}>
-                  <Link href={`/category/${item.id}`}>
+                  <Link href={`/category/${item.id}`} title={item.label}>
                     <span>{item.label}</span>
                     <span>{item.count}</span>
                   </Link>
@@ -54,7 +54,7 @@ export function DiscoveryIndex({
             <ul>
               {stateLinks.map((item) => (
                 <li key={item.id}>
-                  <Link href={`/state/${item.id}`}>
+                  <Link href={`/state/${item.id}`} title={item.label}>
                     <span>{item.label}</span>
                     <span>{item.count}</span>
                   </Link>

@@ -7,8 +7,8 @@ import { isIndexableScheme } from '@/lib/seo';
 import Link from 'next/link';
 import { DiscoveryIndex } from '@/components/discovery-index';
 
-const title = 'Sarkari Yojana 2026 — सभी सरकारी योजनाओं की सूची (All Government Schemes)';
-const description = 'Sarkari Yojana 2026 की सत्यापित सूची, पात्रता, दस्तावेज़, सरकारी योजना अपडेट और ऑनलाइन आवेदन की आधिकारिक जानकारी सरल हिन्दी में देखें।';
+const title = 'Sarkari Yojana 2026: सभी सरकारी योजनाओं की सूची';
+const description = 'Sarkari Yojana 2026 की सत्यापित सूची, लाभ, पात्रता, आवश्यक दस्तावेज़, और ऑनलाइन आवेदन की पूरी आधिकारिक जानकारी आसान हिन्दी में यहाँ प्राप्त करें।';
 export const metadata = {
   title: {absolute: title}, description,
   alternates: {canonical: '/'},

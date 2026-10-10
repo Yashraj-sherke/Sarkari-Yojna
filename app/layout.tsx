@@ -11,7 +11,7 @@ import { DEFAULT_OG_IMAGE, SITE_ALTERNATE_NAMES, SITE_NAME_EN, SITE_TAGLINE, SIT
 
 export const metadata: Metadata = {
   title: {default:`${SITE_NAME_EN} — MP योजनाएं, प्रमाण पत्र, पात्रता जानकारी`,template:`%s | ${SITE_NAME_EN}`},
-  description: 'मध्य प्रदेश और केंद्र सरकार की योजनाओं के लाभ, पात्रता, दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक स्रोत सरल हिन्दी में देखें।',
+  description: 'मध्य प्रदेश और केंद्र सरकार की योजनाओं के लाभ, पात्रता, आवश्यक दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक जानकारी सरल हिन्दी में यहाँ प्राप्त करें।',
   metadataBase:new URL(SITE_URL),
   applicationName:SITE_NAME_EN,
   robots:{index:true,follow:true},
