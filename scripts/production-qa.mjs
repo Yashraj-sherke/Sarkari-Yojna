@@ -1,10 +1,11 @@
 import { spawn } from 'child_process';
+import { auditHtml } from '../lib/seo-audit.mjs';
 
 const TARGET_URL = process.env.QA_URL || 'http://localhost:3000';
 const CRITICAL_ROUTES = [
   '/',
   '/yojna/pm-kisan',
-  '/category/agriculture',
+  '/category/kisan',
   '/state/madhya-pradesh',
   '/samachar',
 ];
@@ -47,7 +48,7 @@ async function runQA() {
   // 1. Robots.txt
   allPassed &= await runCheck('Robots.txt check', async () => {
     const { status, text } = await fetchPage('/robots.txt');
-    return status === 200 && text.includes('User-agent: *') && text.includes('Sitemap:');
+    return status === 200 && /^User-agent:\s*\*\s*$/im.test(text) && /^Sitemap:\s*https:\/\/www\.sarkariyojanasetu\.com\/sitemap\.xml\s*$/im.test(text);
   });
 
   // 2. Sitemap.xml
@@ -66,16 +67,15 @@ async function runQA() {
 
   // 4. Canonical & Noindex check on Scheme Page
   allPassed &= await runCheck('Canonical & Noindex check on /yojna/pm-kisan', async () => {
-    const { text } = await fetchPage('/yojna/pm-kisan');
-    const hasCanonical = text.includes('<link rel="canonical"');
-    const hasNoIndex = text.includes('noindex');
-    return hasCanonical && !hasNoIndex;
+    const { status, text, headers } = await fetchPage('/yojna/pm-kisan');
+    const page = auditHtml(text, 'https://www.sarkariyojanasetu.com/yojna/pm-kisan', headers?.get('x-robots-tag') ?? '');
+    return status === 200 && page.canonical === page.url && !page.noindex;
   });
 
   // 5. Structured Data Check
   allPassed &= await runCheck('Structured Data check on /yojna/pm-kisan', async () => {
     const { text } = await fetchPage('/yojna/pm-kisan');
-    return text.includes('application/ld+json') && text.includes('WebPage');
+    return auditHtml(text, 'https://www.sarkariyojanasetu.com/yojna/pm-kisan').structuredTypes.includes('Article');
   });
 
   console.log(`\n============================================================`);

@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-13T11:17:49.567Z",
+  "database": "isolated PGlite PostgreSQL via Neon HTTP adapter",
+  "checks": [
+    {
+      "name": "Anonymous admin writes are denied",
+      "passed": true
+    },
+    {
+      "name": "Spoofed identity headers do not authenticate",
+      "passed": true
+    },
+    {
+      "name": "Password login and protected sessions for all roles",
+      "passed": true
+    },
+    {
+      "name": "Cross-origin writes are rejected",
+      "passed": true
+    },
+    {
+      "name": "Unknown import fields are rejected server-side",
+      "passed": true
+    },
+    {
+      "name": "Draft persists without becoming public or verified",
+      "passed": true
+    },
+    {
+      "name": "Concurrent stale edits fail without losing data",
+      "passed": true
+    },
+    {
+      "name": "Editor cannot self-approve or publish",
+      "passed": true
+    },
+    {
+      "name": "Incomplete evidence cannot approve",
+      "passed": true
+    },
+    {
+      "name": "Reviewer cannot publish without publishing permission",
+      "passed": true
+    },
+    {
+      "name": "Explicit publish updates the public record",
+      "passed": true
+    },
+    {
+      "name": "Saving a new revision preserves the published version and clears approval",
+      "passed": true
+    },
+    {
+      "name": "Server-side user permissions reject editors and self-demotion",
+      "passed": true
+    },
+    {
+      "name": "Audit and history pages show persisted operations",
+      "passed": true
+    },
+    {
+      "name": "Listing, editing, import, settings and user screens load real records",
+      "passed": true
+    },
+    {
+      "name": "Duplicate creates a separate unverified draft",
+      "passed": true
+    },
+    {
+      "name": "Selected export preserves the canonical contract",
+      "passed": true
+    },
+    {
+      "name": "News save cannot publish or accept unknown status fields",
+      "passed": true
+    },
+    {
+      "name": "News needs reviewer evidence before explicit publication",
+      "passed": true
+    },
+    {
+      "name": "News edits preserve the public version and explicit unpublish removes it",
+      "passed": true
+    },
+    {
+      "name": "User creation, password login, role change and session revocation work",
+      "passed": true
+    },
+    {
+      "name": "CMS publication on an existing known slug overrides static legacy corrections",
+      "passed": true
+    }
+  ]
+}

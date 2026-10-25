@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   description: 'मध्य प्रदेश और केंद्र सरकार की योजनाओं के लाभ, पात्रता, आवश्यक दस्तावेज़, आवेदन प्रक्रिया और आधिकारिक जानकारी सरल हिन्दी में यहाँ प्राप्त करें।',
   metadataBase:new URL(SITE_URL),
   applicationName:SITE_NAME_EN,
-  robots:{index:true,follow:true},
-  openGraph:{locale:'hi_IN',type:'website',url:SITE_URL,siteName:SITE_NAME_EN,title:`${SITE_NAME_EN} — योजनाओं की सरल और स्रोत-सहित जानकारी`,description:SITE_TAGLINE,images:[{url:DEFAULT_OG_IMAGE,alt:`${SITE_NAME_EN} लोगो`}]},
-  twitter:{card:'summary',images:[DEFAULT_OG_IMAGE]},
+  robots:{index:true,follow:true,'max-image-preview':'large'},
+  openGraph:{locale:'hi_IN',type:'website',url:SITE_URL,siteName:SITE_NAME_EN,title:`${SITE_NAME_EN} — योजनाओं की सरल और स्रोत-सहित जानकारी`,description:SITE_TAGLINE,images:[{url:DEFAULT_OG_IMAGE,width:1200,height:630,alt:`${SITE_NAME_EN} — independent scheme information`}]},
+  twitter:{card:'summary_large_image',images:[DEFAULT_OG_IMAGE]},
   manifest:'/manifest.webmanifest',
   verification: process.env.GOOGLE_SITE_VERIFICATION ? {google: process.env.GOOGLE_SITE_VERIFICATION} : undefined,
   icons: {
@@ -45,11 +45,6 @@ export default function RootLayout({
           "alternateName": SITE_ALTERNATE_NAMES,
           "url": "https://www.sarkariyojanasetu.com/",
           "publisher": {"@id": "https://www.sarkariyojanasetu.com/#organization"},
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.sarkariyojanasetu.com/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           "@context": "https://schema.org",

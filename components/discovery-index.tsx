@@ -30,7 +30,7 @@ export function DiscoveryIndex({
       <div className="discovery-index-heading">
         <p className="eyebrow">योजनाओं की खोज</p>
         <h2 id="discovery-index-title">श्रेणी और राज्य के अनुसार योजनाएं</h2>
-        <p>समीक्षित योजनाओं को विषय या राज्य के आधार पर जल्दी खोजें।</p>
+        <p>योजनाओं को विषय या राज्य के आधार पर जल्दी खोजें। प्रत्येक लेख की समीक्षा स्थिति और आधिकारिक स्रोत देखें।</p>
       </div>
       <div className="discovery-index-columns">
         {categoryLinks.length > 0 && (

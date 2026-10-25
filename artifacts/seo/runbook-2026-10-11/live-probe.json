@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-11T12:11:02.932Z",
+  "results": [
+    {
+      "url": "http://sarkariyojanasetu.com/",
+      "status": 308,
+      "location": "https://sarkariyojanasetu.com/",
+      "robotsHeader": null
+    },
+    {
+      "url": "http://www.sarkariyojanasetu.com/",
+      "status": 308,
+      "location": "https://www.sarkariyojanasetu.com/",
+      "robotsHeader": null
+    },
+    {
+      "url": "https://sarkariyojanasetu.com/",
+      "status": 308,
+      "location": "https://www.sarkariyojanasetu.com/",
+      "robotsHeader": null
+    },
+    {
+      "url": "https://www.sarkariyojanasetu.com/",
+      "status": 200,
+      "location": null,
+      "robotsHeader": null
+    },
+    {
+      "url": "https://www.sarkariyojanasetu.com/robots.txt",
+      "status": 200,
+      "location": null,
+      "robotsHeader": null,
+      "body": "User-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /out/\nDisallow: /admin/\nDisallow: /admin-login/\n\nUser-Agent: Googlebot\nAllow: /\n\nUser-Agent: Google-Extended\nAllow: /\n\nUser-Agent: GPTBot\nAllow: /\n\nUser-Agent: OAI-SearchBot\nAllow: /\n\nUser-Agent: ClaudeBot\nAllow: /\n\nUser-Agent: PerplexityBot\nAllow: /\n\nUser-Agent: CCBot\nAllow: /\n\nSitemap: https://www.sarkariyojanasetu.com/sitemap.xml\n"
+    },
+    {
+      "url": "https://www.sarkariyojanasetu.com/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "robotsHeader": null,
+      "sitemapEntryCount": 192
+    }
+  ]
+}

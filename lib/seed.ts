@@ -3,6 +3,7 @@ import {officialContent} from './official-content.ts';
 import {mpSchemes} from './mp-schemes-data.ts';
 import {upSchemes} from './up-schemes-data.ts';
 import {enrichSchemeArticle} from './scheme-articles';
+import {reviewedStateSchemes} from './scheme-content/state-schemes-reviewed';
 const base={department:'संबंधित सरकारी विभाग',documents:['दस्तावेजों की सूची official portal पर जाँचें।'],steps:['पहले official source पर वर्तमान शर्तें पढ़ें।','दस्तावेजों और आवेदन के तरीके की पुष्टि करें।','आवेदन केवल संबंधित सरकारी पोर्टल या अधिकृत केंद्र पर करें।'],sourceNotes:'डेमो रिकॉर्ड। संक्षिप्त विवरण और पात्रता नियम केवल उत्पाद का अनुभव दिखाने के लिए हैं। पूरी सरकारी शर्तों का सत्यापन बाकी है।',applicationUrl:'',status:'REQUIRES_OFFICIAL_VERIFICATION' as const,isSample:true,verifiedAt:null,nextReviewAt:null};
 const originalSeeds:Scheme[]=[
   {...base,slug:'gobardhan-scheme',title:'गोबरधन योजना (GOBARdhan Scheme)',english:'GOBARdhan Scheme CBG',category:'kisan',state:'central',summary:'गोबर और जैविक कचरे से बनेगी CBG। ₹23,731 करोड़ की योजना के तहत परियोजनाओं और MSME को सहायता।',benefit:'₹2 करोड़ तक/TPD की कैपिटल सहायता',department:'जल शक्ति मंत्रालय / पेट्रोलियम मंत्रालय',sourceUrl:'https://sbm.gov.in/',priority:true,rules:[]},
@@ -51,6 +52,10 @@ for (const s of upSchemes) {
   if (!seedMap.has(s.slug)) {
     seedMap.set(s.slug, officialContent[s.slug] ? { ...s, ...officialContent[s.slug] } : s);
   }
+}
+
+for (const scheme of Object.values(reviewedStateSchemes)) {
+  seedMap.set(scheme.slug, { ...seedMap.get(scheme.slug), ...scheme });
 }
 
 export const seeds: Scheme[] = Array.from(seedMap.values()).map(enrichSchemeArticle);

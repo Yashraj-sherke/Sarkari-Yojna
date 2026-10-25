@@ -2,9 +2,10 @@ import type { Scheme } from './domain';
 import { rationArticle } from './scheme-content/ration-support';
 import { reviewedCorrections } from './scheme-content/reviewed-corrections';
 import { gobardhanFaqs } from './scheme-content/gobardhan-faqs';
+import { reviewedStateSchemes } from './scheme-content/state-schemes-reviewed';
 
 export function enrichSchemeArticle(input: Scheme): Scheme {
-  const correction = input.slug === 'ration-support' ? rationArticle : reviewedCorrections[input.slug];
+  const correction = reviewedStateSchemes[input.slug] ?? (input.slug === 'ration-support' ? rationArticle : reviewedCorrections[input.slug]);
   const s: Scheme = correction ? { ...input, ...correction } : { ...input };
   // Existing database records may predate the FAQ content added to the seed.
   if (s.slug === 'gobardhan-scheme' && !s.faqs?.length) s.faqs = gobardhanFaqs;

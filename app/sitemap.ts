@@ -6,7 +6,7 @@ import {guides} from '@/lib/guides';
 import {isIndexableScheme, contentDate} from '@/lib/seo';
 import {SITE_URL} from '@/lib/config';
 import {INFORMATION_UPDATED, informationPages} from '@/lib/information-pages';
-import {getAllSamachar, samacharQuality} from '@/lib/samachar';
+import {getAllSamachar} from '@/lib/samachar';
 export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
@@ -20,6 +20,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
     {url:`${SITE_URL}/yojna`,lastModified:latest},
     ...reviewedStates.map(state => ({url:`${SITE_URL}/state/${state}`,lastModified:schemes.filter(s => s.state === state).map(s => contentDate(s.lastUpdated ?? s.editorial?.reviewedAt)).filter((date): date is string => Boolean(date)).sort().at(-1)})),
     {url:`${SITE_URL}/guide`},
+    {url:`${SITE_URL}/samachar`,lastModified:updates.map(update => contentDate(update.date)).filter((date): date is string => Boolean(date)).sort().at(-1)},
+    {url:`${SITE_URL}/praman-patr`},
+    {url:`${SITE_URL}/status-directory`,lastModified:latest},
     ...updates.map(update => ({url:`${SITE_URL}/samachar/${update.slug}`,lastModified:contentDate(update.date)})),
     ...Object.keys(informationPages).map(key=>({
       url:`${SITE_URL}/${key}`,

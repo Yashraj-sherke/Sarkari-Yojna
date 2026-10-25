@@ -30,7 +30,7 @@ function RecentUpdates({ news, lang }: { news: any[]; lang: string }) {
   return (
     <div className="sarkari-ticker">
       <div className="sarkari-ticker-label">
-        {lang === 'hi' ? 'हाल के सत्यापित अपडेट' : 'Verified Updates'}
+        {lang === 'hi' ? 'हाल के लेख' : 'Recent articles'}
       </div>
       <div className="sarkari-ticker-marquee">
         <div className="sarkari-ticker-content">
@@ -392,9 +392,9 @@ function DirectoryContent({ schemes, centralSchemes, initialCategory = 'all', in
         <div className="mobile-only-trending" style={{marginTop: '30px', marginBottom: '30px', padding: '20px', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '8px'}}>
           <h2 style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e3a8a', marginBottom: '15px'}}>{lang === 'hi' ? 'ट्रेंडिंग योजनाएं' : 'Trending Schemes'}</h2>
           <ul style={{listStyle: 'none', paddingLeft: 0, margin: 0}}>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="PM Awas Yojana Gramin List 2026 (NEW) - Download PDF">PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/mukhyamantri-majhi-ladki-bahin-yojana" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="Majhi Ladki Bahin Yojana - Online Apply & Status Check">Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
-            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="PM Kisan Samman Nidhi Yojana 24th Installment Date">PM Kisan Samman Nidhi Yojana 24th Installment Date</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Awas Gramin: eligibility and application</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/category/mahila" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>महिला और बाल विकास योजनाएं</Link></li>
+            <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan: eligibility, e-KYC and status</Link></li>
             <li style={{marginBottom: '12px'}}><Link href="/yojna/ayushman-bharat" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="Ayushman Bharat Yojana: Download Card & Check Hospital List">Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
             <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-surya-ghar" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}} title="PM Surya Ghar Muft Bijli Yojana - Online Registration">PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
           </ul>

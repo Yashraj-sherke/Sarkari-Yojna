@@ -177,6 +177,7 @@ export function Footer(){
                   <span>{t.footerContact}</span>
                 </Link>
               </li>
+              <li><Link href="/status-directory">स्रोत और समीक्षा स्थिति / Review status</Link></li>
             </ul>
           </div>
 

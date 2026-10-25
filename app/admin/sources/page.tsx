@@ -1,3 +1,4 @@
+import { requireAdminPage } from '@/lib/admin-auth';
 import { db } from '@/lib/server';
 import Link from 'next/link';
 
@@ -5,6 +6,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Verification Logs - Admin' };
 
 export default async function SourcesVerificationPage() {
+  await requireAdminPage();
   const sql = db();
   if (!sql) return <div className="text-center py-20 text-slate-500">Database not connected</div>;
 
@@ -76,3 +78,5 @@ export default async function SourcesVerificationPage() {
     </div>
   );
 }
+
+

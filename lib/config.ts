@@ -4,7 +4,7 @@ export const SITE_TAGLINE = 'सरकारी योजनाओं की स
 export const SITE_ALTERNATE_NAMES = ['सरकारी योजना', 'Sarkari Yojana Setu', 'sarkariyojanasetu.com'];
 // Public identity must not change with preview/deployment environment variables.
 export const SITE_URL = 'https://www.sarkariyojanasetu.com';
-export const DEFAULT_OG_IMAGE = '/sarkari-yojana-map-logo.webp';
+export const DEFAULT_OG_IMAGE = '/og-default.png';
 export const SOCIAL_X_URL = 'https://x.com/sarkariyojana__';
 export const SOCIAL_INSTAGRAM_URL = 'https://www.instagram.com/sarkariyojanasetu/';
 export const SOCIAL_YOUTUBE_URL = '';

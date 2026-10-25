@@ -1,14 +1,15 @@
 import {notFound} from 'next/navigation';
 import {getScheme,db,allSchemes} from '@/lib/server';
 import { categories } from '@/lib/domain';
-import { isIndexableScheme, contentDate, schemeSearchPresentation } from '@/lib/seo';
+import { isIndexableScheme, isPublicScheme, contentDate, schemeSearchPresentation } from '@/lib/seo';
+import { selectRelatedSchemes } from '@/lib/related-schemes';
 import { officialImages } from '@/lib/scheme-images';
 
 import {YojnaDetailClient} from '@/components/yojna-detail-client';
 import {getSchemeTags,getSchemeEligibilityList,getSchemeProcess,getSchemeFaqs} from '@/lib/scheme-details';
 import {getAllSamachar, getSamacharRelatedSchemeSlugs} from '@/lib/samachar';
-import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL, AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_LINKEDIN_URL} from '@/lib/config';
-export const revalidate = 0; // 1 hour caching for blazingly fast TTFB - forcing reload
+import {DEFAULT_OG_IMAGE, SITE_NAME_EN, SITE_URL, AUTHOR_NAME, AUTHOR_LINKEDIN_URL} from '@/lib/config';
+export const revalidate = 3600;
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
@@ -18,14 +19,14 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   }
   const isPublic=isIndexableScheme(s);
   const {title, description: defaultDesc}=schemeSearchPresentation(s);
-  const desc = s.seoDescription || defaultDesc;
+  const desc = s.editorial?.verificationStatus === 'VERIFIED_CORE' ? (s.seoDescription || defaultDesc) : defaultDesc;
   const image= s.imageUrl || officialImages[s.slug]?.src || DEFAULT_OG_IMAGE;
 
   return {
     title: title,
     description:desc,
     alternates:{canonical:'/yojna/'+slug},
-    robots:{index:isPublic,follow:true,...(isPublic ? {maxImagePreview:'large' as const} : {})},
+    robots:{index:isPublic,follow:true,...(isPublic ? {'max-image-preview':'large' as const} : {})},
     openGraph:{title: title,description:desc,url:`${SITE_URL}/yojna/${slug}`,siteName:SITE_NAME_EN,locale:'hi_IN',type:'article',images:[{url:image,alt:s.title}]},
     twitter:{card:'summary_large_image',title: title,description:desc,images:[image]},
   };
@@ -34,7 +35,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 export default async function Page({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const s=await getScheme(slug);
-  if(!s || (s.status !== 'ACTIVE' && s.status !== 'CLOSED' && s.status !== 'ARCHIVED')) { return notFound(); }
+  if(!s || !isPublicScheme(s)) { return notFound(); }
   const d=db();
   // Feedback is optional: database downtime must not make the article unavailable.
   const cRes=d?await d`SELECT count(*) AS n FROM signals t JOIN sessions u ON t.session_id=u.id WHERE slug=${slug} AND u.expires_at>${new Date().toISOString()}`.catch(()=>[{n:0}]):[{n:0}];
@@ -48,39 +49,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   // Build rich structured data
   const isActive=isIndexableScheme(s);
   const schemesList = await allSchemes();
-  const availableIndexableSchemes = schemesList.filter(x => x.slug !== s.slug && isIndexableScheme(x));
-  
-  // Phase 24 Logic
-  const relatedSet = new Set<typeof schemesList[0]>();
-  
-  // 1. Hardcoded
-  if (s.relatedSchemeSlugs?.length) {
-    availableIndexableSchemes.forEach(x => {
-      if (s.relatedSchemeSlugs?.includes(x.slug)) relatedSet.add(x);
-    });
-  }
-
-  // 2. Same Target Audience
-  if (s.targetAudience?.length && relatedSet.size < 3) {
-    availableIndexableSchemes.forEach(x => {
-      if (x.targetAudience?.some(t => s.targetAudience?.includes(t))) relatedSet.add(x);
-    });
-  }
-
-  // 3. Same category + same state
-  if (relatedSet.size < 3) {
-    availableIndexableSchemes
-      .filter(x => x.category === s.category)
-      .sort((a, b) => Number(b.state === s.state) - Number(a.state === s.state))
-      .forEach(x => relatedSet.add(x));
-  }
-
-  const relatedSchemes = Array.from(relatedSet).slice(0, 3);
-  const relatedSchemesMapped = relatedSchemes.map(rs => ({
-    slug: rs.slug,
-    title: rs.title,
-    english: rs.english,
-  }));
+  const relatedSchemes = selectRelatedSchemes(s, schemesList);
   const relatedUpdates = (await getAllSamachar())
     .filter(update => getSamacharRelatedSchemeSlugs(update).includes(s.slug))
     .slice(0, 3)
@@ -99,7 +68,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     itemListElement:breadcrumbItems
   };
 
-  const faqSchema = faqs.length > 0 ? {
+  const faqSchema = faqs.length > 0 && s.editorial?.verificationStatus === 'VERIFIED_CORE' ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map(f => ({
@@ -117,12 +86,11 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     description: s.summary,
     inLanguage: 'hi-IN',
     url: `${SITE_URL}/yojna/${s.slug}`,
-    datePublished: contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
+    // No recorded first-publication date exists; do not invent one from an edit.
     dateModified: contentDate(s.lastUpdated ?? s.editorial?.reviewedAt),
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: AUTHOR_NAME,
-      jobTitle: AUTHOR_ROLE,
       url: `${SITE_URL}/`,
       ...(AUTHOR_LINKEDIN_URL ? { sameAs: [AUTHOR_LINKEDIN_URL] } : {}),
     },
@@ -145,7 +113,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       eligibilityList={eligibilityList} 
       processInfo={processInfo} 
       faqs={faqs} 
-      relatedSchemes={relatedSchemesMapped as any} 
+      relatedSchemes={relatedSchemes}
       relatedUpdates={relatedUpdates}
       initialCount={c?.n??0} 
     />

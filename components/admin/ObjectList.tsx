@@ -1,0 +1,7 @@
+'use client';
+import { Field,Repeat } from './Fields';
+export function ObjectList({label,items,fields,onChange}:{label:string;items:Record<string,unknown>[];fields:Record<string,'text'|'list'>;onChange:(items:Record<string,unknown>[])=>void}){
+ const update=(index:number,key:string,value:unknown)=>onChange(items.map((item,i)=>i===index?{...item,[key]:value}:item));
+ function move(index:number,delta:number){const next=[...items];[next[index],next[index+delta]]=[next[index+delta],next[index]];onChange(next);}
+ return <fieldset className="space-y-3"><legend className="font-bold">{label}</legend>{items.map((item,index)=><section key={index} className="border rounded p-3 space-y-3">{Object.entries(fields).map(([key,type])=>type==='list'?<Repeat key={key} label={key} items={(item[key] as string[])??[]} onChange={value=>update(index,key,value)}/>:<Field key={key} label={key} value={String(item[key]??'')} onChange={value=>update(index,key,value)} multiline/>)}<div className="flex gap-4"><button type="button" onClick={()=>onChange(items.filter((_,i)=>i!==index))}>हटाएँ</button><button type="button" disabled={!index} onClick={()=>move(index,-1)}>↑ ऊपर</button><button type="button" disabled={index===items.length-1} onClick={()=>move(index,1)}>↓ नीचे</button></div></section>)}<button type="button" onClick={()=>onChange([...items,Object.fromEntries(Object.entries(fields).map(([key,type])=>[key,type==='list'?[]:'']))])}>+ जोड़ें</button></fieldset>;
+}

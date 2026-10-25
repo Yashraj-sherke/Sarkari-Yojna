@@ -1,3 +1,4 @@
+import { safeArticleHtml } from '@/lib/safe-article';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -91,9 +92,9 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
             {s.body.map((p, idx) => {
               const isBlock = /^<(h[1-6]|ul|ol|div|blockquote)/i.test(p.trim());
               return isBlock ? (
-                <div key={idx} dangerouslySetInnerHTML={{ __html: p }} style={{marginBottom: '1.5em'}} className="samachar-block" />
+                <div key={idx} dangerouslySetInnerHTML={{ __html: safeArticleHtml(p) }} style={{marginBottom: '1.5em'}} className="samachar-block" />
               ) : (
-                <p key={idx} dangerouslySetInnerHTML={{ __html: p }} style={{marginBottom: '1.5em'}} />
+                <p key={idx} dangerouslySetInnerHTML={{ __html: safeArticleHtml(p) }} style={{marginBottom: '1.5em'}} />
               );
             })}
           </div>
@@ -114,3 +115,4 @@ export default async function SamacharDetail({params}:{params:Promise<{slug:stri
     </div>
   );
 }
+

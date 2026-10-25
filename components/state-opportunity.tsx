@@ -17,8 +17,8 @@ export function StateOpportunity({ stateName, schemes }: { stateName: string; sc
 
   return (
     <section className="page-wrap panel state-opportunity" aria-labelledby="state-opportunity-title">
-      <h1 id="state-opportunity-title">{stateName} की समीक्षित सरकारी योजनाएं</h1>
-      <p>{stateName} से जुड़ी उपलब्ध समीक्षित योजनाओं को विषय और हाल की समीक्षा के आधार पर देखें। अंतिम पात्रता और आवेदन नियम संबंधित विभाग के आधिकारिक स्रोत से मिलाएं।</p>
+      <h2 id="state-opportunity-title">{stateName} की सरकारी योजनाएं</h2>
+      <p>{stateName} से जुड़ी उपलब्ध योजनाओं को विषय के आधार पर देखें। अंतिम पात्रता और आवेदन नियम संबंधित विभाग के आधिकारिक स्रोत से मिलाएं।</p>
       <div className="state-opportunity-grid">
         <div>
           <h2>श्रेणी के अनुसार</h2>
@@ -27,7 +27,7 @@ export function StateOpportunity({ stateName, schemes }: { stateName: string; sc
           </ul>
         </div>
         <div>
-          <h2>हाल में समीक्षा की गई</h2>
+          <h2>हाल में संपादित लेख</h2>
           <ul className="flat-list">
             {recent.map(scheme => <li key={scheme.slug}><Link className="inline-link" href={`/yojna/${scheme.slug}`}>{scheme.title}</Link></li>)}
           </ul>

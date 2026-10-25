@@ -2,6 +2,11 @@
 const nextConfig = {
   serverExternalPackages: ["cloudflare:workers"],
   turbopack: {},
+  experimental: process.env.BUILD_LOW_MEMORY === 'true' ? { cpus: 2 } : {},
+  webpack(config) {
+    if (process.env.BUILD_NO_CACHE === 'true') config.cache = false;
+    return config;
+  },
   images: {
     localPatterns: [
       { pathname: '/**', search: '' },
@@ -14,6 +19,12 @@ const nextConfig = {
 
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'sarkariyojanasetu.com' }],
+        destination: 'https://www.sarkariyojanasetu.com/:path*',
+        permanent: true,
+      },
       { source: "/state/central", destination: "/", permanent: true },
     ];
   },

@@ -1,4 +1,5 @@
 import type { Scheme } from './domain';
+import { stateNames } from './state-names';
 
 interface SchemeDetailMeta {
   tags?: string[];
@@ -126,7 +127,7 @@ export function getSchemeTags(s: Scheme): string[] {
   if (meta?.tags && meta.tags.length) return meta.tags;
 
   const catTags = defaultCategoryTags[s.category] || ['सरकारी योजना', 'कल्याणकारी कार्यक्रम'];
-  const stateTag = s.state === 'madhya-pradesh' ? 'मध्य प्रदेश' : 'केंद्र सरकार';
+  const stateTag = stateNames[s.state] ?? s.state;
   return [...catTags, stateTag];
 }
 
@@ -151,7 +152,7 @@ export function getSchemeProcess(s: Scheme): {
 }
 
 export function getSchemeFaqs(s: Scheme): { q: string; a: string }[] {
-  if (s.faqs?.length) return s.faqs.map(f => ({q: f.question, a: f.answer}));
+  if (s.faqs !== undefined) return s.faqs.map(f => ({q: f.question, a: f.answer}));
   const meta = customSchemeMeta[s.slug];
   if (s.editorial?.publicationStatus === 'REVIEWED' && meta?.faqs?.length) return meta.faqs;
   return [];

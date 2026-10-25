@@ -113,7 +113,7 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
   return (
     <>
       <Directory 
-        schemes={schemes.map(summarizeScheme)} 
+        schemes={schemes.filter(isIndexableScheme).map(summarizeScheme)}
         initialCategory={id} 
         initialPage={page} 
         paginationBasePath={`/category/${id}`}

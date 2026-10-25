@@ -1,0 +1,7 @@
+Isolated admin PostgreSQL test database ready; production DB disabled.
+▲ Next.js 16.4.0
+- Local:         http://127.0.0.1:3217
+- Network:       http://127.0.0.1:3217
+✓ Ready in 747ms
+✓ Running next.config.mjs took 48ms
+The `fetchConnectionCache` option is deprecated (now always `true`)

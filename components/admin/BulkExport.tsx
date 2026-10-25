@@ -1,0 +1,4 @@
+'use client';
+import { useState } from 'react';
+import type { Scheme } from '@/lib/domain';
+export function BulkExport({children}:{children:React.ReactNode}){const[error,setError]=useState('');return <form onSubmit={async e=>{e.preventDefault();const slugs=new FormData(e.currentTarget).getAll('selected');try{const response=await fetch('/admin/api/export',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slugs})});const result=await response.json() as {schemes:Scheme[];error?:string};if(!response.ok)throw new Error(result.error);const url=URL.createObjectURL(new Blob([JSON.stringify(result.schemes,null,2)],{type:'application/json;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='selected-schemes.json';link.click();URL.revokeObjectURL(url);}catch(error){setError((error as Error).message);}}}>{children}<button className="btn mt-4">चयनित योजनाओं का JSON export</button><p role="alert">{error}</p></form>;}

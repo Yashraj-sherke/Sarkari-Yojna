@@ -1,0 +1,4927 @@
+{
+  "snapshotDate": "2026-10-11",
+  "scope": "Repository fallback catalogue; no production database or Search Console access.",
+  "counts": {
+    "records": 168,
+    "public": 165,
+    "reviewed": 7
+  },
+  "searchEvidence": "Historical runbook metrics only; current exports unavailable.",
+  "records": [
+    {
+      "slug": "gobardhan-scheme",
+      "title": "गोबरधन योजना (GOBARdhan Scheme)",
+      "state": "central",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sbm.gov.in/",
+      "applicationUrl": "https://sbm.gov.in/",
+      "relatedSlugs": [
+        "pm-kisan",
+        "pm-fasal-bima",
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sabki-yojana-sabka-vikas",
+      "title": "सबकी योजना, सबका विकास (जन योजना अभियान)",
+      "state": "central",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://panchayat.gov.in/",
+      "applicationUrl": "https://egramswaraj.gov.in/",
+      "relatedSlugs": [
+        "pm-awas-shahri",
+        "pm-surya-ghar",
+        "pm-awas-gramin",
+        "ladli-behna-awas-yojana",
+        "gramin-path-roshan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "pm-kisan",
+      "title": "प्रधानमंत्री किसान सम्मान निधि",
+      "state": "central",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-09-23",
+      "officialSource": "https://pmkisan.gov.in/",
+      "applicationUrl": "https://pmkisan.gov.in/",
+      "relatedSlugs": [
+        "gobardhan-scheme",
+        "pm-fasal-bima",
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "ladli-behna",
+      "title": "मुख्यमंत्री लाड़ली बहना योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmladlibahna.mp.gov.in/",
+      "applicationUrl": "https://cmladlibahna.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-majhi-ladki-bahin-yojana",
+      "title": "मुख्यमंत्री माझी लाडकी बहीण योजना",
+      "state": "maharashtra",
+      "category": "mahila",
+      "status": "REQUIRES_OFFICIAL_VERIFICATION",
+      "indexableInRepository": false,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ladakibahin.maharashtra.gov.in/",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "pm-ujjwala",
+        "sukanya-samriddhi"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "ayushman-bharat",
+      "title": "आयुष्मान भारत – प्रधानमंत्री जन आरोग्य योजना",
+      "state": "central",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://nha.gov.in/PM-JAY",
+      "applicationUrl": "https://beneficiary.nha.gov.in/",
+      "relatedSlugs": [
+        "pm-jeevan-jyoti-bima",
+        "pm-suraksha-bima",
+        "haryana-chiranjeevi-yojana",
+        "ayushman-card-hospital-list-mp",
+        "mukhyamantri-bal-hriday-upchar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ayushman-card-hospital-list-mp",
+      "title": "Ayushman Card Hospital List MP 2026",
+      "state": "madhya-pradesh",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ayushmanbharat.mp.gov.in/",
+      "applicationUrl": "https://hem.nha.gov.in/search",
+      "relatedSlugs": [
+        "mukhyamantri-bal-hriday-upchar-yojana",
+        "ayushman-bharat",
+        "pm-jeevan-jyoti-bima",
+        "pm-suraksha-bima"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-awas-gramin",
+      "title": "प्रधानमंत्री आवास योजना – ग्रामीण",
+      "state": "central",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmayg.nic.in/",
+      "applicationUrl": "https://pmayg.nic.in/",
+      "relatedSlugs": [
+        "pm-awas-shahri",
+        "pm-surya-ghar",
+        "sabki-yojana-sabka-vikas",
+        "ladli-behna-awas-yojana",
+        "gramin-path-roshan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-scholarship",
+      "title": "मध्य प्रदेश राज्य छात्रवृत्ति (MP State Scholarship)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "REQUIRES_OFFICIAL_VERIFICATION",
+      "indexableInRepository": false,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://datia.nic.in/en/service/scholarship-portal/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "social-pension",
+      "title": "समग्र सामाजिक सुरक्षा पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/schemes/view/WlFNUHFJc2dpRHFIcVI1RlEyb3Q1UT09",
+      "applicationUrl": "https://socialjustice.mp.gov.in/uploads/schemes/ssp_sanctioned_ordere_form_1.pdf",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "employment-support",
+      "title": "मुख्यमंत्री उद्यम क्रांति योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmhelpline.mp.gov.in/Schmedetail.aspx?Schemeid=915",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ration-support",
+      "title": "राष्ट्रीय खाद्य सुरक्षा अधिनियम के तहत राशन",
+      "state": "central",
+      "category": "khadya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-09-23",
+      "officialSource": "https://nfsa.gov.in/portal/Coverage_Entitlements_NFSA_AA",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "deendayal-antodaya-rasoi-yojana",
+        "deendayal-rasoi-yojana",
+        "ration-aapke-dwar-yojana",
+        "yuva-annadoot-yojana"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "mukhyamantri-seekho-kamao",
+      "title": "मुख्यमंत्री सीखो कमाओ योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mmsky.mp.gov.in/",
+      "applicationUrl": "https://mmsky.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "sambal-do-yojana",
+        "sambal-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "kisan-kalyan",
+      "title": "मुख्यमंत्री किसान कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpwcdmis.gov.in/",
+      "applicationUrl": "https://pmkisan.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana",
+        "surajdhara-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-gaon-ki-beti",
+      "title": "MP गांव की बेटी योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-board-laptop",
+      "title": "MP मुफ्त लैपटॉप योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://shikshaportal.mp.gov.in/",
+      "applicationUrl": "https://shikshaportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sambal-yojana",
+      "title": "मुख्यमंत्री जन कल्याण संबल योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://sambal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ladli-laxmi",
+      "title": "लाड़ली लक्ष्मी योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ladlilaxmi.mp.gov.in/",
+      "applicationUrl": "https://ladlilaxmi.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-vishwakarma",
+      "title": "प्रधानमंत्री विश्वकर्मा योजना",
+      "state": "central",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmvishwakarma.gov.in/",
+      "applicationUrl": "https://pmvishwakarma.gov.in/",
+      "relatedSlugs": [
+        "pm-mudra",
+        "pm-svanidhi",
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-surya-ghar",
+      "title": "पीएम सूर्य घर: मुफ्त बिजली योजना",
+      "state": "central",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmsuryaghar.gov.in/",
+      "applicationUrl": "https://pmsuryaghar.gov.in/",
+      "relatedSlugs": [
+        "pm-awas-shahri",
+        "sabki-yojana-sabka-vikas",
+        "pm-awas-gramin",
+        "ladli-behna-awas-yojana",
+        "gramin-path-roshan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-mudra",
+      "title": "प्रधानमंत्री मुद्रा योजना (PMMY)",
+      "state": "central",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://financialservices.gov.in/pradhan-mantri-mudra-yojana-pmmy",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "pm-svanidhi",
+        "pm-vishwakarma",
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date"
+      ]
+    },
+    {
+      "slug": "atal-pension",
+      "title": "अटल पेंशन योजना (APY)",
+      "state": "central",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://financialservices.gov.in/",
+      "applicationUrl": "https://myscheme.gov.in/schemes/apy",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-ujjwala",
+      "title": "प्रधानमंत्री उज्ज्वला योजना 2.0",
+      "state": "central",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmuy.gov.in/",
+      "applicationUrl": "https://pmuy.gov.in/",
+      "relatedSlugs": [
+        "sukanya-samriddhi",
+        "rajasthan-palanhar-yojana",
+        "up-kanya-sumangala-yojana",
+        "ladli-behna",
+        "ladli-laxmi"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sukanya-samriddhi",
+      "title": "सुकन्या समृद्धि योजना (SSY)",
+      "state": "central",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://nsiindia.gov.in/",
+      "applicationUrl": "https://nsiindia.gov.in/",
+      "relatedSlugs": [
+        "pm-ujjwala",
+        "rajasthan-palanhar-yojana",
+        "up-kanya-sumangala-yojana",
+        "ladli-behna",
+        "ladli-laxmi"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-jeevan-jyoti-bima",
+      "title": "प्रधानमंत्री जीवन ज्योति बीमा योजना (PMJJBY)",
+      "state": "central",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://jansuraksha.gov.in/",
+      "applicationUrl": "https://jansuraksha.gov.in/",
+      "relatedSlugs": [
+        "ayushman-bharat",
+        "pm-suraksha-bima",
+        "haryana-chiranjeevi-yojana",
+        "ayushman-card-hospital-list-mp",
+        "mukhyamantri-bal-hriday-upchar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-suraksha-bima",
+      "title": "प्रधानमंत्री सुरक्षा बीमा योजना (PMSBY)",
+      "state": "central",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://jansuraksha.gov.in/",
+      "applicationUrl": "https://jansuraksha.gov.in/",
+      "relatedSlugs": [
+        "ayushman-bharat",
+        "pm-jeevan-jyoti-bima",
+        "haryana-chiranjeevi-yojana",
+        "ayushman-card-hospital-list-mp",
+        "mukhyamantri-bal-hriday-upchar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-awas-shahri",
+      "title": "प्रधानमंत्री आवास योजना – शहरी 2.0 (PMAY-U)",
+      "state": "central",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmaymis.gov.in/",
+      "applicationUrl": "https://pmaymis.gov.in/",
+      "relatedSlugs": [
+        "pm-surya-ghar",
+        "sabki-yojana-sabka-vikas",
+        "pm-awas-gramin",
+        "ladli-behna-awas-yojana",
+        "gramin-path-roshan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-fasal-bima",
+      "title": "प्रधानमंत्री फसल बीमा योजना (PMFBY)",
+      "state": "central",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmfby.gov.in/",
+      "applicationUrl": "https://pmfby.gov.in/",
+      "relatedSlugs": [
+        "pm-kisan",
+        "gobardhan-scheme",
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-svanidhi",
+      "title": "पीएम स्वनिधि (PM SVANidhi)",
+      "state": "central",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://pmsvanidhi.mohua.gov.in/",
+      "applicationUrl": "https://pmsvanidhi.mohua.gov.in/",
+      "relatedSlugs": [
+        "pm-mudra",
+        "pm-vishwakarma",
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "social-security-pension-portal-mp",
+      "title": "Social Security Pension Portal MP",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialsecurity.mp.gov.in/Home.aspx",
+      "applicationUrl": "https://socialsecurity.mp.gov.in/Home.aspx",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date"
+      ]
+    },
+    {
+      "slug": "surajdhara-yojana",
+      "title": "सूरजधारा योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-ladli-laxmi-yojana",
+      "title": "मुख्यमंत्री लाड़ली लक्ष्मी योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ladlilaxmi.mp.gov.in/",
+      "applicationUrl": "https://ladlilaxmi.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-arthik-kalyan-yojana",
+      "title": "मुख्यमंत्री आर्थिक कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://msme.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kanya-vivah-yojana",
+      "title": "मध्य प्रदेश मुख्यमंत्री कन्या विवाह योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-teerth-darshan-yojana",
+      "title": "मध्यप्रदेश मुख्यमंत्री तीर्थ दर्शन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tirthdarshan.mp.gov.in/",
+      "applicationUrl": "https://tirthdarshan.mp.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mausam-aadharit-fasal-bima-yojana",
+      "title": "मौसम आधारित फसल बीमा योजना (WBCIS)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://pmfby.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "aushadhiya-fasal-vistar-yojana",
+      "title": "औषधीय एवं सुगन्धित फसल क्षेत्र विस्तार योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "phal-paudh-ropan-yojana",
+      "title": "फल पौध रोपण योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "masala-kshetra-vistar-yojana",
+      "title": "मसाला क्षेत्र विस्तार योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sabzi-kshetra-vistar-yojana",
+      "title": "सब्ज़ी क्षेत्र विस्तार योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sanrakshit-kheti-protsahan-yojana",
+      "title": "संरक्षित खेती प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "udyaniki-yantrikaran-yojana",
+      "title": "उद्यानिकी विकास हेतु यंत्रीकरण योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "golden-kitchen-garden-yojana",
+      "title": "घरेलू बागवानी की आदर्श योजना (गोल्डन किचन / बाड़ी योजना)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://horticulture.mponline.gov.in/",
+      "applicationUrl": "https://mpfsts.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "bhavantar-bhugtan-yojana",
+      "title": "भावान्तर भुगतान योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://saara.mp.gov.in/",
+      "applicationUrl": "https://saara.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana",
+        "surajdhara-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "krishak-prashikshan-bhraman-yojana",
+      "title": "कृषक प्रशिक्षण तथा भ्रमण कार्यक्रम (ATMA योजना)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "krishi-mela-pradarshani-yojana",
+      "title": "कृषि मेला एवं प्रदर्शनी योजना (विस्तार कार्यक्रम)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mahila-krishi-bhagidari-yojana",
+      "title": "कृषि में महिलाओं की भागीदारी योजना (MAPWA)",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "kisan-mitra-prashikshan-yojana",
+      "title": "कृषक मित्र (किसान मित्र) योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "jaivik-kheti-protsahan-yojana",
+      "title": "परम्परागत कृषि विकास योजना (जैविक खेती प्रोत्साहन)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "balram-tal-yojana",
+      "title": "बलराम ताल योजना (खेत तालाब)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana",
+        "surajdhara-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "annapurna-beej-yojana",
+      "title": "अन्नपूर्णा योजना (बीज अदला-बदली)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "bailgadi-anudan-yojana",
+      "title": "बैलगाड़ी / बैल जोड़ी अनुदान योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ambedkar-medhavi-vidyarthi-puraskar",
+      "title": "डॉ. बी.आर. अम्बेडकर मेधावी विद्यार्थी पुरस्कार योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scdevelopmentmp.nic.in/",
+      "applicationUrl": "https://scdevelopmentmp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "krishi-jalvayu-pilot-project",
+      "title": "कृषि जलवायु क्षेत्र हेतु पायलेट प्रोजेक्ट",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sinchai-kshamta-vikas-yojana",
+      "title": "सिंचाई क्षमता विकास योजना (ड्रिप/स्प्रिंकलर अनुदान)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpfsts.mp.gov.in/",
+      "applicationUrl": null,
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "satat-ganna-vikas-yojana",
+      "title": "सतत गन्ना विकास योजना (गन्ना मशीनीकरण)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://farmer.mpdage.mp.gov.in/",
+      "applicationUrl": "https://farmer.mpdage.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-videsh-krishi-yatra",
+      "title": "मुख्यमंत्री विदेश अध्ययन यात्रा",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mitti-parikshan-yojana",
+      "title": "मृदा स्वास्थ्य कार्ड (मिट्टी परीक्षण) योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://soilhealth.dac.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "beej-gram-yojana",
+      "title": "बीज ग्राम योजना (Seed Village Programme)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "macro-management-scheme-krishi",
+      "title": "मैक्रो मैनेजमेंट स्कीम (कृषि)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "gramin-engineer-yojana",
+      "title": "ग्रामीण इंजीनियर योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://skill.mponline.gov.in/",
+      "applicationUrl": "https://skill.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "apradh-pidit-pratikar-yojana",
+      "title": "अपराध पीड़ित प्रतिकर (Victim Compensation) योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpslsa.mp.gov.in/",
+      "applicationUrl": "https://mpslsa.mp.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "swarna-jayanti-gram-swarojgar-yojana",
+      "title": "स्वर्ण जयंती ग्राम स्वरोज़गार योजना (अब आजीविका / NRLM)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://prd.mp.gov.in/nrlm/",
+      "applicationUrl": "https://prd.mp.gov.in/nrlm/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kaushal-samvardhan-yojana",
+      "title": "मुख्यमंत्री कौशल संवर्धन योजना (MMKSY)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ssdm.mp.gov.in/",
+      "applicationUrl": "https://ssdm.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-yuva-udyami-yojana",
+      "title": "मुख्यमंत्री युवा उद्यमी योजना (अब उद्यम क्रान्ति योजना में विलय)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://msme.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-mazdoor-suraksha-yojana",
+      "title": "मुख्यमंत्री मज़दूर सुरक्षा योजना (अब संबल योजना)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://sambal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "nishaktjan-vivah-protsahan-yojana",
+      "title": "नि:शक्तजनों हेतु विवाह प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialsecurity.mp.gov.in/",
+      "applicationUrl": "https://socialsecurity.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-bal-hriday-upchar-yojana",
+      "title": "मुख्यमंत्री बाल हृदय उपचार योजना",
+      "state": "madhya-pradesh",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://health.mp.gov.in/",
+      "applicationUrl": "https://health.mp.gov.in/",
+      "relatedSlugs": [
+        "ayushman-card-hospital-list-mp",
+        "ayushman-bharat",
+        "pm-jeevan-jyoti-bima",
+        "pm-suraksha-bima"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "iklauti-beti-scholarship-yojana",
+      "title": "मध्य प्रदेश इकलौती बेटी छात्रवृत्ति योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://educationportal.mp.gov.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "gopal-protsahan-yojana",
+      "title": "मध्य प्रदेश गोपाल पुरस्कार योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://animalhusbandry.mp.gov.in/",
+      "applicationUrl": "https://animalhusbandry.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-avivahit-pension-yojana",
+      "title": "मुख्यमंत्री अविवाहित पेंशन योजना (कल्याणी)",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialsecurity.mp.gov.in/",
+      "applicationUrl": "https://socialsecurity.mp.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-asangathit-mazdoor-yojana",
+      "title": "मुख्यमंत्री असंगठित मजदूर कल्याण (संबल 2.0) योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://sambal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-swarojgar-yojana",
+      "title": "मुख्यमंत्री स्वरोज़गार योजना (उद्यम क्रांति)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://msme.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-medhavi-vidyarthi-yojana",
+      "title": "मुख्यमंत्री मेधावी विद्यार्थी योजना (MMVY)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://medhavikalyan.mp.gov.in/",
+      "applicationUrl": "https://medhavikalyan.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "kisan-kalyan-yojana",
+      "title": "मुख्यमंत्री किसान कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://saara.mp.gov.in/",
+      "applicationUrl": "https://saara.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "mukhyamantri-solar-pump-yojana",
+        "surajdhara-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "krishak-jeevan-kalyan-yojana",
+      "title": "मुख्यमंत्री कृषक जीवन कल्याण योजना (मंडी बोर्ड)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkisan.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-yuva-internship-yojana",
+      "title": "मुख्यमंत्री युवा इंटर्नशिप योजना (जनसेवा मित्र)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mmsky.mp.gov.in/",
+      "applicationUrl": "https://services.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-ladli-behna-yojana",
+      "title": "मुख्यमंत्री लाड़ली बहना योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmladlibahna.mp.gov.in/",
+      "applicationUrl": "https://cmladlibahna.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sambal-do-yojana",
+      "title": "मुख्यमंत्री जन कल्याण (संबल 2.0) योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://sambal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pratibha-kiran-yojana",
+      "title": "प्रतिभा किरण योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "yuva-swabhimaan-yojana",
+      "title": "युवा स्वाभिमान योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpurban.gov.in/",
+      "applicationUrl": "https://yuvaswabhimaan.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-scooty-yojana",
+      "title": "मुख्यमंत्री स्कूटी योजना (Mukhyamantri Scooty Yojana)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://vimarsh.mp.gov.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-solar-pump-yojana",
+      "title": "मुख्यमंत्री सोलर पंप योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmsolarpump.mp.gov.in/",
+      "applicationUrl": "https://cmsolarpump.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "surajdhara-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kaushal-apprentice-yojana",
+      "title": "मुख्यमंत्री सीखो-कमाओ योजना (MMSKY)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mmsky.mp.gov.in/",
+      "applicationUrl": "https://mmsky.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-nikah-yojana",
+      "title": "मुख्यमंत्री निकाह योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://socialjustice.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "atal-kisan-jyoti-yojana",
+      "title": "अटल किसान ज्योति योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://energy.mp.gov.in/",
+      "applicationUrl": "https://energy.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "shramik-sewa-prasuti-sahayata-yojana",
+      "title": "मुख्यमंत्री श्रमिक सेवा प्रसूति सहायता योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://sambal.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-jeevan-janani-yojana",
+      "title": "मुख्यमंत्री जीवन जननी योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://health.mp.gov.in/",
+      "applicationUrl": "https://health.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "nari-samman-yojana",
+      "title": "मध्य प्रदेश नारी सम्मान योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpwcdmis.gov.in/",
+      "applicationUrl": "https://mpwcdmis.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "mp-seekho-kamao-yojana",
+      "title": "मध्य प्रदेश मुख्यमंत्री सीखो-कमाओ योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mmsky.mp.gov.in/",
+      "applicationUrl": "https://mmsky.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "kanya-abhibhavak-pension-yojana",
+      "title": "मुख्यमंत्री कन्या अभिभावक पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://socialjustice.mp.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "madhya-pradesh-nishakt-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "acharyashri-vidyasagar-gau-samvardhan-yojana",
+      "title": "आचार्य विद्यासागर गौ-संवर्धन योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://animalhusbandry.mp.gov.in/",
+      "applicationUrl": "https://animalhusbandry.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pashudhan-bima-yojana",
+      "title": "पशुधन बीमा योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://animalhusbandry.mp.gov.in/",
+      "applicationUrl": "https://animalhusbandry.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "dudharu-pashu-praday-yojana",
+      "title": "दुधारू पशु प्रदाय योजना (विशेष पिछड़ी जनजाति)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://animalhusbandry.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pashu-chikitsa-ambulance-yojana",
+      "title": "पशु चिकित्सा एम्बुलेंस योजना (1962)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://dahd.nic.in/",
+      "applicationUrl": "https://dahd.nic.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "youth-internship-professional-development",
+      "title": "मुख्यमंत्री यूथ इंटर्नशिप योजना (जन सेवा मित्र)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mmsky.mp.gov.in/",
+      "applicationUrl": "https://mmsky.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "gausevak-prashikshan-yojana",
+      "title": "गौसेवक प्रशिक्षण योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://animalhusbandry.mp.gov.in/",
+      "applicationUrl": "https://animalhusbandry.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "nishulk-cycle-vitaran-yojana",
+      "title": "निःशुल्क साइकिल वितरण योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://educationportal.mp.gov.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-gaon-ki-beti-yojana",
+      "title": "गाँव की बेटी योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "aahar-anudan-yojana",
+      "title": "आहार अनुदान योजना (विशेष पिछड़ी जनजाति)",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://tribal.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ladli-behna-awas-yojana",
+      "title": "मुख्यमंत्री लाड़ली बहना आवास योजना",
+      "state": "madhya-pradesh",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmladlibahna.mp.gov.in/",
+      "applicationUrl": "https://cmladlibahna.mp.gov.in/",
+      "relatedSlugs": [
+        "gramin-path-roshan-yojana",
+        "mukhyamantri-aawasiya-bhu-adhikar-yojana",
+        "pm-awas-shahri",
+        "pm-surya-ghar",
+        "sabki-yojana-sabka-vikas"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "akanksha-yojana",
+      "title": "आकांक्षा योजना (राष्ट्रीय प्रवेश परीक्षा कोचिंग)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://tribal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-gas-cylinder-subsidy-yojana",
+      "title": "मुख्यमंत्री गैस सिलिंडर सब्सिडी योजना (450 रु. गैस)",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmladlibahna.mp.gov.in/",
+      "applicationUrl": "https://cmladlibahna.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "bal-aashirwad-yojana",
+      "title": "मुख्यमंत्री बाल आशीर्वाद योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpwcdmis.gov.in/",
+      "applicationUrl": "https://mpwcdmis.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "covid-19-bal-kalyan-yojana",
+      "title": "मुख्यमंत्री कोविड-19 बाल कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpwcdmis.gov.in/",
+      "applicationUrl": "https://mpwcdmis.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "padho-aur-padhao-yojana",
+      "title": "पढ़ो और पढ़ाओ योजना (अक्षर साथी)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://educationportal.mp.gov.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ration-aapke-dwar-yojana",
+      "title": "मुख्यमंत्री राशन आपके द्वार योजना",
+      "state": "madhya-pradesh",
+      "category": "khadya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://epos.mp.gov.in/",
+      "applicationUrl": "https://epos.mp.gov.in/",
+      "relatedSlugs": [
+        "deendayal-antodaya-rasoi-yojana",
+        "deendayal-rasoi-yojana",
+        "yuva-annadoot-yojana",
+        "ration-support"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "yuva-annadoot-yojana",
+      "title": "मुख्यमंत्री युवा अन्नदूत योजना",
+      "state": "madhya-pradesh",
+      "category": "khadya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://epos.mp.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "deendayal-antodaya-rasoi-yojana",
+        "deendayal-rasoi-yojana",
+        "ration-aapke-dwar-yojana",
+        "ration-support"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-mukhyamantri-udyam-kranti-yojana",
+      "title": "मुख्यमंत्री उद्यम क्रांति योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://samast.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-krishak-udyami-yojana",
+      "title": "मुख्यमंत्री कृषक उद्यमी योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://samast.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-swarojgar-yojana-general",
+      "title": "मुख्यमंत्री स्वरोजगार योजना (सामान्य)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://samast.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-arthik-kalyan-tribal-yojana",
+      "title": "मुख्यमंत्री आर्थिक कल्याण योजना (जनजातीय / ST)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://samast.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-yuva-udyami-general-yojana",
+      "title": "मुख्यमंत्री युवा उद्यमी योजना (सामान्य)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://samast.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "deendayal-antodaya-rasoi-yojana",
+      "title": "दीनदयाल रसोई योजना 2026: ₹5 में भरपेट भोजन, केंद्र लिस्ट, समय",
+      "state": "madhya-pradesh",
+      "category": "khadya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-10-05T00:00:00.000Z",
+      "officialSource": "https://www.services.mp.gov.in/eservice/eServices?srvs=21",
+      "applicationUrl": "https://www.services.mp.gov.in/eservice/eServices?srvs=21",
+      "relatedSlugs": [
+        "deendayal-rasoi-yojana",
+        "ration-aapke-dwar-yojana",
+        "yuva-annadoot-yojana",
+        "ration-support"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "deendayal-rasoi-yojana",
+      "title": "दीनदयाल रसोई योजना 2026: ₹5 में भरपेट भोजन, केंद्र लिस्ट, समय",
+      "state": "madhya-pradesh",
+      "category": "khadya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-10-05T00:00:00.000Z",
+      "officialSource": "https://www.services.mp.gov.in/eservice/eServices?srvs=21",
+      "applicationUrl": "https://www.services.mp.gov.in/eservice/eServices?srvs=21",
+      "relatedSlugs": [
+        "deendayal-antodaya-rasoi-yojana",
+        "ration-aapke-dwar-yojana",
+        "yuva-annadoot-yojana",
+        "ration-support"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "tantya-mama-arthik-kalyan-yojana",
+      "title": "टंट्या मामा आर्थिक कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "bhagwan-birsa-munda-swarojgar-yojana",
+      "title": "भगवान बिरसा मुंडा स्वरोजगार योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "savitri-bai-phule-shg-yojana",
+      "title": "सावित्री बाई फुले स्व-सहायता समूह योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://aajeevika.mp.gov.in/",
+      "applicationUrl": "https://aajeevika.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sant-ravidas-swarojgar-yojana",
+      "title": "संत रविदास स्वरोजगार योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scdevelopmentmp.nic.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "dr-ambedkar-arthik-kalyan-yojana",
+      "title": "डॉ भीमराव अम्बेडकर आर्थिक कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scdevelopmentmp.nic.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-aawasiya-bhu-adhikar-yojana",
+      "title": "मुख्यमंत्री आवासीय भू-अधिकार योजना",
+      "state": "madhya-pradesh",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://saara.mp.gov.in/",
+      "applicationUrl": "https://saara.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna-awas-yojana",
+        "gramin-path-roshan-yojana",
+        "pm-awas-shahri",
+        "pm-surya-ghar",
+        "sabki-yojana-sabka-vikas"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-vridhavastha-pension-yojana",
+      "title": "वृद्धावस्था पेंशन योजना (इंदिरा गांधी राष्ट्रीय)",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-parityakta-pension-yojana",
+      "title": "परित्यक्ता पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kalyani-pension-yojana",
+      "title": "मुख्यमंत्री कल्याणी पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-avivahit-mahila-pension-yojana",
+      "title": "मुख्यमंत्री अविवाहित पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-nishakt-pension-yojana",
+      "title": "निःशक्त (दिव्यांग) पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mandbuddhi-bahuviklang-sahayata-yojana",
+      "title": "मंदबुद्धि / बहुविकलांग आर्थिक सहायता योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "vridhashram-antvasi-pension-yojana",
+      "title": "वृद्धाश्रम निवासरत अंत:वासी पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "divyang-shiksha-protsahan-yojana",
+      "title": "मुख्यमंत्री दिव्यांग शिक्षा प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "rani-durgavati-shri-anna-protsahan-yojana",
+      "title": "रानी दुर्गावती श्रीअन्न (मिलेट्स) प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://saara.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "gramin-path-roshan-yojana",
+      "title": "ग्रामीण पथ रोशन योजना (सोलर स्ट्रीट लाइट)",
+      "state": "madhya-pradesh",
+      "category": "awas",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://prd.mp.gov.in/",
+      "applicationUrl": "https://prd.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna-awas-yojana",
+        "mukhyamantri-aawasiya-bhu-adhikar-yojana",
+        "pm-awas-shahri",
+        "pm-surya-ghar",
+        "sabki-yojana-sabka-vikas"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-paarth-yojana",
+      "title": "पार्थ योजना (युवा करियर मार्गदर्शन)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ssdm.mp.gov.in/",
+      "applicationUrl": "https://mprgp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pratibhashali-vidyarthi-protsahan-yojana",
+      "title": "प्रतिभाशाली विद्यार्थी प्रोत्साहन योजना (लैपटॉप)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://educationportal.mp.gov.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-samadhan-yojana",
+      "title": "मुख्यमंत्री समाधान योजना (CM Helpline 181)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmhelpline.mp.gov.in/",
+      "applicationUrl": "https://cmhelpline.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-dairy-plus-yojana",
+      "title": "मुख्यमंत्री डेयरी प्लस योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpdairyfed.mp.gov.in/",
+      "applicationUrl": "https://dahd.nic.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "shaurya-sankalp-prashikshan-yojana",
+      "title": "शौर्य संकल्प प्रशिक्षण योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sports.mp.gov.in/",
+      "applicationUrl": "https://sports.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "yashoda-dugdh-praday-yojana",
+      "title": "यशोदा दुग्ध प्रदाय योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpwcdmis.gov.in/",
+      "applicationUrl": "https://mpdairyfed.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "social-security-old-age-pension-scheme",
+      "title": "सामाजिक सुरक्षा वृद्धावस्था पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "samagra-vridhashram-antvasi-pension-yojana",
+      "title": "समग्र सामाजिक सुरक्षा वृद्धाश्रम अंत:वासी पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kalyani-vivah-sahayata-yojana",
+      "title": "मुख्यमंत्री कल्याणी विवाह सहायता योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "shaikshanik-chatravriti-yojana",
+      "title": "समेकित शैक्षणिक छात्रवृत्ति योजना (कक्षा 1 से 10)",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "shiksha-protsahan-puraskar-yojana",
+      "title": "शिक्षा प्रोत्साहन पुरस्कार योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scdevelopmentmp.nic.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "kalyani-sahayata-yojana",
+      "title": "कल्याणी सहायता योजना (आपातकालीन)",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "vivah-sahayata-yojana",
+      "title": "श्रमिक विवाह सहायता योजना (BOCW)",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://labour.mp.gov.in/",
+      "applicationUrl": "https://shramsewa.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ambedkar-kamdhenu-yojana",
+      "title": "डॉ. भीमराव अंबेडकर कामधेनु योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scdevelopmentmp.nic.in/",
+      "applicationUrl": "https://dahd.nic.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "delhi-chhatragrih-yojana",
+      "title": "दिल्ली छात्रगृह योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://scdevelopmentmp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "resham-samriddhi-yojana",
+      "title": "रेशम समृद्धि योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sericulture.mp.gov.in/",
+      "applicationUrl": "https://sericulture.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sardar-patel-coaching-yojana",
+      "title": "सरदार पटेल कोचिंग प्रशिक्षण योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://backwardwelfare.mp.gov.in/",
+      "applicationUrl": "https://backwardwelfare.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "kanya-saksharta-protsahan-yojana",
+      "title": "कन्या साक्षरता प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://educationportal.mp.gov.in/",
+      "applicationUrl": "https://tribal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "obc-minority-udyam-yojana",
+      "title": "पिछड़ा वर्ग तथा अल्पसंख्यक उद्यम योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://backwardwelfare.mp.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "obc-minority-swarojgar-yojana",
+      "title": "पिछड़ा वर्ग तथा अल्पसंख्यक स्वरोजगार योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://backwardwelfare.mp.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "dnt-swarojgar-yojana",
+      "title": "विमुक्त घुमन्तु और अर्द्ध घुमन्तु स्वरोजगार योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://denotifiedtribes.mp.gov.in/",
+      "applicationUrl": "https://denotifiedtribes.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sambal-shiksha-protsahan-yojana",
+      "title": "मुख्यमंत्री जन कल्याण (शिक्षा प्रोत्साहन) योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sindhu-darshan-yojana",
+      "title": "सिंधु दर्शन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tirthdarshan.mp.gov.in/",
+      "applicationUrl": "https://tirthdarshan.mp.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "divyang-vivah-protsahan-yojana",
+      "title": "दिव्यांग विवाह प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sainik-school-shulk-pratipurti-yojana",
+      "title": "सैनिक स्कूल शिक्षण शुल्क प्रतिपूर्ति योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://educationportal.mp.gov.in/",
+      "applicationUrl": "https://educationportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "civil-seva-protsahan-yojana",
+      "title": "सिविल सेवा प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tribal.mp.gov.in/",
+      "applicationUrl": "https://tribal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "bhagwan-shri-krishna-medhavi-chatravriti-yojana",
+      "title": "भगवान श्री कृष्ण मेधावी छात्रवृत्ति योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "vikramaditya-scholarship-yojana",
+      "title": "विक्रमादित्य छात्रवृत्ति योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "shri-medha-scheme-yojana",
+      "title": "श्री मेधा योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://highereducation.mp.gov.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kanya-sumangala-yojana",
+      "title": "मुख्यमंत्री कन्या सुमंगला योजना",
+      "state": "uttar-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mksy.up.gov.in/",
+      "applicationUrl": "https://mksy.up.gov.in/",
+      "relatedSlugs": [
+        "up-kanya-sumangala-yojana",
+        "up-bhagyalakshmi-yojana",
+        "pm-ujjwala",
+        "sukanya-samriddhi"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "up-bhagyalakshmi-yojana",
+      "title": "यूपी भाग्यलक्ष्मी योजना",
+      "state": "uttar-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "http://mahilakalyan.up.nic.in/",
+      "applicationUrl": "http://mahilakalyan.up.nic.in/",
+      "relatedSlugs": [
+        "up-kanya-sumangala-yojana",
+        "mukhyamantri-kanya-sumangala-yojana",
+        "pm-ujjwala",
+        "sukanya-samriddhi"
+      ],
+      "reviewIssues": [
+        "Official HTTPS source needs review",
+        "Application URL needs review",
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-abhyudaya-yojana",
+      "title": "मुख्यमंत्री अभ्युदय योजना",
+      "state": "uttar-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "http://abhyuday.up.gov.in/",
+      "applicationUrl": "http://abhyuday.up.gov.in/",
+      "relatedSlugs": [],
+      "reviewIssues": [
+        "Official HTTPS source needs review",
+        "Application URL needs review",
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "vishwakarma-shram-samman-yojana-up",
+      "title": "विश्वकर्मा श्रम सम्मान योजना",
+      "state": "uttar-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "http://diupmsme.upsdc.gov.in/",
+      "applicationUrl": "http://diupmsme.upsdc.gov.in/",
+      "relatedSlugs": [
+        "pm-mudra",
+        "pm-svanidhi",
+        "pm-vishwakarma"
+      ],
+      "reviewIssues": [
+        "Official HTTPS source needs review",
+        "Application URL needs review",
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded",
+        "Source-supported FAQ missing"
+      ]
+    },
+    {
+      "slug": "rajasthan-palanhar-yojana",
+      "title": "राजस्थान पालनहार योजना: सहायता राशि, पात्रता और आवेदन",
+      "state": "rajasthan",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-10-11",
+      "officialSource": "https://sje.rajasthan.gov.in/Default.aspx?PageID=349",
+      "applicationUrl": "https://sje.rajasthan.gov.in/Default.aspx?PageID=370",
+      "relatedSlugs": [
+        "pm-ujjwala",
+        "sukanya-samriddhi"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "up-kanya-sumangala-yojana",
+      "title": "यूपी कन्या सुमंगला योजना: ₹25,000, पात्रता और ऑनलाइन आवेदन",
+      "state": "uttar-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-10-11",
+      "officialSource": "https://mksy.up.gov.in/",
+      "applicationUrl": "https://mksy.up.gov.in/",
+      "relatedSlugs": [
+        "mukhyamantri-kanya-sumangala-yojana",
+        "up-bhagyalakshmi-yojana",
+        "pm-ujjwala",
+        "sukanya-samriddhi"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "bihar-kanya-utthan-yojana",
+      "title": "बिहार कन्या उत्थान योजना: इंटर, स्नातक आवेदन और स्टेटस",
+      "state": "bihar",
+      "category": "shiksha",
+      "status": "REQUIRES_OFFICIAL_VERIFICATION",
+      "indexableInRepository": false,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": "2026-10-11",
+      "officialSource": "https://medhasoft.bihar.gov.in/Default.aspx",
+      "applicationUrl": "https://medhasoft.bihar.gov.in/Default.aspx",
+      "relatedSlugs": [],
+      "reviewIssues": [
+        "Current scheme facts require verification"
+      ]
+    },
+    {
+      "slug": "haryana-chiranjeevi-yojana",
+      "title": "हरियाणा चिरायु आयुष्मान योजना: पात्रता, कार्ड और अस्पताल",
+      "state": "haryana",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-10-11",
+      "officialSource": "https://ayushmanbharat.haryana.gov.in/haryana-ayushman-bharat-implementation-overview/",
+      "applicationUrl": "https://beneficiary.nha.gov.in/",
+      "relatedSlugs": [
+        "ayushman-bharat",
+        "pm-jeevan-jyoti-bima",
+        "pm-suraksha-bima"
+      ],
+      "reviewIssues": []
+    }
+  ],
+  "targets": [
+    {
+      "slug": "rani-durgavati-shri-anna-protsahan-yojana",
+      "title": "रानी दुर्गावती श्रीअन्न (मिलेट्स) प्रोत्साहन योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://saara.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ladli-behna",
+      "title": "मुख्यमंत्री लाड़ली बहना योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmladlibahna.mp.gov.in/",
+      "applicationUrl": "https://cmladlibahna.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date"
+      ]
+    },
+    {
+      "slug": "social-security-pension-portal-mp",
+      "title": "Social Security Pension Portal MP",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialsecurity.mp.gov.in/Home.aspx",
+      "applicationUrl": "https://socialsecurity.mp.gov.in/Home.aspx",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-swarojgar-yojana",
+      "title": "मुख्यमंत्री स्वरोज़गार योजना (उद्यम क्रांति)",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://msme.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-teerth-darshan-yojana",
+      "title": "मध्यप्रदेश मुख्यमंत्री तीर्थ दर्शन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://tirthdarshan.mp.gov.in/",
+      "applicationUrl": "https://tirthdarshan.mp.gov.in/",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "krishak-prashikshan-bhraman-yojana",
+      "title": "कृषक प्रशिक्षण तथा भ्रमण कार्यक्रम (ATMA योजना)",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "pm-kisan",
+      "title": "प्रधानमंत्री किसान सम्मान निधि",
+      "state": "central",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "VERIFIED_CORE",
+      "publicationStatus": "REVIEWED",
+      "lastEditorialReview": "2026-09-23",
+      "officialSource": "https://pmkisan.gov.in/",
+      "applicationUrl": "https://pmkisan.gov.in/",
+      "relatedSlugs": [
+        "gobardhan-scheme",
+        "pm-fasal-bima",
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan"
+      ],
+      "reviewIssues": []
+    },
+    {
+      "slug": "ayushman-card-hospital-list-mp",
+      "title": "Ayushman Card Hospital List MP 2026",
+      "state": "madhya-pradesh",
+      "category": "swasthya",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ayushmanbharat.mp.gov.in/",
+      "applicationUrl": "https://hem.nha.gov.in/search",
+      "relatedSlugs": [
+        "mukhyamantri-bal-hriday-upchar-yojana",
+        "ayushman-bharat",
+        "pm-jeevan-jyoti-bima",
+        "pm-suraksha-bima"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "social-pension",
+      "title": "समग्र सामाजिक सुरक्षा पेंशन योजना",
+      "state": "madhya-pradesh",
+      "category": "pension",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/schemes/view/WlFNUHFJc2dpRHFIcVI1RlEyb3Q1UT09",
+      "applicationUrl": "https://socialjustice.mp.gov.in/uploads/schemes/ssp_sanctioned_ordere_form_1.pdf",
+      "relatedSlugs": [
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "social-security-pension-portal-mp",
+        "apradh-pidit-pratikar-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "employment-support",
+      "title": "मुख्यमंत्री उद्यम क्रांति योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://cmhelpline.mp.gov.in/Schmedetail.aspx?Schemeid=915",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-seekho-kamao",
+      "title": "मुख्यमंत्री सीखो कमाओ योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mmsky.mp.gov.in/",
+      "applicationUrl": "https://mmsky.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "sambal-do-yojana",
+        "sambal-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "kisan-kalyan",
+      "title": "मुख्यमंत्री किसान कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpwcdmis.gov.in/",
+      "applicationUrl": "https://pmkisan.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana",
+        "surajdhara-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-gaon-ki-beti",
+      "title": "MP गांव की बेटी योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://scholarshipportal.mp.nic.in/",
+      "applicationUrl": "https://scholarshipportal.mp.nic.in/",
+      "relatedSlugs": [
+        "mp-board-laptop",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mp-board-laptop",
+      "title": "MP मुफ्त लैपटॉप योजना",
+      "state": "madhya-pradesh",
+      "category": "shiksha",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://shikshaportal.mp.gov.in/",
+      "applicationUrl": "https://shikshaportal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-gaon-ki-beti",
+        "mukhyamantri-medhavi-vidyarthi-yojana",
+        "mukhyamantri-scooty-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "akanksha-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "sambal-yojana",
+      "title": "मुख्यमंत्री जन कल्याण संबल योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://sambal.mp.gov.in/",
+      "applicationUrl": "https://sambal.mp.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "ladli-laxmi",
+      "title": "लाड़ली लक्ष्मी योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ladlilaxmi.mp.gov.in/",
+      "applicationUrl": "https://ladlilaxmi.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "surajdhara-yojana",
+      "title": "सूरजधारा योजना",
+      "state": "madhya-pradesh",
+      "category": "kisan",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://mpkrishi.mp.gov.in/",
+      "applicationUrl": "https://mpkrishi.mp.gov.in/",
+      "relatedSlugs": [
+        "balram-tal-yojana",
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-solar-pump-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "madhya-pradesh-ladli-laxmi-yojana",
+      "title": "मुख्यमंत्री लाड़ली लक्ष्मी योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://ladlilaxmi.mp.gov.in/",
+      "applicationUrl": "https://ladlilaxmi.mp.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana",
+        "mukhyamantri-kanya-vivah-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-arthik-kalyan-yojana",
+      "title": "मुख्यमंत्री आर्थिक कल्याण योजना",
+      "state": "madhya-pradesh",
+      "category": "rojgar",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://msme.mponline.gov.in/",
+      "applicationUrl": "https://samast.mponline.gov.in/",
+      "relatedSlugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mp-seekho-kamao-yojana",
+        "mukhyamantri-seekho-kamao",
+        "sambal-do-yojana",
+        "sambal-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    },
+    {
+      "slug": "mukhyamantri-kanya-vivah-yojana",
+      "title": "मध्य प्रदेश मुख्यमंत्री कन्या विवाह योजना",
+      "state": "madhya-pradesh",
+      "category": "mahila",
+      "status": "ACTIVE",
+      "indexableInRepository": true,
+      "verificationStatus": "NEEDS_VERIFICATION",
+      "publicationStatus": "DRAFT_REVIEW_REQUIRED",
+      "lastEditorialReview": null,
+      "officialSource": "https://socialjustice.mp.gov.in/",
+      "applicationUrl": "https://samagra.gov.in/",
+      "relatedSlugs": [
+        "ladli-behna",
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-behna-yojana",
+        "madhya-pradesh-ladli-laxmi-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "reviewIssues": [
+        "Current scheme facts require verification",
+        "No recorded independent review date",
+        "No source access date recorded"
+      ]
+    }
+  ],
+  "duplicateSources": [
+    {
+      "source": "https://cmladlibahna.mp.gov.in/",
+      "slugs": [
+        "ladli-behna",
+        "madhya-pradesh-ladli-behna-yojana",
+        "ladli-behna-awas-yojana",
+        "mukhyamantri-gas-cylinder-subsidy-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://mmsky.mp.gov.in/",
+      "slugs": [
+        "mukhyamantri-seekho-kamao",
+        "mukhyamantri-yuva-internship-yojana",
+        "mukhyamantri-kaushal-apprentice-yojana",
+        "mp-seekho-kamao-yojana",
+        "youth-internship-professional-development"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://mpwcdmis.gov.in/",
+      "slugs": [
+        "kisan-kalyan",
+        "nari-samman-yojana",
+        "bal-aashirwad-yojana",
+        "covid-19-bal-kalyan-yojana",
+        "yashoda-dugdh-praday-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://scholarshipportal.mp.nic.in/",
+      "slugs": [
+        "mp-gaon-ki-beti",
+        "pratibha-kiran-yojana",
+        "mp-gaon-ki-beti-yojana",
+        "shaikshanik-chatravriti-yojana",
+        "bhagwan-shri-krishna-medhavi-chatravriti-yojana",
+        "vikramaditya-scholarship-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://sambal.mp.gov.in/",
+      "slugs": [
+        "sambal-yojana",
+        "mukhyamantri-mazdoor-suraksha-yojana",
+        "mukhyamantri-asangathit-mazdoor-yojana",
+        "sambal-do-yojana",
+        "shramik-sewa-prasuti-sahayata-yojana",
+        "sambal-shiksha-protsahan-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://ladlilaxmi.mp.gov.in/",
+      "slugs": [
+        "ladli-laxmi",
+        "madhya-pradesh-ladli-laxmi-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://jansuraksha.gov.in/",
+      "slugs": [
+        "pm-jeevan-jyoti-bima",
+        "pm-suraksha-bima"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://mpkrishi.mp.gov.in/",
+      "slugs": [
+        "surajdhara-yojana",
+        "mausam-aadharit-fasal-bima-yojana",
+        "krishak-prashikshan-bhraman-yojana",
+        "krishi-mela-pradarshani-yojana",
+        "mahila-krishi-bhagidari-yojana",
+        "kisan-mitra-prashikshan-yojana",
+        "jaivik-kheti-protsahan-yojana",
+        "balram-tal-yojana",
+        "annapurna-beej-yojana",
+        "bailgadi-anudan-yojana",
+        "krishi-jalvayu-pilot-project",
+        "mukhyamantri-videsh-krishi-yatra",
+        "beej-gram-yojana",
+        "macro-management-scheme-krishi",
+        "krishak-jeevan-kalyan-yojana",
+        "rani-durgavati-shri-anna-protsahan-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://msme.mponline.gov.in/",
+      "slugs": [
+        "mukhyamantri-arthik-kalyan-yojana",
+        "mukhyamantri-yuva-udyami-yojana",
+        "mukhyamantri-swarojgar-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://socialjustice.mp.gov.in/",
+      "slugs": [
+        "mukhyamantri-kanya-vivah-yojana",
+        "mukhyamantri-nikah-yojana",
+        "kanya-abhibhavak-pension-yojana",
+        "madhya-pradesh-vridhavastha-pension-yojana",
+        "madhya-pradesh-parityakta-pension-yojana",
+        "mukhyamantri-kalyani-pension-yojana",
+        "mukhyamantri-avivahit-mahila-pension-yojana",
+        "madhya-pradesh-nishakt-pension-yojana",
+        "mandbuddhi-bahuviklang-sahayata-yojana",
+        "vridhashram-antvasi-pension-yojana",
+        "divyang-shiksha-protsahan-yojana",
+        "social-security-old-age-pension-scheme",
+        "samagra-vridhashram-antvasi-pension-yojana",
+        "mukhyamantri-kalyani-vivah-sahayata-yojana",
+        "kalyani-sahayata-yojana",
+        "divyang-vivah-protsahan-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://tirthdarshan.mp.gov.in/",
+      "slugs": [
+        "mukhyamantri-teerth-darshan-yojana",
+        "sindhu-darshan-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://horticulture.mponline.gov.in/",
+      "slugs": [
+        "aushadhiya-fasal-vistar-yojana",
+        "phal-paudh-ropan-yojana",
+        "masala-kshetra-vistar-yojana",
+        "sabzi-kshetra-vistar-yojana",
+        "sanrakshit-kheti-protsahan-yojana",
+        "udyaniki-yantrikaran-yojana",
+        "golden-kitchen-garden-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://saara.mp.gov.in/",
+      "slugs": [
+        "bhavantar-bhugtan-yojana",
+        "kisan-kalyan-yojana",
+        "mukhyamantri-aawasiya-bhu-adhikar-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://scdevelopmentmp.nic.in/",
+      "slugs": [
+        "ambedkar-medhavi-vidyarthi-puraskar",
+        "sant-ravidas-swarojgar-yojana",
+        "dr-ambedkar-arthik-kalyan-yojana",
+        "shiksha-protsahan-puraskar-yojana",
+        "ambedkar-kamdhenu-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://ssdm.mp.gov.in/",
+      "slugs": [
+        "mukhyamantri-kaushal-samvardhan-yojana",
+        "madhya-pradesh-paarth-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://socialsecurity.mp.gov.in/",
+      "slugs": [
+        "nishaktjan-vivah-protsahan-yojana",
+        "mukhyamantri-avivahit-pension-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://health.mp.gov.in/",
+      "slugs": [
+        "mukhyamantri-bal-hriday-upchar-yojana",
+        "mukhyamantri-jeevan-janani-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://educationportal.mp.gov.in/",
+      "slugs": [
+        "iklauti-beti-scholarship-yojana",
+        "nishulk-cycle-vitaran-yojana",
+        "padho-aur-padhao-yojana",
+        "pratibhashali-vidyarthi-protsahan-yojana",
+        "kanya-saksharta-protsahan-yojana",
+        "sainik-school-shulk-pratipurti-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://animalhusbandry.mp.gov.in/",
+      "slugs": [
+        "gopal-protsahan-yojana",
+        "acharyashri-vidyasagar-gau-samvardhan-yojana",
+        "pashudhan-bima-yojana",
+        "gausevak-prashikshan-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://tribal.mp.gov.in/",
+      "slugs": [
+        "dudharu-pashu-praday-yojana",
+        "aahar-anudan-yojana",
+        "akanksha-yojana",
+        "tantya-mama-arthik-kalyan-yojana",
+        "bhagwan-birsa-munda-swarojgar-yojana",
+        "delhi-chhatragrih-yojana",
+        "civil-seva-protsahan-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://epos.mp.gov.in/",
+      "slugs": [
+        "ration-aapke-dwar-yojana",
+        "yuva-annadoot-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://samast.mponline.gov.in/",
+      "slugs": [
+        "mp-mukhyamantri-udyam-kranti-yojana",
+        "mukhyamantri-krishak-udyami-yojana",
+        "mukhyamantri-swarojgar-yojana-general",
+        "mukhyamantri-arthik-kalyan-tribal-yojana",
+        "mukhyamantri-yuva-udyami-general-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://www.services.mp.gov.in/eservice/eServices?srvs=21",
+      "slugs": [
+        "deendayal-antodaya-rasoi-yojana",
+        "deendayal-rasoi-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://backwardwelfare.mp.gov.in/",
+      "slugs": [
+        "sardar-patel-coaching-yojana",
+        "obc-minority-udyam-yojana",
+        "obc-minority-swarojgar-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    },
+    {
+      "source": "https://mksy.up.gov.in/",
+      "slugs": [
+        "mukhyamantri-kanya-sumangala-yojana",
+        "up-kanya-sumangala-yojana"
+      ],
+      "note": "Shared source is a review candidate, not proof of duplicate intent."
+    }
+  ]
+}

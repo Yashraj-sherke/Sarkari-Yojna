@@ -18,6 +18,9 @@ import { SchemeQuickAnswer } from '@/components/scheme/quick-answer';
 import { SchemeClusterLinks } from '@/components/scheme/cluster-links';
 import { buildSchemeNavigation } from '@/lib/scheme-navigation';
 import { gobardhanFaqSources } from '@/lib/scheme-content/gobardhan-faqs';
+import { stateNames } from '@/lib/state-names';
+import { presentArticleHtml } from '@/lib/article-presentation';
+import { safeArticleHtml,safeArticleHref } from '@/lib/safe-article';
 
 const parseRichText = (text: string) => {
   // First handle markdown links, then handle bold tags (** or <strong>)
@@ -25,7 +28,8 @@ const parseRichText = (text: string) => {
   return linkParts.map((part, i) => {
     const match = part.match(/\[(.*?)\]\((.*?)\)/);
     if (match) {
-      return <Link key={i} href={match[2]} style={{color:'#2b6cb0', textDecoration:'underline'}}>{match[1]}</Link>;
+      const href=safeArticleHref(match[2]);
+      return href?<Link key={i} href={href} style={{color:'#2b6cb0', textDecoration:'underline'}}>{match[1]}</Link>:<span key={i}>{match[1]}</span>;
     }
     
     // Process bold text in the non-link parts
@@ -50,7 +54,8 @@ export function YojnaDetailClient({
   faqs,
   relatedSchemes,
   relatedUpdates,
-  initialCount
+  initialCount,
+  previewMode = false
 }: {
   s: Scheme;
   tags: string[];
@@ -60,6 +65,7 @@ export function YojnaDetailClient({
   relatedSchemes: Scheme[];
   relatedUpdates: { slug: string; title: string }[];
   initialCount: number;
+  previewMode?: boolean;
 }) {
   const {lang} = useLanguage();
   const hasEnglishArticle = Boolean(
@@ -82,18 +88,19 @@ export function YojnaDetailClient({
       : faqs;
   const officialApplicationUrl = s.applicationUrl || processInfo.formUrl || null;
   const applicationIsPdf = officialApplicationUrl?.toLowerCase().endsWith('.pdf');
-  const hasDocuments = hasDatedSources && displayDocuments.length > 0;
+  const hasDocuments = (previewMode || hasDatedSources) && displayDocuments.length > 0;
   const hasExclusions = Boolean(
     (pageLang === 'en' && s.exclusionsEn && s.exclusionsEn.length > 0) ||
     (s.exclusions && s.exclusions.length > 0)
   );
   const hasProcess = Boolean(
+    (previewMode && (s.applicationProcess?.length || s.steps.length)) ||
     (pageLang === 'en' && s.applicationProcessEn && s.applicationProcessEn.length > 0) ||
     (hasDatedSources && s.applicationProcess && s.applicationProcess.length > 0) ||
     (isReviewed && s.steps.length > 0) ||
     officialApplicationUrl
   );
-  const navigation = buildSchemeNavigation(s.slug, (pageLang === 'en' ? s.detailedDescriptionEn : s.detailedDescription) ?? [], [
+  const navigation = buildSchemeNavigation(s.slug, ((pageLang === 'en' ? s.detailedDescriptionEn : s.detailedDescription) ?? []).map(presentArticleHtml), [
     {id: 'vivaran', label: t.detailDescription},
     {id: 'labh', label: t.detailBenefits},
     {id: 'patrata', label: t.detailEligibility},
@@ -103,7 +110,7 @@ export function YojnaDetailClient({
     ...(s.trackingGuidance ? [{id: 'stithi', label: pageLang === 'en' ? 'Status / e-KYC' : 'स्थिति / e-KYC'}] : []),
     {id: 'faqs', label: t.detailFaqs},
     {id: 'sandarbh', label: t.detailSources},
-    {id: 'feedback', label: t.detailFeedback},
+    ...(!previewMode ? [{id: 'feedback', label: t.detailFeedback}] : []),
   ], pageLang);
 
   return (
@@ -141,7 +148,7 @@ export function YojnaDetailClient({
         </div>
 
         <div className="yojna-check-wrap">
-          <Link href={'/mere-liye?slug='+s.slug} className="yojna-check-btn-outline">
+          <Link href="/mere-liye" className="yojna-check-btn-outline">
             {t.checkEligibility}
           </Link>
         </div>
@@ -189,7 +196,7 @@ export function YojnaDetailClient({
             {navigation.sidebar.map((item, index) => <a key={item.id} href={`#${item.id}`} className={`nav-link${index === 0 ? ' active' : ''}`}>{item.label}</a>)}
             
             <div style={{marginTop: '30px', paddingTop: '20px', borderTop: '1px solid #e2e8f0'}}>
-              <SchemeActions s={s} initialCount={initialCount}/>
+              {!previewMode && <SchemeActions s={s} initialCount={initialCount}/>}
             </div>
           </nav>
         </aside>
@@ -213,11 +220,11 @@ export function YojnaDetailClient({
           {/* 1. विवरण */}
           <section className="flat-section" id="vivaran">
             <h2 className="flat-section-heading">{pageLang === 'en' ? s.english + ' ' + t.detailDescription : s.title + ' का ' + t.detailDescription}</h2>
-            <p><strong>{pageLang === 'en' ? 'Scope: ' : 'योजना का क्षेत्र: '}</strong>{s.state === 'madhya-pradesh' ? (pageLang === 'en' ? 'Madhya Pradesh' : 'मध्य प्रदेश') : (pageLang === 'en' ? 'Central Scheme — Coverage and local process as per scheme rules' : 'केंद्रीय योजना — लागू क्षेत्र और स्थानीय प्रक्रिया योजना के नियमों के अनुसार')}</p>
+            <p><strong>{pageLang === 'en' ? 'Scope: ' : 'योजना का क्षेत्र: '}</strong>{s.state === 'central' ? (pageLang === 'en' ? 'Central Scheme — Coverage and local process as per scheme rules' : 'केंद्रीय योजना — लागू क्षेत्र और स्थानीय प्रक्रिया योजना के नियमों के अनुसार') : (pageLang === 'en' ? s.state.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : stateNames[s.state] ?? s.state)}</p>
             {pageLang === 'en' && s.detailedDescriptionEn ? (
-              navigation.description.map((p, idx) => p.trim().startsWith('<') ? <div key={idx} className={navigation.customized ? 'scheme-rich-article' : undefined} dangerouslySetInnerHTML={{__html: p}} style={{marginBottom:'1em'}} /> : <p key={idx} style={{marginBottom:'1em'}}>{parseRichText(p)}</p>)
+              navigation.description.map((p, idx) => p.trim().startsWith('<') ? <div key={idx} className={navigation.customized ? 'scheme-rich-article' : undefined} dangerouslySetInnerHTML={{__html: safeArticleHtml(p)}} style={{marginBottom:'1em'}} /> : <p key={idx} style={{marginBottom:'1em'}}>{parseRichText(p)}</p>)
             ) : s.detailedDescription ? (
-              navigation.description.map((p, idx) => p.trim().startsWith('<') ? <div key={idx} className={navigation.customized ? 'scheme-rich-article' : undefined} dangerouslySetInnerHTML={{__html: p}} style={{marginBottom:'1em'}} /> : <p key={idx} style={{marginBottom:'1em'}}>{parseRichText(p)}</p>)
+              navigation.description.map((p, idx) => p.trim().startsWith('<') ? <div key={idx} className={navigation.customized ? 'scheme-rich-article' : undefined} dangerouslySetInnerHTML={{__html: safeArticleHtml(p)}} style={{marginBottom:'1em'}} /> : <p key={idx} style={{marginBottom:'1em'}}>{parseRichText(p)}</p>)
             ) : (
               <p>{parseRichText(pageLang === 'en' ? (s.summaryEn ?? s.summary) : s.summary)}</p>
             )}
@@ -311,7 +318,7 @@ export function YojnaDetailClient({
                   </div>
                 ))}
               </div>
-            ) : hasDatedSources && s.applicationProcess && s.applicationProcess.length > 0 ? (
+            ) : (previewMode || hasDatedSources) && s.applicationProcess && s.applicationProcess.length > 0 ? (
               <div>
                 {s.applicationProcess.map((proc, i) => (
                   <div key={i} style={{marginBottom:20}}>
@@ -324,7 +331,7 @@ export function YojnaDetailClient({
                   </div>
                 ))}
               </div>
-            ) : isReviewed && s.steps.length ? (
+            ) : (previewMode || isReviewed) && s.steps.length ? (
               <>
                 <div className="tabs-header">
                   <p className="tab-btn active">{processInfo.mode}</p>
@@ -366,9 +373,9 @@ export function YojnaDetailClient({
           <div className="mobile-only-trending" style={{marginTop: '30px', marginBottom: '30px', padding: '20px', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '8px'}}>
             <h2 style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e3a8a', marginBottom: '15px'}}>{pageLang === 'en' ? 'Trending Schemes' : 'ट्रेंडिंग योजनाएं'}</h2>
             <ul style={{listStyle: 'none', paddingLeft: 0, margin: 0}}>
-              <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Awas Yojana Gramin List 2026 (NEW) - Download PDF</Link></li>
-              <li style={{marginBottom: '12px'}}><Link href="/yojna/mukhyamantri-majhi-ladki-bahin-yojana" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Majhi Ladki Bahin Yojana - Online Apply & Status Check</Link></li>
-              <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan Samman Nidhi Yojana 24th Installment Date</Link></li>
+              <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-awas-gramin" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Awas Gramin: eligibility and application</Link></li>
+              <li style={{marginBottom: '12px'}}><Link href="/category/mahila" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>महिला और बाल विकास योजनाएं</Link></li>
+              <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-kisan" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Kisan: eligibility, e-KYC and status</Link></li>
               <li style={{marginBottom: '12px'}}><Link href="/yojna/ayushman-bharat" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>Ayushman Bharat Yojana: Download Card & Check Hospital List</Link></li>
               <li style={{marginBottom: '12px'}}><Link href="/yojna/pm-surya-ghar" style={{color: '#2563eb', fontWeight: 600, textDecoration: 'underline'}}>PM Surya Ghar Muft Bijli Yojana - Online Registration</Link></li>
             </ul>
@@ -396,16 +403,16 @@ export function YojnaDetailClient({
             </div>}
           </section>
 
-          <div data-nosnippet=""><WhatsAppShareBanner title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/></div>
+          {!previewMode && <div data-nosnippet=""><WhatsAppShareBanner title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/></div>}
 
-          <section className="flat-section" style={{background: '#f8fafc', padding: '20px', borderRadius: '8px', marginTop: '20px', border: '1px solid #e2e8f0'}}>
+          {!previewMode && <section className="flat-section" style={{background: '#f8fafc', padding: '20px', borderRadius: '8px', marginTop: '20px', border: '1px solid #e2e8f0'}}>
             <h2 className="flat-section-heading" style={{fontSize: '1.1rem'}}>{pageLang === 'en' ? 'Help others by sharing this guide' : 'इस जानकारी को दूसरों तक पहुँचाएं (Share & Link)'}</h2>
             <p style={{fontSize: '0.95rem', marginBottom: '10px'}}>{pageLang === 'en' ? 'If you found this guide helpful, please share it on social media or link to it from your blog/website to help others find accurate information.' : 'अगर आपको यह जानकारी मददगार लगी, तो इसे अपने दोस्तों के साथ शेयर करें या अपनी वेबसाइट/ब्लॉग पर लिंक देकर दूसरों की मदद करें।'}</p>
             <div style={{display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '10px', borderRadius: '4px', border: '1px dashed #cbd5e1'}}>
               <code style={{flex: 1, fontSize: '0.85rem', wordBreak: 'break-all', color: '#475569'}}>{`${SITE_URL}/yojna/${s.slug}`}</code>
               <button onClick={() => {navigator.clipboard.writeText(`${SITE_URL}/yojna/${s.slug}`); alert('Link copied!');}} style={{background: '#e2e8f0', padding: '4px 12px', borderRadius: '4px', fontSize: '0.85rem', fontWeight: 600}}>Copy Link</button>
             </div>
-          </section>
+          </section>}
 
           {/* 8. स्रोत और संदर्भ */}
           <section className="flat-section" id="sandarbh">
@@ -414,7 +421,8 @@ export function YojnaDetailClient({
               <li><b>{t.nodalDept}</b> {s.department}</li>
               <li><b>{t.officialSource}</b> {s.sourceUrl ? <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{color:'#3182ce', textDecoration:'underline'}} onClick={() => { import('@/components/site').then(m => m.track('official_link_clicked')); }}>{new URL(s.sourceUrl).hostname}</a> : t.notAvailable}</li>
             </ul>
-            <p><strong>{pageLang === 'en' ? 'Last independent editorial review: ' : 'अंतिम स्वतंत्र संपादकीय समीक्षा: '}</strong>{s.editorial?.reviewedAt ? new Date(s.editorial.reviewedAt).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN') : (t.statusLabels?.[s.status as keyof typeof t.statusLabels] || (s.status === 'ACTIVE' ? (pageLang === 'en' ? 'Active' : 'सक्रिय') : (pageLang === 'en' ? 'Verification Pending' : 'सत्यापन बाकी')))}</p>
+            <p><strong>{pageLang === 'en' ? 'Last independent editorial review: ' : 'अंतिम स्वतंत्र संपादकीय समीक्षा: '}</strong>{s.editorial?.reviewedAt ? new Date(s.editorial.reviewedAt).toLocaleDateString(pageLang === 'en' ? 'en-IN' : 'hi-IN') : (pageLang === 'en' ? 'Verification required' : 'सत्यापन आवश्यक')}</p>
+            {s.editorial?.verificationStatus === 'NEEDS_VERIFICATION' && <p className="source-review-note">{s.editorial.note}</p>}
             <p>{s.sourceNotes}</p><p><Link className="inline-link" href="/contact">{pageLang === 'en' ? 'Report an error or request a correction' : 'जानकारी में गलती बताएं या सुधार भेजें'}</Link></p>
             <ol className="flat-list">
               {s.references?.map((ref,i) => <li key={ref.url + i} style={{marginBottom:18}}>
@@ -444,15 +452,16 @@ export function YojnaDetailClient({
             <p>{pageLang === 'en' ? 'These are general information guides. Check required documents against the current official rules of the scheme.' : 'ये सामान्य जानकारी के गाइड हैं। आवश्यक दस्तावेज़ योजना के वर्तमान आधिकारिक नियमों से मिलाएँ।'}</p>
             <ul className="flat-list">{relatedGuides.map(g => <li key={g.slug}><Link className="inline-link" href={`/guide/${g.slug}`}>{g.title}</Link></li>)}</ul>
           </section>}
-          <SchemeFeedback slug={s.slug} title={pageLang === 'en' ? s.english : s.title} english={pageLang === 'en'}/>
+          {!previewMode && <SchemeFeedback slug={s.slug} title={pageLang === 'en' ? s.english : s.title} english={pageLang === 'en'}/>}
 
 
         </div>
 
       </div>
 
-      <WhatsAppFloatingCTA title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/>
+      {!previewMode && <WhatsAppFloatingCTA title={pageLang === 'en' ? s.english : s.title} slug={s.slug}/>}
     </>
   );
 }
+
 

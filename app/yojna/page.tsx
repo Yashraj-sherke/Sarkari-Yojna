@@ -9,7 +9,7 @@ import { guides } from '@/lib/guides';
 import { DiscoveryIndex } from '@/components/discovery-index';
 
 const title = 'Sarkari Yojana 2026 List — ऑनलाइन आवेदन और पात्रता';
-const description = 'Sarkari Yojana 2026 की समीक्षा की गई सूची देखें। पात्रता, दस्तावेज़, लाभ, सरकारी पोर्टल और ऑनलाइन आवेदन की प्रक्रिया सरल हिन्दी में समझें।';
+const description = 'सरकारी योजनाओं की सूची देखें। पात्रता, दस्तावेज़, लाभ और आवेदन प्रक्रिया सरल हिन्दी में समझें; वर्तमान नियम संबंधित सरकारी स्रोत से जाँचें।';
 export async function generateMetadata({searchParams}: {searchParams: Promise<{page?: string}>}) {
   const page = Math.max(1, Number.parseInt((await searchParams).page ?? '1', 10) || 1);
   const canonical = page === 1 ? '/yojna' : `/yojna?page=${page}`;
@@ -18,7 +18,7 @@ export async function generateMetadata({searchParams}: {searchParams: Promise<{p
     title: {absolute: pageTitle}, description,
     alternates: {canonical},
     openGraph: {title: pageTitle, description, url: `${SITE_URL}${canonical}`, siteName: SITE_NAME_EN, type: 'website', locale: 'hi_IN', images: [{url: DEFAULT_OG_IMAGE, alt: 'Sarkari Yojana लोगो'}]},
-    twitter: {card: 'summary', title: pageTitle, description, images: [DEFAULT_OG_IMAGE]},
+    twitter: {card: 'summary_large_image', title: pageTitle, description, images: [DEFAULT_OG_IMAGE]},
   };
 }
 
@@ -31,17 +31,17 @@ export default async function YojnaDirectory({searchParams}: {searchParams: Prom
   const topics = categories.filter(category => reviewed.some(scheme => scheme.category === category.id));
   return (
     <>
-      <Directory schemes={schemes.map(summarizeScheme)} initialCategory="all" initialState="all" initialPage={page} paginationBasePath="/yojna" isHomePage={false} />
+      <Directory schemes={reviewed.map(summarizeScheme)} initialCategory="all" initialState="all" initialPage={page} paginationBasePath="/yojna" isHomePage={false} />
       <DiscoveryIndex schemes={schemes} />
       <section className="page-wrap panel" aria-labelledby="reviewed-directory">
         <h2 id="reviewed-directory">सरकारी योजना सूची 2026</h2>
         <p>
           इस सूची में केंद्र और राज्य की योजनाओं के लाभ, पात्रता, दस्तावेज़ और आवेदन प्रक्रिया दी गई है।
-          जिन लेखों की आधिकारिक स्रोतों से संपादकीय समीक्षा पूरी है, वे Google के लिए उपलब्ध हैं।
+          प्रत्येक लेख में स्रोत और संपादकीय समीक्षा की स्थिति दी गई है।
           ऑनलाइन आवेदन से पहले संबंधित सरकारी योजना पोर्टल पर वर्तमान तारीख और नियम जाँचें।
         </p>
         <nav aria-labelledby="reviewed-schemes-index">
-          <h2 id="reviewed-schemes-index">समीक्षित योजनाओं की सूची</h2>
+          <h2 id="reviewed-schemes-index">योजनाओं की सूची</h2>
           <ul>
             {reviewed.map(scheme => (
               <li key={scheme.slug}><Link href={`/yojna/${scheme.slug}`}>{scheme.title}</Link></li>

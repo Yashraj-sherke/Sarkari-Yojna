@@ -4,6 +4,7 @@ import { seeds } from './seed';
 import { enrichSchemeArticle } from './scheme-articles';
 import { neon, neonConfig, Pool } from '@neondatabase/serverless';
 import { unstable_cache } from 'next/cache';
+import { isPublicScheme } from './seo';
 
 // Ensure the Edge Runtime doesn't cache DB connections aggressively
 neonConfig.fetchConnectionCache = false;
@@ -25,6 +26,10 @@ try {
 export function db() {
   if (!dbUrl) return null;
   return neon(dbUrl);
+}
+export function databaseCacheNamespace(){
+  if(!dbUrl)return 'seed';
+  const url=new URL(dbUrl);return url.hostname+url.pathname;
 }
 
 export async function maintenance() {
@@ -51,33 +56,38 @@ const getCachedSchemesRaw = unstable_cache(
     const sql = db();
     if (!sql) return null;
     try {
-      const queryPromise = sql`SELECT data, updated_at FROM schemes ORDER BY slug`;
+      const queryPromise=(async()=>{
+        const available=await sql`SELECT to_regclass('public.cms_history') AS history_table`;
+        return available[0]?.history_table
+          ? sql`SELECT s.data,s.updated_at,EXISTS(SELECT 1 FROM cms_history h WHERE h.slug=s.slug AND h.action='publish') AS cms_managed FROM schemes s ORDER BY s.slug`
+          : sql`SELECT data,updated_at,false AS cms_managed FROM schemes ORDER BY slug`;
+      })();
       const timeoutPromise = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Database query timed out after 15 seconds')), 15000));
       const results = await Promise.race([queryPromise, timeoutPromise]) as any[];
-      return results.map((x: any) => ({ data: x.data, updated_at: x.updated_at }));
+      return results.map((x: any) => ({ data: x.data, updated_at: x.updated_at,cms_managed:x.cms_managed }));
     } catch (e) {
       console.error('Database fetch error', e);
       return null;
     }
   },
-  ['all-schemes-data'],
-  { revalidate: 3600 }
+  ['all-schemes-data',databaseCacheNamespace()],
+  { revalidate: 3600, tags: ['schemes'] }
 );
 
 export async function allSchemes(): Promise<Scheme[]> {
   const cachedData = await getCachedSchemesRaw();
-  if (!cachedData) return seeds.map(normalizeScheme);
+  if (!cachedData) return seeds.map(normalizeScheme).filter(isPublicScheme);
   
   try {
     const schemes = cachedData.map((x: any) => {
       const s = schemeSchema.parse(JSON.parse(x.data));
       s.lastUpdated = x.updated_at;
-      return normalizeScheme(s);
+      return x.cms_managed ? {...s,status:effectiveStatus(s)} : normalizeScheme(s);
     });
-    return schemes;
+    return schemes.filter(isPublicScheme);
   } catch (e) {
     console.error('allSchemes parse error', e);
-    return seeds.map(normalizeScheme);
+    return seeds.map(normalizeScheme).filter(isPublicScheme);
   }
 }
 
@@ -92,9 +102,7 @@ export async function getScheme(slug: string): Promise<Scheme | null> {
 }
 
 export async function adminIdentity() {
-  const u = await getChatGPTUser();
-  const allowed = (process.env.ADMIN_USER_IDS ?? '').split(',').map(x => x.trim()).filter(Boolean);
-  return u && allowed.includes(u.userId) ? u : null;
+  return (await import('./admin-auth')).getAdminUser();
 }
 
 export class HttpError extends Error {
@@ -106,7 +114,13 @@ export class HttpError extends Error {
 }
 
 export function checkOrigin(req: Request) {
-  if (req.headers.get('origin') !== new URL(req.url).origin) throw new HttpError(403, 'अनुरोध का स्रोत मान्य नहीं है।');
+  const origin=req.headers.get('origin'); const url=new URL(req.url);const host=req.headers.get('host');
+  let valid=origin===url.origin;
+  try {const browser=new URL(origin??'');valid ||= browser.host===host&&browser.protocol===url.protocol;
+    const configured=process.env.ADMIN_ALLOWED_ORIGIN;
+    valid ||= !!configured&&browser.origin===configured&&browser.host===host;
+  }catch{}
+  if(!valid) throw new HttpError(403, 'अनुरोध का स्रोत मान्य नहीं है।');
   if (!req.headers.get('content-type')?.startsWith('application/json')) throw new HttpError(415, 'JSON आवश्यक है।');
 }
 
@@ -178,10 +192,6 @@ export async function saveScheme(input: unknown, actor: string, changes: string,
   const s = schemeSchema.parse(input);
   if (oldSlug && oldSlug !== s.slug) throw new HttpError(400, 'मौजूदा योजना का URL नहीं बदला जा सकता।');
   const now = new Date();
-  if (s.status === 'ACTIVE') {
-    s.verifiedAt = now.toISOString();
-    s.nextReviewAt = new Date(now.getTime() + (s.priority ? 90 : 180) * 86400000).toISOString();
-  }
   const prior = await getScheme(s.slug);
   if (!oldSlug && prior) throw new HttpError(409, 'यह URL पहले से मौजूद है।');
   if (oldSlug && !prior) throw new HttpError(404, 'योजना नहीं मिली।');

@@ -3,16 +3,9 @@ import {SITE_URL} from '@/lib/config';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      { userAgent: '*', allow: '/', disallow: ['/api/', '/out/', '/admin/', '/admin-login/'] },
-      { userAgent: 'Googlebot', allow: '/' },
-      { userAgent: 'Google-Extended', allow: '/' },
-      { userAgent: 'GPTBot', allow: '/' },
-      { userAgent: 'OAI-SearchBot', allow: '/' },
-      { userAgent: 'ClaudeBot', allow: '/' },
-      { userAgent: 'PerplexityBot', allow: '/' },
-      { userAgent: 'CCBot', allow: '/' }
-    ],
+    // One group avoids crawler-specific Allow rules overriding shared exclusions.
+    // Admin/utility HTML remains crawlable so crawlers can read its noindex.
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/api/', '/out/'] }],
     sitemap:`${SITE_URL}/sitemap.xml`,
   };
 }

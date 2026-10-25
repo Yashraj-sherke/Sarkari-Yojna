@@ -1,8 +1,10 @@
+import { requireAdminPage } from '@/lib/admin-auth';
 import { allSchemes } from '@/lib/server';
 import { runContentQualityGate } from '@/lib/quality-gate';
 import Link from 'next/link';
 
 export default async function QualityGateDashboard() {
+  await requireAdminPage();
   const schemes = await allSchemes();
   
   const evaluations = await Promise.all(schemes.map(async (scheme) => {
@@ -77,3 +79,5 @@ export default async function QualityGateDashboard() {
     </div>
   );
 }
+
+

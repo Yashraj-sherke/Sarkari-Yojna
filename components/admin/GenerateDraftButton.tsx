@@ -1,35 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
-export default function GenerateDraftButton() {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-
-  const handleGenerate = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch('/admin/api/generate-news-draft', { method: 'POST' });
-      const data = (await res.json()) as any;
-      if (data.success) {
-        router.push(`/admin/news/edit/${data.slug}`);
-      } else {
-        alert(data.error);
-      }
-    } catch (err: any) {
-      alert('Failed: ' + err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <button 
-      onClick={handleGenerate}
-      disabled={loading}
-      className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
-    >
-      {loading ? '✨ Generating...' : '✨ Generate AI Draft'}
-    </button>
-  );
+export default function GenerateDraftButton({kind='news'}:{kind?:'news'|'scheme'}){
+ const[busy,setBusy]=useState(false),[error,setError]=useState('');const router=useRouter();
+ return <div><button type="button" disabled={busy} className="btn" onClick={async()=>{if(!confirm('Configured AI provider से unverified draft बनाएँ? Provider usage charges लागू हो सकते हैं।'))return;setBusy(true);setError('');try{const response=await fetch(`/admin/api/generate-${kind}-draft`,{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});const result=await response.json() as {slug:string;error?:string;issues?:unknown};if(!response.ok)throw new Error(result.error+(result.issues?JSON.stringify(result.issues):''));router.push(`/admin/${kind==='news'?'news':'schemes'}/edit/${result.slug}`);}catch(error){setError((error as Error).message);}finally{setBusy(false);}}}>{busy?'AI draft बन रहा है…':'AI से unverified draft लें'}</button><p role="alert">{error}</p></div>;
 }

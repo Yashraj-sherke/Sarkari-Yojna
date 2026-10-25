@@ -1,3 +1,4 @@
+import { requireAdminPage } from '@/lib/admin-auth';
 import Link from 'next/link';
 import { db } from '@/lib/server';
 import { schemeSchema } from '@/lib/domain';
@@ -12,6 +13,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = { title: 'SEO Health', robots: { index: false, follow: false } };
 
 export default async function SeoHealthPage() {
+  await requireAdminPage();
   const records: ReturnType<typeof schemeHealth>[] = [];
   const inventory: ReturnType<typeof schemeInventory>[] = [];
   const briefs: ReturnType<typeof schemeContentBrief>[] = [];
@@ -199,3 +201,5 @@ export default async function SeoHealthPage() {
     </section>
   </div>;
 }
+
+

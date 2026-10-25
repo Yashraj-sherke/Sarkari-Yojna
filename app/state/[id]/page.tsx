@@ -82,7 +82,7 @@ export default async function Page({params,searchParams}:{params:Promise<{id:str
   return (
     <>
       <Directory
-        schemes={schemes.map(summarizeScheme)}
+        schemes={schemes.filter(isIndexableScheme).map(summarizeScheme)}
         centralSchemes={id !== 'central' ? centralSchemes.map(summarizeScheme) : undefined}
         initialState={id}
         initialPage={page}

@@ -117,6 +117,16 @@ const schemeTopics: Record<string, Topic[]> = {
 };
 
 export function buildSchemeNavigation(slug: string, description: string[], core: SchemeNavigationItem[], language: 'hi' | 'en' = 'hi') {
+  const detailedStates = ['rajasthan-palanhar-yojana', 'up-kanya-sumangala-yojana', 'bihar-kanya-utthan-yojana', 'haryana-chiranjeevi-yojana'];
+  if (language === 'hi' && detailedStates.includes(slug)) {
+    const sections: SchemeNavigationItem[] = [];
+    const annotated = description.map(html => html.replace(/<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi, (_markup, attrs: string, body: string) => {
+      const id = `scheme-detail-${sections.length + 1}`;
+      sections.push({id, label: body.replace(/<[^>]+>/g, '').trim()});
+      return `<h2${attrs} id="${id}" style="scroll-margin-top: 30px">${body}</h2>`;
+    }));
+    return {description: annotated, toc: [...sections, ...core], sidebar: [...sections, ...core], customized: true};
+  }
   const topics = language === 'hi' ? schemeTopics[slug] : undefined;
   if (!topics) return {description, toc: core, sidebar: core, customized: false};
 

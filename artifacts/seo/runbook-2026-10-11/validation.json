@@ -1,0 +1,20 @@
+{
+  "tests": "9 passed",
+  "typecheck": "passed",
+  "nextBuild": "passed",
+  "cloudflareBuild": "passed",
+  "httpQA": "passed",
+  "crawl": {
+    "pagesChecked": 198,
+    "sitemapUrls": 197,
+    "sitemapNon200": 0,
+    "sitemapNoindex": 0,
+    "sitemapCanonicalMismatch": 0,
+    "sitemapH1Failures": 0,
+    "orphanCandidates": 0,
+    "duplicateMetadata": 12,
+    "minimumSchemeIncoming": 4,
+    "networkFailures": 0,
+    "limited": false
+  }
+}

@@ -8,12 +8,12 @@ import Link from 'next/link';
 import { DiscoveryIndex } from '@/components/discovery-index';
 
 const title = 'Sarkari Yojana 2026: सभी सरकारी योजनाओं की सूची';
-const description = 'Sarkari Yojana 2026 की सत्यापित सूची, लाभ, पात्रता, आवश्यक दस्तावेज़, और ऑनलाइन आवेदन की पूरी आधिकारिक जानकारी आसान हिन्दी में यहाँ प्राप्त करें।';
+const description = 'केंद्र और राज्य की सरकारी योजनाओं के लाभ, पात्रता, दस्तावेज़ और आवेदन मार्गदर्शन सरल हिन्दी में देखें। वर्तमान नियम संबंधित सरकारी स्रोत से जाँचें।';
 export const metadata = {
   title: {absolute: title}, description,
   alternates: {canonical: '/'},
   openGraph: {title, description, url: SITE_URL, siteName: SITE_NAME_EN, type: 'website', locale: 'hi_IN', images: [{url: DEFAULT_OG_IMAGE, alt: 'Sarkari Yojana लोगो'}]},
-  twitter: {card: 'summary', title, description, images: [DEFAULT_OG_IMAGE]},
+  twitter: {card: 'summary_large_image', title, description, images: [DEFAULT_OG_IMAGE]},
 };
 
 export const revalidate = 3600;
@@ -69,7 +69,7 @@ export default async function Home() {
 
   return (
     <>
-      <Directory schemes={schemes.map(summarizeScheme)} centralSchemes={centralSchemes.map(summarizeScheme)} latestNews={latestNews} initialState="all" isHomePage={true} />
+      <Directory schemes={reviewedSchemes.map(summarizeScheme)} centralSchemes={centralSchemes.map(summarizeScheme)} latestNews={latestNews} initialState="all" isHomePage={true} />
       <DiscoveryIndex schemes={schemes} />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/>

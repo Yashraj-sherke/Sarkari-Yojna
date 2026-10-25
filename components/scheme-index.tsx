@@ -8,13 +8,13 @@ export function SchemeIndex({ schemes }: { schemes: Scheme[] }) {
   if (!reviewed.length) return null;
 
   return <section className="page-wrap panel" aria-labelledby="collection-articles">
-    <h2 id="collection-articles">इस सूची के समीक्षित योजना लेख</h2>
+    <h2 id="collection-articles">इस सूची के योजना लेख</h2>
     <p>पात्रता, दस्तावेज़ और सरकारी स्रोत पढ़ने के लिए योजना चुनें।</p>
     <ul className="flat-list">
       {reviewed.map(scheme => <li key={scheme.slug}>
         <Link className="inline-link" href={`/yojna/${scheme.slug}`}>{scheme.title}</Link>
       </li>)}
     </ul>
-    <p><Link className="inline-link" href="/yojna">सभी समीक्षित सरकारी योजना लेख देखें</Link></p>
+    <p><Link className="inline-link" href="/yojna">सभी सरकारी योजना लेख देखें</Link></p>
   </section>;
 }

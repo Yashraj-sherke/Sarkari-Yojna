@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "rajasthan-palanhar-yojana",
+    "route": "/yojna/rajasthan-palanhar-yojana",
+    "headingCount": 8,
+    "faqs": 7,
+    "articleCharacters": 4793,
+    "verificationStatus": "VERIFIED_CORE"
+  },
+  {
+    "slug": "up-kanya-sumangala-yojana",
+    "route": "/yojna/up-kanya-sumangala-yojana",
+    "headingCount": 9,
+    "faqs": 8,
+    "articleCharacters": 4760,
+    "verificationStatus": "VERIFIED_CORE"
+  },
+  {
+    "slug": "bihar-kanya-utthan-yojana",
+    "route": "/yojna/bihar-kanya-utthan-yojana",
+    "headingCount": 10,
+    "faqs": 8,
+    "articleCharacters": 5559,
+    "verificationStatus": "NEEDS_VERIFICATION"
+  },
+  {
+    "slug": "haryana-chiranjeevi-yojana",
+    "route": "/yojna/haryana-chiranjeevi-yojana",
+    "headingCount": 9,
+    "faqs": 8,
+    "articleCharacters": 5784,
+    "verificationStatus": "VERIFIED_CORE"
+  }
+]

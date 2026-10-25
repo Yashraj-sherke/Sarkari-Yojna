@@ -1,32 +1,9 @@
-import { db } from '@/lib/server';
+import { requireAdminPage as requirePermission } from '@/lib/admin-auth';
+import { getNewsDraft } from '@/lib/admin-news';
 import SamacharEditor from '@/components/admin/SamacharEditor';
 import { notFound } from 'next/navigation';
+import type { WorkflowState } from '@/lib/admin-policy';
+export const dynamic='force-dynamic';
+export default async function Page({params}:{params:Promise<{slug:string}>}){const user=await requirePermission();const {slug}=await params;if(slug==='new')return <SamacharEditor role={user.role}/>;const draft=await getNewsDraft(slug);if(!draft)notFound();return <SamacharEditor initialData={draft.data} version={draft.version} workflow={draft.workflow as WorkflowState} role={user.role} published={draft.published}/>;}
 
-export const dynamic = 'force-dynamic';
-export const metadata = { title: 'Edit News - Admin' };
 
-export default async function EditNewsPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const sql = db();
-  if (!sql) return <div>Database disconnected</div>;
-
-  let article = null;
-  if (slug !== 'new') {
-    const results = await sql`SELECT * FROM samachar WHERE slug = ${slug}`;
-    if (results.length === 0) {
-      notFound();
-    }
-    article = results[0];
-    try {
-      article.body = JSON.parse(article.body);
-    } catch {
-      article.body = [article.body];
-    }
-  }
-
-  return (
-    <div>
-      <SamacharEditor initialData={article} />
-    </div>
-  );
-}

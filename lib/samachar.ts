@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import samacharData from '../data/samachar.json';
 import { unstable_cache } from 'next/cache';
+import { databaseCacheNamespace } from './server';
 
 export const samacharSchema = z.object({
   slug: z.string().max(100),
@@ -46,22 +47,23 @@ const getCachedSamacharRaw = unstable_cache(
       const sql = await import('./server').then(m => m.db());
       if (sql) {
         const results = await sql`SELECT * FROM samachar WHERE status = 'PUBLISHED' ORDER BY updated_at DESC LIMIT 50`;
-        return results;
+        const blocked=await sql`SELECT slug FROM samachar WHERE status <> 'PUBLISHED'`;
+        return {published:results,blocked:blocked.map(row=>row.slug as string)};
       }
     } catch (error) {
       console.error('getAllSamachar DB error', error);
     }
     return null;
   },
-  ['all-samachar-data'],
-  { revalidate: 3600 }
+  ['all-samachar-data',databaseCacheNamespace()],
+  { revalidate: 3600, tags: ['samachar'] }
 );
 
 export async function getAllSamachar(): Promise<Samachar[]> {
   let dbNews: Samachar[] = [];
   const results = await getCachedSamacharRaw();
-  if (results && results.length > 0) {
-    dbNews = results.map((row: any) => ({
+  if (results && results.published.length > 0) {
+    dbNews = results.published.map((row: any) => ({
       slug: row.slug,
       title: row.title,
       date: row.updated_at,
@@ -78,7 +80,7 @@ export async function getAllSamachar(): Promise<Samachar[]> {
   }
   
   // Merge DB and static JSON, preventing duplicates by slug
-  const data = samacharData as Samachar[];
+  const data = (samacharData as Samachar[]).filter(item=>!results?.blocked.includes(item.slug));
   const allNews = [...dbNews, ...data];
   const uniqueNewsMap = new Map<string, Samachar>();
   

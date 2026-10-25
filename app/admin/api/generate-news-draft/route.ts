@@ -1,27 +1,6 @@
-import { getAdminUser } from '@/lib/admin-auth';
-import { db } from '@/lib/server';
-import { NextRequest, NextResponse } from 'next/server';
+import { checkOrigin,json,failure,HttpError } from '@/lib/server';
+import { requirePermission } from '@/lib/admin-auth';
+import { adminRateLimit } from '@/lib/admin-rate-limit';
+import { saveNewsDraft } from '@/lib/admin-news';
 import { generateDailyNewsDraft } from '@/lib/news-generator';
-
-export async function POST(request: NextRequest) {
-  const user = await getAdminUser();
-  if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-
-  const sql = db();
-  if (!sql) return NextResponse.json({ error: 'No DB' }, { status: 500 });
-
-  try {
-    const aiDraft = await generateDailyNewsDraft();
-
-    await sql`
-      INSERT INTO samachar (
-        slug, title, summary, category, image_url, body, status, created_at, updated_at
-      ) VALUES (
-        ${aiDraft.slug}, ${aiDraft.title}, ${aiDraft.summary}, ${aiDraft.category}, ${aiDraft.imageUrl}, ${JSON.stringify(aiDraft.body)}, ${aiDraft.status}, ${aiDraft.createdAt}, ${aiDraft.updatedAt}
-      )
-    `;
-    return NextResponse.json({ success: true, slug: aiDraft.slug });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
-  }
-}
+export async function POST(req:Request){try{checkOrigin(req);const user=await requirePermission('edit');await adminRateLimit(user.id,'ai-generation',10);const generated=await generateDailyNewsDraft();const result=await saveNewsDraft({slug:generated.slug,title:generated.title,summary:generated.summary,category:generated.category,body:generated.body,imageUrl:'',sourceUrl:'',sourceVerifiedAt:null,changes:'',affected:'',schemeSlugs:[]},0,undefined,'AI generated news draft — official-source review required');return json({...result,success:true});}catch(error){if(error instanceof HttpError||error&&typeof error==='object'&&'issues' in error)return failure(error);return json({error:'AI draft नहीं बन सका। GEMINI_API_KEY और provider response जाँचें; कोई publication नहीं हुई।'},503);}}

@@ -1,0 +1,11 @@
+import { neon } from '@neondatabase/serverless';
+import { hashPassword } from '../lib/admin-password';
+const url=process.env.DATABASE_URL,email=process.env.BOOTSTRAP_ADMIN_EMAIL,password=process.env.BOOTSTRAP_ADMIN_PASSWORD;
+if(!url||!email||!password)throw new Error('DATABASE_URL, BOOTSTRAP_ADMIN_EMAIL, BOOTSTRAP_ADMIN_PASSWORD must be provided explicitly.');
+const sql=neon(url);
+const rows=await sql`SELECT id FROM users WHERE role='SUPER_ADMIN' AND active=true LIMIT 1`;
+if(rows.length)throw new Error('An active Super Admin already exists. Use protected user management.');
+const id=crypto.randomUUID(),now=new Date().toISOString();
+const hashed=await hashPassword(password);
+await sql.transaction([sql`SELECT pg_advisory_xact_lock(73128921)`,sql`INSERT INTO users(id,email,password_hash,role,active,created_at) SELECT ${id},${email.toLowerCase()},${hashed},'SUPER_ADMIN',true,${now} WHERE NOT EXISTS(SELECT 1 FROM users WHERE role='SUPER_ADMIN' AND active=true)`]);
+console.log('Bootstrap completed. No password was printed. Sign in at /admin-login.');
