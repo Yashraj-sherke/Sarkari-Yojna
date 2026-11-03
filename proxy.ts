@@ -7,9 +7,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL('/mere-liye', request.url), 308);
   }
 
-  const response = NextResponse.next();
-  response.headers.set('X-Robots-Tag', 'noindex, nofollow');
-  response.headers.set('Cache-Control', 'private, no-store');
-  return response;
+  // Robots policy belongs to route metadata and static headers, not this
+  // request proxy. Some edge adapters invoke this proxy outside its matcher;
+  // setting X-Robots-Tag here would then make otherwise public pages noindex.
+  return NextResponse.next();
 }
 export const config = { matcher: ['/admin/:path*', '/admin-login', '/api/admin/:path*', '/mere-liye'] };
